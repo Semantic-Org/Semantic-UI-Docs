@@ -2,19 +2,6 @@
         Highlighted Colors
 *******************************/
 
-::-webkit-selection {
-  background-color: #FFFFCC;
-  color: #555555;
-}
-::-moz-selection {
-  background-color: #FFFFCC;
-  color: #555555;
-}
-::selection {
-  background-color: #FFFFCC;
-  color: #555555;
-}
-
 h1::-moz-selection,
 h2::-moz-selection,
 h3::-moz-selection {
@@ -40,16 +27,15 @@ h3::selection {
 
 html,
 body {
-  font-size: 15px;
+  font-size: 14px;
 }
 
 body#example {
-  font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif/*rtl:prepend:"Droid Arabic Kufi","Droid Sans", */;
-  background: #FCFCFC url(../images/bg.jpg) repeat;
+  background: #F9F9F9;
   margin: 0px;
   padding: 0px;
   color: #555555;
-  min-width: 320px;
+  font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
 }
 body > .content  {
   background: #FCFCFC url(../images/bg.jpg) repeat;
@@ -60,17 +46,35 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif/*rtl:prepend:"Droid Arabic Kufi","Droid Sans", */;
+  font-family: "Lato", "Helvetica Neue", "Helvetica", "Arial", sans-serif/*rtl:prepend:"Droid Arabic Kufi","Droid Sans", */;
 }
 
-/*
-p,
-ul,
-.ui.grid,
-li {
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  font-size-adjust: none;
-}*/
+pre {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+pre {
+  background-color: #FFFFFF;
+  text-align: left;
+}
+
+p:first-child {
+  margin-top: 0em;
+}
+p:last-child {
+  margin-bottom: 0em;
+}
+/* links */
+a {
+  color: #009FDA;
+  text-decoration: none;
+}
+a:hover {
+  color: #00BAFF;
+}
 
 
 ul.list {
@@ -87,12 +91,7 @@ h1 {
   padding: 50px 0px 5px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-h4 + p {
-  margin: 0px 0px 20px;
-}
-pre {
-  background-color: #F0F0F0;
-}
+
 /*rtl:ignore*/
 pre.console {
   background-color: transparent;
@@ -104,24 +103,25 @@ pre.console {
 }
 code {
   background-color: rgba(0, 0, 0, 0.02);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
   display: inline-block;
-  font-family: Courier New;
-  font-size: 14px;
-  margin: 0.25em;
-  padding: 0.125em 0.5em;
-  vertical-align: middle;
+  font-family: "Monaco","Menlo","Ubuntu Mono","Consolas","source-code-pro",monospace;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0 2px 0px 0px;
+  padding: 2px 4px;
+  vertical-align: baseline;
 }
 pre code {
   border: none;
   padding: 0px;
+  font-size: 1em;
 }
-table pre,
-table code {
-  margin: 0px !important;
-  padding: 0px;
-  background-color: transparent;
+/* Code block */
+.ui.message code {
+  background-color: rgba(255, 255, 255, 0.6);
 }
+
 p {
   margin: 1em 0em;
 }
@@ -132,60 +132,113 @@ p:last-child {
   margin-bottom: 0em;
 }
 /* links */
+code a,
+a code,
 a {
   color: #009FDA;
   text-decoration: none;
 }
+code a:hover,
+a:hover code,
 a:hover {
   color: #00BAFF;
 }
 
+/*--------------
+     Sidebar
+---------------*/
+
+#example #menu > :last-child {
+  padding-bottom: 2em;
+}
+#example #menu .logo.image {
+  width: 35px;
+  margin-right: 1em;
+}
 #example #menu .item {
+  position: relative;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
 }
+#example #menu .item .circular.label {
+  position: absolute;
+  top: 0.75rem;
+  right: 1em;
+  opacity: 0.2;
+  transition: background 0.3s ease;
+}
+#example #menu .item.active > .circular.label,
+#example #menu .item:hover > .circular.label {
+  opacity: 0.8;
+}
+
+#example #menu .inverted.header {
+  font-size: 1em;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0.5em;
+}
+#example #menu a.inverted.header.active,
+#example #menu a.inverted.header:hover {
+  color: rgba(255, 255, 255, 1);
+}
 #example #menu .hide.item {
   display: none;
 }
+#example #menu .menu .active.item {
+  color: #6DFFFF !important;
+}
 
-#example #menu .item .item {
-  font-size: 0.875rem;
-}
-#example .segment > .dimmer {
-  z-index: 800;
-}
 
 /* segment headers */
+#example .header.segment,
 #example > .content > .page > .segment,
-#example > .segment {
-  margin: 0px 0px 3em;
+#example > .header.segment {
+  position: relative;
+  z-index: 2;
+  margin: 0em;
+  min-height: 180px;
   padding-top: 70px;
   padding-bottom: 30px;
   background-color: #FFFFFF;
   border-bottom: 1px solid #DDDDDD;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
-
-#example > .tab.segment {
+#example .header.segment h1 {
+  margin-bottom: 0em;
+}
+#example .tab.header.segment {
   padding-bottom: 0em;
-  margin-bottom: 2em;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1) inset;
 }
-
-#example > .tab.segment .fixed .tabular.menu {
-  position: fixed;
-  top: 50px;
-}
-#example > .tab.segment .vertical.menu {
+#example .tab.header.segment .vertical.menu {
   display: none;
   margin: 2rem 0em 1rem;
 }
-#example > .tab.segment .tabular.menu {
-  margin: 2rem 0em 0em;
+#example .tab.header.segment .tabular.menu {
+  clear: both;
+  margin: 2rem 0px 0em;
   border-bottom: none;
 }
-#example > .tab.segment .tabular.menu .active.item {
-  background-color: #FAFAFA;
-  border-bottom-color: #FAFAFA;
+#example .tab.header.segment .tabular.menu .active.item {
+  background-color: #FFFFFF;
+  border-bottom-color: #FFFFFF;
+}
+
+#example.legacy .main.menu,
+#example.legacy .launch.button {
+  left: auto !important;
+}
+#example.scale.down.pushed .header.segment {
+  padding-top: 30px;
+}
+
+#example.divider .ui.grid {
+  position: relative;
+}
+#example.dim .segment .wireframe.image {
+  margin-bottom: 0em;
 }
 
 
@@ -195,19 +248,9 @@ a:hover {
 }
 
 #example .main.menu {
-  min-width: 320px;
-  z-index: 900;
-
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-
-  -webkit-transition: margin 0.3s ease;
-  -moz-transition: margin 0.3s ease;
-  -o-transition: margin 0.3s ease;
-  -ms-transition: margin 0.3s ease;
-  transition: margin 0.3s ease;
+  top: 0px;
+  left: -1px;
+  width: calc(100% + 1px);
 }
 #example .main.menu iframe {
   margin: 0px 0px 0px 0px;
@@ -224,189 +267,17 @@ a:hover {
   font-weight: bold;
 }
 
+/*--------------
+  Advertisement
+---------------*/
+
 #example .advertisement {
   float: right;
   margin-left: 2em;
 }
-
-/*--------------
-    Intro
----------------*/
-
-body.guide .main h3 {
-  margin: 2rem 0em 0.5rem;
-}
-body.guide .main.container > * {
-  max-width: 800px;
-}
-
-
-/*--------------
-    Playground
----------------*/
-
-#example.playground {
-  min-width: 1000px;
-}
-#example.playground > .title.grid {
-  padding-top: 60px;
-
-}
-#example .ui.items .menu .item {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
-
-/*--------------
-    Items
----------------*/
-
-#example.item .text.example .item {
-  min-height: 150px;
-}
-
-
-/*--------------
-    Masthead
----------------*/
-#example .error.masthead {
+#example .index.advertisement {
+  display: block;
   position: absolute;
-  margin-top: -290px;
-  top: 50%;
-  width: 100%;
-}
-#example .error.masthead .container {
-  position: relative;
-  z-index: 100;
-}
-#example .masthead {
-  position: relative;
-  overflow: hidden;
-  background-color: #00B5AD;
-  text-align: center;
-  margin-top: 38px;
-  padding: 50px 0px;
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 0px;
-  border-bottom: none;
-}
-#example .masthead:before {
-  background: #00B5AD url(/images/tile-bg.png) repeat fixed 0% 0%;
-  position: absolute;
-  z-index: 1;
-  width: 500%;
-  height: 500%;
-  top: 0px;
-  left: 0px;
-  content: '';
-
-  -moz-transform-origin: 50% 50%;
-  -o-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-
-  -webkit-animation-name: masthead;
-  -moz-animation-name: masthead;
-  -o-animation-name: masthead;
-  animation-name: masthead;
-
-  -webkit-animation-duration: 80s;
-  -moz-animation-duration: 80s;
-  -ms-animation-duration: 80s;
-  -o-animation-duration: 80s;
-  animation-duration: 80s;
-
-  -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -ms-animation-fill-mode: both;
-  -o-animation-fill-mode: both;
-  animation-fill-mode: both;
-
-  animation-timing-function: linear;
-  -webkit-animation-timing-function: linear;
-
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
-  -ms-animation-iteration-count: infinite;
-  -o-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-}
-@keyframes masthead {
- 0% {
-    background-position: 0% 0%;
- }
- 50% {
-    background-position: -50% -100%;
- }
- 100% {
-    background-position: -100% -200%;
- }
-
-}
-
-@-moz-keyframes masthead {
- 0% {
-   background-position: 0% 0%;
- }
- 50% {
-   background-position: -50% -100%;
- }
- 100% {
-   background-position: -100% -200%;
- }
-
-}
-
-@-webkit-keyframes masthead {
- 0% {
-   background-position: 0% 0%;
- }
- 50% {
-   background-position: -50% -100%;
- }
- 100% {
-   background-position: -100% -200%;
- }
-
-}
-
-@-ms-keyframes masthead {
- 0% {
-   background-position: 0% 0%;
- }
- 50% {
-   background-position: -50% -100%;
- }
- 100% {
-   background-position: -100% -200%;
- }
-
-}
-
-@-o-keyframes masthead {
- 0% {
-   background-position: 0% 0%;
- }
- 50% {
-   background-position: -50% -100%;
- }
- 100% {
-   background-position: -100% -200%;
- }
-
-}
-#example .masthead .grid {
-  position: relative;
-  z-index: 2;
-}
-#example .masthead .column {
-  display: table;
-}
-#example .introduction {
-  display: table-cell;
-  vertical-align: top;
-  width: 100%;
 }
 #example .advertisement {
   float: none;
@@ -432,11 +303,11 @@ body.guide .main.container > * {
   text-align: left;
 }
 #example .inverted.advertisement .carbonad {
-  background-color: rgba(0, 31, 30, 0.5);
+  background-color: rgba(0, 0, 0, 0.25);
   border: none;
   overflow: hidden;
   height: auto;
-  padding: 6px 8px 15px;
+  padding: 6px 0px 13px;
 }
 #example .inverted.advertisement .carbonad-text {
   color: rgba(255, 255, 255, 0.6);
@@ -453,38 +324,99 @@ body.guide .main.container > * {
 }
 
 
-#example .masthead .labeled.button {
-  position: relative;
-  left: 0px;
+#example .main.container a.anchor {
+  height: 1px;
+  position: absolute;
+  right: 100%;
+  top: -2.5em;
+  width: 1px;
+}
+
+
+/*--------------
+  Fixed Columns
+---------------*/
+
+#example .fixed.column {
+  position: absolute;
+  right: 2em;
   top: 0px;
-  width: auto !important;
-  margin-right: 1em;
+  width: 300px;
 }
-#example .masthead.segment h1 {
-  font-size: 5em;
-  color: #FFFFFF;
-  line-height: 1.2;
-  margin: -20px 0px 0px;
-  padding-bottom: 0px;
+
+#example .tab.header.segment .fixed .tabular.menu {
+  position: fixed;
+  top: 50px;
 }
-#example .masthead strike {
-  color: rgba(0, 0, 0, 0.2);
+#example .fixed .launch {
+  display: none;
 }
-#example .masthead h2 {
-  font-weight: normal;
-  margin: -10px 0 16px 0px;
-  font-size: 1.75em;
-  border-bottom: none;
-  line-height: 1;
+#example .fixed.column .sticky {
+  padding-top: 4em;
 }
-#example .masthead .menu {
-  width: 375px;
+
+
+/*--------------
+    Masthead
+---------------*/
+
+body#example {
+  background: #2C2C2C url(../images/icons.png) !important;
 }
-#example .masthead p {
-  font-size: 1.5em;
-  margin: 1em 0em 1.5em;
-  padding: 0px;
+body#example.pushed,
+body#example.hide {
+  -moz-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+
+  -webkit-animation-name: masthead;
+  -moz-animation-name: masthead;
+  -o-animation-name: masthead;
+  animation-name: masthead;
+
+  -webkit-animation-duration: 30s;
+  -moz-animation-duration: 30s;
+  -ms-animation-duration: 30s;
+  -o-animation-duration: 30s;
+  animation-duration: 30s;
+
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+
+  animation-timing-function: linear;
+  -webkit-animation-timing-function: linear;
+
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
 }
+
+#example .masthead .grid {
+  position: relative;
+  z-index: 2;
+}
+#example .masthead .column {
+  display: table;
+}
+#example .introduction {
+  display: table-cell;
+  vertical-align: top;
+  width: 100%;
+}
+#example .introduction .theme.buttons {
+  margin: -0.1em 0em 0em 0.5em;
+  vertical-align: middle;
+}
+/*--------------
+     Footer
+---------------*/
+
 #example .footer.link.list {
   display: block;
   text-align: center;
@@ -500,44 +432,70 @@ body.guide .main.container > * {
   opacity: 0.95;
 }
 
+#example.pushable.left.overlay .fixed.launch.button {
+  transform: translate3d(0, 0, 0);
+}
+#example.pushable.overlay.left.pushed .fixed.launch.button {
+  transform: translate3d(260px, 0, 0);
+}
+#example .fixed.launch.button {
+  position: fixed;
+  top: 63px;
+  left: -1px;
 
-/* content */
-#example .container {
-  width: 915px;
-  margin: 0px auto;
+  width: 55px;
+  height: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-transition:
+    0.3s width ease,
+    0.5s transform ease
+  ;
+  -moz-transition:
+    0.3s width ease,
+    0.5s transform ease
+  ;
+  -o-transition:
+    0.3s width ease,
+    0.5s transform ease
+  ;
+  -ms-transition:
+    0.3s width ease,
+    0.5s transform ease
+  ;
+  transition:
+    0.3s width ease,
+    0.5s transform ease
+  ;
 }
 
-#example .solid,
-#example .stripe {
-  padding: 50px 0px;
+#example .fixed.launch.button .text {
+  position: absolute;
+  white-space: nowrap;
+  top: auto;
+  left: 54px;
+  opacity: 0;
+  -webkit-transition:
+    0.3s opacity 0.3s
+  ;
+  -moz-transition:
+    0.3s opacity 0.3s
+  ;
+  -o-transition:
+    0.3s opacity 0.3s
+  ;
+  -ms-transition:
+    0.3s opacity 0.3s
+  ;
+  transition:
+    0.3s opacity 0.3s
+  ;
 }
-
-#example .dark.stripe {
-  background-color: #333333;
-  background: url(/images/dark-bg.png) repeat;
-  color: #FFFFFF;
+#example .fixed.launch.button:hover {
+  width: 130px;
 }
-#example .stripe .column .label {
-  margin-bottom: 1em;
-}
-
-#example .solid {
-  background-color: #FFFFFF;
-  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
-}
-#example .solid .column {
-  color: #555555;
-}
-#example .solid .column p b {
-  color: rgba(0, 0, 0, 0.9);
-}
-#example .solid .column p {
-  color: rgba(0, 0, 0, 0.5);
-}
-#example .stripe .message {
-  margin: 2em 0em;
+#example .fixed.launch.button:hover .text {
+  opacity: 1;
 }
 
 
@@ -545,70 +503,555 @@ body.guide .main.container > * {
   float: right;
   clear: both;
 }
-#example .launch.button {
-  position: fixed;
-  top: 63px;
-  z-index: 500;
-  width: 70px;
+#example .launch.button .icon {
+  margin-left: 0px;
 }
-#example.index .main.menu {
-  top: 0px;
+
+
+
+/*----------------
+   Overview Mode
+-----------------*/
+
+#example .right.floated.overview.button {
+  margin-bottom: 0.5em;
 }
-#example.index pre.console {
-  height: 120px;
+
+#example.overview h2.ui.header {
+  margin-bottom: 0.5em;
 }
-#example.index .attached.launch.button {
-  top: 96px;
+#example.overview .example {
+  display: table-row;
+  min-height: 0px !important;
+  overflow: hidden;
 }
-#example .launch.button .text {
-  display: inline-block;
+#example.overview .example .ui.header,
+#example.overview .example p {
+  display: table-cell;
+  font-size: 1em;
+  min-width: 170px;
+  font-weight: bold;
+  padding: 0.5em 0em;
+}
+#example.overview .example p {
+  font-size: 1rem;
+  font-weight: normal;
+  padding: 0em 0em 0em 0.5em;
+  width: auto;
+  line-height: 1.4;
+}
+
+/*----------------
+      Footer
+-----------------*/
+
+#example .page > .footer {
+  padding: 5em 0em 6em;
+}
+
+/*----------------
+  Settings Table
+-----------------*/
+
+#example .settings.table {
+  margin-bottom: 20px;
+}
+#example .settings.table td:first-child {
+  font-weight: bold;
+}
+#example .settings.table td:nth-child(2n) {
+  width: 100px;
+}
+
+
+#example .segment pre {
+  margin: 0em;
+  padding: 0em;
+}
+#example .segment pre .code {
+  margin: 0em;
+  padding: 0em;
+  max-height: 610px;
+  font-weight: normal;
+  font-family:  'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+}
+
+#example table .instructive.segment {
+  background-color: transparent;
+  border: 0px;
+  box-shadow: none;
+  padding: 0em;
+}
+
+#example .ui.label + .instructive.segment {
+  margin-top: 0em;
+}
+#example .instructive.segment:after {
+  display: none;
+}
+#example .instructive.segment em {
+  font-style: normal;
+  color: rgba(0, 0, 0, 0.4);
+}
+#example .instructive.segment .title + em {
+  float: right;
+}
+#example .label + .code {
+  margin-top: 1.5em;
+}
+
+
+
+/*----------------
+    Examples
+-----------------*/
+
+#example .example {
+  position: relative;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 3em 0em 0em;
+  padding: 3em 0em 0em;
+  -webkit-tap-highlight-color: transparent;
+}
+#example .example:last-child {
+  margin-bottom: 5em;
+}
+
+/* Header */
+#example .example > h4:first-child {
+  margin: -0.2em 0em 0em;
+}
+
+/* Wireframe Image */
+#example .example .wireframe.image {
+  opacity: 0.5;
+}
+#example .example :not(.images) > .wireframe.image {
+  margin: 1rem 0em;
+}
+#example .example :not(.images) > .wireframe.image:first-child {
+  margin-top: 0em;
+}
+#example .example :not(.images) > .wireframe.image:last-child {
+  margin-bottom: 0em;
+}
+
+/* Description */
+#example .example .anchor + p {
+  margin: 0.25em 0px 1.5em;
+  color: rgba(0, 0, 0, 0.6);
+}
+#example .no.example .anchor + p {
+  margin: 0em 0px 1em;
+}
+#example .example > p {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* Message */
+#example .example .anchor + p + .ignored.message,
+#example .example .anchor + p + .ignored.message + .ignored.message {
+  margin: -0.5em 0em 2em;
+}
+
+
+/* Another */
+#example .another.example {
+  margin-top: 0em;
+  border-top: none;
+}
+
+/* Spaced */
+#example .spaced.example .buttons,
+#example .spaced.example .button {
+  margin-bottom: 0.75em;
+}
+#example .spaced.example .buttons .button {
+  margin-bottom: 0em;
+}
+#example .example .toggle.button {
+  min-width: 200px;
+}
+
+
+#example .intro .example > h4 {
+  font-size: 1.2em;
+}
+#example .intro .example > h4 ~ p,
+#example .intro .example > h4 ~ .ignored {
+  margin: 1em 0em !important;
+}
+
+#example .intro .example > p {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+#example .existing.segment:after,
+#example .instructive.segment:after {
   display: none;
 }
 
-#example .main.container {
-  position: relative;
-  padding-bottom: 100px;
-}
-#example .main.container > h2 {
-  -webkit-transition: 0.5s color ease;
-  -moz-transition: 0.5s color ease;
-  -o-transition: 0.5s color ease;
-  -ms-transition: 0.5s color ease;
-  transition: 0.5s color ease;
-}
-#example .swap {
-  background: url(http://beta.myfav.es/images/themes/bg/subtle/subtle-handmade-paper.png) repeat;
-}
-#example .peek {
-  position: absolute;
-  top: 0px;
-  left: -230px;
-  width: 180px;
-/*
-  -webkit-transition: padding 0.3s ease;
-  -moz-transition: padding 0.3s ease;
-  -o-transition: padding 0.3s ease;
-  -ms-transition: padding 0.3s ease;
-  transition: padding 0.3s ease;*/
+/*----------------
+  Example Types
+-----------------*/
+
+/* No Example */
+#example .no.example i.code {
+  display: none;
 }
 
-#example .ui.tab.segment {
-  padding: 1.5em 2em;
+/* Requires Clear */
+#example .clearing.example {
+  overflow: hidden;
+  clear: both;
+  padding: 1px;
+}
+#example .main.container:after {
+  content: '';
+  display: block;
+  height: 0px;
+  clear: both;
+  visibility: hidden;
+}
+#example .example-group {
+  position: relative;
+}
+#example .main.container .examples > h2,
+#example .main.container > h2,
+#example .main.container > .tab > h2{
+  position: relative;
+  margin: 5rem 0rem 3rem;
+}
+#example .main.container .examples > .rail + h2,
+#example .main.container > .rail + h2,
+#example .main.container > .tab > .rail + h2,
+#example .main.container .examples > h2:first-child,
+#example .main.container > h2:first-child,
+#example .main.container > .tab > h2:first-child {
+  margin-top: 0em;
+}
+#example .main.container .examples > h2 + p,
+#example .main.container > h2 + p,
+#example .main.container > .tab > h2 + p {
+  margin: -2.5rem 0 2em;
+}
+
+/* After Section Header */
+#example .example:first-child,
+#example h2 + .example,
+#example h3 + .example,
+#example h4 + .example {
+  margin-top: 0px;
+  padding-top: 0px;
+  border-top: none;
+}
+#example .another.example i.code,
+#example .example:first-child i.code,
+#example h2 + .example i.code,
+#example h3 + .example i.code,
+#example h4 + .example i.code {
+  top: 1em;
+}
+
+/* Spaced */
+#example .spaced.example .buttons,
+#example .spaced.example .button {
+  margin-bottom: 0.75em;
+}
+#example .spaced.example .buttons .button {
+  margin-bottom: 0em;
+}
+#example .example .toggle.button {
+  min-width: 200px;
+}
+
+/* Code Language */
+#example .example .language.label {
+  margin: 1em 0em 0.75em;
+}
+
+
+/*--------------
+   Code Button
+---------------*/
+
+#example .example i.code {
+  cursor: pointer;
+  position: absolute;
+
+  top: 1rem;
+  right: 0px;
+  margin: 0;
+  opacity: 0.1;
+
+  font-size: 18px;
+  color: #555555;
+
+  -webkit-transition: opacity 0.3s ease-out;
+  -moz-transition: opacity 0.3s ease-out;
+  -o-transition: opacity 0.3s ease-out;
+  -ms-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+}
+
+#example .example i.code:before {
+  font-family: 'Docs';
+  content: "\f05f";
+}
+#example .example:hover i.code {
+  opacity: 0.7;
+}
+#example .example:hover i.code:hover {
+  opacity: 1;
+}
+#example .example .grid i.code {
+  right: 25%;
+}
+
+#example .pointing.label + .existing.segment {
+  margin-top: 0em;
+}
+
+#example .existing.code {
+  display: none;
+}
+#example .another.example .annotation {
+  margin: 2em 0em 0em;
+}
+
+
+#example .transition.example .ui.button {
+  margin-bottom: 0.5em;
+}
+
+
+/* Fixes for UI */
+#example .segment > .dimmer {
+  z-index: 800;
+}
+#example .code .active.ui.modal {
+  display: none !important;
 }
 #example .example .circular.segment {
   width: 175px;
   height: 175px;
 }
 
-#example.popup .example .popup {
+/*******************************
+           UI Pages
+*******************************/
+
+/*--------------
+      Grid
+---------------*/
+
+#example .highlighted.example .grid {
+  position: relative;
+}
+#example .highlighted.example .grid:before {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: #F0F0F0;
+  content: '';
+  width: calc(100% - 2rem);
+  height: calc(100% - 2rem);
+  box-shadow: 0px 0px 0px 1px #DDDDDD inset;
+}
+/* Consecutive */
+#example .highlighted.example > .grid + .grid {
+  margin-top: 1rem;
+}
+
+#example .highlighted.example .grid .grid:before {
+  background-color: #E0E0E0;
+}
+#example .highlighted.example .row {
+  position: relative;
+}
+
+#example .highlighted.example .grid > .column {
+  position: relative;
+  z-index: 11;
+}
+#example .highlighted.example .grid .column:not(.row):not(.grid):after {
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 0px 1px #DDDDDD inset;
+  content: "";
+  display: block;
+  min-height: 50px;
+}
+#example .highlighted.example .grid .column:not(.grid):first-child,
+#example .ui.type.cards .image .grid .column:not(.grid):first-child {
+  box-shadow: none;
+}
+#example .highlighted.example .grid .column:not(.grid),
+#example .ui.type.cards .image .grid .column:not(.grid) {
+  min-height: 50px;
+}
+#example .highlighted.example .grid .segment,
+#example .ui.type.cards .image .grid .segment {
+  border-radius: 0px;
+  box-shadow: 0 0 0 1px #D4D4D4;
+}
+#example .negative.example > .button {
+  position: relative;
+  z-index: 10;
+}
+#example .highlighted.special.example .page.grid > .column:first-child:after,
+#example .highlighted.special.example .page.grid > .column:last-child:after {
+  display: none;
+}
+#example.animated .negative.example > .grid {
+  margin: -1rem !important;
+  background-color: #FFEEEE;
+}
+
+/* Animation */
+#example.animated .highlighted.example > .grid,
+#example.animated .animated.example > .grid {
+  margin: -1rem auto;
+  -webkit-animation: grid 7s ease infinite;
+  -moz-animation: grid 7s ease infinite;
+  animation: grid 7s ease infinite;
+}
+#example.animated .negative.example > .grid {
+  -webkit-animation: none;
+  -moz-animation: none;
+  -ms-animation: none;
+  animation: none;
+}
+/* Grid Inside Grid */
+#example.animated .highlighted.example .grid .grid,
+#example.animated .animated.example .grid .grid {
+  -webkit-animation: none;
+  -moz-animation: none;
+  -ms-animation: none;
+  animation: none;
+}
+
+@-webkit-keyframes grid {
+  0% {
+    width: 100%;
+  }
+  45% {
+    width: 90%;
+  }
+  55% {
+    width: 90%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-moz-keyframes grid {
+  0% {
+    width: 100%;
+  }
+  45% {
+    width: 90%;
+  }
+  55% {
+    width: 90%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes grid {
+  0% {
+    width: 100%;
+  }
+  45% {
+    width: 90%;
+  }
+  55% {
+    width: 90%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+
+/*--------------
+      Demo
+---------------*/
+
+
+#example .demo.row {
+  margin: 0 auto !important;
+  max-width: 1140px;
+}
+
+#example .demo.row .button.demo > .buttons,
+#example .demo.row .button.demo > .button,
+#example .demo.row .button.demo > .segment > .button {
+  margin-bottom: 0.5em;
+}
+#example .demo.row .ui.menu,
+#example .demo.row .ui.card {
+  width: 100%;
+}
+#example .demo.row h4 {
+  font-weight: bold !important;
+  margin: 0em 0em 1em !important;
+}
+#example .demo.row .example {
+  clear: both;
+  padding-top: 3em;
+  margin-top: 3em;
+}
+#example .demo.row .example:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+#example .demo.row .segment.example {
+  z-index: 1;
+}
+#example .demo.row .ui.label:not(.empty) {
+  margin-bottom: 1em;
+}
+#example .demo.row .segment .ui.label {
+  margin-bottom: 0em;
+}
+
+/*--------------
+      Card
+---------------*/
+
+body.card .even.example .card .description {
+  height: 55px;
+}
+
+/*--------------
+      Progress
+---------------*/
+
+
+body.progress.animated .ui.progress .bar {
+  -webkit-animation: finish 10s ease-in-out infinite;
+  -moz-animation: finish 10s ease-in-out infinite;
+  -ms-animation: finish 10s ease-in-out infinite;
+  animation: finish 10s ease-in-out infinite;
+}
+
+/*--------------
+      Popup
+---------------*/
+
+#example.popup .inline.example .popup {
   color: #FF0000;
 }
 #example .position.example .icon {
   position: absolute;
   margin: 0em;
+  width: auto;
+  font-size: 1.5em;
+  height: auto;
   padding: 0.5em !important;
 }
-#example .position.example > .segment {
+#example .position.example .segment {
   width: 250px;
   height: 250px;
 }
@@ -652,721 +1095,540 @@ body.guide .main.container > * {
 #example .main.ui.grid {
   position: relative;
 }
-#example .example .toggle.button {
-  min-width: 200px;
-}
-#example .example .language.label {
-  margin: 1em 0em 0.75em;
-}
+
+/*--------------
+      Icon
+---------------*/
+
 #example .icon.example .grid {
-  margin-top: 1.5rem;
   text-align: left;
 }
 #example .icon.example .grid .code {
   position: static;
 }
-#example .icon.example .grid .column {
+#example .icon.example .grid > .row > .column {
+  height: 6em;
   opacity: 0.8;
-  margin-bottom: 2em;
   text-align: center;
   color: #888888;
 
   -webkit-transition:
-    margin-left 0.3s ease-out,
-    opacity 0.3s ease-out
+    color 0.3s ease,
+    opacity 0.3s ease
   ;
   -moz-transition:
-    margin-left 0.3s ease-out,
-    opacity 0.3s ease-out
+    color 0.3s ease,
+    opacity 0.3s ease
   ;
   -o-transition:
-    margin-left 0.3s ease-out,
-    opacity 0.3s ease-out
+    color 0.3s ease,
+    opacity 0.3s ease
   ;
   -ms-transition:
-    margin-left 0.3s ease-out,
-    opacity 0.3s ease-out
+    color 0.3s ease,
+    opacity 0.3s ease
   ;
   transition:
-    margin-left 0.3s ease-out,
-    opacity 0.3s ease-out
+    color 0.3s ease,
+    opacity 0.3s ease
   ;
 }
 #example .icon.example .column .icon {
   opacity: 1;
+  height: 1em;
   color: #333333;
   display: block;
   margin: 0em auto 0.25em;
   font-size: 2em;
 
   -webkit-transition:
-    all 0.2s ease-out
+    color 0.6s ease,
+    transform 0.2s ease
   ;
   -moz-transition:
-    all 0.2s ease-out
+    color 0.6s ease,
+    transform 0.2s ease
   ;
   -o-transition:
-    all 0.2s ease-out
+    color 0.6s ease,
+    transform 0.2s ease
   ;
   -ms-transition:
-    all 0.2s ease-out
+    color 0.6s ease,
+    transform 0.2s ease
   ;
   transition:
-    all 0.2s ease-out
+    color 0.6s ease,
+    transform 0.2s ease
   ;
-  -webkit-backface-visibility: hidden;
 }
-#example .icon.example .grid .column:hover .icon {
-  color: #009FDA;
+#example .icon.example .grid:hover > .row > .column {
+  color: #CCCCCC;
+}
+#example .icon.example .grid:hover > .row > .column .icon {
+  color: #888888;
+}
+
+#example .icon.example .grid > .row > .column:hover .icon {
+  color: #000000;
   -webkit-transform: scale(1.5);
   -moz-transform: scale(1.5);
   -o-transform: scale(1.5);
   -ms-transform: scale(1.5);
   transform: scale(1.5);
 }
+#example .icon.example .grid > .row > .column:hover {
+  opacity: 1;
+  color: #444444;
+}
 #example .another.icon.example {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-#example .another.example {
+#example .another.example i.code ~ .ignored.message {
   margin-top: 0em;
-  padding-top: 2em;
-  border-top: none;
-}
-#example .another.example i.code {
-  top: 0px;
-}
-#example .example > p {
-  color: #888888;
 }
 
-#example .peek .menu .active:nth-child(1) {
-  border-right-color: #00B9F0;
-  color: #00B9F0;
-}
-#example .peek .menu .active:nth-child(2) {
-  border-right-color: #56BB73;
-  color: #56BB73;
-}
-#example .peek .menu .active:nth-child(3) {
-  border-right-color: #EF3F49;
-  color: #EF3F49;
-}
-#example .peek .menu .active:nth-child(4) {
-  border-right-color: #A24096;
-  color: #A24096;
-}
-#example .main h2.group {
-  color: #A24096;
-}
+/*--------------
+    List Page
+---------------*/
 
-#example .peek > .menu {
-  margin-left: 0px;
-  width: 180px;
-}
-/* #example .peek > .menu.animating > .active {
-  background-color: transparent;
-  border: none;
-  padding-left: 0.95em;
-}
-#example .peek > .menu.animating > .active:after {
-  background-color: #FFFFFF;
-} */
-
-/* overview mode */
-
-#example.overview h2.ui.header {
-  margin-bottom: 0em;
-}
-/*
-#example .ui.header ~ .ui.message a,
-#example .ui.header ~ p a {
-  font-weight: bold;
-}
-*/
-#example.overview .example {
-  margin: 0em;
-  min-height: 0px !important;
+#example .element.cards .image {
   overflow: hidden;
-  padding: 0.5em 0em;
+  min-height: 100px;
 }
-#example.overview .example .ui.header,
-#example.overview .example p {
-  float: right;
-  font-size: 1em;
-  font-weight: normal;
-  margin: 0;
-  padding: 0;
+#example .collection.cards {
+  min-height: 350px;
 }
-#example.overview .example p {
-  float: left;
-  font-size: 1rem;
-  padding: 0em 0em 0em 0.3em;
-  width: auto;
-}
-
-
-#example .sticky-wrapper.stuck {
-  height: 0px !important;
-  -webkit-transition:
-    margin-left 0.3s ease-out,
-    opacity 0.3s ease-out
-  ;
-  -moz-transition:
-    margin-left 0.3s ease-out,
-    opacity 0.3s ease-out
-  ;
-  -o-transition:
-    margin-left 0.3s ease-out,
-    opacity 0.3s ease-out
-  ;
-  -ms-transition:
-    margin-left 0.3s ease-out,
-    opacity 0.3s ease-out
-  ;
-  transition:
-    margin-left 0.3s ease-out,
-    opacity 0.3s ease-out
-  ;
-}
-#example .sticky-wrapper.stuck .peek {
-  position: fixed;
-  top: 75px;
-  left: 50%;
-  margin-left: -685px;
-}
-#example.left.pushed .sticky-wrapper .peek {
-  margin-left: -132.5px;
-  padding-left: 132.5px;
-}
-
-#example.left.pushed .sticky-wrapper.stuck .peek {
-  margin-left: -817.5px;
-  padding-left: 132.5px;
-}
-
-#example .settings.table {
-  margin-bottom: 20px;
-}
-#example .settings.table td:first-child {
-  font-weight: bold;
-}
-#example .settings.table td:nth-child(2n) {
-  width: 100px;
-}
-
-#example .existing.annotation {
-  /*display: none;*/
-}
-/*#example .segment p:first-of-type {
-  margin-top: 0em;
-}*/
-
-/* example code reskin */
-#example div.code.hide {
-  display: none;
-}
-/*rtl:ignore*/
-#example div.code {
-  position: relative;
-  width: 100%;
-  height: 200px;
-  text-align: left;
-  direction:ltr;
-}
-#example div.code {
-  margin: -1em;
-  font-size: 14px;
-  padding: 5px 0px;
-  background-color: transparent;
-}
-#example .label + div.code {
-  margin-top: 1.5em;
-}
-#example div.code .ace_gutter {
-  background-color: #FAFAFA;
-  border-right: 1px solid rgba(0, 0, 0, 0.1);
-  color: #999999;
-}
-#example div.code .ace_gutter-cell {
-  padding-right: 20px;
-  padding-left: 10px;
-}
-#example div.code .ace_bracket {
-  background-color: rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
-#example div.code .ace_indent-guide {
-  position: relative;
-  background: none;
-}
-/* #example div.code .ace_indent-guide:after {
-  content: '';
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  height: 100%;
-  border-left: 1px solid #ECF5F3;
-} */
-
-#example table .instructive.segment {
-  background-color: transparent;
-  border: 0px;
-  box-shadow: none;
-  padding: 0em;
-  margin: -0.4em -0.7em;
-}
-#example table .instructive.segment .code {
-  margin: 0em;
-}
-#example table .instructive.segment div.code .ace_identifier,
-#example table .instructive.segment div.code .ace_line {
-  color: #555555;
-}
-
-#example .ui.label + .instructive.segment {
-  margin-top: 0em;
-}
-#example .instructive.segment em {
-  font-style: normal;
-  color: rgba(0, 0, 0, 0.4);
-}
-#example .instructive.segment .title + em {
-  float: right;
-}
-
-
-#example div.code .ace_gutter,
-#example div.code .ace_scroller {
-  background-color: transparent;
-  overflow: visible;
-  margin: 14px 10px;
-}
-#example div.code .ace_scrollbar {
-  overflow: hidden;
-  background-color: transparent;
-}
-
-#example div.code .ace_line,
-#example div.code .ace_line span {
-  -webkit-transition:
-    color 1s ease-out
-  ;
-  -moz-transition:
-    color 1s ease-out
-  ;
-  -o-transition:
-    color 1s ease-out
-  ;
-  -ms-transition:
-    color 1s ease-out
-  ;
-  transition:
-    color 1s ease-out
-  ;
-}
-#example div.code .ace_line {
-  color: #555555;
-}
-#example div.code .ace_tag {
-  color: #DCBCD3;
-}
-#example div.code .ace_attribute-name {
-  color: #F4C5C5;
-}
-#example div.code .ace_content {
-}
-#example div.code .ace_string {
-  color: #00A59D;
-}
-#example div.code .ace_cursor {
-  border-left: none;
-}
-#example div.code .ace_paren {
-  color: #CCCCCC;
-}
-#example div.code .ace_keyword {
-  color: #CCCCCC;
-}
-#example div.code .ace_identifier {
-  color: #CCCCCC;
-}
-#example div.code .ace_punctuation {
-  color: #CCCCCC;
-}
-#example div.code .ace_active_line {
-  background-color: #FBFBE5;
-}
-
-/* Hovered Style */
-
-#example div.code:hover .ace_line {
-  color: #555555;
-}
-#example div.code:hover .ace_tag {
-  color: #892A6F;
-}
-#example div.code:hover .ace_attribute-name {
-  color: #934E4E;
-}
-#example div.code:hover .ace_content {
-}
-#example div.code:hover .ace_string {
-  color: #00A59D;
-}
-#example div.code:hover .ace_cursor {/*
-  border-left: 1px solid #AAAAAA;*/
-}
-#example div.code:hover .ace_paren {
-  color: #555555;
-}
-#example div.code:hover .ace_keyword {
-  color: #555555;
-}
-#example div.code:hover .ace_identifier {
-  color: #555555;
-}
-#example div.code:hover .ace_scrollbar {
-  overflow: hidden !important;
-}
-#example div.code:hover .ace_punctuation {
-  color: #555555;
-}
-#example div.code:hover .ace_active_line {
-  background-color: #FBFBE5;
-}
-
-
-
-/* examples */
-#example .no.example i.code {
-  display: none;
-}
-
-#example .example:first-child,
-#example h2 + .example,
-#example h3 + .example,
-#example h4 + .example {
-  margin-top: 0px;
-  padding-top: 0px;
-  border-top: none;
-}
-#example h2 + .example i.code,
-#example h3 + .example i.code,
-#example h4 + .example i.code {
-  top: 0px;
-}
-#example .example > h4 {
-  margin-bottom: 0em;
-}
-
-#example .clearing.example {
-  clear: both;
-}
-#example .example {
-  margin: 1em 0em;
-  padding: 1em 0em;
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
-/*  clear: both;*/
-  position: relative;
-}
-#example .example .grid i.code {
-  right: 25%;
-}
-#example .example i.code {
-  cursor: pointer;
-  position: absolute;
-  top: 2em;
-  right: 0px;
-  opacity: 0.2;
-
-  font-size: 18px;
-  color: #555555;
-
-  -webkit-transition: opacity 0.3s ease-out;
-  -moz-transition: opacity 0.3s ease-out;
-  -o-transition: opacity 0.3s ease-out;
-  -ms-transition: opacity 0.3s ease-out;
-  transition: opacity 0.3s ease-out;
-}
-
-#example .example > i.code:before {
-  font-family: 'Basic Icons';
-  content: '\e714';
-}
-#example .example:hover i.code {
-  opacity: 0.7;
-}
-#example .example:hover i.code:hover {
-  opacity: 1;
-}
-
-#example .highlighted.example {
-  min-height: 390px;
-}
-#example .highlighted.example .grid,
-#example .ui.type.items .image .grid {
-  -webkit-animation: grid 15s ease infinite;
-  -moz-animation: grid 15s ease infinite;
-  background-color: #F6F6F6;
-  margin: 0em auto;
-}
-#example .highlighted.example .grid .row,
-#example .ui.type.items .image .grid .row {
-  border-top: 1px solid #DDDDDD;
-}
-#example .highlighted.example .grid .column,
-#example .ui.type.items .image .grid .column {
-  background-color: #F4F4F4;
-  min-height: 50px;
-  -webkit-box-shadow: 0px 0px 0px 1px #E2E2E2;
-  -moz-box-shadow: 0px 0px 0px 1px #E2E2E2;
-  box-shadow: 0px 0px 0px 1px #E2E2E2;
-}
-#example .highlighted.example .grid .segment,
-#example .ui.type.items .image .grid .segment {
-  min-height: 50px;
-  text-align: center;
-  padding-left: 0em;
-  padding-right: 0em;
-  -webkit-box-shadow: 0px 0px 0px 1px #DDDDDD;
-  -moz-box-shadow: 0px 0px 0px 1px #DDDDDD;
-  box-shadow: 0px 0px 0px 1px #DDDDDD;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
-}
-
-@-webkit-keyframes grid {
-  0% {
-    width: 100%;
-  }
-  40% {
-    width: 70%;
-  }
-  60% {
-    width: 70%;
-  }
-  100% {
-    width: 100%;
-  }
-}
-@-moz-keyframes grid {
-  0% {
-    width: 100%;
-  }
-  40% {
-    width: 70%;
-  }
-  60% {
-    width: 70%;
-  }
-  100% {
-    width: 100%;
-  }
-}
-@keyframes grid {
-  0% {
-    width: 100%;
-  }
-  40% {
-    width: 70%;
-  }
-  60% {
-    width: 70%;
-  }
-  100% {
-    width: 100%;
-  }
-}
-
-
-#example .ui.type.items > .item {
+#example .ui.type.cards > .item {
   min-height: 255px;
 }
 
-#example .ui.type.items > .item > .image {
+#example .ui.type.cards > .item > .image {
   padding: 1em;
   height: 165px;
   vertical-align: middle;
 }
+/*--------------
+      Header
+---------------*/
 
-/* some demo formatting */
-.ui.menu p:only-child {
-  margin: 0px;
-}
-.ui.menu a {
-  cursor: pointer;
-}
-
-
-body.progress .ui.progress .bar {
-  -webkit-animation: finish 10s ease-in-out infinite;
-  -moz-animation: finish 10s ease-in-out infinite;
-  -ms-animation: finish 10s ease-in-out infinite;
-  animation: finish 10s ease-in-out infinite;
+#example.header .sizer {
+  padding: 1rem 0em;
 }
 
-@-webkit-keyframes finish {
-  0% {
-    width: 0%;
-  }
-  40% {
-    width: 100%;
-  }
-  100% {
-    width: 100%;
-  }
-}
-@-moz-keyframes finish {
-  0% {
-    width: 0%;
-  }
-  40% {
-    width: 100%;
-  }
-  100% {
-    width: 100%;
-  }
-}
-@keyframes finish {
-  0% {
-    width: 0%;
-  }
-  40% {
-    width: 100%;
-  }
-  100% {
-    width: 100%;
-  }
+/*--------------
+      Flag
+---------------*/
+
+#example.flag .basic.table tbody td:first-child {
+  width: 20px;
 }
 
+/*--------------
+      Feed
+---------------*/
 
 #example.feed .example .segment {
   max-width: 800px;
 }
 
-#example .fixed .launch {
-  display: none;
-}
-#example .designer .icon {
-  font-family: 'Basic Icons';
-}
 
-#example .fixed.column .sticky-wrapper {
-  height: 0px !important;
-}
+/*******************************
+         Code Samples
+*******************************/
 
-#example .fixed.column .fixed,
-#example .fixed.segment .fixed {
-  position: fixed;
-  top: 65px;
-  -webkit-perspective: 2000px;
-  -moz-perspective: 2000px;
-  -ms-perspective: 2000px;
-  perspective: 2000px;
 
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  transform-style: preserve-3d;
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0em;
+  color: #666;
+  background-color: transparent;
+  -webkit-text-size-adjust: none;
 }
 
+/*--------------
+    Hover Only
+---------------*/
+
+.hljs,
+.hljs span {
+  -moz-transition: 0.5s color ease;
+  -webkit-transition: 0.5s color ease;
+  -ms-transition: 0.5s color ease;
+  transition: 0.5s color ease;
+}
+.hljs {
+  color: #333333;
+}
+
+.hljs.xml {
+  color: #555555;
+}
+.hljs.xml:hover {
+  color: #333333;
+}
+
+/* Class Name */
+.hljs-string,
+.hljs-tag .hljs-value,
+.hljs-phpdoc,
+.hljs-dartdoc,
+.tex .hljs-formula {
+  color: #009991;
+}
+.code:hover .hljs-string,
+.code:hover .hljs-tag .hljs-value,
+.code:hover .hljs-phpdoc,
+.code:hover .hljs-dartdoc,
+.code:hover .tex .hljs-formula {
+  color: #009991;
+}
+
+/* Comment */
+.hljs-comment,
+.hljs-template_comment,
+.diff .hljs-header,
+.hljs-javadoc {
+  color: #AAAAAA;
+  font-style: italic;
+}
 
 
-@media only screen and (max-width : 1725px) {
+/* Properties */
+.hljs-tag,
+.hljs-rules .hljs-property,
+.django .hljs-tag .hljs-keyword {
+  color: #999999;
+  font-weight: normal;
+}
+
+.code:hover .hljs-tag,
+.code:hover .hljs-rules .hljs-property,
+.code:hover .django .hljs-tag .hljs-keyword {
+  color: #892A6F;
+  font-weight: normal;
+}
+
+/* HTML Tag */
+.hljs-tag .hljs-title {
+  color: #7E7079;
+  font-weight: normal;
+}
+.code:hover .hljs-tag .hljs-title {
+  color: #892A6F;
+}
+
+/* Attribute */
+.hljs-attribute,
+.hljs-variable,
+.lisp .hljs-body {
+  color: #8E6E6E;
+  transition: color 0.3s;
+}
+.code:hover .hljs-attribute,
+.code:hover .hljs-variable,
+.code:hover .lisp .hljs-body {
+  color: #934E4E;
+}
+
+/* CSS ID */
+.hljs-title,
+.hljs-id,
+.scss .hljs-preprocessor {
+  color: #009FDA;
+  font-weight: bold;
+}
+
+/* CSS Attribute */
+.hljs-rule .hljs-attribute {
+  color: #892A6F;
+}
+.code:hover .hljs-rule .hljs-attribute {
+  color: #892A6F;
+}
+
+/* CSS Value */
+.hljs-number,
+.hljs-hexcolor,
+.ruby .hljs-constant {
+  color: #666666;
+}
+
+.code:hover .hljs-number,
+.code:hover .hljs-hexcolor,
+.code:hover .ruby .hljs-constant {
+  color: #333333;
+}
+
+
+
+/*--------------
+      Normal
+---------------*/
+
+.hljs-keyword,
+.css .rule .hljs-keyword,
+.hljs-winutils,
+.javascript .hljs-title,
+.nginx .hljs-title,
+.hljs-subst,
+.hljs-request,
+.hljs-status {
+  color: #333;
+  font-weight: bold;
+}
+
+.javascript .hljs-title,
+.hljs-list .hljs-keyword,
+.hljs-subst {
+  font-weight: normal;
+}
+
+.hljs-class .hljs-title,
+.hljs-type,
+.vhdl .hljs-literal,
+.tex .hljs-command {
+  color: #458;
+  font-weight: bold;
+}
+
+
+.hljs-regexp {
+  color: #009926;
+}
+
+.hljs-built_in {
+  color: #0086b3;
+}
+
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-pi,
+.hljs-doctype,
+.hljs-shebang,
+.hljs-cdata {
+  color: #999;
+  font-weight: bold;
+}
+
+.hljs-deletion {
+  background: #fdd;
+}
+
+.hljs-addition {
+  background: #dfd;
+}
+
+.diff .hljs-change {
+  background: #0086b3;
+}
+
+.hljs-chunk {
+  color: #aaa;
+}
+
+
+/*******************************
+      Definition Container
+*******************************/
+
+#example .pusher > .page {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+#example .pusher > .page > .full.height {
+  display: table-row;
+  height: 100%;
+}
+#example .pusher > .page > .footer {
+  clear: both;
+}
+
+#example .main.container {
+  background-color: #FFFFFF;
+  margin: 0em auto;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.05);
+  border-left: 1px solid #DDDDDD;
+  border-right: 1px solid #DDDDDD;
+  border-bottom: 1px solid #DDDDDD;
+  padding: 2em 2em;
+  z-index: 1;
+}
+#example .wide.main.container {
+  width: 80%;
+  margin: 0 auto;
+  right: 0;
+  max-width: 1140px;
+}
+
+#example .main.container .right.rail .sticky {
+  padding: 2em 0em;
+}
+#example .container {
+  position: relative;
+  width: 915px;
+  margin: 0px auto;
+}
+
+#example .following.menu .menu .active.item {
+  font-weight: bold;
+}
+#example .following.menu .menu .item {
+  padding: 0.5rem 0.25rem;
+}
+
+@media only screen and (max-width : 400px) {
+  #example .advertisement {
+    max-width: 260px;
+  }
+}
+@media only screen and (max-width : 400px) {
+  #example .example {
+    max-width: 290px;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #example .solid, #example .stripe {
+    padding: 4em 0em;
+  }
+  #example .page > .footer {
+    padding: 2em 0em;
+  }
   #example .container {
     width: auto;
-    margin-right: 100px;
-    margin-left: 325px;
+    margin: 0em 1rem;
   }
-  #example.index .container {
-    margin-left: 8em;
-    margin-right: 8em;
+  #example .main.container {
+    padding: 1em;
+    box-shadow: none;
   }
-  #example .sticky-wrapper.stuck .peek {
-    margin-left: 0px;
-    left: 95px;
+  #example .header.segment {
+    padding-top: 60px;
+    padding-bottom: 20px;
   }
-  #example.left.pushed .sticky-wrapper .peek {
-    padding-left: 275px;
-    margin-left: -275px;
+  #example .example i.code {
+    opacity: 0.3;
   }
-  #example.left.pushed .sticky-wrapper.stuck .peek {
-    margin-left: 0px;
-    padding-left: 275px;
-  }
-}
-@media only screen and (max-width : 1500px) {
-  #example.index .icon.header .icon {
-    font-size: 3em;
+  #example .example i.code:hover {
+    opacity: 1;
   }
 }
 
-@media only screen and (max-width : 1050px) {
-  #example .fixed .section,
-  #example .fixed .title b {
+@media only screen and (min-width : 600px) and (max-width : 998px) {
+  #example .container {
+    width: auto;
+    margin: 0em 2rem;
+  }
+  #example .header .button {
+    margin-bottom: 0.5em;
+  }
+  #example .main.container {
+    padding: 1em 2em;
+  }
+}
+
+@media only screen and (max-width : 998px) {
+
+  #example .pusher > .page {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  #example .pusher > .page > .full.height {
+    display: block;
+    height: auto;
+  }
+  #example .following.menu {
     display: none;
   }
-  #example .stripe .header .code.icon {
+}
+
+@media only screen and (min-width : 998px) {
+  #example .following.menu {
+    display: block;
+  }
+  #example .introduction {
+    display: block;
+  }
+  #example .advertisement {
+    left: 100%;
+    padding-left: 0em;
+    position: absolute;
+    top: 0em;
+    vertical-align: top;
+  }
+  #example .container {
+    right: 110px;
+  }
+}
+@media only screen and (min-width : 998px) and (max-width: 1200px) {
+  #example .container {
+    width: 680px;
+    right: 75px;
+    margin: 0em auto;
+  }
+  #example .container .right.rail {
+    width: 200px;
+    padding-left: 0em;
+  }
+}
+@media only screen and (min-width : 1200px) and (max-width: 1355px) {
+  #example .container {
+    width: 765px;
+    right: 128px;
+    margin: 0em auto;
+  }
+}
+@media only screen and (min-width : 1355px) {
+  #example .container {
+    width: 850px;
+  }
+  #example.item .container,
+  #example.card .container {
+    width: 955px;
+  }
+}
+
+
+
+/*******************************
+          Responsive
+*******************************/
+
+@media only screen and (max-width : 998px) {
+  #example .fixed .section,
+  #example .fixed .title b {
     display: none;
   }
   #example .fixed .container {
     width: auto;
     margin: 0px auto;
+    max-width: 9999px;
   }
-  #example .attached.launch.button {
+  #example .fixed.launch.button {
     display: none;
   }
   #example .fixed .launch {
+    cursor: pointer;
     display: inline-block;
   }
-  #example .sticky-wrapper {
-    display: none;
-  }
-  #example .container {
-    width: auto;
-    margin: 0% 30px 0px;
-  }
 }
+
+
 @media only screen and (max-width : 780px) {
   pre.console {
     height: 150px;
-  }
-  #example.index .masthead {
-    text-align: center;
-    padding: 50px 0px 15px;
-  }
-  #example.index .masthead h1 {
-    font-size: 3em;
-  }
-  #example.index .masthead h1 .icon {
-    display: none;
-  }
-  #example.index .masthead .button {
-    font-size: 1.1em;
-    margin-bottom: 0.5em;
-  }
-  #example.index .masthead h2 {
-    font-size: 1.25em;
-    margin: 0em 0em 1em;
-  }
-  #example.index .masthead p {
-    font-size: 1.35em;
-  }
-  #example.index .container {
-    margin-left: 2em;
-    margin-right: 2em;
-  }
-  #example.index .icon.header .icon {
-    font-size: 3em;
   }
   #example .introduction {
     display: block;
   }
   #example .advertisement {
     display: block;
-    margin: 1em 0em;
+    margin: 1em auto;
     padding: 0em;
   }
   #example #menu .hide.item {
@@ -1374,9 +1636,6 @@ body.progress .ui.progress .bar {
   }
   #example #menu .item > .icon {
     font-size: 1em !important;
-  }
-  #example .inverted.advertisement .carbonad {
-    height: 109px;
   }
   #example .inverted.advertisement .carbonad-img {
     margin-top: 0px;
@@ -1395,15 +1654,11 @@ body.progress .ui.progress .bar {
     margin-left: 160px;
     width: 170px;
   }
-}
-
-
-@media only screen and (max-width : 600px) {
-  #example .icon.example .grid .column {
-    width: 33.33%;
+  #example:not(.index) .introduction .button {
+    float: none;
+    margin: 0 0.5em 0.5em 0;
   }
 }
-
 
 @media only screen and (max-width : 600px) {
   #example .main.menu .borderless.item {
@@ -1415,11 +1670,11 @@ body.progress .ui.progress .bar {
   #example .fixed .next {
     display: none;
   }
-  #example > .tab.segment .tabular.menu {
+  #example .tab.header.segment .tabular.menu {
     display: none;
   }
 
-  #example > .tab.segment .vertical.menu {
+  #example .tab.header.segment .vertical.menu {
     display: block;
   }
 }
@@ -1428,7 +1683,7 @@ body.progress .ui.progress .bar {
     display: none;
   }
   #example .main.menu .github.item {
-    display: block;
+    display: inline-block;
   }
   #example .main.menu .github.item:before {
     display: none;
@@ -1441,35 +1696,41 @@ body.progress .ui.progress .bar {
   }
 }
 
-
-
-@media only screen and (min-width : 1725px) {
-  #example .container {
-    width: 1100px;
+#example .masthead .mobile.buttons {
+  display: none;
+}
+@media only screen and (max-width : 470px) {
+  #example .masthead .tag.label {
+    display: none;
   }
-  #example .sticky-wrapper.stuck .peek {
-    margin-left: -780px;
+  #example .masthead .inverted.buttons {
+    display: none;
   }
-  #example.left.pushed .main.menu {
-    margin-left: -132px;
+  #example .masthead .mobile.buttons {
+    display: block;
+  }
+  #example.button-page .ui.buttons,
+  #example.button-page :not(.buttons) .ui.button {
+    margin-bottom: 0.5em;
+  }
+  #example .masthead:before {
+    -webkit-animation-name: none;
+    -moz-animation-name: none;
+    -o-animation-name: none;
+    animation-name: none;
   }
 }
 
-@media only screen and (min-width : 2300px) {
-  #example .container {
-    width: 1320px;
+@media only screen and (max-width : 640px) {
+  #example .language.dropdown .menu {
+    overflow-x: hidden;
+    overflow-y: auto;
+    backface-visibility: hidden;
+    -webkit-overflow-scrolling: touch;
+    max-height: 316px;
   }
-  #example .sticky-wrapper.stuck .peek {
-    margin-left: -890px;
-  }
-}
-
-
-
-@media only screen and (max-width : 998px) {
-  #example.index .main.menu .container {
-    width: auto;
-    padding: 0% 4%;
+  #example.transition .fixed.column {
+    display: none;
   }
   #example.transition .examples {
     width: 100%;
@@ -1478,43 +1739,23 @@ body.progress .ui.progress .bar {
     display: none;
   }
 }
-@media only screen and (min-width : 998px) {
-  #example.index .main.menu .container {
-    width: auto;
-    padding: 0% 8%;
-  }
+@media only screen and (max-width : 998px) {
   #example .examples {
-    margin-right: 400px;
+    margin-right: 230px;
+    padding: 1px;
   }
   #example .fixed.column,
   #example .fixed.column .fixed {
-    float: right;
-    width: 300px;
+    width: 200px;
   }
 }
-@media only screen and (min-width : 1500px) {
-  #example.index .main.menu .container {
-    width: auto;
-    padding: 0% 13%;
-  }
+@media only screen and (min-width : 998px) {
   #example .examples {
-    margin-right: 500px;
+    margin-right: 280px;
+    padding: 1px;
   }
   #example .fixed.column,
-  #example .fixed.column .fixed  {
-    float: right;
-    width: 400px;
-  }
-}
-@media only screen and (min-width : 1750px) {
-  #example.index .main.menu .container {
-    width: auto;
-    padding: 0% 18%;
-  }
-}
-@media only screen and (min-width : 2000px) {
-  #example.index .main.menu .container {
-    width: auto;
-    padding: 0% 23%;
+  #example .fixed.column .fixed {
+    width: 250px;
   }
 }

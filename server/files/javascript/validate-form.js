@@ -10,6 +10,7 @@ semantic.validateForm.ready = function() {
     $inlineForm   = $('.inline.example .ui.form'),
     $form         = $('.ui.form').not($dogForm).not($inlineForm).not($dropdownForm),
     $checkbox     = $('.ui.checkbox'),
+    $dropdown     = $('.ui.dropdown'),
     // alias
     handler
   ;
@@ -21,6 +22,9 @@ semantic.validateForm.ready = function() {
   $checkbox
     .checkbox()
   ;
+  $dropdown
+    .dropdown()
+  ;
 
   $.fn.form.settings.defaults = {
     firstName: {
@@ -29,6 +33,24 @@ semantic.validateForm.ready = function() {
         {
           type   : 'empty',
           prompt : 'Please enter your first name'
+        }
+      ]
+    },
+    name: {
+      identifier  : 'name',
+      rules: [
+        {
+          type   : 'empty',
+          prompt : 'Please enter you name'
+        }
+      ]
+    },
+    gender: {
+      identifier  : 'gender',
+      rules: [
+        {
+          type   : 'empty',
+          prompt : 'Please select a gender'
         }
       ]
     },

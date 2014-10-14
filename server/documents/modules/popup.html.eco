@@ -2,10 +2,16 @@
 layout      : 'default'
 css         : 'popup'
 
+element     : 'popup'
+elementType : 'module'
+
 title       : 'Popup'
-description : 'A popup displays additional information on top of a page element'
+description : 'A popup displays additional information on top of a page'
 type        : 'UI Module'
+
+themes      : ['Default']
 ---
+<link rel="stylesheet/less" type="text/css" href="/build/less/definitions/modules/popup.less" />
 <script src="/javascript/popup.js"></script>
 
 <%- @partial('header', { tabs: 'module' }) %>
@@ -13,48 +19,142 @@ type        : 'UI Module'
 
   <div class="ui active tab" data-tab="definition">
 
-
-    <div class="peek">
-      <div class="ui vertical pointing secondary menu">
-        <a class="active item">Types</a>
-        <a class="item">Variations</a>
-      </div>
-    </div>
-
     <h2 class="ui dividing header">
       Types
     </h2>
 
     <div class="example">
-      <h3 class="ui header">Popup</h3>
-      <p>A standard popup</p>
-      <i class="heart circular icon link" data-content="Hello, I am a pop-up."></i>
-      <i class="heart circular icon link" title="Hello, I am a pop-up."></i>
+      <h4 class="ui header">Content</h4>
+      <p>An element can specify popup content to appear</p>
+      <div class="ui icon button" data-content="Add users to your feed">
+        <i class="add icon"></i>
+      </div>
     </div>
 
     <div class="example">
-      <h3 class="ui header">Title</h3>
-      <p>A popup can be formatted with a title</p>
-      <img src="/images/demo/photo.jpg" data-title="PonyDog22" data-content="Ponydog has been a member for 22 days" class="ui avatar image"> PonyDog22
+      <h4 class="ui header">Title</h4>
+      <p>An element can specify popup content with a title</p>
+      <img src="/images/avatar/small/elliot.jpg" data-title="Elliot Fu" data-content="Elliot has been a member since July 2012" class="ui avatar image">
+      <img src="/images/avatar/small/stevie.jpg" data-title="Stevie Feliciano" data-content="Stevie has been a member since August 2013" class="ui avatar image">
+      <img src="/images/avatar/small/matt.jpg" data-title="Matt" data-content="Matt has been a member since July 2014" class="ui avatar image">
     </div>
 
     <div class="example">
-      <h3 class="ui header">HTML</h3>
-      <p>A popup can be formatted with html</p>
-      <i class="circular heart icon link" data-html="Average Rating: <div class='ui star rating'><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i><i class='icon'></i><i class='icon'></i></div>"></i>
+      <h4 class="ui header">HTML</h4>
+      <p>An element can specify html for a popup</p>
+
+      <div class="ui card" data-html="<div class='header'>User Rating</div><div class='content'><div class='ui star rating'><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i><i class='icon'></i><i class='icon'></i></div></div>">
+        <div class="image">
+          <img src="/images/movies/totoro-horizontal.jpg">
+        </div>
+        <div class="content">
+          <div class="header">My Neighbor Totoro</div>
+          <div class="description">
+            Two sisters move to the country with their father in order to be closer to their hospitalized mother, and discover the surrounding trees are inhabited by magical spirits.
+          </div>
+        </div>
+        <div class="ui two bottom attached buttons">
+          <div class="ui button">
+            <i class="add icon"></i>
+            Queue
+          </div>
+          <div class="ui primary button">
+            <i class="play icon"></i>
+            Watch
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="existing example">
+      <h4 class="ui header">Pre-Existing</h4>
+      <p>An element can display a popup that is already included in the page</p>
+
+      <div class="ui card">
+        <div class="image">
+          <img src="/images/movies/watchmen-horizontal.jpg">
+        </div>
+        <div class="content">
+          <div class="header">Watchmen</div>
+          <div class="description">
+            In a gritty and alternate 1985 the glory days of costumed vigilantes have been brought to a close by a government crackdown, but after one of the masked veterans is brutally murdered an investigation into the killer is initiated.
+          </div>
+        </div>
+        <div class="ui two bottom attached buttons">
+          <div class="ui button">
+            <i class="add icon"></i>
+            Queue
+          </div>
+          <div class="ui primary button">
+            <i class="play icon"></i>
+            Watch
+          </div>
+        </div>
+      </div>
+      <div class="ui popup">
+        <div class='header'>User Rating</div>
+        <div class="ui star rating" data-rating="3"></div>
+      </div>
     </div>
 
     <h2 class="ui dividing header">Variations</h2>
 
     <div class="example">
-      <h3 class="ui header">Size</h3>
-      <p>A popup can be large or small</p>
-      <i class="circular heart icon link" data-content="Hello. This is a small popup" data-variation="small"></i>
-      <i class="circular heart icon link" data-content="Hello. This is a large popup" data-variation="large"></i>
+      <h4 class="ui header">Width</h4>
+      <p>A popup can be extra wide to allow for longer content</p>
+      <i class="circular heart icon link" data-content="Hello. This is a wide pop-up which allows for lots of content with additional space. You can fit a lot of words here and the paragraphs will be pretty wide." data-variation="wide"></i>
+      <i class="circular heart icon link" data-content="Hello. This is a very wide pop-up which allows for lots of content with additional space. You can fit a lot of words here and the paragraphs will be pretty wide." data-variation="very wide"></i>
+    </div>
+
+    <div class="fluid example">
+      <h4 class="ui header">Fluid</h4>
+      <p>A fluid popup will take up the entire width of its offset container</p>
+      <div class="ui button">Show fluid popup</div>
+      <div class="ui fluid popup">
+        <div class="ui four column divided center aligned grid">
+          <div class="column">1</div>
+          <div class="column">2</div>
+          <div class="column">3</div>
+          <div class="column">4</div>
+        </div>
+      </div>
     </div>
 
     <div class="example">
-      <h3 class="ui header">Inverted</h3>
+      <h4 class="ui header">Size</h4>
+      <p>A popup can vary in size</p>
+      <i class="circular heart icon link" data-content="Hello. This is a small popup" data-variation="small"></i>
+      <i class="circular heart icon link" data-content="Hello. This is a large popup" data-variation="large"></i>
+      <i class="circular heart icon link" data-content="Hello. This is a huge popup" data-variation="huge"></i>
+    </div>
+
+    <div class="fitted example">
+      <h4 class="ui header">Flowing</h4>
+      <p>A popup can have no maximum width and continue to flow to fit its content</p>
+      <div class="ui button">Show flowing popup</div>
+      <div class="ui flowing popup">
+        <div class="ui three column padded divided center aligned grid">
+          <div class="column">
+            <h4 class="ui header">Basic Plan</h4>
+            <p><b>2</b> projects, $10 a month</p>
+            <div class="ui button">Choose</div>
+          </div>
+          <div class="column">
+            <h4 class="ui header">Business Plan</h4>
+            <p><b>5</b> projects, $20 a month</p>
+            <div class="ui button">Choose</div>
+          </div>
+          <div class="column">
+            <h4 class="ui header">Premium Plan</h4>
+            <p><b>8</b> projects, $25 a month</p>
+            <div class="ui button">Choose</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Inverted</h4>
       <p>A popup can have its colors inverted</p>
       <i class="circular heart icon link" data-content="Hello. This is an inverted popup" data-variation="inverted"></i>
     </div>
@@ -62,17 +162,52 @@ type        : 'UI Module'
 
   <div class="ui tab" data-tab="usage">
 
-    <h2 class="ui dividing header">Initializing</h2>
+    <h2 class="ui dividing header">Usage</h2>
 
-    <h3 class="ui header">Initializing an popup</h3>
-    <div class="code">
-    $('.ui.popup')
-      .popup()
-    ;
+    <div class="no example">
+      <h4 class="ui header">Initializing A Popup</h4>
+      <p>A popup is initialized on an activating element</p>
+      <div class="code">
+      $('.activating.element')
+        .popup()
+      ;
+      </div>
     </div>
 
     <div class="no example">
-      <h3 class="ui header">Including content with HTML Metadata</h3>
+      <h4 class="ui header">Using a Pre-existing Popup</h4>
+      <p>Using a pre-existing popup allows for you to include complex html inside your popup.<p>
+      <p>If you include your popup on page load as an adjacent sibling element to your activating element it can be found automatically.</p>
+      <p>To instruct popup to look inline for your popup element you can initialize it with the <code>inline</code> parameter</p>
+      <div class="code" data-type="javascript">
+        $('.button')
+          .popup({
+            inline: true
+          })
+        ;
+      </div>
+      <div class="code" data-type="html">
+        <div class="ui button">Activator</div>
+        <div class="ui special popup">
+          <div class="header">Custom Header</div>
+          <div class="ui button">Click Me</div>
+        </div>
+      </div>
+    </div>
+    <div class="no example">
+      <h4 class="ui header">Using a Pre-existing Popup Anywhere</h4>
+      <p>If you cannot include your popup element as a sibling element, you can specify a custom selector to retrieve your popup</p>
+      <div class="code" data-type="javascript">
+        $('.button')
+          .popup({
+            popup: '.special.popup'
+          })
+        ;
+      </div>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">Specifying Content In Metadata</h4>
       <p>Frequently used settings like, title, content, html, or offset or variation, can be included in html metadata<p>
       <div class="ui info icon ignored message">
         <i class="info icon"></i>
@@ -90,19 +225,21 @@ type        : 'UI Module'
             <li><code>data-variation</code>: the popup variation to use </li>
             <li><code>data-offset</code>: a pixel offset correction for popup</li>
             <li><code>data-position</code>: the side to position popup on</li>
+            <li><code>data-variation</code>: the popup variation to use </li>
           </ul>
         </div>
       </div>
-      <h4 class="ui header">Initializing with metadata</h4>
       <div class="code" data-type="html">
         <i class="heart icon" title="Hello I am a popup"></i>
       </div>
-      <div class="ui horizontal divider">Or</div>
-      <h4 class="ui header">Initializing with javascript content</h4>
+    </div>
+    <div class="no example">
+      <h4 class="ui header">Specifying Content In Javascript</h4>
       <div class="code">
       $('.ui.popup')
         .popup({
-          content: 'Hello I am a popup'
+          title   : 'Popup Title',
+          content : 'Hello I am a popup'
         })
       ;
       </div>
@@ -167,8 +304,103 @@ type        : 'UI Module'
 
   <div class="ui tab" data-tab="examples">
 
+    <h2 class="ui dividing header">Examples</h2>
+
     <div class="example">
-      <h3 class="ui header">Specifying a trigger event</h3>
+      <h4 class="ui header">Wide Popup Menu</h4>
+      <div class="ignored">
+        <p>An easier way to display complex content, like a wide popup menu is to have the popup content as a pre-  existing part of your page's html.</p>
+        <p>Using the setting <code>inline: true</code> will let Semantic know to display the next sibling <code>ui  popup</code> element after the activator.</p>
+
+        <p>Tweaking settings like the delay for show, and hide, and making the menu hoverable will help it function   more like a dropdown menu</p>
+      </div>
+
+      <div class="evaluated code">
+      $('.example .menu .browse')
+        .popup({
+          inline   : true,
+          hoverable: true,
+          position : 'bottom left',
+          delay: {
+            show: 300,
+            hide: 800
+          }
+        })
+      ;
+      </div>
+      <div class="ui menu">
+        <a class="active item">
+          <i class="home icon"></i> Home
+        </a>
+        <a class="browse item">
+          <i class="dropdown icon"></i>
+          Browse
+        </a>
+        <div class="ui very wide popup">
+          <div class="ui four column grid">
+            <div class="ui column">
+              <h5 class="ui header">Fabrics</h5>
+              <div class="ui link list">
+                <a class="item">Cashmere</a>
+                <a class="item">Linen</a>
+                <a class="item">Cotton</a>
+                <a class="item">Viscose</a>
+              </div>
+            </div>
+            <div class="ui column">
+              <h5 class="ui header">Sizes</h5>
+              <div class="ui link list">
+                <a class="item">Small</a>
+                <a class="item">Medium</a>
+                <a class="item">Large</a>
+                <a class="item">Plus Sizes</a>
+              </div>
+            </div>
+            <div class="ui column">
+              <h5 class="ui header">Colors</h5>
+              <div class="ui link list">
+                <a class="item">Neutrals</a>
+                <a class="item">Brights</a>
+                <a class="item">Pastels</a>
+              </div>
+            </div>
+            <div class="ui column">
+              <h5 class="ui header">Types</h5>
+              <div class="ui link list">
+                <a class="item">Knitwear</a>
+                <a class="item">Outerwear</a>
+                <a class="item">Pants</a>
+                <a class="item">Shoes</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Specifying a selector for a popup</h4>
+      <p>If its not possible to include the popup content as the next sibling, you can also specify a custom selector to help link the popup contents to its activator.</p>
+      <div class="evaluated code">
+      $('.example .custom.button')
+        .popup({
+          popup : $('.custom.popup'),
+          on    : 'click'
+        })
+      ;
+      </div>
+      <div class="some-wrapping-div">
+        <div class="ui custom button">Show custom popup</div>
+      </div>
+      <div class="ui custom popup">
+        I'm not on the same level as the button, but i can still be found.
+      </div>
+    </div>
+
+
+    <div class="example">
+      <h4 class="ui header">Specifying a trigger event</h4>
       <p>A popup trigger event can be specified</p>
       <div class="evaluated code">
     $('.example .teal.button')
@@ -190,23 +422,24 @@ type        : 'UI Module'
     </div>
 
     <div class="example">
-      <h3 class="ui header">Target Element</h3>
+      <h4 class="ui header">Target Element</h4>
       <p>A popup can specify a different target element than itself to show a popup</p>
       <div class="evaluated code">
-    $('.test.button')
-      .popup({
-        position : 'top right',
-        target   : '.test.image',
-        title    : 'My favorite dog',
-        content  : 'My favorite dog would like other dogs as much as themselves'
-      })
-    ;
+      $('.test.button')
+        .popup({
+          position : 'top right',
+          target   : '.test.image',
+          title    : 'My favorite dog',
+          content  : 'My favorite dog would like other dogs as much as themselves'
+        })
+      ;
       </div>
-      <div class="ui basic test button">Hover Me</div>
+      <div class="ui green test button">Hover Me</div>
       <div class="ui divider"></div>
       <img class="medium ui test image" src="/images/demo/photo.jpg">
-
-      <h3 class="ui header">Inline or relative to page</h3>
+    </div>
+    <div class="inline example">
+      <h4 class="ui header">Inline or relative to page</h4>
       <p>A popup can either be inserted directly after an element, or added as a child element to the page's <code>body</code>.</p>
       <div class="ui positive message">
         Using inline will allow your popups to go places other popups can't go, like inside <code>fixed</code> or <code>absolutely</code> positioned elements
@@ -221,18 +454,18 @@ type        : 'UI Module'
       }
       </div>
       <div class="evaluated code">
-    $('.inline.icon')
-      .popup({
-        inline: true
-      })
-    ;
+      $('.inline.icon')
+        .popup({
+          inline: true
+        })
+      ;
       </div>
       <i class="heart circular icon link" data-content="This is a child element to the page's body and will not be styled" ></i>
       <i class="mail inline circular icon link" data-content="This popup was inserted inline and will be styled" ></i>
 
     </div>
     <div class="position example">
-      <h3 class="ui header">Positioning</h3>
+      <h4 class="ui header">Positioning</h4>
       <p>A popup can be positioned to any side of an element. If space is not available, it will automatically search for a similar alternative position to use.</p>
       <div class="ui segment">
         <i class="square inverted red heart icon link" data-content="Top Left" data-position="top left"></i>
@@ -247,7 +480,7 @@ type        : 'UI Module'
     </div>
 
     <div class="example">
-      <h3 class="ui header">Specifying an offset</h3>
+      <h4 class="ui header">Specifying an offset</h4>
       <p>A popup position can be adjusted manually by specifying an offset property using <code>data-offset="value"</code></p>
 
       <i class="heart circular icon link" data-offset="50" data-content="As expected this popup is way off to the right"></i>
@@ -255,7 +488,7 @@ type        : 'UI Module'
 
 
     <div class="no example">
-      <h3 class="ui header">Transitions</h3>
+      <h4 class="ui header">Transitions</h4>
       <p>A popup can use any named ui transition.</p>
       <i class="large demo home circular link icon" data-title="Home" data-content="The place where you keep your dog"></i> Home
 
@@ -327,12 +560,19 @@ type        : 'UI Module'
         <tr>
           <td>on</td>
           <td>hover</td>
-          <td>Event used to trigger popup. Can be either <b>focus, click or hover</b></td>
+          <td>Event used to trigger popup. Can be either <b>focus, click, hover, or manual</b>. Manul popups must be triggered with <code>$('.element').popup('show');</code></td>
         </tr>
         <tr>
           <td>delay</td>
-          <td>150</td>
-          <td>Delay in milliseconds before showing a popup when using hover or focus events.</td>
+          <td>
+            <div class="code">
+    delay: {
+      show: 50,
+      hide: 0
+    }
+            </div>
+          </td>
+          <td>Delay in milliseconds before showing or hiding a popup on hover or focus</td>
         </tr>
         <tr>
           <td>transition</td>
@@ -375,46 +615,6 @@ type        : 'UI Module'
         </tr>
       </tbody>
     </table>
-
-
-    <div class="ui horizontal section divider"><i class="icon setting"></i></div>
-    <h3 class="ui header">
-      Callbacks
-      <div class="sub header">Callbacks specify a function to occur after a specific behavior.</div>
-    </h3>
-
-    <table class="ui celled sortable definition table segment">
-      <thead>
-        <tr>
-        <th class="four wide">Setting</th>
-        <th>Context</th>
-        <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>onCreate</td>
-          <td>Popup</td>
-          <td>Is called after a popup is created</td>
-        </tr>
-        <tr>
-          <td>onRemove</td>
-          <td>Popup</td>
-          <td>Is called after a popup is removed from the page</td>
-        </tr>
-        <tr>
-          <td>onShow</td>
-          <td>Element</td>
-          <td>Is called after a popup is shown.</td>
-        </tr>
-        <tr>
-          <td>onHide</td>
-          <td>Element</td>
-          <td>Is called after a popup is hidden.</td>
-        </tr>
-      </tbody>
-    </table>
-
 
     <h3 class="ui header">
       Content Settings
@@ -526,7 +726,7 @@ type        : 'UI Module'
         </tr>
         <tr>
           <td>debug</td>
-          <td>True</td>
+          <td>False</td>
           <td>Provides standard debug output to console</td>
         </tr>
         <tr>

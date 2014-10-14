@@ -1,33 +1,63 @@
 ---
 layout      : 'default'
 css         : 'loader'
+
+element     : 'loader'
+elementType : 'element'
+
 title       : 'Loader'
-description : 'Loaders lets a user know to wait for activity to finish'
+description : 'A loader alerts a user to wait for an activity to complete'
 type        : 'UI Element'
+
+themes      : ['Default']
 ---
 
 <%- @partial('header') %>
 
 <div class="main container">
 
-  <div class="peek">
-    <div class="ui vertical pointing secondary menu">
-      <a class="active item">Types</a>
-      <a class="item">States</a>
-      <a class="item">Variations</a>
-    </div>
-  </div>
-
   <h2 class="ui dividing header">Types</h2>
   <div class="example">
     <h4 class="ui header">Loader</h4>
     <p>A loader</p>
+    <div class="ui ignored info message">A standard loader uses images, this ensures maximum compatability with other components.</div>
     <div class="ui ignored info message">Loaders by default are hidden unless inside of a dimmer.</div>
     <div class="ui segment">
       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
       <div class="ui active dimmer">
         <div class="ui loader"></div>
       </div>
+    </div>
+  </div>
+
+  <h3 class="ui header">CSS Loaders</h3>
+
+  <div class="example">
+    <h4 class="ui header">Flipping Loader</h4>
+    <p>A loader can animate by flipping</p>
+    <div class="ui segment">
+      <div class="ui active dimmer">
+        <div class="ui flipping loader">
+          <div class="shape"></div>
+          Loading
+        </div>
+      </div>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui segment">
+      <div class="ui active dimmer">
+        <div class="ui flipping circular loader">
+          <div class="shape"></div>
+          Loading
+        </div>
+      </div>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
     </div>
   </div>
 
@@ -128,8 +158,5 @@ type        : 'UI Element'
       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
     </div>
   </div>
-  </div>
-  </div>
-
 
 </div>

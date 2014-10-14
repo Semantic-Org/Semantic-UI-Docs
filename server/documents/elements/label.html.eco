@@ -1,28 +1,28 @@
 ---
 layout      : 'default'
-css         : "label"
+css         : 'label'
+
+element     : 'label'
+elementType : 'element'
+
 title       : 'Label'
-description : 'Labels give descriptions to pieces of content'
+description : 'A label displays content classification'
 type        : 'UI Element'
+
+themes      : ['Default']
+---
+<link rel="stylesheet/less" type="text/css" href="/build/less/definitions/elements/label.less" />
 ---
 
 <%- @partial('header') %>
 
 <div class="main container">
 
-  <div class="peek">
-    <div class="ui vertical pointing secondary menu">
-      <a class="active item">Types</a>
-      <a class="item">Variations</a>
-      <a class="item">Groups</a>
-    </div>
-  </div>
-
   <h2 class="ui dividing header">Types</h2>
 
   <div class="example">
     <h4 class="ui header">Label</h4>
-    <p>A basic label</p>
+    <p>A label</p>
     <div class="ui label">
       <i class="mail icon"></i> 23
     </div>
@@ -60,41 +60,65 @@ type        : 'UI Element'
     <a class="ui image label">
       <img src="/images/demo/photo2.jpg">
       dog@doggington.com
-      <i class="delete icon"></i>
-    </a>
-    <a class="ui image label">
-      <img src="/images/demo/avatar2.jpg">
-      james@thepooch.com
-      <i class="delete icon"></i>
     </a>
     <a class="ui image label">
       <img src="/images/demo/avatar3.jpg">
       kelly@bellyscratcher.com
-      <i class="delete icon"></i>
+      <div class="detail">Friend</div>
     </a>
+    <div class="ui image label">
+      <img src="/images/demo/avatar2.jpg">
+      james@thepooch.com
+      <i class="delete icon"></i>
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Pointing</h4>
+    <p>A label can point to content next to it</p>
+    <form class="ui fluid form">
+      <div class="field">
+        <input type="text" placeholder="First name">
+        <div class="ui pointing label">
+          Please enter a value
+        </div>
+      </div>
+      <div class="ui simple divider"></div>
+      <div class="field" placeholder="Last Name">
+        <div class="ui pointing below label">
+          Please enter a value
+        </div>
+        <input type="text">
+      </div>
+      <div class="ui simple divider"></div>
+      <div class="inline field">
+        <input type="text" placeholder="Username">
+        <div class="ui pointing left label">
+          That name is taken!
+        </div>
+      </div>
+      <div class="ui simple divider"></div>
+      <div class="inline field">
+        <div class="ui pointing right label">
+          Your password must be 6 characters or more
+        </div>
+        <input type="password">
+      </div>
+    </form>
   </div>
 
   <div class="example">
     <h4 class="ui header">Corner</h4>
     <p>A label can position itself in the corner of an element</p>
-    <div class="yellow ui message">A corner label must be positioned inside a container with position: relative to display properly</div>
-    <div class="ui segment">
-      <div class="ui right red corner label">
-        <i class="heart icon"></i>
-      </div>
-      <div class="ui left corner label">
-        <div class="text">New</div>
-      </div>
-      This is a normal text segment
-    </div>
+    <div class="yellow ui message">A corner label must be positioned inside a container with <b>position: relative</b> to display properly</div>
     <div class="ui left floated medium image">
-      <a class="ui left corner label">
-        <div class="text">New</div>
+      <a class="ui corner label">
+        <i class="save icon"></i>
       </a>
       <img src="/images/demo/highres2.jpg">
     </div>
     <div class="ui left floated medium image">
-      <a class="ui right red corner label">
+      <a class="ui left red corner label">
         <i class="heart icon"></i>
       </a>
       <img src="/images/demo/highres3.jpg">
@@ -102,30 +126,34 @@ type        : 'UI Element'
   </div>
 
   <div class="clearing example">
+    <h4 class="ui header">Tag</h4>
+    <p>A label can appear as a tag</p>
+    <a class="ui tag label">New</a>
+    <a class="ui red tag label">Upcoming</a>
+    <a class="ui teal tag label">Featured</a>
+  </div>
+
+  <div class="example">
     <h4 class="ui header">Ribbon</h4>
     <p>A label can appear as a ribbon attaching itself to an element.</p>
-    <div class="ui two column grid">
-      <div class="row">
-        <div class="column">
-          <div class="ui raised segment">
-            <div class="ui ribbon label">Dogs</div>
-            <p>Pretty nice animals.</p>
-            <div class="ui teal ribbon label">Cats</div>
-            <p>Also pretty nice animals, but can prefer solitude.</p>
-            <div class="ui red ribbon label">Ogres and monsters</div>
-            <p>Never seen one as a pet before, but I imagine they'd make pretty terrible companions.</p>
-          </div>
-        </div>
-      </div>
+    <div class="ui raised segment">
+      <a class="ui ribbon label">Dogs</a>
+      <p>Pretty nice animals.</p>
+      <a class="ui teal ribbon label">Cats</a>
+      <p>Also pretty nice animals, but can prefer solitude.</p>
+      <a class="ui red ribbon label">Ogres and monsters</a>
+      <p>Never seen one as a pet before, but I imagine they'd make pretty terrible companions.</p>
     </div>
-      <div class="existing code">
-      <div class="ui ribbon label">Dogs</div>
-      </div>
   </div>
 
   <div class="example">
     <h4 class="ui header">Attached</h4>
     <p>A label can attach to a content segment</p>
+    <div class="ui ignored warning message">
+      <h3 class="ui header">Attached label padding</h3>
+      <p>Attached labels attempt to intelligently pad other content to account for their position, but may not in all cases apply this padding correctly.</p>
+      <p>If this happens you may need to manually correct the padding of the other elements inside the container.
+    </div>
     <div class="ui three column grid">
       <div class="row">
         <div class="column">
@@ -178,32 +206,6 @@ type        : 'UI Element'
       </div>
   </div>
 
-  <h2 class="ui dividing header">Variations</h2>
-  <div class="example">
-    <h4 class="ui header">Colors</h4>
-    <p>A label can have different colors</p>
-    <a class="ui black label">
-      First
-    </a>
-    <a class="ui green label">
-      Fun
-    </a>
-    <a class="ui red label">
-      Happy
-    </a>
-    <a class="ui blue label">
-      Smart
-    </a>
-    <a class="ui orange label">
-      Radical
-    </a>
-    <a class="ui purple label">
-      Insane
-    </a>
-    <a class="ui teal label">
-      Exciting
-    </a>
-  </div>
 
   <div class="example">
     <h4 class="ui header">Horizontal</h4>
@@ -251,12 +253,12 @@ type        : 'UI Element'
     </a>
   </div>
   <div class="another example">
-    <div class="ui black circular label"></div>
-    <div class="ui green circular label"></div>
-    <div class="ui red circular label"></div>
-    <div class="ui blue circular label"></div>
-    <div class="ui purple circular label"></div>
-    <div class="ui teal circular label"></div>
+    <div class="ui black empty circular label"></div>
+    <div class="ui green empty circular label"></div>
+    <div class="ui red empty circular label"></div>
+    <div class="ui blue empty circular label"></div>
+    <div class="ui purple empty circular label"></div>
+    <div class="ui teal empty circular label"></div>
   </div>
 
   <div class="example">
@@ -274,58 +276,53 @@ type        : 'UI Element'
     </div>
   </div>
 
-
-
+  <h2 class="ui dividing header">Variations</h2>
   <div class="example">
-    <h4 class="ui header">Pointing</h4>
-    <p>A label can point to content next to it</p>
-    <form class="ui fluid form">
-      <div class="field">
-        <input type="text" placeholder="First name">
-        <div class="ui pointing label">
-          Please enter a value
-        </div>
-      </div>
-      <div class="ui simple divider"></div>
-      <div class="field" placeholder="Last Name">
-        <div class="ui pointing below label">
-          Please enter a value
-        </div>
-        <input type="text">
-      </div>
-      <div class="ui simple divider"></div>
-      <div class="inline field">
-        <input type="text" placeholder="Username">
-        <div class="ui pointing left label">
-          That name is taken!
-        </div>
-      </div>
-      <div class="ui simple divider"></div>
-      <div class="inline field">
-        <div class="ui pointing right label">
-          Your password must be 6 characters or more
-        </div>
-        <input type="password">
-      </div>
-    </form>
+    <h4 class="ui header">Colors</h4>
+    <p>A label can have different colors</p>
+    <a class="ui black label">Black Label</a>
+    <a class="ui yellow label">Yellow Label</a>
+    <a class="ui green label">Green Label</a>
+    <a class="ui blue label">Blue Label</a>
+    <a class="ui orange label">Orange Label</a>
+    <a class="ui purple label">Purple Label</a>
+    <a class="ui red label">Red Label</a>
+    <a class="ui teal label">Teal Label</a>
   </div>
 
   <div class="example">
     <h4 class="ui header">Size</h4>
     <p>A label can be small or large</p>
-    <div class="ui small label">
-      Fun
+    <div class="ui mini label">
+      Mini
     </div>
-    <br><br>
+    <div class="ui tiny label">
+      Tiny
+    </div>
+    <div class="ui small label">
+      Small
+    </div>
+    <div class="ui label">
+      Medium
+    </div>
     <div class="ui large label">
-      Fun
+      Large
+    </div>
+    <div class="ui large label">
+      Big
+    </div>
+    <div class="ui huge label">
+      Huge
+    </div>
+    <div class="ui huge label">
+      Massive
     </div>
   </div>
 
   <h2 class="ui dividing header">Groups</h2>
 
   <div class="example">
-    <h4 class="ui header">Size</h4>
+    <h4 class="ui header">Group Size</h4>
     <p>Labels can share sizes together</p>
     <div class="ui large labels">
       <div class="ui label">
@@ -343,7 +340,7 @@ type        : 'UI Element'
     </div>
   </div>
   <div class="example">
-    <h4 class="ui header">Colors</h4>
+    <h4 class="ui header">Colored Group</h4>
     <p>Labels can share colors together</p>
     <div class="ui blue labels">
       <a class="ui label">
@@ -366,7 +363,29 @@ type        : 'UI Element'
   </div>
 
   <div class="example">
-    <h4 class="ui header">Circular</h4>
+    <h4 class="ui header">Tag Group</h4>
+    <p>Labels can share tag formatting</p>
+    <div class="ui tag labels">
+      <a class="ui label">
+        $10.00
+      </a>
+      <a class="ui label">
+        $19.99
+      </a>
+      <a class="ui label">
+        $24.99
+      </a>
+      <a class="ui label">
+        $30.99
+      </a>
+      <a class="ui label">
+        $10.25
+      </a>
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Circular Group</h4>
     <p>Labels can share shapes</p>
     <div class="ui circular labels">
       <a class="ui label">

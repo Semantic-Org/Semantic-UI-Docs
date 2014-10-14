@@ -1,22 +1,22 @@
 ---
 layout      : 'default'
 css         : 'input'
+
+element     : 'input'
+elementType : 'element'
+
 title       : 'Input'
-description : 'Inputs allow a user to enter information'
+description : 'An input is a field used to elicit a response from a user'
 type        : 'UI Element'
+
+themes      : ['Default']
 ---
 
 <%- @partial('header') %>
+<link rel="stylesheet/less" type="text/css" href="/build/less/definitions/elements/input.less" />
 
 <div class="main container">
 
-  <div class="peek">
-    <div class="ui vertical pointing secondary menu">
-      <a class="active item">Types</a>
-      <a class="item">States</a>
-      <a class="item">Variations</a>
-    </div>
-  </div>
   <h2 class="ui dividing header">Types</h2>
 
   <div class="example">
@@ -86,10 +86,27 @@ type        : 'UI Element'
   <div class="example">
     <h4 class="ui header">Labeled</h4>
     <p>An input can be formatted with a label</p>
-    <div class="ui labeled input">
+    <div class="ui corner labeled input">
       <input type="text" placeholder="Search...">
       <div class="ui corner label">
         <i class="asterisk icon"></i>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui labeled input">
+      <div class="ui label">
+        http://
+      </div>
+      <input type="text" placeholder="mysite.com">
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui right labeled left icon input">
+      <i class="tags icon"></i>
+      <input type="text" placeholder="Enter categories">
+      <div class="ui tag label">
+        Tags
       </div>
     </div>
   </div>
@@ -103,15 +120,47 @@ type        : 'UI Element'
     </div>
   </div>
   <div class="another example">
+    <div class="ui left action input">
+      <div class="ui teal labeled icon button">
+        <i class="cart icon"></i>
+        Checkout
+      </div>
+      <input type="text" value="$52.03">
+    </div>
+  </div>
+  <div class="another example">
     <div class="ui action input">
       <input type="text" value="http://ww.short.url/c0opq">
-      <div class="ui teal right labeled icon button"><i class="copy icon"></i> Copy</div>
+      <div class="ui teal right labeled icon button">
+        <i class="copy icon"></i>
+        Copy
+      </div>
     </div>
   </div>
   <div class="another example">
     <div class="ui action input">
       <input type="text" placeholder="Search...">
       <div class="ui icon button"><i class="search icon"></i></div>
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Transparent</h4>
+    <p>A transparent input has no background</p>
+    <div class="ui transparent input">
+      <input type="text" placeholder="Search...">
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui transparent icon input">
+      <i class="search icon"></i>
+      <input type="text" placeholder="Search...">
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui transparent left icon input">
+      <i class="search icon"></i>
+      <input type="text" placeholder="Search...">
     </div>
   </div>
 

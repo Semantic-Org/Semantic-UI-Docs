@@ -1,38 +1,45 @@
 ---
 layout      : 'default'
-css         : 'modal-demo'
+css         : 'modal-page'
+
+element     : 'modal'
+elementType : 'module'
 
 title       : 'Modal'
-description : 'A modal displays content that temporarily blocks interactions with a web site'
+description : 'A modal displays content that temporarily blocks interactions with the main view of a site'
 type        : 'UI Module'
+
+themes      : ['Default', 'Fixed-width']
 ---
+<link rel="stylesheet/less" type="text/css" href="/build/less/definitions/modules/modal.less" />
 <script src="/javascript/modal.js"></script>
 
 <%- @partial('header', { tabs: 'module' }) %>
 
 <div class="main container">
 
-  <div class="ui basic modal">
+  <div class="ui basic test modal">
+    <i class="close icon"></i>
     <div class="header">
-      Change Your Homepage
+      Archive Old Messages
     </div>
     <div class="content">
-      <div class="left">
-        <i class="home icon"></i>
+      <div class="image">
+        <i class="archive icon"></i>
       </div>
-      <div class="right">
-        <p>Are you sure you want to change your homepage to <b>Poodle.com</b>?</p>
+      <div class="description">
+        <p>Your inbox is getting full, would you like us to enable automatic archiving of old messages?</p>
       </div>
     </div>
     <div class="actions">
-      <div class="two fluid ui buttons">
-        <div class="ui negative labeled icon button">
+      <div class="two fluid ui inverted buttons">
+        <div class="ui red basic inverted button">
           <i class="remove icon"></i>
           No
         </div>
-        <div class="ui positive right labeled icon button">
-          Yes
+        <div class="ui green basic inverted button">
           <i class="checkmark icon"></i>
+          Yes
         </div>
       </div>
     </div>
@@ -41,10 +48,10 @@ type        : 'UI Module'
   <div class="ui small modal">
     <i class="close icon"></i>
     <div class="header">
-      Changing Your Thing
+      Delete Your Account
     </div>
     <div class="content">
-      <p>Do you want to change that thing to something else?</p>
+      <p>Are you sure you want to delete your account</p>
     </div>
     <div class="actions">
       <div class="ui negative button">
@@ -54,6 +61,32 @@ type        : 'UI Module'
         Yes
         <i class="checkmark icon"></i>
       </div>
+    </div>
+  </div>
+
+  <div class="ui fullscreen modal">
+    <i class="close icon"></i>
+    <div class="header">
+      Update Your Account Settings
+    </div>
+    <div class="content">
+      <div class="ui form">
+        <h4 class="ui dividing header">Give us your feedback</h4>
+        <div class="field">
+          <label>Feedback</label>
+          <textarea></textarea>
+        </div>
+        <div class="field">
+          <div class="ui checkbox">
+            <input type="checkbox" checked="checked" name="contact-me">
+            <label>It's okay to contact me.</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="actions">
+      <div class="ui button">Cancel</div>
+      <div class="ui green button">Send</div>
     </div>
   </div>
 
@@ -76,27 +109,27 @@ type        : 'UI Module'
     </div>
   </div>
 
-  <div class="ui test modal">
+  <div class="ui standard test modal">
     <i class="close icon"></i>
     <div class="header">
       Profile Picture
     </div>
     <div class="content">
-      <div class="left">
-        <img class="ui medium image" src="/images/demo/avatar2.jpg">
+      <div class="ui medium image">
+        <img src="/images/avatar/large/chris.jpg">
       </div>
-      <div class="right">
-        <div class="ui header">Are you sure you want to upload that?</div>
-        <p>I mean it's not really the best profile photo.</p>
-        <p>It's resampled to like two times the size it's suppose to be. Our image detection software also says it might even be inappropriate.</p>
+      <div class="description">
+        <div class="ui header">We've auto-chosen a profile image for you.</div>
+        <p>We've grabbed the following image from the <a href="https://www.gravatar.com" target="_blank">gravatar</a> image associated with your registered e-mail address.</p>
+        <p>Is it okay to use this photo?</p>
       </div>
     </div>
     <div class="actions">
       <div class="ui black button">
-        Cancel
+        Nope
       </div>
       <div class="ui positive right labeled icon button">
-        Add Photo
+        Yep, that's me
         <i class="checkmark icon"></i>
       </div>
     </div>
@@ -104,65 +137,94 @@ type        : 'UI Module'
 
   <div class="ui active tab" data-tab="definition">
 
-    <div class="peek">
-      <div class="ui vertical pointing secondary menu">
-        <a class="item">Types</a>
-        <a class="item">Variations</a>
-        <a class="item">States</a>
-      </div>
-    </div>
-
     <h2 class="ui dividing header">Types</h2>
 
-    <div class="no example">
+    <div class="example">
       <h4 class="ui header">Standard</h4>
       <p>A standard modal</p>
       <div class="code" data-demo="true">
-      $('.test.modal')
+      $('.standard.test.modal')
         .modal('show')
       ;
       </div>
-      <div class="code" data-label="true" data-type="html">
+      <div class="existing code" data-type="html">
         <div class="ui modal">
           <i class="close icon"></i>
           <div class="header">
-            Header
+            Profile Picture
           </div>
           <div class="content">
-            <div class="left">
-              Some content to the left, usually an image or icon
+            <div class="ui medium image">
+              <img src="/images/avatar/large/chris.jpg">
             </div>
-            <div class="right">
-              Some content to the right
+            <div class="description">
+              <div class="ui header">We've auto-chosen a profile image for you.</div>
+              <p>We've grabbed the following image from the <a href="https://www.gravatar.com" target="_blank">gravatar</a> image associated with your registered e-mail address.</p>
+              <p>Is it okay to use this photo?</p>
             </div>
           </div>
           <div class="actions">
-            <div class="ui button">
-              Cancel
+            <div class="ui black button">
+              Nope
             </div>
-            <div class="ui button">
-              Okay
+            <div class="ui positive right labeled icon button">
+              Yep, that's me
+              <i class="checkmark icon"></i>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="no example">
+    <div class="example">
       <h4 class="ui header">Basic</h4>
       <p>A modal can reduce its complexity</p>
       <div class="code" data-demo="true">
-      $('.basic.modal')
+      $('.basic.test.modal')
         .modal('show')
       ;
       </div>
-      <div class="code" data-label="true" data-type="html">
-        <div class="ui basic modal"></div>
+      <div class="existing code">
+        <div class="ui basic modal">
+          <i class="close icon"></i>
+          <div class="header">
+            Archive Old Messages
+          </div>
+          <div class="content">
+            <div class="image">
+              <i class="archive icon"></i>
+            </div>
+            <div class="description">
+              <p>Your inbox is getting full, would you like us to enable automatic archiving of old messages?</p>
+            </div>
+          </div>
+          <div class="actions">
+            <div class="two fluid ui inverted buttons">
+              <div class="ui red basic inverted button">
+                <i class="remove icon"></i>
+                No
+              </div>
+              <div class="ui green basic inverted button">
+                <i class="checkmark icon"></i>
+                Yes
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
     <h2 class="ui dividing header">Variations</h2>
 
+    <div class="no example">
+      <h4 class="ui header">Full Screen</h4>
+      <p>A modal can use the entire size of the screen</p>
+      <div class="code" data-demo="true">
+      $('.fullscreen.modal')
+        .modal('show')
+      ;
+      </div>
+    </div>
     <div class="no example">
       <h4 class="ui header">Size</h4>
       <p>A modal can vary in size</p>
@@ -171,26 +233,20 @@ type        : 'UI Module'
         .modal('show')
       ;
       </div>
-      <div class="code" data-label="true" data-type="html">
-        <div class="ui small modal"></div>
-      </div>
       <div class="code" data-demo="true">
       $('.large.modal')
         .modal('show')
       ;
       </div>
-      <div class="code" data-label="true" data-type="html">
-        <div class="ui large modal"></div>
-      </div>
     </div>
 
     <h2 class="ui dividing header">States</h2>
 
-    <div class="no example">
+    <div class="example">
       <h4 class="ui header">Active</h4>
       <p>An active modal is visible on the page</p>
       <div class="code" data-type="html">
-        <div class="active ui modal">...</div>
+        <div class="ui active modal"></div>
       </div>
     </div>
   </div>
@@ -203,7 +259,7 @@ type        : 'UI Module'
       <h4 class="ui header">Forcing a Choice</h4>
       <p>You can disable a modal's dimmer from being closed by click to force a user to make a choice</p>
       <div class="code" data-demo="true">
-      $('.basic.modal')
+      $('.basic.test.modal')
         .modal('setting', 'closable', false)
         .modal('show')
       ;
@@ -214,7 +270,7 @@ type        : 'UI Module'
       <h4 class="ui header">Approve / Deny Callbacks</h4>
       <p>Modals will automatically tie approve deny callbacks to any positive/approve, negative/deny or ok/cancel buttons. If a callback returns false it will prevent the modal from closing</p>
       <div class="code" data-demo="true">
-      $('.basic.modal')
+      $('.basic.test.modal')
         .modal('setting', {
           closable  : false,
           onDeny    : function(){
@@ -247,10 +303,11 @@ type        : 'UI Module'
       </div>
       <div class="ui clearing divider"></div>
       <div class="code">
-      $('.selection')
+      $('.selection.dropdown')
         .dropdown({
           onChange: function(value) {
-            $('.test.modal')
+            alert($('.standard.test.modal').size());
+            $('.standard.test.modal')
               .modal('setting', 'transition', value)
               .modal('show')
             ;
@@ -264,7 +321,7 @@ type        : 'UI Module'
       <h4 class="ui header">Attach events</h4>
       <p>A modal can attach events to another element</p>
       <div class="code" data-demo="true">
-      $('.test.modal')
+      $('.standard.test.modal')
         .modal('attach events', '.test.button', 'show')
       ;
       </div>
@@ -295,11 +352,11 @@ type        : 'UI Module'
           Modal Title
         </div>
         <div class="content">
-          <div class="left">
-            Content can appear on left
+          <div class="image">
+            An image can appear on left or an icon
           </div>
-          <div class="right">
-            Content can appear on right
+          <div class="description">
+            A description can appear on the right
           </div>
         </div>
         <div class="actions">
@@ -398,38 +455,31 @@ type        : 'UI Module'
         <tr>
           <td>detachable</td>
           <td>true</td>
-          <td>Setting to to false will prevent the modal from being removed from the DOM and appended to the dimmer</td>
+          <td>If set to false will prevent the modal from being moved to inside the dimmer</td>
         </tr>
         <tr>
           <td>allowMultiple</td>
           <td>false</td>
-          <td>Setting to true will prevent closing other visible modals when opening a new one</td>
+          <td>If set to true will not close other visible modals when opening a new one</td>
         </tr>
         <tr>
           <td>offset</td>
           <td>0</td>
-          <td>A vertical offset to allow for content outside of the modal (close button, etc)</td>
+          <td>A vertical offset to allow for content outside of modal, for example a close button, to be centered.</td>
         </tr>
         <tr>
           <td>context</td>
           <td>
           body
           </td>
-          <td>A CSS selector or jQuery object specifying the area to dim</td>
+          <td>Selector or jquery object specifying the area to dim</td>
         </tr>
         <tr>
           <td>closable</td>
           <td>
           true
           </td>
-          <td>Setting to false will not allow you to close the modal by clicking on the dimmer</td>
-        </tr>
-        <tr>
-          <td>autofocus</td>
-          <td>
-          true
-          </td>
-          <td>Setting to false will prevent autofocusing on the first input within the modal</td>
+          <td>Settings to false will not allow you to close the modal by clicking on the dimmer</td>
         </tr>
         <tr>
           <td>useCSS</td>
@@ -455,9 +505,9 @@ type        : 'UI Module'
         <tr>
           <td>easing</td>
           <td>
-            easeOutQuad
+            easeOutExpo
           </td>
-          <td>Animation easing is only used if javascript animations are used</td>
+          <td>Animation easing is only used if javascript animations are used.</td>
         </tr>
       </tbody>
     </table>
@@ -573,7 +623,7 @@ type        : 'UI Module'
         </tr>
         <tr>
           <td>debug</td>
-          <td>True</td>
+          <td>False</td>
           <td>Provides standard debug output to console</td>
         </tr>
         <tr>
@@ -601,3 +651,5 @@ type        : 'UI Module'
   </div>
 
 </div>
+
+<link rel="stylesheet/less" type="text/css" href="/build/less/definitions/modules/modal.less" />

@@ -2,24 +2,21 @@
 layout      : 'default'
 css         : 'menu'
 
+element     : 'menu'
+elementType : 'collection'
+
 title       : 'Menu'
-description : 'A menu is a collection of elements showing related user actions'
+description : 'A menu displays grouped navigation actions'
 type        : 'UI Collection'
+
+themes      : ['Default', 'GitHub']
 ---
+<link rel="stylesheet/less" type="text/css" href="/build/less/definitions/collections/menu.less" />
 <script src="/javascript/menu.js"></script>
 
 <%- @partial('header') %>
 
 <div class="main container">
-
-  <div class="peek">
-    <div class="ui vertical pointing secondary menu">
-      <a class="active item">Types</a>
-      <a class="item">Elements</a>
-      <a class="item">States</a>
-      <a class="item">Variations</a>
-    </div>
-  </div>
 
   <h2 class="ui dividing header">Types</h2>
   <div class="example">
@@ -35,7 +32,7 @@ type        : 'UI Collection'
       </a>
       <div class="right menu">
         <div class="item">
-          <div class="ui icon input">
+          <div class="ui transparent icon input">
             <input type="text" placeholder="Search...">
             <i class="search link icon"></i>
           </div>
@@ -44,10 +41,9 @@ type        : 'UI Collection'
     </div>
   </div>
 
-
   <div class="example">
     <h4 class="ui header">Vertical Menu</h4>
-    <p>A vertical menu displays elements vertically.</p>
+    <p>A vertical menu displays elements vertically..</p>
     <div class="ui ignore warning message"><i class="icon heart"></i> A vertical menu's width defaults to an arbitrary size. To have it fit your content more precisely use the fluid variation in conjunction with <a href="grid.html">ui grid</a>.</div>
 
     <div class="ui vertical menu">
@@ -64,7 +60,7 @@ type        : 'UI Collection'
         <div class="ui label">1</div>
       </a>
       <div class="item">
-        <div class="ui small icon input">
+        <div class="ui transparent icon input">
           <input type="text" placeholder="Search mail...">
           <i class="search icon"></i>
         </div>
@@ -110,6 +106,19 @@ type        : 'UI Collection'
       <a class="item">
         Pics
       </a>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui top attached tabular menu">
+      <a class="active item">
+        Bio
+      </a>
+      <a class="item">
+        Pics
+      </a>
+    </div>
+    <div class="ui bottom attached segment">
+      This is the content of the tab.
     </div>
   </div>
 
@@ -175,7 +184,8 @@ type        : 'UI Collection'
         <i class="mail icon"></i> Messages
       </a>
       <div class="ui dropdown item">
-        More <i class="dropdown icon"></i>
+        <i class="dropdown icon"></i>
+        More
         <div class="menu">
           <a class="item"><i class="edit icon"></i> Edit Profile</a>
           <a class="item"><i class="globe icon"></i> Choose Language</a>
@@ -188,7 +198,7 @@ type        : 'UI Collection'
 
   <div class="example">
     <h4 class="ui header">Secondary Menu</h4>
-    <p>A secondary menu has more subtle formatting, ideal for showing the sections of content on a page.</p>
+    <p>A secondary menu allows for a section of content on a page to be activated</p>
     <div class="ui secondary  menu">
       <a class="active item">
         <i class="home icon"></i> Home
@@ -226,7 +236,8 @@ type        : 'UI Collection'
         <i class="user icon"></i> Friends
       </a>
       <div class="ui dropdown item">
-        More <i class="dropdown icon"></i>
+        <i class="dropdown icon"></i>
+        More
         <div class="menu">
           <a class="item"><i class="edit icon"></i> Edit Profile</a>
           <a class="item"><i class="globe icon"></i> Choose Language</a>
@@ -257,7 +268,8 @@ type        : 'UI Collection'
           </div>
         </div>
         <div class="ui dropdown item">
-          Language <i class="dropdown icon"></i>
+          <i class="dropdown icon"></i>
+          Language
           <div class="menu">
             <a class="item">English</a>
             <a class="item">Russian</a>
@@ -448,7 +460,7 @@ type        : 'UI Collection'
 
     <div class="ui menu">
       <div class="item">
-        <div class="ui teal button">Sign up</div>
+        <div class="ui primary button">Sign up</div>
       </div>
       <div class="item">
         <div class="ui button">Log-in</div>
@@ -482,7 +494,8 @@ type        : 'UI Collection'
     </div>
     <div class="ui vertical menu">
       <div class="ui dropdown item">
-        Categories <i class="dropdown icon"></i>
+        <i class="dropdown icon"></i>
+        Categories
         <div class="menu">
           <a class="item">Electronics</a>
           <a class="item">Automotive</a>
@@ -885,7 +898,7 @@ type        : 'UI Collection'
           </div>
         </div>
         <div class="item">
-            <div class="ui teal button">Sign Up</div>
+            <div class="ui primary button">Sign Up</div>
         </div>
       </div>
     </div>
@@ -914,7 +927,7 @@ type        : 'UI Collection'
           </div>
         </div>
         <div class="item">
-            <div class="ui teal button">Sign Up</div>
+            <div class="ui primary button">Sign Up</div>
         </div>
       </div>
     </div>

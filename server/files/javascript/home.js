@@ -3,34 +3,92 @@ semantic.home = {};
 // ready event
 semantic.home.ready = function() {
 
-  // selector cache
   var
-    $navigationItem = $('.demo .menu .item'),
-    $oddballItem    = $navigationItem.filter('.oddball')
+    $themeDropdown = $('.theme.dropdown'),
+    $header        = $('.masthead'),
+    $ui            = $header.find('h1 b'),
+    $phrase        = $header.find('h1 span'),
+    $download      = $header.find('.download'),
+    $library       = $header.find('.library'),
+    $version       = $header.find('.version'),
+    handler
   ;
-  $.fn.transition.settings.debug = true;
-  $('.kitten.image')
-    .transition('internal', 'debug', function() {
-      $('.console')
-        .append(arguments[0] + "\n")
-        // scroll to bottom
-        .prop('scrollTop', $('.console').prop('scrollHeight') )
+
+  handler = {
+    endAnimation: function() {
+      $header
+        .addClass('stopped')
       ;
+    },
+    introduction: function() {
+      // zoom out
+      setTimeout(function() {
+        $header
+          .removeClass('zoomed')
+        ;
+      }, 1500);
+
+      $ui.typed({
+        replaceBaseText : true,
+        strings         : [
+          $ui.data('text')
+        ],
+        showCursor      : false,
+        typeSpeed       : 120,
+        backSpeed       : 120,
+        backDelay       : 500
+      });
+      setTimeout(function() {
+        $library.transition('scale in', 1000);
+      }, 6400);
+      setTimeout(function() {
+        $version.transition('fade', 600);
+      }, 7000);
+    }
+  };
+
+  $('.email.stripe form')
+    .form({
+      email: {
+        identifier : 'email',
+        rules: [
+          {
+            type   : 'empty',
+            prompt : 'Please enter an e-mail'
+          },
+          {
+            type   : 'email',
+            prompt : 'Please enter a valid e-mail address'
+          }
+        ]
+      }
     })
   ;
 
-  $navigationItem
-    .tab()
-  ;
-  $oddballItem
-    .on('click', function() {
-      $(this)
-        .tab('deactivate all')
-        .tab('activate tab', 'third')
-        .tab('activate navigation', 'third')
-      ;
+
+  $('.masthead')
+    .visibility({
+      onPassing      : handler.introduction,
+      onBottomPassed : handler.endAnimation
     })
   ;
+
+  $themeDropdown
+    .dropdown('setting', 'transition', 'drop')
+    .dropdown('setting', 'duration', 350)
+    .dropdown('setting', 'action', 'activate')
+  ;
+
+
+  window.Transifex.live.onTranslatePage(function(countryCode){
+    var fullName = $('.language.dropdown .item[data-value=' + countryCode + ']').eq(0).text();
+    $('.language.dropdown > .text').html(fullName);
+  });
+
+  $('.ui.sidebar')
+    .sidebar('setting', 'transition', 'slide along')
+  ;
+
 };
 
 

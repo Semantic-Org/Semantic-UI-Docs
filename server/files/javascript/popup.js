@@ -17,6 +17,38 @@ semantic.popup.ready = function() {
     })
   ;
 
+  $('.fluid.example > .button')
+    .popup({
+      hoverable: true,
+      delay: {
+        show: 100,
+        hide: 500
+      }
+    })
+  ;
+  $('.fitted.example > .button')
+    .popup({
+      hoverable: true,
+      delay: {
+        show: 100,
+        hide: 500
+      }
+    })
+  ;
+
+  $('.existing.example .rating')
+    .rating()
+  ;
+
+  $('.existing.example .card')
+    .popup({
+      className: {
+        popup: 'ignored ui popup'
+      }
+    })
+  ;
+
+
 };
 
 

@@ -9,26 +9,44 @@ semantic.sidebar.ready = function() {
     handler
   ;
 
-  $('.variation .button')
-    .on('click', function() {
-      $(this)
-        .toggleClass('active')
-        .siblings()
-        .removeClass('active')
-      ;
-      $('.sidebar')
-        .filter($(this).data('variation') ).first()
-        .sidebar('toggle')
-      ;
+  $('.ui.sidebar .ui.dropdown')
+    .dropdown({
+      on: 'hover'
     })
   ;
-  $('.styled.sidebar').first()
-    .sidebar('attach events', '.styled.example .button')
+
+  $('.left.sidebar')
+    .sidebar()
   ;
 
-  $('.floating.sidebar').first()
-    .sidebar('attach events', '.floating.example .button')
+  $('.left.example')
+    .find('.button')
+      .on('click', function() {
+        var
+          transition = $(this).data('transition')
+        ;
+        $('.left.sidebar')
+          .sidebar('setting', {
+            transition       : transition,
+            mobileTransition : transition
+          })
+          .sidebar('toggle')
+        ;
+      })
   ;
+
+  $('.direction.example')
+    .find('.button')
+      .on('click', function() {
+        var
+          direction = $(this).data('direction')
+        ;
+        $('.' + direction + '.sidebar')
+          .sidebar('toggle')
+        ;
+      })
+  ;
+
 
 
 };

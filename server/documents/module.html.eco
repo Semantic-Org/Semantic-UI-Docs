@@ -16,35 +16,35 @@ type        : 'Semantic'
     <p>All official javascript modules in Semantic are designed using a singular design pattern. This pattern allows several useful features common to all javascript components</p>
     <div class="ui relaxed list">
       <div class="item">
-        <i class="check icon"></i>
+        <i class="top aligned green check icon"></i>
         <div class="content">
           <div class="header">Run-time Performance Analysis</div>
           <p>Semantic modules all provide the ability to log performance traces to the console, allowing you to see which aspects of the module are more or less performant and to track total init time <code>onDomReady</code></p>
         </div>
       </div>
       <div class="item">
-        <i class="check icon"></i>
+        <i class="top aligned green check icon"></i>
         <div class="content">
           <div class="header">Human Readable Traces</div>
           <p>Unlike other component libraries that hide explanations of behavior in inline comments which can only be read by combing the source, semantic modules provide run-time debug output to the JavaScript console telling you what each component is doing as it is doing it.</p>
         </div>
       </div>
       <div class="item">
-        <i class="check icon"></i>
+        <i class="top aligned green check icon"></i>
         <div class="content">
           <div class="header">Settings can be overwritten after initialization</div>
           <p>Semantic provides methods to set default settings, set settings at initialization, and set settings after initialization, allowing complete flexibility over component behaviors.</p>
         </div>
       </div>
       <div class="item">
-        <i class="check icon"></i>
+        <i class="top aligned green check icon"></i>
         <div class="content">
           <div class="header">All modules include an initialize and destroy method</div>
           <p>All events and metadata are namespaced and can be removed after initialization, modules automatically handle destroy/init events to allow users to lazy-initialize a plugin multiple times with no issues.</p>
         </div>
       </div>
       <div class="item">
-        <i class="check icon"></i>
+        <i class="top aligned green check icon"></i>
         <div class="content">
           <div class="header">Instance available in metadata</div>
           <p>Modules store their instance in metadata meaning that, in a pinch, you can directly modify the instance of a UI element by modifying its properties.</p>
@@ -52,11 +52,11 @@ type        : 'Semantic'
       </div>
     </div>
     <div class="ui divider"></div>
-    <a href="/spec/docs/modal.commented.html" class="ui large secondary labeled icon button">
+    <a href="/spec/docs/modal.commented.html" class="ui large primary labeled icon button">
       <i class="info icon"></i>
       Real World Commented Example
     </a>
-    <a href="/spec/docs/module.commented.html" class="ui large black labeled icon button">
+    <a href="/spec/docs/module.commented.html" class="ui large secondary labeled icon button">
       <i class="info icon"></i>
       Commented Design Pattern
     </a>
@@ -69,9 +69,9 @@ type        : 'Semantic'
     <p>The following example shows how to attach behavior to elements on a page using Semantic</p>
     <div class="code" data-type="html" data-preview="true">
       <div class="ui medium image">
-        <div class="ui corner label">
-          <i class="help link icon" data-content="This appears to the right"></i>
-        </div>
+        <a class="ui corner label" data-content="This appears to the right">
+          <i class="help link icon"></i>
+        </a>
         <img src="/images/demo/photo.jpg" data-content="This appears in the default location">
       </div>
     </div>
@@ -83,7 +83,7 @@ type        : 'Semantic'
     </div>
     <div class="evaluated code" data-type="javascript">
     // initializing with settings
-    $('.ui.image .help')
+    $('.ui.image .corner.label')
       .popup({
         position: 'right center'
       })
@@ -92,7 +92,7 @@ type        : 'Semantic'
   </div>
   <div class="ui tab" data-tab="behavior">
     <div class="fixed column">
-      <div class="content">
+      <div class="ui sticky">
         <h3 class="ui header">Demo Element</h3>
         <i class="demo circular help link icon" data-content="Popup #1"></i>
         <i class="demo circular help link icon" data-content="Popup #2"></i>

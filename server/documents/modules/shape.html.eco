@@ -2,26 +2,25 @@
 layout      : 'default'
 css         : 'shape'
 
+element     : 'shape'
+elementType : 'module'
+
 title       : 'Shape'
 description : 'A shape is a three dimensional object displayed on a two dimensional plane'
 type        : 'UI Module'
----
 
-<script src="/javascript/shape.js"></script>
+themes      : ['default']
+---
+<link rel="stylesheet/less" type="text/css" href="/build/less/definitions/modules/shape.less" />
+
 <link rel="stylesheet" type="text/css" class="ui" href="/stylesheets/shape.css">
+<script src="/javascript/shape.js"></script>
 
 <%- @partial('header', { tabs: 'module' }) %>
 
 <div class="main container">
 
   <div class="ui tab" data-tab="definition">
-
-    <div class="peek">
-      <div class="ui vertical pointing secondary menu">
-        <a class="active item">Types</a>
-        <!--<a class="item">States</a>-->
-      </div>
-    </div>
 
     <h2 class="ui dividing header">Types</h2>
 
@@ -190,8 +189,8 @@ type        : 'UI Module'
     <div class="dog ui shape">
       <div class="sides">
         <div class="active side">
-          <div class="ui items">
-            <div class="item">
+          <div class="ui cards">
+            <div class="card">
               <div class="image">
                 <a class="ui like corner label">
                   <i class="like icon"></i>
@@ -199,15 +198,15 @@ type        : 'UI Module'
                 <img src="/images/demo/highres2.jpg">
               </div>
               <div class="content">
-                <div class="name">Cute Dog</div>
+                <div class="header">Cute Dog</div>
                 <p class="description">This dog has some things going for it. Its pretty cute and looks like it'd be fun to cuddle up with.</p>
               </div>
             </div>
           </div>
         </div>
         <div class="side">
-          <div class="ui items">
-            <div class="item">
+          <div class="ui cards">
+            <div class="card">
               <div class="image">
                 <a class="ui like corner label">
                   <i class="like icon"></i>
@@ -215,15 +214,15 @@ type        : 'UI Module'
                 <img src="/images/demo/highres5.jpg">
               </div>
               <div class="content">
-                <div class="name">Silly Dog</div>
+                <div class="header">Silly Dog</div>
                 <p class="description">Silly dogs can be quite fun to have as companions. You never know what kind of ridiculous thing they will do.</p>
               </div>
             </div>
           </div>
         </div>
         <div class="side">
-          <div class="ui items">
-            <div class="item">
+          <div class="ui cards">
+            <div class="card">
               <div class="image">
                 <a class="ui like corner label">
                   <i class="like icon"></i>
@@ -231,8 +230,8 @@ type        : 'UI Module'
                 <img src="/images/demo/highres4.jpg">
               </div>
               <div class="content">
+                <div class="header">Faithful Dog</div>
                 <div class="meta">5 days ago</div>
-                <div class="name">Faithful Dog</div>
                 <p class="description">Sometimes its more important to have a dog you know you can trust. But not every dog is trustworthy, you can tell by looking at its smile.</p>
               </div>
             </div>
@@ -244,8 +243,8 @@ type        : 'UI Module'
     <div class="dog ui shape">
       <div class="sides">
         <div class="active side">
-          <div class="ui items">
-            <div class="item">
+          <div class="ui cards">
+            <div class="card">
               <div class="image">
                 <a class="ui like corner label">
                   <i class="like icon"></i>
@@ -253,15 +252,15 @@ type        : 'UI Module'
                 <img src="/images/demo/highres.jpg">
               </div>
               <div class="content">
-                <div class="name">Cute Dog</div>
+                <div class="header">Cute Dog</div>
                 <p class="description">This dog has some things going for it. Its pretty cute and looks like it'd be fun to cuddle up with.</p>
               </div>
             </div>
           </div>
         </div>
         <div class="side">
-          <div class="ui items">
-            <div class="item">
+          <div class="ui cards">
+            <div class="card">
               <div class="image">
                 <a class="ui like corner label">
                   <i class="like icon"></i>
@@ -269,15 +268,15 @@ type        : 'UI Module'
                 <img src="/images/demo/highres4.jpg">
               </div>
               <div class="content">
-                <div class="name">Silly Dog</div>
+                <div class="header">Silly Dog</div>
                 <p class="description">Silly dogs can be quite fun to have as companions. You never know what kind of ridiculous thing they will do.</p>
               </div>
             </div>
           </div>
         </div>
         <div class="side">
-          <div class="ui items">
-            <div class="item">
+          <div class="ui cards">
+            <div class="card">
               <div class="image">
                 <a class="ui like corner label">
                   <i class="like icon"></i>
@@ -285,8 +284,8 @@ type        : 'UI Module'
                 <img src="/images/demo/highres6.jpg">
               </div>
               <div class="content">
+                <div class="header">Faithful Dog</div>
                 <div class="meta">5 days ago</div>
-                <div class="name">Faithful Dog</div>
                 <p class="description">Sometimes its more important to have a dog you know you can trust. But not every dog is trustworthy, you can tell by looking at its smile.</p>
               </div>
             </div>
@@ -546,7 +545,7 @@ type        : 'UI Module'
         </tr>
         <tr>
           <td>debug</td>
-          <td>True</td>
+          <td>False</td>
           <td>Provides standard debug output to console</td>
         </tr>
         <tr>

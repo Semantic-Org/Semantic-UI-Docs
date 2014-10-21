@@ -12,7 +12,7 @@ type        : 'UI Behavior'
 ---
 
 
-<script src="/build/uncompressed/definitions/behaviors/form.js"></script>
+<script src="/dist/components/form.js"></script>
 <script src="/javascript/validate-form.js"></script>
 
 <%- @partial('header', { tabs: { usage: 'Usage', examples: 'Examples', settings: 'Settings'} }) %>

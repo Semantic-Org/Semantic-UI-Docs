@@ -20,7 +20,7 @@ themes      : ['Default']
   <div class="example">
     <h4 class="ui header">Loader</h4>
     <p>A loader</p>
-    <div class="ui ignored info message">Loaders by default are hidden unless inside of a dimmer.</div>
+    <div class="ui ignored info message">Loaders are hidden unless <code>active</code> or inside an <code>active</code> dimmer.</div>
     <div class="ui segment">
       <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
       <div class="ui active dimmer">

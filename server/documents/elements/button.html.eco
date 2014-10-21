@@ -183,6 +183,16 @@ themes      : ['Default', 'Classic', 'Basic', 'Raised', 'Chubby', 'Round', 'Amaz
       <div class="ui positive button">Save</div>
     </div>
   </div>
+  <div class="another example">
+    <div class="ui info message">
+      Or buttons can have their text localized, or adjusted by using the <code>data-text</code> attribute. If the size of the conditional changes you will need to adjust <code>@orCircleSize</code>
+    </div>
+    <div class="ui buttons">
+      <div class="ui button">un</div>
+      <div class="or" data-text="ou"></div>
+      <div class="ui positive button">deux</div>
+    </div>
+  </div>
 
   <h2 class="ui dividing header">States</h2>
 

@@ -11,7 +11,7 @@ type        : 'UI Module'
 
 themes      : ['default']
 ---
-<link rel="stylesheet/less" type="text/css" href="/build/less/definitions/modules/shape.less" />
+<link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/shape.less" />
 
 <link rel="stylesheet" type="text/css" class="ui" href="/stylesheets/shape.css">
 <script src="/javascript/shape.js"></script>

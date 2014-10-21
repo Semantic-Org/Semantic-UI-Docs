@@ -10,7 +10,7 @@ type        : 'UI Module'
 
 themes      : ['Default', 'Chubby']
 ---
-<link rel="stylesheet/less" type="text/css" href="/build/less/definitions/modules/accordion.less" />
+<link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/accordion.less" />
 <script src="/javascript/accordion.js"></script>
 
 <%- @partial('header', { tabs: 'module' }) %>

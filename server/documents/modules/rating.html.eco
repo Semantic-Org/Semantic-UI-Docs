@@ -14,7 +14,7 @@ themes      : ['Default']
 
 <%- @partial('header', { tabs: 'module' }) %>
 
-<link rel="stylesheet/less" type="text/css" href="/build/less/definitions/modules/rating.less" />
+<link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/rating.less" />
 <script src="/javascript/rating.js"></script>
 
 <div class="main container">

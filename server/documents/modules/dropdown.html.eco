@@ -12,7 +12,7 @@ elementType : 'module'
 themes      : ['Default']
 ---
 
-<link rel="stylesheet/less" type="text/css" href="/build/less/definitions/modules/dropdown.less" />
+<link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/dropdown.less" />
 
 <script src="/javascript/dropdown.js"></script>
 

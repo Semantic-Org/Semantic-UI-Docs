@@ -11,7 +11,7 @@ type        : 'UI Collection'
 
 themes      : ['Default', 'GitHub', 'Google']
 ---
-<link rel="stylesheet/less" type="text/css" href="/build/less/definitions/collections/message.less" />
+<link rel="stylesheet/less" type="text/css" href="/src/definitions/collections/message.less" />
 <%- @partial('header') %>
 
 <div class="main container">

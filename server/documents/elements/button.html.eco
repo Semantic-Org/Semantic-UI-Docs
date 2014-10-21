@@ -10,7 +10,7 @@ type        : 'UI Element'
 
 themes      : ['Default', 'Classic', 'Basic', 'Raised', 'Chubby', 'Round', 'Amazon', 'Google', 'GitHub']
 ---
-<link rel="stylesheet/less" type="text/css" href="/build/less/definitions/elements/button.less" />
+<link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/button.less" />
 <script src="/javascript/button.js"></script>
 
 <%- @partial('header') %>

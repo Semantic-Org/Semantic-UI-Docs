@@ -3,7 +3,7 @@
 docpadConfig = {
 
 	srcPath : './server'
-	outPath: './docs'
+	outPath: './out'
 
 	plugins:
     ghpages:

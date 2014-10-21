@@ -11,7 +11,7 @@ type        : 'UI Global'
 themes      : ['Default', 'Basic', 'Resetcss']
 
 ---
-<link rel="stylesheet/less" type="text/css" href="/build/less/definitions/globals/reset.less" />
+<link rel="stylesheet/less" type="text/css" href="/src/definitions/globals/reset.less" />
 
 <%- @partial('header', { tabs: {  overview: 'Overview', test: 'Test' } }) %>
 

@@ -13,7 +13,7 @@ themes      : ['Default', 'Chubby']
 ---
 
 <%- @partial('header') %>
-<link rel="stylesheet/less" type="text/css" href="/build/less/definitions/views/comment.less" />
+<link rel="stylesheet/less" type="text/css" href="/src/definitions/views/comment.less" />
 
 <div class="main container">
 

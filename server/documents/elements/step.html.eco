@@ -13,7 +13,7 @@ themes      : ['default', 'Basic', 'GitHub']
 ---
 
 <%- @partial('header') %>
-<link rel="stylesheet/less" type="text/css" href="/build/less/definitions/elements/step.less" />
+<link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/step.less" />
 
 <div class="main container">
 

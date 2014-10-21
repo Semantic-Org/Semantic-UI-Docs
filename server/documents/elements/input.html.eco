@@ -13,7 +13,7 @@ themes      : ['Default']
 ---
 
 <%- @partial('header') %>
-<link rel="stylesheet/less" type="text/css" href="/build/less/definitions/elements/input.less" />
+<link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/input.less" />
 
 <div class="main container">
 

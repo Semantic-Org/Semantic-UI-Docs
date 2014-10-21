@@ -10,7 +10,7 @@ status      : 'Undocumented'
 type        : 'UI Global'
 
 ---
-<link rel="stylesheet/less" type="text/css" href="/build/less/definitions/globals/site.less" />
+<link rel="stylesheet/less" type="text/css" href="/src/definitions/globals/site.less" />
 
 <%- @partial('header') %>
 

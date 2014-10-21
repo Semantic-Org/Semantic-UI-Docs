@@ -9,7 +9,7 @@ description : 'A flag is is used to represent a political state'
 type        : 'UI Element'
 
 ---
-<link rel="stylesheet/less" type="text/css" href="/build/less/definitions/elements/flag.less" />
+<link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/flag.less" />
 
 <%- @partial('header', { tabs: { flags: 'Flags' } }) %>
 

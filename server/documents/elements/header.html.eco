@@ -13,7 +13,7 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby']
 ---
 
 <%- @partial('header') %>
-<link rel="stylesheet/less" type="text/css" href="/build/less/definitions/elements/header.less" />
+<link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/header.less" />
 <script src="/javascript/header.js"></script>
 
 <div class="main container">

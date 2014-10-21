@@ -1,14 +1,5 @@
-docs/
 node_modules
-node/server.json
-test/coverage/
-coverage/
-build/**/**/site/
-src/build/
-src/**/site/
-src/semantic.config
-build/**/**/semantic.config
-semantic.config
+out/
 
 # Numerous always-ignore extensions
 *.diff
@@ -17,6 +8,7 @@ semantic.config
 *.log
 *.rej
 *.swo
+
 *.swp
 *.zip
 *.vi

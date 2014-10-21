@@ -11,7 +11,7 @@ type        : 'UI Module'
 
 themes      : ['Default', 'Classic', 'Basic', 'Striped']
 ---
-<link rel="stylesheet/less" type="text/css" href="/build/less/definitions/modules/progress.less" />
+<link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/progress.less" />
 <script src="/javascript/progress.js"></script>
 
 <%- @partial('header', { tabs: {  definition: 'Definition', usage: 'Usage' } }) %>

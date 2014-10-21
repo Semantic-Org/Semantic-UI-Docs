@@ -12,7 +12,7 @@ type        : 'UI Collection'
 themes      : ['Default', 'Classic']
 ---
 
-<link rel="stylesheet/less" type="text/css" href="/build/less/definitions/collections/table.less" />
+<link rel="stylesheet/less" type="text/css" href="/src/definitions/collections/table.less" />
 <script src="/javascript/table.js"></script>
 
 <%- @partial('header') %>

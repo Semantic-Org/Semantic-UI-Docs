@@ -11,7 +11,7 @@ type        : 'UI Element'
 themes      : ['default', 'GitHub']
 ---
 <%- @partial('header') %>
-<link rel="stylesheet/less" type="text/css" href="/build/less/definitions/elements/segment.less" />
+<link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/segment.less" />
 
 <div class="main container">
 

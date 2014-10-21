@@ -397,8 +397,8 @@ semantic.ready = function() {
       changeTheme: function(theme) {
         var
           $themeDropdown = $(this),
-          variableURL = '/build/less/themes/packages/{$theme}/{$type}s/{$element}.variables',
-          overrideURL = '/build/less/themes/packages/{$theme}/{$type}s/{$element}.overrides',
+          variableURL = '/src/themes/{$theme}/{$type}s/{$element}.variables',
+          overrideURL = '/src/themes/{$theme}/{$type}s/{$element}.overrides',
           urlData     = {
             theme   : typeof(theme === 'string')
               ? theme.toLowerCase()

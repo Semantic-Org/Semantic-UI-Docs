@@ -10,7 +10,7 @@ status      : 'Undocumented'
 type        : 'UI Element'
 
 ---
-<link rel="stylesheet/less" type="text/css" href="/build/less/definitions/elements/rail.less" />
+<link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/rail.less" />
 
 <%- @partial('header') %>
 

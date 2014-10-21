@@ -11,7 +11,7 @@ type        : 'UI Module'
 
 themes      : ['Default']
 ---
-<link rel="stylesheet/less" type="text/css" href="/build/less/definitions/modules/popup.less" />
+<link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/popup.less" />
 <script src="/javascript/popup.js"></script>
 
 <%- @partial('header', { tabs: 'module' }) %>

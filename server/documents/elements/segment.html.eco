@@ -102,9 +102,17 @@ themes      : ['default', 'GitHub']
 
   <div class="example">
     <h4 class="ui header">Disabled</h4>
-    <p>A segment may show its content is disabled
+    <p>A segment may show its content is disabled</p>
     <div class="ui disabled segment">
       <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+    </div>
+  </div>
+  <div class="example">
+    <h4 class="ui header">Loading</h4>
+    <p>A segment may show its content is being loaded</p>
+    <div class="ui loading segment">
+      <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+      <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
     </div>
   </div>
 

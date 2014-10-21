@@ -1476,7 +1476,11 @@ body.progress.animated .ui.progress .bar {
 #example .following.menu .menu .active.item {
   font-weight: bold;
 }
+#example .following.menu .item .menu {
+  margin: 0em;
+}
 #example .following.menu .menu .item {
+  margin: 0em;
   padding: 0.5rem 0.25rem;
 }
 

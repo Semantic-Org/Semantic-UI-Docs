@@ -24,19 +24,22 @@ window.openTest = function() {
 <!-- TEST CSS HERE !-->
 <style type="text/css">
 </style>
-<!--
-<div class="main container"> -->
 
+<div class="main container">
 
-<!--
-</div> -->
-<div class="ui modal" id="modalOne">
-    FIRST MODAL WINDOW
-    <input type="button" value="+" onclick="openTest()" />
-</div>
+<div class="ui form segment loading">
+      <div class="field">
+        <label>Username</label>
+        <div class="ui corner labeled left icon input">
+          <input type="text" placeholder="Username">
+          <i class="user icon"></i>
+          <div class="ui corner label">
+            <i class="icon asterisk"></i>
+          </div>
+        </div>
+      </div>
+ </div>
 
-<div class="ui modal" id="modalTwo">
-    SECOND MODAL WINDOW
 </div>
 
 </body>

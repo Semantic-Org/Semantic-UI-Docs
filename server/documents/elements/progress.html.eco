@@ -57,15 +57,15 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
 
     <div class="example">
       <h4 class="ui header">Bar</h4>
-      <p>A progress element can contain a bar to indicate the current level of progress</p>
+      <p>A progress element can contain a bar visually indicating progress</p>
       <div class="ui progress">
         <div class="bar"></div>
       </div>
     </div>
 
     <div class="example">
-      <h4 class="ui header">Current Progress</h4>
-      <p>A progress bar can contain a reading of the current progress</p>
+      <h4 class="ui header">Progress</h4>
+      <p>A progress bar can contain a text value indicating current progress</p>
       <div class="ui progress">
         <div class="bar">
           <div class="progress"></div>

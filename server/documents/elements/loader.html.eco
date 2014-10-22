@@ -9,10 +9,11 @@ title       : 'Loader'
 description : 'A loader alerts a user to wait for an activity to complete'
 type        : 'UI Element'
 
-themes      : ['Default']
+themes      : ['Default', 'Duo', 'Pulsar']
 ---
 
 <%- @partial('header') %>
+<link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/loader.less" />
 
 <div class="main container">
 
@@ -50,6 +51,17 @@ themes      : ['Default']
 
 
   <h2 class="ui dividing header">States</h2>
+
+  <div class="example">
+    <h4 class="ui header">Indeterminate Loader</h4>
+    <p>A loader can show its unsure of how long a task will take</p>
+    <div class="ui segment">
+      <div class="ui active dimmer">
+        <div class="ui indeterminate text loader">Preparing Files</div>
+      </div>
+      <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+    </div>
+  </div>
 
   <div class="example">
     <h4 class="ui header">Active</h4>

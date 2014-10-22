@@ -391,6 +391,7 @@ semantic.ready = function() {
             }
           });
         }
+        console.log(variables);
         return variables;
       },
 

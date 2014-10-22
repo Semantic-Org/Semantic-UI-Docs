@@ -27,10 +27,8 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
         <a href="/elements/input.html">inputs</a>, standard form fields, <a href="/elements/label.html">labels</a>, <a href="/modules/dropdown.html">selection dropdowns</a>, textareas, as well as:
         <a href="/modules/checkbox.html">checkboxes</a>, and <a href="/collections/message.html">message blocks</a>.
     </p>
-    <div class="ui ignored warning top attached message">
+    <div class="ui ignored warning message">
       <p>If you are looking for form validation, you should check out <a href="/modules/form.html">form validation</a>.</p>
-    </div>
-    <div class="ui ignored info attached message"><p>Validation messages use <a href="/collections/message.html">messages</a> which are formatted for use inside forms.</p>
     </div>
     <div class="ui ignored hidden divider"></div>
     <div class="ui form">
@@ -828,8 +826,8 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
   </div>
 
   <div class="example">
-    <h4 class="ui header">Text Block</h4>
-    <p>Text blocks have special meaning inside a form tag. Any info, error, or warning message blocks found inside a form are hidden by default.</p>
+    <h4 class="ui header">Message</h4>
+    <p><a href="/collections/message.html">Messages</a> have special meaning inside a form tag. Any info, error, or warning message blocks found inside a form are hidden by default.</p>
     <div class="ui form">
       <div class="ui message">
         <div class="header">We had some issues</div>
@@ -982,7 +980,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
 
   <div class="example">
     <h4 class="ui header">Error</h4>
-    <p>Individual fields may contain an error state</p>
+    <p>Individual fields may display an error state</p>
 
     <div class="ui form">
       <div class="two fields">

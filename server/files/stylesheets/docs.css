@@ -546,6 +546,7 @@ body#example.hide {
 -----------------*/
 
 #example .page > .footer {
+  margin: 0em;
   padding: 5em 0em 6em;
 }
 
@@ -649,8 +650,8 @@ body#example.hide {
 }
 
 /* Message */
-#example .example .anchor + p + .ignored.message,
-#example .example .anchor + p + .ignored.message + .ignored.message {
+#example .example .anchor + p + .ignored.message:not(.attached),
+#example .example .anchor + p + .ignored.message + .ignored.message:not(.attached) {
   margin: -0.5em 0em 2em;
 }
 

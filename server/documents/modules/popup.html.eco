@@ -111,7 +111,7 @@ themes      : ['Default']
       <p>A fluid popup will take up the entire width of its offset container</p>
       <div class="ui button">Show fluid popup</div>
       <div class="ui fluid popup">
-        <div class="ui four column divided center aligned padded grid">
+        <div class="ui four column divided center aligned grid">
           <div class="column">1</div>
           <div class="column">2</div>
           <div class="column">3</div>
@@ -133,7 +133,7 @@ themes      : ['Default']
       <p>A popup can have no maximum width and continue to flow to fit its content</p>
       <div class="ui button">Show flowing popup</div>
       <div class="ui flowing popup">
-        <div class="ui three column padded divided center aligned grid">
+        <div class="ui three column divided equal height center aligned grid">
           <div class="column">
             <h4 class="ui header">Basic Plan</h4>
             <p><b>2</b> projects, $10 a month</p>
@@ -336,10 +336,10 @@ themes      : ['Default']
           <i class="dropdown icon"></i>
           Browse
         </a>
-        <div class="ui very wide popup">
-          <div class="ui four column grid">
+        <div class="ui flowing popup">
+          <div class="ui four column relaxed equal height divided grid">
             <div class="ui column">
-              <h5 class="ui header">Fabrics</h5>
+              <h4 class="ui header">Fabrics</h4>
               <div class="ui link list">
                 <a class="item">Cashmere</a>
                 <a class="item">Linen</a>
@@ -348,7 +348,7 @@ themes      : ['Default']
               </div>
             </div>
             <div class="ui column">
-              <h5 class="ui header">Sizes</h5>
+              <h4 class="ui header">Sizes</h4>
               <div class="ui link list">
                 <a class="item">Small</a>
                 <a class="item">Medium</a>
@@ -357,7 +357,7 @@ themes      : ['Default']
               </div>
             </div>
             <div class="ui column">
-              <h5 class="ui header">Colors</h5>
+              <h4 class="ui header">Colors</h4>
               <div class="ui link list">
                 <a class="item">Neutrals</a>
                 <a class="item">Brights</a>
@@ -365,7 +365,7 @@ themes      : ['Default']
               </div>
             </div>
             <div class="ui column">
-              <h5 class="ui header">Types</h5>
+              <h4 class="ui header">Types</h4>
               <div class="ui link list">
                 <a class="item">Knitwear</a>
                 <a class="item">Outerwear</a>

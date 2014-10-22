@@ -9,7 +9,7 @@ title       : 'Grid'
 description : 'A grid is used to harmonize negative space in a layout'
 type        : 'UI Collection'
 
-themes      : ['Default']
+themes      : ['Default', 'Fixed-width']
 ---
 <link rel="stylesheet/less" type="text/css" href="/src/definitions/collections/grid.less" />
 <script src="/javascript/grid.js"></script>
@@ -161,7 +161,7 @@ themes      : ['Default']
       <div class="ui ignored info message">
         <div class="content">
           <div class="header">Why Include Row Markup?</div>
-          <p>It's often easier to have dynamic content output without nested rows, but using row wrappers is the only way for variations like <code>equal height</code> and <code>vertically divided</code> to function correctly.</p>
+          <p>It's often easier to have dynamic content output without nested rows, but using row wrappers is the only way for variations like <code>equal height</code>, <code>celled</code> and <code>vertically divided</code> to function correctly.</p>
         </div>
       </div>
       <div class="ui grid">

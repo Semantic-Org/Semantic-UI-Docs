@@ -1183,8 +1183,7 @@ themes      : ['Default']
       <h4 class="ui header">Combo Dropdowns</h4>
       <div class="ignored">
         <p>A <a href="/elements/button.html">button</a> can be formatted with a dropdown.</p>
-        <p>You can change the default action that occurs on selection to different presets built into <em>ui dropdown</em>.</p>
-        <p>For example, using the <code>combo</code> preset will change the preceding element to the selected value.</p>
+        <p>Using the <code>combo</code> action will change the preceding element to the selected value.</p>
       </div>
       <div class="evaluated code" data-type="javascript">
       $('.combo.dropdown')
@@ -1210,7 +1209,7 @@ themes      : ['Default']
     <div class="link example">
       <h4 class="ui header">Link Dropdowns</h4>
       <div class="ignored">
-        <p>If each option in your dropdown links out to another page, you might just want to make your menu hide without changing any value.</p>
+        <p>Dropdowns support different default actions that can occur when an item is selected. For example, you can set your dropdown not to change its text, or select a value from its menu.</p>
         <div class="evaluated code" data-type="javascript">
         $('.link.example .dropdown')
           .dropdown({

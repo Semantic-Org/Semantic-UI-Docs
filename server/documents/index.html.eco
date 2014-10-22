@@ -186,7 +186,7 @@ type   : 'Semantic'
               </div>
             </div>
           </div>
-          <div class="ui fluid tabular menu">
+          <div class="ui fluid demo tabular menu">
             <a class="active item">
               Tab
             </a>

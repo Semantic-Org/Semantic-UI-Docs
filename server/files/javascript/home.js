@@ -79,6 +79,16 @@ semantic.home.ready = function() {
     .dropdown('setting', 'action', 'activate')
   ;
 
+  // demos
+  $('.demo .checkbox')
+    .checkbox()
+  ;
+  $('.demo .accordion')
+    .accordion()
+  ;
+  $('.demo .ui.dropdown')
+    .dropdown()
+  ;
 
   window.Transifex.live.onTranslatePage(function(countryCode){
     var fullName = $('.language.dropdown .item[data-value=' + countryCode + ']').eq(0).text();

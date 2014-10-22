@@ -547,6 +547,7 @@ body#example.hide {
 
 #example .page > .footer {
   margin: 0em;
+  border-radius: 0em;
   padding: 5em 0em 6em;
 }
 

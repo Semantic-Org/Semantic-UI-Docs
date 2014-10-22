@@ -6,7 +6,7 @@ semantic.validateForm.ready = function() {
   // selector cache
   var
     $codeDropdown = $('.existing.code .dropdown'),
-    $dropdown     = $('.ui.dropdown').not($codeDropdown),
+    $dropdown     = $('.main.container .ui.dropdown').not($codeDropdown),
     // alias
     handler
   ;

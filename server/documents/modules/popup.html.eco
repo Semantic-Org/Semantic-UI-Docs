@@ -111,7 +111,7 @@ themes      : ['Default']
       <p>A fluid popup will take up the entire width of its offset container</p>
       <div class="ui button">Show fluid popup</div>
       <div class="ui fluid popup">
-        <div class="ui four column divided center aligned grid">
+        <div class="ui four column divided center aligned padded grid">
           <div class="column">1</div>
           <div class="column">2</div>
           <div class="column">3</div>

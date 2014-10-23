@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <% uiIntroduction    = @getCollection("documents").findAll({type: $in: ['UI Introduction']},[{title: 1}]).toJSON() %>
-  <% uiProject         = @getCollection("documents").findAll({type: $in: ['Semantic Project']},[{title: 1}]).toJSON() %>
-  <% uiGuide           = @getCollection("documents").findAll({type: $in: ['UI Guide']},[{title: 1}]).toJSON() %>
   <% uiGlobals         = @getCollection("documents").findAll({type: $in: ['UI Global']},[{title: 1}]).toJSON() %>
   <% uiElements        = @getCollection("documents").findAll({type: $in: ['UI Element']},[{title: 1}]).toJSON() %>
   <% uiCollections     = @getCollection("documents").findAll({type: $in: ['UI Collection']},[{title: 1}]).toJSON() %>
   <% uiViews           = @getCollection("documents").findAll({type: $in: ['UI View']},[{title: 1}]).toJSON() %>
   <% uiModules         = @getCollection("documents").findAll({type: $in: ['UI Module']},[{title: 1}]).toJSON() %>
   <% uiBehavior        = @getCollection("documents").findAll({type: $in: ['UI Behavior']},[{title: 1}]).toJSON() %>
-  <% uiSpecification   = @getCollection("documents").findAll({type: $in: ['UI Specification']},[{title: 1}]).toJSON() %>
   <% currentCollection = @getCollection("documents").findAll({type: $in: [@document.type]},[{title: 1}]).toJSON() %>
   <% pageCount         = @pageCount(currentCollection) %>
   <% pageNumber        = @getPage(currentCollection, @document.id) %>

@@ -14,7 +14,7 @@ docpad update; docpad upgrade;
 Then create the docs using:
 ```
 docpad run
-``
+```
 
 ## Help Fix Typos and Errors
 

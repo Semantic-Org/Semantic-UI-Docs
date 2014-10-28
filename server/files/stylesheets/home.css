@@ -558,8 +558,15 @@
   left: 0%;
   width: 100%;
 }
+#example.index .following.bar .menu {
+  margin-top: 2px;
+}
 #example.index .following .logo {
   float: left;
+  width: 35px;
+  margin-right: 1em;
+}
+#example.index .following .logo .side {
   width: 35px;
 }
 #example .masthead .version.label:after {
@@ -776,6 +783,12 @@
   #example.index .container {
     margin-left: 2em;
     margin-right: 2em;
+  }
+  #example.index .following.bar {
+    top: 37px;
+  }
+  #example.index .following.bar .logo {
+    margin-left: 75px;
   }
 }
 

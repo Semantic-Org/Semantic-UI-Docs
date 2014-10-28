@@ -44,8 +44,52 @@ semantic.home.ready = function() {
       setTimeout(function() {
         $version.transition('fade', 600);
       }, 7000);
+    },
+    changeLogo: function() {
+      var
+        $logo = $('.following .logo'),
+        $nextSide = $logo.find('.'+ $(this).data('site') +'.side'),
+        directions = [
+          'up',
+          'left',
+          'down',
+          'right',
+          'over',
+          'back'
+        ],
+        direction = directions[Math.floor(Math.random() * directions.length)]
+      ;
+      $logo
+        .shape('set next side', $nextSide)
+        .shape('flip ' +  direction)
+      ;
+    },
+    returnLogo: function() {
+      var
+        $logo = $('.following .logo'),
+        $nextSide = $logo.find('.ui.side')
+      ;
+      $logo
+        .shape('set next side', $nextSide)
+        .shape('flip over')
+      ;
+
     }
   };
+
+  $('.logo.shape')
+    .shape({
+      duration: 400
+    })
+  ;
+
+  $('.following.bar .network.dropdown')
+    .dropdown({
+      onHide: handler.returnLogo
+    })
+    .find('.menu .item')
+      .on('mouseenter', handler.changeLogo)
+  ;
 
   $('.email.stripe form')
     .form({

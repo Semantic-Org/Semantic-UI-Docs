@@ -75,6 +75,39 @@ themes      : ['Default']
         </select>
       </div>
     </div>
+
+    <div class="dropdown example">
+      <h4 class="ui header">Search Dropdown</h4>
+      <p>A standard dropdown can be searchable</p>
+      <div class="ui floating dropdown labeled search icon button">
+        <i class="world icon"></i>
+        <span class="text">Select Language</span>
+        <div class="menu">
+          <div class="item">Arabic</div>
+          <div class="item">Chinese</div>
+          <div class="item">Danish</div>
+          <div class="item">Dutch</div>
+          <div class="item">English</div>
+          <div class="item">French</div>
+          <div class="item">German</div>
+          <div class="item">Greek</div>
+          <div class="item">Hungarian</div>
+          <div class="item">Italian</div>
+          <div class="item">Japanese</div>
+          <div class="item">Korean</div>
+          <div class="item">Lithuanian</div>
+          <div class="item">Persian</div>
+          <div class="item">Polish</div>
+          <div class="item">Portuguese</div>
+          <div class="item">Russian</div>
+          <div class="item">Spanish</div>
+          <div class="item">Swedish</div>
+          <div class="item">Turkish</div>
+          <div class="item">Vietnamese</div>
+        </div>
+      </div>
+    </div>
+
     <div class="dropdown example">
       <h4 class="ui header">Search Selection</h4>
       <p>A selection dropdown can allow a user to search through a large list of choices.</p>
@@ -415,10 +448,11 @@ themes      : ['Default']
       </div>
     </div>
 
+
     <div class="dropdown example">
       <h4 class="ui header">In-Menu Searchable</h4>
       <p>A dropdown can include a search prompt inside its menu</p>
-      <div class="ui searchable floating dropdown labeled icon button">
+      <div class="ui floating dropdown labeled icon button">
         <i class="filter icon"></i>
         <span class="text">Filter Posts</span>
         <div class="menu">
@@ -429,7 +463,7 @@ themes      : ['Default']
           <div class="divider"></div>
           <div class="header">
             <i class="tags icon"></i>
-            Filter by tag
+            Tag Label
           </div>
           <div class="item">
             <div class="ui red empty circular label"></div>
@@ -906,8 +940,8 @@ themes      : ['Default']
       <h4 class="ui header">Compact</h4>
       <p>A compact dropdown has no minimum width</p>
       <div class="ui compact selection dropdown">
-        <div class="text">Compact</div>
         <i class="dropdown icon"></i>
+        <div class="text">Compact</div>
         <div class="menu">
           <div class="item">A</div>
           <div class="item">B</div>

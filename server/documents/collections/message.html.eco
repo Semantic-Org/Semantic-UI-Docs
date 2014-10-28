@@ -34,11 +34,11 @@ themes      : ['Default', 'GitHub', 'Google']
     <p>A message with a list</p>
     <div class="ui message">
       <div class="header">
-        Welcome back!
+        New Site Features
       </div>
       <ul class="list">
-        <li>It's good to see you again.</li>
-        <li>Did you know it's been a while?</li>
+        <li>You can now have cover images on blog pages</li>
+        <li>Drafts will now auto-save while writing</li>
       </ul>
     </div>
   </div>
@@ -52,7 +52,7 @@ themes      : ['Default', 'GitHub', 'Google']
         <div class="header">
           Have you heard about our mailing list?
         </div>
-        <p>Get all the best inventions in your e-mail every day. Sign up now!</p>
+        <p>Get the best news in your e-mail every day.</p>
       </div>
     </div>
   </div>

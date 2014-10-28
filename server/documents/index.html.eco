@@ -12,12 +12,29 @@ type   : 'Semantic'
 <div class="following bar">
   <div class="ui page grid">
     <div class="column">
-      <img src="/images/logo.png" class="logo">
+      <div class="ui logo shape">
+        <div class="sides">
+          <div class="active ui side">
+            <img class="ui image" src="/images/logo.png">
+          </div>
+          <div class="learn side">
+            <img class="ui image" src="/images/learn-logo.png">
+          </div>
+        </div>
+      </div>
       <div class="ui large inverted right floated secondary menu">
         <div class="ui language floating dropdown item" id="languages">
-          <i class="world icon"></i>
           <div class="text">Select Language</div>
           <%- @partial('languages') %>
+        </div>
+      </div>
+      <div class="ui large inverted secondary menu">
+        <div class="ui floating network dropdown item" id="languages">
+          <div class="text">Semantic UI</div>
+          <div class="menu">
+            <a href="http://www.learnsemantic.com" data-site="learn" class="item">Learn Semantic</a>
+            <a href="http://www.semantic-ui.com" data-site="ui" class="item">Semantic UI</a>
+          </div>
         </div>
       </div>
     </div>
@@ -64,7 +81,7 @@ type   : 'Semantic'
         <img src="/images/icons/theming.png" class="ui icon image">
         Unbelievable Theming
       </h1>
-      <p>Semantic provides true design freedom. Change the look and feel of your components with just a few variables.</p>
+      <p>Semantic provides real design freedom. Change the look and feel of your components with just a few variables.</p>
     </div>
     <div class="column">
       <div data-type="element" data-element="button" class="ui large floating dropdown theme button">
@@ -129,7 +146,7 @@ type   : 'Semantic'
         3000+ CSS Variables
       </h2>
       <p>The only dogma from this framework: <em>everything arbitrary is mutable</em>.</p>
-      <div class="ui disabled button">View Themes</div>
+      <div class="ui disabled large button">View Themes</div>
     </div>
     <div class="column">
       <h2 class="ui icon header">
@@ -137,7 +154,7 @@ type   : 'Semantic'
         50+ UI Definitions
       </h2>
       <p>Build your entire site with one UI stack. Share your UI between multiple projects.</p>
-      <div class="ui primary view-ui button">Browse UI</div>
+      <div class="ui primary view-ui large button">Browse UI</div>
     </div>
     <div class="column">
       <h2 class="ui icon header">
@@ -147,7 +164,7 @@ type   : 'Semantic'
       <p>
         Semantic UI is a <b>free open source</b> project already used in multiple <a href="http://www.quirky.com" target="_blank">large</a> scale <a href="http://www.newrepublic.com" target="_blank">production</a> environments.
       </p>
-      <a href="https://github.com/Semantic-Org/Semantic-UI/issues" class="ui button">Visit GitHub</a>
+      <a href="https://github.com/Semantic-Org/Semantic-UI/issues" class="ui large button">Visit GitHub</a>
     </div>
   </div>
 </div>
@@ -158,8 +175,8 @@ type   : 'Semantic'
         <img src="/images/icons/toolbox.png" class="ui icon image">
         Unbelievable Breadth
       </h1>
-      <p>Definitions aren't limited to just buttons on a page. Semantic's components fall into four categories, elements, collections, modules, and views which cover the gamut of interface design.</p>
-      <a class="ui primary button" href="/kitchen-sink.html">
+      <p>Definitions aren't limited to just buttons on a page. Semantic's components allow several distinct types of definitions: elements, collections, views, modules and behaviors which cover the gamut of interface design.</p>
+      <a class="ui large primary button" href="/kitchen-sink.html">
         View Kitchen Sink
         <i class="right chevron icon"></i>
       </a>

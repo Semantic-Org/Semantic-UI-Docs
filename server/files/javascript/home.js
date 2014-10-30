@@ -60,10 +60,13 @@ semantic.home.ready = function() {
         direction = directions[Math.floor(Math.random() * directions.length)]
       ;
       if($nextSide.size() > 0) {
-        $logo
-          .shape('set next side', $nextSide)
-          .shape('flip ' +  direction)
-        ;
+        clearTimeout(handler.timer);
+        handler.timer = setTimeout(function() {
+          $logo
+            .shape('set next side', $nextSide)
+            .shape('flip ' +  direction)
+          ;
+        }, 300);
       }
     },
     returnLogo: function() {
@@ -71,10 +74,13 @@ semantic.home.ready = function() {
         $logo = $('.following .logo'),
         $nextSide = $logo.find('.ui.side')
       ;
-      $logo
-        .shape('set next side', $nextSide)
-        .shape('flip over')
-      ;
+      clearTimeout(handler.timer);
+      handler.timer = setTimeout(function() {
+        $logo
+          .shape('set next side', $nextSide)
+          .shape('flip over')
+        ;
+      }, 100);
 
     }
   };

@@ -59,10 +59,12 @@ semantic.home.ready = function() {
         ],
         direction = directions[Math.floor(Math.random() * directions.length)]
       ;
-      $logo
-        .shape('set next side', $nextSide)
-        .shape('flip ' +  direction)
-      ;
+      if($nextSide.size() > 0) {
+        $logo
+          .shape('set next side', $nextSide)
+          .shape('flip ' +  direction)
+        ;
+      }
     },
     returnLogo: function() {
       var
@@ -161,8 +163,8 @@ semantic.home.ready = function() {
 
   $('.following.bar .network')
     .find('.item')
-      //.on('mouseenter', handler.changeLogo)
-      //.on('mouseleave', handler.returnLogo)
+      .on('mouseenter', handler.changeLogo)
+      .on('mouseleave', handler.returnLogo)
   ;
 
   $('.email.stripe form')

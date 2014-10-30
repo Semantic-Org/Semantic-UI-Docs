@@ -622,12 +622,18 @@
 #example.index .following.bar .additional.item {
   display: none;
 }
+#example.index .following.bar span.additional.item {
+  cursor: default;
+}
 #example.index .following.bar .network.menu {
   margin-top: 0px;
   font-weight: bold;
 }
 #example.index .following.bar .network.menu .view-ui {
   margin-right: 2em;
+}
+#example.index .fixed.following.bar .network.menu .view-ui {
+  color: #00B5AD;
 }
 #example.index .following .logo {
   float: left;
@@ -663,7 +669,8 @@
 }
 #example.index .feature.stripe .icon.header .icon.image {
   width: auto;
-  height: 50px;
+  height: 65px;
+  margin-bottom: 20px;
 }
 #example.index .stripe .icon.header .icon.image {
   width: 64px;
@@ -854,11 +861,8 @@
     margin-left: 2em;
     margin-right: 2em;
   }
-  #example.index .following.bar {
-    top: 37px;
-  }
-  #example.index .following.bar .logo {
-    margin-left: 75px;
+  #example.index .following.bar .network.menu .view-ui {
+    margin-right: 0.75em;
   }
 }
 

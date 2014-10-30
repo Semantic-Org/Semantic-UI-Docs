@@ -83,50 +83,79 @@ semantic.home.ready = function() {
     })
   ;
 
-  $('body')
-    .visibility({
-      offset: -1,
-      once: false,
-      continuous: false,
-      onTopPassed: function() {
-        $('.following.bar')
-          .removeClass('dark')
-          .addClass('light fixed')
-          .find('.menu')
-            .removeClass('inverted')
-        ;
-        requestAnimationFrame(function() {
-          $('.following .additional.item')
-            .transition('scale in', 750)
+  if($(window).width() > 768) {
+    $('body')
+      .visibility({
+        offset: -1,
+        once: false,
+        continuous: false,
+        onTopPassed: function() {
+          $('.following.bar')
+            .removeClass('dark')
+            .addClass('light fixed')
+            .find('.menu')
+              .removeClass('inverted')
           ;
-        });
-      },
-      onTopPassedReverse: function() {
-        $('.following.bar')
-          .removeClass('light fixed')
-          .addClass('dark')
-          .find('.menu')
-            .addClass('inverted')
-            .find('.additional.item')
-              .transition('hide')
-        ;
-      }
-    })
-  ;
+          requestAnimationFrame(function() {
+            $('.following .additional.item')
+              .transition('scale in', 750)
+            ;
+          });
+        },
+        onTopPassedReverse: function() {
+          $('.following.bar')
+            .removeClass('light fixed animated')
+            .addClass('dark')
+            .find('.menu')
+              .addClass('inverted')
+              .find('.additional.item')
+                .transition('hide')
+          ;
+        }
+      })
+    ;
+    $('.vertical.stripe').eq(0)
+      .visibility({
+        offset: 70,
+        once: false,
+        onTopPassed: function() {
+          $('.following.bar')
+            .addClass('animated')
+          ;
+        }
+      })
+    ;
+    /*  Inverts
+   $('.vertical.stripe').eq(0)
+      .visibility({
+        offset: 70,
+        once: false,
+        onTopPassed: function() {
+          $('.following.bar')
+            .addClass('animated dark')
+            .find('.menu')
+              .addClass('inverted')
+          ;
+        },
+        onTopPassedReverse: function() {
+          $('.following.bar')
+            .removeClass('animated dark')
+            .addClass('light')
+            .find('.menu')
+              .removeClass('inverted')
+          ;
+        }
+      })
+    ;*/
+  }
   $('.additional.item')
     .popup({
+      delay: {
+        show: 200,
+        hide: 50
+      },
+      variation: 'inverted',
       position: 'bottom center'
-    })
-  ;
-  $('.vertical.stripe').eq(0)
-    .visibility({
-      offset: 70,
-      once: false,
-      onTopPassed: function() {
-        $('.following.bar')
-          .addClass('animated')
-        ;
-      }
     })
   ;
 

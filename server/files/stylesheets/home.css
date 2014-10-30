@@ -21,8 +21,10 @@
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 0px;
   border-bottom: none;
+  background-color: #00B5AD;
+  background-image: radial-gradient(farthest-corner, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.95));
 }
-
+#example.index .following.bar,
 #example.index .masthead {
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
@@ -35,15 +37,14 @@
   -webkit-transition: background-color 3s ease-in-out 2s;
   transition: background-color 3s ease-in-out 2s;
 
-  background-color: #00B5AD;
-  background-image: radial-gradient(farthest-corner, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.95));
-
   -webkit-perspective: 1000px;
   -moz-perspective: 1000px;
   -o-perspective: 1000px;
   -ms-perspective: 1000px;
   perspective: 1000px;
 }
+
+#example.index .colored.following.bar,
 #example.index .masthead.colored {
   -webkit-animation-name: colors;
   -moz-animation-name: colors;
@@ -135,6 +136,7 @@
   -moz-transform: rotateX(0deg) rotateZ(0deg) rotateY(0deg) translateY(0%) translateX(0) translateZ(-500px);
   transform: rotateX(0deg) rotateZ(0deg) rotateY(0deg) translateY(0%) translateX(0) translateZ(-500px);
 }
+#example.index .following.bar:after,
 #example.index .masthead:after {
   position: absolute;
   z-index: 1;
@@ -189,9 +191,51 @@
   -o-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 
-  -webkit-transform: rotateX(50deg) rotateZ(0deg) rotateY(0deg) translateY(-10%) translateX(-2%) translateZ(370px);
-  -moz-transform: rotateX(50deg) rotateZ(0deg) rotateY(0deg) translateY(-10%) translateX(-2%) translateZ(370px);
-  transform: rotateX(50deg) rotateZ(0deg) rotateY(0deg) translateY(-10%) translateX(-2%) translateZ(370px);
+  -webkit-transform: rotateX(50deg) rotateZ(0deg) rotateY(0deg) translateY(-14%) translateX(-14%) translateZ(370px);
+  -moz-transform: rotateX(50deg) rotateZ(0deg) rotateY(0deg) translateY(-14%) translateX(-14%) translateZ(370px);
+  transform: rotateX(50deg) rotateZ(0deg) rotateY(0deg) translateY(-14%) translateX(-14%) translateZ(370px);
+}
+
+#example.index .fixed.following.bar {
+  background-image: none;
+}
+#example.index .following.bar:after {
+  height: 82px;
+  opacity: 0;
+  -ms-transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  -webkit-animation-duration: 30s;
+  -moz-animation-duration: 30s;
+  -ms-animation-duration: 30s;
+  -o-animation-duration: 30s;
+  animation-duration: 30s;
+  -webkit-transform: none;
+  -moz-transform: none;
+  transform: none;
+  z-index: -1;
+}
+#example.index .fixed.following.bar {
+  position: fixed;
+  top: 0px;
+  padding: 1em 0em;
+  background-color: #FFFFFF;
+}
+#example.index .fixed.light.following.bar {
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #DDDDDD;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.08);
+}
+#example.index .fixed.dark.following.bar {
+  background-color: #1B1C1D;
+  border-bottom: 1px solid transparent;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.08);
+}
+#example.index .animated.following.bar {
+}
+#example.index .animated.following.bar:after {
+  opacity: 0.06;
 }
 
 /* Zoomed Out */
@@ -410,7 +454,7 @@
   }
 }
 
-
+#example.index .animated.following.bar.stopped:after,
 #example.index .masthead.stopped:after {
   -webkit-animation-name: none;
   -moz-animation-name: none;
@@ -471,7 +515,7 @@
 #example.index .masthead.segment h1 > .library {
   visibility: hidden;
   display: block;
-  font-size: 1.75em;
+  font-size: 2em;
   color: #FFFFFF;
   font-weight: bold;
 }
@@ -506,7 +550,7 @@
   clear: both;
   display: block;
   text-align: center;
-  margin: 15rem 0rem;
+  margin: 20rem 0rem;
 }
 #example.index .introduction .buttons {
   margin-top: 3em;
@@ -524,7 +568,8 @@
   vertical-align: top;
 }
 #example.index .fixed.launch.button {
-  top: 45px;
+  display: none;
+  top: 100px;
 }
 #example.index .main.menu {
   top: 0px;
@@ -553,13 +598,36 @@
 
 #example.index .following.bar {
   position: absolute;
-  top: 53px;
-  z-index: 1;
+  top: 0px;
+  z-index: 900;
   left: 0%;
+  padding: 2em 0em;
   width: 100%;
+  box-shadow: 0px 0px 0px 0px transparent;
+  border-bottom: 1px solid transparent;
+  transition:
+    padding 0.2s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    border 0.3s ease
+  ;
 }
-#example.index .following.bar .menu {
-  margin-top: 2px;
+#example.index .following.bar > .menu .item {
+  transition: all 0.5s ease;
+}
+#example.index.pushed .following.bar .menu .item,
+#example.index.pushed .following.bar {
+  transition: none;
+}
+#example.index .following.bar .additional.item {
+  display: none;
+}
+#example.index .following.bar .network.menu {
+  margin-top: 0px;
+  font-weight: bold;
+}
+#example.index .following.bar .network.menu .view-ui {
+  margin-right: 2em;
 }
 #example.index .following .logo {
   float: left;
@@ -633,6 +701,8 @@
 #example .solid,
 #example .stripe {
   padding: 6em 0px;
+  border-radius: 0em;
+  margin: 0em;
 }
 
 #example .stripe h1 {
@@ -768,7 +838,7 @@
     display: none;
   }
   #example.index .fixed.launch.button {
-    display: block;
+    display: none;
   }
 }
 

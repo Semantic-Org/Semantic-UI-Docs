@@ -24,18 +24,18 @@ type   : 'Semantic'
       </div>
       <div class="ui large inverted right floated secondary menu">
         <div class="ui language floating dropdown item" id="languages">
-          <div class="text">Select Language</div>
+          <i class="world icon"></i>
+          <div class="text">English</div>
           <%- @partial('languages') %>
         </div>
       </div>
-      <div class="ui large inverted secondary menu">
-        <div class="ui floating network dropdown item">
-          <div class="text">Semantic UI</div>
-          <div class="menu">
-            <a href="http://www.learnsemantic.com" data-site="learn" class="item">Learn Semantic</a>
-            <a href="http://www.semantic-ui.com" data-site="ui" class="item">Semantic UI</a>
-          </div>
-        </div>
+      <div class="ui large inverted secondary network menu">
+        <a class="view-ui item">
+          <i class="sidebar icon"></i> Menu
+        </a>
+        <a href="http://www.learnsemantic.com" data-site="learn" class="additional item">Learn</a>
+        <span class="additional item" data-site="themes" data-content="Coming Soon">Themes</span>
+        <span class="additional item" data-site="layout" data-content="Coming Soon">Layouts</span>
       </div>
     </div>
   </div>
@@ -773,11 +773,6 @@ type   : 'Semantic'
           <h4 class="ui header">
             <a href="/elements/progress.html">Progress</a>
           </h4>
-          <div class="ui indicating demo progress active">
-            <div class="bar" style="width: 50%;"></div>
-            <div class="label">50% Funded</div>
-          </div>
-
           <div data-total="20" data-value="6" class="ui teal file demo progress active">
             <div class="bar" style="width: 25%;">
               <div class="progress"></div>
@@ -788,27 +783,6 @@ type   : 'Semantic'
           <script type="text/javascript">
           $(document)
             .ready(function(){
-              $('.basic.progress')
-                .progress({
-                  label   : false,
-                  value   : Math.floor(Math.random() * 5) + 1,
-                  text    : {
-                    active  : '{percent}% Complete',
-                    success : 'Done!'
-                  }
-                })
-              ;
-              $('.indicating.progress')
-                .progress({
-                  label   : true,
-                  total   : 10,
-                  value   : Math.floor(Math.random() * 5) + 1,
-                  text    : {
-                    active  : '{percent}% Funded',
-                    success : 'Project Funded!'
-                  }
-                })
-              ;
               $('.file.progress')
                 .progress({
                   label: false,
@@ -819,13 +793,13 @@ type   : 'Semantic'
                 })
               ;
               var progress = function() {
-                $('.demo.progress').progress('increment');
-                setTimeout(progress, (Math.random() * 2000) + 300);
+                $('.file.progress').progress('increment');
+                setTimeout(progress, (Math.random() * 7000) + 300);
               };
-              setTimeout(progress, 1000);
+              setTimeout(progress, 5000);
 
               setInterval(function() {
-                $('.demo.progress').progress('reset');
+                $('.file.progress').progress('reset');
               }, 30000);
 
             })
@@ -939,7 +913,7 @@ type   : 'Semantic'
         </div>
         <div class="column">
           <h3 class="ui header">Enterprise Ready</h3>
-          <p>Build tools, performance logging, support for custom definitions, multiple-levels of theme inheritanceance—a developer's dream.</p>
+          <p>Build tools, performance logging, support for custom definitions, multiple-levels of theme inheritance developer's dream.</p>
           <a class="ui large right labeled icon button" href="http://www.learnsemantic.com/guide/expert.html">
             <i class="right chevron icon"></i>
             View Expert Guide

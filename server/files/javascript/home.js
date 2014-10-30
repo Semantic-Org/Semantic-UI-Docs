@@ -83,12 +83,57 @@ semantic.home.ready = function() {
     })
   ;
 
-  $('.following.bar .network.dropdown')
-    .dropdown({
-      onHide: handler.returnLogo
+  $('body')
+    .visibility({
+      offset: -1,
+      once: false,
+      continuous: false,
+      onTopPassed: function() {
+        $('.following.bar')
+          .removeClass('dark')
+          .addClass('light fixed')
+          .find('.menu')
+            .removeClass('inverted')
+        ;
+        requestAnimationFrame(function() {
+          $('.following .additional.item')
+            .transition('scale in', 750)
+          ;
+        });
+      },
+      onTopPassedReverse: function() {
+        $('.following.bar')
+          .removeClass('light fixed')
+          .addClass('dark')
+          .find('.menu')
+            .addClass('inverted')
+            .find('.additional.item')
+              .transition('hide')
+        ;
+      }
     })
-    .find('.menu .item')
-      .on('mouseenter', handler.changeLogo)
+  ;
+  $('.additional.item')
+    .popup({
+      position: 'bottom center'
+    })
+  ;
+  $('.vertical.stripe').eq(0)
+    .visibility({
+      offset: 70,
+      once: false,
+      onTopPassed: function() {
+        $('.following.bar')
+          .addClass('animated')
+        ;
+      }
+    })
+  ;
+
+  $('.following.bar .network')
+    .find('.item')
+      //.on('mouseenter', handler.changeLogo)
+      //.on('mouseleave', handler.returnLogo)
   ;
 
   $('.email.stripe form')
@@ -140,7 +185,7 @@ semantic.home.ready = function() {
   });
 
   $('.ui.sidebar')
-    .sidebar('setting', 'transition', 'slide along')
+    .sidebar('setting', 'transition', 'overlay')
   ;
 
 };

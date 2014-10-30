@@ -624,6 +624,7 @@
 }
 #example.index .following.bar span.additional.item {
   cursor: default;
+  color: rgba(0, 0, 0, 0.2);
 }
 #example.index .following.bar .network.menu {
   margin-top: 0px;

@@ -23,7 +23,7 @@ type   : 'Semantic'
         </div>
       </div>
       <div class="ui large inverted right floated secondary menu">
-        <div class="ui language floating dropdown item" id="languages">
+        <div class="ui language floating dropdown link item" id="languages">
           <i class="world icon"></i>
           <div class="text">English</div>
           <%- @partial('languages') %>

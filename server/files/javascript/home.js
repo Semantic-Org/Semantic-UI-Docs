@@ -53,9 +53,7 @@ semantic.home.ready = function() {
           'up',
           'left',
           'down',
-          'right',
-          'over',
-          'back'
+          'right'
         ],
         direction = directions[Math.floor(Math.random() * directions.length)]
       ;
@@ -66,7 +64,7 @@ semantic.home.ready = function() {
             .shape('set next side', $nextSide)
             .shape('flip ' +  direction)
           ;
-        }, 300);
+        }, 50);
       }
     },
     returnLogo: function() {
@@ -80,7 +78,7 @@ semantic.home.ready = function() {
           .shape('set next side', $nextSide)
           .shape('flip over')
         ;
-      }, 100);
+      }, 500);
 
     }
   };

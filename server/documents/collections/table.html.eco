@@ -9,7 +9,7 @@ title       : 'Table'
 description : 'A table displays a collections of data grouped into rows'
 type        : 'UI Collection'
 
-themes      : ['Default', 'Classic']
+themes      : ['Default', 'Basic', 'Classic']
 ---
 
 <link rel="stylesheet/less" type="text/css" href="/src/definitions/collections/table.less" />
@@ -62,8 +62,11 @@ themes      : ['Default', 'Classic']
     </table>
   </div>
   <div class="another example">
-    <div class="ui top attached header">Git Repository</div>
-    <table class="ui bottom attached celled striped table">
+    <table class="ui celled striped table">
+      <thead>
+        <th colspan="3">
+          Git Repository
+        </th>
       <tbody>
         <tr>
           <td class="collapsing disabled">

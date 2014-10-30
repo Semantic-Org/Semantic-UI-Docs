@@ -26,9 +26,9 @@ type        : 'UI Element'
 
   <h2 class="ui dividing header">Usage</h2>
   <div class="no example">
-    <p>A rail provides a fixed-width, off-canvas content segment that that is only visible at large enough screen sizes to support their inclusion.</p>
-    <p>Often rail content uses a section of content that sticks to the browser viewport, following the user as they scroll down the page. This will be available in a separate component <code>ui sticky</code>.</p>
-    <p>Examples of sites that use off-canvas rails include <a href="http://www.huffingtonpost.com/2014/09/22/obama-inversions_n_5864686.html" target="_blank">Huffington Post</a>, <a href="http://www.rottentomatoes.com/m/the_drop/">Rotten Tomatoes</a>, <a href="http://www.buzzfeed.com/claudiakoerner/rutgers-student-killed-in-bear-attack-while-hiking#2skhsin" target="_blank">BuzzFeed</a>.</p>
+    <p>A rail provides a container for off-canvas that sits alongside page content, like the rails of a staircase.</p>
+    <p>Often rail content uses a section of content that sticks to the browser viewport, following the user as they scroll down the page. This will be available in a separate component <a href="/modules/sticky.html">ui sticky</code>.</p>
+    <p>Examples of sites that use off-canvas rails include <a href="http://www.huffingtonpost.com/2014/09/22/obama-inversions_n_5864686.html" target="_blank">Huffington Post</a>, <a href="http://www.rottentomatoes.com/m/the_drop/">Rotten Tomatoes</a>, and <a href="http://www.buzzfeed.com/claudiakoerner/rutgers-student-killed-in-bear-attack-while-hiking#2skhsin" target="_blank">BuzzFeed</a>.</p>
   </div>
 
   <h2 class="ui dividing header">Development Progress</h2>

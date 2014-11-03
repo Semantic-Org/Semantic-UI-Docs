@@ -22,7 +22,10 @@ type   : 'Semantic'
           </div>
         </div>
       </div>
-      <div class="ui large inverted right floated secondary menu">
+      <div class="ui inverted right floated secondary menu">
+        <div class="item">
+          <iframe class="github" src="http://ghbtns.com/github-btn.html?user=semantic-org&amp;repo=semantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
+        </div>
         <div class="ui language floating dropdown link item" id="languages">
           <i class="world icon"></i>
           <div class="text">English</div>

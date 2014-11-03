@@ -252,8 +252,8 @@ a:hover {
   left: -1px;
   width: calc(100% + 1px);
 }
-#example .main.menu iframe {
-  margin: 0px 0px 0px 0px;
+#example .main.menu iframe.github {
+  margin: 1px 0px 0px 0px;
 }
 /* lists */
 #example .features {

@@ -13,8 +13,7 @@
 
 #example.index .masthead {
   position: relative;
-  overflow: hidden;
-  /*background: #111111 url(../images/bg-sky.jpg);*/
+  background: #111111 url(../images/bg-sky.jpg);
   background-size: cover;
   text-align: center;
   padding: 0em;
@@ -22,7 +21,12 @@
   margin-bottom: 0px;
   border-bottom: none;
   background-color: #00B5AD;
+  background-image: -webkit-radial-gradient(farthest-corner, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.95));
   background-image: radial-gradient(farthest-corner, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.95));
+}
+#example .masthead .grid {
+  margin: 0em;
+  padding: 15rem 0em;
 }
 #example.index .following.bar,
 #example.index .masthead {
@@ -31,6 +35,10 @@
   -o-transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;
   transform-style: preserve-3d;
+
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 
   -ms-transition: background-color 3s ease-in-out 2s;
   -moz-transition: background-color 3s ease-in-out 2s;
@@ -42,6 +50,15 @@
   -o-perspective: 1000px;
   -ms-perspective: 1000px;
   perspective: 1000px;
+}
+#example.index .following.bar iframe.github {
+  margin-top: 0px;
+}
+#example.index.pushed .masthead,
+#example.index.pushed .following.bar {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 #example.index .colored.following.bar,
@@ -81,9 +98,9 @@
 #example.index .masthead:before {
   position: absolute;
   z-index: 1;
-  width: 150%;
-  height: 200%;
-  top: -25%;
+  width: 100%;
+  height: 100%;
+  top: 0%;
   left: 0px;
   content: '';
   background: url(/images/before.jpg);
@@ -140,9 +157,9 @@
 #example.index .masthead:after {
   position: absolute;
   z-index: 1;
-  width: 150%;
-  height: 200%;
-  top: -25%;
+  width: 135%;
+  height: 135%;
+  top: 18%;
   left: 0px;
   content: '';
   background: url(/images/ui.png);
@@ -200,7 +217,7 @@
   background-image: none;
 }
 #example.index .following.bar:after {
-  height: 82px;
+  height: 58px;
   opacity: 0;
   -ms-transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   -webkit-transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
@@ -232,8 +249,6 @@
   border-bottom: 1px solid transparent;
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.08);
 }
-#example.index .animated.following.bar {
-}
 #example.index .animated.following.bar:after {
   opacity: 0.06;
 }
@@ -250,9 +265,9 @@
 }
 #example.index .masthead.zoomed:after {
   opacity: 0;
-  -webkit-transform: rotateX(0deg) rotateZ(0deg) rotateY(0deg) translateZ(0px);
-  -moz-transform: rotateX(0deg) rotateZ(0deg) rotateY(0deg) translateZ(0px);
-  transform: rotateX(0deg) rotateZ(0deg) rotateY(0deg) translateZ(0px);
+  -webkit-transform: rotateX(0deg) rotateZ(0deg) rotateY(0deg) translateY(-6%) translateZ(0px);
+  -moz-transform: rotateX(0deg) rotateZ(0deg) rotateY(0deg) translateY(-6%) translateZ(0px);
+  transform: rotateX(0deg) rotateZ(0deg) rotateY(0deg) translateY(-6%) translateZ(0px);
 }
 
 @keyframes masthead {
@@ -492,13 +507,6 @@
   box-shadow: none;
 }
 
-#example.index .masthead {
-  position: relative;
-  overflow: hidden;
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 0px;
-  border-bottom: none;
-}
 #example.index .masthead.segment h1 {
   font-size: 3em;
   color: rgba(255, 255, 255, 0.5);
@@ -515,7 +523,7 @@
 #example.index .masthead.segment h1 > .library {
   visibility: hidden;
   display: block;
-  font-size: 2em;
+  font-size: 1.75em;
   color: #FFFFFF;
   font-weight: bold;
 }
@@ -550,7 +558,6 @@
   clear: both;
   display: block;
   text-align: center;
-  margin: 20rem 0rem;
 }
 #example.index .introduction .buttons {
   margin-top: 3em;
@@ -626,8 +633,12 @@
   cursor: default;
   color: rgba(0, 0, 0, 0.2);
 }
-#example.index .following.bar .network.menu {
+#example.index .following.bar .inverted span.additional.item {
+  color: rgba(255, 255, 255, 0.2);
+}
+#example.index .following.bar .column > .menu {
   margin-top: 0px;
+  height: 35px;
   font-weight: bold;
 }
 #example.index .following.bar .network.menu .view-ui {
@@ -635,6 +646,9 @@
 }
 #example.index .fixed.following.bar .network.menu .view-ui {
   color: #00B5AD;
+}
+#example.index .fixed.following.bar .inverted.network.menu .view-ui {
+  color: #6DFFFF;
 }
 #example.index .following .logo {
   float: left;
@@ -708,7 +722,7 @@
 /* content */
 #example .solid,
 #example .stripe {
-  padding: 6em 0px;
+  padding: 10em 0px;
   border-radius: 0em;
   margin: 0em;
 }
@@ -721,6 +735,9 @@
 }
 #example .stripe h3 {
   font-size: 20px;
+}
+#example .feature.stripe {
+  padding: 5em 0em;
 }
 #example .theming.stripe .buttons {
   vertical-align: top;

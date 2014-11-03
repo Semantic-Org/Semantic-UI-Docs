@@ -992,8 +992,9 @@ semantic.ready = function() {
   $menuPopup
     .popup({
       position  : 'bottom center',
-      className : {
-        popup: 'ui popup'
+      delay: {
+        show: 500,
+        hide: 50
       }
     })
   ;
@@ -1006,7 +1007,13 @@ semantic.ready = function() {
     })
   ;
   $languageDropdown
-    .popup()
+    .popup({
+      position  : 'bottom center',
+      delay: {
+        show: 500,
+        hide: 50
+      }
+    })
     .dropdown({
       on       : 'click',
       onShow: function() {
@@ -1016,8 +1023,9 @@ semantic.ready = function() {
     })
   ;
 
-
-  window.Transifex.live.onTranslatePage(handler.showLanguageModal);
+  if(window.Transifex !== undefined) {
+    window.Transifex.live.onTranslatePage(handler.showLanguageModal);
+  }
 
 };
 

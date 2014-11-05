@@ -30,12 +30,64 @@ themes      : ['Default']
         <p>Browsers that do not support <code>translate3D</code>, like <b>IE < 10</b> will automatically fall back to javascript transitions, you can also force this behavior using <code>useLegacy: true</code>.</p>
       </div>
       <div class="code" data-label="Javascript" data-type="javascript">
-        $('.ui.sidebar')
+        $('.ui.left.sidebar')
           .sidebar({
             transition: 'push'
           })
         ;
       </div>
+      <h5 class="ui header">Flexible Animations</h5>
+      <div class="ui button" data-transition="overlay">
+        Overlay
+      </div>
+      <div class="ui button" data-transition="push">
+        Push
+      </div>
+      <div class="ui button" data-transition="scale down">
+        Scale Down
+      </div>
+
+      <h5 class="ui header">Horizontal Animations</h5>
+      <div class="ui info message">
+        These animations use off-canvas reveals, which only work vertically when at opened at the top or bottom scroll position of your page.
+      </div>
+      <div class="ui button" data-transition="uncover">
+        Uncover
+      </div>
+      <div class="ui button" data-transition="slide along">
+        Slide Along
+      </div>
+      <div class="ui button" data-transition="slide out">
+        Slide Out
+      </div>
+    </div>
+
+    <div class="no direction example">
+      <h4 class="ui header">Direction</h4>
+      <p>A sidebar can appear on different sides of the page</p>
+
+      <div class="ui toggle checkbox">
+        <input type="checkbox" name="dim" class="dim" />
+        <label>Dim Page</label>
+      </div>
+      <div class="ui divider"></div>
+      <h5 class="ui header">Direction</h5>
+      <div class="ui buttons">
+        <div class="ui button" data-direction="left">
+          Left
+        </div>
+        <div class="ui button" data-direction="right">
+          Right
+        </div>
+        <div class="ui active button" data-direction="top">
+          Top
+        </div>
+        <div class="ui button" data-direction="bottom">
+          Bottom
+        </div>
+      </div>
+      <div class="ui divider"></div>
+      <h5 class="ui header">Animation</h5>
       <div class="ui button" data-transition="overlay">
         Overlay
       </div>
@@ -54,70 +106,9 @@ themes      : ['Default']
       <div class="ui button" data-transition="scale down">
         Scale Down
       </div>
-      <div class="ui button" data-transition="safe">
-        Safe
-      </div>
-    </div>
-
-    <div class="no direction example">
-      <h4 class="ui header">Direction</h4>
-      <div class="ui ignored warning message">Only <b>top</b> and <b>bottom</b> sidebars support dropdown menus. This is because elements with scrollbars cannot have absolutely positioned content escape the container.</div>
-      <div class="ui ignored info message">
-        Only <b>left</b> and <b>right</b> sidebars support all animations. Top and bottom sidebars must overlay page content.
-      </div>
-      <p>A sidebar can appear on different sides of the page</p>
-      <div class="ui button" data-direction="left">
-        Left
-      </div>
-      <div class="ui button" data-direction="right">
-        Right
-      </div>
-      <div class="ui button" data-direction="top">
-        Top
-      </div>
-      <div class="ui button" data-direction="bottom">
-        Bottom
-      </div>
     </div>
 
     <h2 class="ui dividing header">Variations</h2>
-
-    <div class="no styled example">
-      <h4 class="ui header">Styled</h4>
-      <p>A sidebar can be formatted to include additional styling for display</p>
-      <div class="code" data-type="html">
-        <div class="ui styled sidebar">...</div>
-      </div>
-      <div class="ui labeled icon button">
-        <i class="left arrow icon"></i>
-        Show
-      </div>
-    </div>
-
-    <div class="no size example">
-      <h4 class="ui header">Size</h4>
-      <p>A sidebar can vary in width and height to allow more content</p>
-      <div class="code" data-type="html">
-        <div class="ui very thin sidebar">...</div>
-        <div class="ui thin sidebar">...</div>
-        <div class="ui wide sidebar">...</div>
-        <div class="ui very wide sidebar">...</div>
-      </div>
-      <div class="ui variation toggle buttons">
-        <div class="ui button" data-variation=".very.thin">
-          Very Thin
-        </div>
-        <div class="ui button" data-variation=".thin">
-          Thin
-        </div>
-        <div class="ui button" data-variation=".wide">
-          Wide
-        </div>
-        <div class="ui button" data-variation=".very.wide">
-          Very Wide
-        </div>
-      </div>
-    </div>
 
     <div class="no floating example">
       <h4 class="ui header">Floating</h4>
@@ -168,27 +159,16 @@ themes      : ['Default']
       <h4 class="ui header">Showing a sidebar</h4>
       <p>A sidebar can be shown, hidden, or toggled. In the following examples sidebar is used in conjunction with <a href="/collections/menu.html">ui menu</a> to display a vertical menu as a sidebar.</p>
       <div class="code" data-type="html" data-title="Example HTML">
-      <div class="ui red vertical demo sidebar menu">
-        <a class="item">
-          <i class="home icon"></i>
-          Home
-        </a>
-        <a class="active item">
-          <i class="heart icon"></i>
-          Current Section
-        </a>
-        <a class="item">
-          <i class="facebook icon"></i>
-          Like us on Facebook
-        </a>
-        <div class="item">
-          <b>More</b>
-          <div class="menu">
-            <a class="item">About</a>
-            <a class="item">Contact Us</a>
-          </div>
+        <div class="ui left demo sidebar vertical inverted menu">
+          <a class="header item">Categories</a>
+          <a class="item">World</a>
+          <a class="item">U.S.</a>
+          <a class="item">Business</a>
+          <a class="item">Opinion</a>
+          <a class="item">Technology</a>
+          <a class="item">Health</a>
+          <a class="item">Sports</a>
         </div>
-      </div>
       </div>
       <div class="code" data-demo="true" data-type="javascript">
       $('.demo.sidebar')
@@ -276,7 +256,7 @@ themes      : ['Default']
       <h4 class="ui header">Triggering show/hide with other content</h4>
       <p>For convenience calling attach events will allow you to bind events. By default this will toggle the sidebar in and out of view on click</p>
       <div class="code" data-demo="true">
-      $('.demo.sidebar').first()
+      $('.left.demo.sidebar').first()
         .sidebar('attach events', '.toggle.button')
       ;
       $('.toggle.button')
@@ -293,7 +273,7 @@ themes      : ['Default']
       <h4 class="ui header">Triggering custom action with other content</h4>
       <p>You can also however specify what action should occur when the element is clicked</p>
       <div class="code" data-demo="true">
-      $('.demo.sidebar').first()
+      $('.left.demo.sidebar').first()
         .sidebar('attach events', '.open.button', 'show')
       ;
       $('.open.button')
@@ -469,258 +449,48 @@ themes      : ['Default']
 
 </div>
 
-<div class="ui styled sidebar">
-  <h3 class="ui header">You Might Like</h3>
-  <div class="ui fluid vertical menu">
-    <a class="item">
-      <i class="chat outline icon"></i>
-      More by this author
-    </a>
-    <a class="item">
-      <i class="text file icon"></i>
-      Suggested Articles
-    </a>
-  </div>
-  <h3 class="ui header">Contact Us</h3>
-  <div class="ui form">
-    <div class="field">
-      <label>Name</label>
-      <div class="ui icon input">
-        <i class="user icon"></i>
-        <input type="text" data-placeholder="Name">
-      </div>
-    </div>
-    <div class="field">
-      <label>Message</label>
-      <textarea></textarea>
-    </div>
-    <div class="ui black fluid button">Submit</div>
-  </div>
-</div>
-
-
-<div class="ui thin styled sidebar">
-  <h3 class="ui header">Share</h3>
-  <div class="ui fluid vertical labeled icon buttons">
-    <div class="ui facebook button">
-      <i class="facebook icon"></i>
-      Facebook
-    </div>
-    <div class="ui twitter button">
-      <i class="twitter icon"></i>
-      Twitter
-    </div>
-    <div class="ui google plus button">
-      <i class="google plus icon"></i>
-      Google
-    </div>
-  </div>
-</div>
-<div class="ui very thin styled sidebar">
-  <div class="ui fluid vertical icon buttons">
-    <div class="ui facebook button">
-      <i class="facebook icon"></i>
-    </div>
-    <div class="ui twitter button">
-      <i class="twitter icon"></i>
-    </div>
-    <div class="ui google plus button">
-      <i class="google plus icon"></i>
-    </div>
-  </div>
-</div>
-<div class="ui wide styled sidebar">
-  <h3 class="ui header">You Might Like</h3>
-  <div class="ui fluid vertical menu">
-    <a class="item">
-      <i class="chat outline icon"></i>
-      More by this author
-    </a>
-    <a class="item">
-      <i class="text file icon"></i>
-      Suggested Articles
-    </a>
-  </div>
-</div>
-<div class="ui very wide styled sidebar">
-  <h3 class="ui header">Contact Us</h3>
-  <div class="ui form">
-    <div class="field">
-      <label>Name</label>
-      <div class="ui icon input">
-        <i class="user icon"></i>
-        <input type="text" data-placeholder="Name">
-      </div>
-    </div>
-    <div class="field">
-      <label>Message</label>
-      <textarea></textarea>
-    </div>
-    <div class="ui black fluid button">Submit</div>
-  </div>
-</div>
-
-<div class="ui vertical overlay sidebar menu">
-  <a class="item">
-    <i class="home icon"></i>
-    Home
-  </a>
-  <a class="active item">
-    <i class="heart icon"></i>
-    Current Section
-  </a>
-  <a class="item">
-    <i class="facebook icon"></i>
-    Like us on Facebook
-  </a>
-  <div class="item">
-    <b>More</b>
-    <div class="menu">
-      <a class="item">About</a>
-      <a class="item">Contact Us</a>
-    </div>
-  </div>
-</div>
-<div class="ui floating vertical sidebar menu">
-  <a class="item">
-    <i class="home icon"></i>
-    Home
-  </a>
-  <a class="active item">
-    <i class="heart icon"></i>
-    Current Section
-  </a>
-  <a class="item">
-    <i class="facebook icon"></i>
-    Like us on Facebook
-  </a>
-  <div class="item">
-    <b>More</b>
-    <div class="menu">
-      <a class="item">About</a>
-      <a class="item">Contact Us</a>
-    </div>
-  </div>
-</div>
-
-<div class="ui red vertical demo sidebar menu">
-  <a class="item">
-    <i class="home icon"></i>
-    Home
-  </a>
-  <a class="active item">
-    <i class="heart icon"></i>
-    Current Section
-  </a>
-  <a class="item">
-    <i class="facebook icon"></i>
-    Like us on Facebook
-  </a>
-  <div class="item">
-    <b>More</b>
-    <div class="menu">
-      <a class="item">About</a>
-      <a class="item">Contact Us</a>
-    </div>
-  </div>
-</div>
-<div class="ui left sidebar vertical inverted menu">
-  <a class="header item">Categories</a>
-  <a class="item">World</a>
-  <a class="item">U.S.</a>
-  <a class="item">Business</a>
-  <a class="item">Opinion</a>
-  <a class="item">Technology</a>
-  <a class="item">Health</a>
-  <a class="item">Sports</a>
-</div>
-<div class="ui right vertical inverted sidebar menu">
+<div class="ui right demo sidebar vertical inverted menu">
   <a class="header item">File Permissions</a>
   <a class="item">Share on Social</a>
   <a class="item">Share by E-mail</a>
   <a class="item">Edit Permissions</a>
   <a class="item">Delete Permanently</a>
 </div>
-<div class="ui top inverted sidebar menu">
-  <div class="menu">
-    <a class="item">
-      Home
-    </a>
-    <div class="ui pointing dropdown link item">
-      <i class="dropdown icon"></i>
-      Shopping
-      <div class="menu">
-        <div class="header">Categories</div>
-        <div class="item">
-          <i class="dropdown icon"></i>
-          Clothing
-          <div class="menu">
-            <div class="header">Mens</div>
-            <div class="item">Shirts</div>
-            <div class="item">Pants</div>
-            <div class="item">Jeans</div>
-            <div class="item">Shoes</div>
-            <div class="divider"></div>
-            <div class="header">Womens</div>
-            <div class="item">Dresses</div>
-            <div class="item">Shoes</div>
-            <div class="item">Bags</div>
-          </div>
-        </div>
-        <div class="item">Home Goods</div>
-        <div class="item">Bedroom</div>
-        <div class="divider"></div>
-        <div class="header">Order</div>
-        <div class="item">Status</div>
-        <div class="item">Cancellations</div>
+
+<div class="ui top demo sidebar ui segment">
+  <div class="ui center aligned page grid">
+    <div class="one column row">
+      <div class="sixteen wide column">
+        <h3 class="ui header">New Content Awaits</h3>
       </div>
     </div>
-    <a class="item">
-      Forums
-    </a>
-    <a class="item">
-      Contact Us
-    </a>
+    <div class="three column divided row">
+      <div class="column">
+        <img class="ui wireframe image" src="/images/wireframe/media-paragraph.png">
+      </div>
+      <div class="column">
+        <img class="ui wireframe image" src="/images/wireframe/media-paragraph.png">
+      </div>
+      <div class="column">
+        <img class="ui wireframe image" src="/images/wireframe/media-paragraph.png">
+      </div>
+    </div>
   </div>
-</div><div class="ui bottom inverted sidebar menu">
-  <div class="menu">
-    <a class="item">
-      Home
-    </a>
-    <div class="ui bottom pointing dropdown link item">
-      <i class="dropdown icon"></i>
-      Shopping
-      <div class="menu">
-        <div class="header">Categories</div>
-        <div class="item">
-          <i class="dropdown icon"></i>
-          Clothing
-          <div class="menu">
-            <div class="header">Mens</div>
-            <div class="item">Shirts</div>
-            <div class="item">Pants</div>
-            <div class="item">Jeans</div>
-            <div class="item">Shoes</div>
-            <div class="divider"></div>
-            <div class="header">Womens</div>
-            <div class="item">Dresses</div>
-            <div class="item">Shoes</div>
-            <div class="item">Bags</div>
-          </div>
-        </div>
-        <div class="item">Home Goods</div>
-        <div class="item">Bedroom</div>
-        <div class="divider"></div>
-        <div class="header">Order</div>
-        <div class="item">Status</div>
-        <div class="item">Cancellations</div>
+</div>
+
+
+<div class="ui bottom demo sidebar ui inverted segment">
+  <div class="ui center aligned page grid">
+    <div class="three column divided row">
+      <div class="column">
+        <img class="ui wireframe image" src="/images/wireframe/media-paragraph.png">
+      </div>
+      <div class="column">
+        <img class="ui wireframe image" src="/images/wireframe/media-paragraph.png">
+      </div>
+      <div class="column">
+        <img class="ui wireframe image" src="/images/wireframe/media-paragraph.png">
       </div>
     </div>
-    <a class="item">
-      Forums
-    </a>
-    <a class="item">
-      Contact Us
-    </a>
   </div>
 </div>

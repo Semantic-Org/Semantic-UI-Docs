@@ -15,8 +15,12 @@ semantic.sidebar.ready = function() {
     })
   ;
 
-  $('.left.sidebar')
+  $('.demo.sidebar')
     .sidebar()
+  ;
+
+  $('.main.container .checkbox')
+    .checkbox()
   ;
 
   $('.left.example')
@@ -25,25 +29,42 @@ semantic.sidebar.ready = function() {
         var
           transition = $(this).data('transition')
         ;
-        $('.left.sidebar')
+        console.log($('.left.demo.sidebar'));
+        $('.left.demo.sidebar')
+          .not('.styled')
           .sidebar('setting', {
             transition       : transition,
             mobileTransition : transition
           })
-          .sidebar('toggle')
         ;
+        $('.left.demo.sidebar').not('.styled').sidebar('toggle');
       })
   ;
 
   $('.direction.example')
-    .find('.button')
+    .find('.buttons .button')
+      .on('click', function() {
+        $(this).addClass('active').siblings().removeClass('active');
+      })
+      .end()
+      .children('.button')
       .on('click', function() {
         var
-          direction = $(this).data('direction')
+          transition = $(this).data('transition'),
+          direction  = $('.direction.example .buttons .button.active').data('direction'),
+          dimPage    = $('.direction.example .dim').checkbox('is checked')
         ;
-        $('.' + direction + '.sidebar')
-          .sidebar('toggle')
+        console.log($('.' + direction + '.demo.sidebar'));
+        $('.' + direction + '.demo.sidebar')
+          .not('.styled')
+          .sidebar('setting', {
+            dimPage          : dimPage,
+            transition       : transition,
+            mobileTransition : transition
+          })
         ;
+        $('.' + direction + '.demo.sidebar').not('.styled').sidebar('toggle');
+
       })
   ;
 

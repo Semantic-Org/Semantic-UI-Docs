@@ -192,9 +192,7 @@ a:hover {
 
 
 /* segment headers */
-#example .header.segment,
-#example > .content > .page > .segment,
-#example > .header.segment {
+#example .header.segment {
   position: relative;
   z-index: 2;
   margin: 0em;
@@ -361,7 +359,7 @@ a:hover {
 ---------------*/
 
 body#example {
-  background: #2C2C2C url(../images/icons.png) !important;
+  /* background: #2C2C2C url(../images/icons.png) !important; */
 }
 body#example.pushed,
 body#example.hide {
@@ -545,10 +543,10 @@ body#example.hide {
       Footer
 -----------------*/
 
-#example .page > .footer {
+#example > .pusher > .footer {
   margin: 0em;
   border-radius: 0em;
-  padding: 5em 0em 6em;
+  padding: 4em 0em 5em;
 }
 
 /*----------------
@@ -1436,16 +1434,16 @@ body.progress.animated .ui.progress .bar {
       Definition Container
 *******************************/
 
-#example .pusher > .page {
-  display: table;
-  width: 100%;
-  height: 100%;
+#example > .pusher {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
-#example .pusher > .page > .full.height {
-  display: table-row;
-  height: 100%;
+
+#example > .pusher > .full.height {
+  flex: 1;
 }
-#example .pusher > .page > .footer {
+#example > .pusher > .footer {
   clear: both;
 }
 
@@ -1501,7 +1499,7 @@ body.progress.animated .ui.progress .bar {
   #example .solid, #example .stripe {
     padding: 4em 0em;
   }
-  #example .page > .footer {
+  #example > .pusher > .footer {
     padding: 2em 0em;
   }
   #example .container {
@@ -1539,12 +1537,12 @@ body.progress.animated .ui.progress .bar {
 
 @media only screen and (max-width : 998px) {
 
-  #example .pusher > .page {
+  #example > .pusher {
     display: block;
     width: 100%;
     height: auto;
   }
-  #example .pusher > .page > .full.height {
+  #example > .pusher > .page > .full.height {
     display: block;
     height: auto;
   }

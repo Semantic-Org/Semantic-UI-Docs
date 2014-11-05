@@ -13,7 +13,8 @@
 
 #example.index .masthead {
   position: relative;
-  background: #111111 url(../images/bg-sky.jpg);
+  overflow: hidden;
+/*  background: #111111 url(../images/bg-sky.jpg);*/
   background-size: cover;
   text-align: center;
   padding: 0em;
@@ -836,8 +837,8 @@
     vertical-align: top;
     margin-top: 0em;
   }
-  #example.index .introduction {
-    margin: 7rem 0rem;
+  #example .masthead .grid {
+    padding: 6rem 0rem;
   }
   #example.index .masthead.segment h1 {
     font-size: 2.25em;

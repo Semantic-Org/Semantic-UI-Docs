@@ -465,19 +465,19 @@ themes      : ['Default']
             Tag Label
           </div>
           <div class="item">
-            <div class="ui red empty circular label"></div>
+            <div class="ui red empty circular right floated label"></div>
             Important
           </div>
           <div class="item">
-            <div class="ui blue empty circular label"></div>
+            <div class="ui blue empty circular right floated label"></div>
             Announcement
           </div>
           <div class="item">
-            <div class="ui black empty circular label"></div>
+            <div class="ui black empty circular right floated label"></div>
             Cannot Fix
           </div>
           <div class="item">
-            <div class="ui green empty circular label"></div>
+            <div class="ui green empty circular right floated label"></div>
             Discussion
           </div>
         </div>
@@ -775,7 +775,7 @@ themes      : ['Default']
 
     <div class="dropdown example">
       <h4 class="ui header">Header</h4>
-      <p>A dropdown can contain a header</p>
+      <p>A dropdown menu can contain a header</p>
       <div class="ui floating labeled icon dropdown button">
         <i class="filter icon"></i>
         <span class="text">Filter</span>
@@ -798,7 +798,7 @@ themes      : ['Default']
     </div>
     <div class="dropdown example">
       <h4 class="ui header">Divider</h4>
-      <p>A dropdown can contain dividers to separate related content</p>
+      <p>A dropdown menu can contain dividers to separate related content</p>
       <div class="ui floating labeled icon dropdown button">
         <i class="filter icon"></i>
         <span class="text">Filter</span>
@@ -822,8 +822,63 @@ themes      : ['Default']
     </div>
 
     <div class="dropdown example">
+      <h4 class="ui header">Icon</h4>
+      <p>A dropdown menu can contain an <a href="/elements/icon.html">icon</a>.</p>
+      <div class="ui floating labeled icon dropdown button">
+        <i class="filter icon"></i>
+        <span class="text">Filter</span>
+        <div class="menu">
+          <div class="header">
+            <i class="tags icon"></i>
+            Filter by tag
+          </div>
+          <div class="divider"></div>
+          <div class="item">
+            <i class="attention icon"></i>
+            Important
+          </div>
+          <div class="item">
+            <i class="comment icon"></i>
+            Announcement
+          </div>
+          <div class="item">
+            <i class="conversation icon"></i>
+            Discussion
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dropdown example">
+      <h4 class="ui header">Description</h4>
+      <p>A dropdown menu can contain a <a href="/elements/icon.html">description</a>.</p>
+      <div class="ui floating labeled icon dropdown button">
+        <i class="filter icon"></i>
+        <span class="text">Filter</span>
+        <div class="menu">
+          <div class="header">
+            Filter by tag
+          </div>
+          <div class="divider"></div>
+          <div class="item">
+            Important
+            <span class="description">2 new</span>
+          </div>
+          <div class="item">
+            Announcement
+            <span class="description">10 new</span>
+          </div>
+          <div class="item">
+            Discussion
+            <span class="description">5 new</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dropdown example">
       <h4 class="ui header">Label</h4>
-      <p>A dropdown can contain a <a href="/elements/input.html">ui label</a>.</p>
+      <p>A dropdown menu can contain a <a href="/elements/input.html">label</a>.</p>
       <div class="ui floating labeled icon dropdown button">
         <i class="filter icon"></i>
         <span class="text">Filter</span>
@@ -839,7 +894,6 @@ themes      : ['Default']
             <i class="tags icon"></i>
             Filter by tag
           </div>
-          <div class="divider"></div>
           <div class="item">
             <div class="ui red empty circular label"></div>
             Important
@@ -857,8 +911,46 @@ themes      : ['Default']
     </div>
 
     <div class="dropdown example">
+      <h4 class="ui header">Floated Content</h4>
+      <p>A dropdown menu can contain floated content.</p>
+      <div class="ui info message">Floated content may stack to two lines without manually setting a width when or using a <code>fluid</code> dropdown
+      </div>
+      <div class="ui fluid selection dropdown">
+        <i class="filter icon"></i>
+        <span class="text">Filter</span>
+        <div class="menu">
+          <div class="item">
+            <span class="right floated description">10 new</span>
+            Important
+          </div>
+          <div class="item">
+            <span class="right floated description">10 new</span>
+            Announcement
+          </div>
+          <div class="item">
+            <span class="right floated description">10 new</span>
+            Discussion
+          </div>
+          <div class="item">
+            <i class="attention right floated icon"></i>
+            Important
+          </div>
+          <div class="item">
+            <i class="comment right floated icon"></i>
+            Announcement
+          </div>
+          <div class="item">
+            <i class="conversation right floated icon"></i>
+            Discussion
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="dropdown example">
       <h4 class="ui header">Input</h4>
-      <p>A dropdown can contain a <a href="/elements/input.html">ui input</a></p>
+      <p>A dropdown menu can contain an <a href="/elements/input.html">input</a></p>
       <div class="ui floating labeled icon dropdown button">
         <i class="filter icon"></i>
         <span class="text">Filter</span>
@@ -893,7 +985,7 @@ themes      : ['Default']
 
     <div class="dropdown example">
       <h4 class="ui header">Image</h4>
-      <p>A dropdown can contain a <a href="/elements/input.html">ui image</a></p>
+      <p>A dropdown menu can contain an <a href="/elements/input.html">image</a></p>
       <div class="ui floating labeled icon dropdown button">
         <i class="add user icon"></i>
         <span class="text">Add User</span>
@@ -1269,9 +1361,9 @@ themes      : ['Default']
     <h2 class="ui dividing header">Initializing</h2>
 
     <div class="no example">
-      <h4 class="ui header">Simple</h4>
-      <p>Initializing a dropdown with pre-existing html allows for the greatest performance, and most formatting flexibilty</p>
-      <div class="ui info message">A <code>ui dropdown</code> select element will be hidden until javascript can create html, this is to avoid the flash of unstyled content, and the change in element height adjusting page flow</div>
+      <h4 class="ui header">Initializing Existing HTML</h4>
+      <p>Initializing a dropdown with pre-existing html allows for greater performance than initializing a dropdown directly on a <code>select</code> element.</p>
+      <div class="ui info message">Any select element initialized as dropdown will also be hidden until javascript can create html, this is to avoid the flash of unstyled content, and the change in element height adjusting page flow.</div>
       <div class="code" data-label="HTML" data-type="html">
         <div class="ui dropdown">
           <input type="hidden" name="gender">
@@ -1290,7 +1382,28 @@ themes      : ['Default']
       </div>
     </div>
     <div class="no example">
-      <h4 class="ui header">Converting form elements</h4>
+      <h4 class="ui header">Specifying Different Text &amp; Hidden Input Values</h4>
+      <p>You can specify different values for selected text, and selected form values by adding <code>data-text</code> or <code>data-value</code> to any item. This is useful if you include additional data, like icons, that you want to appear only inside the dropdown menu.</p>
+      <div class="code" data-label="HTML" data-type="html" data-preview="true">
+        <div class="ui dropdown">
+          <input type="hidden" name="gender">
+          <i class="dropdown icon"></i>
+          <div class="default text">Gender</div>
+          <div class="menu">
+            <div class="item" data-value="male" data-text="Male">
+              <i class="male icon"></i>
+              Male
+            </div>
+            <div class="item" data-value="female" data-text="Female">
+              <i class="female icon"></i>
+              Female
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="no example">
+      <h4 class="ui header">Converting Form Elements</h4>
       <p>For convenience, <code>select</code> elements can automatically be converted to <code>selection dropdown</code>. A select options with blank string values will be converted to prompt text.</p>
       <div class="code" data-label="HTML" data-type="html">
         <select name="gender" class="ui dropdown" id="select">
@@ -1311,7 +1424,7 @@ themes      : ['Default']
       </select>
     </div>
     <div class="no example">
-      <h4 class="ui header">Hybrid Option</h4>
+      <h4 class="ui header">Hybrid Form Initialization</h4>
       <p>As a third option, you can include a wrapper around your <code>select</code> so that it will appear correctly on page load, but will then <b>populate the hidden menu</b> when javascript fires. In this case, the <code>select</code> element does not receive the <code>ui dropdown</code> class.</p>
       <div class="code" data-label="HTML" data-type="html">
         <div class="ui vertical menu" id="hybrid">

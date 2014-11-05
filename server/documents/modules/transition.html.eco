@@ -248,9 +248,9 @@ type        : 'UI Module'
       <div class="code" data-demo="true" data-title="Settings objects">
       $('.green.leaf')
         .transition({
-          animation : 'scale',
-          duration  : '2s',
-          complete  : function() {
+          animation  : 'scale',
+          duration   : '2s',
+          onComplete : function() {
             alert('done');
           }
         })
@@ -440,12 +440,12 @@ type        : 'UI Module'
           <td>Callback on each transition that changes visibility to hidden</td>
         </tr>
         <tr>
-          <td>start</td>
+          <td>onStart</td>
           <td>transitioned element</td>
           <td>Callback on animation start, useful for queued animations</td>
         </tr>
         <tr>
-          <td>complete</td>
+          <td>onComplete</td>
           <td>transitioned element</td>
           <td>Callback on each transition complete</td>
         </tr>

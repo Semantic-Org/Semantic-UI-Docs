@@ -11,13 +11,23 @@ type   : 'Library'
 <script>
 $(document).ready(function() {
 
-$.fn.modal.debug = true;
-$('#modalOne').modal('show');
+  // allow both sidebars to be open at same time
+  $('.test.sidebar').sidebar({
+      transition: 'push'
+  });
+/*  $('.left.test.sidebar').sidebar({
+      transition: 'overlay'
+  });*/
 
-window.openTest = function() {
-     $('#modalTwo').modal('show');
-}
-
+  $('#L').click(function() {
+    $('.test.sidebar.left').sidebar('toggle');
+  });
+  $('#R').click(function() {
+    $('.test.sidebar.right').sidebar('toggle');
+  });
+  $('#BOTH').click(function() {
+    $('.test.sidebar').sidebar('toggle');
+  });
 });
 </script>
 
@@ -27,19 +37,16 @@ window.openTest = function() {
 
 <div class="main container">
 
-<div class="ui form segment loading">
-      <div class="field">
-        <label>Username</label>
-        <div class="ui corner labeled left icon input">
-          <input type="text" placeholder="Username">
-          <i class="user icon"></i>
-          <div class="ui corner label">
-            <i class="icon asterisk"></i>
-          </div>
-        </div>
-      </div>
- </div>
+  <div id="L" class="ui button float left">L</div>
+  <div id="R" class="ui button float right">R</div>
+  <div id="BOTH" class="ui button float right">L&R</div>
 
 </div>
 
-</body>
+<div class="ui test sidebar left">
+   LEFT
+</div>
+
+<div class="ui test sidebar right">
+    RIGHT
+</div>

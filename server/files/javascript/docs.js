@@ -326,6 +326,14 @@ semantic.ready = function() {
         .html($sticky)
         .prependTo($container)
       ;
+      $sticky
+        .transition('fade', function() {
+          $sticky.sticky({
+            context: $container,
+            offset: 50
+          });
+        })
+      ;
       $followMenu
         .accordion({
           exclusive: false,
@@ -335,14 +343,6 @@ semantic.ready = function() {
         })
         .find('.menu a[href], .title[href]')
           .on('click', handler.scrollTo)
-      ;
-      $sticky
-        .transition('fade', function() {
-          $sticky.sticky({
-            context: $container,
-            offset: 50
-          });
-        })
       ;
     },
 
@@ -915,14 +915,6 @@ semantic.ready = function() {
     });
   }
 
-
-  $sticky
-    .sticky({
-      context : '.main.container',
-      pushing : true
-    })
-  ;
-
   window.hljs.configure({
     languages: [
       'xml',
@@ -930,7 +922,6 @@ semantic.ready = function() {
       'javascript'
     ]
   });
-
   $menu
     .sidebar({
       transition       : 'uncover',

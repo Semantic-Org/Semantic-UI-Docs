@@ -29,7 +29,6 @@ semantic.sidebar.ready = function() {
         var
           transition = $(this).data('transition')
         ;
-        console.log($('.left.demo.sidebar'));
         $('.left.demo.sidebar')
           .not('.styled')
           .sidebar('setting', {
@@ -54,7 +53,6 @@ semantic.sidebar.ready = function() {
           direction  = $('.direction.example .buttons .button.active').data('direction'),
           dimPage    = $('.direction.example .dim').checkbox('is checked')
         ;
-        console.log($('.' + direction + '.demo.sidebar'));
         $('.' + direction + '.demo.sidebar')
           .not('.styled')
           .sidebar('setting', {

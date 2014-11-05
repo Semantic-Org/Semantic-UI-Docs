@@ -174,7 +174,7 @@
   <script type="text/javascript" src="http://cdn.transifex.com/live.js"></script>
   <% end %>
 </head>
-<body id="example" class="pushable <%= @document.css %>" ontouchstart="">
+<body id="example" class="<%= @document.css %>" ontouchstart="">
 
   <div class="ui vertical inverted sidebar menu" id="menu">
     <div class="item">

@@ -6,6 +6,13 @@
   background-color: #FFFFFF;
 }
 
+@media only screen and (max-width: 992px) {
+  html {
+    overflow-x: visible;
+    -webkit-overflow-scrolling: auto;
+  }
+}
+
 
 /*--------------
     Masthead
@@ -243,12 +250,12 @@
 #example.index .fixed.light.following.bar {
   background-color: #FFFFFF;
   border-bottom: 1px solid #DDDDDD;
-  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.04);
 }
 #example.index .fixed.dark.following.bar {
-  background-color: #1B1C1D;
-  border-bottom: 1px solid transparent;
-  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.08);
+  background-color: #EDF1F2;
+  border-bottom: 1px solid #DDDDDD;
+  box-shadow: none;
 }
 #example.index .animated.following.bar:after {
   opacity: 0.06;
@@ -629,6 +636,9 @@
 }
 #example.index .following.bar .additional.item {
   display: none;
+}
+#example.index .following.bar .additional.item[data-site="learn"]:hover {
+  color: #D9499A;
 }
 #example.index .following.bar span.additional.item {
   cursor: default;

@@ -140,16 +140,12 @@ semantic.home.ready = function() {
         onTopPassed: function() {
           $('.following.bar')
             .addClass('animated dark')
-            .find('.menu')
-              .addClass('inverted')
           ;
         },
         onTopPassedReverse: function() {
           $('.following.bar')
             .removeClass('animated dark')
             .addClass('light')
-            .find('.menu')
-              .removeClass('inverted')
           ;
         }
       })

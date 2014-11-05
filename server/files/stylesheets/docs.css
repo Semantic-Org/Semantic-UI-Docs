@@ -359,7 +359,7 @@ a:hover {
 ---------------*/
 
 body#example {
-  /* background: #2C2C2C url(../images/icons.png) !important; */
+  background: #2C2C2C url(../images/icons.png) !important;
 }
 body#example.pushed,
 body#example.hide {
@@ -1434,15 +1434,6 @@ body.progress.animated .ui.progress .bar {
       Definition Container
 *******************************/
 
-#example > .pusher {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}
-
-#example > .pusher > .full.height {
-  flex: 1;
-}
 #example > .pusher > .footer {
   clear: both;
 }
@@ -1761,5 +1752,14 @@ body.progress.animated .ui.progress .bar {
   #example .fixed.column,
   #example .fixed.column .fixed {
     width: 250px;
+  }
+  #example > .pusher {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  #example > .pusher > .full.height {
+    flex: 1;
   }
 }

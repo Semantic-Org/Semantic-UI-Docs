@@ -611,6 +611,10 @@
   padding-top: 0;
 }
 
+/*--------------
+    Following
+---------------*/
+
 #example.index .following.bar {
   position: absolute;
   top: 0px;

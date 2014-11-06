@@ -40,9 +40,15 @@ themes      : ['Default']
   <div class="example">
     <h4 class="ui header">Loading</h4>
     <p>An icon input field can show that it is currently loading data</p>
+    <div class="ui ignored message">Loading inputs automatically modify the input's icon on loading state to show loading indication</div>
+    <div class="ui left icon input loading">
+      <input type="text" placeholder="Search...">
+      <i class="search icon"></i>
+    </div>
+    <div class="ui divider"></div>
     <div class="ui icon input loading">
       <input type="text" placeholder="Search...">
-      <i class="icon"></i>
+      <i class="search icon"></i>
     </div>
   </div>
 
@@ -163,6 +169,25 @@ themes      : ['Default']
       <input type="text" placeholder="Search...">
     </div>
   </div>
+
+  <div class="example">
+    <h4 class="ui header">Inverted</h4>
+    <p>An input can be formatted to appear on dark backgrounds</p>
+    <div class="ui inverted segment">
+      <div class="ui inverted input">
+        <input type="text" placeholder="Search...">
+      </div>
+      <div class="ui inverted icon input">
+        <i class="search icon"></i>
+        <input type="text" placeholder="Search...">
+      </div>
+      <div class="ui inverted left icon input">
+        <i class="search icon"></i>
+        <input type="text" placeholder="Search...">
+      </div>
+    </div>
+  </div>
+
 
   <div class="example">
     <h4 class="ui header">Fluid</h4>

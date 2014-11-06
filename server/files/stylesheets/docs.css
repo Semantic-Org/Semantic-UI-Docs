@@ -1429,6 +1429,10 @@ body.progress.animated .ui.progress .bar {
   color: #aaa;
 }
 
+#example > .pusher > .full.height {
+  background-color: #F7F7F7;
+}
+
 
 /*******************************
       Definition Container
@@ -1533,7 +1537,7 @@ body.progress.animated .ui.progress .bar {
     width: 100%;
     height: auto;
   }
-  #example > .pusher > .page > .full.height {
+  #example > .pusher > .full.height {
     display: block;
     height: auto;
   }

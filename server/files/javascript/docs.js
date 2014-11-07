@@ -731,7 +731,12 @@ semantic.ready = function() {
       }
     },
 
-
+    showCodePopup: function() {
+      $(this).find('i.code').popup('show');
+    },
+    hideCodePopup: function() {
+      $(this).find('i.code').popup('hide');
+    },
     initializeCode: function() {
       var
         $code        = $(this).show(),
@@ -936,7 +941,16 @@ semantic.ready = function() {
       $.proxy(handler.generateCode, this)();
     })
     .find('i.code')
+      .popup({
+        position: 'top right',
+        offset: 5,
+        content: 'View Source'
+      })
       .on('click', handler.createCode)
+      .end()
+    .eq(0)
+      .on('mouseenter', handler.showCodePopup)
+      .on('mouseleave', handler.hideCodePopup)
   ;
 
   $shownExample

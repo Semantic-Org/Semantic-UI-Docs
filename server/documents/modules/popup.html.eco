@@ -589,6 +589,11 @@ themes      : ['Default']
           <td>Duration of animation events</td>
         </tr>
         <tr>
+          <td>hideOnScroll</td>
+          <td>true</td>
+          <td>Whether popup should hide on scroll and touchmove</td>
+        </tr>
+        <tr>
           <td>closable</td>
           <td>true</td>
           <td>When using <code>on: 'click'</code> specifies whether clicking the page should close the popup</td>

@@ -55,7 +55,7 @@ semantic.ready = function() {
     $languageDropdown    = $('.language.dropdown'),
     $languageModal       = $('.language.modal'),
 
-    $downloadDropdown    = $('.download.buttons .dropdown'),
+    $downloadDropdown    = $('.download.button'),
 
     $helpPopup           = $('.header .help.icon'),
 
@@ -942,8 +942,8 @@ semantic.ready = function() {
     })
     .find('i.code')
       .popup({
-        position: 'top right',
-        offset: 5,
+        position: 'top center',
+        offset: -3,
         content: 'View Source'
       })
       .on('click', handler.createCode)
@@ -958,9 +958,9 @@ semantic.ready = function() {
   ;
 
   $downloadDropdown
-    .dropdown({
-      on         : 'click',
-      transition : 'scale'
+    .popup({
+      position: 'bottom left',
+      on: 'click'
     })
   ;
 

@@ -224,6 +224,19 @@ a:hover {
   border-bottom-color: #FFFFFF;
 }
 
+#example .header.segment .download.popup .grid {
+  max-width: 0px;
+}
+#example .header.segment .download.popup .grid .column {
+  width: 175px;
+}
+#example .header.segment .download.popup .framework,
+#example .header.segment .download.popup .standalone,
+#example .header.segment .download.popup .integration,
+#example .header.segment .download.popup .thanks {
+  display: none;
+}
+
 #example.legacy .main.menu,
 #example.legacy .launch.button {
   left: auto !important;

@@ -43,8 +43,79 @@
       </div>
       <% end %>
       <% if @document.type is 'UI Element' or @document.type is 'UI View' or @document.type is 'UI Collection' or @document.type is 'UI Module': %>
-      <div class="ui disabled secondary button">
+      <div class="ui secondary download button">
         Download
+      </div>
+      <div class="ui flowing download popup">
+        <div class="ui divided equal height relaxed center aligned first grid">
+          <div class="column">
+            <h4 class="ui header">Framework</h4>
+            <div class="ui bulleted list">
+              <div class="item">Themable</div>
+              <div class="item">Build Tools</div>
+            </div>
+            <div class="ui primary fluid button">Choose</div>
+          </div>
+          <div class="column">
+            <h4 class="ui header">Standalone</h4>
+            <div class="ui bulleted list">
+              <div class="item">Standard Theme Only</div>
+              <div class="item">Precompiled</div>
+            </div>
+            <div class="ui fluid button basic">Choose</div>
+          </div>
+        </div>
+        <div class="ui divided equal height relaxed center aligned framework grid">
+          <div class="column">
+            <h4 class="ui header">ZIP</h4>
+            <div class="ui bulleted list">
+              <div class="item">Simple</div>
+            </div>
+            <div class="ui fluid button">Download</div>
+          </div>
+          <div class="column">
+            <h4 class="ui header">NPM / Bower</h4>
+            <div class="ui bulleted list">
+              <div class="item">Updatable</div>
+            </div>
+            <div class="ui fluid button">Download</div>
+          </div>
+          <div class="column">
+            <h4 class="ui header">NPM / Bower</h4>
+            <div class="ui bulleted list">
+              <div class="item">Standard Theme</div>
+              <div class="item">Upgradable</div>
+            </div>
+            <div class="ui fluid basic button">Install</div>
+          </div>
+        </div>
+        <div class="ui divided equal height relaxed center aligned standalone grid">
+          <div class="column">
+            <h4 class="ui header">Framework</h4>
+            <div class="ui bulleted list">
+              <div class="item">Themable</div>
+              <div class="item">Build Tools</div>
+            </div>
+            <div class="ui primary fluid button">Download</div>
+          </div>
+          <div class="column">
+            <h4 class="ui header">Standalone</h4>
+            <div class="ui bulleted list">
+              <div class="item">Standard Theme Only</div>
+              <div class="item">Precompiled</div>
+            </div>
+            <p>Standard Theme<br>Compiled<br></p>
+            <div class="ui fluid button basic">Download</div>
+          </div>
+          <div class="column">
+            <h4 class="ui header">NPM / Bower</h4>
+            <div class="ui bulleted list">
+              <div class="item">Standard Theme</div>
+              <div class="item">Upgradable</div>
+            </div>
+            <div class="ui fluid basic button">Install</div>
+          </div>
+        </div>
       </div>
       <% end %>
     </div>

@@ -957,13 +957,13 @@ semantic.ready = function() {
     .each(handler.createCode)
   ;
 
-  $downloadDropdown
+/*  $downloadDropdown
     .popup({
       position: 'bottom left',
       on: 'click'
     })
   ;
-
+*/
   $themeDropdown
     .dropdown({
       action: 'select',

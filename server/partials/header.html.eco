@@ -43,7 +43,7 @@
       </div>
       <% end %>
       <% if @document.type is 'UI Element' or @document.type is 'UI View' or @document.type is 'UI Collection' or @document.type is 'UI Module': %>
-      <div class="ui secondary download button">
+      <div class="ui disabled download button">
         Download
       </div>
       <div class="ui flowing download popup">

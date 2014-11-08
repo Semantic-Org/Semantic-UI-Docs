@@ -23,8 +23,20 @@ status      : 'Undocumented'
     <h2 class="ui dividing header">Types</h2>
 
     <div class="example">
+      <h4 class="ui header">Category</h4>
+      <p>A search can display results ordered by categories</p>
       <div class="ui search">
-        <input class="prompt" type="text" placeholder="search">
+        <input class="prompt" type="text" placeholder="Search">
+        <div class="results"></div>
+      </div>
+    </div>
+
+    <div class="another example">
+      <div class="ui search">
+        <div class="ui icon input">
+          <input class="prompt" type="text" placeholder="Search">
+          <i class="search icon"></i>
+        </div>
         <div class="results"></div>
       </div>
     </div>

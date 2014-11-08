@@ -1028,9 +1028,9 @@ semantic.ready = function() {
     })
   ;
 
-  $.fn.api.base = '//api.semantic-ui.com';
+  $.fn.api.settings.base = '//api.semantic-ui.com';
   $.fn.api.settings.api = {
-    search: '/search/{value}'
+    search: '/search/{query}'
   };
 
   if(window.Transifex !== undefined) {

@@ -11,7 +11,12 @@ semantic.search.ready = function() {
   ;
 
   $search
-    .search()
+    .search({
+      type: 'category',
+      apiSettings: {
+        action: 'search'
+      }
+    })
   ;
 
 };

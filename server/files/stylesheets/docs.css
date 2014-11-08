@@ -196,7 +196,7 @@ a:hover {
   position: relative;
   z-index: 2;
   margin: 0em;
-  min-height: 205px;
+  min-height: 185px;
   padding-top: 70px;
   padding-bottom: 30px;
   background-color: #FFFFFF;
@@ -1565,15 +1565,17 @@ body.progress.animated .ui.progress .bar {
   #example .introduction {
     display: block;
   }
+  #example .container {
+    right: 110px;
+  }
+}
+@media only screen and (min-width: 1200px) {
   #example .advertisement {
     left: 100%;
     padding-left: 0em;
     position: absolute;
-    top: 0em;
+    top: -1em;
     vertical-align: top;
-  }
-  #example .container {
-    right: 110px;
   }
 }
 @media only screen and (min-width : 998px) and (max-width: 1200px) {

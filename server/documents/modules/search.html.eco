@@ -8,7 +8,7 @@ title       : 'Search'
 description : 'A search module allows a user to query for results from a selection of data'
 type        : 'UI Module'
 
-status      : 'Undocumented'
+status      : 'Incomplete'
 ---
 
 <link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/search.less" />
@@ -82,7 +82,7 @@ status      : 'Undocumented'
           }
           </div>
           </td>
-          <td>Settings for <a href="/behaviors/api.html">API</a> call.</td>
+          <td>Settings for <a href="/modules/api.html#/usage">API</a> call.</td>
         </tr>
         <tr>
           <td>minCharacters</td>

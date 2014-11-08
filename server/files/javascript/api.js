@@ -2,12 +2,12 @@
 $.fn.api.settings.debug = true;
 
 /* Define API endpoints once globally */
-$.fn.api.settings.api = {
+$.extend($.fn.api.settings.api, {
   'get followers' : '/followers/{id}?results={count}',
   'create user'   : '/create',
   'follow user'   : '/follow/{id}',
   'search'        : '/search/?query={value}'
-};
+});
 
 semantic.api = {};
 // ready event

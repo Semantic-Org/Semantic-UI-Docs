@@ -897,6 +897,12 @@ semantic.ready = function() {
             ? $(this).find('.examples')
             : $(this)
           ;
+          $(this).find('.sticky')
+            .sticky({
+              context: $container,
+              offset: 0
+            })
+          ;
           $sectionHeaders = $container.children('h2');
           $sectionExample = $container.find('.example');
           $exampleHeaders = $sectionExample.children('h4');
@@ -1029,9 +1035,9 @@ semantic.ready = function() {
   ;
 
   $.fn.api.settings.base = '//api.semantic-ui.com';
-  $.fn.api.settings.api = {
+  $.extend($.fn.api.settings.api, {
     search: '/search/{query}'
-  };
+  });
 
   if(window.Transifex !== undefined) {
     window.Transifex.live.onTranslatePage(handler.showLanguageModal);

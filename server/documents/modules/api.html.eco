@@ -399,7 +399,7 @@ type        : 'UI Behavior'
               serializeForm: true,
               beforeSend: function(settings) {
                 // form data is editable in before send
-                if(username == '') {
+                if(settings.data.username == '') {
                   settings.data.username = 'New User';
                 }
                 // open console to inspect object

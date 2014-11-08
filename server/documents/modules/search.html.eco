@@ -32,6 +32,9 @@ status      : 'Incomplete'
     </div>
 
     <div class="another example">
+      <div class="ui ignored info message">
+        Using a <a href="/elements/input.html">ui input</a> allows you to use additional input types, like this icon input
+      </div>
       <div class="ui search">
         <div class="ui icon input">
           <input class="prompt" type="text" placeholder="Search">
@@ -51,6 +54,99 @@ status      : 'Incomplete'
   <div class="ui tab" data-tab="usage">
 
     <h2 class="ui dividing header">Initializing</h2>
+
+    <div class="ui message">
+      Search is built ontop of Semantic <a href="/modules/api.html">API</a> behaviors to allow for simple URL templating, and UI state management. Please check out the API documentation for more information on adjusting API settings.
+    </div>
+
+    <h4 class="ui header">Auto</h4>
+    <div class="code" data-label="javascript">
+      // initializes with default endpoint /search/{query}
+      $('.ui.search')
+        .search({
+          type: 'category'
+        })
+      ;
+    </div>
+
+    <h4 class="ui header">Named Endpoint</h4>
+    <div class="code" data-label="javascript">
+      $.api('add endpoint', 'search', '/search/{query');
+
+      // initializes with default endpoint /search/{query}
+      $('.ui.search')
+        .search({
+          type: 'category'
+        })
+      ;
+    </div>
+    <h3 class="ui header">Server Responses</h3>
+
+    <h4 class="ui header">Simple</h4>
+
+    <div class="code" data-title="Server JSON Response - Simple">
+      {
+        "results": [
+          {
+            "title": "Result Title",
+            "url": "/optional/url/on/click",
+            "image": "optional-image.jpg",
+            "price": "Optional Price"
+            "description": "Optional Description"
+          },
+          {
+            "title": "Result Title",
+            "description": "Result Description"
+          }
+        ]
+      }
+    </div>
+
+
+    <h4 class="ui header">Category</h4>
+
+    <div class="code" data-title="Server JSON Response - Category">
+      {
+        "results": {
+          "category1": {
+            "name": "Category 1",
+            "results": [
+              {
+                "title": "Result Title",
+                "url": "/optional/url/on/click",
+                "image": "optional-image.jpg",
+                "price": "Optional Price"
+                "description": "Optional Description"
+              },
+              {
+                "title": "Result Title",
+                "url": "/optional/url/on/click",
+                "image": "optional-image.jpg",
+                "price": "Optional Price"
+                "description": "Optional Description"
+              }
+            ]
+          },
+          "category2": {
+            "name": "Category 2",
+            "results": [
+              {
+                "title": "Result Title",
+                "url": "/optional/url/on/click",
+                "image": "optional-image.jpg",
+                "price": "Optional Price"
+                "description": "Optional Description"
+              }
+            ]
+          }
+        }
+        // optional action below results
+        "action": {
+          "url": '/path/to/results'
+          "text": "View all 202 results"
+        }
+      }
+    </div>
 
     <h2 class="ui dividing header">Behaviors</h2>
 

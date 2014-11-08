@@ -1,0 +1,21 @@
+/*******************************
+             Sidebar
+*******************************/
+
+@sidebarWidth: 260px;
+@sidebarHeight: 50px;
+
+@dimmerColor: rgba(0, 0, 0, 0.4);
+
+@canvasBackground: @lightBlack;
+@perspective: 1500px;
+
+@duration: 500ms;
+@easing: ease;
+
+@bottomLayer: 1;
+@middleLayer: 2;
+@fixedLayer: 101;
+@topLayer: 102;
+
+@dimmerLayer: 1000;

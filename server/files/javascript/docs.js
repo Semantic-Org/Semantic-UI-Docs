@@ -1028,6 +1028,11 @@ semantic.ready = function() {
     })
   ;
 
+  $.fn.api.base = '//api.semantic-ui.com';
+  $.fn.api.settings.api = {
+    search: '/search/{value}'
+  };
+
   if(window.Transifex !== undefined) {
     window.Transifex.live.onTranslatePage(handler.showLanguageModal);
   }

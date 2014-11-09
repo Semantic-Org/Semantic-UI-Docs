@@ -22,16 +22,57 @@ status      : 'Incomplete'
 
     <h2 class="ui dividing header">Types</h2>
 
-    <div class="example">
+    <div class="local example">
+      <h4 class="ui header">Local Search</h4>
+      <p>A search can look for results inside static local content.</p>
+      <div class="ui info message">
+        By default, results will return content first that begin with the query text, but also afterward content that matches the query anywhere inside. To disable full text search modify the <code>searchFullText</code> setting.
+      </div>
+      <div class="ui search">
+        <input class="prompt" type="text" placeholder="Search">
+        <div class="results"></div>
+      </div>
+      <div class="code" data-type="javascript">
+        $('.ui.search')
+          .search({
+            source: content
+          })
+        ;
+      </div>
+      <div class="code" data-type="javascript">
+      var content = [
+        { title: 'Andorrs' },
+        { title: 'United Arab Emirates' },
+        { title: 'Afghanistas' },
+        { title: 'Antigus' },
+        { title: 'Anguills' },
+        { title: 'Albanis' },
+        { title: 'Armenis' },
+        { title: 'Netherlands Antilles' },
+        { title: 'Angols' },
+        { title: 'Argentins' },
+        { title: 'American Samos' },
+        { title: 'Austris' },
+        { title: 'Australis' },
+        { title: 'Arubs' },
+        { title: 'Aland Islands' },
+        { title: 'Azerbaijas' },
+        { title: 'Bosnis' }
+        // etc
+      ];
+      </div>
+    </div>
+
+    <div class="category example">
       <h4 class="ui header">Category</h4>
-      <p>A search can display results ordered by categories</p>
+      <p>A search can display results from remote content ordered by categories</p>
       <div class="ui search">
         <input class="prompt" type="text" placeholder="Search">
         <div class="results"></div>
       </div>
     </div>
 
-    <div class="another example">
+    <div class="another category example">
       <div class="ui ignored info message">
         Using a <a href="/elements/input.html">ui input</a> allows you to use additional input types, like this icon input
       </div>
@@ -43,6 +84,7 @@ status      : 'Incomplete'
         <div class="results"></div>
       </div>
     </div>
+
 
   </div>
 
@@ -59,7 +101,7 @@ status      : 'Incomplete'
       Search is built ontop of Semantic <a href="/modules/api.html">API</a> behaviors to allow for simple URL templating, and UI state management. Please check out the API documentation for more information on adjusting API settings.
     </div>
 
-    <h4 class="ui header">Auto</h4>
+    <h4 class="ui header">Automatic Routing</h4>
     <div class="code" data-label="javascript">
       // initializes with default endpoint /search/{query}
       $('.ui.search')
@@ -68,15 +110,40 @@ status      : 'Incomplete'
         })
       ;
     </div>
-
-    <h4 class="ui header">Named Endpoint</h4>
+    <h4 class="ui header">Named URL</h4>
     <div class="code" data-label="javascript">
-      $.api('add endpoint', 'search', '/search/{query');
 
       // initializes with default endpoint /search/{query}
       $('.ui.search')
         .search({
+          url: 'custom-search/?q={query}'
           type: 'category'
+        })
+      ;
+    </div>
+    </div>
+    <h4 class="ui header">Local Object</h4>
+    <div class="ui info message">
+      You can set which fields are searchable using the <code>searchFields</code> setting. Local object search can only display standard search results (not categories).
+    </div>
+    <div class="code" data-label="javascript">
+      // searches across any array/object of searchable objects
+      var
+        content = [
+          {
+            title: 'Horse',
+            description: 'An Animal',
+          },
+          {
+            title: 'Cow',
+            description: 'Another Animal',
+          }
+        ]
+      ;
+      $('.ui.search')
+        .search({
+          source : content,
+          type   : 'simple'
         })
       ;
     </div>
@@ -98,7 +165,12 @@ status      : 'Incomplete'
             "title": "Result Title",
             "description": "Result Description"
           }
-        ]
+        ],
+        // optional action below results
+        "action": {
+          "url": '/path/to/results'
+          "text": "View all 202 results"
+        }
       }
     </div>
 
@@ -219,7 +291,12 @@ status      : 'Incomplete'
         <tr>
           <td>source</td>
           <td>false</td>
-          <td>Specify a javascript object which will be searched</td>
+          <td>Specify a javascript object which will be searched locally</td>
+        </tr>
+        <tr>
+          <td>searchFullText</td>
+          <td>true</td>
+          <td>Return local results that match anywhere inside your content</td>
         </tr>
         <tr>
           <td>searchFields</td>

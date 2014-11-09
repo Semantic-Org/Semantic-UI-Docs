@@ -49,7 +49,10 @@ status      : 'Incomplete'
       <h4 class="ui header">Category</h4>
       <p>A search can display results from remote content ordered by categories</p>
       <div class="ui category search">
-        <input class="prompt" type="text" placeholder="Search animals...">
+        <div class="ui icon input">
+          <input class="prompt" type="text" placeholder="Search animals...">
+          <i class="search icon"></i>
+        </div>
         <div class="results"></div>
       </div>
     </div>
@@ -62,7 +65,10 @@ status      : 'Incomplete'
         By default, results will return content first that begin with the query text, but also afterward content that matches the query anywhere inside. To disable full text search modify the <code>searchFullText</code> setting.
       </div>
       <div class="ui search">
-        <input class="prompt" type="text" placeholder="Search">
+        <div class="ui icon input">
+          <input class="prompt" type="text" placeholder="Search countries...">
+          <i class="search icon"></i>
+        </div>
         <div class="results"></div>
       </div>
       <div class="code" data-type="javascript">
@@ -115,7 +121,10 @@ status      : 'Incomplete'
       <h4 class="ui header">Fluid</h4>
       <p>A search can have its results take up the width of its container</p>
       <div class="ui fluid category search">
-        <input class="prompt" type="text" placeholder="Search animals...">
+        <div class="ui icon input">
+          <input class="prompt" type="text" placeholder="Search animals...">
+          <i class="search icon"></i>
+        </div>
         <div class="results"></div>
       </div>
     </div>
@@ -124,7 +133,10 @@ status      : 'Incomplete'
       <h4 class="ui header">Aligned</h4>
       <p>A search can have its results aligned to its left or right container edge</p>
       <div class="ui right aligned category search">
-        <input class="prompt" type="text" placeholder="Search animals...">
+        <div class="ui icon input">
+          <input class="prompt" type="text" placeholder="Search animals...">
+          <i class="search icon"></i>
+        </div>
         <div class="results"></div>
       </div>
     </div>
@@ -284,7 +296,7 @@ status      : 'Incomplete'
     <table class="ui sortable celled definition table">
       <thead>
         <th class="three wide"></th>
-        <th class="three wide">Default</th>
+        <th class="five wide">Default</th>
         <th>Description</th>
       </thead>
       <tbody>

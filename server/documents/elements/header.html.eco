@@ -26,8 +26,8 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby']
     <p class="header">Headers may be oriented to give the heirarchy of a section in the context of the page</p>
     <div class="ignored info ui message">Page headings use standard <code>h1-h6</code> tags, and size themselves relative to the base font of the entire page.</div>
     <div class="ui ignored two fluid font buttons">
-      <a class="increase ui button"> <i class="plus icon"></i> Font</a>
-      <a class="decrease ui button"> <i class="minus icon"></i> Font</a>
+      <a class="increase ui button"> <i class="plus icon"></i> Base Font</a>
+      <a class="decrease ui button"> <i class="minus icon"></i> Base Font</a>
     </div>
     <div class="sizer">
       <h1 class="ui header">First header</h1>

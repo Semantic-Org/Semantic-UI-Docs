@@ -1036,6 +1036,7 @@ semantic.ready = function() {
 
   $.fn.api.settings.base = '//api.semantic-ui.com';
   $.extend($.fn.api.settings.api, {
+    categorySearch: '/search/category/{query}',
     search: '/search/{query}'
   });
 

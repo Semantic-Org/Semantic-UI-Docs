@@ -5,7 +5,8 @@ semantic.search.ready = function() {
 
   // selector cache
   var
-    $local   = $('.local .ui.search'),
+    $local    = $('.local .ui.search'),
+    $standard = $('.standard .ui.search'),
     $category = $('.category .ui.search'),
     content,
     // alias
@@ -263,11 +264,18 @@ semantic.search.ready = function() {
     })
   ;
 
+  $standard
+    .search({
+      apiSettings: {
+        action: 'search'
+      }
+    })
+  ;
   $category
     .search({
       type: 'category',
       apiSettings: {
-        action: 'search'
+        action: 'categorySearch'
       }
     })
   ;

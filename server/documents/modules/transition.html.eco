@@ -396,6 +396,11 @@ type        : 'UI Module'
           <td>Named animation event to used. Must be defined in css.</td>
         </tr>
         <tr>
+          <td>displayType</td>
+          <td>false</td>
+          <td>Specify the final display type (block, inline-block etc) so that it doesn't have to be calculated.</td>
+        </tr>
+        <tr>
           <td>duration</td>
           <td>700ms</td>
           <td>Duration of the css transition animation</td>

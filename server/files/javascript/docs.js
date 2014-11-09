@@ -938,7 +938,12 @@ semantic.ready = function() {
       transition       : 'uncover',
       mobileTransition : 'uncover'
     })
-    .sidebar('attach events', '.launch.button, .view-ui, .launch.item')
+  ;
+  $('.launch.button, .view-ui, .launch.item')
+    .on('touchstart click', function(event) {
+      $menu.sidebar('show');
+      event.preventDefault();
+    })
   ;
 
   handler.createIcon();

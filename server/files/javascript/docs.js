@@ -1034,10 +1034,10 @@ semantic.ready = function() {
     })
   ;
 
-  $.fn.api.settings.base = '//api.semantic-ui.com';
+  //$.fn.api.settings.base = '//api.semantic-ui.com';
   $.extend($.fn.api.settings.api, {
-    categorySearch: '/search/category/{query}',
-    search: '/search/{query}'
+    categorySearch: '//api.semantic-ui.com/search/category/{query}',
+    search: '//api.semantic-ui.com/search/{query}'
   });
 
   if(window.Transifex !== undefined) {

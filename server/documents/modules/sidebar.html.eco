@@ -159,8 +159,8 @@ themes      : ['Default']
       <h4 class="ui header">Direction</h4>
       <p>A sidebar can appear on different sides of the page</p>
 
-      <div class="ui toggle checkbox">
-        <input type="checkbox" name="dim" class="dim" />
+      <div class="ui toggle dim checkbox">
+        <input type="checkbox" name="dim" />
         <label>Dim Page</label>
       </div>
 

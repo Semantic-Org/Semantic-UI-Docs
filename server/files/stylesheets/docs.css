@@ -258,11 +258,6 @@ a:hover {
   margin-bottom: 3rem;
 }
 
-#example .main.menu {
-  top: 0px;
-  left: -1px;
-  width: calc(100% + 1px);
-}
 #example .main.menu iframe.github {
   margin: 1px 0px 0px 0px;
 }

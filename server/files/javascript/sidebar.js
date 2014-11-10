@@ -15,6 +15,10 @@ semantic.sidebar.ready = function() {
     })
   ;
 
+  $('.help.icon')
+    .popup()
+  ;
+
   $('.demo.sidebar')
     .sidebar()
   ;

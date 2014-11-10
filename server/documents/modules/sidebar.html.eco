@@ -23,20 +23,116 @@ themes      : ['Default']
 
     <h2 class="ui dividing header">Types</h2>
 
+    <div class="no example">
+      <h4 class="ui header">Sidebar</h4>
+      <p>A sidebar</p>
+      <div class="ui ignored info message">
+        <p>Sidebars do not have any inherent formatting, and can be used to display any off-canvas content of your choosing. Sidebar have a loose coupling with <a href="/collections/menu.html">ui menu</a> which can provide additional structure for content.</p>
+      </div>
+      <div class="code" data-type="html" data-title="Example HTML">
+        <div class="ui left vertical inverted labeled icon sidebar menu">
+          <a class="item">
+            <i class="home icon"></i>
+            Home
+          </a>
+          <a class="item">
+            <i class="block layout icon"></i>
+            Topics
+          </a>
+          <a class="item">
+            <i class="smile icon"></i>
+            Friends
+          </a>
+          <a class="item">
+            <i class="calendar icon"></i>
+            History
+          </a>
+          <a class="item">
+            <i class="mail icon"></i>
+            Messages
+          </a>
+          <a class="item">
+            <i class="chat icon"></i>
+            Discussions
+          </a>
+          <a class="item">
+            <i class="trophy icon"></i>
+            Achievements
+          </a>
+          <a class="item">
+            <i class="shop icon"></i>
+            Store
+          </a>
+          <a class="item">
+            <i class="settings icon"></i>
+            Settings
+          </a>
+        </div>
+      </div>
+      <div class="code" data-demo="true" data-type="javascript">
+      $('.left.demo.sidebar')
+        .sidebar('toggle')
+      ;
+      </div>
+    </div>
+
+    <h2 class="ui dividing header">Variations</h2>
+
     <div class="no left example">
       <h4 class="ui header">Transitions</h4>
       <p>A sidebar can use different transitions to display itself</p>
       <div class="ui ignored message">
         <p>Browsers that do not support <code>translate3D</code>, like <b>IE < 10</b> will automatically fall back to javascript transitions, you can also force this behavior using <code>useLegacy: true</code>.</p>
       </div>
-      <div class="code" data-label="Javascript" data-type="javascript">
-        $('.ui.left.sidebar')
-          .sidebar({
-            transition: 'push'
-          })
-        ;
-      </div>
-      <h5 class="ui header">Flexible Animations</h5>
+      <table class="ui celled definition collapsing table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Multiple Visible <i class="help circle link icon" data-content="Whether multiple sidebars of this type can be visible at same time"></i></th>
+            <th>Supports Horizontal Sidebars</th>
+            <th>Supports Vertical Sidebars</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Overlay</td>
+            <td><i class="green check icon"></i></td>
+            <td><i class="green check icon"></i></td>
+            <td><i class="green check icon"></i></td>
+          </tr>
+          <tr>
+            <td>Push</td>
+            <td><i class="green check icon"></i></td>
+            <td><i class="green check icon"></i></td>
+            <td><i class="green check icon"></i></td>
+          </tr>
+          <tr>
+            <td>Scale Down</td>
+            <td><i class="green check icon"></i></td>
+            <td><i class="green check icon"></i></td>
+            <td><i class="red cancel icon"></i></td>
+          </tr>
+          <tr>
+            <td>Uncover</td>
+            <td><i class="red cancel icon"></i></td>
+            <td><i class="green check icon"></i></td>
+            <td><i class="red cancel icon"></i></td>
+          </tr>
+          <tr>
+            <td>Slide Along</td>
+            <td><i class="red cancel icon"></i></td>
+            <td><i class="green check icon"></i></td>
+            <td><i class="red cancel icon"></i></td>
+          </tr>
+          <tr>
+            <td>Slide Out</td>
+            <td><i class="red cancel icon"></i></td>
+            <td><i class="green check icon"></i></td>
+            <td><i class="red cancel icon"></i></td>
+          </tr>
+        </tbody>
+      </table>
+      <h5 class="ui header">Animations</h5>
       <div class="ui button" data-transition="overlay">
         Overlay
       </div>
@@ -47,10 +143,7 @@ themes      : ['Default']
         Scale Down
       </div>
 
-      <h5 class="ui header">Horizontal Animations</h5>
-      <div class="ui info message">
-        These animations are best used for horizontal animations, although they can work vertically when used at top and bottom scroll positions.
-      </div>
+      <h5 class="ui header">Horizontal Only Animations</h5>
       <div class="ui button" data-transition="uncover">
         Uncover
       </div>
@@ -70,7 +163,9 @@ themes      : ['Default']
         <input type="checkbox" name="dim" class="dim" />
         <label>Dim Page</label>
       </div>
-      <div class="ui divider"></div>
+
+      <div class="ui hidden divider"></div>
+
       <h5 class="ui header">Direction</h5>
       <div class="ui buttons">
         <div class="ui button" data-direction="left">
@@ -86,7 +181,9 @@ themes      : ['Default']
           Bottom
         </div>
       </div>
-      <div class="ui divider"></div>
+
+      <div class="ui hidden divider"></div>
+
       <h5 class="ui header">Animation</h5>
       <div class="ui button" data-transition="overlay">
         Overlay
@@ -94,6 +191,11 @@ themes      : ['Default']
       <div class="ui button" data-transition="push">
         Push
       </div>
+      <div class="ui button" data-transition="scale down">
+        Scale Down
+      </div>
+
+      <h5 class="ui header">Horizontal-Only Animation</h5>
       <div class="ui button" data-transition="uncover">
         Uncover
       </div>
@@ -103,80 +205,107 @@ themes      : ['Default']
       <div class="ui button" data-transition="slide out">
         Slide Out
       </div>
-      <div class="ui button" data-transition="scale down">
-        Scale Down
-      </div>
+
     </div>
 
-    <h2 class="ui dividing header">Variations</h2>
-
-    <div class="no floating example">
-      <h4 class="ui header">Floating</h4>
-      <p>A sidebar can appear floating above content</p>
+    <div class="no example">
+      <h4 class="ui header">Width</h4>
+      <p>A sidebar can specify its width</p>
+      <div class="ui message">
+        By default a sidebar will automatically adjust to any arbitrary specified size
+      </div>
       <div class="code" data-type="html">
-        <div class="ui floating sidebar">...</div>
+        <div class="ui thin sidebar"></div>
+        <div class="ui very thin sidebar"></div>
+        <div class="ui sidebar"></div>
+        <div class="ui wide sidebar"></div>
+        <div class="ui very wide sidebar"></div>
       </div>
-      <div class="ui labeled icon button">
-        <i class="left arrow icon"></i>
-        Show
-      </div>
+
     </div>
 
   </div>
 
   <div class="ui tab" data-tab="usage">
-    <h2 class="ui dividing header">Initializing</h2>
-    <p>Any content can be used as a sidebar by adding the class <code>ui sidebar</code> and initializing the menu in javascript.</p>
-    <div class="ui ignored warning icon message">
-      <i class="info letter icon"></i>
-      <div class="content">
-        <div class="header">Fixed Position</div>
-        <p>Fixed position content may have issues changing it's position when a sidebar appears. There are two solutions</p>
-        <ul class="ui list">
-          <li>Specify your fixed content without using the css left or top properties.</li>
-          <li>Apply styles on the fixed element to adjust its position when the sidebar appears. You can do this by descending from the body tag which receives the class <code>(direction) pushed</code> when the view is moved.</li>
-        </ul>
-      </div>
-    </div>
-    <div class="code" data-label="true" data-type="html">
-      <div class="ui sidebar">
-        Any content in the world
-      </div>
-    </div>
-    <div class="code" data-label="true" data-type="javascript">
-      $('.ui.sidebar')
-        .sidebar()
-      ;
-    </div>
 
-    <h2 class="ui dividing header">Usage</h2>
+    <h2 class="ui dividing header">Set-up</h2>
 
-    <div class="ui ignored info message">
-      A safe transition does not use <code>translate3D</code>, this means it will not modify <code>position: fixed</code> inside your document, and you can use fixed elements inside your <code>.pusher .page</code>
+    <div class="no example">
+      <h4 class="ui header">Page Structure</h4>
+      <p>Using a sidebar requires a specific page structure. For optimal performance your page should be already set-up with this structure before initializing a sidebar.</p>
+      <div class="ui info message">
+        Sidebar will automatically add the correct layout on first load if it is not set-up, but this will adjust the DOM on page load, but this will reduce performance and is not recommended.
+      </div>
+      <div class="code" data-type="html">
+        <!--body tag-->
+          <div class="ui sidebar">
+            ...
+          </div>
+          <div class="pusher">
+            Your site's actual content
+          </div>
+        <!--/body-->
+      </div>
     </div>
 
     <div class="no example">
-      <h4 class="ui header">Showing a sidebar</h4>
-      <p>A sidebar can be shown, hidden, or toggled. In the following examples sidebar is used in conjunction with <a href="/collections/menu.html">ui menu</a> to display a vertical menu as a sidebar.</p>
-      <div class="code" data-type="html" data-title="Example HTML">
-        <div class="ui left demo sidebar vertical inverted menu">
-          <a class="header item">Categories</a>
-          <a class="item">World</a>
-          <a class="item">U.S.</a>
-          <a class="item">Business</a>
-          <a class="item">Opinion</a>
-          <a class="item">Technology</a>
-          <a class="item">Health</a>
-          <a class="item">Sports</a>
-        </div>
+      <h4 class="ui header">Using Fixed Content</h4>
+      <p>Any fixed position content that should move with page content when your sidebar is visible, should receive the class name <code>fixed</code> and exist as a sibling element to your sidebar. Fixed content that is included outside of your <code>pusher</code> <b>will not lose its positioning</b> when a sidebar is shown.</p>
+      <div class="code" data-type="html">
+        <!--body-->
+          <div class="ui sidebar">
+            ...
+          </div>
+          <div class="ui top fixed menu">
+            ...
+          </div>
+          <div class="pusher">
+            Your site's actual content
+          </div>
+        <!--/body-->
       </div>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">Displaying Multiple</h4>
+      <p>Multiple sidebars can be displayed at the same time only when using a supported animation like <code>push</code> or <code>overlay</code>.</p>
+      <p>You may need to manually set the z-index on elements to ensure the intended sidebar element appears on top.</p>
+
       <div class="code" data-demo="true" data-type="javascript">
+      // shows all four sidebars at once
       $('.demo.sidebar')
         .sidebar('toggle')
       ;
       </div>
     </div>
 
+    <div class="no example">
+      <h4 class="ui header">Tablet/Mobile Sidebars</h4>
+      <p>Sidebars use a special fix for mobile and tablet views to make sure touch scrolling works correctly.</p>
+      <div class="code" data-type="css">
+      @media only screen and (max-width: @computerBreakpoint) {
+        html {
+          overflow-x: hidden;
+          -webkit-overflow-scrolling: touch;
+        }
+      }
+      </div>
+      <p>Adding an overflow to <code>html</code> is necessary to make sure elements translated off-screen with 3d transformations do not cause mobile browsers to try to resize the page canvas (creating horizontal scrollbars or painting errors) when a sidebar is displayed. This is necessary even when setting viewport to <code>device-width</code> due to bugs in mobile rendering.
+      </p>
+      <div class="code" data-type="html">
+        <!--body-->
+          <div class="ui sidebar">
+            ...
+          </div>
+          <div class="ui top fixed menu">
+            ...
+          </div>
+          <div class="pusher">
+            Your site's actual content
+          </div>
+        <!--/body-->
+      </div>
+    </div>
 
     <h2 class="ui dividing header">Behavior</h2>
 
@@ -250,7 +379,6 @@ themes      : ['Default']
   </div>
 
   <div class="ui tab" data-tab="examples">
-
 
     <div class="no example">
       <h4 class="ui header">Triggering show/hide with other content</h4>
@@ -457,6 +585,45 @@ themes      : ['Default']
   <a class="item">Delete Permanently</a>
 </div>
 
+<div class="ui left demo vertical inverted labeled icon sidebar menu">
+  <a class="item">
+    <i class="home icon"></i>
+    Home
+  </a>
+  <a class="item">
+    <i class="block layout icon"></i>
+    Topics
+  </a>
+  <a class="item">
+    <i class="smile icon"></i>
+    Friends
+  </a>
+  <a class="item">
+    <i class="calendar icon"></i>
+    History
+  </a>
+  <a class="item">
+    <i class="mail icon"></i>
+    Messages
+  </a>
+  <a class="item">
+    <i class="chat icon"></i>
+    Discussions
+  </a>
+  <a class="item">
+    <i class="trophy icon"></i>
+    Achievements
+  </a>
+  <a class="item">
+    <i class="shop icon"></i>
+    Store
+  </a>
+  <a class="item">
+    <i class="settings icon"></i>
+    Settings
+  </a>
+</div>
+
 <div class="ui top demo sidebar ui segment">
   <div class="ui center aligned page grid">
     <div class="one column row">
@@ -478,19 +645,41 @@ themes      : ['Default']
   </div>
 </div>
 
-
-<div class="ui bottom demo sidebar ui inverted segment">
-  <div class="ui center aligned page grid">
-    <div class="three column divided row">
-      <div class="column">
-        <img class="ui wireframe image" src="/images/wireframe/media-paragraph.png" style="opacity: 0.3;">
-      </div>
-      <div class="column">
-        <img class="ui wireframe image" src="/images/wireframe/media-paragraph.png" style="opacity: 0.3;">
-      </div>
-      <div class="column">
-        <img class="ui wireframe image" src="/images/wireframe/media-paragraph.png" style="opacity: 0.3;">
-      </div>
-    </div>
-  </div>
+<div class="ui bottom demo inverted nine item labeled icon sidebar menu">
+  <a class="item">
+    <i class="home icon"></i>
+    Home
+  </a>
+  <a class="item">
+    <i class="block layout icon"></i>
+    Topics
+  </a>
+  <a class="item">
+    <i class="smile icon"></i>
+    Friends
+  </a>
+  <a class="item">
+    <i class="calendar icon"></i>
+    History
+  </a>
+  <a class="item">
+    <i class="mail icon"></i>
+    Messages
+  </a>
+  <a class="item">
+    <i class="chat icon"></i>
+    Discussions
+  </a>
+  <a class="item">
+    <i class="trophy icon"></i>
+    Achievements
+  </a>
+  <a class="item">
+    <i class="shop icon"></i>
+    Store
+  </a>
+  <a class="item">
+    <i class="settings icon"></i>
+    Settings
+  </a>
 </div>

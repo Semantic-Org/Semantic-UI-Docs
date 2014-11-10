@@ -8,37 +8,508 @@ title       : 'Search'
 description : 'A search module allows a user to query for results from a selection of data'
 type        : 'UI Module'
 
-status      : 'Undocumented'
+status      : 'Incomplete'
 ---
 
-<%- @partial('header', { tabs: {  overview: 'Overview' } }) %>
+<link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/search.less" />
+<script src="/javascript/search.js"></script>
+
+<%- @partial('header', { tabs: 'module' }) %>
 
 <div class="main container">
 
-  <div class="ui active tab" data-tab="overview">
+  <div class="ui active tab" data-tab="definition">
 
-    <h2 class="ui dividing header">Current Progress</h2>
-    <div class="ui indicating progress">
-      <div class="bar" style="width: 90%;">
-        <div class="progress">90%</div>
+    <h2 class="ui dividing header">Types</h2>
+
+    <div class="standard example">
+      <h4 class="ui header">Standard</h4>
+      <p>A search can display a set of results</p>
+      <div class="ui search">
+        <input class="prompt" type="text" placeholder="Common passwords...">
+        <div class="results"></div>
       </div>
-      <div class="label">Needs Documentation</div>
     </div>
 
-    <h2 class="ui dividing header">Usage</h2>
-    <div class="no example">
-      <h4 class="ui header">Autocomplete Results</h4>
-      <p>Search is used to query remote endpoints, with <b>API behaviors</b> or across static, javascript objects for search results which are then presented in-place.</p>
-      <p>Semantic's search component can group displayed results by category, or as a simple list, has built in keyboard support, custom message routing, and can facilitate navigation to full text results from within the autocomplete menu.</p>
+    <div class="another standard example">
+      <div class="ui ignored info message">
+        Using a <a href="/elements/input.html">ui input</a> allows you to use additional input types, like this icon input
+      </div>
+      <div class="ui search">
+        <div class="ui icon input">
+          <input class="prompt" type="text" placeholder="Common passwords...">
+          <i class="search icon"></i>
+        </div>
+        <div class="results"></div>
+      </div>
     </div>
 
-    <h2 class="ui dividing header">Support Development</h2>
 
-      <p>You can help support the future development of the Semantic UI project, and help boost the priority of this component by donating to Semantic UI development.</p>
+    <div class="category example">
+      <h4 class="ui header">Category</h4>
+      <p>A search can display results from remote content ordered by categories</p>
+      <div class="ui category search">
+        <div class="ui icon input">
+          <input class="prompt" type="text" placeholder="Search animals...">
+          <i class="search icon"></i>
+        </div>
+        <div class="results"></div>
+      </div>
+    </div>
 
-      <p>Please be sure to leave a note in the comments to indicate that you are interested in the development of this particular component.</p>
+
+    <div class="local example">
+      <h4 class="ui header">Local Search</h4>
+      <p>A search can look for results inside static local content.</p>
+      <div class="ui info message">
+        By default, results will return content first that begin with the query text, but also afterward content that matches the query anywhere inside. To disable full text search modify the <code>searchFullText</code> setting.
+      </div>
+      <div class="ui search">
+        <div class="ui icon input">
+          <input class="prompt" type="text" placeholder="Search countries...">
+          <i class="search icon"></i>
+        </div>
+        <div class="results"></div>
+      </div>
+      <div class="code" data-type="javascript">
+        $('.ui.search')
+          .search({
+            source: content
+          })
+        ;
+      </div>
+      <div class="hidden code" data-type="javascript">
+      var content = [
+        { title: 'Andorrs' },
+        { title: 'United Arab Emirates' },
+        { title: 'Afghanistas' },
+        { title: 'Antigus' },
+        { title: 'Anguills' },
+        { title: 'Albanis' },
+        { title: 'Armenis' },
+        { title: 'Netherlands Antilles' },
+        { title: 'Angols' },
+        { title: 'Argentins' },
+        { title: 'American Samos' },
+        { title: 'Austris' },
+        { title: 'Australis' },
+        { title: 'Arubs' },
+        { title: 'Aland Islands' },
+        { title: 'Azerbaijas' },
+        { title: 'Bosnis' }
+        // etc
+      ];
+      </div>
+    </div>
+
+    <h2 class="ui dividing header">States</h2>
+    <div class="example">
+      <h4 class="ui header">Loading</h4>
+      <p>A search can show a loading indicator</p>
+      <div class="ui loading search">
+        <div class="ui icon input">
+          <input class="prompt" type="text" placeholder="Search...">
+          <i class="search icon"></i>
+        </div>
+        <div class="results"></div>
+      </div>
+    </div>
+
+    <h2 class="ui dividing header">Variations</h2>
+
+    <div class="category example">
+      <h4 class="ui header">Fluid</h4>
+      <p>A search can have its results take up the width of its container</p>
+      <div class="ui fluid category search">
+        <div class="ui icon input">
+          <input class="prompt" type="text" placeholder="Search animals...">
+          <i class="search icon"></i>
+        </div>
+        <div class="results"></div>
+      </div>
+    </div>
+
+    <div class="category example">
+      <h4 class="ui header">Aligned</h4>
+      <p>A search can have its results aligned to its left or right container edge</p>
+      <div class="ui right aligned category search">
+        <div class="ui icon input">
+          <input class="prompt" type="text" placeholder="Search animals...">
+          <i class="search icon"></i>
+        </div>
+        <div class="results"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="ui tab" data-tab="examples">
+    <h2 class="ui dividing header">Examples</h2>
+
+
+  </div>
+  <div class="ui tab" data-tab="usage">
+
+    <h2 class="ui dividing header">Initializing</h2>
+
+    <div class="ui message">
+      Search is built ontop of Semantic <a href="/modules/api.html">API</a> behaviors to allow for simple URL templating, and UI state management. Please check out the API documentation for more information on adjusting API settings.
+    </div>
+
+    <h4 class="ui header">Automatic Routing</h4>
+    <p>By default search will automatically route to the named API endpoint 'search'</p>
+    <div class="code" data-label="javascript">
+      // initializes with default endpoint /search/{query}
+      $('.ui.search')
+        .search({
+          type: 'category'
+        })
+      ;
+    </div>
+    <h4 class="ui header">Named URL</h4>
+    <p>You can specigy custom api settings to adjust the url, or use a different api action</p>
+    <div class="code" data-label="javascript">
+
+      // initializes with default endpoint /search/{query}
+      $('.ui.search')
+        .search({
+          apiSettings: {
+            url: 'custom-search/?q={query}'
+          },
+          type: 'category'
+        })
+      ;
+    </div>
+    <h4 class="ui header">Local Object</h4>
+    <p>Local search results allow you to search across specified properties of a javacript object literal looking for matching values</p>
+    <p>
+      You can set which fields are searchable using the <code>searchFields</code> setting. Local object search can only display standard search results (not categories).
+    </p>
+    <div class="code" data-label="javascript">
+      // searches across any array/object of searchable objects
+      var
+        content = [
+          {
+            title: 'Horse',
+            description: 'An Animal',
+          },
+          {
+            title: 'Cow',
+            description: 'Another Animal',
+          }
+        ]
+      ;
+      $('.ui.search')
+        .search({
+          source : content,
+          type   : 'simple'
+        })
+      ;
+    </div>
+    <h3 class="ui header">Server Responses</h3>
+
+    <div class="ui info message">You may also consider adding a top level response like <code>success: true</code> and using API's <code>successTest</code> parameter to determine wheter a server response is actually succesful, even if it returns the correct HTTP code</div>
+
+    <h4 class="ui header">Simple</h4>
+    <div class="code" data-title="Server JSON Response">
+      {
+        "results": [
+          {
+            "title": "Result Title",
+            "url": "/optional/url/on/click",
+            "image": "optional-image.jpg",
+            "price": "Optional Price"
+            "description": "Optional Description"
+          },
+          {
+            "title": "Result Title",
+            "description": "Result Description"
+          }
+        ],
+        // optional action below results
+        "action": {
+          "url": '/path/to/results'
+          "text": "View all 202 results"
+        }
+      }
+    </div>
+
+
+    <h4 class="ui header">Category</h4>
+    <div class="code" data-title="Server JSON Response">
+      {
+        "results": {
+          "category1": {
+            "name": "Category 1",
+            "results": [
+              {
+                "title": "Result Title",
+                "url": "/optional/url/on/click",
+                "image": "optional-image.jpg",
+                "price": "Optional Price"
+                "description": "Optional Description"
+              },
+              {
+                "title": "Result Title",
+                "url": "/optional/url/on/click",
+                "image": "optional-image.jpg",
+                "price": "Optional Price"
+                "description": "Optional Description"
+              }
+            ]
+          },
+          "category2": {
+            "name": "Category 2",
+            "results": [
+              {
+                "title": "Result Title",
+                "url": "/optional/url/on/click",
+                "image": "optional-image.jpg",
+                "price": "Optional Price"
+                "description": "Optional Description"
+              }
+            ]
+          }
+        }
+        // optional action below results
+        "action": {
+          "url": '/path/to/results'
+          "text": "View all 202 results"
+        }
+      }
+    </div>
+
+    <h2 class="ui dividing header">Behaviors</h2>
+
 
 
   </div>
 
+  <div class="ui tab" data-tab="settings">
+    <h2 class="ui dividing header">
+      Search
+    </h2>
+
+    <h4 class="ui header">
+      Behavior
+    </h4>
+    <table class="ui sortable celled definition table">
+      <thead>
+        <th class="three wide"></th>
+        <th class="five wide">Default</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>apiSettings</td>
+          <td>
+          <div class="code">
+          {
+            action: 'search'
+          }
+          </div>
+          </td>
+          <td>Settings for <a href="/modules/api.html#/usage">API</a> call.</td>
+        </tr>
+        <tr>
+          <td>minCharacters</td>
+          <td>2</td>
+          <td>Minimum characters to query for results</td>
+        </tr>
+        <tr>
+          <td>transition</td>
+          <td>
+            Transition
+          </td>
+          <td>Named transition to use when animating menu in and out. Fade and slide down are available without including <a href="/modules/transition.html">ui transitions</a></td>
+        </tr>
+        <tr>
+          <td>duration</td>
+          <td>
+            300
+          </td>
+          <td>Duration of animation events</td>
+        </tr>
+        <tr>
+          <td>easing</td>
+          <td>
+            easeOutExpo
+          </td>
+          <td>Easing equation when using fallback javascript animation</td>
+        </tr>
+        <tr>
+          <td>maxResults</td>
+          <td>7</td>
+          <td>Maximum results to display when using local and simple search, maximum category count for category search</td>
+        </tr>
+        <tr>
+          <td>cache</td>
+          <td>true</td>
+          <td>Caches results locally to avoid requerying server</td>
+        </tr>
+        <tr>
+          <td>source</td>
+          <td>false</td>
+          <td>Specify a javascript object which will be searched locally</td>
+        </tr>
+        <tr>
+          <td>searchFullText</td>
+          <td>true</td>
+          <td>Return local results that match anywhere inside your content</td>
+        </tr>
+        <tr>
+          <td>searchFields</td>
+          <td>
+            <div class="code" data-type="javascript">
+              [
+                'title',
+                'description'
+              ]
+            </div>
+          </td>
+          <td>Specify object properties inside source object which will be searched</td>
+        </tr>
+        <tr>
+          <td>hideDelay</td>
+          <td>300</td>
+          <td>Delay before hiding results after search blur</code></td>
+        </tr>
+        <tr>
+          <td>searchDelay</td>
+          <td>300</td>
+          <td>Delay before showing results on inputchange</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4 class="ui header">
+      Callbacks
+    </h4>
+
+    <table class="ui sortable celled definition table">
+      <thead>
+        <th class="three wide"></th>
+        <th class="three wide">Context</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>onSelect</td>
+          <td>module</td>
+          <td>Callback on element selection by user (overrides default action)</td>
+        </tr>
+        <tr>
+          <td>onResultsAdd(html)</td>
+          <td>module</td>
+          <td>Callback after processing element template to add html to results (overrides default action)</td>
+        </tr>
+        <tr>
+          <td>onSearchQuery</td>
+          <td>module</td>
+          <td>Callback on search query</td>
+        </tr>
+        <tr>
+          <td>onResults(response)</td>
+          <td>module</td>
+          <td>Callback on server response</td>
+        </tr>
+        <tr>
+          <td>onResultsOpen</td>
+          <td>results element</td>
+          <td>Callback when results are opened</td>
+        </tr>
+        <tr>
+          <td>onResultsClose</td>
+          <td>results element</td>
+          <td>Callback when results are closed</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="ui dividing header">
+      Module
+    </h2>
+
+    <p>These settings are native to all modules, and define how the component ties content to DOM attributes, and debugging settings for the module.</p>
+
+    <table class="ui sortable celled definition table">
+      <thead>
+        <th></th>
+        <th class="six wide">Default</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>name</td>
+          <td>Search</td>
+          <td>Name used in log statements</td>
+        </tr>
+        <tr>
+          <td>namespace</td>
+          <td>search</td>
+          <td>Event namespace. Makes sure module teardown does not effect other events attached to an element.</td>
+        </tr>
+        <tr>
+          <td>selector</td>
+          <td>
+            <div class="code" data-type="css">
+            selector : {
+              prompt       : '.prompt',
+              searchButton : '.search.button',
+              results      : '.results',
+              category     : '.category',
+              result       : '.result'
+            }
+            </div>
+          </td>
+          <td>Selectors used to find parts of a module</td>
+        </tr>
+        <tr>
+          <td>className</td>
+          <td>
+            <div class="code">
+            className: {
+              active  : 'active',
+              down    : 'down',
+              focus   : 'focus',
+              empty   : 'empty',
+              loading : 'loading'
+            }
+            </div>
+          </td>
+          <td>Class names used to determine element state</td>
+        </tr>
+        <tr>
+          <td>debug</td>
+          <td>false</td>
+          <td>Debug output to console</td>
+        </tr>
+        <tr>
+          <td>performance</td>
+          <td>false</td>
+          <td>Show <code>console.table</code> output with performance metrics</td>
+        </tr>
+        <tr>
+          <td>verbose</td>
+          <td>false</td>
+          <td>Debug output includes all internal behaviors</td>
+        </tr>
+        <tr>
+          <td>errors</td>
+          <td colspan="2">
+            <div class="code">
+            error : {
+              source      : 'No source or api action specified',
+              noResults   : 'Your search returned no results',
+              logging     : 'Error in debug logging, exiting.',
+              noTemplate  : 'A valid template name was not specified.',
+              serverError : 'There was an issue with querying the server.',
+              method      : 'The method you called is not defined.'
+            }
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>

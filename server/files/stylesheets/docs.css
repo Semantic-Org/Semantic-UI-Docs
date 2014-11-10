@@ -196,7 +196,7 @@ a:hover {
   position: relative;
   z-index: 2;
   margin: 0em;
-  min-height: 205px;
+  min-height: 185px;
   padding-top: 70px;
   padding-bottom: 30px;
   background-color: #FFFFFF;
@@ -222,6 +222,19 @@ a:hover {
 #example .tab.header.segment .tabular.menu .active.item {
   background-color: #FFFFFF;
   border-bottom-color: #FFFFFF;
+}
+
+#example .header.segment .download.popup .grid {
+  max-width: 0px;
+}
+#example .header.segment .download.popup .grid .column {
+  width: 175px;
+}
+#example .header.segment .download.popup .framework,
+#example .header.segment .download.popup .standalone,
+#example .header.segment .download.popup .integration,
+#example .header.segment .download.popup .thanks {
+  display: none;
 }
 
 #example.legacy .main.menu,
@@ -704,7 +717,6 @@ body#example.hide {
 #example .clearing.example {
   overflow: hidden;
   clear: both;
-  padding: 1px;
 }
 #example .main.container:after {
   content: '';
@@ -750,7 +762,7 @@ body#example.hide {
 #example h2 + .example i.code,
 #example h3 + .example i.code,
 #example h4 + .example i.code {
-  top: 1em;
+  top: 0.4em;
 }
 
 /* Spaced */
@@ -779,13 +791,13 @@ body#example.hide {
   cursor: pointer;
   position: absolute;
 
-  top: 1rem;
+  top: 3rem;
   right: 0px;
   margin: 0;
   opacity: 0.1;
 
-  font-size: 18px;
-  color: #555555;
+  font-size: 20px;
+  color: #000000;
 
   -webkit-transition: opacity 0.3s ease-out;
   -moz-transition: opacity 0.3s ease-out;
@@ -1553,15 +1565,17 @@ body.progress.animated .ui.progress .bar {
   #example .introduction {
     display: block;
   }
+  #example .container {
+    right: 110px;
+  }
+}
+@media only screen and (min-width: 1200px) {
   #example .advertisement {
     left: 100%;
     padding-left: 0em;
     position: absolute;
-    top: 0em;
+    top: -1em;
     vertical-align: top;
-  }
-  #example .container {
-    right: 110px;
   }
 }
 @media only screen and (min-width : 998px) and (max-width: 1200px) {

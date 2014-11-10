@@ -55,7 +55,7 @@ semantic.ready = function() {
     $languageDropdown    = $('.language.dropdown'),
     $languageModal       = $('.language.modal'),
 
-    $downloadDropdown    = $('.download.buttons .dropdown'),
+    $downloadDropdown    = $('.download.button'),
 
     $helpPopup           = $('.header .help.icon'),
 
@@ -731,7 +731,12 @@ semantic.ready = function() {
       }
     },
 
-
+    showCodePopup: function() {
+      $(this).find('i.code').popup('show');
+    },
+    hideCodePopup: function() {
+      $(this).find('i.code').popup('hide');
+    },
     initializeCode: function() {
       var
         $code        = $(this).show(),
@@ -892,6 +897,12 @@ semantic.ready = function() {
             ? $(this).find('.examples')
             : $(this)
           ;
+          $(this).find('.sticky')
+            .sticky({
+              context: $container,
+              offset: 0
+            })
+          ;
           $sectionHeaders = $container.children('h2');
           $sectionExample = $container.find('.example');
           $exampleHeaders = $sectionExample.children('h4');
@@ -927,7 +938,12 @@ semantic.ready = function() {
       transition       : 'uncover',
       mobileTransition : 'uncover'
     })
-    .sidebar('attach events', '.launch.button, .view-ui, .launch.item')
+  ;
+  $('.launch.button, .view-ui, .launch.item')
+    .on('touchstart click', function(event) {
+      $menu.sidebar('show');
+      event.preventDefault();
+    })
   ;
 
   handler.createIcon();
@@ -936,20 +952,29 @@ semantic.ready = function() {
       $.proxy(handler.generateCode, this)();
     })
     .find('i.code')
+      .popup({
+        position: 'top center',
+        offset: -3,
+        content: 'View Source'
+      })
       .on('click', handler.createCode)
+      .end()
+    .eq(0)
+      .on('mouseenter', handler.showCodePopup)
+      .on('mouseleave', handler.hideCodePopup)
   ;
 
   $shownExample
     .each(handler.createCode)
   ;
 
-  $downloadDropdown
-    .dropdown({
-      on         : 'click',
-      transition : 'scale'
+/*  $downloadDropdown
+    .popup({
+      position: 'bottom left',
+      on: 'click'
     })
   ;
-
+*/
   $themeDropdown
     .dropdown({
       action: 'select',
@@ -1013,6 +1038,12 @@ semantic.ready = function() {
       onChange: handler.translatePage
     })
   ;
+
+  //$.fn.api.settings.base = '//api.semantic-ui.com';
+  $.extend($.fn.api.settings.api, {
+    categorySearch: '//api.semantic-ui.com/search/category/{query}',
+    search: '//api.semantic-ui.com/search/{query}'
+  });
 
   if(window.Transifex !== undefined) {
     window.Transifex.live.onTranslatePage(handler.showLanguageModal);

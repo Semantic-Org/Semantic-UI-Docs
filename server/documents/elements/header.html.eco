@@ -20,13 +20,49 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby']
 
   <h2 class="ui dividing header">Types</h2>
 
+
   <div class="example">
-    <h4 class="ui header">Header</h4>
-    <p>A standard header</p>
-    <h2 class="ui header">
-      Account Settings
-    </h2>
-    <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+    <h4 class="ui header">Page Headings</h4>
+    <p class="header">Headers may be oriented to give the heirarchy of a section in the context of the page</p>
+    <div class="ignored info ui message">Page headings use standard <code>h1-h6</code> tags, and size themselves relative to the base font of the entire page.</div>
+    <div class="ui ignored two fluid font buttons">
+      <a class="increase ui button"> <i class="plus icon"></i> Base Font</a>
+      <a class="decrease ui button"> <i class="minus icon"></i> Base Font</a>
+    </div>
+    <div class="sizer">
+      <h1 class="ui header">First header</h1>
+      <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+      <h2 class="ui header">Second header</h2>
+      <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+      <h3 class="ui header">Third header</h3>
+      <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+      <h4 class="ui header">Fourth header</h4>
+      <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+      <h5 class="ui header">Fifth header</h5>
+      <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Content Headings</h4>
+    <p>Headers may be oriented to give the importance of a section in the context of the content that surrounds it</p>
+    <div class="ignored info ui message">Content headings can use any other tag, and size themselves relative to the base font of the surrounding text</div>
+    <div class="ui ignored two fluid font buttons">
+      <a class="increase ui button"> <i class="plus icon"></i> Base Font</a>
+      <a class="decrease ui button"> <i class="minus icon"></i> Base Font</a>
+    </div>
+    <div class="sizer">
+      <div class="ui huge header">Huge Header</div>
+      <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+      <div class="ui large header">Large Header</div>
+      <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+      <div class="ui medium header">Medium Header</div>
+      <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+      <div class="ui small header">Small Header</div>
+      <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+      <div class="ui tiny header">Tiny Header</div>
+      <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+    </div>
   </div>
 
   <div class="example">
@@ -62,50 +98,6 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby']
     <img class="ui wireframe image" src="/images/wireframe/centered-paragraph.png">
   </div>
 
-
-  <div class="example">
-    <h4 class="ui header">Page Headings</h4>
-    <p class="header">Headers may be oriented to give the heirarchy of a section in the context of the page</p>
-    <div class="ignored info ui message">Page headings size themselves relative to the base font of the entire page not the surrounding text.</div>
-    <div class="ui ignored two fluid font buttons">
-      <a class="increase ui button"> <i class="plus icon"></i> Base Font</a>
-      <a class="decrease ui button"> <i class="minus icon"></i> Base Font</a>
-    </div>
-    <div class="sizer">
-      <h1 class="ui header">First header</h1>
-      <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-      <h2 class="ui header">Second header</h2>
-      <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-      <h3 class="ui header">Third header</h3>
-      <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-      <h4 class="ui header">Fourth header</h4>
-      <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-      <h5 class="ui header">Fifth header</h5>
-      <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-    </div>
-  </div>
-
-  <div class="example">
-    <h4 class="ui header">Content Headings</h4>
-    <p>Headers may be oriented to give the importance of a section in the context of the content that surrounds it</p>
-    <div class="ignored info ui message">Content headings size themselves relative to the base font of the surrounding text</div>
-    <div class="ui ignored two fluid font buttons">
-      <a class="increase ui button"> <i class="plus icon"></i> Base Font</a>
-      <a class="decrease ui button"> <i class="minus icon"></i> Base Font</a>
-    </div>
-    <div class="sizer">
-      <div class="ui huge header">Huge Header</div>
-      <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-      <div class="ui large header">Large Header</div>
-      <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-      <div class="ui medium header">Medium Header</div>
-      <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-      <div class="ui small header">Small Header</div>
-      <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-      <div class="ui tiny header">Tiny Header</div>
-      <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-    </div>
-  </div>
 
   <h2 class="ui dividing header">States</h2>
 

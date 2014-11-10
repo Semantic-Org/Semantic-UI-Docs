@@ -10,14 +10,14 @@ type   : 'Library'
 <!-- TEST JS HERE !-->
 <script>
 $(document).ready(function() {
-
   // allow both sidebars to be open at same time
-  $('.test.sidebar').sidebar({
-      transition: 'push'
+  $('.test.sidebar').sidebar('setting', {
+      exclusive: false
   });
-/*  $('.left.test.sidebar').sidebar({
-      transition: 'overlay'
-  });*/
+
+  $('.test.sidebar.top').sidebar('setting', {
+     transition: 'overlay'
+  });
 
   $('#L').click(function() {
     $('.test.sidebar.left').sidebar('toggle');
@@ -25,27 +25,44 @@ $(document).ready(function() {
   $('#R').click(function() {
     $('.test.sidebar.right').sidebar('toggle');
   });
+  $('#T').click(function() {
+    $('.test.sidebar.top').sidebar('toggle');
+  });
   $('#BOTH').click(function() {
-    $('.test.sidebar').sidebar('toggle');
+    $('.test.sidebar').not('.top').sidebar('toggle');
   });
 });
 </script>
 
 <!-- TEST CSS HERE !-->
 <style type="text/css">
+/* set color to transparent so overlap content can be seen */
+.ui.test.sidebar.left {
+     background-color: rgba(255, 0, 0, 0.5);
+}
+
+.ui.test.sidebar.right {
+     background-color: rgba(0, 0, 255, 0.5);
+}
 </style>
 
 <div class="main container">
 
-  <div id="L" class="ui button float left">L</div>
-  <div id="R" class="ui button float right">R</div>
-  <div id="BOTH" class="ui button float right">L&R</div>
+    <div id="L" class="ui button float left">L</div>
+    <div id="R" class="ui button float right">R</div>
+    <div id="BOTH" class="ui button float right">L&R</div>
+    <div id="T" class="ui button float right">T</div>
 
 </div>
 
 <div class="ui test sidebar left">
    LEFT
 </div>
+
+<div class="ui test sidebar top">
+    TOP
+</div>
+
 
 <div class="ui test sidebar right">
     RIGHT

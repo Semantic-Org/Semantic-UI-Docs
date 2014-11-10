@@ -1557,14 +1557,15 @@ body.progress.animated .ui.progress .bar {
   #example .following.menu {
     display: block;
   }
-  #example .introduction {
-    display: block;
-  }
   #example .container {
     right: 110px;
   }
 }
+
 @media only screen and (min-width: 1200px) {
+  #example .introduction {
+    display: block;
+  }
   #example .advertisement {
     left: 100%;
     padding-left: 0em;

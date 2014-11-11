@@ -10,27 +10,8 @@ type   : 'Library'
 <!-- TEST JS HERE !-->
 <script>
 $(document).ready(function() {
-  // allow both sidebars to be open at same time
-  $('.test.sidebar').sidebar('setting', {
-      exclusive: false
-  });
 
-  $('.test.sidebar.top').sidebar('setting', {
-     transition: 'overlay'
-  });
-
-  $('#L').click(function() {
-    $('.test.sidebar.left').sidebar('toggle');
-  });
-  $('#R').click(function() {
-    $('.test.sidebar.right').sidebar('toggle');
-  });
-  $('#T').click(function() {
-    $('.test.sidebar.top').sidebar('toggle');
-  });
-  $('#BOTH').click(function() {
-    $('.test.sidebar').not('.top').sidebar('toggle');
-  });
+    $(".ui.dropdown").dropdown();
 });
 </script>
 
@@ -47,12 +28,311 @@ $(document).ready(function() {
 </style>
 
 <div class="main container">
+<div class="ui tab active" data-tab="inverted">
+            <h2>Types</h2>
 
-    <div id="L" class="ui button float left">L</div>
-    <div id="R" class="ui button float right">R</div>
-    <div id="BOTH" class="ui button float right">L&R</div>
-    <div id="T" class="ui button float right">T</div>
+            <p>Full segment</p>
 
+        <div class="ui top attached inverted segment">
+
+        <h2 class="ui header">Header</h2>
+
+        </div>
+        <div class="ui attached red inverted segment">
+
+        <p><img class="ui wireframe image" src="images/short-paragraph.png"></p>
+
+        </div>
+        <div class="ui bottom attached inverted segment">
+
+        <p>Footer</p>
+
+        </div>
+
+
+            <p>Without header/content/footer</p>
+
+        <div class="ui top attached inverted segment">
+
+        <p><img class="ui wireframe image" src="images/short-paragraph.png"></p>
+
+        </div>
+        <div class="ui bottom attached inverted segment">
+
+        <p>Footer</p>
+
+        </div>
+
+
+        <div class="ui top attached inverted segment">
+
+        <h2 class="ui header">Header</h2>
+
+        </div>
+        <div class="ui bottom attached inverted segment">
+
+        <p>Footer</p>
+
+        </div>
+
+
+        <div class="ui top attached inverted segment">
+
+        <h2 class="ui header">Header</h2>
+
+        </div>
+        <div class="ui bottom attached inverted segment">
+
+        <p><img class="ui wireframe image" src="images/short-paragraph.png"></p>
+
+        </div>
+
+
+            <p>Only header/content/footer</p>
+
+        <div class="ui inverted segment">
+
+        <h2 class="ui header">Header</h2>
+
+        </div>
+
+
+        <div class="ui inverted segment">
+
+        <p><img class="ui wireframe image" src="images/short-paragraph.png"></p>
+
+        </div>
+
+
+        <div class="ui inverted segment">
+
+        <p>Footer</p>
+
+        </div>
+
+
+            <p>Multiple content</p>
+
+        <div class="ui top attached inverted segment">
+
+        <h2 class="ui header">Header</h2>
+
+        </div>
+        <div class="ui attached inverted segment">
+
+        <p><img class="ui wireframe image" src="images/short-paragraph.png"></p>
+
+        </div>
+        <div class="ui attached inverted segment">
+
+        <p><img class="ui wireframe image" src="images/short-paragraph.png"></p>
+
+        </div>
+        <div class="ui bottom attached inverted segment">
+
+        <p>Footer</p>
+
+        </div>
+
+
+            <h2>Count in the row</h2>
+
+            <p>One in the row</p>
+
+        <div class="ui top attached inverted segment">
+
+        <h2 class="ui header">Header</h2>
+
+        </div>
+        <div class="ui attached inverted segment">
+
+        <p><img class="ui wireframe image" src="images/short-paragraph.png"></p>
+
+        </div>
+        <div class="ui bottom attached inverted segment">
+
+        <p>Footer</p>
+
+        </div>
+
+
+            <p>Some segments in the row</p>
+            <div class="ui three column grid">
+                <div class="column">
+
+        <div class="ui top attached inverted segment">
+
+        <h2 class="ui header">Header</h2>
+
+        </div>
+        <div class="ui attached inverted segment">
+
+        <p><img class="ui wireframe image" src="images/short-paragraph.png"></p>
+
+        </div>
+        <div class="ui bottom attached inverted segment">
+
+        <p>Footer</p>
+
+        </div>
+
+                </div>
+                <div class="column">
+
+        <div class="ui top attached inverted segment">
+
+        <h2 class="ui header">Header</h2>
+
+        </div>
+        <div class="ui attached inverted segment">
+
+        <p><img class="ui wireframe image" src="images/short-paragraph.png"></p>
+
+        </div>
+        <div class="ui bottom attached inverted segment">
+
+        <p>Footer</p>
+
+        </div>
+
+                </div>
+                <div class="column">
+
+        <div class="ui top attached inverted segment">
+
+        <h2 class="ui header">Header</h2>
+
+        </div>
+        <div class="ui attached inverted segment">
+
+        <p><img class="ui wireframe image" src="images/short-paragraph.png"></p>
+
+        </div>
+        <div class="ui bottom attached inverted segment">
+
+        <p>Footer</p>
+
+        </div>
+
+                </div>
+            </div>
+            <div class="ui six column grid">
+                <div class="column">
+
+        <div class="ui top attached inverted segment">
+
+        <h2 class="ui header">Header</h2>
+
+        </div>
+        <div class="ui attached inverted segment">
+
+        <p><img class="ui wireframe image" src="images/short-paragraph.png"></p>
+
+        </div>
+        <div class="ui bottom attached inverted segment">
+
+        <p>Footer</p>
+
+        </div>
+
+                </div>
+                <div class="column">
+
+        <div class="ui top attached inverted segment">
+
+        <h2 class="ui header">Header</h2>
+
+        </div>
+        <div class="ui attached inverted segment">
+
+        <p><img class="ui wireframe image" src="images/short-paragraph.png"></p>
+
+        </div>
+        <div class="ui bottom attached inverted segment">
+
+        <p>Footer</p>
+
+        </div>
+
+                </div>
+                <div class="column">
+
+        <div class="ui top attached inverted segment">
+
+        <h2 class="ui header">Header</h2>
+
+        </div>
+        <div class="ui attached inverted segment">
+
+        <p><img class="ui wireframe image" src="images/short-paragraph.png"></p>
+
+        </div>
+        <div class="ui bottom attached inverted segment">
+
+        <p>Footer</p>
+
+        </div>
+
+                </div>
+                <div class="column">
+
+        <div class="ui top attached inverted segment">
+
+        <h2 class="ui header">Header</h2>
+
+        </div>
+        <div class="ui attached inverted segment">
+
+        <p><img class="ui wireframe image" src="images/short-paragraph.png"></p>
+
+        </div>
+        <div class="ui bottom attached inverted segment">
+
+        <p>Footer</p>
+
+        </div>
+
+                </div>
+                <div class="column">
+
+        <div class="ui top attached inverted segment">
+
+        <h2 class="ui header">Header</h2>
+
+        </div>
+        <div class="ui attached inverted segment">
+
+        <p><img class="ui wireframe image" src="images/short-paragraph.png"></p>
+
+        </div>
+        <div class="ui bottom attached inverted segment">
+
+        <p>Footer</p>
+
+        </div>
+
+                </div>
+                <div class="column">
+
+        <div class="ui top attached inverted segment">
+
+        <h2 class="ui header">Header</h2>
+
+        </div>
+        <div class="ui attached inverted segment">
+
+        <p><img class="ui wireframe image" src="images/short-paragraph.png"></p>
+
+        </div>
+        <div class="ui bottom attached inverted segment">
+
+        <p>Footer</p>
+
+        </div>
+
+                </div>
+            </div>
+        </div>
 </div>
 
 <div class="ui test sidebar left">

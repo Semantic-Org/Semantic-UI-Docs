@@ -67,7 +67,7 @@ themes      : ['Default', 'Fixed-width']
   <div class="ui fullscreen modal">
     <i class="close icon"></i>
     <div class="header">
-      Update Your Account Settings
+      Update Your Settings
     </div>
     <div class="content">
       <div class="ui form">

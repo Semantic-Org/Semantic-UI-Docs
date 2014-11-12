@@ -3,7 +3,7 @@ layout      : 'default'
 css         : 'custom'
 title       : 'Kitchen Sink'
 type        : 'Semantic'
-description : 'This a work in progress and currently only includes a portion of all UI'
+description : 'Examples of all interface elements'
 ---
 
 
@@ -140,16 +140,29 @@ description : 'This a work in progress and currently only includes a portion of 
 
   <div class="example">
     <h4 class="ui header">
+      <a href="/views/card.html">Card</a>
+    </h4>
+    <%- @partial('examples/card') %>
+  </div>
+  <div class="example">
+    <h4 class="ui header">
       <a href="/views/feed.html">Feed</a>
     </h4>
     <%- @partial('examples/feed') %>
   </div>
   <div class="example">
     <h4 class="ui header">
-      <a href="/views/card.html">Card</a>
+      <a href="/views/item.html">Item</a>
     </h4>
-    <%- @partial('examples/card') %>
+    <%- @partial('examples/item') %>
   </div>
+  <div class="example">
+    <h4 class="ui header">
+      <a href="/views/statistic.html">Statistic</a>
+    </h4>
+    <%- @partial('examples/statistic') %>
+  </div>
+
 
   <h2 class="ui dividing header">
     Modules

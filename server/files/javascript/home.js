@@ -206,6 +206,11 @@ semantic.home.ready = function() {
   $('.demo .accordion')
     .accordion()
   ;
+  $('.demo .dimmer')
+    .dimmer({
+      on: 'hover'
+    })
+  ;
   $('.demo .ui.dropdown')
     .dropdown()
   ;

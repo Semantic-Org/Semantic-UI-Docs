@@ -14,7 +14,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
 <link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/progress.less" />
 <script src="/javascript/progress.js"></script>
 
-<%- @partial('header', { tabs: {  definition: 'Definition', usage: 'Usage' } }) %>
+<%- @partial('header', { tabs: {  definition: 'Definition', usage: 'Usage' }, settings: 'Settings' }) %>
 
 <div class="main container">
 
@@ -341,6 +341,256 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
       </div>
     </div>
 
+  </div>
+
+  <div class="ui tab" data-tab="settings">
+
+    <h3 class="ui header">
+      Progress Settings
+      <div class="sub header">Form settings modify the tab behavior</div>
+    </h3>
+    <table class="ui celled sortable definition table segment">
+      <thead>
+        <tr>
+          <th>Setting</th>
+          <th class="four wide">Default</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>autoSuccess</td>
+          <td>true</td>
+          <td>Whether success state should automatically trigger when progress completes</td>
+        </tr>
+        <tr>
+          <td>showActivity</td>
+          <td>true</td>
+          <td>Whether progress should automatically show activity when incremented</td>
+        </tr>
+        <tr>
+          <td>label</td>
+          <td>percent</td>
+          <td>Can be set to either to display progres as <b>percent</b> or <b>ratio</b>. Matches up to corresponding text template with the same name.</td>
+        </tr>
+        <tr>
+          <td>random</td>
+          <td>
+          <div class="code">
+            className : {
+              active  : 'active',
+              error   : 'error',
+              success : 'success',
+              warning : 'warning'
+            }
+          </div>
+          </td>
+          <td>When incrementing without value, sets range for random increment value</td>
+        </tr>
+        <tr>
+          <td>precision</td>
+          <td>1</td>
+          <td>Decimal point precision for calculated progress</td>
+        </tr>
+        <tr>
+          <td>total</td>
+          <td>false</td>
+          <td>Setting a total value will make each call to increment get closer to this total (i.e. 1/20, 2/20 etc)</td>
+        </tr>
+        <tr>
+          <td>value</td>
+          <td>false</td>
+          <td>Sets current value, when total is specified, this is used to calculate a ratio of the total, with percent this should be the overall percent</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
+    <h4 class="ui header">Callbacks</h4>
+    <p>Callbacks specify a function to occur after a specific behavior.</p>
+
+    <table class="ui celled sortable definition table segment">
+      <thead>
+        <tr>
+          <th class="four wide"></th>
+          <th class="four wide">Parameters</th>
+          <th>Context</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>onChange</td>
+          <td>percent, value, total</td>
+          <td>Progress</td>
+          <td>Callback on percentage change</td>
+        </tr>
+        <tr>
+          <td>onSuccess</td>
+          <td>total</td>
+          <td>Progress</td>
+          <td>Callback on success state</td>
+        </tr>
+        <tr>
+          <td>onActive</td>
+          <td>value, total</td>
+          <td>Progress</td>
+          <td>Callback on active state</td>
+        </tr>
+        <tr>
+          <td>onError</td>
+          <td>value, total</td>
+          <td>Progress</td>
+          <td>Callback on error state</td>
+        </tr>
+        <tr>
+          <td>onWarning</td>
+          <td>value, total</td>
+          <td>Progress</td>
+          <td>Callback on warning state</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="ui horizontal divider"><i class="icon setting"></i></div>
+
+    <h3 class="ui header">
+      DOM Settings
+      <div class="sub header">DOM settings specify how this module should interface with the DOM</div>
+    </h3>
+    <table class="ui celled definition table segment">
+      <thead>
+        <tr>
+          <th>Setting</th>
+          <th class="six wide">Default</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>namespace</td>
+          <td>progress</td>
+          <td>Event namespace. Makes sure module teardown does not effect other events attached to an element.</td>
+        </tr>
+        <tr>
+          <td>text</td>
+          <td>
+            <div class="code">
+            text : {
+              active  : false,
+              error   : false,
+              success : false,
+              warning : false,
+              percent : '{percent}%',
+              ratio   : '{value} of {total}'
+            }
+            </div>
+          </td>
+          <td>Text content for each state, uses simple templating with {percent}, {value}, {total}</td>
+        </tr>
+        <tr>
+          <td>regExp</td>
+          <td>
+            <div class="code">
+            regExp: {
+              variable: /\{\$*[A-z0-9]+\}/g
+            }
+            </div>
+          </td>
+          <td>Regular expressions used by module</td>
+        </tr>
+        <tr>
+          <td>selector</td>
+          <td>
+            <div class="code">
+            selector : {
+              bar      : '> .bar',
+              label    : '> .label',
+              progress : '.bar > .progress'
+            }
+            </div>
+          </td>
+          <td>Selectors used by module</td>
+        </tr>
+        <tr>
+          <td>metadata</td>
+          <td>
+            <div class="code">
+            metadata: {
+              percent : 'percent',
+              total   : 'total',
+              value   : 'value'
+            }
+            </div>
+          </td>
+          <td>DOM metadata used by module</td>
+        </tr>
+        <tr>
+          <td>className</td>
+          <td>
+            <div class="code">
+            className : {
+              active  : 'active',
+              error   : 'error',
+              success : 'success',
+              warning : 'warning'
+            }
+            </div>
+          </td>
+          <td>Class names used to attach style to state</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="ui horizontal divider"><i class="icon setting"></i></div>
+
+    <h3 class="ui header">
+      Debug Settings
+      <div class="sub header">Debug settings controls debug output to the console</div>
+    </h3>
+
+    <table class="ui celled sortable definition table segment">
+      <thead>
+        <tr>
+          <th>Setting</th>
+          <th class="four wide">Default</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>name</td>
+          <td>Progress</td>
+          <td>Name used in debug logs</td>
+        </tr>
+        <tr>
+          <td>debug</td>
+          <td>False</td>
+          <td>Provides standard debug output to console</td>
+        </tr>
+        <tr>
+          <td>performance</td>
+          <td>True</td>
+          <td>Provides standard debug output to console</td>
+        </tr>
+        <tr>
+          <td>verbose</td>
+          <td>True</td>
+          <td>Provides ancillary debug output to console</td>
+        </tr>
+        <tr>
+          <td>errors</td>
+          <td colspan="2">
+            <div class="code">
+            error    : {
+              method     : 'The method you called is not defined.',
+              nonNumeric : 'Progress value is non numeric'
+            }
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
 </div>

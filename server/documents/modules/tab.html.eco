@@ -43,7 +43,7 @@ themes      : ['Default']
       $('.ui.menu .item')
         .tab({
           history: true,
-          historyType: 'state'
+          historyType: 'hash'
         })
       ;
     </div>
@@ -382,6 +382,11 @@ themes      : ['Default']
           <td>historyType</td>
           <td>hash</td>
           <td>Can be set to <b>hash</b> or <b>state</b>. Hash will use an in-page link to create history events. State will use <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Manipulating_the_browser_history" target="_blank">DOM History</a> and load pages from server on refresh.</td>
+        </tr>
+        <tr>
+          <td>path</td>
+          <td>false</td>
+          <td>When using historyType <code>state</code> you must specify the base URL for all internal links.</td>
         </tr>
         <tr>
           <td>context</td>

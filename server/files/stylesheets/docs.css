@@ -740,7 +740,7 @@ body#example.hide {
 #example .main.container .examples > h2 + p,
 #example .main.container > h2 + p,
 #example .main.container > .tab > h2 + p {
-  margin: -2.5rem 0 2em;
+  margin: -2rem 0 2em;
 }
 
 /* After Section Header */
@@ -821,6 +821,9 @@ body#example.hide {
 
 #example .existing.code {
   display: none;
+}
+#example .example .annotation {
+  margin: 1em 0em;
 }
 #example .another.example .annotation {
   margin: 2em 0em 0em;

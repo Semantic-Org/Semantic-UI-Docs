@@ -242,7 +242,7 @@
       </div>
     </div>
     <div class="item">
-      <a href="/module.html" class="ui small <%= if @document.elementType is 'module' then 'active ' %> inverted header">Modules</a>
+      <div class="ui small <%= if @document.elementType is 'module' then 'active ' %> inverted header">Modules</div>
       <div class="menu">
         <% for element in uiModules: %>
           <a class="<%= if element.id is @document.id then 'active ' %>item" href="<%= element.url %>">

@@ -594,6 +594,27 @@
 }
 
 /*--------------
+    Demo
+---------------*/
+
+#example .demo.row .ui.label:not(.empty) {
+  margin-bottom: 1em;
+}
+#example .demo.row h4 {
+  font-weight: bold !important;
+  margin: 0em 0em 1em !important;
+}
+#example .demo.row .example {
+  clear: both;
+  padding-top: 3em;
+  margin-top: 3em;
+}
+#example .demo.row .ui.menu,
+#example .demo.row .ui.card {
+  width: 100%;
+}
+
+/*--------------
     Features
 ---------------*/
 

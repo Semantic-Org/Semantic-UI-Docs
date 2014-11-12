@@ -985,41 +985,27 @@ body#example.hide {
       Demo
 ---------------*/
 
-
-#example .demo.row {
-  margin: 0 auto !important;
-  max-width: 1140px;
-}
-
-#example .demo.row .button.demo > .buttons,
-#example .demo.row .button.demo > .button,
-#example .demo.row .button.demo > .segment > .button {
+#example .demo.container .button.demo > .buttons,
+#example .demo.container .button.demo > .button,
+#example .demo.container .button.demo > .segment > .button {
   margin-bottom: 0.5em;
 }
-#example .demo.row .ui.menu,
-#example .demo.row .ui.card {
-  width: 100%;
-}
-#example .demo.row h4 {
+#example .demo.container h4 {
   font-weight: bold !important;
   margin: 0em 0em 1em !important;
+  font-size: 18px;
 }
-#example .demo.row .example {
-  clear: both;
-  padding-top: 3em;
-  margin-top: 3em;
-}
-#example .demo.row .example:first-child {
+#example .demo.container .example:first-child {
   margin-top: 0;
   padding-top: 0;
 }
-#example .demo.row .segment.example {
+#example .demo.container .segment.example {
   z-index: 1;
 }
-#example .demo.row .ui.label:not(.empty) {
+#example .demo.container .ui.label:not(.empty) {
   margin-bottom: 1em;
 }
-#example .demo.row .segment .ui.label {
+#example .demo.container .segment .ui.label {
   margin-bottom: 0em;
 }
 

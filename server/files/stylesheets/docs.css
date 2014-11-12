@@ -990,7 +990,7 @@ body#example.hide {
 #example .demo.container .button.demo > .segment > .button {
   margin-bottom: 0.5em;
 }
-#example .demo.container h4 {
+#example .demo.container h4:first-child {
   font-weight: bold !important;
   margin: 0em 0em 1em !important;
   font-size: 18px;

@@ -94,6 +94,9 @@ themes      : ['Default']
 
     <p>Tabs provide an optional coupling with API which allow you to specify a templated API endpoint that a tab can query</p>
     <p>Tabs will automatically pass the url variable <code>{$tab}</code> which can be replaced for RESTful API links.</p>
+    <p>To learn more about API behaviors built into semantic check out the API docs</p>
+
+    <a href="/behaviors/api.html">Visit API Docs</a>
 
     <h2 class="ui dividing header">Behavior</h2>
 
@@ -281,43 +284,113 @@ themes      : ['Default']
   <div class="ui tab" data-tab="settings">
 
     <h3 class="ui header">
-      Transition Settings
-      <div class="sub header">Form settings modify the transition behavior</div>
+      Tab Settings
+      <div class="sub header">Form settings modify the tab behavior</div>
     </h3>
-    <table class="ui red celled sortable definition table segment">
+    <table class="ui celled sortable definition table segment">
       <thead>
-        <th>Setting</th>
-        <th class="four wide">Default</th>
-        <th>Description</th>
+        <tr>
+          <th>Setting</th>
+          <th class="four wide">Default</th>
+          <th>Description</th>
+        </tr>
       </thead>
       <tbody>
         <tr>
-          <td>overlay</td>
+          <td>auto</td>
           <td>false</td>
-          <td>Whether tab should overlay page instead of pushing page to the side</td>
+          <td>Whether tab should load remote content as same url as history</td>
         </tr>
         <tr>
-          <td>useCSS</td>
+          <td>history</td>
+          <td>false</td>
+          <td>Whether to record history events for tab changes</td>
+        </tr>
+        <tr>
+          <td>ignoreFirstLoad</td>
+          <td>false</td>
+          <td>Do not load content remotely on first tab load. Useful when open tab is rendered on server.</td>
+        </tr>
+        <tr>
+          <td>alwaysRefresh</td>
+          <td>false</td>
+          <td>Tab should reload content every time it is opened</td>
+        </tr>
+        <tr>
+          <td>cache</td>
           <td>true</td>
-          <td>Whether to use css animations or fallback javascript animations</td>
+          <td>Tab should cache content after loading locally to avoid server trip on second load</td>
         </tr>
         <tr>
-          <td>duration</td>
-          <td>300</td>
-          <td>Duration of side bar animation</td>
+          <td>apiSettings</td>
+          <td>false</td>
+          <td>Settings object for <a href="/behaviors/api.html">$.api</a> call</td>
+        </tr>
+        <tr>
+          <td>historyType</td>
+          <td>hash</td>
+          <td>Can be set to <b>hash</b> or <b>state</b>. Hash will use an in-page link to create history events. State will use <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Manipulating_the_browser_history" target="_blank">DOM History</a> and load pages from server on refresh.</td>
+        </tr>
+        <tr>
+          <td>context</td>
+          <td>false</td>
+          <td>Pass a selector to limit tabs to children of this element</td>
+        </tr>
+        <tr>
+          <td>childrenOnly</td>
+          <td>false</td>
+          <td>If enabled limits tabs to children of passed context</td>
+        </tr>
+        <tr>
+          <td>mayDepth</td>
+          <td>25</td>
+          <td>Maximum amount of nested tabs allowed (avoids recursion)</td>
         </tr>
       </tbody>
     </table>
+
+    <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
+    <h4 class="ui header">Callbacks</h4>
+    <p>Callbacks specify a function to occur after a specific behavior.</p>
+
+    <table class="ui celled sortable definition table segment">
+      <thead>
+        <tr>
+          <th class="four wide"></th>
+          <th class="four wide">Parameters</th>
+          <th>Context</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>onTabInit</td>
+          <td>tabPath, parameterArray, historyEvent</td>
+          <td>Tab</td>
+          <td>Callback only the first time a tab is loaded</td>
+        </tr>
+        <tr>
+          <td>onTabLoad</td>
+          <td>tabPath, parameterArray, historyEvent</td>
+          <td>Tab</td>
+          <td>Callback every time a tab is loaded</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="ui horizontal divider"><i class="icon setting"></i></div>
 
     <h3 class="ui header">
       DOM Settings
       <div class="sub header">DOM settings specify how this module should interface with the DOM</div>
     </h3>
-    <table class="ui celled purple definition table segment">
+    <table class="ui celled definition table segment">
       <thead>
-        <th>Setting</th>
-        <th class="six wide">Default</th>
-        <th>Description</th>
+        <tr>
+          <th>Setting</th>
+          <th class="six wide">Default</th>
+          <th>Description</th>
+        </tr>
       </thead>
       <tbody>
         <tr>
@@ -326,17 +399,50 @@ themes      : ['Default']
           <td>Event namespace. Makes sure module teardown does not effect other events attached to an element.</td>
         </tr>
         <tr>
+          <td>templates</td>
+          <td>
+            <div class="code">
+            templates    : {
+              // returns page title
+              determineTitle: function(tabArray) {}
+            }
+            </div>
+          </td>
+          <td>Functions used to return content</td>
+        </tr>
+        <tr>
+          <td>selector</td>
+          <td>
+            <div class="code">
+            selector    : {
+              tabs : '.ui.tab'
+            }
+            </div>
+          </td>
+          <td>Selectors used by module</td>
+        </tr>
+        <tr>
+          <td>metadata</td>
+          <td>
+            <div class="code">
+            metadata : {
+              tab    : 'tab',
+              loaded : 'loaded',
+              promise: 'promise'
+            }
+            </div>
+          </td>
+          <td>DOM metadata used by module</td>
+        </tr>
+        <tr>
           <td>className</td>
           <td>
             <div class="code">
-      className: {
-        active : 'active',
-        pushed : 'pushed',
-        top    : 'top',
-        left   : 'left',
-        right  : 'right',
-        bottom : 'bottom'
-      }
+            className   : {
+              loading : 'loading',
+              active  : 'active',
+              ui      : 'ui'
+            }
             </div>
           </td>
           <td>Class names used to attach style to state</td>
@@ -351,11 +457,13 @@ themes      : ['Default']
       <div class="sub header">Debug settings controls debug output to the console</div>
     </h3>
 
-    <table class="ui blue celled sortable definition table segment">
+    <table class="ui celled sortable definition table segment">
       <thead>
-        <th>Setting</th>
-        <th class="four wide">Default</th>
-        <th>Description</th>
+        <tr>
+          <th>Setting</th>
+          <th class="four wide">Default</th>
+          <th>Description</th>
+        </tr>
       </thead>
       <tbody>
         <tr>
@@ -382,9 +490,14 @@ themes      : ['Default']
           <td>errors</td>
           <td colspan="2">
             <div class="code">
-      error   : {
-        method   : 'The method you called is not defined.',
-        notFound : 'There were no elements that matched the specified selector'
+      error: {
+        api        : 'You attempted to load content without API module',
+        method     : 'The method you called is not defined',
+        missingTab : 'Activated tab cannot be found for this context.',
+        noContent  : 'The tab you specified is missing a content url.',
+        path       : 'History enabled, but no path was specified',
+        recursion  : 'Max recursive depth reached',
+        state      : 'The state library has not been initialized'
       }
             </div>
           </td>

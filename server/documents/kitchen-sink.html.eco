@@ -70,6 +70,12 @@ description : 'This a work in progress and currently only includes a portion of 
   </div>
   <div class="example">
     <h4 class="ui header">
+      <a href="/elements/loader.html">Loader</a>
+    </h4>
+    <%- @partial('examples/loader') %>
+  </div>
+  <div class="example">
+    <h4 class="ui header">
       <a href="/elements/list.html">Reveal</a>
     </h4>
     <%- @partial('examples/reveal') %>
@@ -93,6 +99,24 @@ description : 'This a work in progress and currently only includes a portion of 
 
   <div class="example">
     <h4 class="ui header">
+      <a href="/collections/breadcrumb.html">Breadcrumb</a>
+    </h4>
+    <%- @partial('examples/breadcrumb') %>
+  </div>
+  <div class="example">
+    <h4 class="ui header">
+      <a href="/collections/form.html">Form</a>
+    </h4>
+    <%- @partial('examples/form') %>
+  </div>
+  <div class="example">
+    <h4 class="ui header">
+      <a href="/collections/grid.html">Grid</a>
+    </h4>
+    <%- @partial('examples/grid') %>
+  </div>
+  <div class="example">
+    <h4 class="ui header">
       <a href="/collections/menu.html">Menu</a>
     </h4>
     <%- @partial('examples/menu') %>
@@ -102,6 +126,12 @@ description : 'This a work in progress and currently only includes a portion of 
       <a href="/collections/message.html">Message</a>
     </h4>
     <%- @partial('examples/message') %>
+  </div>
+  <div class="example">
+    <h4 class="ui header">
+      <a href="/collections/table.html">Table</a>
+    </h4>
+    <%- @partial('examples/table') %>
   </div>
 
   <h2 class="ui dividing header">

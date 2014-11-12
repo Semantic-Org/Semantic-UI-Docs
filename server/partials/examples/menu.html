@@ -1,9 +1,12 @@
-<div class="ui vertical demo menu">
+<div class="ui three item teal menu">
   <a class="active item">
     A
   </a>
   <a class="item">
     B
+  </a>
+  <a class="item">
+    C
   </a>
 </div>
 <div class="ui vertical demo menu">
@@ -27,6 +30,39 @@
   </a>
   <a class="item">
     Tab
+  </a>
+</div>
+<div class="ui text demo menu">
+  <a class="active item">
+    A
+  </a>
+  <a class="item">
+    B
+  </a>
+  <a class="item">
+    C
+  </a>
+</div>
+<div class="ui secondary demo menu">
+  <a class="active item">
+    A
+  </a>
+  <a class="item">
+    B
+  </a>
+  <a class="item">
+    C
+  </a>
+</div>
+<div class="ui secondary pointing three item demo menu">
+  <a class="active item">
+    A
+  </a>
+  <a class="item">
+    B
+  </a>
+  <a class="item">
+    C
   </a>
 </div>
 <div class="ui secondary vertical demo menu">
@@ -55,7 +91,7 @@
 <script type="text/javascript">
 $(document)
   .ready(function(){
-    $('.demo.menu .item')
+    $('.demo.menu a.item')
       .on('click', function() {
         if(!$(this).hasClass('dropdown')) {
           $(this)

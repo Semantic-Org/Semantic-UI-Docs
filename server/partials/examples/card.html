@@ -41,10 +41,73 @@
     </div>
   </div>
 </div>
+<div class="ui four cards">
+  <div class="card">
+    <div class="image">
+      <a class="ui corner red label"><i class="heart icon"></i></a>
+      <img src="/images/wireframe/white-image.png">
+    </div>
+  </div>
+  <div class="card">
+    <div class="image">
+      <a class="ui corner red label"><i class="heart icon"></i></a>
+      <img src="/images/wireframe/white-image.png">
+    </div>
+  </div>
+  <div class="card">
+    <div class="image">
+      <a class="ui corner red label"><i class="heart icon"></i></a>
+      <img src="/images/wireframe/white-image.png">
+    </div>
+  </div>
+  <div class="card">
+    <div class="image">
+      <a class="ui corner red label"><i class="heart icon"></i></a>
+      <img src="/images/wireframe/white-image.png">
+    </div>
+  </div>
+</div>
+<div class="ui four cards">
+  <div class="card">
+    <div class="image">
+      <img src="/images/wireframe/image.png">
+    </div>
+    <div class="extra">
+      <div data-rating="4" class="ui star rating"></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="image">
+      <img src="/images/wireframe/image.png">
+    </div>
+    <div class="extra">
+      <div data-rating="2" class="ui star rating"></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="image">
+      <img src="/images/wireframe/image.png">
+    </div>
+    <div class="extra">
+      <div data-rating="3" class="ui star rating"></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="image">
+      <img src="/images/wireframe/image.png">
+    </div>
+    <div class="extra">
+      <div data-rating="4" class="ui star rating"></div>
+    </div>
+  </div>
+</div>
 
 <script type="text/javascript">
 $(document)
   .ready(function(){
+    $('.demo .star.rating')
+      .rating()
+    ;
     $('.demo .card .dimmer')
       .dimmer({
         on: 'hover'

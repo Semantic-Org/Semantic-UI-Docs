@@ -13,10 +13,9 @@ themes      : ['Default']
 
 <script src="/javascript/tab.js"></script>
 
-<%- @partial('header', { tabs: {  usage: 'Usage', examples: 'Examples', settings: 'Settings' } }) %>
+<%- @partial('header', { tabs: {  usage: 'Usage', definition: 'Definition', examples: 'Examples', settings: 'Settings' } }) %>
 
 <div class="main container">
-
 
   <div class="ui active tab" data-tab="usage">
 
@@ -128,6 +127,59 @@ themes      : ['Default']
         <td>Returns whether tab is closed</td>
       </tr>
     </table>
+  </div>
+
+  <div class="ui tab" data-tab="definition">
+    <h2 class="ui header">
+      Type
+    </h2>
+
+    <div class="example">
+      <h4 class="ui header">
+        Tab
+      </h4>
+      <p>A basic tab</p>
+      <div class="ui top attached tabular menu">
+        <div class="item">Tab</div>
+      </div>
+      <div class="ui bottom attached tab segment">
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+      </div>
+    </div>
+
+    <h2 class="ui header">
+      States
+    </h2>
+
+    <div class="example">
+      <h4 class="ui header">
+        Active
+      </h4>
+      <p>A tab can be activated, and visible on the page</p>
+      <div class="ui top attached tabular menu">
+        <div class="active item">Tab</div>
+      </div>
+      <div class="ui bottom attached active tab segment">
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+      </div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">
+        Loading
+      </h4>
+      <p>A tab can display a loading indicator</p>
+      <div class="ui top attached tabular menu">
+        <div class="active item">Tab</div>
+      </div>
+      <div class="ui bottom attached loading tab segment">
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+      </div>
+    </div>
+
   </div>
 
   <div class="ui tab" data-tab="examples">

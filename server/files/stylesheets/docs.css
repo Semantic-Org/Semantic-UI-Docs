@@ -1480,12 +1480,6 @@ body.progress.animated .ui.progress .bar {
     max-width: 260px;
   }
 }
-@media only screen and (max-width : 400px) {
-  #example .example {
-    max-width: 290px;
-  }
-}
-
 @media only screen and (max-width : 600px) {
   #example .solid, #example .stripe {
     padding: 4em 0em;

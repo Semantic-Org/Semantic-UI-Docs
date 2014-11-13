@@ -799,7 +799,7 @@ type   : 'Semantic'
                 $('.file.progress').progress('increment');
                 setTimeout(progress, (Math.random() * 7000) + 300);
               };
-              setTimeout(progress, 5000);
+              setTimeout(progress, 2000);
 
               setInterval(function() {
                 $('.file.progress').progress('reset');

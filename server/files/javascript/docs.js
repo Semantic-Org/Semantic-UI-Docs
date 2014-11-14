@@ -1032,7 +1032,6 @@ semantic.ready = function() {
 
   $themeDropdown
     .dropdown({
-      action: 'select',
       onChange: handler.less.changeTheme
     })
   ;

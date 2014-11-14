@@ -10,41 +10,24 @@ type   : 'Library'
 <!-- TEST JS HERE !-->
 <script>
 $(document).ready(function() {
-    // Add javascript here
-    $(".ui.hotfix.modal").modal("attach events",".ui.test.button","show");
-    $(".ui.hotfix.modal .ui.button.btn1").click(function(){
-        $(".ui.hotfix.modal .content .empty_container").empty().append("<div style=\"height:10em;\"></div>");
-        $(".ui.hotfix.modal .content .body_style").text("body style:"+$("body").attr("style"));
-    });
-    $(".ui.hotfix.modal .ui.button.btn2").click(function(){
-        $(".ui.hotfix.modal .content .empty_container").empty().append("<div style=\"height:60em;\"></div>");
-        $(".ui.hotfix.modal .content .body_style").text("body style:"+$("body").attr("style"));
-    });
 });
 </script>
 
 <!-- TEST CSS HERE !-->
-<style type="text/css">
-.ui.hotfix.modal .content .body_style {
-    display:block;
-}
-.ui.hotfix.modal .content .empty_container {
-    width: 100%;
-    display: block;
-}
 </style>
 
 <div class="main container">
-<a class="ui test button">Click Me</a>
 
-</div>
-<div class="ui hotfix modal">
-    <i class="close icon"></i>
-    <div class="header">Modal</div>
-    <div class="content">
-        <span class="body_style"></span>
-        <a class="ui btn1 button" title="Set modal height to 10em">Button 1</a>
-        <a class="ui btn2 button" title="Set modal height to 60em">Button 2</a>
-        <div class="empty_container"></div>
+    <div class="ui animated list">
+        <div class="item">Item 1</div>
+        <div class="item">
+            Nested Horizontal list:
+            <div class="ui horizontal list">
+                <div class="item">Item H1</div>
+                <div class="item">Item H2</div>
+            </div>
+        </div>
+        <div class="item">Jobs</div>
     </div>
+
 </div>

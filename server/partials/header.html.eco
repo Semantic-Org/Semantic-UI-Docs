@@ -31,19 +31,16 @@
       <% end %>
       <% if @document.themes?: %>
       <div class="ui floating dropdown theme basic button" data-element="<%= @document.element %>" data-type="<%= @document.elementType %>">
-        <span class="text">Theme</span>
+        <span class="text">Preview Theme</span>
         <div class="menu ui transition hidden">
           <% for id, name of @document.themes: %>
             <div class="item" data-value="<%= name %>"><%= (name.charAt(0).toUpperCase() + name.slice(1)) %></div>
-          <% end %><!--
-          <div class='divider'></div>
-          <div class="header">Create Your Own</div>
-          <a class="item" href="#">Submit Theme</a> -->
+          <% end %>
         </div>
       </div>
       <% end %>
       <% if @document.type is 'UI Element' or @document.type is 'UI View' or @document.type is 'UI Collection' or @document.type is 'UI Module': %>
-      <div class="ui download button">
+      <div class="ui download primary button">
         Download
       </div>
       <div class="ui flowing download basic popup">

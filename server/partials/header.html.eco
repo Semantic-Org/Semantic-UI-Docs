@@ -43,23 +43,23 @@
       </div>
       <% end %>
       <% if @document.type is 'UI Element' or @document.type is 'UI View' or @document.type is 'UI Collection' or @document.type is 'UI Module': %>
-      <div class="ui disabled download button">
+      <div class="ui download disabled button">
         Download
       </div>
       <div class="ui flowing download popup">
         <div class="ui divided equal height relaxed center aligned first grid">
-          <div class="column">
-            <h4 class="ui header">Framework</h4>
-            <div class="ui bulleted list">
-              <div class="item">Themable</div>
-              <div class="item">Build Tools</div>
+          <div class="framework column">
+            <h4 class="ui center aligned header">With Framework</h4>
+            <div class="ui list">
+              <div class="item"><i class="green check icon"></i> Themable</div>
+              <div class="item"><i class="green check icon"></i> Build Tools</div>
             </div>
             <div class="ui primary fluid button">Choose</div>
           </div>
-          <div class="column">
-            <h4 class="ui header">Standalone</h4>
-            <div class="ui bulleted list">
-              <div class="item">Standard Theme Only</div>
+          <div class="standalone column">
+            <h4 class="ui center aligned header">Standalone</h4>
+            <div class="ui list">
+              <div class="item">Default Theme</div>
               <div class="item">Precompiled</div>
             </div>
             <div class="ui fluid button basic">Choose</div>
@@ -67,53 +67,44 @@
         </div>
         <div class="ui divided equal height relaxed center aligned framework grid">
           <div class="column">
-            <h4 class="ui header">ZIP</h4>
-            <div class="ui bulleted list">
-              <div class="item">Simple</div>
+            <div class="ui header">Standalone</div>
+            <a class="ui button" href="https://github.com/Semantic-Org/Semantic-UI/archive/master.zip">
+              Download Zip
+            </a>
+            <h4 class="ui header">Package Managers</h4>
+            <h5 class="ui header">Bower</h5>
+            <div class="ui fluid input">
+              <input type="text" readonly="readonly" placeholder="Copy Link" value="bower install semantic-ui">
             </div>
-            <div class="ui fluid button">Download</div>
-          </div>
-          <div class="column">
-            <h4 class="ui header">NPM / Bower</h4>
-            <div class="ui bulleted list">
-              <div class="item">Updatable</div>
+            <h5 class="ui header">NPM</h5>
+            <div class="ui fluid input">
+              <input type="text" readonly="readonly" placeholder="Copy Link" value="npm install semantic-ui">
             </div>
-            <div class="ui fluid button">Download</div>
-          </div>
-          <div class="column">
-            <h4 class="ui header">NPM / Bower</h4>
-            <div class="ui bulleted list">
-              <div class="item">Standard Theme</div>
-              <div class="item">Upgradable</div>
+            <h5 class="ui header">Git</h5>
+            <div class="ui fluid input">
+              <input type="text" readonly="readonly" placeholder="Copy Link" value="git@github.com:Semantic-Org/Semantic-UI.git">
             </div>
-            <div class="ui fluid basic button">Install</div>
           </div>
         </div>
         <div class="ui divided equal height relaxed center aligned standalone grid">
           <div class="column">
-            <h4 class="ui header">Framework</h4>
-            <div class="ui bulleted list">
-              <div class="item">Themable</div>
-              <div class="item">Build Tools</div>
+            <div class="ui header">Standalone</div>
+            <a class="ui button" href="https://github.com/Semantic-Org/UI-<%=@document.title %>/archive/master.zip">
+              Download Zip
+            </a>
+            <h4 class="ui header">Package Managers</h4>
+            <h5 class="ui header">Bower</h5>
+            <div class="ui fluid input">
+              <input type="text" readonly="readonly" placeholder="Copy Link" value="bower install semantic-ui-<%=@document.element %>">
             </div>
-            <div class="ui primary fluid button">Download</div>
-          </div>
-          <div class="column">
-            <h4 class="ui header">Standalone</h4>
-            <div class="ui bulleted list">
-              <div class="item">Standard Theme Only</div>
-              <div class="item">Precompiled</div>
+            <h5 class="ui header">NPM</h5>
+            <div class="ui fluid input">
+              <input type="text" readonly="readonly" placeholder="Copy Link" value="npm install semantic-ui-<%=@document.element %>">
             </div>
-            <p>Standard Theme<br>Compiled<br></p>
-            <div class="ui fluid button basic">Download</div>
-          </div>
-          <div class="column">
-            <h4 class="ui header">NPM / Bower</h4>
-            <div class="ui bulleted list">
-              <div class="item">Standard Theme</div>
-              <div class="item">Upgradable</div>
+            <h5 class="ui header">Git</h5>
+            <div class="ui fluid input">
+              <input type="text" readonly="readonly" placeholder="Copy Link" value="git@github.com:Semantic-Org/UI-<%=@document.title %>.git">
             </div>
-            <div class="ui fluid basic button">Install</div>
           </div>
         </div>
       </div>

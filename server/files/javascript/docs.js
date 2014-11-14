@@ -55,7 +55,9 @@ semantic.ready = function() {
     $languageDropdown    = $('.language.dropdown'),
     $languageModal       = $('.language.modal'),
 
-    $downloadDropdown    = $('.download.button'),
+    $downloadPopup       = $('.download.button'),
+    $downloadFramework   = $('.framework.column .button'),
+    $downloadStandalone  = $('.standalone.column .button'),
 
     $helpPopup           = $('.header .help.icon'),
 
@@ -974,11 +976,17 @@ semantic.ready = function() {
     .each(handler.createCode)
   ;
 
-/*  $downloadDropdown
+/*  $downloadPopup
     .popup({
       position: 'bottom left',
       on: 'click'
     })
+  ;
+  $downloadFramework
+    .on('click', handler.chooseFramework)
+  ;
+  $downloadStandalone
+    .on('click', handler.chooseStandalone)
   ;
 */
   $themeDropdown
@@ -1030,15 +1038,16 @@ semantic.ready = function() {
   ;
   $languageDropdown
     .popup({
-      position  : 'bottom center',
-      delay: {
+      position : 'bottom center',
+      delay    : {
         show: 500,
         hide: 50
       }
     })
     .dropdown({
+      allowTab : false,
       on       : 'click',
-      onShow: function() {
+      onShow   : function() {
         $(this).popup('hide');
       },
       onChange: handler.translatePage

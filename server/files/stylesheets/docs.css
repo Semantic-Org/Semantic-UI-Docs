@@ -228,12 +228,18 @@ a:hover {
   max-width: 0px;
 }
 #example .header.segment .download.popup .grid .column {
-  width: 175px;
+  width: 200px;
 }
-#example .header.segment .download.popup .framework,
-#example .header.segment .download.popup .standalone,
-#example .header.segment .download.popup .integration,
-#example .header.segment .download.popup .thanks {
+#example .header.segment .download.popup .link.grid .column {
+  width: 400px;
+}
+#example .header.segment .download.popup .check.icon {
+  margin-left: -1em;
+}
+#example .header.segment .download.popup .framework.grid,
+#example .header.segment .download.popup .standalone.grid,
+#example .header.segment .download.popup .integration.grid,
+#example .header.segment .download.popup .link.grid {
   display: none;
 }
 
@@ -359,6 +365,8 @@ a:hover {
 }
 #example .fixed.column .sticky {
   padding-top: 4em;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 
@@ -1457,6 +1465,8 @@ body.progress.animated .ui.progress .bar {
 
 #example .main.container .right.rail .sticky {
   padding: 2em 0em;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 #example .container {
   position: relative;

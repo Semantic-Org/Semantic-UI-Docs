@@ -9,7 +9,7 @@ title       : 'Message'
 description : 'A message displays information that explains nearby content'
 type        : 'UI Collection'
 
-themes      : ['Default', 'GitHub', 'Google']
+themes      : ['Default', 'GitHub', 'Gmail']
 ---
 <link rel="stylesheet/less" type="text/css" href="/src/definitions/collections/message.less" />
 <%- @partial('header') %>

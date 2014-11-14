@@ -19,7 +19,6 @@ themes      : ['Default', 'Fixed-width']
 <div class="main container">
 
   <div class="ui basic test modal">
-    <i class="close icon"></i>
     <div class="header">
       Archive Old Messages
     </div>
@@ -33,11 +32,11 @@ themes      : ['Default', 'Fixed-width']
     </div>
     <div class="actions">
       <div class="two fluid ui inverted buttons">
-        <div class="ui red basic inverted button">
+        <div class="ui red basic cancel inverted button">
           <i class="remove icon"></i>
           No
         </div>
-        <div class="ui green basic inverted button">
+        <div class="ui green ok basic inverted button">
           <i class="checkmark icon"></i>
           Yes
         </div>
@@ -105,6 +104,37 @@ themes      : ['Default', 'Fixed-width']
       <div class="ui positive right labeled icon button">
         Yes
         <i class="checkmark icon"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui long test modal">
+    <i class="close icon"></i>
+    <div class="header">
+      Profile Picture
+    </div>
+    <div class="content">
+      <div class="ui medium image">
+        <img src="/images/wireframe/image.png">
+      </div>
+      <div class="description">
+        <div class="ui header">Modal Header</div>
+        <p>This is an example of expanded content that will cause the modal's dimmer to scroll</p>
+        <img src="/images/wireframe/paragraph.png">
+        <img src="/images/wireframe/paragraph.png">
+        <img src="/images/wireframe/paragraph.png">
+        <img src="/images/wireframe/paragraph.png">
+        <img src="/images/wireframe/paragraph.png">
+        <img src="/images/wireframe/paragraph.png">
+        <img src="/images/wireframe/paragraph.png">
+        <img src="/images/wireframe/paragraph.png">
+        <img src="/images/wireframe/paragraph.png">
+      </div>
+    </div>
+    <div class="actions">
+      <div class="ui primary button">
+        Proceed
+        <i class="right chevron icon"></i>
       </div>
     </div>
   </div>
@@ -256,6 +286,16 @@ themes      : ['Default', 'Fixed-width']
     <h2 class="ui dividing header">Examples</h2>
 
     <div class="no example">
+      <h4 class="ui header">Scrolling Modal</h4>
+      <p>When your modal content exceeds the height of the browser the scrollable area will automatically expand to include just enough space for scrolling, without scrolling the page below.</p>
+      <div class="code" data-demo="true">
+      $('.long.test.modal')
+        .modal('show')
+      ;
+      </div>
+    </div>
+
+    <div class="no example">
       <h4 class="ui header">Forcing a Choice</h4>
       <p>You can disable a modal's dimmer from being closed by click to force a user to make a choice</p>
       <div class="code" data-demo="true">
@@ -268,10 +308,13 @@ themes      : ['Default', 'Fixed-width']
 
     <div class="no example">
       <h4 class="ui header">Approve / Deny Callbacks</h4>
-      <p>Modals will automatically tie approve deny callbacks to any positive/approve, negative/deny or ok/cancel buttons. If a callback returns false it will prevent the modal from closing</p>
+      <p>Modals will automatically tie approve deny callbacks to any positive/approve, negative/deny or ok/cancel buttons.
+      <div class="ui info message">
+        If <code>onDeny</code> or <code>onApprove</code> returns false it will prevent the modal from closing
+      </div>
       <div class="code" data-demo="true">
       $('.basic.test.modal')
-        .modal('setting', {
+        .modal({
           closable  : false,
           onDeny    : function(){
             window.alert('Wait not yet!');
@@ -289,7 +332,7 @@ themes      : ['Default', 'Fixed-width']
     <div class="no example">
       <h4 class="ui header">Transitions</h4>
       <p>A modal can use any named ui transition.</p>
-      <div class="ui selection dropdown">
+      <div class="ui animation selection dropdown">
         <input type="hidden" name="transition">
         <div class="default text">Choose transition</div>
         <i class="dropdown icon"></i>
@@ -306,7 +349,6 @@ themes      : ['Default', 'Fixed-width']
       $('.selection.dropdown')
         .dropdown({
           onChange: function(value) {
-            alert($('.standard.test.modal').size());
             $('.standard.test.modal')
               .modal('setting', 'transition', value)
               .modal('show')

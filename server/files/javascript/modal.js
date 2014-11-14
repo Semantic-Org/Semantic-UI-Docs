@@ -14,10 +14,10 @@ semantic.modal.ready = function() {
 
   };
 
-    $('.selection')
+    $('.animation.dropdown')
       .dropdown({
         onChange: function(value) {
-          $('.test.modal')
+          $('.standard.test.modal')
             .modal('setting', 'transition', value)
             .modal('show')
           ;

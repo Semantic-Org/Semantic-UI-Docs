@@ -82,7 +82,7 @@
             </div>
             <h5 class="ui header">Git</h5>
             <div class="ui fluid input">
-              <input type="text" readonly="readonly" placeholder="Copy Link" value="git@github.com:Semantic-Org/Semantic-UI.git">
+              <input type="text" readonly="readonly" placeholder="Copy Link" value="https://github.com/Semantic-Org/Semantic-UI.git">
             </div>
           </div>
         </div>
@@ -103,7 +103,7 @@
             </div>
             <h5 class="ui header">Git</h5>
             <div class="ui fluid input">
-              <input type="text" readonly="readonly" placeholder="Copy Link" value="git@github.com:Semantic-Org/UI-<%=@document.title %>.git">
+              <input type="text" readonly="readonly" placeholder="Copy Link" value="https://github.com/Semantic-Org/UI-<%=@document.title %>.git">
             </div>
           </div>
         </div>

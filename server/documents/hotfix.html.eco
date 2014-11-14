@@ -10,340 +10,41 @@ type   : 'Library'
 <!-- TEST JS HERE !-->
 <script>
 $(document).ready(function() {
-
-    $(".ui.dropdown").dropdown();
+    // Add javascript here
+    $(".ui.hotfix.modal").modal("attach events",".ui.test.button","show");
+    $(".ui.hotfix.modal .ui.button.btn1").click(function(){
+        $(".ui.hotfix.modal .content .empty_container").empty().append("<div style=\"height:10em;\"></div>");
+        $(".ui.hotfix.modal .content .body_style").text("body style:"+$("body").attr("style"));
+    });
+    $(".ui.hotfix.modal .ui.button.btn2").click(function(){
+        $(".ui.hotfix.modal .content .empty_container").empty().append("<div style=\"height:60em;\"></div>");
+        $(".ui.hotfix.modal .content .body_style").text("body style:"+$("body").attr("style"));
+    });
 });
 </script>
 
 <!-- TEST CSS HERE !-->
 <style type="text/css">
-/* set color to transparent so overlap content can be seen */
-.ui.test.sidebar.left {
-     background-color: rgba(255, 0, 0, 0.5);
+.ui.hotfix.modal .content .body_style {
+    display:block;
 }
-
-.ui.test.sidebar.right {
-     background-color: rgba(0, 0, 255, 0.5);
+.ui.hotfix.modal .content .empty_container {
+    width: 100%;
+    display: block;
 }
 </style>
 
 <div class="main container">
-<div class="ui tab active" data-tab="inverted">
-            <h2>Types</h2>
+<a class="ui test button">Click Me</a>
 
-            <p>Full segment</p>
-
-        <div class="ui top attached inverted segment">
-
-        <h2 class="ui header">Header</h2>
-
-        </div>
-        <div class="ui attached red inverted segment">
-
-        <p><img class="ui wireframe image" src="images/short-paragraph.png"></p>
-
-        </div>
-        <div class="ui bottom attached inverted segment">
-
-        <p>Footer</p>
-
-        </div>
-
-
-            <p>Without header/content/footer</p>
-
-        <div class="ui top attached inverted segment">
-
-        <p><img class="ui wireframe image" src="images/short-paragraph.png"></p>
-
-        </div>
-        <div class="ui bottom attached inverted segment">
-
-        <p>Footer</p>
-
-        </div>
-
-
-        <div class="ui top attached inverted segment">
-
-        <h2 class="ui header">Header</h2>
-
-        </div>
-        <div class="ui bottom attached inverted segment">
-
-        <p>Footer</p>
-
-        </div>
-
-
-        <div class="ui top attached inverted segment">
-
-        <h2 class="ui header">Header</h2>
-
-        </div>
-        <div class="ui bottom attached inverted segment">
-
-        <p><img class="ui wireframe image" src="images/short-paragraph.png"></p>
-
-        </div>
-
-
-            <p>Only header/content/footer</p>
-
-        <div class="ui inverted segment">
-
-        <h2 class="ui header">Header</h2>
-
-        </div>
-
-
-        <div class="ui inverted segment">
-
-        <p><img class="ui wireframe image" src="images/short-paragraph.png"></p>
-
-        </div>
-
-
-        <div class="ui inverted segment">
-
-        <p>Footer</p>
-
-        </div>
-
-
-            <p>Multiple content</p>
-
-        <div class="ui top attached inverted segment">
-
-        <h2 class="ui header">Header</h2>
-
-        </div>
-        <div class="ui attached inverted segment">
-
-        <p><img class="ui wireframe image" src="images/short-paragraph.png"></p>
-
-        </div>
-        <div class="ui attached inverted segment">
-
-        <p><img class="ui wireframe image" src="images/short-paragraph.png"></p>
-
-        </div>
-        <div class="ui bottom attached inverted segment">
-
-        <p>Footer</p>
-
-        </div>
-
-
-            <h2>Count in the row</h2>
-
-            <p>One in the row</p>
-
-        <div class="ui top attached inverted segment">
-
-        <h2 class="ui header">Header</h2>
-
-        </div>
-        <div class="ui attached inverted segment">
-
-        <p><img class="ui wireframe image" src="images/short-paragraph.png"></p>
-
-        </div>
-        <div class="ui bottom attached inverted segment">
-
-        <p>Footer</p>
-
-        </div>
-
-
-            <p>Some segments in the row</p>
-            <div class="ui three column grid">
-                <div class="column">
-
-        <div class="ui top attached inverted segment">
-
-        <h2 class="ui header">Header</h2>
-
-        </div>
-        <div class="ui attached inverted segment">
-
-        <p><img class="ui wireframe image" src="images/short-paragraph.png"></p>
-
-        </div>
-        <div class="ui bottom attached inverted segment">
-
-        <p>Footer</p>
-
-        </div>
-
-                </div>
-                <div class="column">
-
-        <div class="ui top attached inverted segment">
-
-        <h2 class="ui header">Header</h2>
-
-        </div>
-        <div class="ui attached inverted segment">
-
-        <p><img class="ui wireframe image" src="images/short-paragraph.png"></p>
-
-        </div>
-        <div class="ui bottom attached inverted segment">
-
-        <p>Footer</p>
-
-        </div>
-
-                </div>
-                <div class="column">
-
-        <div class="ui top attached inverted segment">
-
-        <h2 class="ui header">Header</h2>
-
-        </div>
-        <div class="ui attached inverted segment">
-
-        <p><img class="ui wireframe image" src="images/short-paragraph.png"></p>
-
-        </div>
-        <div class="ui bottom attached inverted segment">
-
-        <p>Footer</p>
-
-        </div>
-
-                </div>
-            </div>
-            <div class="ui six column grid">
-                <div class="column">
-
-        <div class="ui top attached inverted segment">
-
-        <h2 class="ui header">Header</h2>
-
-        </div>
-        <div class="ui attached inverted segment">
-
-        <p><img class="ui wireframe image" src="images/short-paragraph.png"></p>
-
-        </div>
-        <div class="ui bottom attached inverted segment">
-
-        <p>Footer</p>
-
-        </div>
-
-                </div>
-                <div class="column">
-
-        <div class="ui top attached inverted segment">
-
-        <h2 class="ui header">Header</h2>
-
-        </div>
-        <div class="ui attached inverted segment">
-
-        <p><img class="ui wireframe image" src="images/short-paragraph.png"></p>
-
-        </div>
-        <div class="ui bottom attached inverted segment">
-
-        <p>Footer</p>
-
-        </div>
-
-                </div>
-                <div class="column">
-
-        <div class="ui top attached inverted segment">
-
-        <h2 class="ui header">Header</h2>
-
-        </div>
-        <div class="ui attached inverted segment">
-
-        <p><img class="ui wireframe image" src="images/short-paragraph.png"></p>
-
-        </div>
-        <div class="ui bottom attached inverted segment">
-
-        <p>Footer</p>
-
-        </div>
-
-                </div>
-                <div class="column">
-
-        <div class="ui top attached inverted segment">
-
-        <h2 class="ui header">Header</h2>
-
-        </div>
-        <div class="ui attached inverted segment">
-
-        <p><img class="ui wireframe image" src="images/short-paragraph.png"></p>
-
-        </div>
-        <div class="ui bottom attached inverted segment">
-
-        <p>Footer</p>
-
-        </div>
-
-                </div>
-                <div class="column">
-
-        <div class="ui top attached inverted segment">
-
-        <h2 class="ui header">Header</h2>
-
-        </div>
-        <div class="ui attached inverted segment">
-
-        <p><img class="ui wireframe image" src="images/short-paragraph.png"></p>
-
-        </div>
-        <div class="ui bottom attached inverted segment">
-
-        <p>Footer</p>
-
-        </div>
-
-                </div>
-                <div class="column">
-
-        <div class="ui top attached inverted segment">
-
-        <h2 class="ui header">Header</h2>
-
-        </div>
-        <div class="ui attached inverted segment">
-
-        <p><img class="ui wireframe image" src="images/short-paragraph.png"></p>
-
-        </div>
-        <div class="ui bottom attached inverted segment">
-
-        <p>Footer</p>
-
-        </div>
-
-                </div>
-            </div>
-        </div>
 </div>
-
-<div class="ui test sidebar left">
-   LEFT
-</div>
-
-<div class="ui test sidebar top">
-    TOP
-</div>
-
-
-<div class="ui test sidebar right">
-    RIGHT
+<div class="ui hotfix modal">
+    <i class="close icon"></i>
+    <div class="header">Modal</div>
+    <div class="content">
+        <span class="body_style"></span>
+        <a class="ui btn1 button" title="Set modal height to 10em">Button 1</a>
+        <a class="ui btn2 button" title="Set modal height to 60em">Button 2</a>
+        <div class="empty_container"></div>
+    </div>
 </div>

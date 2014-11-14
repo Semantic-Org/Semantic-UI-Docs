@@ -292,14 +292,15 @@ themes      : ['Default']
         <div class="column"><i class="crop icon"></i>Crop</div>
       </div>
       <div class="existing code">
-        <i class="child icon"></i>
-        <i class="doctor icon"></i>
-        <i class="female icon"></i>
-        <i class="handicap icon"></i>
-        <i class="male icon"></i>
-        <i class="student icon"></i>
-        <i class="user icon"></i>
-        <i class="users icon"></i>
+        <i class="grid layout icon"></i>
+        <i class="list layout icon"></i>
+        <i class="block layout icon"></i>
+        <i class="zoom icon"></i>
+        <i class="zoom out icon"></i>
+        <i class="resize vertical icon"></i>
+        <i class="resize horizontal icon"></i>
+        <i class="maximize icon"></i>
+        <i class="crop icon"></i>
       </div>
     </div>
 

@@ -120,15 +120,15 @@ themes      : ['Default', 'Fixed-width']
       <div class="description">
         <div class="ui header">Modal Header</div>
         <p>This is an example of expanded content that will cause the modal's dimmer to scroll</p>
-        <img src="/images/wireframe/paragraph.png">
-        <img src="/images/wireframe/paragraph.png">
-        <img src="/images/wireframe/paragraph.png">
-        <img src="/images/wireframe/paragraph.png">
-        <img src="/images/wireframe/paragraph.png">
-        <img src="/images/wireframe/paragraph.png">
-        <img src="/images/wireframe/paragraph.png">
-        <img src="/images/wireframe/paragraph.png">
-        <img src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
       </div>
     </div>
     <div class="actions">

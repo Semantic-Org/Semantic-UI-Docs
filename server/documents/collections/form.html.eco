@@ -28,7 +28,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
         <a href="/modules/checkbox.html">checkboxes</a>, and <a href="/collections/message.html">message blocks</a>.
     </p>
     <div class="ui ignored warning message">
-      <p>If you are looking for form validation, you should check out <a href="/modules/form.html">form validation</a>.</p>
+      <p>If you are looking for form validation, you should check out <a href="/behaviors/form.html">form validation</a>.</p>
     </div>
     <div class="ui ignored hidden divider"></div>
     <div class="ui form">

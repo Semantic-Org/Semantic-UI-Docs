@@ -100,6 +100,14 @@ themes      : ['Default']
     <h2 class="ui dividing header">Variations</h2>
 
     <div class="example">
+      <h4 class="ui header">Basic</h4>
+      <p>A popup can provide more basic formatting</p>
+      <div class="ui icon button" data-content="The default theme's basic popup removes the pointing arrow." data-variation="basic">
+        <i class="add icon"></i>
+      </div>
+    </div>
+
+    <div class="example">
       <h4 class="ui header">Width</h4>
       <p>A popup can be extra wide to allow for longer content</p>
       <i class="circular heart icon link" data-content="Hello. This is a wide pop-up which allows for lots of content with additional space. You can fit a lot of words here and the paragraphs will be pretty wide." data-variation="wide"></i>
@@ -287,6 +295,10 @@ themes      : ['Default']
         <tr>
           <td>exists</td>
           <td>Returns whether popup is created and inserted into the page</td>
+        </tr>
+        <tr>
+          <td>reposition</td>
+          <td>Adjusts popup when content size changes (only necessary for centered popups)</td>
         </tr>
         <tr>
           <td>set position(position)</td>
@@ -584,7 +596,7 @@ themes      : ['Default']
         <tr>
           <td>duration</td>
           <td>
-            250
+            200
           </td>
           <td>Duration of animation events</td>
         </tr>
@@ -592,6 +604,11 @@ themes      : ['Default']
           <td>hideOnScroll</td>
           <td>true</td>
           <td>Whether popup should hide on scroll and touchmove</td>
+        </tr>
+        <tr>
+          <td>hoverable</td>
+          <td>false</td>
+          <td>Whether popup should not close on hover (useful for popup navigation menus)</td>
         </tr>
         <tr>
           <td>closable</td>
@@ -617,6 +634,58 @@ themes      : ['Default']
           <td>maxSearchDepth</td>
           <td>10</td>
           <td>Number of iterations before giving up search for popup position when a popup cannot fit on screen</td>
+        </tr>
+      </tbody>
+    </table>
+
+     <h4 class="ui header">Callbacks</h4>
+    <p>Callbacks specify a function to occur after a specific behavior.</p>
+
+    <table class="ui celled sortable definition table segment">
+      <thead>
+        <tr>
+          <th class="four wide"></th>
+          <th class="four wide">Parameters</th>
+          <th>Context</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>onCreate</td>
+          <td>$module</td>
+          <td>$popup</td>
+          <td>Callback on popup element creation, with created popup</td>
+        </tr>
+        <tr>
+          <td>onRemove</td>
+          <td>$module</td>
+          <td>$popup</td>
+          <td>Callback immediately before Popup is removed from DOM</td>
+        </tr>
+        <tr>
+          <td>onShow</td>
+          <td>$module</td>
+          <td>$popup</td>
+          <td>Callback before popup is shown</td>
+        </tr>
+        <tr>
+          <td>onVisible</td>
+          <td>$module</td>
+          <td>$popup</td>
+          <td>Callback after popup is shown</td>
+        </tr>
+        <tr>
+          <td>onHide</td>
+          <td>$module</td>
+          <td>$popup</td>
+          <td>Callback before popup is hidden</td>
+        </tr>
+        <tr>
+          <td>onHidden</td>
+          <td>$module</td>
+          <td>$popup</td>
+          <td>Callback after popup is hidden</td>
         </tr>
       </tbody>
     </table>

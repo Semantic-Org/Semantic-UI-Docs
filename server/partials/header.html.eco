@@ -43,11 +43,11 @@
       </div>
       <% end %>
       <% if @document.type is 'UI Element' or @document.type is 'UI View' or @document.type is 'UI Collection' or @document.type is 'UI Module': %>
-      <div class="ui download disabled button">
+      <div class="ui download button">
         Download
       </div>
-      <div class="ui flowing download popup">
-        <div class="ui divided equal height relaxed center aligned first grid">
+      <div class="ui flowing download basic popup">
+        <div class="ui divided equal height relaxed center aligned choice grid">
           <div class="framework column">
             <h4 class="ui center aligned header">With Framework</h4>
             <div class="ui list">
@@ -67,43 +67,60 @@
         </div>
         <div class="ui divided equal height relaxed center aligned framework grid">
           <div class="column">
-            <div class="ui header">Standalone</div>
-            <a class="ui button" href="https://github.com/Semantic-Org/Semantic-UI/archive/master.zip">
-              Download Zip
+            <div class="ui header">Semantic UI</div>
+            <a class="ui primary button" href="https://github.com/Semantic-Org/Semantic-UI/archive/master.zip">
+              Download ZIP
             </a>
+            <a class="ui button" href="http://learnsemantic.com/guide/expert.html">Getting Started</a>
             <h4 class="ui header">Package Managers</h4>
-            <h5 class="ui header">Bower</h5>
-            <div class="ui fluid input">
-              <input type="text" readonly="readonly" placeholder="Copy Link" value="bower install semantic-ui">
-            </div>
-            <h5 class="ui header">NPM</h5>
-            <div class="ui fluid input">
-              <input type="text" readonly="readonly" placeholder="Copy Link" value="npm install semantic-ui">
-            </div>
-            <h5 class="ui header">Git</h5>
-            <div class="ui fluid input">
-              <input type="text" readonly="readonly" placeholder="Copy Link" value="https://github.com/Semantic-Org/Semantic-UI.git">
+            <div class="ui form">
+              <div class="field">
+                <label>Bower</label>
+                <div class="ui fluid input">
+                  <input type="text" readonly="readonly" placeholder="Copy Link" value="bower install semantic-ui">
+                </div>
+              </div>
+              <div class="field">
+                <label>NPM</label>
+                <div class="ui fluid input">
+                  <input type="text" readonly="readonly" placeholder="Copy Link" value="npm install semantic-ui">
+                </div>
+              </div>
+              <div class="field">
+                <label>Git</label>
+                <div class="ui fluid input">
+                  <input type="text" readonly="readonly" placeholder="Copy Link" value="https://github.com/Semantic-Org/Semantic-UI.git">
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <div class="ui divided equal height relaxed center aligned standalone grid">
           <div class="column">
-            <div class="ui header">Standalone</div>
+            <div class="ui header">Standalone <%=@document.title %></div>
             <a class="ui button" href="https://github.com/Semantic-Org/UI-<%=@document.title %>/archive/master.zip">
-              Download Zip
+              Download ZIP
             </a>
             <h4 class="ui header">Package Managers</h4>
-            <h5 class="ui header">Bower</h5>
-            <div class="ui fluid input">
-              <input type="text" readonly="readonly" placeholder="Copy Link" value="bower install semantic-ui-<%=@document.element %>">
-            </div>
-            <h5 class="ui header">NPM</h5>
-            <div class="ui fluid input">
-              <input type="text" readonly="readonly" placeholder="Copy Link" value="npm install semantic-ui-<%=@document.element %>">
-            </div>
-            <h5 class="ui header">Git</h5>
-            <div class="ui fluid input">
-              <input type="text" readonly="readonly" placeholder="Copy Link" value="https://github.com/Semantic-Org/UI-<%=@document.title %>.git">
+            <div class="ui form">
+              <div class="field">
+                <label>Bower</label>
+                <div class="ui fluid input">
+                  <input type="text" readonly="readonly" placeholder="Copy Link" value="bower install semantic-ui-<%=@document.element %>">
+                </div>
+              </div>
+              <div class="field">
+                <label>NPM</label>
+                <div class="ui fluid input">
+                  <input type="text" readonly="readonly" placeholder="Copy Link" value="npm install semantic-ui-<%=@document.element %>">
+                </div>
+              </div>
+              <div class="field">
+                <label>Git</label>
+                <div class="ui fluid input">
+                  <input type="text" readonly="readonly" placeholder="Copy Link" value="https://github.com/Semantic-Org/UI-<%=@document.title %>.git">
+                </div>
+              </div>
             </div>
           </div>
         </div>

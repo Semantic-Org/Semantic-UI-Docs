@@ -56,7 +56,9 @@ semantic.ready = function() {
     $languageModal       = $('.language.modal'),
 
     $downloadPopup       = $('.download.button'),
+    $downloads           = $('.download.popup'),
     $downloadFramework   = $('.framework.column .button'),
+    $downloadInput       = $('.download.popup input'),
     $downloadStandalone  = $('.standalone.column .button'),
 
     $helpPopup           = $('.header .help.icon'),
@@ -853,6 +855,39 @@ semantic.ready = function() {
 
     },
 
+    resetDownloads: function() {
+      $downloads
+        .find('.grid')
+        .hide()
+        .filter('.choice.grid')
+          .css('display', 'table')
+      ;
+    },
+
+    selectAll: function () {
+      this.setSelectionRange(0, this.value.length);
+    },
+
+    chooseStandalone: function() {
+      $downloads
+        .find('.grid')
+        .hide()
+        .filter('.standalone.grid')
+          .css('display', 'table')
+      ;
+      $downloadPopup.popup('reposition');
+    },
+
+    chooseFramework: function() {
+      $downloads
+        .find('.grid')
+        .hide()
+        .filter('.framework.grid')
+          .css('display', 'table')
+      ;
+      $downloadPopup.popup('reposition');
+    },
+
     swapStyle: function() {
       var
         theme = $(this).data('theme')
@@ -976,11 +1011,17 @@ semantic.ready = function() {
     .each(handler.createCode)
   ;
 
-/*  $downloadPopup
+  $downloadPopup
     .popup({
-      position: 'bottom left',
-      on: 'click'
+      transition : 'horizontal flip',
+      duration   : 350,
+      position   : 'bottom center',
+      on         : 'click',
+      onHidden   : handler.resetDownloads
     })
+  ;
+  $downloadInput
+    .on('mouseup', handler.selectAll)
   ;
   $downloadFramework
     .on('click', handler.chooseFramework)
@@ -988,7 +1029,7 @@ semantic.ready = function() {
   $downloadStandalone
     .on('click', handler.chooseStandalone)
   ;
-*/
+
   $themeDropdown
     .dropdown({
       action: 'select',

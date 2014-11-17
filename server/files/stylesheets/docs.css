@@ -25,28 +25,8 @@ h3::selection {
              Global
 *******************************/
 
-html,
-body {
-  font-size: 14px;
-}
-
-body#example {
-  background: #F9F9F9;
-  margin: 0px;
-  padding: 0px;
-  color: #555555;
-  font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
-}
 body > .content  {
   background: #FCFCFC url(../images/bg.jpg) repeat;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-family: "Lato", "Helvetica Neue", "Helvetica", "Arial", sans-serif/*rtl:prepend:"Droid Arabic Kufi","Droid Sans", */;
 }
 
 pre {
@@ -61,21 +41,6 @@ pre {
   text-align: left;
 }
 
-p:first-child {
-  margin-top: 0em;
-}
-p:last-child {
-  margin-bottom: 0em;
-}
-/* links */
-a {
-  color: #009FDA;
-  text-decoration: none;
-}
-a:hover {
-  color: #00BAFF;
-}
-
 
 ul.list {
   list-style-type: disc;
@@ -84,13 +49,6 @@ ul.list li {
   list-style-position: outside;
 }
 
-
-/* text and headers */
-h1 {
-  margin: 0px 0px 20px;
-  padding: 50px 0px 5px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
 
 /*rtl:ignore*/
 pre.console {
@@ -947,6 +905,10 @@ body#example.hide {
   -moz-animation: none;
   -ms-animation: none;
   animation: none;
+}
+
+#example.site .colors.example .column {
+  min-height: 100px;
 }
 
 @-webkit-keyframes grid {

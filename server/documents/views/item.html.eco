@@ -34,7 +34,7 @@ themes      : ['Default']
     <div class="ui items">
       <div class="item">
         <div class="image">
-          <img src="/images/movies/12years-horizontal.jpg">
+          <img src="/images/wireframe/image.png">
         </div>
         <div class="content">
           <a class="header">12 Years a Slave</a>
@@ -53,7 +53,7 @@ themes      : ['Default']
       </div>
       <div class="item">
         <div class="image">
-          <img src="/images/movies/totoro-horizontal.jpg">
+          <img src="/images/wireframe/image.png">
         </div>
         <div class="content">
           <a class="header">My Neighbor Totoro</a>
@@ -74,7 +74,7 @@ themes      : ['Default']
       </div>
       <div class="item">
         <div class="image">
-          <img src="/images/movies/watchmen-horizontal.jpg">
+          <img src="/images/wireframe/image.png">
         </div>
         <div class="content">
           <a class="header">Watchmen</a>
@@ -110,17 +110,17 @@ themes      : ['Default']
     <div class="ui items">
       <div class="item">
         <div class="image">
-          <img src="/images/movies/12years-horizontal.jpg">
+          <img src="/images/wireframe/image.png">
         </div>
       </div>
       <div class="item">
         <div class="image">
-          <img src="/images/movies/totoro-horizontal.jpg">
+          <img src="/images/wireframe/image.png">
         </div>
       </div>
       <div class="item">
         <div class="image">
-          <img src="/images/movies/watchmen-horizontal.jpg">
+          <img src="/images/wireframe/image.png">
         </div>
       </div>
     </div>
@@ -154,7 +154,7 @@ themes      : ['Default']
     <div class="ui items">
       <div class="item">
         <div class="image">
-          <img src="/images/movies/12years-horizontal.jpg">
+          <img src="/images/wireframe/image.png">
         </div>
         <div class="content">
           <a class="header">12 Years a Slave</a>
@@ -165,7 +165,7 @@ themes      : ['Default']
       </div>
       <div class="item">
         <div class="image">
-          <img src="/images/movies/totoro-horizontal.jpg">
+          <img src="/images/wireframe/image.png">
         </div>
         <div class="content">
           <a class="header">My Neighbor Totoro</a>
@@ -176,7 +176,7 @@ themes      : ['Default']
       </div>
       <div class="item">
         <div class="image">
-          <img src="/images/movies/watchmen-horizontal.jpg">
+          <img src="/images/wireframe/image.png">
         </div>
         <div class="content">
           <a class="header">Watchmen</a>
@@ -382,7 +382,7 @@ themes      : ['Default']
     <div class="ui divided items">
       <div class="item">
         <div class="image">
-          <img src="/images/movies/12years-horizontal.jpg">
+          <img src="/images/wireframe/image.png">
         </div>
         <div class="content">
           <a class="header">12 Years a Slave</a>
@@ -393,7 +393,7 @@ themes      : ['Default']
       </div>
       <div class="item">
         <div class="image">
-          <img src="/images/movies/totoro-horizontal.jpg">
+          <img src="/images/wireframe/image.png">
         </div>
         <div class="content">
           <a class="header">My Neighbor Totoro</a>
@@ -404,7 +404,7 @@ themes      : ['Default']
       </div>
       <div class="item">
         <div class="image">
-          <img src="/images/movies/watchmen-horizontal.jpg">
+          <img src="/images/wireframe/image.png">
         </div>
         <div class="content">
           <a class="header">Watchmen</a>

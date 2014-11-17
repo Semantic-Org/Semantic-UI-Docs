@@ -7,6 +7,7 @@ elementType : 'global'
 title       : 'Site'
 description : 'A site is a set of global constraints that define the basic parameters of all UI elements'
 type        : 'UI Global'
+themes      : ['Default', 'Material']
 
 ---
 <link rel="stylesheet/less" type="text/css" href="/src/definitions/globals/site.less" />
@@ -31,24 +32,18 @@ type        : 'UI Global'
   <div class="example">
 
     <h4 class="ui header">Headers</h4>
-    <p>A site can define font stylingsd for page headers</p>
+    <p>A site can define styles for headers</p>
 
     <h1>First Header</h1>
-    <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
     <h2>Second Header</h2>
-    <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
     <h3>Third Header</h3>
-    <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
     <h4>Fourth Header</h4>
-    <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
     <h5>Fifth Header</h5>
-    <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-
   </div>
 
   <div class="example">
     <h4 class="ui header">Page Font</h4>
-    <p>A site can specify font stylings for all page content.</p>
+    <p>A site can specify styles for page content.</p>
 
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel tincidunt eros, nec venenatis ipsum. Nulla hendrerit urna ex, id sagittis mi scelerisque vitae. Vestibulum posuere rutrum interdum. Sed ut ullamcorper odio, non pharetra eros. Aenean sed lacus sed enim ornare vestibulum quis a felis. Sed cursus nunc sit amet mauris sodales tempus. Nullam mattis, dolor non posuere commodo, sapien ligula hendrerit orci, non placerat erat felis vel dui. Cras vulputate ligula ut ex tincidunt tincidunt. Maecenas eget gravida lorem. Nunc nec facilisis risus. Mauris congue elit sit amet elit varius mattis. Praesent convallis placerat magna, a bibendum nibh lacinia non.</p>
 
@@ -59,15 +54,15 @@ type        : 'UI Global'
 
   <div class="example">
     <h4 class="ui header">Text Selection</h4>
-    <p>A site can specify text selection color.</p>
+    <p>A site can specify text selection styles.</p>
     <div class="ui message ignored">Highlight the text below with your cursor to see a demonstration</div>
 
     <p>Fusce mollis sagittis elit ut maximus. Nullam blandit lacus sit amet luctus euismod. Duis luctus leo vel consectetur consequat. Phasellus ex ligula, pellentesque et neque vitae, elementum placerat eros. Proin eleifend odio nec velit lacinia suscipit. Morbi mollis ante nec dapibus gravida. In tincidunt augue eu elit porta, vel condimentum purus posuere. Maecenas tincidunt, erat sed elementum sagittis, tortor erat faucibus tellus, nec molestie mi purus sit amet tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris a tincidunt metus. Fusce congue metus aliquam ex auctor eleifend.</p>
 
   </div>
   <div class="example">
-    <h4 class="ui header">Paragraph</h4>
-    <p>A site can define spacing for paragraphed text content</p>
+    <h4 class="ui header">Spacing</h4>
+    <p>A site can define default spacing for headers and paragraphs</p>
 
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel tincidunt eros, nec venenatis ipsum. Nulla hendrerit urna ex, id sagittis mi scelerisque vitae. Vestibulum posuere rutrum interdum. Sed ut ullamcorper odio, non pharetra eros. Aenean sed lacus sed enim ornare vestibulum quis a felis. Sed cursus nunc sit amet mauris sodales tempus. Nullam mattis, dolor non posuere commodo, sapien ligula hendrerit orci, non placerat erat felis vel dui. Cras vulputate ligula ut ex tincidunt tincidunt. Maecenas eget gravida lorem. Nunc nec facilisis risus. Mauris congue elit sit amet elit varius mattis. Praesent convallis placerat magna, a bibendum nibh lacinia non.</p>
 

@@ -102,6 +102,10 @@ a:hover {
   color: #00BAFF;
 }
 
+.less-error-message {
+  /*display: none !important;*/
+}
+
 /*--------------
      Sidebar
 ---------------*/

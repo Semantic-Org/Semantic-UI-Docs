@@ -385,7 +385,7 @@ semantic.ready = function() {
             line = $.trim(line);
             // match variables only
             if(line[0] == '@') {
-              name = line.match(/^@(.+):/);
+              name = line.match(/^@(.+?):/);
               value = line.match(/:\s*([\s|\S]+?;)/);
               if( ($.isArray(name) && name.length >= 2) && ($.isArray(value) && value.length >= 2) ) {
                 name = name[1];

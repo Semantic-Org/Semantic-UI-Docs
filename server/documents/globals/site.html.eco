@@ -182,7 +182,7 @@ type        : 'UI Global'
     <h4 class="ui header">Sizes</h4>
     <p>A site can define a root em size, used for providing relative sizes for the rest of a site's content</p>
     <div class="ui info message">
-      <code>em</code> and <code>rem</code> are special units used to provide relative measurements for elements. <code>1 em</code> defines what baseline size, <code>medium</code>, is for UI elements. Most elements are sized in <code>rem</code> which are affected by this value, however some UI can also be defined using <code>em</code> which will be based on the surrounding font size of the parent element.</p>
+      <code>em</code> and <code>rem</code> are special units used to provide relative measurements for elements. <code>1em</code> defines what baseline size, <code>medium</code>, is for UI elements. Most elements are sized in <code>rem</code> which are affected by this value, however some UI can also be defined using <code>em</code> which will be based on the surrounding font size of the parent element.</p>
     </div>
 
     <h3 class="ui header">Examples of Absolutely Sized UI</h3>
@@ -197,11 +197,14 @@ type        : 'UI Global'
     <div style="font-size: 18px;">
       <p>Larger content container</p>
       <div class="ui bulleted link list">
-        <a class="item">Relatively Sized</a>
-        <a class="item">Relatively Sized</a>
-        <a class="item">Relatively Sized</a>
-        <a class="item">Relatively Sized</a>
-        <a class="item">Relatively Sized</a>
+        <a class="item">List Item</a>
+        <a class="item">List Item</a>
+        <a class="item">List Item</a>
+        <a class="item">List Item</a>
+        <a class="item">List Item</a>
+      </div>
+      <div class="ui message">
+        <p>Message</p>
       </div>
     </div>
   </div>

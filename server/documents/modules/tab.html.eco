@@ -304,15 +304,15 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="first example">
+    <div class="paths example">
 
       <h4 class="ui header">Default Paths</h4>
       <p>When you specify a path like <code>first/</code> after opening the tab it will look for the any child paths and open the first. In this example even if the path is <code>first/</code>, the tab corresponding with <code>first/a</code> will automatically also be open because it is the default child tab. This will work recursively for as many additional child tab groups as you include.</p>
       <div class="ui info message">Each of these examples is initialized with a context to prevent contamination with other tab examples on this page. This is not necessary unless using multiple tab systems on a single page.</div>
       <div class="ignored code" data-type="javascript">
-      $('.first.example .menu .item')
+      $('.paths.example .menu .item')
         .tab({
-          context: '.first.example'
+          context: '.paths.example'
         })
       ;
       </div>
@@ -513,7 +513,7 @@ themes      : ['Default']
         <tr>
           <td>context</td>
           <td>false</td>
-          <td>Pass a selector to limit tabs to children of this element</td>
+          <td>Tabs are limited to those found inside this context</td>
         </tr>
         <tr>
           <td>childrenOnly</td>
@@ -594,7 +594,8 @@ themes      : ['Default']
           <td>
             <div class="code">
             selector    : {
-              tabs : '.ui.tab'
+              tabs : '.ui.tab',
+              parent : '.ui:not(.menu)'
             }
             </div>
           </td>
@@ -619,8 +620,7 @@ themes      : ['Default']
             <div class="code">
             className   : {
               loading : 'loading',
-              active  : 'active',
-              ui      : 'ui'
+              active  : 'active'
             }
             </div>
           </td>

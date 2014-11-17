@@ -547,7 +547,7 @@ semantic.ready = function() {
       ;
       $body.removeClass('overview');
       $example.each(function() {
-        $(this).children().not('.ui.header:eq(0), .example p:eq(0)').show();
+        $(this).children().not('.ui.header:eq(0), .example p:eq(0)').css('display', '');
       });
       $example.filter('.another').removeAttr('style');
       $('.sticky').sticky('refresh');
@@ -690,13 +690,13 @@ semantic.ready = function() {
 
       if( ($demo.first().is(':visible') || type == 'developer') && type != 'designer' ) {
         $demo.hide();
-        $header.show();
+        $header.css('display', '');
         $annotation.fadeIn(500);
       }
       else {
         $annotation.hide();
         if($demo.size() > 1) {
-          $demo.show();
+          $demo.css('display','');
         }
         else {
           $demo.fadeIn(500);

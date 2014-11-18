@@ -1022,7 +1022,7 @@ body.progress.animated .ui.progress .bar {
   height: auto;
   padding: 0.5em !important;
 }
-#example .position.example .segment {
+#example .position.example .segment:not(.instructive) {
   width: 250px;
   height: 250px;
 }

@@ -1,0 +1,41 @@
+<div class="rating demos">
+  <div class="ui very relaxed items">
+    <div class="item">
+      <img class="ui avatar image" src="/images/wireframe/square-image.png">
+      <div class="content">
+        <div class="header">
+            Choice #1
+        </div>
+      <div class="ui star rating" data-rating="2" data-max-rating="4"></div>
+      </div>
+    </div>
+    <div class="item">
+      <img class="ui avatar image" src="/images/wireframe/square-image.png">
+      <div class="content">
+        <div class="header">
+            Choice #2
+        </div>
+      <div class="ui star rating" data-rating="3" data-max-rating="4"></div>
+      </div>
+    </div>
+    <div class="item">
+      <img class="ui avatar image" src="/images/wireframe/square-image.png">
+      <div class="content">
+        <div class="header">
+            Choice #3
+        </div>
+      <div class="ui star rating" data-rating="3" data-max-rating="4"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+$(document)
+  .ready(function() {
+    $('.rating.demos .rating')
+      .rating()
+    ;
+  })
+;
+</script>

@@ -194,8 +194,26 @@ description : 'Examples of all interface elements'
   </div>
   <div class="example">
     <h4 class="ui header">
+      <a href="/modules/modal.html">Modal</a>
+    </h4>
+    <%- @partial('examples/modal') %>
+  </div>
+  <div class="example">
+    <h4 class="ui header">
+      <a href="/modules/popup.html">Popup</a>
+    </h4>
+    <%- @partial('examples/popup') %>
+  </div>
+  <div class="example">
+    <h4 class="ui header">
       <a href="/modules/progress.html">Progress</a>
     </h4>
     <%- @partial('examples/progress') %>
+  </div>
+  <div class="example">
+    <h4 class="ui header">
+      <a href="/modules/rating.html">Rating</a>
+    </h4>
+    <%- @partial('examples/rating') %>
   </div>
 </div>

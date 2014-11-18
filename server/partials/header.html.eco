@@ -95,8 +95,11 @@
         <div class="ui divided equal height relaxed center aligned standalone grid">
           <div class="column">
             <div class="ui header">Standalone <%=@document.title %></div>
-            <a class="ui button" href="https://github.com/Semantic-Org/UI-<%=@document.title %>/archive/master.zip">
+            <a class="ui primary button" href="https://github.com/Semantic-Org/UI-<%=@document.title %>/archive/master.zip">
               Download ZIP
+            </a>
+            <a class="ui button" href="https://github.com/Semantic-Org/UI-<%=@document.title %>/">
+              View GitHub
             </a>
             <h4 class="ui header">Package Managers</h4>
             <div class="ui form">

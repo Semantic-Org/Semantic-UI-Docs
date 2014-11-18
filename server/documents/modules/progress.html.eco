@@ -33,8 +33,8 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
       </div>
       <div class="ignored">
         <div class="ui icon buttons">
-          <div class="increment ui basic green button"><i class="plus icon"></i></div>
           <div class="decrement ui basic red button"><i class="minus icon"></i></div>
+          <div class="increment ui basic green button"><i class="plus icon"></i></div>
         </div>
       </div>
     </div>
@@ -47,8 +47,8 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
       </div>
       <div class="ignored">
         <div class="ui icon buttons">
-          <div class="increment ui basic green button"><i class="plus icon"></i></div>
           <div class="decrement ui basic red button"><i class="minus icon"></i></div>
+          <div class="increment ui basic green button"><i class="plus icon"></i></div>
         </div>
       </div>
     </div>

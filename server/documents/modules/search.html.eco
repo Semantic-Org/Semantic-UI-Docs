@@ -7,14 +7,12 @@ elementType : 'module'
 title       : 'Search'
 description : 'A search module allows a user to query for results from a selection of data'
 type        : 'UI Module'
-
-status      : 'Incomplete'
 ---
 
 <link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/search.less" />
 <script src="/javascript/search.js"></script>
 
-<%- @partial('header', { tabs: 'module' }) %>
+<%- @partial('header', { tabs: { definition: 'Definition', usage: 'Usage', settings: 'Settings'} }) %>
 
 <div class="main container">
 

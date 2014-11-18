@@ -448,7 +448,7 @@ themes      : ['Default']
       </div>
       <div class="ui green test button">Hover Me</div>
       <div class="ui divider"></div>
-      <img class="medium ui test image" src="/images/demo/photo.jpg">
+      <img class="medium ui test image" src="/images/wireframe/image.png">
     </div>
     <div class="inline example">
       <h4 class="ui header">Inline or relative to page</h4>
@@ -602,13 +602,13 @@ themes      : ['Default']
         </tr>
         <tr>
           <td>hideOnScroll</td>
-          <td>true</td>
-          <td>Whether popup should hide on scroll and touchmove</td>
+          <td>auto</td>
+          <td>Whether popup should hide on scroll and touchmove, auto only hides for popups withohut <code>on:click</code></td>
         </tr>
         <tr>
           <td>setFluidWidth</td>
           <td>true</td>
-          <td>Whether popup should set fluid popup width manually on load to avoid <code>width: 100%</code> including padding</td>
+          <td>Whether popup should set fluid popup variation width on load to avoid <code>width: 100%</code> including padding</td>
         </tr>
         <tr>
           <td>hoverable</td>

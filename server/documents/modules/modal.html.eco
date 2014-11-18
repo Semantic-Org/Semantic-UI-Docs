@@ -9,7 +9,7 @@ title       : 'Modal'
 description : 'A modal displays content that temporarily blocks interactions with the main view of a site'
 type        : 'UI Module'
 
-themes      : ['Default', 'Fixed-width']
+themes      : ['Default', 'Material', 'Fixed-width']
 ---
 <link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/modal.less" />
 <script src="/javascript/modal.js"></script>

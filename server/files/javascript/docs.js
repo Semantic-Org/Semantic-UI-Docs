@@ -984,7 +984,7 @@ semantic.ready = function() {
     })
     .find('i.code')
       .popup({
-        position: 'top center',
+        position: 'top right',
         offset: -3,
         content: 'View Source'
       })
@@ -1000,7 +1000,7 @@ semantic.ready = function() {
           show: 300,
           hide: 100
         },
-        position : 'top center',
+        position : 'top right',
         offset   : -3,
         content  : 'View Source',
         target   : $example.eq(0).find('i.code')

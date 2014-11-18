@@ -606,6 +606,11 @@ themes      : ['Default']
           <td>Whether popup should hide on scroll and touchmove</td>
         </tr>
         <tr>
+          <td>setFluidWidth</td>
+          <td>true</td>
+          <td>Whether popup should set fluid popup width manually on load to avoid <code>width: 100%</code> including padding</td>
+        </tr>
+        <tr>
           <td>hoverable</td>
           <td>false</td>
           <td>Whether popup should not close on hover (useful for popup navigation menus)</td>

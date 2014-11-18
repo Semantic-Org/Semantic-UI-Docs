@@ -176,9 +176,15 @@ description : 'Examples of all interface elements'
   </div>
   <div class="example">
     <h4 class="ui header">
-      <a href="/modules/progress.html">Progress</a>
+      <a href="/modules/checkbox.html">Checkbox</a>
     </h4>
-    <%- @partial('examples/progress') %>
+    <%- @partial('examples/checkbox') %>
+  </div>
+  <div class="example">
+    <h4 class="ui header">
+      <a href="/modules/dimmer.html">Dimmer</a>
+    </h4>
+    <%- @partial('examples/dimmer') %>
   </div>
   <div class="example">
     <h4 class="ui header">
@@ -188,8 +194,8 @@ description : 'Examples of all interface elements'
   </div>
   <div class="example">
     <h4 class="ui header">
-      <a href="/modules/checkbox.html">Checkbox</a>
+      <a href="/modules/progress.html">Progress</a>
     </h4>
-    <%- @partial('examples/checkbox') %>
+    <%- @partial('examples/progress') %>
   </div>
 </div>

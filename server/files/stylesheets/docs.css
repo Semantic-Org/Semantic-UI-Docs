@@ -494,12 +494,13 @@ body#example.hide {
 }
 
 #example.basic .main.container {
+  background: transparent !important;
   border: none !important;
   box-shadow: none !important;
   padding: 2em 0em !important;
 }
 #example.basic > .pusher > .full.height {
-  background-color: #FFFFFF;
+  background-color: #F9F9F9;
 }
 #example.basic .main.container > .rail {
   display: none !important;

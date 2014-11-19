@@ -32,7 +32,7 @@ type        : 'UI Element'
   <div class="example">
     <h4 class="ui header">Rail</h4>
     <p class="header">A rail can be presented on the left or right side of content</p>
-    <div class="ui warning message">
+    <div class="ui ignored warning message">
       The following examples uses an arbitrarily sized content container. The rails may be hidden on small screen sizes, for the best experience, view these examples on a larger resolution screen.
     </div>
 
@@ -54,9 +54,6 @@ type        : 'UI Element'
   <div class="example">
     <h4 class="ui header">Internal</h4>
     <p class="header">A rail can be attach itself to the inside of the main viewport</p>
-    <div class="ui warning message">
-      The following examples uses an arbitrarily sized content container. The rails may be hidden on small screen sizes, for the best experience, view these examples on a larger resolution screen.
-    </div>
 
     <div class="ui segment" style="left: -150px; width: 960px;min-height: 300px;">
       <div class="ui left internal rail">
@@ -98,13 +95,31 @@ type        : 'UI Element'
     <p>A rail can appear without any separation from the main viewport</p>
     <div class="ui segment">
       <div class="ui left attached rail">
-        Left Rail Content
+        <div class="ui segment">
+          Left Rail Content
+        </div>
       </div>
       <div class="ui right attached rail">
-        Right Rail Content
+        <div class="ui segment">
+          Right Rail Content
+        </div>
       </div>
       <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
       <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui segment" style="left: -150px; width: 960px;min-height: 300px;">
+      <div class="ui left internal attached rail">
+        <div class="ui segment">
+          Left Rail Content
+        </div>
+      </div>
+      <div class="ui right internal attached rail">
+        <div class="ui segment">
+          Right Rail Content
+        </div>
+      </div>
     </div>
   </div>
 

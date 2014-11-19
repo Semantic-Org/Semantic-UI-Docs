@@ -985,7 +985,7 @@ semantic.ready = function() {
     .find('i.code')
       .popup({
         position: 'top right',
-        offset: -3,
+        offset: 5,
         content: 'View Source'
       })
       .on('click', handler.createCode)
@@ -1001,7 +1001,7 @@ semantic.ready = function() {
           hide: 100
         },
         position : 'top right',
-        offset   : -3,
+        offset   : 5,
         content  : 'View Source',
         target   : $example.eq(0).find('i.code')
       })

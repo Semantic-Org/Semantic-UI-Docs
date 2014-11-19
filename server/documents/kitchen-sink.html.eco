@@ -216,4 +216,17 @@ description : 'Examples of all interface elements'
     </h4>
     <%- @partial('examples/rating') %>
   </div>
+  <div class="example">
+    <h4 class="ui header">
+      <a href="/modules/search.html">Search</a>
+    </h4>
+    <%- @partial('examples/search') %>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">
+      <a href="/modules/shape.html">Shape</a>
+    </h4>
+    <%- @partial('examples/shape') %>
+  </div>
 </div>

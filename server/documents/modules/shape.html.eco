@@ -144,27 +144,29 @@ themes      : ['default']
 
   <div class="ui tab" data-tab="examples">
 
+    <h2 class="ui dividing header">Examples</h2>
+
     <div class="no example">
-      <h3 class="ui header">Shape Types</h3>
+      <h4 class="ui header">Shape Types</h4>
       <p>Shapes do not have to be regular or have its sides match up in length and width to animate correctly.</p>
 
       <h3 class="ui header">Shape</h3>
       <div class="ui type buttons">
-        <div class="active ui button" data-shape="rectangle">Rectangle</div>
+        <div class="active ui button" data-shape="auto">Auto</div>
         <div class="ui button" data-shape="square">Square</div>
         <div class="ui button" data-shape="irregular">Irregular</div>
       </div>
       <div class="ui divider"></div>
-      <div class="demo rectangle ui shape">
+      <div class="demo auto ui shape">
         <div class="sides">
-          <div class="active jira side">
-            <img src="/images/shape/jira.png">
+          <div class="active first side">
+            <img src="/images/leaves/1.png" class="ui medium image">
           </div>
-          <div class="heroku side">
-            <img src="/images/shape/heroku.png">
+          <div class="second side">
+            <img src="/images/leaves/3.png" class="ui medium image">
           </div>
-          <div class="quirky side">
-            <img src="/images/shape/quirky.png">
+          <div class="third side">
+            <img src="/images/leaves/5.png" class="ui medium image">
           </div>
         </div>
       </div>
@@ -181,127 +183,127 @@ themes      : ['default']
         <div class="ui button" title="Flip Back" data-animation="flip" data-direction="back"><i class="flipped retweet icon"></i></div>
       </div>
     </div>
+    <div class="no example">
+      <h4 class="ui header">Shape with Content</h4>
+      <p>Any type of element can be used as a side of a shape.</p>
 
-    <div class="ui clearing section divider"></div>
-
-    <h3 class="ui header">Shape with Content</h3>
-    <p>Any type of element can be used as a side of a shape.</p>
-    <div class="dog ui shape">
-      <div class="sides">
-        <div class="active side">
-          <div class="ui cards">
-            <div class="card">
-              <div class="image">
-                <a class="ui like corner label">
-                  <i class="like icon"></i>
-                </a>
-                <img src="/images/demo/highres2.jpg">
-              </div>
-              <div class="content">
-                <div class="header">Cute Dog</div>
-                <p class="description">This dog has some things going for it. Its pretty cute and looks like it'd be fun to cuddle up with.</p>
+      <div class="dog ui shape">
+        <div class="sides">
+          <div class="active side">
+            <div class="ui cards">
+              <div class="card">
+                <div class="image">
+                  <a class="ui like corner label">
+                    <i class="like icon"></i>
+                  </a>
+                  <img src="/images/demo/highres2.jpg">
+                </div>
+                <div class="content">
+                  <div class="header">Cute Dog</div>
+                  <p class="description">This dog has some things going for it. Its pretty cute and looks like it'd be fun to cuddle up with.</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="side">
-          <div class="ui cards">
-            <div class="card">
-              <div class="image">
-                <a class="ui like corner label">
-                  <i class="like icon"></i>
-                </a>
-                <img src="/images/demo/highres5.jpg">
-              </div>
-              <div class="content">
-                <div class="header">Silly Dog</div>
-                <p class="description">Silly dogs can be quite fun to have as companions. You never know what kind of ridiculous thing they will do.</p>
+          <div class="side">
+            <div class="ui cards">
+              <div class="card">
+                <div class="image">
+                  <a class="ui like corner label">
+                    <i class="like icon"></i>
+                  </a>
+                  <img src="/images/demo/highres5.jpg">
+                </div>
+                <div class="content">
+                  <div class="header">Silly Dog</div>
+                  <p class="description">Silly dogs can be quite fun to have as companions. You never know what kind of ridiculous thing they will do.</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="side">
-          <div class="ui cards">
-            <div class="card">
-              <div class="image">
-                <a class="ui like corner label">
-                  <i class="like icon"></i>
-                </a>
-                <img src="/images/demo/highres4.jpg">
-              </div>
-              <div class="content">
-                <div class="header">Faithful Dog</div>
-                <div class="meta">5 days ago</div>
-                <p class="description">Sometimes its more important to have a dog you know you can trust. But not every dog is trustworthy, you can tell by looking at its smile.</p>
+          <div class="side">
+            <div class="ui cards">
+              <div class="card">
+                <div class="image">
+                  <a class="ui like corner label">
+                    <i class="like icon"></i>
+                  </a>
+                  <img src="/images/demo/highres4.jpg">
+                </div>
+                <div class="content">
+                  <div class="header">Faithful Dog</div>
+                  <div class="meta">5 days ago</div>
+                  <p class="description">Sometimes its more important to have a dog you know you can trust. But not every dog is trustworthy, you can tell by looking at its smile.</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="dog ui shape">
-      <div class="sides">
-        <div class="active side">
-          <div class="ui cards">
-            <div class="card">
-              <div class="image">
-                <a class="ui like corner label">
-                  <i class="like icon"></i>
-                </a>
-                <img src="/images/demo/highres.jpg">
-              </div>
-              <div class="content">
-                <div class="header">Cute Dog</div>
-                <p class="description">This dog has some things going for it. Its pretty cute and looks like it'd be fun to cuddle up with.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="side">
-          <div class="ui cards">
-            <div class="card">
-              <div class="image">
-                <a class="ui like corner label">
-                  <i class="like icon"></i>
-                </a>
-                <img src="/images/demo/highres4.jpg">
-              </div>
-              <div class="content">
-                <div class="header">Silly Dog</div>
-                <p class="description">Silly dogs can be quite fun to have as companions. You never know what kind of ridiculous thing they will do.</p>
+      <div class="dog ui shape">
+        <div class="sides">
+          <div class="active side">
+            <div class="ui cards">
+              <div class="card">
+                <div class="image">
+                  <a class="ui like corner label">
+                    <i class="like icon"></i>
+                  </a>
+                  <img src="/images/demo/highres.jpg">
+                </div>
+                <div class="content">
+                  <div class="header">Cute Dog</div>
+                  <p class="description">This dog has some things going for it. Its pretty cute and looks like it'd be fun to cuddle up with.</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="side">
-          <div class="ui cards">
-            <div class="card">
-              <div class="image">
-                <a class="ui like corner label">
-                  <i class="like icon"></i>
-                </a>
-                <img src="/images/demo/highres6.jpg">
+          <div class="side">
+            <div class="ui cards">
+              <div class="card">
+                <div class="image">
+                  <a class="ui like corner label">
+                    <i class="like icon"></i>
+                  </a>
+                  <img src="/images/demo/highres4.jpg">
+                </div>
+                <div class="content">
+                  <div class="header">Silly Dog</div>
+                  <p class="description">Silly dogs can be quite fun to have as companions. You never know what kind of ridiculous thing they will do.</p>
+                </div>
               </div>
-              <div class="content">
-                <div class="header">Faithful Dog</div>
-                <div class="meta">5 days ago</div>
-                <p class="description">Sometimes its more important to have a dog you know you can trust. But not every dog is trustworthy, you can tell by looking at its smile.</p>
+            </div>
+          </div>
+          <div class="side">
+            <div class="ui cards">
+              <div class="card">
+                <div class="image">
+                  <a class="ui like corner label">
+                    <i class="like icon"></i>
+                  </a>
+                  <img src="/images/demo/highres6.jpg">
+                </div>
+                <div class="content">
+                  <div class="header">Faithful Dog</div>
+                  <div class="meta">5 days ago</div>
+                  <p class="description">Sometimes its more important to have a dog you know you can trust. But not every dog is trustworthy, you can tell by looking at its smile.</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="ui clearing divider"></div>
-    <div class="code" data-demo="true">
-    $('.dog.shape')
-      .eq(0)
-        .shape('flip over')
-        .end()
-      .eq(1)
-        .shape('flip back')
-    ;
+      <div class="ui clearing divider"></div>
+      <div class="code" data-demo="true">
+      $('.dog.shape')
+        .eq(0)
+          .shape('flip over')
+          .end()
+        .eq(1)
+          .shape('flip back')
+      ;
+      </div>
     </div>
   </div>
 

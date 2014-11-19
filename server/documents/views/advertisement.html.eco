@@ -18,18 +18,30 @@ type        : 'UI View'
 
   <h2 class="ui dividing header">Types</h2>
 
-  <div class="ui info message">
-    The following examples use the <code>test</code> variation to appear on the page. <code>ui ad</code> is best used as a wrapper for third party ad network content like <a href="http://www.google.com/adsense/start/" target="_blank">AdSense</a> or <a href="http://www.google.com/doubleclick/publishers/welcome/" target="_blank">DoubleClick</a>.
-  </div>
-
   <div class="example">
     <h4 class="ui header">Ad</h4>
+    <div class="ui ignored message">This example uses an <a href="https://support.google.com/adsense/answer/181947?ctx=as2&rd=2&ref_topic=29033" target="_blank">example AdSense implementation</a></div>
     <p>A standard ad</p>
+
+    <div class="ui medium rectangle ad">
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- Test -->
+      <ins class="adsbygoogle"
+           style="display:inline-block;width:300px;height:250px"
+           data-ad-client="ca-pub-4591861188995436"
+           data-ad-slot="4640466102"></ins>
+      <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
   </div>
 
   <div class="example">
     <h4 class="ui header">Common Units</h4>
-    <p>An advertisement can appear in the most common ad unit sizes</p>
+    <p>An advertisement can appear in common ad unit sizes</p>
+    <div class="ui ignored info message">
+      These additional examples use the <code>test</code> variation to appear on the page. <code>ui ad</code> is best used as a wrapper for third party ad network content like <a href="http://www.google.com/adsense/start/" target="_blank">AdSense</a> or <a href="http://www.google.com/doubleclick/publishers/welcome/" target="_blank">DoubleClick</a>.
+    </div>
     <div class="ui medium rectangle test ad" data-text="Medium Rectangle"></div>
     <div class="ui banner test ad" data-text="Banner"></div>
     <div class="ui leaderboard test ad" data-text="Leaderboard"></div>
@@ -64,7 +76,7 @@ type        : 'UI View'
   <div class="example">
     <h4 class="ui header">Skyscraper</h4>
     <p>An ad can use skyscraper ad unit size</p>
-    <div class="ui skyscraper ad" data-text="Skyscraper"></div>
+    <div class="ui skyscraper test ad" data-text="Skyscraper"></div>
     <div class="ui wide skyscraper test ad" data-text="Wide Skyscraper"></div>
   </div>
 
@@ -109,7 +121,7 @@ type        : 'UI View'
 
   <div class="example">
     <h4 class="ui header">Test</h4>
-    <p>A test advertisement adds formatting to help verify placement</p>
+    <p>A advertisement can be formatted to help verify placement</p>
     <div class="ui medium rectangle test ad"></div>
   </div>
 

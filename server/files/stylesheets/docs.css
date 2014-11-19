@@ -484,6 +484,36 @@ body#example.hide {
   margin-left: 0px;
 }
 
+/*----------------
+   Basic Display
+-----------------*/
+
+#example.basic .container {
+  width: 650px !important;
+  max-width: 100%;
+}
+
+#example.basic .main.container {
+  border: none !important;
+  box-shadow: none !important;
+  padding: 2em 0em !important;
+}
+#example.basic > .pusher > .full.height {
+  background-color: #FFFFFF;
+}
+#example.basic .main.container > .rail {
+  display: none !important;
+}
+#example.basic .container {
+  right: 0px !important;
+}
+
+#example.basic .main.container .introduction {
+  font-size: 16px;
+}
+#example.basic .main.container .introduction p {
+  color: rgba(0, 0, 0, 0.8);
+}
 
 
 /*----------------

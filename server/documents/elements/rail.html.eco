@@ -1,12 +1,11 @@
 ---
 layout      : 'default'
-css         : 'rail-page'
+css         : 'basic'
 element     : 'rail'
 elementType : 'element'
 
 title       : 'Rail'
 description : 'A rail is used to show accompanying content outside the boundaries of the main view of a site'
-status      : 'Undocumented'
 type        : 'UI Element'
 
 ---
@@ -16,27 +15,133 @@ type        : 'UI Element'
 
 <div class="main container">
 
-  <h2 class="ui dividing header">Current Progress</h2>
-  <div class="ui indicating progress">
-    <div class="bar" style="width: 90%;">
-      <div class="progress">90%</div>
+  <div class="introduction">
+    <h2 class="ui dividing header">Introduction</h2>
+
+    <h3 class="ui header">When to Use</h3>
+    <p>Rails display optional accompanying content outside of the main viewport of your website. Sites often use rails with <a href="modules/sticky.html">sticky</a> content to fix ancillary, often optional, content to your viewport as you scroll through the page.</p>
+    <p>Semantic's default rail is <code>300px</code> wide, just large enough to fit many <a href="/views/advertisement.html">common ad unit sizes</a>, and just wide enough for a sub-navigation menu or a prominent call-to-action.</p>
+    <h3 class="ui header">Adjusting Sizes</h3>
+    <p>Railed content will most likely require arbitrary breakpoints that are specific to your site's content, to ensure they do not exceed the horizontal width of a user's browser.</p>
+    <p>Rails are generally used beside long, single-column containers that usually contain long-form text content like blog posts, articles, user profiles, etc. Generally this main text container width should be set between <code>600px</code> and <code>800px</code> depending on your font size to <a href="http://baymard.com/blog/line-length-readability" target="_blank">optimize line lengths for readability</a>.</p>
+    <p>This set-up means most tablet browsers can only accomodate a single rail, ultrabooks and lower resolution computers two small rails, and larger monitors, usually two full-sized rails. The specifics of this implementation is left up to you in your project.</p>
+  </div>
+
+  <h2 class="ui dividing header">Types</h2>
+
+  <div class="example">
+    <h4 class="ui header">Rail</h4>
+    <p class="header">A rail can be presented on the left or right side of content</p>
+    <div class="ui warning message">
+      The following examples uses an arbitrarily sized content container. The rails may be hidden on small screen sizes, for the best experience, view these examples on a larger resolution screen.
     </div>
-    <div class="label">Needs Documentation</div>
+
+    <div class="ui segment">
+      <div class="ui left rail">
+        <div class="ui segment">
+          Left Rail Content
+        </div>
+      </div>
+      <div class="ui right rail">
+        <div class="ui segment">
+          Right Rail Content
+        </div>
+      </div>
+      <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+      <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+    </div>
+  </div>
+  <div class="example">
+    <h4 class="ui header">Internal</h4>
+    <p class="header">A rail can be attach itself to the inside of the main viewport</p>
+    <div class="ui warning message">
+      The following examples uses an arbitrarily sized content container. The rails may be hidden on small screen sizes, for the best experience, view these examples on a larger resolution screen.
+    </div>
+
+    <div class="ui segment" style="left: -150px; width: 960px;min-height: 300px;">
+      <div class="ui left internal rail">
+        <div class="ui segment">
+          Left Rail Content
+        </div>
+      </div>
+      <div class="ui right internal rail">
+        <div class="ui segment">
+          Right Rail Content
+        </div>
+      </div>
+    </div>
   </div>
 
-  <h2 class="ui dividing header">Usage</h2>
-  <div class="no example">
-    <p>A rail provides a container for off-canvas that sits alongside page content, like the rails of a staircase.</p>
-    <p>Often rail content uses a section of content that sticks to the browser viewport, following the user as they scroll down the page. This will be available in a separate component <a href="/modules/sticky.html">ui sticky</code>.</p>
-    <p>Examples of sites that use off-canvas rails include <a href="http://www.huffingtonpost.com/2014/09/22/obama-inversions_n_5864686.html" target="_blank">Huffington Post</a>, <a href="http://www.rottentomatoes.com/m/the_drop/">Rotten Tomatoes</a>, and <a href="http://www.buzzfeed.com/claudiakoerner/rutgers-student-killed-in-bear-attack-while-hiking#2skhsin" target="_blank">BuzzFeed</a>.</p>
+  <div class="example">
+    <h4 class="ui header">Dividing</h4>
+    <p>A rail can visually divide content from the main viewport</p>
+    <div class="ui segment">
+      <div class="ui left dividing rail">
+        <div class="ui segment">
+          Left Rail Content
+        </div>
+      </div>
+      <div class="ui right dividing rail">
+        <div class="ui segment">
+          Right Rail Content
+        </div>
+      </div>
+      <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+      <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+    </div>
   </div>
 
-  <h2 class="ui dividing header">Development Progress</h2>
-  <div class="no example">
-    <p>This is an undocumented component, but is <b>near complete</b>.</p>
+  <h2 class="ui dividing header">Variations</h2>
 
-    <p>You can help support the future development of the Semantic UI project, and help boost the priority of this component by donating to Semantic UI development.</p>
-
-    <p>Please be sure to leave a note in the comments to indicate that you are interested in the development of this particular component.</p>
+  <div class="example">
+    <h4 class="ui header">Attached</h4>
+    <p>A rail can appear without any separation from the main viewport</p>
+    <div class="ui segment">
+      <div class="ui left attached rail">
+        Left Rail Content
+      </div>
+      <div class="ui right attached rail">
+        Right Rail Content
+      </div>
+      <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+      <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+    </div>
   </div>
+
+  <div class="example">
+    <h4 class="ui header">Close</h4>
+    <p class="header">A rail can appear closer to the main viewport</p>
+    <div class="ui segment">
+      <div class="ui left close rail">
+        <div class="ui segment">
+          Left Rail Content
+        </div>
+      </div>
+      <div class="ui right close rail">
+        <div class="ui segment">
+          Right Rail Content
+        </div>
+      </div>
+      <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+      <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui segment">
+      <div class="ui left very close rail">
+        <div class="ui segment">
+          Left Rail Content
+        </div>
+      </div>
+      <div class="ui right very close rail">
+        <div class="ui segment">
+          Right Rail Content
+        </div>
+      </div>
+      <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+      <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+    </div>
+  </div>
+
+
 </div>

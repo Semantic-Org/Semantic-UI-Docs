@@ -20,12 +20,10 @@ type        : 'UI View'
 
   <div class="example">
     <h4 class="ui header">Ad</h4>
-    <div class="ui ignored message">This example uses an <a href="https://support.google.com/adsense/answer/181947?ctx=as2&rd=2&ref_topic=29033" target="_blank">example AdSense implementation</a></div>
     <p>A standard ad</p>
-
+    <div class="ui ignored message">The following example uses a basic <a href="https://support.google.com/adsense/answer/181947?ctx=as2&rd=2&ref_topic=29033" target="_blank">AdSense implementation</a>. Your code will vary depending on your ad network.</div>
     <div class="ui medium rectangle ad">
       <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-      <!-- Test -->
       <ins class="adsbygoogle"
            style="display:inline-block;width:300px;height:250px"
            data-ad-client="ca-pub-4591861188995436"
@@ -33,6 +31,19 @@ type        : 'UI View'
       <script>
       (adsbygoogle = window.adsbygoogle || []).push({});
       </script>
+    </div>
+    <div class="existing code">
+      <div class="ui medium rectangle ad">
+        <!-- Example
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:300px;height:250px"
+             data-ad-client="ca-pub-4591861188995436"
+             data-ad-slot="4640466102"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        !-->
+      </div>
     </div>
   </div>
 

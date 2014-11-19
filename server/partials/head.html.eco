@@ -39,6 +39,7 @@
 <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/message.css">
 <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/table.css">
 
+<link rel="stylesheet" type="text/css" class="ui" href="/dist/components/ad.css">
 <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/card.css">
 <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/comment.css">
 <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/feed.css">

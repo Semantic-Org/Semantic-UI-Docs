@@ -19,7 +19,7 @@ type        : 'UI Element'
     <h2 class="ui dividing header">Introduction</h2>
 
     <h3 class="ui header">When to Use</h3>
-    <p>Rails display optional accompanying content outside of the main viewport of your website. Sites often use rails with <a href="modules/sticky.html">sticky</a> content to fix ancillary, often optional, content to your viewport as you scroll through the page.</p>
+    <p>Rails display optional accompanying content outside of the main viewport of your website. Sites often use rails with <a href="modules/sticky.html">sticky</a> content to fix additional—often optional—content to your viewport as you scroll through the page.</p>
     <p>Semantic's default rail is <code>300px</code> wide, just large enough to fit many <a href="/views/advertisement.html">common ad unit sizes</a>, and just wide enough for a sub-navigation menu or a prominent call-to-action.</p>
     <h3 class="ui header">Adjusting Sizes</h3>
     <p>Railed content will most likely require arbitrary breakpoints that are specific to your site's content, to ensure they do not exceed the horizontal width of a user's browser.</p>

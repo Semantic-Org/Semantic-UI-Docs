@@ -79,22 +79,24 @@ type   : 'Semantic'
 </div>
 <div class="ui vertical stripe theming segment">
   <div class="ui stackable very relaxed two column page grid">
-    <div class="column">
+    <div class="center aligned column">
       <h1 class="ui icon header">
         <img src="/images/icons/theming.png" class="ui icon image">
         Unbelievable Theming
       </h1>
-      <p>Semantic provides real design freedom. Change the look and feel of your components with just a few variables.</p>
+      <p>Semantic provides real design freedom. Rapidly design page layouts using intuitive markup, then change the look and feel of your components with just a few variables.</p>
     </div>
-    <div class="column">
+    <div class="left aligned column">
       <div data-type="element" data-element="button" class="ui large floating dropdown theme button">
         <span class="text">Select Theme</span>
         <i class="dropdown icon"></i>
         <div class="menu ui transition hidden" tabindex="-1">
-          <div data-value="Default" class="item">Default</div>
+          <div data-value="Default" class="item">Semantic UI</div>
           <div data-value="Amazon" class="item">Amazon</div>
           <div data-value="Material" class="item">Google Material</div>
           <div data-value="GitHub" class="item">GitHub</div>
+          <div data-value="Bootstrap3" class="item">Bootstrap</div>
+          <div class="divider"></div>
           <div data-value="Raised" class="item">Raised</div>
           <div data-value="Chubby" class="item">Chubby</div>
           <div data-value="Classic" class="item">Classic</div>
@@ -149,7 +151,7 @@ type   : 'Semantic'
         3000+ CSS Variables
       </h2>
       <p>The only dogma from this framework: <em>everything arbitrary is mutable</em>.</p>
-      <div class="ui disabled large button">View Themes</div>
+      <a class="ui large button" href="http://learnsemantic.com/developing/customizing.html">Customization Guide</a>
     </div>
     <div class="column">
       <h2 class="ui icon header">
@@ -161,7 +163,7 @@ type   : 'Semantic'
     </div>
     <div class="column">
       <h2 class="ui icon header">
-        <img class="ui icon image" src="/images/icons/glasses.png">
+        <img class="ui icon image" src="/images/icons/lab.png">
         2200+ Commits
       </h2>
       <p>
@@ -443,6 +445,14 @@ type   : 'Semantic'
               </div>
               <div class="content">
                 You added Jenny Hess to the group <a>Close Friends</a>
+              </div>
+            </div>
+            <div class="event">
+              <div class="label">
+                <img src="/images/avatar/small/zoe.jpg">
+              </div>
+              <div class="content">
+                Zoe just <a>posted on your page</a>
               </div>
             </div>
           </div>
@@ -871,6 +881,24 @@ type   : 'Semantic'
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+<div class="ui vertical stripe community segment">
+  <div class="ui two column equal height center aligned divided very relaxed stackable page grid">
+    <div class="column">
+      <h2 class="ui icon header">
+        <img class="ui icon image" src="/images/icons/mobile.png">
+        Responsively Designed
+      </h2>
+      <p>Semantic lets you choose from built in responsive patterns that let you tailor-fit your designs for tablet and mobile.</p>
+    </div>
+    <div class="column">
+      <h2 class="ui icon header">
+        <img class="ui icon image" src="/images/icons/conversation.png">
+        Achieve Symbiosis
+      </h2>
+      <p>Semantic works alongside <b>Angular, Meteor, Ember</b> and other frameworks organizing your UI layer alongside your application logic.</p>
     </div>
   </div>
 </div>

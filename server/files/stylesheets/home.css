@@ -631,6 +631,9 @@
   margin-top: 0;
   padding-top: 0;
 }
+#example.index .demo.row .example:last-child {
+  margin-bottom: 0em;
+}
 
 /*--------------
     Following
@@ -706,7 +709,7 @@
 }
 
 /*--------------
-    Stripes
+     Stripes
 ---------------*/
 
 #example.index .stripe .grid .row {
@@ -724,7 +727,12 @@
   margin-bottom: 20px;
 }
 #example.index .stripe .icon.header .icon.image {
-  width: 64px;
+  height: 65px;
+  margin-bottom: 20px;
+}
+#example.index .community.stripe {
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1);
+  padding: 4em 0;
 }
 #example.index .stripe .icon.header i.icon {
   font-size: 2em;
@@ -774,6 +782,9 @@
 }
 #example .feature.stripe {
   padding: 5em 0em;
+}
+#example .theming.stripe .left.aligned.column {
+  padding-top: 8em;
 }
 #example .theming.stripe .buttons {
   vertical-align: top;

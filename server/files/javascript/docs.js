@@ -47,6 +47,7 @@ semantic.ready = function() {
     $exampleHeaders      = $sectionExample.children('h4'),
     $footer              = $('.page > .footer'),
 
+    $menuMusic           = $('.ui.main.menu .music.item'),
     $menuPopup           = $('.ui.main.menu .popup.item'),
     $pageDropdown        = $('.ui.main.menu .page.dropdown'),
     $pageTabMenu         = $('.tab.header.segment .tabular.menu'),
@@ -577,6 +578,16 @@ semantic.ready = function() {
       $('.sticky').sticky('refresh');
     },
 
+    openMusic: function() {
+      var
+        url       = 'http://www.stratus.sc/player?links=https://soundcloud.com/into-the-light/sets/sui&popup=true',
+        newWindow = window.open(url,'name','height=196,width=733')
+      ;
+      if(window.focus) {
+        newWindow.focus();
+      }
+    },
+
     getIndent: function(text) {
       var
         lines           = text.split("\n"),
@@ -1006,6 +1017,10 @@ semantic.ready = function() {
         content  : 'View Source',
         target   : $example.eq(0).find('i.code')
       })
+  ;
+
+  $menuMusic
+    .on('click', handler.openMusic)
   ;
 
   $shownExample

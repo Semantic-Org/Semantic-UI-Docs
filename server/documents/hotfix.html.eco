@@ -25,15 +25,58 @@ $(document).ready(function() {
 </style>
 
 <div class="main container">
+  <div class="transition demo">
 
-</div>
-
-
-<div class="ui padded page grid">
-    <div class="sixteen wide column" style="position:relative;">
-        <div class="ui fluid button" id="test">test</div>
-        <div class="ui fluid button" id="test-target">test target</div>
-        <div class="ui fluid popup" id="test-popup">test</div>
+    <div class="ui small images">
+      <img class="ui image" src="/images/leaves/14.png">
+      <img class="ui image" src="/images/leaves/20.png">
+      <img class="ui image" src="/images/leaves/12.png">
+      <img class="ui image" src="/images/leaves/9.png">
+      <img class="ui image" src="/images/leaves/13.png">
     </div>
-</div>
 
+    <div class="ui button">Flash</div>
+    <div class="ui button">Shake</div>
+    <div class="ui button">Pulse</div>
+    <div class="ui button">Tada</div>
+    <div class="ui button">Bounce</div>
+    <div class="ui button">Drop</div>
+    <div class="ui button">Browse</div>
+    <div class="ui button">Horizontal Flip</div>
+    <div class="ui button">Vertical Flip</div>
+    <div class="ui button">Fade</div>
+    <div class="ui button">Fade Up</div>
+    <div class="ui button">Fade Down</div>
+    <div class="ui button">Scale</div>
+    <div class="ui button">Slide Down</div>
+    <div class="ui button">Slide Up</div>
+
+  </div>
+  <style type="text/css">
+  .transition.demo .button {
+    margin-bottom: 0.5em;
+  }
+  </style>
+  <script type="text/javascript">
+  $(document)
+    .ready(function(){
+      $('.transition.demo .button')
+        .on('click', function() {
+          var animation = $(this).text();
+          if(typeof animation == 'string') {
+            animation = animation.toLowerCase();
+          }
+          $('.transition.demo .image')
+            .each(function(index, value){
+              var $this = $(this);
+              setTimeout(function() {
+                $this.transition(animation);
+              }, index * 100)
+            })
+          ;
+        })
+      ;
+    })
+  ;
+  </script>
+</div>

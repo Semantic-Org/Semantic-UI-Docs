@@ -225,7 +225,7 @@ type        : 'UI Module'
       </div>
     </div>
 
-    <div class="sticky example">
+    <div class="inline example">
       <h4 class="ui header">Sticking to Own Context</h4>
       <p>Sticky content without a specified context can also stick itself to its current context, although this may cause overlap issues with content.</p>
 

@@ -35,11 +35,27 @@ semantic.dropdown.ready = function() {
     })
   ;
 
+  $('.main.container .inline.example')
+    .each(function() {
+      var
+        $inlineSticky = $(this).find('.segment .ui.sticky'),
+        $context      = $(this).find('.segment')
+      ;
+      if($inlineSticky.size() > 0) {
+        $inlineSticky
+          .sticky({
+            context: $context,
+            offset: 39
+          })
+        ;
+      }
+    })
+  ;
+
   $('.main.container .sticky.example')
     .each(function() {
       var
         $sticky      = $(this).find('.ui.sticky').not('.segment > .sticky'),
-        $exactSticky = $(this).find('.segment .ui.sticky'),
         $context     = $(this).find('.segment')
       ;
       $sticky
@@ -48,14 +64,6 @@ semantic.dropdown.ready = function() {
           offset: 75
         })
       ;
-      if($exactSticky.size() > 0) {
-        $exactSticky
-          .sticky({
-            context: $context,
-            offset: 39
-          })
-        ;
-      }
     })
   ;
 

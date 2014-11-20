@@ -673,14 +673,19 @@ body#example.hide {
 }
 
 /* Sticky */
+#example .sticky.example .rail > .wireframe.image,
+#example .pushing.example .rail > .wireframe.image {
+  height: 102px;
+}
+
 #example .pushing.example .rail .sticky {
   margin: 2em 0em;
 }
 
-#example .sticky.example > .segment > .sticky.fixed {
+#example .inline.example > .segment > .sticky.fixed {
   background-color: #FFFFFF;
 }
-#example .sticky.example > .segment > .sticky.fixed + * {
+#example .inline.example > .segment > .sticky.fixed + * {
   margin-top: 39px;
 }
 

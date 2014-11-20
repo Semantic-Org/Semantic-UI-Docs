@@ -628,7 +628,7 @@ semantic.ready = function() {
                   paragraph = (src.search('paragraph') !== -1)
                 ;
                 if(paragraph) {
-                  $(this).replaceWith('<p></p>')
+                  $(this).replaceWith('<p></p>');
                 }
                 else if(image) {
                   $(this).replaceWith('<img>');
@@ -667,7 +667,7 @@ semantic.ready = function() {
       if( $code.hasClass('existing') ) {
         $annotation.show();
         $code.removeClass('existing');
-        $.proxy(handler.initializeCode, $code)();
+        $.proxy(handler.initializeCode, $code)(true);
       }
 
       if($annotation.size() === 0) {
@@ -685,7 +685,7 @@ semantic.ready = function() {
           .hide()
             .appendTo($annotation)
         ;
-        $.proxy(handler.initializeCode, $code)();
+        $.proxy(handler.initializeCode, $code)(true);
       }
 
       if( ($demo.first().is(':visible') || type == 'developer') && type != 'designer' ) {
@@ -735,10 +735,11 @@ semantic.ready = function() {
       }
     },
 
-    initializeCode: function() {
+    initializeCode: function(codeSample) {
       var
         $code        = $(this).show(),
         $codeTag     = $('<code></code>'),
+        codeSample   = codeSample || false,
         code         = $code.html(),
         existingCode = $code.hasClass('existing'),
         evaluatedCode = $code.hasClass('evaluated'),
@@ -756,9 +757,9 @@ semantic.ready = function() {
         },
         indent     = handler.getIndent(code) || 2,
         padding    = 20,
-        name = (evaluatedCode)
-          ? 'existing'
-          : 'instructive',
+        name = (codeSample === true)
+          ? 'instructive'
+          : 'existing',
         formattedCode = code,
         whiteSpace,
         $label,
@@ -928,7 +929,7 @@ semantic.ready = function() {
             ? $(this).find('.examples')
             : $(this)
           ;
-          $(this).find('.sticky')
+          $(this).find('> .rail .ui.sticky, .fixed .ui.sticky')
             .sticky({
               context: $container,
               offset: 0
@@ -990,7 +991,7 @@ semantic.ready = function() {
       })
       .on('click', handler.createCode)
       .end()
-    .eq(0)
+    .not('.no').eq(0)
       .find('i.code')
         .popup('destroy')
         .end()

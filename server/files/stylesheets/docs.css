@@ -502,13 +502,18 @@ body#example.hide {
 #example.basic > .pusher > .full.height {
   background-color: #F9F9F9;
 }
-#example.basic .main.container > .rail {
+#example.basic .tab.header.segment .tabular.menu .active.item {
+  background-color: #F9F9F9;
+  border-bottom-color: #F9F9F9;
+}
+
+#example.basic .main.container > .rail,
+#example.basic .main.container > .tab > .rail {
   display: none !important;
 }
 #example.basic .container {
   right: 0px !important;
 }
-
 #example.basic .main.container .introduction {
   font-size: 16px;
 }
@@ -665,6 +670,18 @@ body#example.hide {
 #example .example .anchor + p + .ignored.message:not(.attached),
 #example .example .anchor + p + .ignored.message + .ignored.message:not(.attached) {
   margin: -0.5em 0em 2em;
+}
+
+/* Sticky */
+#example .pushing.example .rail .sticky {
+  margin: 2em 0em;
+}
+
+#example .sticky.example > .segment > .sticky.fixed {
+  background-color: #FFFFFF;
+}
+#example .sticky.example > .segment > .sticky.fixed + * {
+  margin-top: 39px;
 }
 
 
@@ -1464,7 +1481,8 @@ body.progress.animated .ui.progress .bar {
   max-width: 1140px;
 }
 
-#example .main.container .right.rail .sticky {
+#example .main.container > .right.rail .sticky,
+#example .main.container > .tab > .right.rail .sticky {
   padding: 2em 0em;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);

@@ -381,7 +381,7 @@ type        : 'UI Module'
       Transition Settings
       <div class="sub header">Form settings modify the transition behavior</div>
     </h3>
-    <table class="ui red celled sortable definition table segment">
+    <table class="ui celled sortable definition table segment">
       <thead>
         <tr>
         <th>Setting</th>
@@ -402,7 +402,7 @@ type        : 'UI Module'
         </tr>
         <tr>
           <td>duration</td>
-          <td>700ms</td>
+          <td>500ms</td>
           <td>Duration of the css transition animation</td>
         </tr>
         <tr>
@@ -481,7 +481,7 @@ type        : 'UI Module'
           <td>className</td>
           <td>
             <div class="code">
-  className    : {
+  className   : {
     animating  : 'animating',
     disabled   : 'disabled',
     hidden     : 'hidden',
@@ -489,7 +489,7 @@ type        : 'UI Module'
     loading    : 'loading',
     looping    : 'looping',
     outward    : 'out',
-    transition : 'ui transition',
+    transition : 'transition',
     visible    : 'visible'
   }
             </div>

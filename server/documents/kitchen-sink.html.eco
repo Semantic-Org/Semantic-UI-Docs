@@ -229,4 +229,25 @@ description : 'Examples of all interface elements'
     </h4>
     <%- @partial('examples/shape') %>
   </div>
+
+  <div class="example">
+    <h4 class="ui header">
+      <a href="/modules/sidebar.html">Sidebar</a>
+    </h4>
+    <%- @partial('examples/sidebar') %>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">
+      <a href="/modules/tab.html">Tab</a>
+    </h4>
+    <%- @partial('examples/tab') %>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">
+      <a href="/modules/transition.html">Transition</a>
+    </h4>
+    <%- @partial('examples/transition') %>
+  </div>
 </div>

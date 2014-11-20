@@ -46,7 +46,7 @@
       <div class="ui flowing download basic popup">
         <div class="ui divided equal height relaxed center aligned choice grid">
           <div class="framework column">
-            <h4 class="ui center aligned header">With Framework</h4>
+            <h4 class="ui center aligned header">UI Framework</h4>
             <div class="ui list">
               <div class="item"><i class="green check icon"></i> Themable</div>
               <div class="item"><i class="green check icon"></i> Build Tools</div>

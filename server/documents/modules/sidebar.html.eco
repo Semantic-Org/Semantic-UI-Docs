@@ -171,10 +171,10 @@ themes      : ['Default']
         <div class="ui button" data-direction="left">
           Left
         </div>
-        <div class="ui button" data-direction="right">
+        <div class="ui active button" data-direction="right">
           Right
         </div>
-        <div class="ui active button" data-direction="top">
+        <div class="ui button" data-direction="top">
           Top
         </div>
         <div class="ui button" data-direction="bottom">
@@ -196,13 +196,13 @@ themes      : ['Default']
       </div>
 
       <h5 class="ui header">Horizontal-Only Animation</h5>
-      <div class="ui button" data-transition="uncover">
+      <div class="ui horizontal button" data-transition="uncover">
         Uncover
       </div>
-      <div class="ui button" data-transition="slide along">
+      <div class="ui horizontal button" data-transition="slide along">
         Slide Along
       </div>
-      <div class="ui button" data-transition="slide out">
+      <div class="ui horizontal button" data-transition="slide out">
         Slide Out
       </div>
 

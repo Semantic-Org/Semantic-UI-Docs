@@ -33,7 +33,7 @@ type        : 'UI Element'
     <h4 class="ui header">Rail</h4>
     <p class="header">A rail can be presented on the left or right side of content</p>
     <div class="ui ignored warning message">
-      The following examples uses an arbitrarily sized content container. The rails may be hidden on small screen sizes, for the best experience, view these examples on a larger resolution screen.
+      The following examples may be hidden on small screen sizes. For the best experience, view these examples on a large resolution display.
     </div>
 
     <div class="ui segment">

@@ -1451,7 +1451,7 @@ body.progress.animated .ui.progress .bar {
   color: #aaa;
 }
 
-#example > .pusher > .full.height {
+#example:not(.site) > .pusher > .full.height {
   background-color: #F7F7F7;
 }
 

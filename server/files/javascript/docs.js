@@ -754,11 +754,12 @@ semantic.ready = function() {
         code         = $code.html(),
         existingCode = $code.hasClass('existing'),
         evaluatedCode = $code.hasClass('evaluated'),
-        contentType  = $code.data('type')    || 'html',
-        title        = $code.data('title')   || false,
-        demo         = $code.data('demo')    || false,
-        preview      = $code.data('preview') || false,
-        label        = $code.data('label')   || false,
+        contentType  = $code.data('type')     || 'html',
+        title        = $code.data('title')    || false,
+        demo         = $code.data('demo')     || false,
+        preview      = $code.data('preview')  || false,
+        label        = $code.data('label')    || false,
+        preserve     = $code.data('preserve') || false,
         displayType  = {
           html       : 'HTML',
           javascript : 'Javascript',
@@ -766,13 +767,13 @@ semantic.ready = function() {
           text       : 'Command Line',
           sh         : 'Command Line'
         },
-        indent     = handler.getIndent(code) || 2,
         padding    = 20,
         name = (codeSample === true)
           ? 'instructive'
           : 'existing',
         formattedCode = code,
         whiteSpace,
+        indent,
         $label,
         codeHeight
       ;
@@ -797,10 +798,17 @@ semantic.ready = function() {
       if(evaluatedCode) {
         eval(code);
       }
+      console.log($code, preserve)
 
-      // trim whitespace & escape
-      whiteSpace = new RegExp('\\n\\s{' + indent + '}', 'g');
-      formattedCode = $.trim(code).replace(whiteSpace, '\n');
+      // should trim whitespace
+      if(preserve) {
+        formattedCode = code;
+      }
+      else {
+        indent        = handler.getIndent(code) || 2;
+        whiteSpace    = new RegExp('\\n\\s{' + indent + '}', 'g');
+        formattedCode = $.trim(code).replace(whiteSpace, '\n');
+      }
 
       if(contentType != 'javascript') {
         formattedCode = escapeHTML(formattedCode);
@@ -923,6 +931,8 @@ semantic.ready = function() {
       ;
     }
   };
+
+  semantic.handler = handler;
 
 
   handler.createAnchors();

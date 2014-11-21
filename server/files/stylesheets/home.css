@@ -786,6 +786,14 @@
 #example .theming.stripe .left.aligned.column {
   padding-top: 8em;
 }
+#example .theming .source.grid {
+  display: none !important;
+  margin: 2rem 2rem -4rem;
+}
+#example .theming .source.grid.visible {
+  display: block !important;
+}
+
 #example .theming.stripe .buttons {
   vertical-align: top;
 }

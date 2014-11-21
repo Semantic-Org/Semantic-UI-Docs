@@ -84,7 +84,10 @@ type   : 'Semantic'
         <img src="/images/icons/theming.png" class="ui icon image">
         Unbelievable Theming
       </h1>
-      <p>Semantic provides real design freedom. Rapidly design page layouts using intuitive markup, then change the look and feel of your components with just a few variables.</p>
+      <p>Semantic provides real design freedom. <a href="http://learnsemantic.com/themes/creating.html#variables-in-semantic">High level variables</a> let you change the look and feel of your components with just a handful of lines.</p>
+      <div class="ui source button" style="display:none;">
+        <i class="docs code icon"></i> View Source
+      </div>
     </div>
     <div class="left aligned column">
       <div data-type="element" data-element="button" class="ui large floating dropdown theme button">
@@ -96,6 +99,7 @@ type   : 'Semantic'
           <div data-value="Material" class="item">Google Material</div>
           <div data-value="GitHub" class="item">GitHub</div>
           <div data-value="Bootstrap3" class="item">Bootstrap</div>
+          <div data-value="Twitter" class="item">Twitter</div>
           <div class="divider"></div>
           <div data-value="Raised" class="item">Raised</div>
           <div data-value="Chubby" class="item">Chubby</div>
@@ -120,6 +124,18 @@ type   : 'Semantic'
         <div class="ui button">1</div>
         <div class="ui button">2</div>
         <div class="ui button">3</div>
+      </div>
+    </div>
+  </div>
+  <div class="ui two column center aligned relaxed stackable source grid">
+    <div class="column">
+      <h3 class="ui header">Variable File</h3>
+      <div class="variable code" data-type="less" data-preserve="true">
+      </div>
+    </div>
+    <div class="column">
+      <h3 class="ui header">Override File</h3>
+      <div class="override code" data-type="less" data-preserve="true">
       </div>
     </div>
   </div>
@@ -164,7 +180,7 @@ type   : 'Semantic'
     <div class="column">
       <h2 class="ui icon header">
         <img class="ui icon image" src="/images/icons/lab.png">
-        2200+ Commits
+        2800+ Commits
       </h2>
       <p>
         Semantic UI is a <b>free open source</b> project already used in multiple <a href="http://www.quirky.com" target="_blank">large</a> scale <a href="http://www.newrepublic.com" target="_blank">production</a> environments.
@@ -895,10 +911,10 @@ type   : 'Semantic'
     </div>
     <div class="column">
       <h2 class="ui icon header">
-        <img class="ui icon image" src="/images/icons/conversation.png">
-        Achieve Symbiosis
+        <img class="ui icon image" src="/images/icons/heart.png">
+        Partners with Libraries You Love
       </h2>
-      <p>Semantic works alongside <b>Angular, Meteor, Ember</b> and other frameworks organizing your UI layer alongside your application logic.</p>
+      <p>Semantic works alongside <b>Angular, Meteor, Ember</b> and other frameworks to help organize your UI layer alongside your application logic.</p>
     </div>
   </div>
 </div>
@@ -909,7 +925,7 @@ type   : 'Semantic'
         <img src="/images/icons/pen.png" class="icon image">
         Simplify Your Codebase
       </h1>
-      <p>Semantic's design is based around <a target="_blank" href="https://www.princeton.edu/~achaney/tmve/wiki100k/docs/Descriptive_linguistics.html"><em>common usage</em></a>, using features of natural language like, plurality, tense, and word order to make your code self-explanatory.</p>
+      <p>Semantic's conventions are based around <a href="https://www.princeton.edu/~achaney/tmve/wiki100k/docs/Descriptive_linguistics.html" target="_blank"><b>common usage</b></a> and not prescription. Syntax borrows useful principles from natural language like plurality, tense, and word order so your code explains itself.</p>
       <div class="hidden code" data-type="html">
         <div class="ui stackable center aligned very relaxed page grid">
           <div class="twelve wide column">

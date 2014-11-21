@@ -127,7 +127,7 @@ type        : 'UI View'
   <div class="example">
     <h4 class="ui header">Centered</h4>
     <p>An advertisement can appear centered</p>
-    <div class="ui centered leaderboard test ad"></div>
+    <div class="ui centered banner test ad"></div>
   </div>
 
   <div class="example">

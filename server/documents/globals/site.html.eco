@@ -11,6 +11,11 @@ themes      : ['Default', 'Material']
 
 ---
 <link rel="stylesheet/less" type="text/css" href="/src/definitions/globals/site.less" />
+<link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/button.less" />
+<link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/header.less" />
+<link rel="stylesheet/less" type="text/css" href="/src/definitions/collections/grid.less" />
+<link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/list.less" />
+<link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/sidebar.less" />
 
 <%- @partial('header') %>
 

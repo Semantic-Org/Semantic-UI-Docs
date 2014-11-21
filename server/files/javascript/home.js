@@ -11,6 +11,9 @@ semantic.home.ready = function() {
     $download      = $header.find('.download'),
     $library       = $header.find('.library'),
     $version       = $header.find('.version'),
+    $themeButton   = $('.theming .source.button'),
+    $themeGrid     = $('.theming .source.grid'),
+
     handler
   ;
 
@@ -80,6 +83,119 @@ semantic.home.ready = function() {
         ;
       }, 500);
 
+    },
+
+    less: {
+
+      parseFile: function(content) {
+        var
+          variables = {},
+          lines = content.match(/^(@[\s|\S]+?;)/gm),
+          name,
+          value
+        ;
+        if(lines) {
+          $.each(lines, function(index, line) {
+            // clear whitespace
+            line = $.trim(line);
+            // match variables only
+            if(line[0] == '@') {
+              name = line.match(/^@(.+?):/);
+              value = line.match(/:\s*([\s|\S]+?;)/);
+              if( ($.isArray(name) && name.length >= 2) && ($.isArray(value) && value.length >= 2) ) {
+                name = name[1];
+                value = value[1];
+                variables[name] = value;
+              }
+            }
+          });
+        }
+        console.log(variables);
+        return variables;
+      },
+
+      changeTheme: function(theme) {
+        var
+          $themeDropdown     = $(this),
+          $variableCode      = $('.variable.code'),
+          $overrideCode      = $('.override.code'),
+          $existingVariables = $variableCode.closest('.existing'),
+          $existingOverrides  = $overrideCode.closest('.existing'),
+
+          variableURL = '/src/themes/{$theme}/{$type}s/{$element}.variables',
+          overrideURL = '/src/themes/{$theme}/{$type}s/{$element}.overrides',
+          urlData     = {
+            theme   : typeof(theme === 'string')
+              ? theme.toLowerCase()
+              : theme,
+            type    : $themeDropdown.data('type'),
+            element : $themeDropdown.data('element')
+          }
+        ;
+        if($existingVariables.size() > 0) {
+          $variableCode = $('<div class="ui variable code" data-type="less" data-preserve="true" />');
+          $variableCode
+            .insertAfter($existingVariables)
+          ;
+          $existingVariables.remove();
+          console.log($variableCode);
+        }
+
+        if($existingOverrides.size() > 0) {
+          $overrideCode = $('<div class="ui override code" data-type="less" data-preserve="true" />');
+          $overrideCode
+            .insertAfter($existingOverrides)
+          ;
+          $existingOverrides.remove();
+          console.log($overrideCode);
+        }
+
+        $themeDropdown
+          .api({
+            on       : 'now',
+            debug    : true,
+            url      : variableURL,
+            dataType : 'text',
+            urlData  : urlData,
+            onSuccess: function(content) {
+              window.less.modifyVars( handler.less.parseFile(content) );
+              $themeDropdown
+                .api({
+                  on       : 'now',
+                  url      : overrideURL,
+                  dataType : 'text',
+                  urlData  : urlData,
+                  onSuccess: function(content) {
+                    if( $('style.override').size() > 0 ) {
+                      $('style.override').remove();
+                    }
+                    $('<style>' + content + '</style>')
+                      .addClass('override')
+                      .appendTo('body')
+                    ;
+                    $('.sticky').sticky('refresh');
+
+                    $overrideCode.html(content);
+                    $.proxy(semantic.handler.initializeCode, $overrideCode[0])();
+                  }
+                })
+              ;
+              $variableCode.html(content);
+              $.proxy(semantic.handler.initializeCode, $variableCode[0])();
+            }
+          })
+        ;
+      }
+    },
+    showThemeButton: function(value, text) {
+      if(!$themeButton.transition('is visible')) {
+        $themeButton.transition('scale in');
+      }
+      $.proxy(handler.less.changeTheme, this)(value);
+    },
+    toggleTheme: function() {
+      $(this).toggleClass('active');
+      $themeGrid.toggleClass('visible');
     }
   };
 
@@ -197,7 +313,13 @@ semantic.home.ready = function() {
     .dropdown('setting', 'transition', 'drop')
     .dropdown('setting', 'duration', 350)
     .dropdown('setting', 'action', 'activate')
+    .dropdown('setting', 'onChange', handler.showThemeButton)
   ;
+
+  $themeButton
+    .on('click', handler.toggleTheme)
+  ;
+
 
   // demos
   $('.demo .checkbox')

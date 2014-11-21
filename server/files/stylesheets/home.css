@@ -786,6 +786,10 @@
 #example .theming.stripe .left.aligned.column {
   padding-top: 8em;
 }
+#example .theming.stripe .hljs.code {
+  height: 483px;
+  max-height: 483px;
+}
 #example .theming .source.grid {
   display: none !important;
   margin: 2rem 2rem -4rem;

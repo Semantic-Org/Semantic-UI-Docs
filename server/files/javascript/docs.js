@@ -774,6 +774,7 @@ semantic.ready = function() {
         formattedCode = code,
         whiteSpace,
         indent,
+        styledCode,
         $label,
         codeHeight
       ;
@@ -798,7 +799,6 @@ semantic.ready = function() {
       if(evaluatedCode) {
         eval(code);
       }
-      console.log($code, preserve)
 
       // should trim whitespace
       if(preserve) {
@@ -810,7 +810,7 @@ semantic.ready = function() {
         formattedCode = $.trim(code).replace(whiteSpace, '\n');
       }
 
-      if(contentType != 'javascript') {
+      if(contentType != 'javascript' && contentType != 'less') {
         formattedCode = escapeHTML(formattedCode);
       }
 
@@ -837,6 +837,7 @@ semantic.ready = function() {
 
       // color code
       window.hljs.highlightBlock($code[0]);
+
 
       // add label
       if(title) {

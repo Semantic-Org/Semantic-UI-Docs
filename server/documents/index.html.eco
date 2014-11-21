@@ -85,7 +85,7 @@ type   : 'Semantic'
         Unbelievable Theming
       </h1>
       <p>Semantic provides real design freedom. <a href="http://learnsemantic.com/themes/creating.html#variables-in-semantic">High level variables</a> let you change the look and feel of your components with just a handful of lines.</p>
-      <div class="ui source button" style="display:none;">
+      <div class="ui large source button" style="display:none;">
         <i class="docs code icon"></i> View Source
       </div>
     </div>

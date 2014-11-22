@@ -98,7 +98,9 @@
 </script>
 <% end %>
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+<script src="/javascript/library/highlight.languages.js"></script>
+
 <script src="/javascript/library/history.js"></script>
 <script src="/javascript/library/easing.js"></script>
 <script src="/javascript/library/tablesort.js"></script>

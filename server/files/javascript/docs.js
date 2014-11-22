@@ -47,6 +47,7 @@ semantic.ready = function() {
     $exampleHeaders      = $sectionExample.children('h4'),
     $footer              = $('.page > .footer'),
 
+    $menuMusic           = $('.ui.main.menu .music.item'),
     $menuPopup           = $('.ui.main.menu .popup.item'),
     $pageDropdown        = $('.ui.main.menu .page.dropdown'),
     $pageTabMenu         = $('.tab.header.segment .tabular.menu'),
@@ -577,6 +578,16 @@ semantic.ready = function() {
       $('.sticky').sticky('refresh');
     },
 
+    openMusic: function() {
+      var
+        url       = 'http://www.stratus.sc/player?links=https://soundcloud.com/into-the-light/sets/sui&popup=true',
+        newWindow = window.open(url,'name','height=196,width=733')
+      ;
+      if(window.focus) {
+        newWindow.focus();
+      }
+    },
+
     getIndent: function(text) {
       var
         lines           = text.split("\n"),
@@ -743,11 +754,12 @@ semantic.ready = function() {
         code         = $code.html(),
         existingCode = $code.hasClass('existing'),
         evaluatedCode = $code.hasClass('evaluated'),
-        contentType  = $code.data('type')    || 'html',
-        title        = $code.data('title')   || false,
-        demo         = $code.data('demo')    || false,
-        preview      = $code.data('preview') || false,
-        label        = $code.data('label')   || false,
+        contentType  = $code.data('type')     || 'html',
+        title        = $code.data('title')    || false,
+        demo         = $code.data('demo')     || false,
+        preview      = $code.data('preview')  || false,
+        label        = $code.data('label')    || false,
+        preserve     = $code.data('preserve') || false,
         displayType  = {
           html       : 'HTML',
           javascript : 'Javascript',
@@ -755,13 +767,14 @@ semantic.ready = function() {
           text       : 'Command Line',
           sh         : 'Command Line'
         },
-        indent     = handler.getIndent(code) || 2,
         padding    = 20,
         name = (codeSample === true)
           ? 'instructive'
           : 'existing',
         formattedCode = code,
         whiteSpace,
+        indent,
+        styledCode,
         $label,
         codeHeight
       ;
@@ -787,11 +800,17 @@ semantic.ready = function() {
         eval(code);
       }
 
-      // trim whitespace & escape
-      whiteSpace = new RegExp('\\n\\s{' + indent + '}', 'g');
-      formattedCode = $.trim(code).replace(whiteSpace, '\n');
+      // should trim whitespace
+      if(preserve) {
+        formattedCode = code;
+      }
+      else {
+        indent        = handler.getIndent(code) || 2;
+        whiteSpace    = new RegExp('\\n\\s{' + indent + '}', 'g');
+        formattedCode = $.trim(code).replace(whiteSpace, '\n');
+      }
 
-      if(contentType != 'javascript') {
+      if(contentType != 'javascript' && contentType != 'less') {
         formattedCode = escapeHTML(formattedCode);
       }
 
@@ -818,6 +837,7 @@ semantic.ready = function() {
 
       // color code
       window.hljs.highlightBlock($code[0]);
+
 
       // add label
       if(title) {
@@ -913,6 +933,8 @@ semantic.ready = function() {
     }
   };
 
+  semantic.handler = handler;
+
 
   handler.createAnchors();
 
@@ -1006,6 +1028,10 @@ semantic.ready = function() {
         content  : 'View Source',
         target   : $example.eq(0).find('i.code')
       })
+  ;
+
+  $menuMusic
+    .on('click', handler.openMusic)
   ;
 
   $shownExample

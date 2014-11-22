@@ -25,15 +25,22 @@ $(document).ready(function() {
 </style>
 
 <div class="main container">
-
+  <select class="ui dropdown">
+    <option value="">Gender</option>
+    <option value="1">Male</option>
+    <option value="0">Female</option>
+  </select>
 </div>
 
-
-<div class="ui padded page grid">
-    <div class="sixteen wide column" style="position:relative;">
-        <div class="ui fluid button" id="test">test</div>
-        <div class="ui fluid button" id="test-target">test target</div>
-        <div class="ui fluid popup" id="test-popup">test</div>
-    </div>
-</div>
-
+<style type="text/css">
+.transition.demo .button {
+  margin-bottom: 0.5em;
+}
+</style>
+<script type="text/javascript">
+$(document)
+  .ready(function(){
+    jQuery('.ui.dropdown').dropdown();
+  })
+;
+</script>

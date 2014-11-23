@@ -34,11 +34,11 @@ type        : 'UI View'
     </div>
     <div class="existing code">
       <div class="ui medium rectangle ad">
-        <!-- Example
+        <!-- Ad Code Goes Here
         <ins class="adsbygoogle"
              style="display:inline-block;width:300px;height:250px"
-             data-ad-client="ca-pub-4591861188995436"
-             data-ad-slot="4640466102"></ins>
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="XXXXXXXXXX"></ins>
         <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
         </script>

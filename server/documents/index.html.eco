@@ -84,7 +84,7 @@ type   : 'Semantic'
         <img src="/images/icons/theming.png" class="ui icon image">
         Unbelievable Theming
       </h1>
-      <p>Semantic provides real design freedom. <a href="http://learnsemantic.com/themes/creating.html#variables-in-semantic">High level variables</a> let you change the look and feel of your components with just a handful of lines.</p>
+      <p>Semantic provides real design freedom. <a href="http://learnsemantic.com/themes/creating.html#variables-in-semantic">High level variables</a> and an <a href="http://learnsemantic.com/themes/overview.html">intuitive inheritance system</a> let you change the look and feel of your components with just a handful of lines.</p>
       <div class="ui large source button" style="display:none;">
         <i class="docs code icon"></i> View Source
       </div>

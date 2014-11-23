@@ -107,7 +107,7 @@ type        : 'Semantic'
         </div>
       </div>
       <div class="content">
-        <a href="collections/message.html" class="header">Message</a>
+        <a href="/collections/message.html" class="header">Message</a>
         <p class="description">Messages alert a user to something important.</p>
       </div>
     </div>

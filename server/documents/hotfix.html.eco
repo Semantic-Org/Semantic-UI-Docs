@@ -25,11 +25,8 @@ $(document).ready(function() {
 </style>
 
 <div class="main container">
-  <select class="ui dropdown">
-    <option value="">Gender</option>
-    <option value="1">Male</option>
-    <option value="0">Female</option>
-  </select>
+  <div id="el1" class="ui button">element1</div>
+  <div id="el2" class="ui button">element2</div>
 </div>
 
 <style type="text/css">
@@ -40,7 +37,18 @@ $(document).ready(function() {
 <script type="text/javascript">
 $(document)
   .ready(function(){
-    jQuery('.ui.dropdown').dropdown();
+    $("#el1").popup({
+      on : "click",
+      position : "bottom center"
+    });
+
+    $("#el2").popup({
+      on : "click",
+      position : "bottom center"
+    });
+
+    $("#el1").data("html", "<b>This is a test</b>");
+    $("#el2").data("html", "<b> this is another test</b>");
   })
 ;
 </script>

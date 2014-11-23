@@ -38,7 +38,7 @@ themes      : ['Default']
               <i class="top aligned right triangle icon"></i>
               <div class="content">
                 <a class="header">Hey man</a>
-                <div class="description">Hey man so I forgot to send you an invite to my party, but its this saturday...</div>
+                <div class="description">Hey man so I forgot to send you an invite to my party, but it's this saturday...</div>
               </div>
             </div>
             <div class="item">
@@ -310,7 +310,7 @@ themes      : ['Default']
   </div>
 
   <div class="example">
-    <h4 class="ui header">Content</h4>
+    <h4 class="ui header">Floated Content</h4>
     <p>Any element inside a list can be floated left or right</p>
     <div class="ui divided list">
       <div class="item">
@@ -331,8 +331,6 @@ themes      : ['Default']
   </div>
 
   <h2 class="ui dividing header">Variations</h2>
-
-
   <div class="example">
     <h4 class="ui header">Horizontal List</h4>
     <p>A list can be formatted horizontally</p>
@@ -479,6 +477,25 @@ themes      : ['Default']
           <div class="header">Daniel</div>
         </div>
       </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Vertical Alignment</h4>
+    <p>A list can specify vertical alignment for content or images</p>
+    <div class="ui horizontal list">
+      <div class="item">
+        <img class="ui avatar image" src="/images/wireframe/square-image.png">
+        <div class="content top aligned">
+          Top Aligned
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="/images/wireframe/square-image.png">
+        <div class="content aligned">
+          Middle
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="example">

@@ -675,8 +675,8 @@ semantic.ready = function() {
         $demo           = $example.children().not($header).not($ignoredContent),
         code            = $example.data('code') || $.proxy(handler.generateCode, this)()
       ;
+
       if( $code.hasClass('existing') ) {
-        $annotation.show();
         $code.removeClass('existing');
         $.proxy(handler.initializeCode, $code)(true);
       }
@@ -684,6 +684,7 @@ semantic.ready = function() {
       if($annotation.size() === 0) {
         $annotation = $('<div/>')
           .addClass('annotation')
+          .hide()
           .appendTo($example)
         ;
       }
@@ -694,24 +695,18 @@ semantic.ready = function() {
           .addClass('code')
           .html(code)
           .hide()
-            .appendTo($annotation)
+          .appendTo($annotation)
         ;
         $.proxy(handler.initializeCode, $code)(true);
       }
-
-      if( ($demo.first().is(':visible') || type == 'developer') && type != 'designer' ) {
-        $demo.hide();
-        $header.css('display', '');
-        $annotation.fadeIn(500);
+      if( ($annotation.eq(0).is(':visible') || type == 'designer') && type != 'developer' ) {
+        $annotation.transition('hide');
+        $demo.css('display','');
       }
       else {
-        $annotation.hide();
-        if($demo.size() > 1) {
-          $demo.css('display','');
-        }
-        else {
-          $demo.fadeIn(500);
-        }
+        $demo.hide();
+        $header.css('display', '');
+        $annotation.transition('fade');
       }
       if(type === undefined) {
         $sectionHeaders.visibility('refresh');
@@ -1009,6 +1004,7 @@ semantic.ready = function() {
       .popup({
         position: 'top right',
         offset: 5,
+        variation: 'inverted',
         content: 'View Source'
       })
       .on('click', handler.createCode)
@@ -1019,6 +1015,7 @@ semantic.ready = function() {
         .end()
       .popup({
         on       : 'hover',
+        variation: 'inverted',
         delay: {
           show: 300,
           hide: 100

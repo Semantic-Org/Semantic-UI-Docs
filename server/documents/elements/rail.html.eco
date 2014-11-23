@@ -23,8 +23,11 @@ type        : 'UI Element'
     <p>Semantic's default rail is <code>300px</code> wide, just large enough to fit many <a href="/views/advertisement.html">common ad unit sizes</a>, and just wide enough for a sub-navigation menu or a prominent call-to-action.</p>
     <h3 class="ui header">Adjusting Sizes</h3>
     <p>Railed content will most likely require arbitrary breakpoints that are specific to your site's content, to ensure they do not exceed the horizontal width of a user's browser.</p>
-    <p>Rails are generally used beside long, single-column containers that usually contain long-form text content like blog posts, articles, user profiles, etc. Generally this main text container width should be set between <code>600px</code> and <code>800px</code> depending on your font size to <a href="http://baymard.com/blog/line-length-readability" target="_blank">optimize line lengths for readability</a>.</p>
-    <p>This set-up means most tablet browsers can only accomodate a single rail, ultrabooks and lower resolution computers two small rails, and larger monitors, usually two full-sized rails. The specifics of this implementation is left up to you in your project.</p>
+    <p>Rails are generally used beside long, single-column containers with long-form content like blog posts, articles, or user profiles. Generally your main text container width should be set between around <code>600-800px</code> depending on your font size to <a href="http://baymard.com/blog/line-length-readability" target="_blank">optimize line length for readability</a>.</p>
+    <p>This set-up means most tablet browsers can only accomodate a single rail. Ultrabooks and lower resolution computers two small rails, and larger monitors, usually two full-sized rails. The specifics of this implementation is left up to you in your project.</p>
+    <div class="ui ignored warning message">
+      The following examples do not use any breakpoints, so some railed content may appear outside your browser's viewport on smaller screens.
+    </div>
   </div>
 
   <h2 class="ui dividing header">Types</h2>
@@ -32,9 +35,6 @@ type        : 'UI Element'
   <div class="example">
     <h4 class="ui header">Rail</h4>
     <p class="header">A rail can be presented on the left or right side of content</p>
-    <div class="ui ignored warning message">
-      The following examples may be hidden on small screen sizes. For the best experience, view these examples on a large resolution display.
-    </div>
 
     <div class="ui segment">
       <div class="ui left rail">

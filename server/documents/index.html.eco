@@ -24,6 +24,17 @@ type   : 'Semantic'
       </div>
       <div class="ui inverted right floated secondary menu">
         <div class="item">
+          <a class="twitter-share-button"
+            href="http://twitter.com/share"
+            data-url="http://semantic-ui.com"
+            data-via="semanticui">
+          Tweet
+          </a>
+          <script type="text/javascript">
+          window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
+          </script>
+        </div>
+        <div class="item">
           <iframe class="github" src="http://ghbtns.com/github-btn.html?user=semantic-org&amp;repo=semantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
         </div>
         <div class="ui language floating dropdown link item" id="languages">
@@ -48,7 +59,7 @@ type   : 'Semantic'
     <div class="column">
       <div class="introduction">
         <a class="ui black version label" href="https://github.com/Semantic-Org/Semantic-UI/blob/1.0/RELEASE-NOTES.md">
-          1.0.0 Beta
+          1.0.0
         </a>
         <h1 class="ui inverted header">
           <span class="library">
@@ -84,7 +95,7 @@ type   : 'Semantic'
         <img src="/images/icons/theming.png" class="ui icon image">
         Unbelievable Theming
       </h1>
-      <p>Semantic provides real design freedom. High level variables and an intuitive inheritance system lets you change the look and feel of your components with just a handful of lines.</p>
+      <p>Semantic offers complete design freedom. High level variables and an intuitive inheritance system lets you change the look and feel of your components with just a handful of lines. Intui</p>
       <div class="ui large source button" style="display:none;">
         <i class="docs code icon"></i> View Source
       </div>
@@ -167,7 +178,7 @@ type   : 'Semantic'
         3000+ CSS Variables
       </h2>
       <p>The only dogma from this framework: <em>everything arbitrary is mutable</em>.</p>
-      <a class="ui large button" href="http://learnsemantic.com/developing/customizing.html">Customization Guide</a>
+      <a class="ui large button" href="http://learnsemantic.com/developing/customizing.html">Integration Guide</a>
     </div>
     <div class="column">
       <h2 class="ui icon header">
@@ -907,14 +918,14 @@ type   : 'Semantic'
         <img class="ui icon image" src="/images/icons/mobile.png">
         Responsively Designed
       </h2>
-      <p>Semantic lets you choose from built in responsive patterns that let you tailor-fit your designs for tablet and mobile.</p>
+      <p>Semantic is <b>designed complely with em</b> making reponsive sizing a breeze. Design <em>variations</em> built into elements allow you to choose how content adjusts for tablet and mobile.</p>
     </div>
     <div class="column">
       <h2 class="ui icon header">
         <img class="ui icon image" src="/images/icons/heart.png">
         Partners with Libraries You Love
       </h2>
-      <p>Semantic works alongside <b>Angular, Meteor, Ember</b> and other frameworks to help organize your UI layer alongside your application logic.</p>
+      <p>Semantic has integrations with <b>Angular, Meteor, Ember</b> and many other frameworks to help organize your UI layer alongside your application logic.</p>
     </div>
   </div>
 </div>

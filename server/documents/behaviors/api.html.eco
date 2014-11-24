@@ -26,7 +26,7 @@ type        : 'UI Behavior'
         <div class="column">
           <div class="content">
             <div class="ui header"><i class="green check icon"></i>Deal with resources not URLs</div>
-            <p>Create named actions like <code>'follow user'</code> and have API handle URL templating, parameters, and other annoyances for you.</p>
+            <p>Use API actions like 'follow user' and not server urls in your code. Centrally manage your entire API making sure you aren't caught modifying urls across your codebase. Define your endpoints using an intuitive templating system that automatically passes data found in your UI.</p>
           </div>
         </div>
       </div>
@@ -34,7 +34,8 @@ type        : 'UI Behavior'
         <div class="column">
           <div class="content">
             <div class="ui header"><i class="green check icon"></i>State Management</div>
-            <p>Easily tie server events like AJAX loading elements using intuitive defaults based on the context inside your interface. Set maximum <b>and minimum</b> request times, toggle between UI states, and easily sync state between multiple elements with the same API actions.</p>
+            <p>API helps your UI keep track of server events, and is designed to work with Semantic's state naming conventions to track loading, disabled, and active stats.</p>
+            <p>Allowing you to do things like set maximum <b>and minimum</b> request times, toggle between text states, and sync state between multiple buttons with the same API actions.</p>
           </div>
         </div>
         <div class="column">

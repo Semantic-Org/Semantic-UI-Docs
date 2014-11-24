@@ -9,7 +9,7 @@ title       : 'Header'
 description : 'A header provides a short summary of content'
 type        : 'UI Element'
 
-themes      : ['Default', 'Classic', 'Bookish', 'Chubby']
+themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
 ---
 
 <%- @partial('header') %>
@@ -25,22 +25,16 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby']
     <h4 class="ui header">Page Headings</h4>
     <p class="header">Headers may be oriented to give the heirarchy of a section in the context of the page</p>
     <div class="ignored info ui message">Page headings use standard <code>h1-h6</code> tags, and size themselves relative to the base font of the entire page.</div>
-    <div class="ui ignored two fluid font buttons">
-      <a class="increase ui button"> <i class="plus icon"></i> Base Font</a>
-      <a class="decrease ui button"> <i class="minus icon"></i> Base Font</a>
-    </div>
-    <div class="sizer">
-      <h1 class="ui header">First header</h1>
-      <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-      <h2 class="ui header">Second header</h2>
-      <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-      <h3 class="ui header">Third header</h3>
-      <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-      <h4 class="ui header">Fourth header</h4>
-      <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-      <h5 class="ui header">Fifth header</h5>
-      <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-    </div>
+    <h1 class="ui header">First header</h1>
+    <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+    <h2 class="ui header">Second header</h2>
+    <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+    <h3 class="ui header">Third header</h3>
+    <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+    <h4 class="ui header">Fourth header</h4>
+    <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+    <h5 class="ui header">Fifth header</h5>
+    <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
   </div>
 
   <div class="example">

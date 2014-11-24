@@ -276,11 +276,21 @@ type        : 'UI Module'
 
     <div class="example">
       <h4 class="ui header">Initializing</h4>
-      <p>Sticky is initialized on the content that should be stuck to viewport. Most instances require specifying a secondary <code>context</code> which will define the top and bottom bounds of the sticky element.</p>
+      <p>Sticky is initialized on content that should be stuck to viewport. Most instances require specifying a secondary <code>context</code> which will define the top and bottom bounds of the sticky element. Sticky content must be included inside a containing element. This container can be a <a href="/elements/rail.html">ui rail</a> or your own arbitrary container, but should exist parallel to your context.</p>
+      <div class="code" data-type="html">
+        <div class="ui rail">
+          <div class="ui sticky">
+            <!-- Any arbitrary content !-->
+          </div>
+        </div>
+        <div id="context">
+          <!-- Long flowing text content !-->
+        </div>
+      </div>
       <div class="code" data-type="javascript">
       $('.ui.sticky')
         .sticky({
-          context: '#element-to-follow'
+          context: '#context'
         })
       ;
       </div>
@@ -303,6 +313,7 @@ type        : 'UI Module'
         ;
       </div>
     </div>
+
     <div class="example">
       <h4 class="ui header">Sticky Conditions</h4>
       <p>Sticky content is required to be inside its own <code>position: relative</code> container that is either the sticky context, or <b>shares vertical positioning with the context element</b>.</p>
@@ -342,11 +353,13 @@ type        : 'UI Module'
     </div>
     <div class="example">
       <h4 class="ui header">Adjusting Offset and Padding</h4>
-      <p>If you have</p>
+      <p>If you have content fixed to the viewport it might make sense to include a top or bottom offset. An <code>offset</code> will adjust all values so that content does not overlap any content between the top of the browser and the specified value. A <code>bottomOffset</code> will do the same thing for content fixed to the bottom of the viewport.</p>
       <div class="code" data-type="javascript">
       $('.ui.sticky')
         .sticky({
-          context: '#element-to-follow'
+          offset       : 50,
+          bottomOffset : 50,
+          context      : '#element-to-follow'
         })
       ;
       </div>
@@ -402,7 +415,6 @@ type        : 'UI Module'
       <thead>
         <tr>
           <th class="four wide"></th>
-          <th class="four wide">Parameters</th>
           <th>Context</th>
           <th>Description</th>
         </tr>

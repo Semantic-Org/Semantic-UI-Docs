@@ -10,7 +10,7 @@ description : 'Examples of all interface elements'
 
 <div class="main demo container">
 
-  <div class="ui active tab" data-tab="element">
+  <div class="ui active tab" data-tab="elements">
     <h2 class="ui dividing header">
       Elements
     </h2>

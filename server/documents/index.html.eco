@@ -93,7 +93,7 @@ type   : 'Semantic'
         <img src="/images/icons/theming.png" class="ui icon image">
         Unbelievable Theming
       </h1>
-      <p>Semantic offers complete design freedom. High level variables and an intuitive inheritance system lets you change the look and feel of your components with just a handful of lines. Intui</p>
+      <p>Semantic offers complete design freedom. High level variables and an intuitive inheritance system lets you change the look and feel of your components with just a handful of lines.</p>
       <div class="ui large source button" style="display:none;">
         <i class="docs code icon"></i> View Source
       </div>
@@ -916,7 +916,7 @@ type   : 'Semantic'
         <img class="ui icon image" src="/images/icons/mobile.png">
         Responsively Designed
       </h2>
-      <p>Semantic is <b>designed complely with em</b> making reponsive sizing a breeze. Design <em>variations</em> built into elements allow you to choose how content adjusts for tablet and mobile.</p>
+      <p>Semantic is <b>designed complely with em</b> making reponsive sizing a breeze. Design <em>variations</em> built into elements allow you to make the choice how content adjusts for tablet and mobile.</p>
     </div>
     <div class="column">
       <h2 class="ui icon header">
@@ -957,21 +957,21 @@ type   : 'Semantic'
         <img class="ui inline icon image" src="/images/icons/rocket.png">
         Liberate your Development
       </h1>
-      <div class="ui two column stackable center aligned vertically padded grid">
-        <div class="column">
+      <div class="ui stackable center aligned vertically padded grid">
+<!--         <div class="column">
           <h3 class="ui header">Beginner Friendly</h3>
           <p>Don't feel comfortable tweaking everything? Download free community designed themes and use our customizer to build a package fit for your needs.</p>
           <a class="ui large disabled right labeled icon button">
             <i class="right chevron icon"></i>
             View Basic Guide
           </a>
-        </div>
-        <div class="column">
+        </div> -->
+        <div class="eight wide column">
           <h3 class="ui header">Enterprise Ready</h3>
-          <p>Build tools, performance logging, support for custom definitions, multiple-levels of theme inheritance developer's dream.</p>
-          <a class="ui large right labeled icon button" href="http://www.learnsemantic.com/guide/expert.html">
+          <p>Build tools, performance logging, support for custom definitions, multiple-levels of theme inheritance—a developer's dream.</p>
+          <a class="ui large right labeled primary icon button" href="http://www.learnsemantic.com/guide/expert.html">
             <i class="right chevron icon"></i>
-            View Expert Guide
+            Getting Started Guide
           </a>
         </div>
       </div>

@@ -464,19 +464,19 @@ themes      : ['Default']
             Tag Label
           </div>
           <div class="item">
-            <div class="ui red empty circular right floated label"></div>
+            <div class="ui red empty circular label"></div>
             Important
           </div>
           <div class="item">
-            <div class="ui blue empty circular right floated label"></div>
+            <div class="ui blue empty circular label"></div>
             Announcement
           </div>
           <div class="item">
-            <div class="ui black empty circular right floated label"></div>
+            <div class="ui black empty circular label"></div>
             Cannot Fix
           </div>
           <div class="item">
-            <div class="ui green empty circular right floated label"></div>
+            <div class="ui green empty circular label"></div>
             Discussion
           </div>
         </div>
@@ -617,7 +617,7 @@ themes      : ['Default']
               <div class="item">Image</div>
             </div>
           </div>
-          <div class="item">Save</div>
+          <div class="item">Save As...</div>
           <div class="item">Edit</div>
         </div>
       </div>
@@ -632,7 +632,7 @@ themes      : ['Default']
               <div class="item">Image</div>
             </div>
           </div>
-          <div class="item">Save</div>
+          <div class="item">Save As...</div>
           <div class="item">Edit</div>
         </div>
       </div>
@@ -1380,11 +1380,11 @@ themes      : ['Default']
         ;
       </div>
     </div>
-    <div class="no example">
+    <div class="no dropdown example">
       <h4 class="ui header">Specifying Different Text &amp; Hidden Input Values</h4>
       <p>You can specify different values for selected text, and selected form values by adding <code>data-text</code> or <code>data-value</code> to any item. This is useful if you include additional data, like icons, that you want to appear only inside the dropdown menu.</p>
-      <div class="code" data-label="HTML" data-type="html" data-preview="true">
-        <div class="ui dropdown">
+      <div class="code" data-label="HTML" data-type="html">
+        <div class="ui selection dropdown">
           <input type="hidden" name="gender">
           <i class="dropdown icon"></i>
           <div class="default text">Gender</div>
@@ -1397,6 +1397,21 @@ themes      : ['Default']
               <i class="female icon"></i>
               Female
             </div>
+          </div>
+        </div>
+      </div>
+      <div class="ui selection dropdown">
+        <input type="hidden" name="gender">
+        <i class="dropdown icon"></i>
+        <div class="default text">Gender</div>
+        <div class="menu">
+          <div class="item" data-value="male" data-text="Male">
+            <i class="male icon"></i>
+            Male
+          </div>
+          <div class="item" data-value="female" data-text="Female">
+            <i class="female icon"></i>
+            Female
           </div>
         </div>
       </div>

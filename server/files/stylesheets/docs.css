@@ -502,6 +502,10 @@ body#example.hide {
 #example.basic > .pusher > .full.height {
   background-color: #F9F9F9;
 }
+#example.basic .main.container .definition.table thead th:first-child {
+  background-color: #F9F9F9;
+  box-shadow: 0 -1px 0 1px #F9F9F9;
+}
 #example.basic .tab.header.segment .tabular.menu .active.item {
   background-color: #F9F9F9;
   border-bottom-color: #F9F9F9;
@@ -607,10 +611,12 @@ body#example.hide {
 #example .instructive.segment:after {
   display: none;
 }
+#example .existing.segment em,
 #example .instructive.segment em {
   font-style: normal;
   color: rgba(0, 0, 0, 0.4);
 }
+#example .existing.segment .title + em,
 #example .instructive.segment .title + em {
   float: right;
 }

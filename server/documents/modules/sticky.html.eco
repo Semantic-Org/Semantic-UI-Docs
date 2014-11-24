@@ -29,7 +29,7 @@ type        : 'UI Module'
       </div>
     </div>
 
-    <h2 class="ui dividing header">Usage</h2>
+    <h2 class="ui dividing header">Examples</h2>
 
     <div class="sticky example">
       <h4 class="ui header">Sticking to Adjacent Context</h4>
@@ -111,7 +111,9 @@ type        : 'UI Module'
 
     <div class="sticky example">
       <h4 class="ui header">Oversized Content</h4>
+
       <p>Sticky content that is larger than the viewport will automatically scroll independently from the context, shifting scroll direction at any time will also immediately adjust the scroll position of the fixed content.</p>
+
       <p>This behavior makes sure users aren't required to navigate all the way to the top of the context element to see content that cant fit on-screen inside the sticky element.</p>
 
       <div class="code" data-type="javascript">
@@ -226,7 +228,9 @@ type        : 'UI Module'
     </div>
 
     <div class="inline example">
+
       <h4 class="ui header">Sticking to Own Context</h4>
+
       <p>Sticky content without a specified context can also stick itself to its current context, although this may cause overlap issues with content.</p>
 
       <p>Content that sticks to its own context will adjust its own layout when being "stuck". You can fix layout issues caused by this reflow by adding styles to the next element after a <code>ui fixed sticky</code>
@@ -267,6 +271,38 @@ type        : 'UI Module'
   </div>
 
   <div class="ui tab" data-tab="usage">
+
+    <h2 class="ui dividing header">Usage</h2>
+
+    <div class="example">
+      <h4 class="ui header">Initializing</h4>
+      <p>Sticky is initialized on the content that should be stuck to viewport. Most instances require specifying a secondary <code>context</code> which will define the top and bottom bounds of the sticky element.</p>
+      <div class="code" data-type="javascript">
+      $('.ui.sticky')
+        .sticky({
+          context: '#element-to-follow'
+        })
+      ;
+      </div>
+    </div>
+    <div class="example">
+      <h4 class="ui header">Refreshing Cached Values</h4>
+      <p>Sticky content caches its current offset on the page and other crucial values on initialization. This prevents it from having to query the DOM on each browser scroll which would drastically reduce performance.</p>
+      <p>Sticky uses <a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver">mutation observers</a> to adjust its position when content is added to the context, and also will automatically recalculate on browser <code>resize</code>, but any other changes to your page that adjust the elements context require you to refresh the sticky's position</p>
+      <p>Examples of changes that might affect sticky elements are:</p>
+      <div class="ui bulleted list">
+        <div class="item">Loading images without specified size</div>
+        <div class="item">Setting CSS which adjusts the layout of the page</div>
+        <div class="item">Hiding elements using javascript</div>
+      </div>
+      <p>Refreshing cached values just requires calling the <code>refresh</code> behavior.</p>
+      <div class="ui code">
+        // recalculates offsets
+        $('.ui.sticky')
+          .sticky('refresh')
+        ;
+      </div>
+    </div>
     <div class="example">
       <h4 class="ui header">Sticky Conditions</h4>
       <p>Sticky content is required to be inside its own <code>position: relative</code> container that is either the sticky context, or <b>shares vertical positioning with the context element</b>.</p>
@@ -304,23 +340,191 @@ type        : 'UI Module'
         </tbody>
       </table>
     </div>
-
     <div class="example">
-      <h4 class="ui header">Refreshing With Layout Changes</h4>
-
-      <p>Sticky uses <a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver">mutation observers</a> to adjust its position when content is added to the context, and also will automatically recalculate on browser <code>resize</code>, but any other changes to your page that adjust the elements context require you to refresh the sticky's position</p>
-
-      <div class="ui code">
-        // recalculates offsets
-        $('.ui.sticky')
-          .sticky('refresh')
-        ;
+      <h4 class="ui header">Adjusting Offset and Padding</h4>
+      <p>If you have</p>
+      <div class="code" data-type="javascript">
+      $('.ui.sticky')
+        .sticky({
+          context: '#element-to-follow'
+        })
+      ;
       </div>
     </div>
 
   </div>
 
   <div class="ui tab" data-tab="settings">
+
+    <h3 class="ui header">
+      Sticky Settings
+      <div class="sub header">Settings to configure sticky behavior</div>
+    </h3>
+    <table class="ui celled sortable definition table segment">
+      <thead>
+        <th>Setting</th>
+        <th class="four wide">Default</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>pushing</td>
+          <td>false</td>
+          <td>Whether element should be "pushed" by the viewport, attachig to the bottom of the screen when scrolling up</td>
+        </tr>
+        <tr>
+          <td>context</td>
+          <td>false</td>
+          <td>Context which sticky element should stick to</td>
+        </tr>
+        <tr>
+          <td>scrollContext</td>
+          <td>window</td>
+          <td>Context which sticky should attach <code>onscroll</code> events.</td>
+        </tr>
+        <tr>
+          <td>offset</td>
+          <td>0</td>
+          <td>Offset in pixels from the top of the screen when fixing element to viewport</td>
+        </tr>
+        <tr>
+          <td>bottomOffset</td>
+          <td>0</td>
+          <td>Offset in pixels from the bottom of the screen when fixing element to viewport</td>
+        </tr>
+      </tbody>
+    </table>
+
+     <h4 class="ui header">Callbacks</h4>
+    <p>Callbacks specify a function to occur after a specific behavior.</p>
+
+    <table class="ui celled sortable definition table segment">
+      <thead>
+        <tr>
+          <th class="four wide"></th>
+          <th class="four wide">Parameters</th>
+          <th>Context</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>onReposition</td>
+          <td>$module</td>
+          <td>Callback when element is repositioned from layout change</td>
+        </tr>
+        <tr>
+          <td>onScroll</td>
+          <td>$module</td>
+          <td>Callback when <code>requestAnimationFrame</code> fires from scroll handler.</td>
+        </tr>
+        <tr>
+          <td>onStick</td>
+          <td>$module</td>
+          <td>Callback when element is fixed to page</td>
+        </tr>
+        <tr>
+          <td>onUnstick</td>
+          <td>$module</td>
+          <td>Callback when element is unfixed from page</td>
+        </tr>
+        <tr>
+          <td>onTop</td>
+          <td>$module</td>
+          <td>Callback when element is bound to top of parent container</td>
+        </tr>
+        <tr>
+          <td>onBottom</td>
+          <td>$module</td>
+          <td>Callback when element is bound to bottom of parent container</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 class="ui header">
+      DOM Settings
+      <div class="sub header">DOM settings specify how this module should interface with the DOM</div>
+    </h3>
+    <table class="ui celled sortable definition table segment">
+      <thead>
+        <th>Setting</th>
+        <th class="six wide">Default</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>namespace</td>
+          <td>sticky</td>
+          <td>Event namespace. Makes sure module teardown does not effect other events attached to an element.</td>
+        </tr>
+        <tr>
+          <td>className</td>
+          <td>
+            <div class="code">
+            className : {
+              bound     : 'bound',
+              fixed     : 'fixed',
+              supported : 'native',
+              top       : 'top',
+              bottom    : 'bottom'
+            }
+            </div>
+          </td>
+          <td>Class names used to attach style to state</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="ui horizontal divider"><i class="icon setting"></i></div>
+
+    <h3 class="ui header">
+      Debug Settings
+      <div class="sub header">Debug settings controls debug output to the console</div>
+    </h3>
+
+    <table class="ui celled sortable definition table segment">
+      <thead>
+        <th>Setting</th>
+        <th class="four wide">Default</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>name</td>
+          <td>Sticky</td>
+          <td>Name used in debug logs</td>
+        </tr>
+        <tr>
+          <td>debug</td>
+          <td>False</td>
+          <td>Provides standard debug output to console</td>
+        </tr>
+        <tr>
+          <td>performance</td>
+          <td>True</td>
+          <td>Provides standard debug output to console</td>
+        </tr>
+        <tr>
+          <td>verbose</td>
+          <td>True</td>
+          <td>Provides ancillary debug output to console</td>
+        </tr>
+        <tr>
+          <td>errors</td>
+          <td colspan="2">
+            <div class="code">
+            error         : {
+              container      : 'Sticky element must be inside a relative container',
+              visible        : 'Element is hidden, you must call refresh after element becomes visible',
+              method         : 'The method you called is not defined.',
+              invalidContext : 'Context specified does not exist',
+              elementSize    : 'Sticky element is larger than its container, cannot create sticky.'
+            }
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
 
   </div>
 

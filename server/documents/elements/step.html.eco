@@ -9,7 +9,7 @@ title       : 'Step'
 description : 'A step shows the completion status of an activity in a series of activities'
 type        : 'UI Element'
 
-themes      : ['default', 'Basic', 'GitHub']
+themes      : ['Default', 'Basic', 'GitHub']
 ---
 
 <%- @partial('header') %>
@@ -49,7 +49,7 @@ themes      : ['default', 'Basic', 'GitHub']
 
   <div class="example">
     <h4 class="ui header">Ordered</h4>
-    <p>A step can show a numerically ordered sequence of steps</p>
+    <p>A step can show a ordered sequence of steps</p>
     <div class="ui ordered steps">
       <div class="completed step">
         <div class="content">
@@ -74,7 +74,7 @@ themes      : ['default', 'Basic', 'GitHub']
 
   <div class="example">
     <h4 class="ui header">Vertical</h4>
-    <p>Vertical steps display each step stacked vertically</p>
+    <p>A step can be displayed stacked vertically</p>
     <div class="ui vertical steps">
       <div class="step">
         <i class="truck icon"></i>

@@ -84,7 +84,7 @@ type   : 'Semantic'
         <img src="/images/icons/theming.png" class="ui icon image">
         Unbelievable Theming
       </h1>
-      <p>Semantic provides real design freedom. <a href="http://learnsemantic.com/themes/creating.html#variables-in-semantic">High level variables</a> and an <a href="http://learnsemantic.com/themes/overview.html">intuitive inheritance system</a> let you change the look and feel of your components with just a handful of lines.</p>
+      <p>Semantic provides real design freedom. High level variables and an intuitive inheritance system lets you change the look and feel of your components with just a handful of lines.</p>
       <div class="ui large source button" style="display:none;">
         <i class="docs code icon"></i> View Source
       </div>
@@ -191,7 +191,7 @@ type   : 'Semantic'
 </div>
 <div class="ui vertical stripe segment">
   <div class="ui stackable very relaxed page grid">
-    <div class="twelve wide center aligned centered column">
+    <div class="fourteen wide center aligned centered column">
       <h1 class="ui icon header">
         <img src="/images/icons/toolbox.png" class="ui icon image">
         Unbelievable Breadth
@@ -920,7 +920,7 @@ type   : 'Semantic'
 </div>
 <div class="ui vertical inverted stripe segment">
   <div class="ui stackable center aligned very relaxed page grid">
-    <div class="twelve wide column">
+    <div class="fourteen wide column">
       <h1 class="ui inverted icon header">
         <img src="/images/icons/pen.png" class="icon image">
         Simplify Your Codebase
@@ -928,13 +928,12 @@ type   : 'Semantic'
       <p>Semantic's conventions are based around <a href="https://www.princeton.edu/~achaney/tmve/wiki100k/docs/Descriptive_linguistics.html" target="_blank"><b>common usage</b></a> and not prescription. Syntax borrows useful principles from natural language like plurality, tense, and word order so your code explains itself.</p>
       <div class="hidden code" data-type="html">
         <div class="ui stackable center aligned very relaxed page grid">
-          <div class="twelve wide column">
+          <div class="fourteen wide column">
             <h1 class="ui inverted icon header">
               <img src="/images/icons/pen.png" class="icon image">
               Simplify Your Codebase
             </h1>
-            <p>Semantic's design is based around <a target="_blank"><em>common usage</em></a>, using features of natural language like, plurality, tense, and word order to make your code self-explanatory.
-            </p>
+            <p>Semantic's conventions are based around <a target="_blank"><b>common usage</b></a> and not prescription. Syntax borrows useful principles from natural language like plurality, tense, and word order so your code explains itself.</p>
             <!-- Recursion Omitted (Turtles all the way down) !-->
           </div>
         </div>
@@ -944,7 +943,7 @@ type   : 'Semantic'
 </div>
 <div class="ui vertical alternate stripe segment">
   <div class="ui stackable center aligned page grid">
-    <div class="twelve wide column">
+    <div class="fourteen wide column">
       <h1 class="ui icon header">
         <img class="ui inline icon image" src="/images/icons/rocket.png">
         Liberate your Development

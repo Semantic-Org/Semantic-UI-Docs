@@ -613,6 +613,10 @@
 #example .demo.row .ui.card {
   width: 100%;
 }
+#example .demo.row .ui.card {
+  width: 100%;
+  max-width: 400px;
+}
 
 /*--------------
     Features

@@ -68,7 +68,7 @@ type   : 'Semantic'
           <span class="text">is the vocabulary of the web.</span>
         </h1>
         <div class="ui hidden divider"></div>
-        <a href="https://github.com/Semantic-Org/Semantic-UI/archive/1.0.zip" class="ui huge basic inverted teal download button">
+        <a href="https://github.com/Semantic-Org/Semantic-UI/archive/1.0.0.zip" class="ui huge basic inverted teal download button">
           Download Now
           <i class="right chevron icon"></i>
         </a>

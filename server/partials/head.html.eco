@@ -153,7 +153,7 @@
       'data-title',
       'data-content'
     ],
-    detectlang   : true,
+    detectlang   : false,
     autocollect  : true,
     ignore_tags  : ['i'],
     parse_attr   : ['data-title', 'data-content', 'data-text'],

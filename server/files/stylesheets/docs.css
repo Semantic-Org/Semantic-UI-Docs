@@ -1572,7 +1572,6 @@ body.progress.animated .ui.progress .bar {
     display: none;
   }
 }
-
 @media only screen and (min-width : 998px) {
   #example .following.menu {
     display: block;

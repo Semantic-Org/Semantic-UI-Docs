@@ -685,7 +685,7 @@
   font-weight: bold;
 }
 #example.index .following.bar .network.menu .view-ui {
-  margin-right: 2em;
+  margin-right: 1em;
 }
 #example.index .fixed.following.bar .network.menu .view-ui {
   color: #00B5AD;
@@ -914,6 +914,12 @@
   #example.index .email.stripe .submit.button {
     margin-top: 0.5em;
   }
+  #example.index .stripe .icon.header .icon.image {
+    height: 50px;
+  }
+  #example .feature.stripe {
+    padding: 2em 0em;
+  }
 }
 
 @media only screen and (max-width : 600px) {
@@ -933,7 +939,7 @@
 
 
 /* Homepage */
-@media only screen and (max-width : 780px) {
+@media only screen and (max-width : 810px) {
   #example.index .feature.stripe p {
     height: auto;
     min-height: 0px;
@@ -942,10 +948,25 @@
     margin-left: 2em;
     margin-right: 2em;
   }
+  #example .solid, #example .stripe {
+    padding: 6em 0em;
+  }
+  #example.index .following.bar span.additional.item {
+    display: none;
+    visibility: hidden !important;
+  }
   #example.index .following.bar .network.menu .view-ui {
     margin-right: 0.75em;
   }
 }
+
+
+@media only screen and (max-width : 1040px) {
+  #example.index .following.bar .network.menu .view-ui {
+    margin-right: 0.5em;
+  }
+}
+
 
 @media only screen and (max-width: 1300px) {
   #example.index .advertisement {

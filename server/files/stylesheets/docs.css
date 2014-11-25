@@ -1594,6 +1594,13 @@ body.progress.animated .ui.progress .bar {
   }
 }
 @media only screen and (min-width : 998px) and (max-width: 1200px) {
+  #example .header.segment .container {
+    width: 878px;
+    right: -24px;
+  }
+  #example .tab.header.segment .tabular.menu {
+    width: 680px;
+  }
   #example .container {
     width: 680px;
     right: 75px;

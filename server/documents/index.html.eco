@@ -817,32 +817,6 @@ type   : 'Semantic'
             </div>
             <div class="label">Adding 5 of 20 photos</div>
           </div>
-
-          <script type="text/javascript">
-          $(document)
-            .ready(function(){
-              $('.file.progress')
-                .progress({
-                  label: false,
-                  text: {
-                    active  : 'Adding {value} of {total} photos',
-                    success : '{total} Photos Uploaded!'
-                  }
-                })
-              ;
-              var progress = function() {
-                $('.file.progress').progress('increment');
-                setTimeout(progress, (Math.random() * 7000) + 300);
-              };
-              setTimeout(progress, 2000);
-
-              setInterval(function() {
-                $('.file.progress').progress('reset');
-              }, 30000);
-
-            })
-          ;
-          </script>
         </div>
         <div class="no segment example">
           <h4 class="ui header">

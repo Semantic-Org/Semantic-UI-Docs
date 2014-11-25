@@ -161,7 +161,7 @@
   -moz-transform: rotateX(0deg) rotateZ(0deg) rotateY(0deg) translateY(0%) translateX(0) translateZ(-500px);
   transform: rotateX(0deg) rotateZ(0deg) rotateY(0deg) translateY(0%) translateX(0) translateZ(-500px);
 }
-#example.index .following.bar:after,
+
 #example.index .masthead:after {
   position: absolute;
   z-index: 1;
@@ -224,23 +224,6 @@
 #example.index .fixed.following.bar {
   background-image: none;
 }
-#example.index .following.bar:after {
-  height: 58px;
-  opacity: 0;
-  -ms-transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-  -webkit-transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-  -moz-transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-  -webkit-animation-duration: 30s;
-  -moz-animation-duration: 30s;
-  -ms-animation-duration: 30s;
-  -o-animation-duration: 30s;
-  animation-duration: 30s;
-  -webkit-transform: none;
-  -moz-transform: none;
-  transform: none;
-  z-index: -1;
-}
 #example.index .fixed.following.bar {
   position: fixed;
   top: 0px;
@@ -251,15 +234,12 @@
   background-color: #FFFFFF;
   border-bottom: 1px solid #DDDDDD;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.04);
-}
+}/*
 #example.index .fixed.dark.following.bar {
   background-color: #EDF1F2;
   border-bottom: 1px solid #DDDDDD;
   box-shadow: none;
-}
-#example.index .animated.following.bar:after {
-  opacity: 0.06;
-}
+}*/
 
 /* Zoomed Out */
 #example.index .masthead.zoomed {
@@ -653,10 +633,10 @@
   box-shadow: 0px 0px 0px 0px transparent;
   border-bottom: 1px solid transparent;
   transition:
-    padding 0.2s ease,
-    background 0.3s ease,
-    box-shadow 0.3s ease,
-    border 0.3s ease
+    padding 0.5s ease,
+    background 0.5s ease,
+    box-shadow 0.5s ease,
+    border 0.5s ease
   ;
 }
 #example.index .following.bar > .menu .item {

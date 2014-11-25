@@ -205,7 +205,7 @@ semantic.home.ready = function() {
     })
   ;
 
-  if($(window).width() > 768) {
+  if($(window).width() > 600) {
     $('body')
       .visibility({
         offset: -1,
@@ -213,7 +213,6 @@ semantic.home.ready = function() {
         continuous: false,
         onTopPassed: function() {
           $('.following.bar')
-            .removeClass('dark')
             .addClass('light fixed')
             .find('.menu')
               .removeClass('inverted')
@@ -227,41 +226,10 @@ semantic.home.ready = function() {
         onTopPassedReverse: function() {
           $('.following.bar')
             .removeClass('light fixed')
-            .addClass('dark')
             .find('.menu')
               .addClass('inverted')
               .find('.additional.item')
                 .transition('hide')
-          ;
-        }
-      })
-    ;
-    $('.vertical.stripe').eq(0)
-      .visibility({
-        offset: 70,
-        once: false,
-        onTopPassed: function() {
-          /*
-          $('.following.bar')
-            .addClass('animated')
-          ;
-          */
-        }
-      })
-    ;
-   $('.vertical.stripe').eq(0)
-      .visibility({
-        offset: 70,
-        once: false,
-        onTopPassed: function() {
-          $('.following.bar')
-            .addClass('animated dark')
-          ;
-        },
-        onTopPassedReverse: function() {
-          $('.following.bar')
-            .removeClass('animated dark')
-            .addClass('light')
           ;
         }
       })

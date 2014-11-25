@@ -15,6 +15,14 @@
   </div>
   <%- @partial('language-modal') %>
   <%- @partial('dimmer-demo') %>
+  <script>
+  window.less = {
+    async: true,
+    environment: 'production',
+    fileAsync: false,
+    useFileCache: true
+  };
+  </script>
   <script src="/javascript/library/less.js"></script>
 
 </body>

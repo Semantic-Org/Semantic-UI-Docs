@@ -285,7 +285,7 @@ type   : 'Semantic'
         </div>
         <div class="no example">
           <h4 class="ui header">
-            <a href="/modules/accordion.html">Divider</a>
+            <a href="/elements/divider.html">Divider</a>
           </h4>
           <div class="ui two column stackable center aligned grid segment">
             <div class="column">

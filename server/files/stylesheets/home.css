@@ -580,6 +580,9 @@
 #example .demo.row .ui.label:not(.empty) {
   margin-bottom: 1em;
 }
+#example .demo.row .ui.progress {
+  margin-bottom: 2.5em;
+}
 #example .demo.row h4 {
   font-weight: bold !important;
   margin: 0em 0em 1em !important;

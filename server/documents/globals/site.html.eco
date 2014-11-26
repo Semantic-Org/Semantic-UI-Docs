@@ -23,7 +23,7 @@ themes      : ['Default', 'Material']
 
   <h2 class="ui dividing header">Introduction</h2>
 
-  <p>Site is a special global definition which includes parameters baseline parameters which all other elements inherit. In addition to providing global variables defaults, site also provides page styling for content that exists outside of interface elements.</p>
+  <p>Site is a special global definition which includes baseline parameters which all other elements inherit. In addition to providing global variables defaults, site also provides page styling for content that exists outside of interface elements.</p>
 
   <h3 class="ui header">Theming</h3>
 

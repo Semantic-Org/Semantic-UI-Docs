@@ -133,32 +133,3 @@
 <% end %>
 
 <script src="/javascript/docs.js"></script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-44039803-2', 'auto');
-  ga('send', 'pageview');
-
-</script>
-
-<% if 'development' in @getEnvironments(): %>
-<% else: %>
-<script type="text/javascript">
-  window.liveSettings = {
-    api_key    : '9ede3015b9f84c1aabc81ab839c55d74',
-    parse_attr : [
-      'data-title',
-      'data-content'
-    ],
-    detectlang   : false,
-    autocollect  : true,
-    ignore_tags  : ['i'],
-    parse_attr   : ['data-title', 'data-content', 'data-text'],
-    ignore_class : ["code", "anchor"]
-  };
-</script>
-<script type="text/javascript" src="http://cdn.transifex.com/live.js"></script>
-<% end %>

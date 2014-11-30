@@ -10,6 +10,9 @@ type   : 'Library'
 <!-- TEST JS HERE !-->
 <script>
 $(document).ready(function() {
+  $('#popupper').popup({
+    preserve: false
+  });
 });
 </script>
 
@@ -19,64 +22,7 @@ $(document).ready(function() {
 </style>
 
 <div class="main container">
-  <div class="ui card">
-    <div class="image">
-        <img src="/images/avatar/large/stevie.jpg" />
-    </div>
-    <div class="content">
-        <div class="header">Title</div>
-        <div class="meta">  <span class="date">
-        Meta info
-      </span>
-
-        </div>
-        <div class="description">
-            <table class="ui very basic table">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Item</td>
-                        <td>  <a class="ui mini icon blue button" href="#">
-                <i class="edit icon"></i>
-              </a>
-  <a class="ui mini icon red button" href="#">
-                <i class="delete icon"></i>
-              </a>
-
-                        </td>
-                    </tr>
-                </tbody>
-                <tfoot class="full-width">
-                    <tr>
-                        <th colspan="2" class="center aligned"> <a class="ui mini icon labeled teal button" href="#">
-                <i class="add icon"></i> Add item
-              </a>
-
-                        </th>
-                    </tr>
-                </tfoot>
-            </table>
-        </div>
-    </div>
-    <div class="extra content">
-        <div class="right floated"> <a class="ui mini icon labeled button" href="#">
-        <i class="recycle icon"></i> Default
-      </a>
-  <a class="ui mini icon labeled primary button" href="#">
-        <i class="edit icon"></i> Edit
-      </a>
-  <a class="ui mini icon labeled red button" href="#">
-        <i class="delete icon"></i> Delete
-      </a>
-
-        </div>
-    </div>
-</div>
+  <h1 id='popupper' data-content='Test text data'>Hover here and check console for error</h1>
 </div>
 
 <style type="text/css">

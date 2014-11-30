@@ -566,7 +566,7 @@ themes      : ['Default']
         </tr>
         <tr>
           <td>preserve</td>
-          <td>false</td>
+          <td>true</td>
           <td>Whether popup contents should be preserved in the page after being hidden, allowing it to re-appear slightly faster on subsequent loads.</td>
         </tr>
         <tr>

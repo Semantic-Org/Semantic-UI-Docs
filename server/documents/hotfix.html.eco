@@ -10,8 +10,12 @@ type   : 'Library'
 <!-- TEST JS HERE !-->
 <script>
 $(document).ready(function() {
-  $('#popupper').popup({
-    preserve: false
+  $('.main .button').on('click', function() {
+    console.log('zzz');
+    $('.main .image').transition({
+      debug: true,
+      animation: 'not real'
+    });
   });
 });
 </script>
@@ -22,8 +26,7 @@ $(document).ready(function() {
 </style>
 
 <div class="main container">
-  <h1 id='popupper' data-content='Test text data'>Hover here and check console for error</h1>
+  <div class="ui button">Click me</div>
+  <img src="/images/wireframe/image.png" class="ui image">
 </div>
 
-<style type="text/css">
-</style>

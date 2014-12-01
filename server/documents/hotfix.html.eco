@@ -22,47 +22,48 @@ $(document).ready(function() {
 </style>
 
 <div class="main container">
-  <div class="ui menu">
-    <div class="menu">
-      <div class="ui pointing dropdown link item">
-        <i class="dropdown icon"></i>
-        <span class="text">Shopping</span>
-        <div class="menu">
-          <div class="item">
+  <div class="ui inverted blue menu">
+    <div class="row">
+        <div class="ui dropdown item">
             <i class="dropdown icon"></i>
-            <span class="text">Clothing</span>
+            Top Menu
             <div class="menu">
-              <div class="header">Mens</div>
-              <div class="item">Shirts</div>
-              <div class="item">Pants</div>
-              <div class="item">Jeans</div>
-              <div class="item">Shoes</div>
-              <div class="divider"></div>
-              <div class="header">Womens</div>
-              <div class="item">Dresses</div>
-              <div class="item">Shoes</div>
-              <div class="item">Bags</div>
+                <div class="item">
+                    <i class="dropdown icon"></i>
+                    Text
+                    <div class="menu">
+                        <div class="item">
+                            <i class="dropdown icon"></i>
+                            Sub 1
+                            <div class="menu one">
+                                <div class="item">Item 11</div>
+                                <div class="item">Item 12</div>
+                                <div class="item">Item 13</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <i class="dropdown icon"></i>
+                             Sub 2
+                            <div class="menu two">
+                                <div class="item">Item 21</div>
+                                <div class="item">Item 22</div>
+                                <div class="item">Item 23</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <i class="dropdown icon"></i>
+                             Sub 3
+                            <div class="menu three">
+                                <div class="item">Item 31</div>
+                                <div class="item">Item 32</div>
+                                <div class="item">Item 33</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="item">
-            <i class="dropdown icon"></i>
-            <span class="text">Clothing 2</span>
-            <div class="menu">
-              <div class="header">Mens</div>
-              <div class="item">Shirts</div>
-              <div class="item">Pants</div>
-              <div class="item">Jeans</div>
-              <div class="item">Shoes</div>
-              <div class="divider"></div>
-              <div class="header">Womens</div>
-              <div class="item">Dresses</div>
-              <div class="item">Shoes</div>
-              <div class="item">Bags</div>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
+</div>
 </div>
 

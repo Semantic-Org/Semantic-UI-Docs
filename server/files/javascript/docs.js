@@ -1002,6 +1002,7 @@ semantic.ready = function() {
     })
     .find('i.code')
       .popup({
+        preserve: false,
         position: 'top right',
         offset: 5,
         variation: 'inverted',
@@ -1014,6 +1015,7 @@ semantic.ready = function() {
         .popup('destroy')
         .end()
       .popup({
+        preserve: false,
         on       : 'hover',
         variation: 'inverted',
         delay: {

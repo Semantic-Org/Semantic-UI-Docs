@@ -215,35 +215,35 @@ themes      : ['Default', 'Fixed-width']
             <td>Mobile</td>
             <td>Below 768px</td>
             <td>1rem</td>
-            <td>mobile only</td>
+            <td>mobile only, (x) wide mobile</td>
             <td>$mobileBreakpoint</td>
           </tr>
           <tr>
             <td>Tablet</td>
             <td>Above 768px and below 992px</td>
             <td>8%</td>
-            <td>tablet only</td>
+            <td>tablet only, (x) wide tablet</td>
             <td>$tabletBreakpoint</td>
           </tr>
           <tr>
             <td>Computer</td>
             <td>Above 992px</td>
             <td>13%</td>
-            <td>computer only</td>
+            <td>computer only, (x) wide computer</td>
             <td>$computerBreakpoint</td>
           </tr>
           <tr>
             <td>Large Monitor</td>
             <td>Above 1400px</td>
             <td>18%</td>
-            <td><em>None</em></td>
+            <td>(x) wide large monitor</td>
             <td>$largeMonitorBreakpoint</td>
           </tr>
           <tr>
             <td>Widescreen Monitor</td>
             <td>Above 1920px</td>
             <td>23%</td>
-            <td><em>None</em></td>
+            <td>(x) wide widescreen</td>
             <td>$widescreenBreakpoint</td>
           </tr>
         </tbody>
@@ -881,7 +881,7 @@ themes      : ['Default', 'Fixed-width']
     <h3 class="ui header">Rows</h3>
 
     <div class="example">
-      <h4 class="ui header">Responsive to Device</h4>
+      <h4 class="ui header">Responsive Visibility</h4>
       <p>A grid can have its columns, or rows only show content for computer, tablet, or mobile.</p>
       <div class="ui text message info ignore">
         <i class="icon heart"></i> Breakpoints are 768px and below for mobile, 768-992px for tablet and 992px+ for computer</i>
@@ -1071,6 +1071,47 @@ themes      : ['Default', 'Fixed-width']
         </div>
         <div class="three wide column">
           <img class="ui wireframe image" src="/images/wireframe/media-paragraph.png">
+        </div>
+      </div>
+    </div>
+    <div class="example">
+      <h4 class="ui header">Responsive Width</h4>
+      <p>A grid row can specify a width for a specific device</p>
+      <div class="ui ignored info message">
+        <p>It's recommended to use a responsive pattern like <code>doubling</code> or <code>stackable</code> to reduce complexity when designing responsively, however in some circumstances specifying exact widths for screen sizes may be necessary.</p>
+        <p>See <a href="#page-grid-breakpoints">page grid breakpoints</a> guide for exact breakpoints.</p>
+      </div>
+      <div class="ui grid">
+        <div class="sixteen wide mobile eight wide tablet four wide computer column">
+          <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+        </div>
+        <div class="sixteen wide mobile eight wide tablet four wide computer column">
+          <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+        </div>
+        <div class="sixteen wide mobile eight wide tablet four wide computer column">
+          <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+        </div>
+        <div class="sixteen wide mobile eight wide tablet four wide computer column">
+          <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+        </div>
+        <div class="sixteen wide mobile eight wide tablet four wide computer column">
+          <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+        </div>
+      </div>
+    </div>
+    <div class="another example">
+      <div class="ui grid">
+        <div class="four wide two wide large screen one wide widescreen column">
+          <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+        </div>
+        <div class="four wide two wide large screen one wide widescreen column">
+          <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+        </div>
+        <div class="four wide two wide large screen one wide widescreen column">
+          <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+        </div>
+        <div class="four wide two wide large screen one wide widescreen column">
+          <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
         </div>
       </div>
     </div>

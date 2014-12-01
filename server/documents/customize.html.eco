@@ -2,7 +2,7 @@
 layout      : 'default'
 css         : 'custom'
 title       : 'Download'
-type        : 'Semantic'
+type        : 'Draft'
 ---
 
 <script src="/javascript/customize.js"></script>

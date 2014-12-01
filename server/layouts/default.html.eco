@@ -3,7 +3,7 @@
 <head>
   <%- @partial('head') %>
 
-  <% if 'development' in @getEnvironments() || (@document.title? and @document.title is 'Page Not Found'): %>
+  <% if 'developments' in @getEnvironments() || (@document.title? and @document.title is 'Page Not Found'): %>
   <% else: %>
 
   <script>

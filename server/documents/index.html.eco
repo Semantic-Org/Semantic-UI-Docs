@@ -1,7 +1,6 @@
 ---
 layout : 'default'
 css    : 'index'
-type   : 'Semantic'
 ---
 
 <script src="/javascript/home.js"></script>
@@ -28,7 +27,6 @@ type   : 'Semantic'
             data-text="Semantic UI just reached 1.0."
             data-url="http://semantic-ui.com"
             data-via="semanticui">
-          Tweet
           </a>
           <script type="text/javascript">
           window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
@@ -74,7 +72,7 @@ type   : 'Semantic'
         </a>
       </div>
       <div class="inverted advertisement">
-        <% unless 'developments' in @getEnvironments(): %>
+        <% unless 'development' in @getEnvironments(): %>
         <div id="carbonads-container">
           <div class="carbonad">
             <div id="azcarbon"></div>

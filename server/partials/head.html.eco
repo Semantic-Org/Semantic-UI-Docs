@@ -69,6 +69,8 @@
 
 <link rel="stylesheet" type="text/css" href="/stylesheets/doc-icon.css">
 <link rel="stylesheet" type="text/css" href="/stylesheets/docs.css">
+<link rel="stylesheet" type="text/css" href="/stylesheets/rtl.css">
+
 
 <% if 'development' in @getEnvironments(): %>
 <script>

@@ -90,7 +90,7 @@ type        : 'UI Module'
         </div>
         <div class="code" data-demo="true">
         $('.autumn.leaf')
-          .transition('browse out right')
+          .transition('browse right')
         ;
         </div>
       </div>

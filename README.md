@@ -11,6 +11,8 @@ docpad install eco;
 docpad update; docpad upgrade;
 ```
 
+### Generating SUI for Docs
+
 Before running server you will need to build your UI files for the docs. This can be done using 
 
 ```
@@ -20,6 +22,8 @@ gulp build-docs
 This command builds files for the docs from a separate config designed for housing a docs instance, [see tasks/docs.json](https://github.com/Semantic-Org/Semantic-UI/blob/master/tasks/admin/docs.json)
 
 The default location for ``build-docs`` is a sibling folder to your ui with the name ``docs/``
+
+### Running Server
 
 You can then start your docs server (and generate docs) using:
 ```

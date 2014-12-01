@@ -151,7 +151,7 @@ type        : 'UI Module'
     <h2 class="ui dividing header">Initializing</h2>
 
     <div class="ui message">
-      Search is built ontop of Semantic <a href="/modules/api.html">API</a> behaviors to allow for simple URL templating, and UI state management. Please check out the API documentation for more information on adjusting API settings.
+      Search is built ontop of Semantic <a href="/modules/api.html">API</a> behaviors to allow for URL templating, and UI state management. Please check out the API documentation for more information on adjusting API settings.
     </div>
 
     <h4 class="ui header">Automatic Routing</h4>
@@ -165,7 +165,7 @@ type        : 'UI Module'
       ;
     </div>
     <h4 class="ui header">Named URL</h4>
-    <p>You can specigy custom api settings to adjust the url, or use a different api action</p>
+    <p>You can specify custom API settings to adjust the url, callback settings, or specify a different api action.</p>
     <div class="code" data-label="javascript">
 
       // initializes with default endpoint /search/{query}
@@ -199,8 +199,12 @@ type        : 'UI Module'
       ;
       $('.ui.search')
         .search({
+          type   : 'simple',
           source : content,
-          type   : 'simple'
+          searchFields   : [
+            'title'
+          ],
+          searchFullText: false
         })
       ;
     </div>

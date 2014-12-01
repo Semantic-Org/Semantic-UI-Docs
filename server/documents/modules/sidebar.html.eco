@@ -234,7 +234,7 @@ themes      : ['Default']
       <h4 class="ui header">Page Structure</h4>
       <p>Using a sidebar requires a specific page structure. For optimal performance your page should be already set-up with this structure before initializing a sidebar.</p>
       <div class="ui info message">
-        Sidebar will automatically add the correct layout on first load if it is not set-up, but this will adjust the DOM on page load, but this will reduce performance and is not recommended.
+        Sidebar will automatically add the correct layout on first load if it is not set-up, however fixing your page's layout on load <b>will reduce performance and is not recommended</b>.
       </div>
       <div class="code" data-type="html">
         <!--body tag-->

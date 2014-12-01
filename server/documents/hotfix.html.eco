@@ -10,12 +10,8 @@ type   : 'Library'
 <!-- TEST JS HERE !-->
 <script>
 $(document).ready(function() {
-  $('.main .button').on('click', function() {
-    console.log('zzz');
-    $('.main .image').transition({
-      debug: true,
-      animation: 'not real'
-    });
+  $('.main .dropdown').dropdown({
+    on: 'hover'
   });
 });
 </script>
@@ -26,7 +22,47 @@ $(document).ready(function() {
 </style>
 
 <div class="main container">
-  <div class="ui button">Click me</div>
-  <img src="/images/wireframe/image.png" class="ui image">
+  <div class="ui menu">
+    <div class="menu">
+      <div class="ui pointing dropdown link item">
+        <i class="dropdown icon"></i>
+        <span class="text">Shopping</span>
+        <div class="menu">
+          <div class="item">
+            <i class="dropdown icon"></i>
+            <span class="text">Clothing</span>
+            <div class="menu">
+              <div class="header">Mens</div>
+              <div class="item">Shirts</div>
+              <div class="item">Pants</div>
+              <div class="item">Jeans</div>
+              <div class="item">Shoes</div>
+              <div class="divider"></div>
+              <div class="header">Womens</div>
+              <div class="item">Dresses</div>
+              <div class="item">Shoes</div>
+              <div class="item">Bags</div>
+            </div>
+          </div>
+          <div class="item">
+            <i class="dropdown icon"></i>
+            <span class="text">Clothing 2</span>
+            <div class="menu">
+              <div class="header">Mens</div>
+              <div class="item">Shirts</div>
+              <div class="item">Pants</div>
+              <div class="item">Jeans</div>
+              <div class="item">Shoes</div>
+              <div class="divider"></div>
+              <div class="header">Womens</div>
+              <div class="item">Dresses</div>
+              <div class="item">Shoes</div>
+              <div class="item">Bags</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 

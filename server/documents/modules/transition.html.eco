@@ -406,6 +406,11 @@ type        : 'UI Module'
           <td>Duration of the css transition animation</td>
         </tr>
         <tr>
+          <td>useFailSafe</td>
+          <td>false</td>
+          <td>If enabled a <code>timeout</code> will be added to ensure <code>animationend</code> callback occurs even if element is hidden</td>
+        </tr>
+        <tr>
           <td>allowRepeats</td>
           <td>false</td>
           <td>If enabled will allow same animation to be queued while it is already occurring</td>

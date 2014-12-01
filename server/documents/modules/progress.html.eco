@@ -14,7 +14,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
 <link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/progress.less" />
 <script src="/javascript/progress.js"></script>
 
-<%- @partial('header', { tabs: {  definition: 'Definition', usage: 'Usage' }, settings: 'Settings' }) %>
+<%- @partial('header', { tabs: {  definition: 'Definition', usage: 'Usage', settings: 'Settings' }}) %>
 
 <div class="main container">
 
@@ -186,6 +186,33 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
       </div>
     </div>
 
+    <div class="example">
+      <h4 class="ui header">Size</h4>
+      <p>A progress bar can vary in size</p>
+      <div class="ui ignored info message">
+        Some small sizes may not be able to fit an inlined label
+      </div>
+      <div class="ui tiny progress">
+        <div class="bar"></div>
+        <div class="label">Tiny</div>
+      </div>
+      <div class="ui small progress">
+        <div class="bar"></div>
+        <div class="label">Small</div>
+      </div>
+      <div class="ui progress">
+        <div class="bar"></div>
+        <div class="label">Standard</div>
+      </div>
+      <div class="ui large progress">
+        <div class="bar"></div>
+        <div class="label">Large</div>
+      </div>
+      <div class="ui big progress">
+        <div class="bar"></div>
+        <div class="label">Big</div>
+      </div>
+    </div>
 
     <div class="example">
       <h4 class="ui header">Color</h4>

@@ -565,6 +565,16 @@ themes      : ['Default']
           <td>If a popup is inline it will be created next to current element, allowing for local css rules to apply. It will not be removed from the DOM after being hidden. Otherwise popups will appended to body and removed after being hidden.</td>
         </tr>
         <tr>
+          <td>prefer</td>
+          <td>adjacent</td>
+          <td>Can be set to <code>adjacent</code> or <code>opposite</code> to prefer adjacent or opposite position if popup cannot fit on screen</td>
+        </tr>
+        <tr>
+          <td>lastResort</td>
+          <td>false</td>
+          <td>When set to default value false, a popup will not appear and produce an error message if it cannot entirely fit on page. Setting this to a position like, <code>right center</code> forces the popup to use this position as a last resort even if it is offstage.</td>
+        </tr>
+        <tr>
           <td>preserve</td>
           <td>true</td>
           <td>Whether popup contents should be preserved in the page after being hidden, allowing it to re-appear slightly faster on subsequent loads.</td>

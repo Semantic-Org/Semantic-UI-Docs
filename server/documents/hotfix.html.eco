@@ -10,9 +10,7 @@ type   : 'Library'
 <!-- TEST JS HERE !-->
 <script>
 $(document).ready(function() {
-  $('.main .dropdown').dropdown({
-    on: 'hover'
-  });
+  $('.main .dropdown').dropdown();
 });
 </script>
 
@@ -22,47 +20,45 @@ $(document).ready(function() {
 </style>
 
 <div class="main container">
-  <div class="ui inverted blue menu">
-    <div class="row">
-        <div class="ui dropdown item">
-            <i class="dropdown icon"></i>
-            Top Menu
-            <div class="menu">
-                <div class="item">
-                    <i class="dropdown icon"></i>
-                    Text
-                    <div class="menu">
-                        <div class="item">
-                            <i class="dropdown icon"></i>
-                            Sub 1
-                            <div class="menu one">
-                                <div class="item">Item 11</div>
-                                <div class="item">Item 12</div>
-                                <div class="item">Item 13</div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <i class="dropdown icon"></i>
-                             Sub 2
-                            <div class="menu two">
-                                <div class="item">Item 21</div>
-                                <div class="item">Item 22</div>
-                                <div class="item">Item 23</div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <i class="dropdown icon"></i>
-                             Sub 3
-                            <div class="menu three">
-                                <div class="item">Item 31</div>
-                                <div class="item">Item 32</div>
-                                <div class="item">Item 33</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<div class="ui inverted menu">
+    <div class="ui search selection dropdown item">
+        <input type="hidden" name="country"> <i class="dropdown icon"></i>
+
+        <div class="default text">Select Country</div>
+        <div class="menu">
+            <div class="item" data-value="ad"><i class="ad flag"></i>Andorra</div>
+            <div class="item" data-value="ae"><i class="ae flag"></i>United Arab Emirates</div>
+            <div class="item" data-value="af"><i class="af flag"></i>Afghanistan</div>
+            <div class="item" data-value="ag"><i class="ag flag"></i>Antigua</div>
+            <!-- Omitted Some Countries !-->
+            <div class="item" data-value="zm"><i class="zm flag"></i>Zambia</div>
+            <div class="item" data-value="zw"><i class="zw flag"></i>Zimbabwe</div>
         </div>
+    </div>
+</div>
+
+<div class="ui search selection dropdown">
+    <input type="hidden" name="country"> <i class="dropdown icon"></i>
+
+    <div class="default text">Select Country</div>
+    <div class="menu">
+        <div class="item" data-value="ad"><i class="ad flag"></i>Andorra</div>
+        <div class="item" data-value="ae"><i class="ae flag"></i>United Arab Emirates</div>
+        <div class="item" data-value="af"><i class="af flag"></i>Afghanistan</div>
+        <div class="item" data-value="ag"><i class="ag flag"></i>Antigua</div>
+        <!-- Omitted Some Countries !-->
+        <div class="item" data-value="zm"><i class="zm flag"></i>Zambia</div>
+        <div class="item" data-value="zw"><i class="zw flag"></i>Zimbabwe</div>
+    </div>
+</div>
+<div class="ui top page large inverted blue menu">
+    <div class="ui dropdown item">
+        <i class="dropdown icon"></i>
+        Akvaristika
+        <div class="menu">
+            <a href="/" class="item">Stanovnici akvarija</a>
+            <a href="/" class="item">Biljke</a>
+            <a href="/" class="item">Oprema (ostalo)</a></div>
     </div>
 </div>
 </div>

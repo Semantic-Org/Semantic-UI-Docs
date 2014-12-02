@@ -55,7 +55,7 @@ css    : 'index'
     <div class="column">
       <div class="introduction">
         <a class="ui black version label" href="https://github.com/Semantic-Org/Semantic-UI/blob/master/RELEASE-NOTES.md">
-          1.0.1
+          1.1.0
         </a>
         <h1 class="ui inverted header">
           <span class="library">
@@ -900,7 +900,7 @@ css    : 'index'
   </div>
 </div>
 <div class="ui vertical inverted stripe segment">
-  <div class="ui stackable center aligned very relaxed page grid">
+  <div class="ui stackable center aligned page grid">
     <div class="fourteen wide column">
       <h1 class="ui inverted icon header">
         <img src="/images/icons/pen.png" class="icon image">
@@ -908,7 +908,7 @@ css    : 'index'
       </h1>
       <p>Semantic's conventions are based around <a href="https://www.princeton.edu/~achaney/tmve/wiki100k/docs/Descriptive_linguistics.html" target="_blank"><b>common usage</b></a> and not prescription. Syntax borrows useful principles from natural language like plurality, tense, and word order so your code explains itself.</p>
       <div class="hidden code" data-type="html">
-        <div class="ui stackable center aligned very relaxed page grid">
+        <div class="ui stackable center aligned page grid">
           <div class="fourteen wide column">
             <h1 class="ui inverted icon header">
               <img src="/images/icons/pen.png" class="icon image">

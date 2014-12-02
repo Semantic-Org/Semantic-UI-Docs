@@ -20,7 +20,7 @@ Before running server you will need to build your UI files for the docs. Semanti
 gulp build-docs
 ```
 
->> The default location for ``build-docs`` is an adjacent folder with the name ``docs/``. The command must be run from your UI folder and not from the docs folder.
+> The default location for ``build-docs`` is an adjacent folder with the name ``docs/``. The command must be run from your UI folder and not from the docs folder.
 
 To config a different docs location modify, [ tasks/docs.json](https://github.com/Semantic-Org/Semantic-UI/blob/master/tasks/admin/docs.json)
 

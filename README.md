@@ -1,10 +1,11 @@
 # Semantic Docs
 
-## How to Use
-
 This folder contains the templates used to generate the static website for [semantic-ui.com](http://www.semantic-ui.com)
 
-To install DocPad
+## How to Use
+
+
+To install [DocPad](http://github.com/docpad/docpad), the static site generator used to create the html for the site.
 ```
 npm install -g docpad
 docpad install eco;

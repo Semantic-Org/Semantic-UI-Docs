@@ -1123,6 +1123,8 @@ themes      : ['Default']
 
   <div class="ui tab" data-tab="examples">
 
+    <h2 class="ui header">Examples</h2>
+
     <div class="transition example">
       <h3 class="ui header">Changing Transitions</h3>
       <p>A dropdown can specify a different <a href="/modules/transition.html">transitions</a>.</p>

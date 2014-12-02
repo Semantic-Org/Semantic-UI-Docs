@@ -159,14 +159,14 @@ themes      : ['Default']
   </div>
   <div class="another example">
     <div class="ui transparent icon input">
-      <i class="search icon"></i>
       <input type="text" placeholder="Search...">
+      <i class="search icon"></i>
     </div>
   </div>
   <div class="another example">
     <div class="ui transparent left icon input">
-      <i class="search icon"></i>
       <input type="text" placeholder="Search...">
+      <i class="search icon"></i>
     </div>
   </div>
 
@@ -177,13 +177,15 @@ themes      : ['Default']
       <div class="ui inverted input">
         <input type="text" placeholder="Search...">
       </div>
-      <div class="ui inverted icon input">
-        <i class="search icon"></i>
-        <input type="text" placeholder="Search...">
-      </div>
+      <div class="ui inverted divider"></div>
       <div class="ui inverted left icon input">
-        <i class="search icon"></i>
         <input type="text" placeholder="Search...">
+        <i class="search icon"></i>
+      </div>
+      <div class="ui inverted divider"></div>
+      <div class="ui inverted transparent icon input">
+        <input type="text" placeholder="Search...">
+        <i class="search icon"></i>
       </div>
     </div>
   </div>

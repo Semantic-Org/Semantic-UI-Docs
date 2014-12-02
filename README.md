@@ -2,7 +2,7 @@
 
 ## How to Use
 
-This folder contains the templates used to generate the static website for LearnSemantic.com
+This folder contains the templates used to generate the static website for semantic-ui.com
 
 To install DocPad
 ```

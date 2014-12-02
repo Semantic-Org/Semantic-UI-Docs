@@ -34,7 +34,7 @@ type        : 'UI Element'
 
   <div class="example">
     <h4 class="ui header">Rail</h4>
-    <p class="header">A rail can be presented on the left or right side of content</p>
+    <p class="header">A rail can be presented on the left or right side of a container</p>
 
     <div class="ui segment">
       <div class="ui left rail">
@@ -53,7 +53,7 @@ type        : 'UI Element'
   </div>
   <div class="example">
     <h4 class="ui header">Internal</h4>
-    <p class="header">A rail can be attach itself to the inside of the main viewport</p>
+    <p class="header">A rail can attach itself to the inside of a container</p>
 
     <div class="ui segment" style="left: -150px; width: 960px;min-height: 300px;">
       <div class="ui left internal rail">
@@ -71,7 +71,7 @@ type        : 'UI Element'
 
   <div class="example">
     <h4 class="ui header">Dividing</h4>
-    <p>A rail can visually divide content from the main viewport</p>
+    <p>A rail can create a division between itself and a container</p>
     <div class="ui segment">
       <div class="ui left dividing rail">
         <div class="ui segment">
@@ -92,7 +92,7 @@ type        : 'UI Element'
 
   <div class="example">
     <h4 class="ui header">Attached</h4>
-    <p>A rail can appear without any separation from the main viewport</p>
+    <p>A rail can appear attached to the main viewport</p>
     <div class="ui segment">
       <div class="ui left attached rail">
         <div class="ui segment">

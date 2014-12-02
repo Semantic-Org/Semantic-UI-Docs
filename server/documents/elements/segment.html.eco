@@ -43,7 +43,7 @@ themes      : ['default', 'GitHub']
 
   <div class="example">
     <h4 class="ui header">Horizontal Segment</h4>
-    <p>A vertical segment formats content to be aligned as part of a horizontal group</p>
+    <p>A horizontal segment formats its content to be aligned as part of a horizontal group</p>
     <div class="ui ignored info message">
       <div class="header">When to Use Horizontal Segments</div>
       <p>Horizontal segments are most effectively used with grids, to allow for text groups that are aligned across grid rows.</p>
@@ -285,7 +285,7 @@ themes      : ['default', 'GitHub']
   </div>
   <div class="example">
     <h4 class="ui header">Floated</h4>
-    <p>A segment cant sit to the left or right of other content</p>
+    <p>A segment can appear to the left or right of other content</p>
     <div class="ui right floated segment">
       <p>This segment will appear to the right
     </div>
@@ -302,7 +302,7 @@ themes      : ['default', 'GitHub']
 
   <div class="clearing example">
     <h4 class="ui header">Text Alignment</h4>
-    <p>A segment cant have its text aligned to a side</p>
+    <p>A segment can have its text aligned to a side</p>
     <div class="ui right aligned segment">
       Right
     </div>

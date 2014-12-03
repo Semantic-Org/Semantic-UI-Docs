@@ -55,8 +55,8 @@ themes      : ['Default']
   <div class="example">
     <h4 class="ui header">Error</h4>
     <p>An input field can show the data contains errors</p>
-    <div class="ui input error" placeholder="Search...">
-      <input type="text">
+    <div class="ui input error">
+      <input type="text" placeholder="Search...">
     </div>
   </div>
 

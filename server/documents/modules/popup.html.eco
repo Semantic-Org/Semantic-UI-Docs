@@ -305,7 +305,11 @@ themes      : ['Default']
           <td>Repositions a popup</td>
         </tr>
         <tr>
-          <td>remove</td>
+          <td>destroy</td>
+          <td>Removes popup from the page and removes all events</td>
+        </tr>
+        <tr>
+          <td>remove popup</td>
           <td>Removes popup from the page</td>
         </tr>
       </tbody>
@@ -572,7 +576,7 @@ themes      : ['Default']
         <tr>
           <td>lastResort</td>
           <td>false</td>
-          <td>When set to default value false, a popup will not appear and produce an error message if it cannot entirely fit on page. Setting this to a position like, <code>right center</code> forces the popup to use this position as a last resort even if it is offstage.</td>
+          <td>When set to default value false, a popup will not appear and produce an error message if it cannot entirely fit on page. Setting this to a position like, <code>right center</code> forces the popup to use this position as a last resort even if it is partially offstage.</td>
         </tr>
         <tr>
           <td>preserve</td>

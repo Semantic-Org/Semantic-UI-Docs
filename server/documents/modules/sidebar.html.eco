@@ -269,7 +269,7 @@ themes      : ['Default']
     <div class="no example">
       <h4 class="ui header">Displaying Multiple</h4>
       <p>Multiple sidebars can be displayed at the same time only when using a supported animation like <code>push</code> or <code>overlay</code>.</p>
-      <p>You may need to manually set the z-index on elements to ensure the intended sidebar element appears on top.</p>
+      <div class="ui info message">You may need to manually set the z-index on elements to ensure the intended sidebar element appears on top.</div>
 
       <div class="code" data-demo="true" data-type="javascript">
       // shows all four sidebars at once

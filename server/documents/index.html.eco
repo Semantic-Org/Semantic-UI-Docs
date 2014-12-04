@@ -55,7 +55,7 @@ css    : 'index'
     <div class="column">
       <div class="introduction">
         <a class="ui black version label" href="https://github.com/Semantic-Org/Semantic-UI/blob/master/RELEASE-NOTES.md">
-          1.1.1
+          1.1.2
         </a>
         <h1 class="ui inverted header">
           <span class="library">

@@ -12,7 +12,7 @@
     </a>
     <a href="/"><b>UI Docs</b></a>
   </div>
-  <a class="item" href="https://github.com/Semantic-Org/Semantic-UI/archive/1.0.0.zip">
+  <a class="item" href="<%= @getZip() %>">
     <i class="download icon"></i> <b>Download</b>
   </a>
   <a class="item" href="/kitchen-sink.html">

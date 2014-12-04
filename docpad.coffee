@@ -19,13 +19,14 @@ docpadConfig = {
 
 		# Specify some site properties
 		site:
+
 			# The production url of our website
 			url: "http://www.semantic-ui.com"
 
 			# Here are some old site urls that you would like to redirect from
-			oldUrls: [
-				'learnsemantic.com'
-			],
+			oldUrls: [],
+
+			version: "1.1.2",
 
 			# The default title of our website
 			title: "Semantic UI"
@@ -47,6 +48,16 @@ docpadConfig = {
 		# Get the prepared site/document title
 		# Often we would like to specify particular formatting to our page's title
 		# we can apply that formatting here
+
+		getVersion: ->
+			@site.version
+
+		getZip: ->
+			if @site.version
+				"https://github.com/Semantic-Org/Semantic-UI/archive/" + @site.version + ".zip"
+			else
+				"https://github.com/Semantic-Org/Semantic-UI/archive/master.zip"
+
 		getPreparedTitle: ->
 			# if we have a document title, then we should use that and suffix the site's title onto it
 			if @document.title

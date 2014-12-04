@@ -55,7 +55,7 @@ css    : 'index'
     <div class="column">
       <div class="introduction">
         <a class="ui black version label" href="https://github.com/Semantic-Org/Semantic-UI/blob/master/RELEASE-NOTES.md">
-          1.1.2
+          <%= @getVersion() %>
         </a>
         <h1 class="ui inverted header">
           <span class="library">
@@ -66,7 +66,7 @@ css    : 'index'
           <span class="text">is the vocabulary of the web.</span>
         </h1>
         <div class="ui hidden divider"></div>
-        <a href="https://github.com/Semantic-Org/Semantic-UI/archive/1.0.1.zip" class="ui huge basic inverted teal download button">
+        <a href="<%= @getZip() %>" class="ui huge basic inverted teal download button">
           Download Now
           <i class="right chevron icon"></i>
         </a>

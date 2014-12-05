@@ -341,12 +341,12 @@ themes      : ['Default']
           <td>Toggles visibility of sidebar</td>
         </tr>
         <tr>
-          <td>is open</td>
-          <td>Returns whether sidebar is open</td>
+          <td>is visible</td>
+          <td>Returns whether sidebar is visible</td>
         </tr>
         <tr>
-          <td>is closed</td>
-          <td>Returns whether sidebar is closed</td>
+          <td>is hidden</td>
+          <td>Returns whether sidebar is hidden</td>
         </tr>
         <tr>
           <td>push page</td>

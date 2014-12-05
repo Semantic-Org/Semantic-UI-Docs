@@ -338,6 +338,7 @@ themes      : ['Default', 'Basic', 'Classic']
         <div class="meta">
           <span class="time">2 days ago</span>
           <span class="category">Animals</span>
+          <a>Link</a>
         </div>
       </div>
     </div>

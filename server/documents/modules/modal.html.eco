@@ -18,6 +18,39 @@ themes      : ['Default', 'Material', 'Fixed-width']
 
 <div class="main container">
 
+  <div class="ui first coupled modal">
+    <div class="header">
+      Modal #1
+    </div>
+    <div class="content">
+      <div class="image">
+        <i class="right arrow icon"></i>
+      </div>
+      <div class="description">
+        <p>We have more to share with you. Follow us along to modal 2</p>
+      </div>
+    </div>
+    <div class="actions">
+      <div class="primary ui button">Proceed</div>
+    </div>
+  </div>
+  <div class="ui small second coupled modal">
+    <div class="header">
+      Modal #2
+    </div>
+    <div class="content">
+      <div class="description">
+        <p>That's everything!</p>
+      </div>
+    </div>
+    <div class="actions">
+      <div class="ui approve button">
+        <i class="checkmark icon"></i>
+        All Done
+      </div>
+    </div>
+  </div>
+
   <div class="ui basic test modal">
     <div class="header">
       Archive Old Messages
@@ -290,6 +323,42 @@ themes      : ['Default', 'Material', 'Fixed-width']
       <p>When your modal content exceeds the height of the browser the scrollable area will automatically expand to include just enough space for scrolling, without scrolling the page below.</p>
       <div class="code" data-demo="true">
       $('.long.test.modal')
+        .modal('show')
+      ;
+      </div>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">Multiple Modals</h4>
+      <p>A modal can open a second modal. If you use <code>allowMultiple: true</code> parameter the second modal will  be opened on top of the first modal. Otherwise the modal will be closed before the second modal is opened.</p>
+      <div class="code" data-demo="true">
+      // initialize all modals
+      $('.coupled.modal')
+        .modal({
+          allowMultiple: true
+        })
+      ;
+      // open second modal on button click
+      $('.second.modal')
+        .modal('attach events', '.first.modal .button')
+      ;
+      // show first immediately
+      $('.first.modal')
+        .modal('show')
+      ;
+      </div>
+      <div class="code" data-demo="true">
+      $('.coupled.modal')
+        .modal({
+          allowMultiple: false
+        })
+      ;
+      // attach events to buttons
+      $('.second.modal')
+        .modal('attach events', '.first.modal .button')
+      ;
+      // show first now
+      $('.first.modal')
         .modal('show')
       ;
       </div>
@@ -694,4 +763,3 @@ themes      : ['Default', 'Material', 'Fixed-width']
 
 </div>
 
-<link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/modal.less" />

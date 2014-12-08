@@ -151,7 +151,7 @@ type        : 'UI Module'
     <h2 class="ui dividing header">Initializing</h2>
 
     <div class="ui message">
-      Search is built ontop of Semantic <a href="/modules/behaviors/api.html">API</a> behaviors to allow for URL templating, and UI state management. Please check out the API documentation for more information on adjusting API settings.
+      Search is built ontop of Semantic <a href="/modules/api.html">API</a> behaviors to allow for URL templating, and UI state management. Please check out the API documentation for more information on adjusting API settings.
     </div>
 
     <h4 class="ui header">Automatic Routing</h4>
@@ -311,7 +311,7 @@ type        : 'UI Module'
           }
           </div>
           </td>
-          <td>Settings for <a href="/behaviors/api.html#/usage">API</a> call.</td>
+          <td>Settings for <a href="/modules/api.html#/usage">API</a> call.</td>
         </tr>
         <tr>
           <td>minCharacters</td>

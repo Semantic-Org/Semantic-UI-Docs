@@ -7,8 +7,9 @@ semantic.validateForm.ready = function() {
   var
     $dogForm      = $('.dog.example .ui.form'),
     $dropdownForm = $('.dropdown.example .ui.form'),
+    $optionalForm = $('.optional.example .ui.form'),
     $inlineForm   = $('.inline.example .ui.form'),
-    $form         = $('.ui.form').not($dogForm).not($inlineForm).not($dropdownForm),
+    $form         = $('.ui.form').not($dogForm).not($inlineForm).not($dropdownForm).not($optionalForm),
     $checkbox     = $('.ui.checkbox'),
     $dropdown     = $('.ui.dropdown'),
     // alias
@@ -156,6 +157,29 @@ semantic.validateForm.ready = function() {
       .dropdown()
   ;
 
+  $optionalForm
+    .form({
+      email: {
+        identifier : 'email',
+        rules: [
+          {
+            type   : 'email',
+            prompt : 'Please enter a valid e-mail'
+          }
+        ]
+      },
+      ccEmail: {
+        identifier : 'cc-email',
+        optional   : true,
+        rules: [
+          {
+            type   : 'email',
+            prompt : 'Please enter a valid second e-mail'
+          }
+        ]
+      },
+    })
+  ;
 
   $dogForm
     .form({

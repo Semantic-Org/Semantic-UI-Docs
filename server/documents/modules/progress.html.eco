@@ -396,6 +396,11 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
           <td>Whether progress should automatically show activity when incremented</td>
         </tr>
         <tr>
+          <td>limitValues</td>
+          <td>true</td>
+          <td>When set to true, values that calculate to above 100% or below 0% will be adjusted. When set to false, inappropriate values will produce an error.</td>
+        </tr>
+        <tr>
           <td>label</td>
           <td>percent</td>
           <td>Can be set to either to display progres as <b>percent</b> or <b>ratio</b>. Matches up to corresponding text template with the same name.</td>

@@ -26,7 +26,7 @@ type        : 'UI Behavior'
     <div class="example">
       <h4 class="ui header">Validation Definitions</h4>
       <p>Form validation requires passing in a validation object with the rules required to validate your form.</p>
-      <div class="ui info message">
+      <div class="ui ignored info message">
         <i class="help icon"></i>A validation object includes a list of form elements, and rules to validate each against. Fields are matched by either the <code>id</code> tag, <code>name</code> tag, or the <code>data-validate</code> metadata matching the identifier provided in the settings object.
       </div>
       <div class="ignore code">
@@ -71,7 +71,7 @@ type        : 'UI Behavior'
                 prompt : 'Your password must be at least 6 characters'
               }
             ]
-          }
+          },
           terms: {
             identifier : 'terms',
             rules: [
@@ -137,24 +137,9 @@ type        : 'UI Behavior'
         </thead>
         <tbody>
           <tr>
-            <td>empty</td>
-            <td>value</td>
-            <td>Checks whether a field is empty</td>
-          </tr>
-          <tr>
-            <td>email</td>
-            <td>value</td>
-            <td>Checks whether a field is a valid email address</td>
-          </tr>
-          <tr>
-            <td>length</td>
-            <td>value</td>
-            <td>Checks whether a field is longer than a length</td>
-          </tr>
-          <tr>
-            <td>not</td>
-            <td>value, notValue</td>
-            <td>Checks whether a field is not a value</td>
+            <td>checked</td>
+            <td></td>
+            <td>Checks whether a checkbox field is checked</td>
           </tr>
           <tr>
             <td>contains</td>
@@ -162,14 +147,29 @@ type        : 'UI Behavior'
             <td>Checks whether a field contains text</td>
           </tr>
           <tr>
+            <td>email</td>
+            <td>value</td>
+            <td>Checks whether a field is a valid email address</td>
+          </tr>
+          <tr>
+            <td>empty</td>
+            <td>value</td>
+            <td>Checks whether a field is empty</td>
+          </tr>
+          <tr>
+            <td>integer</td>
+            <td></td>
+            <td>Checks whether a field is an integer value</td>
+          </tr>
+          <tr>
             <td>is</td>
             <td>value, text</td>
             <td>Checks whether a field matches a value</td>
           </tr>
           <tr>
-            <td>maxLength</td>
+            <td>length</td>
             <td>value</td>
-            <td>Checks whether a field is less than a max length</td>
+            <td>Checks whether a field is longer than a length</td>
           </tr>
           <tr>
             <td>match</td>
@@ -177,14 +177,19 @@ type        : 'UI Behavior'
             <td>Checks whether a field matches another field</td>
           </tr>
           <tr>
+            <td>maxLength</td>
+            <td>value</td>
+            <td>Checks whether a field is less than a max length</td>
+          </tr>
+          <tr>
+            <td>not</td>
+            <td>value, notValue</td>
+            <td>Checks whether a field is not a value</td>
+          </tr>
+          <tr>
             <td>url</td>
             <td>value</td>
             <td>Checks whether a field is a url</td>
-          </tr>
-          <tr>
-            <td>checked</td>
-            <td>-</td>
-            <td>Checks whether a checkbox field is checked</td>
           </tr>
         </tbody>
       </table>
@@ -243,6 +248,51 @@ type        : 'UI Behavior'
           </div>
         </div>
         <div class="ui blue submit button">Submit</div>
+      </div>
+    </div>
+
+    <div class="optional example">
+      <h4 class="ui header">Optional Validation Fields</h4>
+      <p>Adding the parameter <code>optional: true</code> will only add your validation rules when the field is <b>not empty</b>.
+      <div class="ignored code">
+      $('.ui.form')
+        .form({
+          email: {
+            identifier : 'email',
+            rules: [
+              {
+                type   : 'email',
+                prompt : 'Please enter a valid e-mail'
+              }
+            ]
+          },
+          ccEmail: {
+            identifier : 'cc-email',
+            optional   : true,
+            rules: [
+              {
+                type   : 'email',
+                prompt : 'Please enter a valid second e-mail'
+              }
+            ]
+          },
+        })
+      ;
+      </div>
+      <div class="ui form">
+        <p>Your tickets are all ready to print. Where would you like to send a receipt?</p>
+        <div class="fields">
+          <div class="ten wide field">
+            <label>E-mail</label>
+            <input type="text" name="email">
+          </div>
+          <div class="six wide field">
+            <label>Additional E-mail</label>
+            <input type="text" name="cc-email">
+          </div>
+        </div>
+        <div class="ui blue submit button">Submit</div>
+        <div class="ui error message"></div>
       </div>
     </div>
     <div class="example">

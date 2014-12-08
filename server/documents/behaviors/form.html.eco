@@ -247,7 +247,7 @@ type        : 'UI Behavior'
     </div>
     <div class="example">
       <h4 class="ui header">Displaying Error Messages</h4>
-      <p>Forms that contain a <a href="/elements/message.html">ui message</a> error block will automatically be filled in with form validation information.</p>
+      <p>Forms that contain a <a href="/collections/message.html">ui message</a> error block will automatically be filled in with form validation information.</p>
       <div class="ui ignored info message">The template for error messages can be modified by adjusting settings.template.error</div>
 
       <div class="ui form segment">
@@ -365,7 +365,7 @@ type        : 'UI Behavior'
   <div class="ui tab" data-tab="settings">
     <h2 class="ui dividing header">Behavior</h2>
 
-    All the following <a href="/module.html#/behavior">behaviors</a> can be called using the syntax
+    All the following behaviors can be called using the syntax
 
     <div class="code" data-type="javascript">
       $('.foo').form('behavior name', argumentOne, argumentTwo)

@@ -22,7 +22,7 @@ themes      : ['Default', 'Basic', 'Resetcss']
 
     <h2 class="ui dividing header">Reset Options</h2>
     <p>
-      The <b>basic</b> themes <b>only</b> includes the required <code>box-sizing</code> reset and nothing else. The <b>resetcss</b> theme provides a version of <a href="http://meyerweb.com/eric/tools/css/reset/">ResetCSS</a>, a less opinionated css reset.
+      The <b>basic</b> themes <b>only</b> includes the required <code>box-sizing</code> reset and nothing else. The <b>resetcss</b> theme provides a version of <a href="http://meyerweb.com/eric/tools/css/reset/">Reset CSS</a>, a less opinionated css reset.
     </p>
   </div>
   <div class="ui tab" data-tab="test">

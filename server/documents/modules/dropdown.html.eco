@@ -1592,6 +1592,78 @@ themes      : ['Default']
     </div>
 
 
+    <div class="no example">
+      <h4 class="ui header">Specifying Select Action</h4>
+      <p>Dropdowns have multiple built-in actions that can occur on item selection, you can specify a built by passing in a value to <code>settings.action</code> that is either a built in action, or a custom function that performs an action.</p>
+
+      <table class="ui definition sortable celled table segment">
+        <thead>
+          <tr>
+            <th>Action</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>activate (Default)</td>
+            <td>Selects current item, adjusts dropdown value and changes dropdown text</td>
+          </tr>
+          <tr>
+            <td>select</td>
+            <td>Selects current item from menu but does not change dropdown text</td>
+          </tr>
+          <tr>
+            <td>combo</td>
+            <td>Same as activate, but updates previous elements text instead of self</td>
+          </tr>
+          <tr>
+            <td>hide</td>
+            <td>Hides the dropdown menu but does nothing</td>
+          </tr>
+          <tr>
+            <td>nothing</td>
+            <td>Does nothing</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>To specify a different built in action, simply specify the name.</p>
+      <div class="code" data-type="javascript" data-label="Specified Action">
+        $('.dropdown')
+          .dropdown({
+            action: 'combo'
+          })
+        ;
+      </div>
+      <p>To trigger <b>only your custom action</b> and no default action, specify your own function for <code>settings.action</code>.</p>
+      <div class="code" data-type="javascript" data-label="Custom Action">
+        $('.dropdown')
+          .dropdown({
+            action: function(text, value) {
+              // nothing built in occurs
+            })
+          })
+        ;
+      </div>
+
+      <p>If you want to have both a built in action occur, and your own custom action use <code>onChange</code> in combination with <code>action</code></p>
+
+      <div class="code" data-type="javascript" data-label="Custom Action">
+        $('.dropdown')
+          .dropdown({
+            action: 'hide',
+            onChange: function(text, value) {
+              // custom action
+            }
+          })
+        ;
+      </div>
+
+
+    </div>
+
+
+
     <h2 class="ui dividing header">Behavior</h2>
 
     <p>All the following behaviors can be called using the syntax:</p>
@@ -1742,9 +1814,11 @@ themes      : ['Default']
       </thead>
       <tbody>
         <tr>
-          <td>type</td>
-          <td>false</td>
-          <td>Type of dropdown (Either </td>
+          <td>action</td>
+          <td>activate</td>
+          <td>
+            Action that should occur on dropdown selection (see notes in usage)
+          </td>
         </tr>
         <tr>
           <td>on</td>

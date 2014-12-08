@@ -807,7 +807,7 @@ css    : 'index'
         </div>
         <div class="no example">
           <h4 class="ui header">
-            <a href="/elements/progress.html">Progress</a>
+            <a href="/modules/progress.html">Progress</a>
           </h4>
           <div data-total="20" data-value="6" class="ui teal file demo progress active">
             <div class="bar" style="width: 25%;">

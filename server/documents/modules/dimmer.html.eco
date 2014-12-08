@@ -260,7 +260,7 @@ themes      : ['Default']
 
     <h2 class="ui dividing header">Behavior</h2>
 
-    <p>All the following <a href="/module.html#/behavior">behaviors</a> can be called using the syntax:</p>
+    <p>All the following behaviors can be called using the syntax:</p>
 
     <div class="ui ignored info message">
       Behaviors must be called on the same content which you originally initialize the dimmer, whether it is the <code>dimmable</code> context, or the <code>ui dimmer</code>

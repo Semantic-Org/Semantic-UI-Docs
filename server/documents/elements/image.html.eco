@@ -53,7 +53,7 @@ themes      : ['Default']
   </div>
 
   <div class="example">
-    <h4 class="ui header">Bordered</h4>
+    <h4 class="ui header">Bordered</h4>search.htmlec.s
     <p>An image may include a border to emphasize the edges of white or transparent content</p>
     <img class="ui medium bordered image" src="/images/wireframe/white-image.png">
   </div>

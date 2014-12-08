@@ -1815,10 +1815,34 @@ themes      : ['Default']
       <tbody>
         <tr>
           <td>action</td>
-          <td>activate</td>
-          <td>
-            Action that should occur on dropdown selection (see notes in usage)
-          </td>
+          <td>auto</td>
+          <td>Sets a default action to occur. (See usage guide)
+          <div class="ui vertical divided list">
+            <div class="item">
+              <div class="header">activate (default)</div>
+              <div class="description">Updates dropdown text with selected value, sets element state to active, updates any hidden fields if available</div>
+            </div>
+            <div class="item">
+              <div class="header">select</div>
+              <div class="description">activates menu and updates input fields, but does not change current text</div>
+            </div>
+            <div class="item">
+              <div class="header">combo</div>
+              <div class="description">changes text of previous sibling element</div>
+            </div>
+            <div class="item">
+              <div class="header">nothing</div>
+              <div class="description">no action occurs</div>
+            </div>
+            <div class="item">
+              <div class="header">hide</div>
+              <div class="description">Dropdown menu is hidden</div>
+            </div>
+            <div class="item">
+              <div class="header">function(text, value){}</div>
+              <div class="description">custom function is executed with values specified in callback</div>
+            </div>
+          </div>
         </tr>
         <tr>
           <td>on</td>
@@ -1866,37 +1890,6 @@ themes      : ['Default']
             250
           </td>
           <td>Duration of animation events</td>
-        </tr>
-        <tr>
-          <td>action</td>
-          <td>auto</td>
-          <td>Sets a default action to occur.
-          <div class="ui vertical divided list">
-            <div class="item">
-              <div class="header">activate (default)</div>
-              <div class="description">Updates dropdown text with selected value, sets element state to active, updates any hidden fields if available</div>
-            </div>
-            <div class="item">
-              <div class="header">select</div>
-              <div class="description">activates menu and updates input fields, but does not change current text</div>
-            </div>
-            <div class="item">
-              <div class="header">combo</div>
-              <div class="description">changes text of previous sibling element</div>
-            </div>
-            <div class="item">
-              <div class="header">nothing</div>
-              <div class="description">no action occurs</div>
-            </div>
-            <div class="item">
-              <div class="header">hide</div>
-              <div class="description">Dropdown menu is hidden</div>
-            </div>
-            <div class="item">
-              <div class="header">function(text, value){}</div>
-              <div class="description">custom function is executed with values specified in callback</div>
-            </div>
-          </div>
         </tr>
       </tbody>
     </table>

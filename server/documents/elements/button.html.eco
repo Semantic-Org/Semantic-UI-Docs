@@ -463,7 +463,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
 
   <div class="example">
     <h4 class="ui header">Evenly Divided</h4>
-    <p>Groups can be divided evenly to fit parent</p>
+    <p>Groups can have their widths divided evenly</p>
     <div class="ui ignored info message">Evenly divided elements can either use the number or the word, i.e. 2 or "two"</div>
     <div class="3 fluid ui buttons">
       <div class="ui button">Overview</div>

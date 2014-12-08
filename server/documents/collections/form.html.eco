@@ -1034,6 +1034,81 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
 
   <h2 class="ui dividing header">Variations</h2>
 
+
+
+  <h3 class="ui header">Fields</h3>
+
+  <div class="example">
+    <h4 class="ui header">Inline</h4>
+    <p>A field can have its label next to instead of above it.</p>
+    <div class="ui form">
+        <div class="inline field">
+          <label>Last name</label>
+          <input type="text" placeholder="Full Name">
+        </div>
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Field Width</h4>
+    <p>Fields can specify their width in grid columns</p>
+    <div class="ui form">
+      <div class="fields">
+        <div class="six wide field">
+          <label>First name</label>
+          <input type="text" placeholder="First Name">
+        </div>
+        <div class="four wide field">
+          <label>Middle</label>
+          <input type="text" placeholder="Middle Name">
+        </div>
+        <div class="six wide field">
+          <label>Last name</label>
+          <input type="text" placeholder="Last Name">
+        </div>
+      </div>
+      <div class="fields">
+        <div class="two wide field">
+          <input type="text" placeholder="2 Wide">
+        </div>
+        <div class="twelve wide field">
+          <input type="text" placeholder="12 Wide">
+        </div>
+        <div class="two wide field">
+          <input type="text" placeholder="2 Wide">
+        </div>
+      </div>
+      <div class="fields">
+        <div class="eight wide field">
+          <input type="text" placeholder="8 Wide">
+        </div>
+        <div class="six wide field">
+          <input type="text" placeholder="6 Wide">
+        </div>
+        <div class="two wide field">
+          <input type="text" placeholder="2 Wide">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Required</h4>
+    <p>A field can format itself to show that an input is mandatory</p>
+    <div class="ui form">
+        <div class="required field">
+          <label>Last name</label>
+          <input type="text" placeholder="Full Name">
+        </div>
+        <div class="required inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" />
+            <label>I agree to the terms and conditions</label>
+          </div>
+        </div>
+    </div>
+  </div>
+
   <h3 class="ui header">Forms</h3>
 
   <div class="example">
@@ -1120,42 +1195,31 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
     </div>
   </div>
 
-
-  <h3 class="ui header">Fields</h3>
-
-  <div class="example">
-    <h4 class="ui header">Inline</h4>
-    <p>A field can have its label next to instead of above it.</p>
-    <div class="ui form">
-        <div class="inline field">
-          <label>Last name</label>
-          <input type="text" placeholder="Full Name">
-        </div>
-    </div>
-  </div>
-
-  <div class="example">
-    <h4 class="ui header">Required</h4>
-    <p>A field can format itself to show that an input is mandatory</p>
-    <div class="ui form">
-        <div class="required field">
-          <label>Last name</label>
-          <input type="text" placeholder="Full Name">
-        </div>
-        <div class="required inline field">
-          <div class="ui checkbox">
-            <input type="checkbox" />
-            <label>I agree to the terms and conditions</label>
-          </div>
-        </div>
-    </div>
-  </div>
-
   <h2 class="ui dividing header">Groups</h2>
 
   <div class="example">
     <h4 class="ui header">Fields</h4>
-    <p>Fields can exist together side by side</p>
+    <p>Fields can exist together in a group</p>
+    <div class="ui form">
+      <div class="fields">
+        <div class="field">
+          <label>First name</label>
+          <input type="text" placeholder="First Name">
+        </div>
+        <div class="field">
+          <label>Middle name</label>
+          <input type="text" placeholder="Middle Name">
+        </div>
+        <div class="field">
+          <label>Last name</label>
+          <input type="text" placeholder="Last Name">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="example">
+    <h4 class="ui header">Evenly Divided</h4>
+    <p>Groups can have their widths divided evenly</p>
     <div class="ui ignored positive icon message">
       <i class="mobile icon"></i>
       <div class="content">
@@ -1164,7 +1228,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
       </div>
     </div>
     <div class="ui form">
-      <div class="ui three fields">
+      <div class="three fields">
         <div class="field">
           <label>First name</label>
           <input type="text" placeholder="First Name">
@@ -1183,7 +1247,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
 
   <div class="example">
     <h4 class="ui header">Grouped Fields</h4>
-    <p>Fields can be grouped to show related choices</p>
+    <p>Fields can show related choices</p>
     <div class="ui form">
       <div class="grouped fields">
         <div class="field">

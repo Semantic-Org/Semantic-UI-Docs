@@ -46,7 +46,7 @@
   transition: background-color 3s ease-in-out 2s;
 }
 #example.index .masthead.zoomed {
-  background-color: #444444;
+  background-color: #555555;
 }
 #example .masthead .grid {
   margin: 0em;

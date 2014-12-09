@@ -2,11 +2,6 @@
 layout : 'homepage'
 css    : 'index'
 ---
-
-<script src="/javascript/home.js"></script>
-<link rel="stylesheet" type="text/css" href="/stylesheets/home.css">
-<link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/button.less" />
-
 <div class="following bar">
   <div class="ui page grid">
     <div class="column">
@@ -261,25 +256,6 @@ css    : 'index'
               Trash
             </a>
           </div>
-          <script type="text/javascript">
-          $(document)
-            .ready(function(){
-              $('.demo.menu .item')
-                .on('click', function() {
-                  if(!$(this).hasClass('dropdown')) {
-                    $(this)
-                      .addClass('active')
-                      .closest('.ui.menu')
-                      .find('.item')
-                        .not($(this))
-                        .removeClass('active')
-                    ;
-                  }
-                })
-              ;
-            })
-          ;
-          </script>
         </div>
         <div class="no example">
           <h4 class="ui header">
@@ -395,18 +371,6 @@ css    : 'index'
             <div class="header">We're creating your profile page</div>
             <p>It will be ready in just a second.</p>
           </div>
-          <script type="text/javascript">
-          $(document)
-            .ready(function(){
-              $('.example .message .close')
-                .on('click', function() {
-                  $(this).closest('.message').transition('scale out');
-                })
-              ;
-
-            })
-          ;
-          </script>
         </div>
       </div>
       <div class="column">

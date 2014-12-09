@@ -2,7 +2,11 @@
 <html>
 <head>
   <%- @partial('meta') %>
-  <%- @partial('head-files') %>
+  <%- @partial('css') %>
+
+  <link rel="stylesheet" type="text/css" href="/stylesheets/home.css">
+  <link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/button.less" />
+
   <%- @partial('tracking') %>
   <%- @partial('transifex') %>
 </head>
@@ -19,7 +23,42 @@
   </div>
 
   <%- @partial('language-modal') %>
-  <%- @partial('dimmer-demo') %>
+
+  <% if 'development' in @getEnvironments(): %>
+  <script>
+  (function () {
+    var
+      eventSupport = ('querySelector' in document && 'addEventListener' in window)
+      jsonSupport  = (typeof JSON !== 'undefined'),
+      jQuery       = (eventSupport && jsonSupport)
+        ? '/javascript/library/jquery.js'
+        : '/javascript/library/jquery.legacy.js'
+    ;
+    document.write('<script src="' + jQuery + '"><\/script>');
+  }());
+  </script>
+  <% else: %>
+  <script>
+  (function () {
+    var
+      eventSupport = ('querySelector' in document && 'addEventListener' in window)
+      jsonSupport  = (typeof JSON !== 'undefined'),
+      jQuery       = (eventSupport && jsonSupport)
+        ? '/javascript/library/jquery.min.js'
+        : '/javascript/library/jquery.legacy.min.js'
+    ;
+    document.write('<script src="' + jQuery + '"><\/script>');
+  }());
+  </script>
+  <% end %>
+
+  <script src="/javascript/library/highlight.js"></script>
+  <script src="/javascript/library/highlight.languages.js"></script>
+  <script src="/javascript/library/easing.js"></script>
+  <script src="/javascript/library/typing.min.js"></script>
+  <%- @partial('ui-javascript') %>
+  <script src="/javascript/docs.js"></script>
+  <script src="/javascript/home.js"></script>
   <%- @partial('less') %>
 </body>
 

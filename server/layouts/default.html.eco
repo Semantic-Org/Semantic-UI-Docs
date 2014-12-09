@@ -2,7 +2,8 @@
 <html>
 <head>
   <%- @partial('meta') %>
-  <%- @partial('head-files') %>
+  <%- @partial('javascript') %>
+  <%- @partial('css') %>
   <%- @partial('tracking') %>
   <%- @partial('transifex') %>
 </head>

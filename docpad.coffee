@@ -5,7 +5,8 @@ docpadConfig = {
 	srcPath : './server'
 	outPath: './out'
 
-	env: 'production'
+	# test production env
+	# env: 'production'
 
 	plugins:
     ghpages:

@@ -244,12 +244,12 @@ themes      : ['Default']
       <div class="existing code">
         <i class="announcement icon"></i>
         <i class="help icon"></i>
-        <i class="help square icon"></i>
+        <i class="help circle icon"></i>
         <i class="info icon"></i>
-        <i class="info square icon"></i>
+        <i class="info circle icon"></i>
         <i class="warning icon"></i>
         <i class="warning sign icon"></i>
-        <i class="warning square icon"></i>
+        <i class="warning circle icon"></i>
       </div>
     </div>
     <div class="icon example">

@@ -12,7 +12,13 @@
     -webkit-overflow-scrolling: auto;
   }
 }
-
+#example > .pusher {
+  display: block;
+  flex-direction: initial;
+}
+#example > .pusher > .full.height {
+  flex: none !important;
+}
 
 /*--------------
     Masthead
@@ -21,43 +27,30 @@
 #example.index .masthead {
   position: relative;
   overflow: hidden;
-/*  background: #111111 url(../images/bg-sky.jpg);*/
-  background-size: cover;
   text-align: center;
   padding: 0em;
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 0px;
   border-bottom: none;
+
   background-color: #00B5AD;
+  background-position: 50% 50%;
   background-image: -webkit-radial-gradient(farthest-corner, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.95));
   background-image: radial-gradient(farthest-corner, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.95));
-}
-#example .masthead .grid {
-  margin: 0em;
-  padding: 15rem 0em;
-}
-#example.index .following.bar,
-#example.index .masthead {
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-
   -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 
   -ms-transition: background-color 3s ease-in-out 2s;
   -moz-transition: background-color 3s ease-in-out 2s;
   -webkit-transition: background-color 3s ease-in-out 2s;
   transition: background-color 3s ease-in-out 2s;
-
-  -webkit-perspective: 1000px;
-  -moz-perspective: 1000px;
-  -o-perspective: 1000px;
-  -ms-perspective: 1000px;
-  perspective: 1000px;
+}
+#example.index .masthead.zoomed {
+  background-color: #444444;
+}
+#example .masthead .grid {
+  margin: 0em;
+  padding: 15rem 0em;
 }
 #example.index .following.bar iframe.github {
   margin-top: 0px;
@@ -69,157 +62,6 @@
   transform: translate3d(0, 0, 0);
 }
 
-#example.index .colored.following.bar,
-#example.index .masthead.colored {
-  -webkit-animation-name: colors;
-  -moz-animation-name: colors;
-  -o-animation-name: colors;
-  animation-name: colors;
-
-  -webkit-animation-delay: 0s;
-  -moz-animation-delay: 0s;
-  -ms-animation-delay: 0s;
-  -o-animation-delay: 0s;
-  animation-delay: 0s;
-
-  -webkit-animation-duration: 120s;
-  -moz-animation-duration: 120s;
-  -ms-animation-duration: 120s;
-  -o-animation-duration: 120s;
-  animation-duration: 120s;
-
-  -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -ms-animation-fill-mode: both;
-  -o-animation-fill-mode: both;
-  animation-fill-mode: both;
-
-  animation-timing-function: linear;
-  -webkit-animation-timing-function: linear;
-
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
-  -ms-animation-iteration-count: infinite;
-  -o-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-}
-#example.index .masthead:before {
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  top: 0%;
-  left: 0px;
-  content: '';
-  background: url(/images/before.jpg);
-
-  -moz-transform-origin: 50% 50%;
-  -o-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-
-  -webkit-animation-name: masthead;
-  -moz-animation-name: masthead;
-  -o-animation-name: masthead;
-  animation-name: masthead;
-
-  -ms-transition: opacity 2.5s ease-in-out, transform 5s ease-in-out;
-  -webkit-transition: opacity 2.5s ease-in-out, transform 5s ease-in-out;
-  -moz-transition: opacity 2.5s ease-in-out, transform 5s ease-in-out;
-  transition: opacity 2.5s ease-in-out, transform 5s ease-in-out;
-
-  opacity: 0;
-
-  -webkit-animation-duration: 15s;
-  -moz-animation-duration: 15s;
-  -ms-animation-duration: 15s;
-  -o-animation-duration: 15s;
-  animation-duration: 15s;
-
-  -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -ms-animation-fill-mode: both;
-  -o-animation-fill-mode: both;
-  animation-fill-mode: both;
-
-  animation-timing-function: linear;
-  -webkit-animation-timing-function: linear;
-
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
-  -ms-animation-iteration-count: infinite;
-  -o-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-
-  -webkit-transform: rotateX(0deg) rotateZ(0deg) rotateY(0deg) translateY(0%) translateX(0) translateZ(-500px);
-  -moz-transform: rotateX(0deg) rotateZ(0deg) rotateY(0deg) translateY(0%) translateX(0) translateZ(-500px);
-  transform: rotateX(0deg) rotateZ(0deg) rotateY(0deg) translateY(0%) translateX(0) translateZ(-500px);
-}
-
-#example.index .masthead:after {
-  position: absolute;
-  z-index: 1;
-  width: 135%;
-  height: 135%;
-  top: 18%;
-  left: 0px;
-  content: '';
-  background: url(/images/ui.png);
-
-  -moz-transform-origin: 50% 50%;
-  -o-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-
-  -webkit-animation-name: masthead;
-  -moz-animation-name: masthead;
-  -o-animation-name: masthead;
-  animation-name: masthead;
-
-  -ms-transition: opacity 3s ease-in-out, transform 5s ease-in-out;
-  -webkit-transition: opacity 3s ease-in-out, transform 5s ease-in-out;
-  -moz-transition: opacity 3s ease-in-out, transform 5s ease-in-out;
-  transition: opacity 3s ease-in-out, transform 5s ease-in-out;
-
-  opacity: 0.06;
-
-  -webkit-animation-duration: 15s;
-  -moz-animation-duration: 15s;
-  -ms-animation-duration: 15s;
-  -o-animation-duration: 15s;
-  animation-duration: 15s;
-
-  -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -ms-animation-fill-mode: both;
-  -o-animation-fill-mode: both;
-  animation-fill-mode: both;
-
-  animation-timing-function: linear;
-  -webkit-animation-timing-function: linear;
-
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
-  -ms-animation-iteration-count: infinite;
-  -o-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-
-  -webkit-transform: rotateX(50deg) rotateZ(0deg) rotateY(0deg) translateY(-14%) translateX(-14%) translateZ(370px);
-  -moz-transform: rotateX(50deg) rotateZ(0deg) rotateY(0deg) translateY(-14%) translateX(-14%) translateZ(370px);
-  transform: rotateX(50deg) rotateZ(0deg) rotateY(0deg) translateY(-14%) translateX(-14%) translateZ(370px);
-}
 
 #example.index .fixed.following.bar {
   background-image: none;
@@ -234,237 +76,7 @@
   background-color: #FFFFFF;
   border-bottom: 1px solid #DDDDDD;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.04);
-}/*
-#example.index .fixed.dark.following.bar {
-  background-color: #EDF1F2;
-  border-bottom: 1px solid #DDDDDD;
-  box-shadow: none;
-}*/
-
-/* Zoomed Out */
-#example.index .masthead.zoomed {
-  background-color: #444444;
 }
-#example .masthead.zoomed:before {
-  opacity: 0.1;
-  -webkit-transform: rotateX(0deg) rotateZ(0deg) rotateY(0deg) translateZ(0px);
-  -moz-transform: rotateX(0deg) rotateZ(0deg) rotateY(0deg) translateZ(0px);
-  transform: rotateX(0deg) rotateZ(0deg) rotateY(0deg) translateZ(0px);
-}
-#example.index .masthead.zoomed:after {
-  opacity: 0;
-  -webkit-transform: rotateX(0deg) rotateZ(0deg) rotateY(0deg) translateY(-6%) translateZ(0px);
-  -moz-transform: rotateX(0deg) rotateZ(0deg) rotateY(0deg) translateY(-6%) translateZ(0px);
-  transform: rotateX(0deg) rotateZ(0deg) rotateY(0deg) translateY(-6%) translateZ(0px);
-}
-
-@keyframes masthead {
- 0% {
-    background-position: 0% 0%;
- }
- 100% {
-    background-position: 0% -475px;
- }
-
-}
-
-@-moz-keyframes masthead {
- 0% {
-   background-position: 0% 0%;
- }
- 100% {
-   background-position: 0% -475px;
- }
-
-}
-
-@-webkit-keyframes masthead {
- 0% {
-   background-position: 0% 0%;
- }
- 100% {
-   background-position: 0% -475px;
- }
-
-}
-
-@-ms-keyframes masthead {
- 0% {
-   background-position: 0% 0%;
- }
- 100% {
-  background-position: 0% -475px;
- }
-}
-
-@-o-keyframes masthead {
- 0% {
-   background-position: 0% 0%;
- }
- 100% {
-   background-position: 0% -475px;
- }
-
-}
-
-
-@keyframes colors {
-  0% {
-    background-color: #00B5AD;
-  }
-  12% {
-    background-color: #3B83C0;
-  }
-  25% {
-    background-color: #E07B53;
-  }
-  37% {
-    background-color: #D9499A;
-  }
-  50% {
-    background-color: #564F8A;
-  }
-  62% {
-    background-color: #F2C61F;
-  }
-  75% {
-    background-color: #D95C5C;
-  }
-  87% {
-    background-color: #5BBD72;
-  }
-  100% {
-    background-color: #F2C61F;
-  }
-}
-
-@-moz-keyframes colors {
-  0% {
-    background-color: #00B5AD;
-  }
-  12% {
-    background-color: #3B83C0;
-  }
-  25% {
-    background-color: #E07B53;
-  }
-  37% {
-    background-color: #D9499A;
-  }
-  50% {
-    background-color: #564F8A;
-  }
-  62% {
-    background-color: #F2C61F;
-  }
-  75% {
-    background-color: #D95C5C;
-  }
-  87% {
-    background-color: #5BBD72;
-  }
-  100% {
-    background-color: #F2C61F;
-  }
-}
-
-@-webkit-keyframes colors {
-  0% {
-    background-color: #00B5AD;
-  }
-  12% {
-    background-color: #3B83C0;
-  }
-  25% {
-    background-color: #E07B53;
-  }
-  37% {
-    background-color: #D9499A;
-  }
-  50% {
-    background-color: #564F8A;
-  }
-  62% {
-    background-color: #F2C61F;
-  }
-  75% {
-    background-color: #D95C5C;
-  }
-  87% {
-    background-color: #5BBD72;
-  }
-  100% {
-    background-color: #F2C61F;
-  }
-}
-
-@-ms-keyframes colors {
-  0% {
-    background-color: #00B5AD;
-  }
-  12% {
-    background-color: #3B83C0;
-  }
-  25% {
-    background-color: #E07B53;
-  }
-  37% {
-    background-color: #D9499A;
-  }
-  50% {
-    background-color: #564F8A;
-  }
-  62% {
-    background-color: #F2C61F;
-  }
-  75% {
-    background-color: #D95C5C;
-  }
-  87% {
-    background-color: #5BBD72;
-  }
-  100% {
-    background-color: #F2C61F;
-  }
-}
-@-o-keyframes colors {
-  0% {
-    background-color: #00B5AD;
-  }
-  12% {
-    background-color: #3B83C0;
-  }
-  25% {
-    background-color: #E07B53;
-  }
-  37% {
-    background-color: #D9499A;
-  }
-  50% {
-    background-color: #564F8A;
-  }
-  62% {
-    background-color: #F2C61F;
-  }
-  75% {
-    background-color: #D95C5C;
-  }
-  87% {
-    background-color: #5BBD72;
-  }
-  100% {
-    background-color: #F2C61F;
-  }
-}
-
-#example.index .animated.following.bar.stopped:after,
-#example.index .masthead.stopped:after {
-  -webkit-animation-name: none;
-  -moz-animation-name: none;
-  -o-animation-name: none;
-  animation-name: none;
-}
-
 
 #example.index .masthead.segment .typed-cursor {
   position: relative;
@@ -756,6 +368,8 @@
   padding: 10em 0px;
   border-radius: 0em;
   margin: 0em;
+/*    -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);*/
 }
 
 #example .stripe h1 {

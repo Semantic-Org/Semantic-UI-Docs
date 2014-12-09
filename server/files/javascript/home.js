@@ -45,7 +45,7 @@ semantic.home.ready = function() {
         $library.transition('scale in', 1000);
       }, 6400);
       setTimeout(function() {
-        $version.transition('fade', 600);
+        $version.transition('fade', 1000);
       }, 7000);
     },
     changeLogo: function() {
@@ -193,6 +193,26 @@ semantic.home.ready = function() {
       }
       $.proxy(handler.less.changeTheme, this)(value);
     },
+    createDemos: function() {
+      $('.demo.menu .item')
+        .on('click', function() {
+          if(!$(this).hasClass('dropdown')) {
+            $(this)
+              .addClass('active')
+              .closest('.ui.menu')
+              .find('.item')
+                .not($(this))
+                .removeClass('active')
+            ;
+          }
+        })
+      ;
+      $('.example .message .close')
+        .on('click', function() {
+          $(this).closest('.message').transition('scale out');
+        })
+      ;
+    },
     toggleTheme: function() {
       $(this).toggleClass('active');
       $themeGrid.toggleClass('visible');
@@ -270,12 +290,7 @@ semantic.home.ready = function() {
   ;
 
 
-  $('.masthead')
-    .visibility({
-      onPassing      : handler.introduction,
-      onBottomPassed : handler.endAnimation
-    })
-  ;
+  handler.introduction();
 
   $themeDropdown
     .dropdown('setting', 'transition', 'drop')
@@ -315,6 +330,8 @@ semantic.home.ready = function() {
   $('.ui.sidebar')
     .sidebar('setting', 'transition', 'overlay')
   ;
+
+  handler.createDemos();
 
 };
 

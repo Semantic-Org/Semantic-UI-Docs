@@ -11,104 +11,45 @@ standalone : true
 <!-- TEST JS HERE !-->
 <script>
 $(document).ready(function() {
-$('.ui.right.sidebar').sidebar({
-  transition: 'overlay'
-});
 
-$('.ui.left.sidebar').sidebar({
-  transition: 'push'
-});
-
-// left is opened by button
-$('.ui.left.sidebar')
-  .sidebar('attach events', '.open.button')
-;
-
-// right opens by link in left
-$('.ui.right.wide.sidebar')
-  .sidebar('attach events', '.left.sidebar .open.item')
-;
-
-// last right opens by link in wide right
-$('.ui.right.thin.sidebar')
-  .sidebar('attach events', '.right.wide.sidebar .open.item')
-;
 });
 </script>
 
 <!-- TEST CSS HERE !-->
 <style type="text/css">
-.thin.right.sidebar {
-  z-index: 200 !important;
-}
 
-.ui.button {
-    margin: 4em;
-}
 </style>
 
 <div class="main container">
-    <div class="ui open button">Open Left</div>
+  <table class="resources ui striped celled table">
+      <colgroup class="basics">
+          <col /><col /><col /><col />
+      </colgroup>
+      <colgroup class="languages">
+          <col /><col /><col />
+      </colgroup>
+      <thead>
+          <tr>
+              <th class="name" rowspan=2>Name</th>
+              <th class="type" rowspan=2>Type</th>
+              <th class="file-count" rowspan=2>Files</th>
+              <th class="languages" colspan=3>Languages</th>
+          </tr>
+          <tr>
+              <th class="language">Ruby</th>
+              <th class="language">JavaScript</th>
+              <th class="language">Python</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>Ongoing Sum</td>
+              <td>Small Exercise</td>
+              <td>2</td>
+              <td><i class="large green checkmark icon"></i></td>
+              <td></td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
 </div>
-
-<div class="ui left sidebar vertical inverted labeled icon menu">
-  <a class="open item">
-    <i class="home icon"></i>
-    Open Right
-  </a>
-  <a class="item">
-    <i class="block layout icon"></i>
-    Topics
-  </a>
-  <a class="item">
-    <i class="smile icon"></i>
-    Friends
-  </a>
-  <a class="item">
-    <i class="calendar icon"></i>
-    History
-  </a>
-  <a class="item">
-    <i class="mail icon"></i>
-    Messages
-  </a>
-  <a class="item">
-    <i class="chat icon"></i>
-    Discussions
-  </a>
-  <a class="item">
-    <i class="trophy icon"></i>
-    Achievements
-  </a>
-  <a class="item">
-    <i class="shop icon"></i>
-    Store
-  </a>
-  <a class="item">
-    <i class="settings icon"></i>
-    Settings
-  </a>
-</div>
-
-<div class="ui wide right sidebar vertical inverted menu">
-  <a class="open item">
-    <i class="right arrow icon"></i>
-    Open Last
-  </a>
-</div>
-
-<div class="ui thin right red sidebar vertical inverted menu">
-  <a class="open item">
-    <i class="home icon"></i>
-    Wow
-  </a>
-  <a class="item">
-    <i class="block layout icon"></i>
-    Amaze
-  </a>
-  <a class="item">
-    <i class="calendar icon"></i>
-    Very Relaxed
-  </a>
-</div>
-

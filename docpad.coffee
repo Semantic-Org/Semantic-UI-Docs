@@ -5,6 +5,8 @@ docpadConfig = {
 	srcPath : './server'
 	outPath: './out'
 
+	env: 'production'
+
 	plugins:
     ghpages:
       deployRemote: 'origin'

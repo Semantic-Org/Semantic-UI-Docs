@@ -1,0 +1,13 @@
+<% if 'development' in @getEnvironments(): %>
+
+<link rel="stylesheet" type="text/css" href="/stylesheets/doc-icon.css">
+<link rel="stylesheet" type="text/css" href="/stylesheets/docs.css">
+<link rel="stylesheet" type="text/css" href="/stylesheets/rtl.css">
+
+<% else: %>
+
+<link rel="stylesheet" type="text/css" href="/stylesheets/doc-icon.css">
+<link rel="stylesheet" type="text/css" href="/stylesheets/docs.css">
+<link rel="stylesheet" type="text/css" href="/stylesheets/rtl.css">
+
+<% end %>

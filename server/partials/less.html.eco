@@ -1,0 +1,13 @@
+<script>
+window.less = {
+  async: true,
+  environment: 'production',
+  fileAsync: false,
+  useFileCache: true
+};
+</script>
+<% if 'development' in @getEnvironments(): %>
+<script src="/javascript/library/less.js"></script>
+<% else: %>
+<script src="/javascript/library/less.js"></script>
+<% end %>

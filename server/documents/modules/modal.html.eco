@@ -77,7 +77,7 @@ themes      : ['Default', 'Material', 'Fixed-width']
     </div>
   </div>
 
-  <div class="ui small modal">
+  <div class="ui small test modal">
     <i class="close icon"></i>
     <div class="header">
       Delete Your Account
@@ -122,7 +122,7 @@ themes      : ['Default', 'Material', 'Fixed-width']
     </div>
   </div>
 
-  <div class="ui large modal">
+  <div class="ui large test modal">
     <i class="close icon"></i>
     <div class="header">
       Changing Your Thing
@@ -292,12 +292,12 @@ themes      : ['Default', 'Material', 'Fixed-width']
       <h4 class="ui header">Size</h4>
       <p>A modal can vary in size</p>
       <div class="code" data-demo="true">
-      $('.small.modal')
+      $('.small.test.modal')
         .modal('show')
       ;
       </div>
       <div class="code" data-demo="true">
-      $('.large.modal')
+      $('.large.test.modal')
         .modal('show')
       ;
       </div>

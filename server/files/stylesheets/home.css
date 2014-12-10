@@ -40,10 +40,10 @@
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 
-  -ms-transition: background-color 3s ease-in-out 2s;
-  -moz-transition: background-color 3s ease-in-out 2s;
-  -webkit-transition: background-color 3s ease-in-out 2s;
-  transition: background-color 3s ease-in-out 2s;
+  -ms-transition: background-color 3s ease-in-out 1s;
+  -moz-transition: background-color 3s ease-in-out 1s;
+  -webkit-transition: background-color 3s ease-in-out 1s;
+  transition: background-color 3s ease-in-out 1s;
 }
 #example.index .masthead.zoomed {
   background-color: #555555;

@@ -21,35 +21,16 @@ $(document).ready(function() {
 </style>
 
 <div class="main container">
-  <table class="resources ui striped celled table">
-      <colgroup class="basics">
-          <col /><col /><col /><col />
-      </colgroup>
-      <colgroup class="languages">
-          <col /><col /><col />
-      </colgroup>
-      <thead>
-          <tr>
-              <th class="name" rowspan=2>Name</th>
-              <th class="type" rowspan=2>Type</th>
-              <th class="file-count" rowspan=2>Files</th>
-              <th class="languages" colspan=3>Languages</th>
-          </tr>
-          <tr>
-              <th class="language">Ruby</th>
-              <th class="language">JavaScript</th>
-              <th class="language">Python</th>
-          </tr>
-      </thead>
-      <tbody>
-          <tr>
-              <td>Ongoing Sum</td>
-              <td>Small Exercise</td>
-              <td>2</td>
-              <td><i class="large green checkmark icon"></i></td>
-              <td></td>
-              <td></td>
-          </tr>
-      </tbody>
-  </table>
 </div>
+
+  <div class="ui three column stackable centered page grid">
+    <div class="eight wide tablet column">
+      <p>1</p>
+    </div>
+    <div class="eight wide tablet column">
+      <p>2</p>
+    </div>
+    <div class="eight wide tablet column">
+      <p>3</p>
+    </div>
+  </div>

@@ -9,7 +9,7 @@
     ],
     detectlang   : false,
     autocollect  : true,
-    ignore_tags  : ['i'],
+    ignore_tags  : ['i', 'code', 'pre'],
     parse_attr   : ['data-title', 'data-content', 'data-text'],
     ignore_class : ['code', 'anchor']
   };

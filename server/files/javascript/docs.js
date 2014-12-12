@@ -989,7 +989,7 @@ semantic.ready = function() {
     })
   ;
   $('.launch.button, .view-ui, .launch.item')
-    .on('touchstart click', function(event) {
+    .on('click', function(event) {
       $menu.sidebar('show');
       event.preventDefault();
     })

@@ -210,6 +210,33 @@ themes      : ['Default']
 
     <h2 class="ui dividing header">Examples</h2>
 
+    <div class="first example">
+      <h4 class="ui header">Basic Tabs</h4>
+      <p>Tabs are connecting using paths specified in the <code>data-tab</code> attribute. Tab is then initialized in javascript on the activating elements.</p>
+      <div class="ui ignored info message">
+        To have a tab visible on page load, add the class <code>active</code> to both the initializing menu and the tab.
+      </div>
+      <div class="ui top attached tabular menu">
+        <a class="active item" data-tab="first">First</a>
+        <a class="item" data-tab="second">Second</a>
+        <a class="item" data-tab="third">Third</a>
+      </div>
+      <div class="ui bottom attached active tab segment" data-tab="first">
+        First
+      </div>
+      <div class="ui bottom attached tab segment" data-tab="second">
+        Second
+      </div>
+      <div class="ui bottom attached tab segment" data-tab="third">
+        Third
+      </div>
+      <div class="code" data-type="javascript">
+      $('.menu .item')
+        .tab()
+      ;
+      </div>
+    </div>
+
     <div class="context example">
       <h4 class="ui header">Multiple Tabs on Same Page</h4>
       <p>There are a several of ways to include independent tab groups on the same page, even with history. One of the easiest ways is provide a specific parent context for each tab group.</p>

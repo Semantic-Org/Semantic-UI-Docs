@@ -27,7 +27,7 @@ themes      : ['Default', 'Basic', 'Classic']
       <i class="mobile icon"></i>
       <div class="content">
         <h3 class="header">Responsive Element</h3>
-        <p>Tables will automatically stack their layouts for mobile devices.</p>
+        <p>Tables will automatically stack their layouts for mobile devices. To disable this behavior, use the <code>unstackable</code> variation or <code>tablet stackable</code> to allow responsive adjustments for tablet as well.</p>
       </div>
     </div>
     <table class="ui table">
@@ -379,6 +379,67 @@ themes      : ['Default', 'Basic', 'Classic']
   </div>
 
   <h2 class="ui dividing header">Variations</h2>
+
+  <div class="example">
+    <h4 class="ui header">Responsive</h4>
+    <p>A table can specify additional requirements for screen adjustments</p>
+
+    <table class="ui unstackable table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Status</th>
+          <th class="right aligned">Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="center aligned">
+          <td>John</td>
+          <td>Approved</td>
+          <td class="right aligned">None</td>
+        </tr>
+        <tr>
+          <td>Jamie</td>
+          <td>Approved</td>
+          <td class="right aligned">Requires call</td>
+        </tr>
+        <tr>
+          <td>Jill</td>
+          <td>Denied</td>
+          <td class="right aligned">None</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="ui tablet stackable table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Status</th>
+          <th class="right aligned">Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="center aligned">
+          <td>John</td>
+          <td>Approved</td>
+          <td class="right aligned">None</td>
+        </tr>
+        <tr>
+          <td>Jamie</td>
+          <td>Approved</td>
+          <td class="right aligned">Requires call</td>
+        </tr>
+        <tr>
+          <td>Jill</td>
+          <td>Denied</td>
+          <td class="right aligned">None</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
 
   <div class="example">
     <h4 class="ui header">Text Alignment</h4>

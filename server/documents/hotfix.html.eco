@@ -1,5 +1,5 @@
 ---
-layout     : 'default'
+layout     : 'blank'
 css        : 'hotfix'
 
 title      : 'Test Page'
@@ -11,7 +11,9 @@ standalone : true
 <!-- TEST JS HERE !-->
 <script>
 $(document).ready(function() {
-
+  $('.main .ui.button').on('click', function() {
+      $('.hotfix.ui.modal').modal('show');
+  });
 });
 </script>
 
@@ -21,16 +23,31 @@ $(document).ready(function() {
 </style>
 
 <div class="main container">
-</div>
-
-  <div class="ui three column stackable centered page grid">
-    <div class="eight wide tablet column">
-      <p>1</p>
+<div class="ui segment" style="height: 1000px">Top</div>
+<div class="ui hotfix fullscreen modal">
+  <i class="close icon"></i>
+  <div class="header">
+    Profile Picture
+  </div>
+  <div class="content">
+    <div class="ui medium image">
+      <img src="http://semantic-ui.com/images/avatar/large/chris.jpg">
     </div>
-    <div class="eight wide tablet column">
-      <p>2</p>
-    </div>
-    <div class="eight wide tablet column">
-      <p>3</p>
+    <div class="description">
+      <div class="ui header">We've auto-chosen a profile image for you.</div>
+      <p>We've grabbed the following image from the <a href="https://www.gravatar.com" target="_blank">gravatar</a> image associated with your registered e-mail address.</p>
+      <p>Is it okay to use this photo?</p>
     </div>
   </div>
+  <div class="actions">
+    <div class="ui black button">
+      Nope
+    </div>
+    <div class="ui positive right labeled icon button">
+      Yep, that's me
+      <i class="checkmark icon"></i>
+    </div>
+  </div>
+</div>
+<div class="ui button">Open</div>
+</div>

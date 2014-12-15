@@ -27,7 +27,7 @@ themes      : ['Default', 'Basic', 'Classic']
       <i class="mobile icon"></i>
       <div class="content">
         <h3 class="header">Responsive Element</h3>
-        <p>Tables are designed to be responsive. Table cells will stack when a mobile viewport size is reached.</p>
+        <p>Tables will automatically stack their layouts for mobile devices.</p>
       </div>
     </div>
     <table class="ui table">

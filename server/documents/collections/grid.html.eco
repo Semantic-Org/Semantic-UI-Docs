@@ -389,17 +389,29 @@ themes      : ['Default', 'Fixed-width']
       <div class="ui inverted teal vertical segment">
         <div class="ui page grid">
           <div class="column">
-            <h2 class="ui inverted header">Second Heading</h2>
-            <p>Second section of content</p>
+            <h2 class="ui inverted header">Full Width Background</h2>
+            <p>First section of content</p>
           </div>
         </div>
       </div>
       <div class="ui inverted black vertical segment">
         <div class="ui page grid">
           <div class="column">
-            <h2 class="ui inverted header">Second Heading</h2>
+            <h2 class="ui inverted header">Full Width Heading</h2>
             <p>Second section of content</p>
           </div>
+        </div>
+      </div>
+      <div class="ui vertically padded page grid">
+        <div class="teal column">
+          <h2 class="ui inverted header">Column Background</h2>
+          <p>Third section of content</p>
+        </div>
+      </div>
+      <div class="ui vertically padded page grid">
+        <div class="black column">
+          <h2 class="ui inverted header">Column Background</h2>
+          <p>Fourth section of content</p>
         </div>
       </div>
     </div>

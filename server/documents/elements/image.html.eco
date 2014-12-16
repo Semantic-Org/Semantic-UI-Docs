@@ -20,10 +20,25 @@ themes      : ['Default']
   <div class="example">
     <h4 class="ui header">Image</h4>
     <p>An image</p>
-    <div class="ui ignored info message">
+    <div class="ui ignored message">
        Unless a size if specified, images will use the original dimensions of the image, with a maximum width of its container size <code>max-width: 100%</code>.
     </div>
-    <img class="ui medium image" src="/images/wireframe/image.png">
+    <div class="ui ignored info message">
+      You can specify an <code>img</code> or <code>svg</code> as a <code>ui image</code> or use a child element.</code>
+    </div>
+    <img class="ui small image" src="/images/wireframe/image.png">
+  </div>
+  <div class="another example">
+    <div class="ui small image">
+      <img src="/images/wireframe/image.png">
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui small image">
+      <svg width="150" height="150">
+        <image xlink:href="/images/wireframe/image.png" x="0" y="0" width="100%" height="100%"></image>
+      </svg>
+    </div>
   </div>
 
   <div class="example">
@@ -53,7 +68,7 @@ themes      : ['Default']
   </div>
 
   <div class="example">
-    <h4 class="ui header">Bordered</h4>search.htmlec.s
+    <h4 class="ui header">Bordered</h4>
     <p>An image may include a border to emphasize the edges of white or transparent content</p>
     <img class="ui medium bordered image" src="/images/wireframe/white-image.png">
   </div>

@@ -19,7 +19,7 @@ css    : 'index'
         <div class="item">
           <a class="twitter-share-button twitter"
             href="http://twitter.com/share"
-            data-text="Semantic UI just reached 1.0."
+            data-text="Semantic UI is a next-gen UI library"
             data-url="http://semantic-ui.com"
             data-via="semanticui">
           </a>

@@ -1062,6 +1062,73 @@ themes      : ['Default']
       </div>
     </div>
 
+    <div class="dropdown example">
+      <h4 class="ui header">Menu Direction</h4>
+      <p>A dropdown menu or sub-menu can specify the direction it should open</p>
+      <div class="ui info message">
+        Specifying <code>left</code> on a menu will make all child menus open in the same direction implicitly. To have a dropdown icon appear on the left side on a child menu, you will need to use <code>left dropdown example</code>
+      </div>
+      <div class="ui floating dropdown">
+        <div class="text">Menu Direction</div>
+        <i class="dropdown icon"></i>
+        <div class="menu">
+          <div class="item">
+            <i class="left dropdown icon"></i>
+            <span class="text">Left</span>
+            <div class="left menu">
+              <div class="item">1</div>
+              <div class="item">2</div>
+              <div class="item">3</div>
+            </div>
+          </div>
+          <div class="item">
+            <i class="dropdown icon"></i>
+            <span class="text">Right</span>
+            <div class="right menu">
+              <div class="item">1</div>
+              <div class="item">2</div>
+              <div class="item">3</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="another dropdown example">
+      <div class="ui floating dropdown">
+        <div class="text">Menu Direction</div>
+        <i class="dropdown icon"></i>
+        <div class="left menu">
+          <div class="item">
+            <i class="dropdown icon"></i>
+            <span class="text">Left</span>
+            <div class="menu">
+              <div class="item">
+                <i class="dropdown icon"></i>
+                <span class="text">Still Left</span>
+                <div class="menu">
+                  <div class="item">1</div>
+                  <div class="item">2</div>
+                  <div class="item">3</div>
+                </div>
+              </div>
+              <div class="item">2</div>
+              <div class="item">3</div>
+            </div>
+          </div>
+          <div class="item">
+            <i class="dropdown icon"></i>
+            <span class="text">Left 2</span>
+            <div class="menu">
+              <div class="item">1</div>
+              <div class="item">2</div>
+              <div class="item">3</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <h2 class="ui dividing header">States</h2>
 
 

@@ -614,6 +614,13 @@ themes      : ['Default', 'Material', 'Fixed-width']
           <td>Duration of animation</td>
         </tr>
         <tr>
+          <td>queue</td>
+          <td>
+            false
+          </td>
+          <td>Whether additional animations should queue</td>
+        </tr>
+        <tr>
           <td>easing</td>
           <td>
             easeOutExpo

@@ -405,11 +405,8 @@ themes      : ['Default', 'Basic', 'Classic']
   </div>
 
   <div class="example">
-    <h4 class="ui header">Actions</h4>
-    <p>A card can contain common actions</p>
-    <div class="ui info message">
-      Common actions may contain special formatting, like "star" or "heart". To attach events, on a user action, please check out the <a href="#">state behavior</a>.
-    </div>
+    <h4 class="ui header">Approval</h4>
+    <p>A card can contain a like or star action.</p>
     <div class="ui card">
       <div class="content">
         <i class="right floated like icon"></i>
@@ -420,7 +417,9 @@ themes      : ['Default', 'Basic', 'Classic']
             <i class="like icon"></i>
             Like
           </span>
-          <span class="star">Favorite
+          <span class="star">
+            <i class="star icon"></i>
+            Favorite
           </span>
         </div>
       </div>

@@ -5,7 +5,10 @@
 
 <div class="ui fixed inverted main menu">
   <div class="container">
-    <a class="launch item"><i class="content icon"></i></a>
+    <a class="launch item">
+      <i class="content icon"></i>
+      Menu
+    </a>
     <% if @document.title: %>
       <div class="title item">
         <b><%= @document.type %>:</b> <%= @document.title %>

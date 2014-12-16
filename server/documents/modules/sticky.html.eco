@@ -44,9 +44,9 @@ type        : 'UI Module'
       </div>
       <div class="ui segment" id="example1">
         <div class="left ui rail">
-          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+          <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
+          <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
+          <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
           <div class="ui sticky">
             <h3 class="ui header">Stuck Content</h3>
             <img class="ui wireframe image" src="/images/wireframe/image.png">
@@ -58,15 +58,15 @@ type        : 'UI Module'
             <img class="ui wireframe image" src="/images/wireframe/image.png">
           </div>
         </div>
-        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
       </div>
     </div>
 
@@ -89,23 +89,23 @@ type        : 'UI Module'
           </div>
         </div>
         <div class="right ui rail">
-          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+          <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
+          <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
+          <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
           <div class="ui sticky">
             <h3 class="ui header">Stuck Content</h3>
             <img class="ui wireframe image" src="/images/wireframe/image.png">
           </div>
         </div>
-        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
       </div>
     </div>
 
@@ -125,7 +125,7 @@ type        : 'UI Module'
       </div>
       <div class="ui segment" id="example3">
         <div class="left ui rail">
-          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+          <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
           <div class="ui sticky">
             <h3 class="ui header">Long Stuck Content</h3>
             <div class="ui divided items">
@@ -215,15 +215,15 @@ type        : 'UI Module'
             <img class="ui wireframe image" src="/images/wireframe/image.png">
           </div>
         </div>
-        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
       </div>
     </div>
 
@@ -255,15 +255,15 @@ type        : 'UI Module'
           </div>
         </div>
         <div class="ui active tab">
-          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+          <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
+          <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
+          <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
+          <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
+          <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
+          <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
+          <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
+          <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
+          <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
         </div>
       </div>
     </div>

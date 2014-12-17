@@ -8,6 +8,7 @@ elementType : 'collection'
 title       : 'Table'
 description : 'A table displays a collections of data grouped into rows'
 type        : 'UI Collection'
+standalone  : true
 
 themes      : ['Default', 'Basic', 'Classic']
 ---
@@ -191,6 +192,72 @@ themes      : ['Default', 'Basic', 'Classic']
           </th>
         </tr>
       </tfoot>
+    </table>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Structured</h4>
+    <p>A table can formatted to display complex structured data</p>
+
+    <div class="ui ignored info message">
+      <p>UI tables use <code>border-collapse: separate</code> to allow for tables to receive styles that cannot usually be applied to tables like <code>border-radius</code>. However this can cause some cell borders to appear missing with complex layouts that use <code>rowspan</code> or <code>colspan</code> and rows with varying column count.</p>
+      <p><code>ui complex table</code> does not support some style features, but can correctly display all valid html table content.</p>
+    </div>
+
+    <table class="ui celled structured table">
+      <thead>
+        <tr>
+          <th rowspan="2">Name</th>
+          <th rowspan="2">Type</th>
+          <th rowspan="2">Files</th>
+          <th colspan="3">Languages</th>
+        </tr>
+        <tr>
+          <th>Ruby</th>
+          <th>JavaScript</th>
+          <th>Python</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Alpha Team</td>
+          <td>Project 1</td>
+          <td>2</td>
+          <td>
+            <i class="large green checkmark icon"></i>
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td rowspan="3">Beta Team</td>
+          <td>Project 1</td>
+          <td>52</td>
+          <td>
+            <i class="large green checkmark icon"></i>
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Project 2</td>
+          <td>12</td>
+          <td></td>
+          <td>
+            <i class="large green checkmark icon"></i>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Project 3</td>
+          <td>21</td>
+          <td>
+            <i class="large green checkmark icon"></i>
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
     </table>
   </div>
 

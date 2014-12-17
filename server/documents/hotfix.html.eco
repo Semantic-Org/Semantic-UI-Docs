@@ -11,7 +11,7 @@ standalone : true
 <!-- TEST JS HERE !-->
 <script>
 $(document).ready(function() {
-
+  $('.ui.dropdown').dropdown();
 });
 </script>
 
@@ -19,8 +19,8 @@ $(document).ready(function() {
 <style type="text/css">
 
 </style>
-
-<table class="ui celled table">
+<div class="main container" style="width: 1000px; margin: 0 auto;">
+  <table class="ui celled complex table">
     <thead>
         <tr>
             <th rowspan="2">One</th>
@@ -42,37 +42,40 @@ $(document).ready(function() {
             <td>(missing left border)</td>
         </tr>
     </tbody>
-</table>
+  </table>
 
-<div class="ui two column stackable page grid">
-    <div class="column">
-        <div class="ui segment">
-        </div>
-    </div>
-    <div class="column">
-        <div class="ui two column stackable grid">
-            <div class="column">
-              <div class="ui segment"></div>
-            </div>
-            <div class="column">
-              <div class="ui segment"></div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="ui two column stackable page grid">
-    <div class="column">
-      <div class="ui segment"></div>
-    </div>
-    <div class="column">
-      <div class="ui segment"></div>
-    </div>
-</div>
-<div class="ui two column stackable page grid">
-    <div class="column">
-      <div class="ui segment"></div>
-    </div>
-    <div class="column">
-      <div class="ui segment"></div>
-    </div>
+  <div class="ui section divider"></div>
+
+  <table class="resources ui striped celled complex table">
+      <colgroup class="basics">
+          <col /><col /><col /><col />
+      </colgroup>
+      <colgroup class="languages">
+          <col /><col /><col />
+      </colgroup>
+      <thead>
+          <tr>
+              <th class="name" rowspan=2>Name</th>
+              <th class="type" rowspan=2>Type</th>
+              <th class="file-count" rowspan=2>Files</th>
+              <th class="languages" colspan=3>Languages</th>
+          </tr>
+          <tr>
+              <th class="language">Ruby</th>
+              <th class="language">JavaScript</th>
+              <th class="language">Python</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>Ongoing Sum</td>
+              <td>Small Exercise</td>
+              <td>2</td>
+              <td><i class="large green checkmark icon"></i></td>
+              <td></td>
+              <td></td>
+          </tr>
+      </tbody>
+  </table>
+
 </div>

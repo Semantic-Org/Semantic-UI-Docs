@@ -1347,9 +1347,9 @@ themes      : ['Default']
       <div class="ui info message">
         Specifying <code>left</code> on a menu will make all child menus open in the same direction implicitly. To have a dropdown icon appear on the left side on a child menu, you will need to use <code>left dropdown example</code>
       </div>
-      <div class="ui floating dropdown">
-        <div class="text">Menu Direction</div>
+      <div class="ui floating labeled icon dropdown button">
         <i class="dropdown icon"></i>
+        <span class="text">Menu</span>
         <div class="menu">
           <div class="item">
             <i class="left dropdown icon"></i>
@@ -1374,9 +1374,9 @@ themes      : ['Default']
     </div>
 
     <div class="another dropdown example">
-      <div class="ui floating dropdown">
-        <div class="text">Menu Direction</div>
+      <div class="ui floating labeled icon dropdown button">
         <i class="dropdown icon"></i>
+        <span class="text">Menu</span>
         <div class="left menu">
           <div class="item">
             <i class="dropdown icon"></i>

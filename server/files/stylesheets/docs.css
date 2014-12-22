@@ -732,6 +732,9 @@ body#example {
 #example .clearing.example {
   overflow: hidden;
   clear: both;
+  padding-left: 1px;
+  padding-right: 1px;
+  padding-bottom: 1px;
 }
 #example .main.container:after {
   content: '';

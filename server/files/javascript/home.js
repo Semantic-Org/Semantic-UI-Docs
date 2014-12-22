@@ -43,10 +43,10 @@ semantic.home.ready = function() {
       });
       setTimeout(function() {
         $library.transition('scale in', 1000);
-      }, 6400);
+      }, 3750);
       setTimeout(function() {
         $version.transition('fade', 1000);
-      }, 7000);
+      }, 4250);
     },
     changeLogo: function() {
       var

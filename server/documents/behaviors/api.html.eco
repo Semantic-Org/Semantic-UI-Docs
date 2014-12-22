@@ -5,6 +5,7 @@ css         : 'api'
 title       : 'API'
 description : 'API allows elements to trigger actions on a server'
 type        : 'UI Behavior'
+standalone  : true
 ---
 
 <script src="/javascript/library/serialize-object.js"></script>
@@ -20,7 +21,7 @@ type        : 'UI Behavior'
         <div class="column">
           <div class="content">
             <div class="ui header"><i class="green check icon"></i>Already Knows Your UI</div>
-            <p>Attach an API event to an input, by default, it will occur <code>oninput</code>. Attach an API event to a button, <code>onclick</code>. API also ties API state to UI state: rate throttling, class adjustments for active, loading, disabled, syncing betweem multiple elements, and more.</p>
+            <p>Attach an API event to an input, by default, it will occur <code>oninput</code>. Attach an API event to a button, <code>onclick</code>. API also ties API state to UI state: rate throttling, class adjustments for active, loading, disabled, syncing between multiple elements, and more.</p>
           </div>
         </div>
         <div class="column">
@@ -34,8 +35,8 @@ type        : 'UI Behavior'
         <div class="column">
           <div class="content">
             <div class="ui header"><i class="green check icon"></i>State Management</div>
-            <p>API helps your UI keep track of server events, and is designed to work with Semantic's state naming conventions to track loading, disabled, and active stats.</p>
-            <p>Allowing you to do things like set maximum <b>and minimum</b> request times, toggle between text states, and sync state between multiple buttons with the same API actions.</p>
+            <p>API helps your UI keep track of server events, and is designed to work with Semantic's state naming conventions to track loading, disabled, and active states.</p>
+            <p>This allows you to do things like set maximum and minimum UI load times, toggle between text states, and sync UI states between multiple elements with the same API actions.</p>
           </div>
         </div>
         <div class="column">
@@ -67,17 +68,23 @@ type        : 'UI Behavior'
     </div>
     <div class="examples">
 
-      <h2 class="ui dividing header">Defining Your API</h2>
+      <h2 class="ui dividing header">Creating an API</h2>
 
       <div class="no example">
-        <h4 class="ui header">Defining Your Server</h4>
-        <p><b>API</b> works by defining a "vocabulary" of API actions which interface elements can query. This vocabulary makes up all the triggerable actions on your server.</p>
+        <h4 class="ui header">Working with named URLs:</h4>
+        <p><b>API</b> works best by defining a "vocabulary" of API actions which interface elements can query. These named URLs are referred to internally as API <b>actions</b>, and make up all the triggerable behaviors on the server.</p>
         <p>These actions are stored as templated URLs which include templated parameters that can be substituted at run-time.</p>
         <p>URLs listed in your API can include <b>required parameters</b> and <b>optional parameters</b> which may be adjusted for each call.</p>
         <h5 class="ui header">Required Parameters</h5>
         <div class="ui bulleted list">
           <div class="item">Uses format <code>{variable}</code></div>
           <div class="item"><b>Will abort the request</b> if they cannot be found.</div>
+        </div>
+        <div class="code" data-type="javascript">
+          /* Two required variables */
+          $.fn.api.settings.api = {
+            'get followers' : '/followers/{id}?results={count}',
+          };
         </div>
         <h5 class="ui header">Optional Parameters</h5>
         <div class="ui bulleted list">
@@ -86,9 +93,17 @@ type        : 'UI Behavior'
           <div class="item"><b>Will be removed</b> from the url automatically if not available.</div>
           <div class="item">Any preceding slash before an optional parameter will be removed from the URL, allowing you to include them in resource paths.</div>
         </div>
-        <div class="ui info message">
-          <p>You should define your endpoints <b>once in your application</b>. Usually this is done in a central configuration file included on each page. This makes sure when you update your application you will only need to update a single location with new URLs</p>
+        <div class="code" data-type="javascript">
+          /* One required, one optional variable */
+          $.fn.api.settings.api = {
+            'get followers' : '/followers/{id}/{/sort}',
+          };
         </div>
+      </div>
+      <div class="no example">
+        <h4 class="ui header">Creating your API</h4>
+        <p>You should define your endpoints <b>once in your application</b>. Usually this is done in a central configuration file included on each page.</p>
+        <p>Keeping your endpoints defined in one place makes sure when you update your application you will only need to update a single location with new URLs</p>
         <div class="code" data-type="javascript">
           /* Define API endpoints once globally */
           $.fn.api.settings.api = {
@@ -101,8 +116,8 @@ type        : 'UI Behavior'
         </div>
       </div>
       <div class="no example">
-        <h4 class="ui header">Working with URLs</h4>
-        <p>Named API actions are not required, you can also manually specify the url for a request, templated or not:</p>
+        <h4 class="ui header">Basic Usage</h4>
+        <p>Named API actions are not required to use <code>$.api</code> you can also manually specify the url for a request and use the same templating:</p>
         <div class="code">
         $('.search.button')
           .api({
@@ -128,20 +143,26 @@ type        : 'UI Behavior'
 
         <p>Any element can have an API action attached directly to it. By default the action will occur on the most appropriate event for the type of element. For example a button will call your server <code>onclick</code>, an input <code>oninput</code>, or a form <code>onsubmit</code>.</p>
 
-        <div class="code" data-type="html" data-id="22">
+        <p>API actions and data can be specified in javascript on initialization</p>
+        <div class="code" data-type="html">
           <div class="ui follow button">
             Follow
           </div>
         </div>
         <div class="evaluated code">
-        // translated '/follow/{id}' to 'follow/22'
+        // translates '/follow/{id}' to 'follow/22'
         $('.follow.button')
           .api({
-            action: 'follow user'
+            action: 'follow user',
+            urlData: {
+              id: 22
+            }
           })
         ;
         </div>
         <div class="ui horizontal divider">Or</div>
+
+        <p>API actions and data can also be specified in metadata:</p>
         <div class="code" data-type="html">
           <div class="ui follow button" data-action="follow user" data-id="22">
             Follow
@@ -898,5 +919,3 @@ type        : 'UI Behavior'
   </div>
 
 </div>
-</body>
-</html>

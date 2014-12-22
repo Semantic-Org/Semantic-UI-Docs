@@ -1025,7 +1025,7 @@ semantic.ready = function() {
         position : 'top right',
         offset   : 5,
         content  : 'View Source',
-        target   : $example.eq(0).find('i.code')
+        target   : $example.not('.no').eq(0).find('i.code')
       })
   ;
 

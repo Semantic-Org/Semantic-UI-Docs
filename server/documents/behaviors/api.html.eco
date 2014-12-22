@@ -225,7 +225,7 @@ standalone  : true
 
       <div class="no example">
         <h4 class="ui header">Automatically Routed Data</h4>
-        <p>Some special values are available for routing without additional set-up</p>
+        <p>Some special values will be automatically replaced if specified in URL actions</p>
         <table class="ui definition table">
           <thead>
             <tr>
@@ -238,12 +238,12 @@ standalone  : true
             <tr>
               <td>text</td>
               <td>current text value of element</td>
-              <td>All DOM elements</td>
+              <td>All elements</td>
             </tr>
             <tr>
               <td>value</td>
               <td>current input value of element</td>
-              <td>All input elements</td>
+              <td>Input elements</td>
             </tr>
           </tbody>
         </table>
@@ -271,17 +271,18 @@ standalone  : true
         <p>You can include url values as html5 metadata attributes</p>
         <p>This is often easiest to include unique url data for each triggering element, for example, many follow buttons will trigger the same endpoint, but each will have its own user id.</p>
         <div class="ui ignored warning message">
-          Only variables specified in your API's URL can be searched for in metadata.
+          Only variables specified in your API's URL will be searched for in metadata.
         </div>
         <div class="code" data-type="html">
           <div class="ui button" data-id="11">
-            Follow 1
+            Follow Sally
           </div>
           <div class="ui button" data-id="22">
             Follow Jenny
           </div>
         </div>
         <div class="code" data-type="javascript">
+          // requests different urls for each button
           $('.follow.button')
             .api({
               action: 'follow user'
@@ -327,8 +328,8 @@ standalone  : true
                 };
                 return settings;
               }
-              // basic auth login
               beforeXHR: function(xhr) {
+                // adjust XHR with additional headers
                 xhr.setRequestHeader ('Authorization', 'Basic XXXXXX');
               }
             })
@@ -346,8 +347,8 @@ standalone  : true
           $('.follow.button')
             .api({
               action: 'follow user',
-              // cancels request
               beforeSend: function(settings) {
+                // cancel request
                 return isLoggedIn;
               }
             })

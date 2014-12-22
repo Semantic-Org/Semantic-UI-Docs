@@ -8,6 +8,7 @@ elementType : 'collection'
 title       : 'Grid'
 description : 'A grid is used to harmonize negative space in a layout'
 type        : 'UI Collection'
+standalone  : true
 
 themes      : ['Default', 'Fixed-width']
 ---
@@ -108,6 +109,18 @@ themes      : ['Default', 'Fixed-width']
         <div class="four column row">
           <div class="column"></div>
           <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+        </div>
+      </div>
+    </div>
+    <div class="highlighted example">
+      <h4 class="ui header">Centering Content</h4>
+      <p>If a row does not take up all sixteen grid columns, you can use a <code>ui centered grid</code>, <code>centered row</code>, or <code>centered column</code> to center the column contents inside the grid.
+      </p>
+      <div class="ui two column centered grid">
+        <div class="column"></div>
+        <div class="four column centered row">
           <div class="column"></div>
           <div class="column"></div>
         </div>
@@ -771,6 +784,40 @@ themes      : ['Default', 'Fixed-width']
         </div>
       </div>
     </div>
+    <div class="example">
+      <h4 class="ui header">Centered</h4>
+      <p>A grid can have its columns centered</p>
+      <div class="ui two column centered grid">
+        <div class="column">
+          <img class="ui wireframe image" src="/images/wireframe/image.png">
+        </div>
+        <div class="four column centered row">
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+        </div>
+        <div class="four column row">
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="example">
       <h4 class="ui header">Doubling</h4>
@@ -781,32 +828,27 @@ themes      : ['Default', 'Fixed-width']
       <div class="five column doubling ui grid">
         <div class="column">
           <div class="ui segment">
-            <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-            <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
           </div>
         </div>
         <div class="column">
           <div class="ui segment">
-            <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-            <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
           </div>
         </div>
         <div class="column">
           <div class="ui segment">
-            <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-            <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
           </div>
         </div>
         <div class="column">
           <div class="ui segment">
-            <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-            <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
           </div>
         </div>
         <div class="column">
           <div class="ui segment">
-            <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-            <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
           </div>
         </div>
       </div>

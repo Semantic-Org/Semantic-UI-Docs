@@ -11,6 +11,7 @@ standalone : true
 <!-- TEST JS HERE !-->
 <script>
 $(document).ready(function() {
+  $('.ui.accordion').accordion();
   $('.ui.dropdown').dropdown();
 });
 </script>
@@ -19,63 +20,40 @@ $(document).ready(function() {
 <style type="text/css">
 
 </style>
+
 <div class="main container" style="width: 1000px; margin: 0 auto;">
-  <table class="ui celled complex table">
-    <thead>
-        <tr>
-            <th rowspan="2">One</th>
-            <th>Two</th>
-        </tr>
-        <tr>
-            <th>Three (missing left border)</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td rowspan="3"></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>(missing left border)</td>
-        </tr>
-        <tr>
-            <td>(missing left border)</td>
-        </tr>
-    </tbody>
-  </table>
 
-  <div class="ui section divider"></div>
-
-  <table class="resources ui striped celled complex table">
-      <colgroup class="basics">
-          <col /><col /><col /><col />
-      </colgroup>
-      <colgroup class="languages">
-          <col /><col /><col />
-      </colgroup>
-      <thead>
-          <tr>
-              <th class="name" rowspan=2>Name</th>
-              <th class="type" rowspan=2>Type</th>
-              <th class="file-count" rowspan=2>Files</th>
-              <th class="languages" colspan=3>Languages</th>
-          </tr>
-          <tr>
-              <th class="language">Ruby</th>
-              <th class="language">JavaScript</th>
-              <th class="language">Python</th>
-          </tr>
-      </thead>
-      <tbody>
-          <tr>
-              <td>Ongoing Sum</td>
-              <td>Small Exercise</td>
-              <td>2</td>
-              <td><i class="large green checkmark icon"></i></td>
-              <td></td>
-              <td></td>
-          </tr>
-      </tbody>
-  </table>
-
+</div>
+<div class="ui vertical inverted borderless sidebar menu left overlay visible">
+  <div class="item">
+    <a class="ui logo icon image" href="/">
+      <img src="http://placehold.it/40/cc095c/000000">
+    </a>
+    <a href="/"><b>Acme Inc.</b></a>
+  </div>
+  <div class="ui inverted accordion item">
+    <h4 class="ui dividing inverted header">Content Menu</h4>
+    <a class="active title"><i class="dropdown icon"></i> Entry</a>
+    <div class="active content">
+      <form class="ui inverted form vertical segment" method="post">
+        <div class="field">
+          <label>Group</label>
+          <select class="ui fluid dropdown" id="test1" name="test"><option value="">Select...</option><option value="1">Global</option></select>
+        </div>
+        <div class="field">
+          <label>Type</label>
+          <select class="ui fluid dropdown" id="test2" name="test2">
+            <option value="">Select...</option><option value="1">Text</option>
+            <option value="2">String</option>
+            <option value="3">Boolean</option>
+          </select>
+        </div>
+        <div class="field">
+          <button class="right labeled blue ui icon button" name="Commit" type="submit" value="Add">Add
+            <i class='add circle icon'></i>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>

@@ -13,6 +13,8 @@ standalone : true
 $(document).ready(function() {
   $('.ui.accordion').accordion();
   $('.ui.dropdown').dropdown();
+    $('.right.sidebar').sidebar('attach events', '#sidebar', 'show');
+    $('.ui.dropdown').dropdown();
 });
 </script>
 
@@ -22,7 +24,24 @@ $(document).ready(function() {
 </style>
 
 <div class="main container" style="width: 1000px; margin: 0 auto;">
-
+  <div class="ui inverted blue menu">
+      <div class="row">
+          <div class="ui dropdown item">
+              <i class="dropdown icon"></i>
+              Dropdown item
+              <div class="ui inverted blue menu">
+                  <a class="active item">Dropdown sub-item 1</a>
+                  <a class="item">Dropdown sub-item 2</a>
+                  <a class="item">Dropdown sub-item 3</a>
+              </div>
+          </div>
+      </div>
+  </div>
+  <column class='leftcolumn'>LEFT</column>
+  <column class='rightcolumn'>
+      RIGHT
+      <div class='ui button blue' id='sidebar'>Sidebar</div>
+   </column>
 </div>
 <div class="ui vertical inverted borderless sidebar menu left overlay visible">
   <div class="item">
@@ -57,3 +76,35 @@ $(document).ready(function() {
     </div>
   </div>
 </div>
+    <section class="ui sidebar right">
+
+        <div class='widget' >
+
+        <div class='ui form' >
+          <form id='bulk_update_form' action='#xxx'>
+            <div class="field" >
+              <label>Change Status</label>
+              <select class="ui fluid selection dropdown" name='field1' value='0' >
+                <option value="1"> one </option>
+                <option value="2"> two </option>
+              </select>
+              </div>
+
+              <div class="field" >
+              <label>Change Owner</label>
+              <select class="ui fluid selection dropdown" name='field2' value='0' >
+                <option value="1"> one </option>
+                <option value="2"> two </option>
+              </select>
+              </div>
+
+                    <center class=''>
+                        <button class='ui button blue' id='mybutton'>
+                            Update
+                        </button>
+                    </center>
+          </form>
+        </div>
+      </div>
+
+    </section>

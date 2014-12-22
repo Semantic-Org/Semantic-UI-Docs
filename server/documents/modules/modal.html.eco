@@ -590,7 +590,19 @@ themes      : ['Default', 'Material', 'Fixed-width']
           <td>
           true
           </td>
-          <td>Settings to false will not allow you to close the modal by clicking on the dimmer</td>
+          <td>Setting to false will not allow you to close the modal by clicking on the dimmer</td>
+        </tr>
+        <tr>
+          <td>dimmerSettings</td>
+          <td>
+          <div class="code" data-type="javascript">
+          {
+            closable : false,
+            useCSS   : true
+          }
+          </div>
+          </td>
+          <td>You can specify custom settings to extend <a href="/modules/dimmer.html">UI dimmer</a></td>
         </tr>
         <tr>
           <td>useCSS</td>

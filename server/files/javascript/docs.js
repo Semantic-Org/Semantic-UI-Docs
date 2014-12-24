@@ -203,7 +203,9 @@ semantic.ready = function() {
 
     translatePage: function(languageCode, text, $choice) {
       languageDropdownUsed = true;
-      window.Transifex.live.translateTo(languageCode, true);
+      if(window.Transifex !== undefined) {
+        window.Transifex.live.translateTo(languageCode, true);
+      }
     },
 
     showLanguageModal: function(languageCode) {

@@ -1,6 +1,7 @@
 ---
-layout : 'homepage'
-css    : 'index'
+layout     : 'homepage'
+css        : 'index'
+standalone : true
 ---
 <div class="following bar">
   <div class="ui page grid">

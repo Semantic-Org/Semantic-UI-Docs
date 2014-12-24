@@ -2196,6 +2196,11 @@ themes      : ['Default']
           <td>Event used to trigger dropdown (Hover, Click, Custom Event)</td>
         </tr>
         <tr>
+          <td>sortSelect</td>
+          <td>false</td>
+          <td>Whether to sort values when creating a dropdown automatically from a select element.</td>
+        </tr>
+        <tr>
           <td>allowTab</td>
           <td>true</td>
           <td>Whether to allow a <code>tabindex</code> to be created for this element </td>

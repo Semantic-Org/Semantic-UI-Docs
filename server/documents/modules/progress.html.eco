@@ -1,6 +1,7 @@
 ---
 layout      : 'default'
 css         : 'progress'
+standalone  : true
 
 element     : 'progress'
 elementType : 'module'

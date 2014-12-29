@@ -5,7 +5,7 @@ element     : 'video'
 elementType : 'module'
 
 title       : 'Video'
-description : 'A video is used to display moving visual images and related playback options'
+description : 'A video displays moving images with playback controls'
 type        : 'UI Module'
 
 status      : 'Undocumented'

@@ -15,7 +15,7 @@ semantic.progress.ready = function() {
     $buttons
       .on('click', function() {
         var
-          $progress = $(this).closest('.example').find('.progress')
+          $progress = $(this).closest('.example').find('.ui.progress')
         ;
         if( $(this).hasClass('increment') ) {
           $progress.progress('increment');

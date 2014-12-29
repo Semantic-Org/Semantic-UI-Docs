@@ -1,6 +1,7 @@
 ---
 layout      : 'default'
 css         : 'label'
+standalone  : true
 
 element     : 'label'
 elementType : 'element'
@@ -142,6 +143,16 @@ themes      : ['Default']
       <a class="ui teal ribbon label">Cats</a>
       <p>Also pretty nice animals, but can prefer solitude.</p>
       <a class="ui red ribbon label">Ogres and monsters</a>
+      <p>Never seen one as a pet before, but I imagine they'd make pretty terrible companions.</p>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui segment">
+      <a class="ui right ribbon label">Dogs</a>
+      <p>Pretty nice animals.</p>
+      <a class="ui teal right ribbon label">Cats</a>
+      <p>Also pretty nice animals, but can prefer solitude.</p>
+      <a class="ui red right ribbon label">Ogres and monsters</a>
       <p>Never seen one as a pet before, but I imagine they'd make pretty terrible companions.</p>
     </div>
   </div>

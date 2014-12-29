@@ -34,8 +34,8 @@ semantic.ready = function() {
 
     $ui                  = $('.ui').not('.hover, .down'),
     $swap                = $('.theme.menu .item'),
-    $menu                = $('#menu'),
-    $hideMenu            = $('#menu .hide.item'),
+    $menu                = $('#toc'),
+    $hideMenu            = $('#toc .hide.item'),
     $sortTable           = $('.sortable.table'),
     $demo                = $('.demo'),
 

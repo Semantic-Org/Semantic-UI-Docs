@@ -133,45 +133,45 @@ a:hover {
      Sidebar
 ---------------*/
 
-#example #menu > :last-child {
+#example #toc > :last-child {
   padding-bottom: 2em;
 }
-#example #menu .logo.image {
+#example #toc .logo.image {
   width: 35px;
   margin-right: 1em;
 }
-#example #menu .item {
+#example #toc .item {
   position: relative;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
 }
-#example #menu .item .circular.label {
+#example #toc .item .circular.label {
   position: absolute;
   top: 0.75rem;
   right: 1em;
   opacity: 0.2;
   transition: background 0.3s ease;
 }
-#example #menu .item.active > .circular.label,
-#example #menu .item:hover > .circular.label {
+#example #toc .item.active > .circular.label,
+#example #toc .item:hover > .circular.label {
   opacity: 0.8;
 }
 
-#example #menu .inverted.header {
+#example #toc .inverted.header {
   font-size: 1em;
   font-weight: normal;
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 0.5em;
 }
-#example #menu a.inverted.header.active,
-#example #menu a.inverted.header:hover {
+#example #toc a.inverted.header.active,
+#example #toc a.inverted.header:hover {
   color: rgba(255, 255, 255, 1);
 }
-#example #menu .hide.item {
+#example #toc .hide.item {
   display: none;
 }
-#example #menu .menu .active.item {
+#example #toc .menu .active.item {
   color: #6DFFFF !important;
 }
 
@@ -1659,10 +1659,10 @@ body.progress.animated .ui.progress .bar {
     margin: 1em auto;
     padding: 0em;
   }
-  #example #menu .hide.item {
+  #example #toc .hide.item {
     display: block;
   }
-  #example #menu .item > .icon {
+  #example #toc .item > .icon {
     font-size: 1em !important;
   }
   #example .inverted.advertisement .carbonad-img {

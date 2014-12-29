@@ -5,7 +5,7 @@
 <% uiModules         = @getCollection("documents").findAll({type: $in: ['UI Module']},[{title: 1}]).toJSON() %>
 <% uiBehavior        = @getCollection("documents").findAll({type: $in: ['UI Behavior']},[{title: 1}]).toJSON() %>
 
-<div class="ui vertical inverted sidebar menu" id="menu">
+<div class="ui vertical inverted sidebar menu" id="toc">
   <div class="item">
     <a class="ui logo icon image" href="/">
       <img src="/images/logo.png">

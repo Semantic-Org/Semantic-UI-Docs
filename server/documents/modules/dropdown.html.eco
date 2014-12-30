@@ -1528,6 +1528,45 @@ themes      : ['Default']
       </div>
     </div>
 
+    <div class="category example">
+      <h3 class="ui header">Multiple Levels with Category Selection</h3>
+      <p>Using a multi-level menu with <code>allowCategorySelection: true</code> will allow items with sub-menus to be selected.</p>
+      <div class="ui ignored code" data-type="javascript">
+        $('.category.example .ui.dropdown')
+          .dropdown({
+            allowCategorySelection: true
+          })
+        ;
+      </div>
+      <div class="ui dropdown button">
+        <span class="text">Choose Category</span>
+        <i class="dropdown icon"></i>
+        <div class="menu">
+          <div class="item">
+            <span class="text">Category 1</span>
+          </div>
+          <div class="item">
+            <i class="dropdown icon"></i>
+            <span class="text">Category 2</span>
+            <div class="menu">
+              <div class="item">Item 2A</div>
+              <div class="item">Item 2B</div>
+              <div class="item">Item 2C</div>
+            </div>
+          </div>
+          <div class="item">
+            <i class="dropdown icon"></i>
+            <span class="text">Category 3</span>
+            <div class="menu">
+              <div class="item">Item 3A</div>
+              <div class="item">Item 3B</div>
+              <div class="item">Item 3C</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
     <div class="dropdown example">
       <h3 class="ui header">Preserving User Selections</h3>

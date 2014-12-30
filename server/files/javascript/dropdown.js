@@ -11,6 +11,7 @@ semantic.dropdown.ready = function() {
     $dropdown         = $examples.filter('.dropdown').find('.menu > .item > .ui.dropdown, > .ui.dropdown:not(.simple), .inline.dropdown, .icon.buttons .button, .form .dropdown.selection'),
     $transition       = $examples.filter('.transition').find('.ui.dropdown'),
     $transitionButton = $examples.filter('.transition').find('.ui.button').first(),
+    $categoryDropdown = $examples.filter('.category').find('.ui.dropdown'),
     // alias
     handler
   ;
@@ -33,6 +34,12 @@ semantic.dropdown.ready = function() {
         console.log($transition);
         $transition.dropdown('setting', 'transition', value);
       }
+    })
+  ;
+
+  $categoryDropdown
+    .dropdown({
+      allowCategorySelection: true
     })
   ;
 

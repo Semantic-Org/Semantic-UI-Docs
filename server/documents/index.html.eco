@@ -80,7 +80,7 @@ standalone : true
     </div>
   </div>
 </div>
-<div class="ui vertical stripe theming segment">
+<div class="ui stripe theming vertical segment">
   <div class="ui stackable very relaxed two column page grid">
     <div class="center aligned column">
       <h1 class="ui icon header">
@@ -143,7 +143,7 @@ standalone : true
     </div>
   </div>
 </div>
-<div class="ui vertical email stripe segment">
+<div class="ui email stripe vertical segment">
   <div class="ui center aligned page grid">
     <div class="column">
       <h3 class="ui header">
@@ -162,7 +162,7 @@ standalone : true
     </div>
   </div>
 </div>
-<div class="feature alternate ui vertical stripe segment">
+<div class="feature alternate ui stripe vertical segment">
   <div class="ui three column equal height center aligned divided relaxed stackable page grid">
     <div class="column">
       <h2 class="ui icon header">
@@ -192,7 +192,7 @@ standalone : true
     </div>
   </div>
 </div>
-<div class="ui vertical stripe segment">
+<div class="ui stripe vertical segment">
   <div class="ui stackable very relaxed page grid">
     <div class="fourteen wide center aligned centered column">
       <h1 class="ui icon header">
@@ -205,7 +205,7 @@ standalone : true
         <i class="right chevron icon"></i>
       </a>
     </div>
-    <div class="three column demo row">
+    <div class="three column computer one column mobile demo row">
       <div class="column">
         <div class="no example">
           <h4 class="ui header">
@@ -374,7 +374,7 @@ standalone : true
           </div>
         </div>
       </div>
-      <div class="column">
+      <div class="tablet only computer only column">
         <div class="no example">
           <h4 class="ui header">
             <a href="/views/card.html">Card</a>
@@ -488,7 +488,7 @@ standalone : true
           </div>
         </div>
       </div>
-      <div class="column">
+      <div class="tablet only computer only column">
         <div class="no example">
           <h4 class="ui header">
             <a href="/modules/dropdown.html">Dropdown</a>
@@ -845,7 +845,7 @@ standalone : true
     </div>
   </div>
 </div>
-<div class="ui vertical stripe community segment">
+<div class="ui stripe community vertical segment">
   <div class="ui two column equal height center aligned divided very relaxed stackable page grid">
     <div class="column">
       <h2 class="ui icon header">
@@ -863,7 +863,7 @@ standalone : true
     </div>
   </div>
 </div>
-<div class="ui vertical inverted stripe segment">
+<div class="ui inverted stripe codebase vertical segment">
   <div class="ui stackable center aligned page grid">
     <div class="fourteen wide column">
       <h1 class="ui inverted icon header">
@@ -886,7 +886,7 @@ standalone : true
     </div>
   </div>
 </div>
-<div class="ui vertical alternate stripe segment">
+<div class="ui alternate stripe vertical segment">
   <div class="ui stackable center aligned page grid">
     <div class="fourteen wide column">
       <h1 class="ui icon header">

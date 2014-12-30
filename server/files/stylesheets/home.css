@@ -253,7 +253,6 @@
     box-shadow 0.5s ease,
     border 0.5s ease
   ;
-  will-change: transform;
 }
 #example.index .following.bar > .menu .item {
   transition: all 0.5s ease;
@@ -366,11 +365,16 @@
 /* content */
 #example .solid,
 #example .stripe {
+  background-color: #FFFFFF;
   padding: 10em 0px;
   border-radius: 0em;
   margin: 0em;
-/*    -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);*/
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+#example .theming.stripe {
+  -webkit-transform: none;
+  transform: none;
 }
 
 #example .stripe h1 {
@@ -489,6 +493,9 @@
   #example.index .following .logo {
     float: none;
   }
+  #example.index .codebase.stripe {
+    display: none;
+  }
   #example.index .following .version.label {
     vertical-align: top;
     margin-top: 0em;
@@ -511,8 +518,8 @@
   #example.index .stripe .icon.header .icon.image {
     height: 50px;
   }
-  #example .feature.stripe {
-    padding: 2em 0em;
+  #example.index .stripe {
+    padding: 2em 0em !important;
   }
 }
 
@@ -542,8 +549,8 @@
     min-height: 0px;
   }
   #example.index .container {
-    margin-left: 2em;
-    margin-right: 2em;
+    margin-left: 0em;
+    margin-right: 0em;
   }
   #example .solid, #example .stripe {
     padding: 6em 0em;

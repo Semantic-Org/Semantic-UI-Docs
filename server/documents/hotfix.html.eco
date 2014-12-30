@@ -11,7 +11,7 @@ standalone : true
 <!-- TEST JS HERE !-->
 <script>
 $(document).ready(function() {
-    $('.dropdown').dropdown();
+
 });
 </script>
 
@@ -21,15 +21,64 @@ $(document).ready(function() {
 </style>
 
 <div class="main container" style="width: 1000px; margin: 0 auto;">
+
 <div class="ui form">
-    <div class="ui menu">
-        <select class="ui search dropdown item" id="FundId" name="FundId">
-            <option value="">Select a Fund</option>
-            <option value="-4CRRvSHigsjdnwoflfp8w2">anbbb</option>
-            <option value="7VTzjodui7ipNPQAvn5kUA2">axbbb</option>
-            <option value="v-AYJV19r7ynfjwslQ35Fg2">acccc</option>
-            <option value="v-qdeV19r7ynfjwslQ35Fg2">acddd</option>
-        </select>
+
+    <div class="two required fields">
+        <div class="field">
+            <label>First Name</label>
+            <input type="text">
+        </div>
+        <div class="field">
+            <label>Last Name</label>
+            <input type="text">
+        </div>
     </div>
+
+    <div class="required field">
+        <label>Institution</label>
+        <input type="text">
+    </div>
+
+    <div class="required fields">
+        <div class="two wide field">
+            <label>Postal code</label>
+            <input type="text">
+        </div>
+        <div class="seven wide field">
+            <label>City</label>
+            <input type="text">
+        </div>
+        <div class="seven wide field">
+            <label>Country</label>
+            <div class="ui search selection dropdown">
+                <input type="hidden" name="country">
+                <i class="dropdown icon"></i>
+                <div class="default text">Select Country</div>
+                <div class="menu">
+                    <div class="item" data-value="ad">Andorra</div>
+                    <div class="item" data-value="ae">United Arab Emirates</div>
+                    <div class="item" data-value="af">Afghanistan</div>
+                    <div class="item" data-value="ag">Antigua</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="three fields">
+        <div class="required field">
+            <label>E-mail</label>
+            <input type="text">
+        </div>
+        <div class="required field">
+            <label>Phone</label>
+            <input type="text">
+        </div>
+        <div class="field">
+            <label>Fax</label>
+            <input type="text">
+        </div>
+    </div>
+
 </div>
 </div>

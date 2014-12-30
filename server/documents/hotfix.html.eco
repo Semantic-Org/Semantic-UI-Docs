@@ -19,34 +19,41 @@ $(document).ready(function() {
 
 </style>
 
-<div class="ui vertical alternate stripe segment">
-  <div class="ui stackable center aligned page grid">
-    <div class="fourteen wide column">
-      <h1 class="ui icon header">
-        <img class="ui inline icon image" src="/images/icons/rocket.png">
-        Liberate your Development
-      </h1>
-      <div class="ui stackable center aligned vertically padded grid">
-<!--         <div class="column">
-          <h3 class="ui header">Beginner Friendly</h3>
-          <p>Don't feel comfortable tweaking everything? Download free community designed themes and use our customizer to build a package fit for your needs.</p>
-          <a class="ui large disabled right labeled icon button">
-            <i class="right chevron icon"></i>
-            View Basic Guide
-          </a>
-        </div> -->
-        <div class="eight wide column">
-          <h3 class="ui header">Enterprise Ready</h3>
-          <p>Build tools, performance logging, support for custom definitions, multiple-levels of theme inheritance—a developer's dream.</p>
-          <a class="ui large right labeled primary icon button" href="http://www.learnsemantic.com/guide/expert.html">
-            <i class="right chevron icon"></i>
-            Getting Started Guide
-          </a>
+ <div class="ui page grid">
+    <div class="one column row">
+        <div class="column">
+            <p>Quisque in nunc cursus, efficitur diam sed, fermentum odio. Aenean porttitor neque nec nunc pellentesque, eget tempor purus lacinia. Mauris molestie odio non felis venenatis, sit amet laoreet sem pellentesque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec augue augue, hendrerit quis nisi sed, feugiat euismod enim. Integer rhoncus mi non purus tincidunt, vestibulum semper ex tristique.
+            </p>
         </div>
-      </div>
     </div>
-  </div>
 </div>
+<div class="ui stackable page grid">
+    <div class="two column row">
+        <div class="column">
+            <p>Quisque in nunc cursus, efficitur diam sed, fermentum odio. Aenean porttitor neque nec nunc pellentesque, eget tempor purus lacinia. Mauris molestie odio non felis venenatis, sit amet laoreet sem pellentesque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec augue augue, hendrerit quis nisi sed, feugiat euismod enim. Integer rhoncus mi non purus tincidunt, vestibulum semper ex tristique.
+            </p>
+        </div>
+        <div class="column">
+            <p>Quisque in nunc cursus, efficitur diam sed, fermentum odio. Aenean porttitor neque nec nunc pellentesque, eget tempor purus lacinia. Mauris molestie odio non felis venenatis, sit amet laoreet sem pellentesque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec augue augue, hendrerit quis nisi sed, feugiat euismod enim. Integer rhoncus mi non purus tincidunt, vestibulum semper ex tristique.
+            </p>
+        </div>
+    </div>
+</div>
+<div class="ui page grid">
+    <div class="one column row">
+        <div class="column">
+            <p>Quisque in nunc cursus, efficitur diam sed, fermentum odio. Aenean porttitor neque nec nunc pellentesque, eget tempor purus lacinia. Mauris molestie odio non felis venenatis, sit amet laoreet sem pellentesque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec augue augue, hendrerit quis nisi sed, feugiat euismod enim. Integer rhoncus mi non purus tincidunt, vestibulum semper ex tristique.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
 
 <!-- <div class="main container" style="width: 1000px; margin: 0 auto;max-width: 100%;">
 

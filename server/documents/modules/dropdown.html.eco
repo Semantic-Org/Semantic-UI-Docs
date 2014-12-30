@@ -2235,6 +2235,11 @@ themes      : ['Default']
           <td>Event used to trigger dropdown (Hover, Click, Custom Event)</td>
         </tr>
         <tr>
+          <td>allowCategorySelection</td>
+          <td>false</td>
+          <td>Whether menu items with sub-menus (categories) should be selectable</td>
+        </tr>
+        <tr>
           <td>sortSelect</td>
           <td>false</td>
           <td>Whether to sort values when creating a dropdown automatically from a select element.</td>

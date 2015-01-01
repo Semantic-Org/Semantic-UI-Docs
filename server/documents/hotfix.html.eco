@@ -8,9 +8,33 @@ standalone : true
 ---
 <!-- TEST JS HERE !-->
 <script>
-$(document).ready(function() {
-    $('.ui.sidebar').sidebar();
-    $('.ui.sidebar').sidebar('attach events', '.launch.item');
+$(document).ready(function() {var content = [
+  { title: 'Andorrs' },
+  { title: 'United Arab Emirates' },
+  { title: 'Afghanistas' },
+  { title: 'Antigus' },
+  { title: 'Anguills' },
+  { title: 'Albanis' },
+  { title: 'Armenis' },
+  { title: 'Netherlands Antilles' },
+  { title: 'Angols' },
+  { title: 'Argentins' },
+  { title: 'American Samos' },
+  { title: 'Austris' },
+  { title: 'Australis' },
+  { title: 'Arubs' },
+  { title: 'Aland Islands' },
+  { title: 'Azerbaijas' },
+  { title: 'Bosnis' }
+  // etc
+];
+
+$('.ui.search')
+  .search({
+    source: content,
+      maxResults: 16
+  })
+;
 });
 </script>
 
@@ -19,42 +43,14 @@ $(document).ready(function() {
 
 </style>
 
- <div class="ui page grid">
-    <div class="one column row">
-        <div class="column">
-            <p>Quisque in nunc cursus, efficitur diam sed, fermentum odio. Aenean porttitor neque nec nunc pellentesque, eget tempor purus lacinia. Mauris molestie odio non felis venenatis, sit amet laoreet sem pellentesque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec augue augue, hendrerit quis nisi sed, feugiat euismod enim. Integer rhoncus mi non purus tincidunt, vestibulum semper ex tristique.
-            </p>
-        </div>
-    </div>
-</div>
-<div class="ui stackable page grid">
-    <div class="two column row">
-        <div class="column">
-            <p>Quisque in nunc cursus, efficitur diam sed, fermentum odio. Aenean porttitor neque nec nunc pellentesque, eget tempor purus lacinia. Mauris molestie odio non felis venenatis, sit amet laoreet sem pellentesque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec augue augue, hendrerit quis nisi sed, feugiat euismod enim. Integer rhoncus mi non purus tincidunt, vestibulum semper ex tristique.
-            </p>
-        </div>
-        <div class="column">
-            <p>Quisque in nunc cursus, efficitur diam sed, fermentum odio. Aenean porttitor neque nec nunc pellentesque, eget tempor purus lacinia. Mauris molestie odio non felis venenatis, sit amet laoreet sem pellentesque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec augue augue, hendrerit quis nisi sed, feugiat euismod enim. Integer rhoncus mi non purus tincidunt, vestibulum semper ex tristique.
-            </p>
-        </div>
-    </div>
-</div>
-<div class="ui page grid">
-    <div class="one column row">
-        <div class="column">
-            <p>Quisque in nunc cursus, efficitur diam sed, fermentum odio. Aenean porttitor neque nec nunc pellentesque, eget tempor purus lacinia. Mauris molestie odio non felis venenatis, sit amet laoreet sem pellentesque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec augue augue, hendrerit quis nisi sed, feugiat euismod enim. Integer rhoncus mi non purus tincidunt, vestibulum semper ex tristique.
-            </p>
-        </div>
-    </div>
+
+<div class="main container" style="width: 1000px; margin: 0 auto;max-width: 100%;">
+<div class="ui search">
+  <div class="ui icon input">
+    <input class="prompt" type="text" placeholder="Search countries...">
+    <i class="search icon"></i>
+  </div>
+  <div class="results"></div>
 </div>
 
-
-
-
-
-
-
-
-<!-- <div class="main container" style="width: 1000px; margin: 0 auto;max-width: 100%;">
-
-</div> -->
+</div>

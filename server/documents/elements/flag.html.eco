@@ -23,9 +23,9 @@ type        : 'UI Element'
       <h4 class="ui header">Flag</h4>
       <p>A flag can use the two digit country code, the full name, or a common alias</p>
       <div class="code" data-type="html" data-preview="true">
-        <i class="gb flag"></i>
-        <i class="england flag"></i>
-        <i class="united kingdom flag"></i>
+        <i class="us flag"></i>
+        <i class="united states flag"></i>
+        <i class="american flag"></i>
       </div>
     </div>
 
@@ -495,7 +495,6 @@ type        : 'UI Element'
         <td><i class="united kingdom flag"></i></td>
         <td>United Kingdom</td>
         <td>gb</td>
-        <td>England</td>
       </tr>
       <tr>
         <td><i class="grenada flag"></i></td>
@@ -1395,7 +1394,7 @@ type        : 'UI Element'
         <td><i class="united states flag"></i></td>
         <td>United States</td>
         <td>us</td>
-        <td>America</td>
+        <td>American</td>
       </tr>
       <tr>
         <td><i class="uruguay flag"></i></td>

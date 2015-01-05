@@ -1,6 +1,7 @@
 ---
 layout      : 'default'
 css         : 'popup'
+standalone  : true
 
 element     : 'popup'
 elementType : 'module'

@@ -429,6 +429,11 @@ themes      : ['Default', 'Chubby']
           <td>Only allow one section open at a time</td>
         </tr>
         <tr>
+          <td>animateChildren</td>
+          <td>true</td>
+          <td>Whether child content opacity should be animated (may cause performance issues with many child elements)</td>
+        </tr>
+        <tr>
           <td>close nested</td>
           <td>true</td>
           <td>Allow active sections to collapse</td>

@@ -45,12 +45,52 @@ $('.ui.search')
 
 
 <div class="main container" style="width: 1000px; margin: 0 auto;max-width: 100%;">
-<div class="ui search">
-  <div class="ui icon input">
-    <input class="prompt" type="text" placeholder="Search countries...">
-    <i class="search icon"></i>
-  </div>
-  <div class="results"></div>
+
+
+<div class="ui top attached tabular fluid two item menu">
+  <a class="item">
+    Bio
+  </a>
+  <a class="active item">
+    Pics
+  </a>
+</div>
+<div class="ui bottom attached segment">
+  This is the content of the tab.
+</div>
+
+<div class="ui top attached segment">
+  <p>This segment is on top</p>
+</div>
+<div class="ui attached segment">
+  <p>This segment is attached on both sides</p>
+</div>
+<div class="ui bottom attached segment">
+  <p>This segment is on bottom</p>
+</div>
+
+
+<h5 class="ui top attached header">
+  Dogs
+</h5>
+<div class="ui attached segment">
+  <p>Dogs are one type of animal</p>
+</div>
+<h5 class="ui attached header">
+  Cats
+</h5>
+<div class="ui attached segment">
+  <p>Cats are thought of as being related to dogs, but only humans think this.</p>
+</div>
+<h5 class="ui attached header">
+  Lions
+</h5>
+<div class="ui attached segment">
+  <p>Humans don't think of lions as being like cats, but they are.</p>
+</div>
+<div class="ui bottom attached warning message">
+  <i class="warning icon"></i>
+  You've reached the end of this content segment!
 </div>
 
 </div>

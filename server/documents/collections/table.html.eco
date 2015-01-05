@@ -70,7 +70,7 @@ themes      : ['Default', 'Basic', 'Classic']
         </th>
       <tbody>
         <tr>
-          <td class="collapsing disabled">
+          <td class="collapsing">
             <i class="folder icon"></i> node_modules
           </td>
           <td>Initial commit</td>
@@ -183,7 +183,7 @@ themes      : ['Default', 'Basic', 'Classic']
             <div class="ui right floated small primary labeled icon button">
               <i class="user icon"></i> Add User
             </div>
-            <div class="ui small  button">
+            <div class="ui small button">
               Approve
             </div>
             <div class="ui small  disabled button">
@@ -683,7 +683,7 @@ themes      : ['Default', 'Basic', 'Classic']
     <table class="ui table">
       <tbody>
         <tr>
-          <td class="collapsing disabled">
+          <td class="collapsing">
             <i class="folder icon"></i> node_modules
           </td>
           <td>Initial commit</td>

@@ -1,6 +1,7 @@
 ---
 layout      : 'default'
 css         : 'divider'
+standalone  : true
 
 element     : 'divider'
 elementType : 'element'
@@ -29,8 +30,11 @@ themes      : ['default']
 
   <div class="example">
     <h4 class="ui header">Vertical Divider</h4>
+    <div class="ui ignored warning message">
+      Vertical and horizontal dividers require you to add <code>position: relative</code> to the element that you would like to contain the divider
+    </div>
     <div class="ui info ignored message">
-      A vertical divider will automatically adjust to a horizontal divider at mobile resolutions when used inside a <a href="/collections/grid.html">stackable grid</a>
+      A vertical divider will automatically adjust to a horizontal divider at mobile resolutions when used inside a <a href="/collections/grid.html#stackable-grid">stackable grid</a>
     </div>
     <p>A divider can segment content vertically</p>
     <div class="ui two column middle aligned relaxed fitted stackable grid">
@@ -68,7 +72,7 @@ themes      : ['default']
   <div class="example">
     <h4 class="ui header">Horizontal Divider</h4>
     <p>A divider can segment content horizontally</p>
-    <div class="ui ignored positive message">Horizontal dividers can also be used in combination with <a href="/elements/header.html">header</a> and <a href="/elements/icon.html">icons</a> to create different styles of dividers.
+    <div class="ui ignored positive message">Horizontal dividers can also be used in combination with <a href="/elements/header.html">headers</a> and <a href="/elements/icon.html">icons</a> to create different styles of dividers.
     </div>
     <div class="ui ignored message">Dividers  will automatically vary the size of their dividing rules to match the length of your text</div>
     <div class="ui center aligned compact segment">

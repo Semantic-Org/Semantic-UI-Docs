@@ -1,6 +1,7 @@
 ---
 layout      : 'default'
 css         : ''
+standalone  : true
 
 element     : 'sidebar'
 elementType : 'element'
@@ -418,10 +419,13 @@ themes      : ['Default']
 
   <div class="ui tab" data-tab="settings">
 
-    <h3 class="ui header">
-      Sidebar Settings
-      <div class="sub header">Form settings modify the sidebar behavior</div>
-    </h3>
+    <h2 class="ui dividing header">
+      Sidebar
+    </h2>
+
+    <h4 class="ui header">
+      Behavior
+    </h4>
     <table class="ui celled sortable definition table segment">
       <thead>
         <tr>
@@ -432,31 +436,105 @@ themes      : ['Default']
       </thead>
       <tbody>
         <tr>
-          <td>overlay</td>
-          <td>false</td>
-          <td>Whether sidebar should overlay page instead of pushing page to the side</td>
+          <td>context</td>
+          <td>body</td>
+          <td>Context which sidebar will appear inside</td>
         </tr>
         <tr>
           <td>exclusive</td>
-          <td>true</td>
+          <td>false</td>
           <td>Whether multiple sidebars can be open at once</td>
         </tr>
         <tr>
-          <td>useCSS</td>
+          <td>closable</td>
           <td>true</td>
-          <td>Whether to use css animations or fallback javascript animations</td>
+          <td>Whether sidebar can be closed by clicking on page</td>
         </tr>
         <tr>
-          <td>duration</td>
-          <td>300</td>
-          <td>Duration of side bar transition animation</td>
+          <td>dimPage</td>
+          <td>true</td>
+          <td>Whether to dim page contents when sidebar is visible</td>
+        </tr>
+        <tr>
+          <td>scrollLock</td>
+          <td>false</td>
+          <td>Whether to lock page scroll when sidebar is visible</td>
+        </tr>
+        <tr>
+          <td>returnScroll</td>
+          <td>false</td>
+          <td>Whether to return to original scroll position when sidebar is hidden, automatically occurs with <code>transition: scale</code></td>
         </tr>
       </tbody>
     </table>
 
-    <div class="ui horizontal section icon divider"><i class="icon setting"></i></div>
+    <div class="ui horizontal section divider"><i class="icon setting"></i></div>
+
+    <h4 class="ui header">
+      Animation
+    </h4>
+    <table class="ui celled sortable definition table segment">
+      <thead>
+        <tr>
+          <th>Setting</th>
+          <th class="six wide">Default</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>transition</td>
+          <td>auto</td>
+          <td>Named <a href="/modules/transition.html">ui transitions</a> to use when animating sidebar. Defaults to 'auto' which selects transition from <code>defaultTransition</code> based on direction.</td>
+        </tr>
+        <tr>
+          <td>mobileTransition</td>
+          <td>auto</td>
+          <td>Named <a href="/modules/transition.html">ui transitions</a> to use when animating when detecting mobile device. Defaults to 'auto' which selects transition from <code>defaultTransition</code> based on direction.</td>
+        </tr>
+        <tr>
+          <td>defaultTransition</td>
+          <td>
+            <div class="code" data-type="javascript">
+            {
+              computer: {
+                left   : 'uncover',
+                right  : 'uncover',
+                top    : 'overlay',
+                bottom : 'overlay'
+              },
+              mobile: {
+                left   : 'uncover',
+                right  : 'uncover',
+                top    : 'overlay',
+                bottom : 'overlay'
+              }
+            }
+            </div>
+          </td>
+          <td>Default transitions for each direction and screen size, used with <code>transition: auto</code></td>
+        </tr>
+        <tr>
+          <td>useLegacy</td>
+          <td>auto</td>
+          <td>Whether javascript animations should be used. Defaults to <code>auto</code> using for only browsers that do not support CSS transforms</td>
+        </tr>
+        <tr>
+          <td>duration</td>
+          <td>500</td>
+          <td>Duration of sidebar animation when using legacy javascript animation</td>
+        </tr>
+        <tr>
+          <td>easing</td>
+          <td>easeInOutQuint</td>
+          <td>Easing to use when using legacy javascript animation</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="ui horizontal section divider"><i class="icon setting"></i></div>
+
     <h4 class="ui header">Callbacks</h4>
-    <p>Callbacks specify a function to occur after a specific behavior.</p>
 
     <table class="ui celled sortable definition table segment">
       <thead>
@@ -468,68 +546,104 @@ themes      : ['Default']
       </thead>
       <tbody>
         <tr>
-          <td>onShow</td>
+          <td>onVisible</td>
           <td>Sidebar</td>
-          <td>Is called when a sidebar is shown.</td>
+          <td>Is called when a sidebar begins animating in.</td>
         </tr>
         <tr>
-          <td>onHide</td>
+          <td>onShow</td>
           <td>Sidebar</td>
-          <td>Is called when a sidebar is hidden.</td>
+          <td>Is called when a sidebar has finished animating in.</td>
         </tr>
         <tr>
           <td>onChange</td>
           <td>Sidebar</td>
-          <td>Is called after a sidebar changes visibility</td>
+          <td>Is called when a sidebar begins to hide or show</td>
+        </tr>
+        <tr>
+          <td>onHide</td>
+          <td>Sidebar</td>
+          <td>Is called before a sidebar begins to animate out.</td>
+        </tr>
+        <tr>
+          <td>onHidden</td>
+          <td>Sidebar</td>
+          <td>Is called after a sidebar has finished animating out.</td>
         </tr>
       </tbody>
     </table>
 
-    <div class="ui horizontal divider"><i class="icon setting"></i></div>
+    <h2 class="ui dividing header">
+      Module
+    </h2>
 
-    <h3 class="ui header">
+    <h4 class="ui header">
       DOM Settings
-      <div class="sub header">DOM settings specify how this module should interface with the DOM</div>
-    </h3>
+    </h4>
     <table class="ui celled definition table segment">
       <thead>
         <tr>
           <th>Setting</th>
           <th class="six wide">Default</th>
-          <th>Description</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>namespace</td>
           <td>sidebar</td>
-          <td>Event namespace. Makes sure module teardown does not effect other events attached to an element.</td>
         </tr>
         <tr>
           <td>className</td>
           <td>
-            <div class="code">
-      className: {
-        active : 'active',
-        pushed : 'pushed',
-        top    : 'top',
-        left   : 'left',
-        right  : 'right',
-        bottom : 'bottom'
-      }
+            <div class="code" data-type="javascript">
+            className         : {
+              active    : 'active',
+              animating : 'animating',
+              dimmed    : 'dimmed',
+              ios       : 'ios',
+              pushable  : 'pushable',
+              pushed    : 'pushed',
+              right     : 'right',
+              top       : 'top',
+              left      : 'left',
+              bottom    : 'bottom',
+              visible   : 'visible'
+            }
             </div>
           </td>
-          <td>Class names used to attach style to state</td>
+        </tr>
+        <tr>
+          <td>regExp</td>
+          <td>
+            <div class="code" data-type="javascript">
+            regExp: {
+              ios    : /(iPad|iPhone|iPod)/g,
+              mobile : /Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/g
+            }
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>selector</td>
+          <td>
+            <div class="code" data-type="javascript">
+            selector: {
+              fixed   : '.fixed',
+              omitted : 'script, link, style, .ui.modal, .ui.dimmer, .ui.nag, .ui.fixed',
+              pusher  : '.pusher',
+              sidebar : '.ui.sidebar'
+            }
+            </div>
+          </td>
         </tr>
       </tbody>
     </table>
 
-    <div class="ui horizontal divider"><i class="icon setting"></i></div>
+    <div class="ui horizontal section divider"><i class="icon setting"></i></div>
 
-    <h3 class="ui header">
-      Debug Settings
-      <div class="sub header">Debug settings controls debug output to the console</div>
-    </h3>
+    <h4 class="ui header">
+      Debug
+    </h4>
 
     <table class="ui celled sortable definition table segment">
       <thead>
@@ -564,10 +678,13 @@ themes      : ['Default']
           <td>errors</td>
           <td colspan="2">
             <div class="code">
-      error   : {
-        method   : 'The method you called is not defined.',
-        notFound : 'There were no elements that matched the specified selector'
-      }
+            error   : {
+              method       : 'The method you called is not defined.',
+              pusher       : 'Had to add pusher element. For optimal performance make sure body content is inside a pusher element',
+              movedSidebar : 'Had to move sidebar. For optimal performance make sure sidebar and pusher are direct children of your body tag',
+              overlay      : 'The overlay setting is no longer supported, use animation: overlay',
+              notFound     : 'There were no elements that matched the specified selector'
+            }
             </div>
           </td>
         </tr>

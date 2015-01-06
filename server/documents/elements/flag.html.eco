@@ -25,7 +25,7 @@ type        : 'UI Element'
       <div class="code" data-type="html" data-preview="true">
         <i class="us flag"></i>
         <i class="united states flag"></i>
-        <i class="american flag"></i>
+        <i class="america flag"></i>
       </div>
     </div>
 
@@ -1394,7 +1394,7 @@ type        : 'UI Element'
         <td><i class="united states flag"></i></td>
         <td>United States</td>
         <td>us</td>
-        <td>American</td>
+        <td>America</td>
       </tr>
       <tr>
         <td><i class="uruguay flag"></i></td>

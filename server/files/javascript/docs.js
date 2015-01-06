@@ -673,16 +673,20 @@ semantic.ready = function() {
         $header         = $example.children('.ui.header:first-of-type').eq(0).add('p:first-of-type'),
         $annotation     = $example.find('.annotation'),
         $code           = $annotation.find('.code'),
+        $html           = $example.children('.html'),
         $ignoredContent = $('.ui.popup, i.code:last-child, .anchor, .code, .existing.segment, .instructive, .language.label, .annotation, br, .ignore, style, script, .ignored'),
         $demo           = $example.children().not($header).not($ignoredContent),
-        code            = $example.data('code') || $.proxy(handler.generateCode, this)()
+        code            = $example.data('code') || $.proxy(handler.generateCode, this)(),
+        $label
       ;
 
+      // process existing code first
       if( $code.hasClass('existing') ) {
         $code.removeClass('existing');
         $.proxy(handler.initializeCode, $code)(true);
       }
 
+      // create annotation wrapper
       if($annotation.size() === 0) {
         $annotation = $('<div/>')
           .addClass('annotation')
@@ -691,6 +695,17 @@ semantic.ready = function() {
         ;
       }
 
+      if($html.size() === 0) {
+        $html = $('<div class="html">').insertBefore($annotation);
+        $label = $('<div class="ui top attached label">').html('Example');
+        $label.prependTo($html);
+        $demo
+          .detach()
+          .prependTo($html)
+        ;
+      }
+
+      // create code inside annotation wrapper
       if( $example.find('.instructive').size() === 0) {
         $code = $('<div/>')
           .data('type', 'html')
@@ -703,13 +718,14 @@ semantic.ready = function() {
       }
       if( ($annotation.eq(0).is(':visible') || type == 'designer') && type != 'developer' ) {
         $annotation.transition('hide');
-        $demo.css('display','');
+        $html.removeClass('ui top attached segment');
       }
       else {
-        $demo.hide();
+        $html.addClass('ui top attached segment');
         $header.css('display', '');
         $annotation.transition('fade');
       }
+      // content position changed
       if(type === undefined) {
         $sectionHeaders.visibility('refresh');
         $sectionExample.visibility('refresh');
@@ -828,7 +844,7 @@ semantic.ready = function() {
 
       // wrap
       $code = $code
-        .wrap('<div class="ui ' + name + ' segment"></div>')
+        .wrap('<div class="ui ' + name + ' bottom attached secondary segment"></div>')
         .wrap('<pre></pre>')
       ;
 

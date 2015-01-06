@@ -577,6 +577,7 @@ body#example {
 
 
 #example .segment pre {
+  background-color: transparent;
   margin: 0em;
   padding: 0em;
 }
@@ -846,17 +847,36 @@ body#example {
   display: none;
 }
 #example .example .annotation {
-  margin: 1em 0em;
+  margin: 0em;
 }
-#example .another.example .annotation {
-  margin: 2em 0em 0em;
-}
-
 
 #example .transition.example .ui.button {
   margin-bottom: 0.5em;
 }
 
+/* HTML Wrapper */
+#example .example > .html {
+  padding: 0em;
+  transition:
+    box-shadow 0.2s ease,
+    padding 0.2s ease
+  ;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+}
+#example .example > .html > .top.attached.label {
+  display: none;
+  background-color: #F8F8F8;
+  box-shadow: 0px 0px 0px 1px #DDDDDD;
+}
+#example .example > .html.segment > .attached.label {
+  display: block;
+}
+#example .example > .html.segment {
+  padding: 3.5em 1em 1em;
+}
+#example .example .instructive.segment {
+  margin-top: -1px;
+}
 
 /* Fixes for UI */
 #example .segment > .dimmer {

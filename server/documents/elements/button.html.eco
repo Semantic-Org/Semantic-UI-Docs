@@ -195,7 +195,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
     </div>
   </div>
   <div class="another example">
-    <div class="ui info message">
+    <div class="ui ignored info message">
       Or buttons can have their text localized, or adjusted by using the <code>data-text</code> attribute. If the size of the conditional changes you will need to adjust <code>@orCircleSize</code>
     </div>
     <div class="ui buttons">

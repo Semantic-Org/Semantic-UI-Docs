@@ -436,7 +436,7 @@ themes      : ['Default', 'Chubby']
         <tr>
           <td>close nested</td>
           <td>true</td>
-          <td>Allow active sections to collapse</td>
+          <td>Close open nested accordion content when an element closes</td>
         </tr>
         <tr>
           <td>collapsible</td>

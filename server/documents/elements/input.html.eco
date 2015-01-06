@@ -1,6 +1,7 @@
 ---
 layout      : 'default'
 css         : 'input'
+standalone  : true
 
 element     : 'input'
 elementType : 'element'
@@ -120,6 +121,9 @@ themes      : ['Default']
   <div class="example">
     <h4 class="ui header">Action</h4>
     <p>An input can be formatted to alert the user to an action they may perform</p>
+    <div class="ui ignored info message">
+     Action input do not support <code>&#x3C;button&#x3E;</code> because browsers <a href="http://stackoverflow.com/questions/12414573/display-table-cell-border-spacing-dont-work-with-buttons"> do not implement</a> all display modes for button elements. See <a href="https://code.google.com/p/chromium/issues/detail?id=335040">chromium</a> and <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=960512">mozilla</a> bug reports for progress on browser implementation.
+    </div>
     <div class="ui action input">
       <input type="text" placeholder="Search...">
       <div class="ui button">Search</div>

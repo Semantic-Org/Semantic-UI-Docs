@@ -32,6 +32,28 @@ type        : 'UI View'
       (adsbygoogle = window.adsbygoogle || []).push({});
       </script>
     </div>
+    <div class="ui leaderboard ad">
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- Leaderboard -->
+      <ins class="adsbygoogle"
+           style="display:inline-block;width:728px;height:90px"
+           data-ad-client="ca-pub-4591861188995436"
+           data-ad-slot="6710577704"></ins>
+      <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+    <div class="ui banner ad">
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- Banner -->
+      <ins class="adsbygoogle"
+           style="display:inline-block;width:468px;height:60px"
+           data-ad-client="ca-pub-4591861188995436"
+           data-ad-slot="9803644904"></ins>
+      <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
     <div class="existing code">
       <div class="ui medium rectangle ad">
         <!-- Ad Code Goes Here
@@ -43,6 +65,28 @@ type        : 'UI View'
         (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
         !-->
+      </div>
+      <div class="ui leaderboard ad">
+      <!-- Leaderboard
+      <ins class="adsbygoogle"
+           style="display:inline-block;width:728px;height:90px"
+           data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+           data-ad-slot="XXXXXXXXXXXXXXXX"></ins>
+      <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+      !-->
+      </div>
+      <div class="ui banner ad">
+      <!-- Banner
+      <ins class="adsbygoogle"
+           style="display:inline-block;width:468px;height:60px"
+           data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+           data-ad-slot="XXXXXXXXXXXXXXXX"></ins>
+      <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+      !-->
       </div>
     </div>
   </div>
@@ -70,8 +114,8 @@ type        : 'UI View'
 
 
   <div class="example">
-    <h4 class="ui header">Square</h4>
-    <p>An ad can use a square ad unit size</p>
+    <h4 class="ui header">Rectangle</h4>
+    <p>An ad can use a common rectangle ad unit size</p>
     <div class="ui vertical rectangle test ad" data-text="Vertical Rectangle"></div>
     <div class="ui small rectangle test ad" data-text="Small Rectangle"></div>
   </div>
@@ -133,7 +177,10 @@ type        : 'UI View'
   <div class="example">
     <h4 class="ui header">Test</h4>
     <p>A advertisement can be formatted to help verify placement</p>
-    <div class="ui medium rectangle test ad"></div>
+    <div class="ui info ignored message">You can adjust the text displayed for your test ad placement by changing the value of <code>data-text</code>
+    </div>
+    <div class="ui medium rectangle test ad" data-text="Ad Unit 1"></div>
+    <div class="ui medium rectangle test ad" data-text="Ad Unit 2"></div>
   </div>
 
 </div>

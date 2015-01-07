@@ -1,6 +1,7 @@
 ---
 layout      : 'default'
 css         : 'steps'
+standalone  : true
 
 element     : 'step'
 elementType : 'element'
@@ -48,7 +49,6 @@ themes      : ['Default', 'Basic', 'GitHub']
         <i class="info icon"></i>
         <div class="content">
           <div class="title">Confirm Order</div>
-          <div class="description">Verify order details</div>
         </div>
       </div>
     </div>
@@ -246,8 +246,8 @@ themes      : ['Default', 'Basic', 'GitHub']
     </div>
   </div>
   <div class="example">
-    <h4 class="ui header">Fluid Card</h4>
-    <p>A fluid card takes up the width of its container</p>
+    <h4 class="ui header">Fluid</h4>
+    <p>A fluid step takes up the width of its container</p>
     <div class="ui two column grid">
       <div class="column">
         <div class="ui fluid vertical steps">
@@ -258,18 +258,17 @@ themes      : ['Default', 'Basic', 'GitHub']
               <div class="description">Choose your shipping options</div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="column">
-        <div class="ui fluid vertical steps">
-          <div class="completed step">
-            <i class="payment icon"></i>
+          <div class="active step">
+            <i class="dollar icon"></i>
             <div class="content">
               <div class="title">Billing</div>
               <div class="description">Enter billing information</div>
             </div>
           </div>
         </div>
+      </div>
+      <div class="column">
+        <p>The steps take up the entire column width</p>
       </div>
     </div>
   </div>

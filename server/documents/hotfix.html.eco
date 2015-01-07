@@ -1,100 +1,48 @@
 ---
 layout     : 'blank'
 css        : 'hotfix'
+standalone : true
 
 title      : 'Test Page'
 type       : 'Library'
-standalone : true
 ---
 <!-- TEST JS HERE !-->
-<<<<<<< HEAD
-<script>
-$(document).ready(function() {
-  var content = [
-    { title: 'Andorrs' },
-    { title: 'United Arab Emirates' },
-    // etc
-  ];
-
-  $('.ui.search')
-    .search({
-      source: content
-    })
-  ;
-
-  $('.ui.form')
-    .form({
-      email: {
-        identifier : 'email',
-        rules: [
-          {
-            type   : 'email',
-            prompt : 'Please enter a valid e-mail'
-          }
-        ]
-      },
-      country: {
-        identifier : 'country',
-        rules: [
-          {
-            type   : 'empty',
-            prompt : 'Please enter a country'
-          }
-        ]
-      },
-    },
-      {
-      inline : true,
-      on     : 'blur'
-    });
-});
-=======
 <script type="text/javascript">
->>>>>>> cbbb7df4d2d9b3e1bec071b34e902bca06fd80e9
 
 </script>
 
 <!-- TEST CSS HERE !-->
 <style type="text/css">
-<<<<<<< HEAD
-
-
-</style>
-
-<div class="main container" style="width: 1000px; margin: 0px auto;">
-  <form class="ui form">
-
-    <div class="ui search">
-    <div class="field">
-        <label>Email</label>
-        <input type="email" name="email">
-    </div>
-
-    <div class="field ui search">
-        <label>Country</label>
-        <div class="ui icon input">
-      <input class="prompt" name="country" type="text" placeholder="Search countries...">
-      <i class="search icon"></i>
-    </div>
-            <div class="results"></div>
-
-    </div>
-
-    <div class="center aligned column">
-        <div class="ui fluid submit primary button">Submit</div>
-     </div>
-
-  </form>
-</div>
-=======
 body{
     padding:0 100px;
 }
 </style>
 
-<h1 class="ui dividing header">Attached Fix</h1>
+
+<h1 class="ui dividing header">Still Unmatched</h1>
 
 <h2 class="ui dividing header">Menu </h2>
+
+<div class="ui fluid three item top attached menu">
+  <div class="ui item">1</div>
+  <div class="ui item">2</div>
+  <div class="ui item">3</div>
+</div>
+<div class="ui bottom attached segment">
+  Bottom
+</div>
+
+<div class="ui segment"></div>
+
+<div class="ui top attached segment">
+  <p>This segment is on top</p>
+</div>
+<div class="ui bottom attached segment">
+  <p>This segment is on bottom</p>
+</div>
+
+
+<h1 class="ui dividing header">Attached Fix</h1>
 
 <div class="ui top attached tabular fluid two item menu">
   <a class="item">
@@ -108,7 +56,20 @@ body{
   This is the content of the tab.
 </div>
 
+
 <h2 class="ui dividing header">Segment</h2>
+
+
+<div class="ui top attached segment">
+  <p>This segment is on top</p>
+</div>
+<div class="ui attached segment">
+  <p>This segment is attached on both sides</p>
+</div>
+<div class="ui bottom attached segment">
+  <p>This segment is on bottom</p>
+</div>
+
 
 <div class="ui top attached segment">
   <p>This segment is on top</p>
@@ -223,4 +184,3 @@ body{
 
 
 <br/><br/><br/>
->>>>>>> cbbb7df4d2d9b3e1bec071b34e902bca06fd80e9

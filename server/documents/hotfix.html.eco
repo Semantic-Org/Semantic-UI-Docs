@@ -7,6 +7,7 @@ type       : 'Library'
 standalone : true
 ---
 <!-- TEST JS HERE !-->
+<<<<<<< HEAD
 <script>
 $(document).ready(function() {
   var content = [
@@ -47,11 +48,15 @@ $(document).ready(function() {
       on     : 'blur'
     });
 });
+=======
+<script type="text/javascript">
+>>>>>>> cbbb7df4d2d9b3e1bec071b34e902bca06fd80e9
 
 </script>
 
 <!-- TEST CSS HERE !-->
 <style type="text/css">
+<<<<<<< HEAD
 
 
 </style>
@@ -81,3 +86,141 @@ $(document).ready(function() {
 
   </form>
 </div>
+=======
+body{
+    padding:0 100px;
+}
+</style>
+
+<h1 class="ui dividing header">Attached Fix</h1>
+
+<h2 class="ui dividing header">Menu </h2>
+
+<div class="ui top attached tabular fluid two item menu">
+  <a class="item">
+    Bio
+  </a>
+  <a class="active item">
+    Pics
+  </a>
+</div>
+<div class="ui bottom attached segment">
+  This is the content of the tab.
+</div>
+
+<h2 class="ui dividing header">Segment</h2>
+
+<div class="ui top attached segment">
+  <p>This segment is on top</p>
+</div>
+<div class="ui attached segment">
+  <p>This segment is attached on both sides</p>
+</div>
+<div class="ui bottom attached segment">
+  <p>This segment is on bottom</p>
+</div>
+
+<h5 class="ui top attached header">
+  Dogs
+</h5>
+<div class="ui attached segment">
+  <p>Dogs are one type of animal</p>
+</div>
+<h5 class="ui attached header">
+  Cats
+</h5>
+<div class="ui attached segment">
+  <p>Cats are thought of as being related to dogs, but only humans think this.</p>
+</div>
+<h5 class="ui attached header">
+  Lions
+</h5>
+<div class="ui attached segment">
+  <p>Humans don't think of lions as being like cats, but they are.</p>
+</div>
+<div class="ui bottom attached warning message">
+  <i class="warning icon"></i>
+  You've reached the end of this content segment!
+</div>
+
+<h2 class="ui dividing header">Header</h2>
+
+<h3 class="ui top attached header">
+  Top Attached
+</h3>
+<div class="ui attached segment">
+  <p></p>
+</div>
+<h3 class="ui attached header">
+  Attached
+</h3>
+<div class="ui attached segment">
+  <p></p>
+</div>
+<h3 class="ui bottom attached header">
+  Bottom Attached
+</h3>
+
+
+<h2 class="ui dividing header">Label</h2>
+
+
+<div class="ui three column grid">
+    <div class="row">
+    <div class="column">
+        <div class="ui segment">
+        <div class="ui top attached label">HTML</div>
+        <p>This is some pretend content</p>
+        </div>
+    </div>
+    <div class="column">
+        <div class="ui segment">
+        <div class="ui bottom attached label">CSS</div>
+        <p>This is some pretend content</p>
+        </div>
+    </div>
+    <div class="column">
+        <div class="ui segment">
+        <div class="ui top right attached label">Code</div>
+        <p>This is some pretend content</p>
+        </div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="column">
+        <div class="ui segment">
+        <div class="ui top left attached label">View</div>
+        <p>This is some pretend content</p>
+        </div>
+    </div>
+    <div class="column">
+        <div class="ui segment">
+        <div class="ui bottom left attached label">User View</div>
+        <p>This is some pretend content</p>
+        </div>
+    </div>
+    <div class="column">
+        <div class="ui segment">
+        <div class="ui bottom right attached label">Admin View</div>
+        <p>This is some pretend content</p>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+<h2 class="ui dividing header">Progress</h2>
+
+<div class="ui top attached progress">
+  <div class="bar"></div>
+</div>
+<div class="ui attached segment">
+  <p>La la la la</p>
+</div>
+<div class="ui bottom attached progress">
+  <div class="bar"></div>
+</div>
+
+
+<br/><br/><br/>
+>>>>>>> cbbb7df4d2d9b3e1bec071b34e902bca06fd80e9

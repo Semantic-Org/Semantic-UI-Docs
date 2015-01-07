@@ -7,314 +7,145 @@ type       : 'Library'
 standalone : true
 ---
 <!-- TEST JS HERE !-->
-<script>
-var del_formset_func = function(ev) {
-   ev.preventDefault();
-
-   var $this = $( this );
-
-   // get id of segment to delete
-   var relname = $this.attr('data-relname');
-   var formset_id = parseInt($this.attr('data-val'));
-
-   // delete and push on to tagtype stack
-   formset_id_pool[relname].push(formset_id);
-   formset_id_pool[relname].sort();
-   $( '#' + relname + '-' + formset_id ).slideUp(300, function(){ $(this).remove();});;
-
-   // decrement form count
-   var $TOTAL_FORMS = $('#id_' + relname + '-TOTAL_FORMS');
-   var count = parseInt($TOTAL_FORMS.attr('value'));
-   $TOTAL_FORMS.attr('value', count - 1);
-}
-
-var add_formset_func = function($this) {
-   // get container id and model related name
-   //var $this = $( this );
-   var container = $this.attr('data-container');
-   var relname   = $this.attr('data-relname');
-
-   // check for form pool hash; initialize if needed
-   if (!(relname in formset_id_pool)) {
-      formset_id_pool[relname] = [];
-   }
-
-   // save re-used count element
-   var $TOTAL_FORMS = $('#id_' + relname +'-TOTAL_FORMS');
-
-   // get tagtype form id
-   // > simple count of number of forms created
-   // > UNLESS we deleted one and have an old id available
-   var use_old = (formset_id_pool[relname].length > 0);
-   var count = parseInt($TOTAL_FORMS.attr('value'));
-   var next  = (use_old ? formset_id_pool[relname].shift() : count);
-
-   // modify and append the template
-   var tmplMarkup = $('#' + relname + '-template').html();
-   var compiledTmpl = tmplMarkup.replace(/__prefix__/g, next);
-   $(compiledTmpl).hide().appendTo($('#' + container)).slideDown(300);
-
-   // fetch the new element by id
-   var $new_formset = $('#' + relname + '-' + next);
-
-   // update form count
-   $TOTAL_FORMS.attr('value', count + 1);
-
-   // add popup functionality
-   $new_formset.find('.popup.field:not(.inline), .popup.fields').popup({
-      hoverable: false,
-      variation: 'wide inverted',
-      position: 'top center'
-    });
-   $new_formset.find('.popup.field.inline .fake.input').popup({
-      inline: true,
-      variation: 'wide inverted',
-      hoverable: false,
-      position: 'top center',
-      on: 'hover'
-    });
-
-   // set parent id in hidden value (if passed)
-   var pid = $this.attr('data-pid');
-   if (typeof pid !== typeof undefined && pid !== false) {
-      $new_formset.find('.parent_formset_id').attr('value', pid);
-   }
-
-}
-
-var formset_id_pool = [];
-$(document).ready(function() {
-
-   // initialize formset_id_pool
-   $('.add-formset').each(function(i, obj) {
-      formset_id_pool[$(this).attr('data-relname')] = [];
-   })
-    $('body').on('click', '.del-formset', del_formset_func);
-   $('body').on('click', '.add-formset', function(ev) {
-      ev.preventDefault();
-      add_formset_func($(this));
-      $('.ui.sticky').sticky('refresh');
-   });
-
-      $(".add-formset").each(function(index){
-         add_formset_func($(this));
-      });
-      $(".formset .add-formset").each(function(index){
-         add_formset_func($(this));
-      });
-
-      // sticky rails
-      $('.ui.sticky').each(function(i){
-         var p = $(this).parent('.rail').parent();
-         $(this).sticky({
-            context: p,
-            pushing: true,
-         });
-         $(this).sticky('refresh');
-      });
-});
+<script type="text/javascript">
 
 </script>
 
 <!-- TEST CSS HERE !-->
 <style type="text/css">
-
-.ui.textarea, .ui.form textarea {
-   min-height: 3rem;
-   height: 4rem;
+body{
+    padding:0 100px;
 }
-
-.ui.form input[type="file"] {
-  padding-top: 0.3em;
-  padding-bottom: 0.3em;
-}
-.hdiv {
-    -moz-user-select: none;
-    color: rgba(0, 0, 0, 0.85);
-    font-weight: bold;
-    height: 0;
-    letter-spacing: 0.05em;
-    line-height: 1;
-    margin: 1rem 0rem;
-    text-transform: uppercase;
-}
-
-.hdiv:before, .hdiv:after {
-    border-left: 1px solid rgba(0, 0, 0, 0.1);
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
-    content: "";
-    height: calc(50% - 1rem);
-    left: 50%;
-    position: absolute;
-    width: 0;
-    z-index: 3;
-}
-
-.hdiv:after {
-    bottom: 0;
-    top: auto;
-}
-.hdiv:before {
-    top: -100%;
-}
-
-.hdiv {
-    height: 50%;
-    left: 50%;
-    position: absolute;
-    line-height: 0;
-    margin: 0;
-    padding: 0;
-    top: 50%;
-    transform: translateX(-50%);
-    width: auto;
-    z-index: 2;
-}
-
 </style>
 
-<div class="ui small compact form basic segment" style="padding-top: 0; margin-top:0;">
-<form method="post" action=".">
+<h1 class="ui dividing header">Attached Fix</h1>
 
-   <!--
-      Project
-    -->
-   <div class="ui green dividing header">
-      Project Data
-   </div>
+<h2 class="ui dividing header">Menu </h2>
 
-   <div id="project-container" class="ui basic borderless segment">
-      <div id="project-rail" class="ui right rail">
-         <div id="project-help" class="ui sticky">
-            Projects are used to organize a series of data points (Units) under a single umbrella. For instance, each project could represent a single set of experiments or a set of related experiments.
-         </div>
-      </div>
-      <div class="fields" id="project-main-container">
-         <div class="ten wide popup field"
-          data-html="<div class='header'>name_str.label</div>name_str.help_text">
-            <label>name_str.label</label>
-              <input type="text" maxlength="64" />
-         </div>
-         <div class="six wide popup field"
-          data-html="<div class='header'>abbr_str.label</div>abbr_str.help_text">
-            <label>abbr_str.label</label>
-            <input type="text" maxlength="64" />
-         </div>
-      </div>
-      <div class="popup field"
-       data-html="<div class='header'>desc_str.label</div>desc_str.help_text">
-         <label>desc_str.label</label>
-         <textarea id="id_desc_str" rows="3" name="desc_str" cols="40"></textarea>
-      </div>
-   </div>
+<div class="ui top attached tabular fluid two item menu">
+  <a class="item">
+    Bio
+  </a>
+  <a class="active item">
+    Pics
+  </a>
+</div>
+<div class="ui bottom attached segment">
+  This is the content of the tab.
+</div>
 
-   <!--
-      Units
-   -->
-   <div class="ui green dividing header">
-      Units
-   </div>
-   <div id="units-container" class="ui basic borderless segment">
-      <div id="units-rail" class="ui right rail">
-         <div id="units-help" class="ui bound top sticky">
-            Units are single data points, e.g., single files, that are used in further analysis.
-            Units may be primary, typically refering to user-uploaded initial data, or secondary,
-            usually referring to data generated from an anaylsis and linked to a primary Unit.
-         </div>
-      </div>
-      <div id="units-formset-container" class="formset container">
-      </div>
+<h2 class="ui dividing header">Segment</h2>
 
-      <a id="add-units-button"
-         class="ui attached bottom tiny labeled icon positive button add-formset"
-         data-container="units-formset-container"
-         data-relname="units"
-         >
-         <i class="plus icon"></i>
-         Add Unit
-      </a>
-   </div>
+<div class="ui top attached segment">
+  <p>This segment is on top</p>
+</div>
+<div class="ui attached segment">
+  <p>This segment is attached on both sides</p>
+</div>
+<div class="ui bottom attached segment">
+  <p>This segment is on bottom</p>
+</div>
 
-   <!--
-      Submit button
-    -->
-   <div class="ui hidden divider"></div>
+<h5 class="ui top attached header">
+  Dogs
+</h5>
+<div class="ui attached segment">
+  <p>Dogs are one type of animal</p>
+</div>
+<h5 class="ui attached header">
+  Cats
+</h5>
+<div class="ui attached segment">
+  <p>Cats are thought of as being related to dogs, but only humans think this.</p>
+</div>
+<h5 class="ui attached header">
+  Lions
+</h5>
+<div class="ui attached segment">
+  <p>Humans don't think of lions as being like cats, but they are.</p>
+</div>
+<div class="ui bottom attached warning message">
+  <i class="warning icon"></i>
+  You've reached the end of this content segment!
+</div>
 
-   <div class="ui small buttons">
-      <a class="ui button" href="{% url 'dump-url' %}">Cancel</a>
-      <div class="or"></div>
-      <button type="submit" class="ui positive button">Create</button>
-   </div>
-</form>
+<h2 class="ui dividing header">Header</h2>
+
+<h3 class="ui top attached header">
+  Top Attached
+</h3>
+<div class="ui attached segment">
+  <p></p>
+</div>
+<h3 class="ui attached header">
+  Attached
+</h3>
+<div class="ui attached segment">
+  <p></p>
+</div>
+<h3 class="ui bottom attached header">
+  Bottom Attached
+</h3>
+
+
+<h2 class="ui dividing header">Label</h2>
+
+
+<div class="ui three column grid">
+    <div class="row">
+    <div class="column">
+        <div class="ui segment">
+        <div class="ui top attached label">HTML</div>
+        <p>This is some pretend content</p>
+        </div>
+    </div>
+    <div class="column">
+        <div class="ui segment">
+        <div class="ui bottom attached label">CSS</div>
+        <p>This is some pretend content</p>
+        </div>
+    </div>
+    <div class="column">
+        <div class="ui segment">
+        <div class="ui top right attached label">Code</div>
+        <p>This is some pretend content</p>
+        </div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="column">
+        <div class="ui segment">
+        <div class="ui top left attached label">View</div>
+        <p>This is some pretend content</p>
+        </div>
+    </div>
+    <div class="column">
+        <div class="ui segment">
+        <div class="ui bottom left attached label">User View</div>
+        <p>This is some pretend content</p>
+        </div>
+    </div>
+    <div class="column">
+        <div class="ui segment">
+        <div class="ui bottom right attached label">Admin View</div>
+        <p>This is some pretend content</p>
+        </div>
+    </div>
+    </div>
 </div>
 
 
-<script type="text/html" id="units-template">
-<div id="units-__prefix__" class="ui segment">
-   <h5 class="ui header">Unit</h5>
-   <a class="ui red corner label button del-formset"
-      data-relname="units"
-      data-val="__prefix__"
-      >
-      <i class="close icon"></i>
-   </a>
+<h2 class="ui dividing header">Progress</h2>
 
-   <div class="fields">
-      <!-- Source selection dropdown -->
-      <div class="four wide popup field"
-           data-html="<div class='header'>unit_source.label</div>unit_source.help_text">
-         <label>unit_source.label</label>
-         <div id="unit_select" class="ui fluid selection floating dropdown">
-           <input name="unit_source" type="hidden" />
-           <i class="dropdown icon"></i>
-           <div class="text">Source</div>
-           <div class="menu">
-             <div class="item" data-value="val" data-tab="unit_val">tag</div>
-           </div>
-         </div>
-      </div>
-
-      <!-- Name and abbreviation text input -->
-      <div class="twelve wide field">
-         <div class="two fields">
-            <div class="popup field"
-                 data-html="<div class='header'>name_str.label</div>name_str.help_text">
-               <label>name_str.label</label>
-               <input type="text" />
-            </div>
-            <div class="popup field"
-                 data-html="<div class='header'>abbr_str.label</div>abbr_str.help_text">
-               <label>abbr_str.label</label>
-               <input type="text" />
-            </div>
-         </div>
-      </div>
-   </div>
-
-   <!-- Description TextArea -->
-   <div class="sixteen wide popup field"
-        data-html="<div class='header'>desc_str.label</div>desc_str.help_text">
-      <label>desc_str.label</label>
-      <textarea rows="3" cols="40"></textarea>
-   </div>
-
-   <div class="fields">
-      <div class="nine wide popup field"
-           data-html="<div class='header'>unit_path.label</div>unit_path.help_text">
-         <label>unit_path.label</label>
-         <input type="text" />
-      </div>
-      <div class="one wide field ui basic segment" style="height: 4em;">
-         <div class=" hdiv">
-         or
-         </div>
-      </div>
-      <div class="six wide popup field"
-           data-html="<div class='header'>unit_upload.label</div>unit_upload.help_text">
-         <label>unit_upload.label</label>
-         <input type="file" />
-      </div>
-
-   </div>
+<div class="ui top attached progress">
+  <div class="bar"></div>
 </div>
-</script>
+<div class="ui attached segment">
+  <p>La la la la</p>
+</div>
+<div class="ui bottom attached progress">
+  <div class="bar"></div>
+</div>
+
+
+<br/><br/><br/>

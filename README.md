@@ -15,9 +15,11 @@ docpad update; docpad upgrade;
 ### Generating SUI for Docs
 
 Before running server you will need to build your UI files for the docs. Semantic UI includes a special command to build files for a docs instance that must be run from an adjacent Semantic UI folder.
+for example with a directory vendor -> SemanticUI place docs folder inside vendor to reflect vendor -> SemanticUI | docs
 
 ```
-# assumes ./docs and ./ui for default paths, run from ./ui
+# assumes ./docs and ./ui for default paths, run from ./ui (the folder name ./ui may be any folder that contains the Semantic UI build files)
+# run gulp build-docs from the folder containing Semantic UI this will build docs into the sibling folder ./docs
 gulp build-docs
 ```
 
@@ -30,6 +32,7 @@ To configure a different docs location modify [ tasks/docs.json](https://github.
 
 You can then start your docs server (and generate docs) using:
 ```
+#run from inside docs folder that will now contain the compiled docs - windows users can then navigate to http://localhost:9778
 docpad run
 ```
 

@@ -301,19 +301,6 @@ themes      : ['Default']
     </div>
 
     <div class="no example">
-      <h4 class="ui header">Displaying Multiple</h4>
-      <p>Multiple sidebars can be displayed at the same time only when using a supported animation like <code>push</code> or <code>overlay</code>.</p>
-      <div class="ui info message">You may need to manually set the z-index on elements to ensure the intended sidebar element appears on top.</div>
-
-      <div class="code" data-demo="true" data-type="javascript">
-      // shows all four sidebars at once
-      $('.demo.sidebar')
-        .sidebar('toggle')
-      ;
-      </div>
-    </div>
-
-    <div class="no example">
       <h4 class="ui header">iOS Sidebars</h4>
       <p>Sidebars use a special fix for iOS</p>
       <div class="code" data-type="css">
@@ -399,6 +386,24 @@ themes      : ['Default']
   </div>
 
   <div class="ui tab" data-tab="examples">
+
+    <div class="no example">
+      <h4 class="ui header">Displaying Multiple</h4>
+      <p>Multiple sidebars can be displayed at the same time only when using a supported animation like <code>push</code> or <code>overlay</code>.</p>
+      <div class="ui warning message">You may need to manually set the z-index on elements to ensure the intended sidebar element appears on top.</div>
+
+      <div class="ui info message">
+        If a sidebar is shown on an opposite side as a currently visible sidebar, its animation will automatically be converted to <code>overlay</code> to ensure content is not "pushed" on both sides. If you are showing multiple at the same time, its recommended to set the transition to overlay manually.
+      </div>
+
+      <div class="code" data-demo="true" data-type="javascript">
+      // showing multiple
+      $('.demo.sidebar')
+        .sidebar('setting', 'transition', 'overlay')
+        .sidebar('toggle')
+      ;
+      </div>
+    </div>
 
     <div class="no example">
       <h4 class="ui header">Triggering show/hide with other content</h4>

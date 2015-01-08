@@ -59,7 +59,7 @@ type        : 'UI Module'
     <div class="local example">
       <h4 class="ui header">Local Search</h4>
       <p>A search can look for results inside static local content.</p>
-      <div class="ui info message">
+      <div class="ui ignored info message">
         By default, results will return content first that begin with the query text, but also afterward content that matches the query anywhere inside. To disable full text search modify the <code>searchFullText</code> setting.
       </div>
       <div class="ui search">

@@ -884,7 +884,7 @@ themes      : ['Default']
       </div>
     </div>
     <div class="another button example">
-      <div class="ui info message ignored">Bottom pointing dropdown menus have sub-menus open upwards</div>
+      <div class="ui ignored info message">Bottom pointing dropdown menus have sub-menus open upwards</div>
       <div class="ui icon bottom left pointing dropdown button">
         <i class="wrench icon"></i>
         <div class="menu">
@@ -1191,7 +1191,7 @@ themes      : ['Default']
     <div class="dropdown example">
       <h4 class="ui header">Floated Content</h4>
       <p>A dropdown menu can contain floated content.</p>
-      <div class="ui info message">Floated content may stack to two lines without manually setting a width when or using a <code>fluid</code> dropdown
+      <div class="ui ignored info message">Floated content may stack to two lines without manually setting a width when or using a <code>fluid</code> dropdown
       </div>
       <div class="ui fluid selection dropdown">
         <i class="filter icon"></i>
@@ -1344,7 +1344,7 @@ themes      : ['Default']
     <div class="dropdown example">
       <h4 class="ui header">Menu Direction</h4>
       <p>A dropdown menu or sub-menu can specify the direction it should open</p>
-      <div class="ui info message">
+      <div class="ui ignored info message">
         Specifying <code>left</code> on a menu will make all child menus open in the same direction implicitly. To have a dropdown icon appear on the left side on a child menu, you will need to use <code>left dropdown example</code>
       </div>
       <div class="ui floating labeled icon dropdown button">
@@ -1440,7 +1440,7 @@ themes      : ['Default']
     <div class="example">
       <h4 class="ui header">Active</h4>
       <p>An active dropdown has its menu open</p>
-      <div class="ui info message">An active state will only affect a simple dropdown. To activate a menu on a dropdown module use <code>$('.ui.dropdown').dropdown('show');</code></div>
+      <div class="ui ignored info message">An active state will only affect a simple dropdown. To activate a menu on a dropdown module use <code>$('.ui.dropdown').dropdown('show');</code></div>
       <div class="ui simple active dropdown">
         Dropdown <i class="dropdown icon"></i>
         <div class="menu">
@@ -1453,7 +1453,7 @@ themes      : ['Default']
     <div class="example">
       <h4 class="ui header">Disabled</h4>
       <p>A disabled dropdown menu will not open or close</p>
-      <div class="ui info message">A disabled state will only affect a simple dropdown. To disable a dropdown module use <code>$('.ui.dropdown').dropdown('destroy');</code></div>
+      <div class="ui ignored info message">A disabled state will only affect a simple dropdown. To disable a dropdown module use <code>$('.ui.dropdown').dropdown('destroy');</code></div>
       <div class="ui simple disabled dropdown">
         Dropdown <i class="dropdown icon"></i>
         <div class="menu">
@@ -1749,7 +1749,7 @@ themes      : ['Default']
     <div class="no example">
       <h4 class="ui header">Initializing Existing HTML</h4>
       <p>Initializing a dropdown with pre-existing html allows for greater performance than initializing a dropdown directly on a <code>select</code> element.</p>
-      <div class="ui info message">Any select element initialized as dropdown will also be hidden until javascript can create html, this is to avoid the flash of unstyled content, and the change in element height adjusting page flow.</div>
+      <div class="ui ignored info message">Any select element initialized as dropdown will also be hidden until javascript can create html, this is to avoid the flash of unstyled content, and the change in element height adjusting page flow.</div>
       <div class="code" data-label="HTML" data-type="html">
         <div class="ui dropdown">
           <input type="hidden" name="gender">

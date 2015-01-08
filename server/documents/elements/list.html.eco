@@ -455,7 +455,7 @@ themes      : ['Default']
   <div class="example">
     <h4 class="ui header">Animated</h4>
     <p>A list can animate to set the current item apart from the list</p>
-    <div class="ui info message">
+    <div class="ui ignored info message">
       Be sure content can fit on one line when using the animated variation, otherwise the content will create a new line break as the animated content adjusts to its new size.
     </div>
     <div class="ui animated list">

@@ -48,7 +48,8 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
     <div class="ui button">
       Discard
     </div>
-    <div class="ui ignored hidden divider"></div>
+  </div>
+  <div class="another example">
     <div class="ui secondary button">
       Okay
     </div>

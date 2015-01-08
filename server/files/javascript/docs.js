@@ -1008,7 +1008,7 @@ semantic.ready = function() {
   ;
   $('.launch.button, .view-ui, .launch.item')
     .on('click', function(event) {
-      $menu.sidebar('show');
+      $menu.sidebar('toggle');
       event.preventDefault();
     })
   ;

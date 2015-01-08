@@ -1136,7 +1136,7 @@ themes      : ['Default']
 
     <div class="example">
       <h4 class="ui header">Bordered</h4>
-      <div class="ui info message">
+      <div class="ui ignored info message">
         In <code>0.x.x</code> bordered was formally known as <code>squared</code>
       </div>
       <p>An icon can be formatted to appear bordered</p>

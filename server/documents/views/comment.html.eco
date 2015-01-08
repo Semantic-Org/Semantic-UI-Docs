@@ -184,7 +184,7 @@ themes      : ['Default', 'Chubby']
   <div class="example">
     <h4 class="ui header">Reply Form</h4>
     <p>A comment can contain a form to reply to a comment. This may have arbitrary content.</p>
-    <div class="ui info message">
+    <div class="ui ignored info message">
       <p>If a comment form is located inside a <code> ui comment</code> it will be formatted as an nested reply form. If the comment form is included after all comments, it will be formatted as a normal reply form.</p>
     </div>
     <div class="ui comments">

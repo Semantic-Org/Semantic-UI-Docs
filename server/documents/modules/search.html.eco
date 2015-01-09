@@ -199,7 +199,6 @@ type        : 'UI Module'
       ;
       $('.ui.search')
         .search({
-          type   : 'simple',
           source : content,
           searchFields   : [
             'title'
@@ -212,7 +211,7 @@ type        : 'UI Module'
 
     <div class="ui info message">You may also consider adding a top level property like <code>success: true</code> and using API's <code>successTest</code> parameter to determine wheter a server response is actually succesful, even if it returns the correct HTTP code</div>
 
-    <h4 class="ui header">Simple</h4>
+    <h4 class="ui header">Standard</h4>
     <div class="code" data-title="Server JSON Response">
       {
         "results": [

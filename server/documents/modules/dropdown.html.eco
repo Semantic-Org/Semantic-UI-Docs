@@ -1729,7 +1729,7 @@ themes      : ['Default']
         ;
         </div>
       </div>
-
+      <div class="ui hidden divider"></div>
       <div class="ui floating dropdown button">
         <div class="text">Go to</div>
         <i class="dropdown icon"></i>

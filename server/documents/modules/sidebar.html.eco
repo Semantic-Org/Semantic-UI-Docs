@@ -98,10 +98,7 @@ themes      : ['Default']
       <h4 class="ui header">Dimmed</h4>
       <p>A pusher can be dimmed</p>
       <div class="code" data-type="html">
-        <!--body class="pushable">
-          <div class="ui visible sidebar"></div>
-          <div class="dimmed pusher"></div>
-        </body!-->
+        <div class="dimmed pusher"></div>
       </div>
     </div>
 

@@ -391,7 +391,7 @@ type        : 'UI Module'
         <tr>
           <td>transition</td>
           <td>
-            Transition
+            fade
           </td>
           <td>Named transition to use when animating menu in and out. Fade and slide down are available without including <a href="/modules/transition.html">ui transitions</a></td>
         </tr>

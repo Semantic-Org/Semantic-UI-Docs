@@ -951,6 +951,8 @@ semantic.ready = function() {
 
   handler.createAnchors();
 
+  window.less.registerStylesheets();
+
   if( $pageTabs.size() > 0 ) {
     $pageTabs
       .tab({

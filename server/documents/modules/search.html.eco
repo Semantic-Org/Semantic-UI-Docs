@@ -3,6 +3,7 @@ layout      : 'default'
 css         : ''
 element     : 'search'
 elementType : 'module'
+standalone  : true
 
 title       : 'Search'
 description : 'A search module allows a user to query for results from a selection of data'
@@ -282,6 +283,76 @@ type        : 'UI Module'
 
     <h2 class="ui dividing header">Behaviors</h2>
 
+
+    <h2 class="ui dividing header">Behavior</h2>
+
+    <p>All the following behaviors can be called using the syntax:</p>
+    <div class="code">
+    $('.your.element')
+      .search('behavior name', argumentOne, argumentTwo)
+    ;
+    </div>
+
+    <table class="ui definition celled sortable table segment">
+      <thead>
+        <th>Behavior</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>query</td>
+          <td>Search for value currently set in search input</td>
+        </tr>
+        <tr>
+          <td>display message(text, type)</td>
+          <td>Displays message in search results with text, using template matching type</td>
+        </tr>
+        <tr>
+          <td>cancel search</td>
+          <td>Cancels current search</td>
+        </tr>
+        <tr>
+          <td>search local(query)</td>
+          <td>Search local object for specified query and display results</td>
+        </tr>
+        <tr>
+          <td>search remote(query)</td>
+          <td>Search remote endpoint for specified query and display results</td>
+        </tr>
+        <tr>
+          <td>cancel</td>
+          <td>Cancels current remote search request</td>
+        </tr>
+        <tr>
+          <td>read cache(query)</td>
+          <td>Reads cached results for query</td>
+        </tr>
+        <tr>
+          <td>write cache(query)</td>
+          <td>Writes cached results for query</td>
+        </tr>
+        <tr>
+          <td>add results(html)</td>
+          <td>Adds html to results and displays</td>
+        </tr>
+        <tr>
+          <td>show results</td>
+          <td>Shows results container</td>
+        </tr>
+        <tr>
+          <td>hide results</td>
+          <td>Hides results container</td>
+        </tr>
+        <tr>
+          <td>generate results(response)</td>
+          <td>Generates results using parser specified by <code>settings.template</code></td>
+        </tr>
+        <tr>
+          <td>destroy</td>
+          <td>Removes all events</td>
+        </tr>
+      </tbody>
+    </table>
 
 
   </div>

@@ -444,7 +444,7 @@ themes      : ['Default']
       <div class="evaluated code">
       $('.test.button')
         .popup({
-          position : 'top right',
+          position : 'right center',
           target   : '.test.image',
           title    : 'My favorite dog',
           content  : 'My favorite dog would like other dogs as much as themselves'

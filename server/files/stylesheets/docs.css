@@ -699,7 +699,7 @@ body#example {
   margin-bottom: 0em;
 }
 #example .example .toggle.button {
-  min-width: 200px;
+  min-width: 100px;
 }
 
 
@@ -752,6 +752,12 @@ body#example {
 #example .main.container > .tab > h2{
   position: relative;
   margin: 5rem 0rem 3rem;
+}
+#example .main.container .examples > h3,
+#example .main.container > h3,
+#example .main.container > .tab > h3{
+  position: relative;
+  margin: 3rem 0rem 2rem;
 }
 #example .main.container .examples > .rail + h2,
 #example .main.container > .rail + h2,
@@ -810,7 +816,7 @@ body#example {
   cursor: pointer;
   position: absolute;
 
-  top: 3rem;
+  top: 2rem;
   right: 0px;
   margin: 0;
   opacity: 0.1;
@@ -1504,6 +1510,7 @@ body.progress.animated .ui.progress .bar {
 
 #example .main.container > .right.rail .sticky,
 #example .main.container > .tab > .right.rail .sticky {
+  width: 300px;
   padding: 2em 0em;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
@@ -1622,6 +1629,10 @@ body.progress.animated .ui.progress .bar {
   #example .container .right.rail {
     width: 200px;
     padding-left: 0em;
+  }
+  #example .main.container > .right.rail .sticky,
+  #example .main.container > .tab > .right.rail .sticky {
+    width: 200px;
   }
 }
 @media only screen and (min-width : 1200px) and (max-width: 1355px) {

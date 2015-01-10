@@ -8,10 +8,11 @@
   <%- @partial('transifex') %>
 </head>
 <body id="example" class="<%= @document.css %>" ontouchstart="">
-
+  <% if @document.element is 'sidebar': %>
+  <%- @partial('demo-sidebar') %>
+  <% end %>
   <%- @partial('sidebar') %>
   <%- @partial('fixed-menu') %>
-
   <div class="pusher">
     <div class="full height">
       <%- @content %>

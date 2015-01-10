@@ -104,7 +104,7 @@ themes      : ['Default']
     <div class="ui warning message">
       Item images default to item <code>@imageWidth</code>, but you can also manually set the image width using a size variation of <code>ui image</code> for example <code>ui tiny image</code>
     </div>
-    <div class="ui info message">
+    <div class="ui ignored info message">
       In addition, default image sizes will adjust for both tablet and mobile views. The default theme will force content to stack at mobile views
     </div>
     <div class="ui items">
@@ -129,7 +129,7 @@ themes      : ['Default']
   <div class="example">
     <h4 class="ui header">Content</h4>
     <p>A item can contain a group of content</p>
-    <div class="ui info message">
+    <div class="ui ignored info message">
       Grouping content in a wrapping div is necessary to make sure that content flow does not wrap below the item's image
     </div>
     <div class="ui divided items">
@@ -197,7 +197,7 @@ themes      : ['Default']
   <div class="example">
     <h4 class="ui header">Metadata</h4>
     <p>A item can contain content metadata</p>
-    <div class="ui info message">
+    <div class="ui ignored info message">
       <i class="info icon"></i>
       You can include an arbitrary amount of metadata using your own class conventions, all child elements will automatically be spaced
     </div>
@@ -291,7 +291,7 @@ themes      : ['Default']
   <div class="example">
     <h4 class="ui header">Icons</h4>
     <p>A item can contain icons signifying a 'like' or 'favorite' action</p>
-    <div class="ui info message">
+    <div class="ui ignored info message">
       It's recommended to use <code>ui rating</code>
     </div>
     <div class="ui items">
@@ -356,7 +356,7 @@ themes      : ['Default']
   <div class="example">
     <h4 class="ui header">Divided</h4>
     <p>Items can be divided to better distinguish between grouped content</p>
-    <div class="ui info message">
+    <div class="ui ignored info message">
       <i class="info icon"></i>
       The following example uses <a href="/elements/segment.html">ui</a> for legibility only. This is not necessary for using <code>ui items</code>
     </div>
@@ -461,7 +461,7 @@ themes      : ['Default']
   <div class="example">
     <h4 class="ui header">Floated Content</h4>
     <p>Any content element can be floated left or right</p>
-    <div class="ui info message">
+    <div class="ui ignored info message">
       <i class="info icon"></i>
       You can include an arbitrary amount of metadata using your own class conventions, all child elements will automatically be spaced
     </div>

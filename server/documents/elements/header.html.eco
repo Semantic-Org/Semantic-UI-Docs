@@ -215,7 +215,7 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
   <div class="example">
     <h4 class="ui header">Inverted</h4>
     <p>A header can have its colors inverted for contrast</p>
-    <div class="ui info message">
+    <div class="ui ignored info message">
       Inverted headers use modified light versions of your site's color scheme that are adapted to have more contrast on dark background
     </div>
     <div class="ui inverted segment">

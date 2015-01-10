@@ -328,7 +328,7 @@ themes      : ['Default', 'Basic', 'Classic']
   <div class="example">
     <h4 class="ui header">Metadata</h4>
     <p>A card can contain content metadata</p>
-    <div class="ui info message">
+    <div class="ui ignored info message">
       <i class="info icon"></i>
       You can include an arbitrary amount of metadata using your own class conventions, all child elements will automatically be spaced
     </div>
@@ -531,7 +531,7 @@ themes      : ['Default', 'Basic', 'Classic']
   <div class="example">
     <h4 class="ui header">Floated Content</h4>
     <p>Any content element can be floated left or right</p>
-    <div class="ui info message">
+    <div class="ui ignored info message">
       <i class="info icon"></i>
       You can include an arbitrary amount of metadata using your own class conventions, all child elements will automatically be spaced
     </div>

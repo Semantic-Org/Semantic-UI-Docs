@@ -1,9 +1,10 @@
 <script>
 window.less = {
-  async: true,
-  environment: 'production',
-  fileAsync: false,
-  useFileCache: true
+  async        : true,
+  environment  : 'production',
+  fileAsync    : false,
+  onReady      : false,
+  useFileCache : true
 };
 </script>
 <% if 'development' in @getEnvironments(): %>

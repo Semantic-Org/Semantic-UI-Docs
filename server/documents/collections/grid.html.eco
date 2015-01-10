@@ -86,7 +86,7 @@ themes      : ['Default', 'Fixed-width']
     <div class="highlighted example">
       <h4 class="ui header">Column Widths</h4>
       <p>Column widths can be specified using <code>(x) wide</code> class names, each row will add up to 16 columns, if a column cannot fit it will automatically flow to the next row</p>
-      <div class="ui info message">If you create a grid with only one column, you do not need to specify width, it will automatically be assumed to be a <code>sixteen wide column</code></div>
+      <div class="ui ignored info message">If you create a grid with only one column, you do not need to specify width, it will automatically be assumed to be a <code>sixteen wide column</code></div>
       <div class="ui grid">
         <div class="eight wide column"></div>
         <div class="eight wide column"></div>
@@ -432,7 +432,7 @@ themes      : ['Default', 'Fixed-width']
     <div class="example">
       <h4 class="ui header">Row and Column Backgrounds</h4>
       <p>If you need to specify colors on grid rows of columns, you can use a <b>color variation</b></p>
-      <div class="ui info message ignored">
+      <div class="ui ignored info message ignored">
         <p>Using colored variations on grid columns will require you to use a <code>padded grid</code> variation to avoid coloring in the negative margins of the grid body.</p>
       </div>
       <div class="ui padded grid">

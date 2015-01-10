@@ -782,7 +782,7 @@ semantic.ready = function() {
         },
         padding    = 20,
         name = (codeSample === true)
-          ? 'instructive'
+          ? 'instructive bottom attached'
           : 'existing',
         formattedCode = code,
         whiteSpace,
@@ -844,7 +844,7 @@ semantic.ready = function() {
 
       // wrap
       $code = $code
-        .wrap('<div class="ui ' + name + ' bottom attached secondary segment"></div>')
+        .wrap('<div class="ui ' + name + ' secondary segment"></div>')
         .wrap('<pre></pre>')
       ;
 
@@ -951,6 +951,8 @@ semantic.ready = function() {
 
   handler.createAnchors();
 
+  window.less.registerStylesheets();
+
   if( $pageTabs.size() > 0 ) {
     $pageTabs
       .tab({
@@ -1008,7 +1010,7 @@ semantic.ready = function() {
   ;
   $('.launch.button, .view-ui, .launch.item')
     .on('click', function(event) {
-      $menu.sidebar('show');
+      $menu.sidebar('toggle');
       event.preventDefault();
     })
   ;

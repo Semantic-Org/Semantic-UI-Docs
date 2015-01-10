@@ -444,7 +444,7 @@ themes      : ['Default']
       <div class="evaluated code">
       $('.test.button')
         .popup({
-          position : 'top right',
+          position : 'right center',
           target   : '.test.image',
           title    : 'My favorite dog',
           content  : 'My favorite dog would like other dogs as much as themselves'
@@ -458,10 +458,10 @@ themes      : ['Default']
     <div class="inline example">
       <h4 class="ui header">Inline or relative to page</h4>
       <p>A popup can either be inserted directly after an element, or added as a child element to the page's <code>body</code>.</p>
-      <div class="ui positive message">
+      <div class="ui ignored positive message">
         Using inline will allow your popups to go places other popups can't go, like inside <code>fixed</code> or <code>absolutely</code> positioned elements
       </div>
-      <div class="ui info message">
+      <div class="ui ignored info message">
         If you want to style each popup individually it makes sense to keep popup <code>inline: true</code>. If you are worried that your pop up might mistakingly inherit styles that it shouldn't, you should set <code>inline: false</code>.
       </div>
       <div class="code" data-type="css">

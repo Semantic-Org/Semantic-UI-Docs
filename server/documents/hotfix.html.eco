@@ -9,7 +9,22 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script type="text/javascript">
 $(document).ready(function() {
-  $('.ui.dropdown').dropdown();
+
+
+  $( ".left.sidebar.menu" ).sidebar( {
+
+      onShow: function(){
+
+          alert( "Opened !" );
+
+      }
+
+  } );
+
+  // In this case open sidebar
+  $( ".left.sidebar.menu" ).sidebar( "toggle" );
+
+
 });
 </script>
 
@@ -17,9 +32,28 @@ $(document).ready(function() {
 <style type="text/css">
 </style>
 
+<div class="ui left vertical inverted labeled icon sidebar thin pointing menu">
+  <a class="item">
+    <i class="home icon"></i>
+  </a>
+  <a class="item">
+    <i class="block layout icon"></i>
+  </a>
+  <a class="item">
+    <i class="smile icon"></i>
+  </a>
+  <a class="item">
+    <i class="calendar icon"></i>
+  </a>
+  <a class="item">
+    <i class="mail icon"></i>
+  </a>
+</div>
+
 <div class="ui hidden divider"></div>
 <div class="ui hidden divider"></div>
 <div class="ui hidden divider"></div>
+
 <div class="ui page grid">
   <div class="column">
 

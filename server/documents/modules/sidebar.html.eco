@@ -486,6 +486,11 @@ themes      : ['Default']
           <td>false</td>
           <td>Whether to return to original scroll position when sidebar is hidden, automatically occurs with <code>transition: scale</code></td>
         </tr>
+        <tr>
+          <td>delaySetup</td>
+          <td>false</td>
+          <td>When sidebar is initialized without the proper html, using this option will defer creation of DOM to use <code>requestAnimationFrame</code>.</td>
+        </tr>
       </tbody>
     </table>
 

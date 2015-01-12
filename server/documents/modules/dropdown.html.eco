@@ -1,6 +1,7 @@
 ---
 layout      : 'default'
 css         : 'dropdown'
+standalone  : true
 
 title       : 'Dropdown'
 description : 'A dropdown allows a user to select a value from a series of options'
@@ -1308,6 +1309,24 @@ themes      : ['Default']
     <div class="dropdown example">
       <h4 class="ui header">Upward</h4>
       <p>A dropdown can have its menus open upward.</p>
+
+      <div class="ui upward selection dropdown">
+        <input type="hidden" name="gender">
+        <i class="dropdown icon"></i>
+        <div class="default text">Gender</div>
+        <div class="menu">
+          <div class="item" data-value="male" data-text="Male">
+            <i class="male icon"></i>
+            Male
+          </div>
+          <div class="item" data-value="female" data-text="Female">
+            <i class="female icon"></i>
+            Female
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="another dropdown example">
       <div class="ui top attached segment">
         <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
       </div>
@@ -2300,9 +2319,9 @@ themes      : ['Default']
         <tr>
           <td>transition</td>
           <td>
-            slide down
+            auto (slide down / slide up)
           </td>
-          <td>Named transition to use when animating menu in and out. Fade and slide down are available without including <a href="/modules/transition.html">ui transitions</a></td>
+          <td>Named transition to use when animating menu in and out. Defaults to <code>slide down</code> or <code>slide up</code> depending on dropdown direction. Fade and slide down are available without including <a href="/modules/transition.html">ui transitions</a></td>
         </tr>
         <tr>
           <td>duration</td>

@@ -1306,6 +1306,31 @@ themes      : ['Default']
     <h2 class="ui dividing header">Variations</h2>
 
     <div class="dropdown example">
+      <h4 class="ui header">Upward</h4>
+      <p>A dropdown can have its menus open upward.</p>
+      <div class="ui top attached segment">
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+      </div>
+      <div class="ui bottom attached menu">
+        <div class="ui upward dropdown item">
+          <i class="settings icon"></i>
+          <div class="menu">
+            <div class="item">
+              <i class="dropdown icon"></i>
+              <span class="text">New</span>
+              <div class="menu">
+                <div class="item">Document</div>
+                <div class="item">Image</div>
+              </div>
+            </div>
+            <div class="item">Save As...</div>
+            <div class="item">Edit</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dropdown example">
       <h4 class="ui header">Compact</h4>
       <p>A compact dropdown has no minimum width</p>
       <div class="ui compact selection dropdown">
@@ -1318,7 +1343,6 @@ themes      : ['Default']
         </div>
       </div>
     </div>
-
 
     <div class="dropdown example">
       <h4 class="ui header">Fluid</h4>
@@ -1501,7 +1525,8 @@ themes      : ['Default']
     <div class="dropdown example">
       <h3 class="ui header">Multiple Levels</h3>
       <p>A dropdown menu can also contain sub menus inside of it</p>
-      My favorite animal breed is <div class="ui inline dropdown">
+      My favorite animal breed is
+      <div class="ui inline dropdown">
         <input type="hidden" name="gender">
         <div class="text">Shiba Inu</div>
         <i class="dropdown icon"></i>

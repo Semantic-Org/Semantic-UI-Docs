@@ -9,7 +9,7 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script type="text/javascript">
 $(document).ready(function() {
-  $('.one').popup();
+  $('.ui.dropdown').dropdown();
 });
 </script>
 
@@ -17,4 +17,42 @@ $(document).ready(function() {
 <style type="text/css">
 </style>
 
-<i class="one circular heart icon link" data-content="Hello. This is a very wide pop-up which allows for lots of content with additional space. You can fit a lot of words here and the paragraphs will be pretty wide." data-variation="wide"></i>
+<div class="ui hidden divider"></div>
+<div class="ui hidden divider"></div>
+<div class="ui hidden divider"></div>
+<div class="ui page grid">
+  <div class="column">
+
+    <div class="ui dropdown">
+      <input type="hidden" name="gender">
+      <div class="default text">Select</div>
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        <div class="item">
+          <i class="dropdown icon"></i>
+          <span class="text">Pets</span>
+          <div class="menu">
+            <div class="item">
+              <i class="dropdown icon"></i>
+              <span class="text">Dogs</span>
+              <div class="menu">
+                <div class="item">Shiba Inu</div>
+                <div class="item">Poodle</div>
+                <div class="item">Labrador</div>
+              </div>
+            </div>
+            <div class="item">
+              <i class="dropdown icon"></i>
+              <span class="text">Cats</span>
+              <div class="menu">
+                <div class="item">Aegean</div>
+                <div class="item">Balinese</div>
+                <div class="item">Persian</div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+  </div>
+</div>

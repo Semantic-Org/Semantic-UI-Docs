@@ -1753,8 +1753,6 @@ themes      : ['Default']
       </div>
     </div>
 
-    <h2 class="ui dividing header">Using Different Dropdown Actions</h2>
-
     <div class="button example">
       <h4 class="ui header">Combo Dropdowns</h4>
       <div class="ignored">

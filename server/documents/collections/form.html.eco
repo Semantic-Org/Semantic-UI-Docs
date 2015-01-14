@@ -32,7 +32,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
       <p>If you are looking for form validation, you should check out <a href="/behaviors/form.html">form validation</a>.</p>
     </div>
     <div class="ui ignored hidden divider"></div>
-    <div class="ui form">
+    <form class="ui form">
       <h4 class="ui dividing header">Personal Information</h4>
       <div class="two fields">
         <div class="field">
@@ -200,7 +200,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
       </div>
       <div class="ui submit button">Register</div>
     </div>
-  </div>
+  </form>
 
   <h2 class="ui dividing header">Elements</h2>
 

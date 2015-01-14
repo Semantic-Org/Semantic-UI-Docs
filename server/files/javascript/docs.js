@@ -235,7 +235,7 @@ semantic.ready = function() {
 
     tryCreateMenu: function(event) {
       if($(window).width() > 640) {
-        if($container.find('.following.menu').size() === 0) {
+        if($container.size() > 0 && $container.find('.following.menu').size() === 0) {
           handler.createMenu();
           handler.createWaypoints();
           $(window).off('resize.menu');
@@ -894,7 +894,7 @@ semantic.ready = function() {
         .find('.grid')
         .hide()
         .filter('.choice.grid')
-          .css('display', 'table')
+          .show()
       ;
     },
 
@@ -907,7 +907,7 @@ semantic.ready = function() {
         .find('.grid')
         .hide()
         .filter('.standalone.grid')
-          .css('display', 'table')
+          .show()
       ;
       $downloadPopup.popup('reposition');
     },
@@ -917,7 +917,7 @@ semantic.ready = function() {
         .find('.grid')
         .hide()
         .filter('.framework.grid')
-          .css('display', 'table')
+          .show()
       ;
       $downloadPopup.popup('reposition');
     },

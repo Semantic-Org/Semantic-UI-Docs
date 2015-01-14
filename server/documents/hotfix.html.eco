@@ -9,7 +9,15 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script type="text/javascript">
 $(document).ready(function() {
-  $('.one').popup();
+
+$('.ui.dropdown')
+    .dropdown()
+;
+
+$('.ui.button').on('click', function() {
+    $('.ui.dropdown').dropdown('restore defaults');
+});
+
 });
 </script>
 
@@ -17,4 +25,27 @@ $(document).ready(function() {
 <style type="text/css">
 </style>
 
-<i class="one circular heart icon link" data-content="Hello. This is a very wide pop-up which allows for lots of content with additional space. You can fit a lot of words here and the paragraphs will be pretty wide." data-variation="wide"></i>
+<div class="ui page grid">
+    <div class="column">
+    <h2 class="ui dividing header">
+        Restore Defaults on Dropdown
+        <div class="sub header">If you attempt to restore the defaults of a dropdown, it doesn't add the &quot;default&quot; class to the input.</div>
+        <div class="sub header">Neither remove the selected item from the dropdown list.</div>
+    </h2>
+
+    <div class="ui selection dropdown">
+        <input name="gender" type="hidden" />
+        <div class="default text">Default</div>
+        <i class="dropdown icon"></i>
+        <div class="menu">
+            <div class="item" data-value="0">Value</div>
+            <div class="item" data-value="1">Another Value</div>
+        </div>
+     </div>
+
+    <div class="ui button">
+        Restore
+    </div>
+
+  </div>
+</div>

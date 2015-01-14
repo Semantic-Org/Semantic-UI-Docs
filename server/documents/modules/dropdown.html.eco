@@ -2037,7 +2037,7 @@ themes      : ['Default']
         $('.dropdown')
           .dropdown({
             action: 'hide',
-            onChange: function(text, value) {
+            onChange: function(value, text, $selectedItem) {
               // custom action
             }
           })

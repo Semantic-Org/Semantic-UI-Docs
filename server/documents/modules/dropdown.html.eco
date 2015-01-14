@@ -1510,7 +1510,7 @@ themes      : ['Default']
     <h2 class="ui header">Examples</h2>
 
     <div class="transition example">
-      <h3 class="ui header">Changing Transitions</h3>
+      <h4 class="ui header">Changing Transitions</h4>
       <p>A dropdown can specify a different <a href="/modules/transition.html">transitions</a>.</p>
 
       <div class="code" data-type="javascript">
@@ -1537,7 +1537,7 @@ themes      : ['Default']
     </div>
 
     <div class="dropdown example">
-      <h3 class="ui header">Multiple Levels</h3>
+      <h4 class="ui header">Multiple Levels</h4>
       <p>A dropdown menu can also contain sub menus inside of it</p>
       My favorite animal breed is
       <div class="ui inline dropdown">
@@ -1566,9 +1566,35 @@ themes      : ['Default']
         </div>
       </div>
     </div>
+    <div class="restore dropdown example">
+      <h4 class="ui header">Restoring Defaults</h4>
+      <p>You can restore a dropdown to its default value using javascript</p>
+      <div class="ui selection dropdown">
+        <input name="gender" type="hidden" />
+        <div class="default text">Default</div>
+        <i class="dropdown icon"></i>
+        <div class="menu">
+            <div class="item" data-value="0">Value</div>
+            <div class="item" data-value="1">Another Value</div>
+        </div>
+       </div>
+
+      <div class="ui button">
+          Restore
+      </div>
+      <div class="evaluated code" data-type="javascript">
+        $('.restore.example .button')
+          .on('click', function() {
+            $('.restore.example .ui.dropdown')
+              .dropdown('restore defaults')
+            ;
+          })
+        ;
+      </div>
+    </div>
 
     <div class="category example">
-      <h3 class="ui header">Multiple Levels with Category Selection</h3>
+      <h4 class="ui header">Category Selection</h4>
       <p>Using a multi-level menu with <code>allowCategorySelection: true</code> will allow items with sub-menus to be selected.</p>
       <div class="ui ignored code" data-type="javascript">
         $('.category.example .ui.dropdown')
@@ -1608,7 +1634,7 @@ themes      : ['Default']
 
 
     <div class="dropdown example">
-      <h3 class="ui header">Preserving User Selections</h3>
+      <h4 class="ui header">Preserving User Selections</h4>
       <p>This example uses a preset text value to preserve the menu item on page navigation</p>
       <div class="ui ignored info icon message">
         <i class="help circle icon"></i>
@@ -1632,7 +1658,7 @@ themes      : ['Default']
     </div>
 
     <div class="dropdown example">
-    <h3 class="ui header">Button Group</h3>
+    <h4 class="ui header">Button Group</h4>
       <p>A <a href="/elements/button.html">button group</a> can be formatted to show additional content as a dropdown</p>
       <div class="ui icon buttons">
         <div class="ui top left pointing dropdown button">
@@ -1663,7 +1689,7 @@ themes      : ['Default']
     </div>
 
     <div class="hover example">
-      <h3 class="ui header">Menu</h3>
+      <h4 class="ui header">Menu</h4>
       <p>A <a href="/collections/menu.html">menu</a> element can contain a dropdown</p>
         <div class="ui tiered purple inverted menu">
           <div class="menu">
@@ -1698,7 +1724,7 @@ themes      : ['Default']
     </div>
 
     <div class="dropdown example">
-      <h3 class="ui header">Form</h3>
+      <h4 class="ui header">Form</h4>
       <p>A dropdown can be formatted to allow selection inside a <a href="/collections/form.html">form</a></p>
       <div class="ui form segment">
         <p>Let's go ahead and get you signed up.</p>
@@ -1727,7 +1753,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <h3 class="ui dividing header">Using Different Dropdown Actions</h3>
+    <h2 class="ui dividing header">Using Different Dropdown Actions</h2>
 
     <div class="button example">
       <h4 class="ui header">Combo Dropdowns</h4>

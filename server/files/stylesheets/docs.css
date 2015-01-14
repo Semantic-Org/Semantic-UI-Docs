@@ -187,9 +187,6 @@ a:hover {
   border-bottom-color: #FFFFFF;
 }
 
-#example .header.segment .download.popup .grid {
-  max-width: 0px;
-}
 #example .header.segment .download.popup .choice.grid .column {
   width: 200px;
 }

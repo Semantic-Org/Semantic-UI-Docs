@@ -10,20 +10,14 @@ type       : 'Library'
 <script type="text/javascript">
 $(document).ready(function() {
 
+    $('.button')
+      .popup({
+        inline: true,
+        variation: 'inverted'
+      })
+    ;
 
-  $( ".left.sidebar.menu" ).sidebar( {
-
-      onShow: function(){
-
-          alert( "Opened !" );
-
-      }
-
-  } );
-
-  // In this case open sidebar
-  $( ".left.sidebar.menu" ).sidebar( "toggle" );
-
+    $('.ui.modal').modal('show');
 
 });
 </script>
@@ -32,61 +26,423 @@ $(document).ready(function() {
 <style type="text/css">
 </style>
 
-<div class="ui left vertical inverted labeled icon sidebar thin pointing menu">
-  <a class="item">
-    <i class="home icon"></i>
-  </a>
-  <a class="item">
-    <i class="block layout icon"></i>
-  </a>
-  <a class="item">
-    <i class="smile icon"></i>
-  </a>
-  <a class="item">
-    <i class="calendar icon"></i>
-  </a>
-  <a class="item">
-    <i class="mail icon"></i>
-  </a>
-</div>
+<a class="modal-show" data-target="#myModal"> Click</a>
 
-<div class="ui hidden divider"></div>
-<div class="ui hidden divider"></div>
-<div class="ui hidden divider"></div>
+<div class="ui modal" id="myModal">
+  <i class="close icon"></i>
+  <div class="header">
+    Modal Title
+  </div>
+  <div class="content">
 
-<div class="ui page grid">
-  <div class="column">
+<table class="ui definition unstackable basic table">
+    <tbody>
+        <tr>
+            <td>
+                <div class="ui circular icon mini button" data-content="Permite hacer copias de seguridad de su cuenta de alojamiento completo, incluyendo todas sus bases de datos MySQL.">
+                    <i class="info icon"></i>
+                </div>
 
-    <div class="ui dropdown">
-      <input type="hidden" name="gender">
-      <div class="default text">Select</div>
-      <i class="dropdown icon"></i>
-      <div class="menu">
-        <div class="item">
-          <i class="dropdown icon"></i>
-          <span class="text">Pets</span>
-          <div class="menu">
-            <div class="item">
-              <i class="dropdown icon"></i>
-              <span class="text">Dogs</span>
-              <div class="menu">
-                <div class="item">Shiba Inu</div>
-                <div class="item">Poodle</div>
-                <div class="item">Labrador</div>
-              </div>
-            </div>
-            <div class="item">
-              <i class="dropdown icon"></i>
-              <span class="text">Cats</span>
-              <div class="menu">
-                <div class="item">Aegean</div>
-                <div class="item">Balinese</div>
-                <div class="item">Persian</div>
-              </div>
-            </div>
-          </div>
-      </div>
-    </div>
+                Copia de Seguridad
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <div class="ui circular icon mini button" data-content="Puede ver muchas estadísticas como información del visitante, ancho de banda utilizado, páginas más visitadas, etc.">
+                    <i class="info icon"></i>
+                </div>
+
+                Estadísticas
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <div class="ui circular icon mini button" data-content="Puede configurar los scripts PHP para funcionar automáticamente en intervalos de tiempo diferentes.">
+                    <i class="info icon"></i>
+                </div>
+                Cron
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <div class="ui circular icon mini button" data-content="Herramienta de instalación de paquetes de código abierto (Drupal, Wordpress, Joomla, etc)">
+                    <i class="info icon"></i>
+                </div>
+                Script de Instalación
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <div class="ui circular icon mini button" data-content="Permite hacer copias de seguridad de su cuenta de alojamiento completo, incluyendo todas sus bases de datos MySQL.">
+                    <i class="info icon"></i>
+                </div>
+
+                Copia de Seguridad
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <div class="ui circular icon mini button" data-content="Puede ver muchas estadísticas como información del visitante, ancho de banda utilizado, páginas más visitadas, etc.">
+                    <i class="info icon"></i>
+                </div>
+
+                Estadísticas
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <div class="ui circular icon mini button" data-content="Puede configurar los scripts PHP para funcionar automáticamente en intervalos de tiempo diferentes.">
+                    <i class="info icon"></i>
+                </div>
+                Cron
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <div class="ui circular icon mini button" data-content="Herramienta de instalación de paquetes de código abierto (Drupal, Wordpress, Joomla, etc)">
+                    <i class="info icon"></i>
+                </div>
+                Script de Instalación
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <div class="ui circular icon mini button" data-content="Permite hacer copias de seguridad de su cuenta de alojamiento completo, incluyendo todas sus bases de datos MySQL.">
+                    <i class="info icon"></i>
+                </div>
+
+                Copia de Seguridad
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <div class="ui circular icon mini button" data-content="Puede ver muchas estadísticas como información del visitante, ancho de banda utilizado, páginas más visitadas, etc.">
+                    <i class="info icon"></i>
+                </div>
+
+                Estadísticas
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <div class="ui circular icon mini button" data-content="Puede configurar los scripts PHP para funcionar automáticamente en intervalos de tiempo diferentes.">
+                    <i class="info icon"></i>
+                </div>
+                Cron
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <div class="ui circular icon mini button" data-content="Herramienta de instalación de paquetes de código abierto (Drupal, Wordpress, Joomla, etc)">
+                    <i class="info icon"></i>
+                </div>
+                Script de Instalación
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+            <td class="text-center">
+
+                <i class="checkmark icon"></i>
+
+            </td>
+
+        </tr>
+    </tbody>
+</table>
+
+
 
   </div>
 </div>

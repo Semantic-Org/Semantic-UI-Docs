@@ -1303,6 +1303,57 @@ themes      : ['Default']
       </div>
     </div>
 
+    <h2 class="ui dividing header">States</h2>
+
+    <div class="dropdown example">
+      <h4 class="ui header">Error</h4>
+      <p>An errored dropddown can alert a user to a problem</p>
+      <div class="ui floating dropdown error">
+        Dropdown <i class="dropdown icon"></i>
+        <div class="menu">
+          <div class="item">Choice 1</div>
+          <div class="item">Choice 2</div>
+          <div class="item">Choice 3</div>
+        </div>
+      </div>
+      <br><br>
+      <div class="ui selection dropdown error">
+        Dropdown <i class="dropdown icon"></i>
+        <div class="menu">
+          <div class="item">Choice 1</div>
+          <div class="item">Choice 2</div>
+          <div class="item">Choice 3</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Active</h4>
+      <p>An active dropdown has its menu open</p>
+      <div class="ui ignored info message">An active state will only automatically open a <code>ui simple dropdown</code>. To activate a normal dropdown use <code>$('.ui.dropdown').dropdown('show');</code></div>
+      <div class="ui simple active dropdown">
+        Dropdown <i class="dropdown icon"></i>
+        <div class="menu">
+          <div class="item">Choice 1</div>
+          <div class="item">Choice 2</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Disabled</h4>
+      <p>A disabled dropdown menu will not open or close</p>
+      <div class="ui ignored info message">A disabled state will prevent all dropdowns from allowing the menu to open.</div>
+      <div class="ui simple disabled dropdown">
+        Dropdown <i class="dropdown icon"></i>
+        <div class="menu">
+          <div class="item">Choice 1</div>
+          <div class="item">Choice 2</div>
+          <div class="item">Choice 3</div>
+        </div>
+      </div>
+    </div>
+
 
     <h2 class="ui dividing header">Variations</h2>
 
@@ -1447,62 +1498,6 @@ themes      : ['Default']
               <div class="item">3</div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-
-    <h2 class="ui dividing header">States</h2>
-
-
-    <div class="dropdown example">
-      <h4 class="ui header">Error</h4>
-      <p>An errored dropddown can alert a user to a problem</p>
-      <div class="ui floating dropdown error">
-        Dropdown <i class="dropdown icon"></i>
-        <div class="menu">
-          <div class="item">Choice 1</div>
-          <div class="item">Choice 2</div>
-          <div class="item">Choice 3</div>
-        </div>
-      </div>
-      <br><br>
-      <div class="ui selection dropdown error">
-        Dropdown <i class="dropdown icon"></i>
-        <div class="menu">
-          <div class="item">Choice 1</div>
-          <div class="item">Choice 2</div>
-          <div class="item">Choice 3</div>
-        </div>
-      </div>
-    </div>
-
-    <h4 class="ui header">Simple Dropdown States</h4>
-    <div class="ui ignored info message">
-      Adding state classes only affects simple dropdowns, to trigger states
-    </div>
-    <div class="example">
-      <h4 class="ui header">Active</h4>
-      <p>An active dropdown has its menu open</p>
-      <div class="ui ignored info message">An active state will only affect a simple dropdown. To activate a menu on a dropdown module use <code>$('.ui.dropdown').dropdown('show');</code></div>
-      <div class="ui simple active dropdown">
-        Dropdown <i class="dropdown icon"></i>
-        <div class="menu">
-          <div class="item">Choice 1</div>
-          <div class="item">Choice 2</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="example">
-      <h4 class="ui header">Disabled</h4>
-      <p>A disabled dropdown menu will not open or close</p>
-      <div class="ui ignored info message">A disabled state will only affect a simple dropdown. To disable a dropdown module use <code>$('.ui.dropdown').dropdown('destroy');</code></div>
-      <div class="ui simple disabled dropdown">
-        Dropdown <i class="dropdown icon"></i>
-        <div class="menu">
-          <div class="item">Choice 1</div>
-          <div class="item">Choice 2</div>
-          <div class="item">Choice 3</div>
         </div>
       </div>
     </div>

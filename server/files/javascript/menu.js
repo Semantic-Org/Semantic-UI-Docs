@@ -5,8 +5,9 @@ semantic.menu.ready = function() {
 
   // selector cache
   var
-    $menuItem = $('.menu a.item, .menu .link.item'),
-    $dropdown = $('.main.container .menu .dropdown'),
+    $dropdownItem = $('.main.container .menu .dropdown .item'),
+    $menuItem     = $('.main.container .menu a.item, .menu .link.item').not($dropdownItem),
+    $dropdown     = $('.main.container .menu .dropdown'),
     // alias
     handler = {
 

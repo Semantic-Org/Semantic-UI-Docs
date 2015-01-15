@@ -602,9 +602,14 @@ semantic.ready = function() {
           ? lines[1]
           : lines[0],
         spacesPerIndent = 2,
-        leadingSpaces   = firstLine.length - firstLine.replace(/^\s*/g, '').length,
+        leadingSpaces   = (firstLine !== undefined)
+          ? firstLine.length - firstLine.replace(/^\s*/g, '').length
+          : false,
         indent
       ;
+      if(!leadingSpaces) {
+        return 4;
+      }
       if(leadingSpaces !== 0) {
         indent = leadingSpaces;
       }

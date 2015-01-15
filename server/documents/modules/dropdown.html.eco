@@ -1195,8 +1195,8 @@ themes      : ['Default']
       <div class="ui ignored info message">Floated content may stack to two lines without manually setting a width when or using a <code>fluid</code> dropdown
       </div>
       <div class="ui fluid selection dropdown">
-        <i class="filter icon"></i>
-        <span class="text">Filter</span>
+        <i class="dropdown icon"></i>
+        <span class="default text">Select Type</span>
         <div class="menu">
           <div class="item">
             <span class="right floated description">10 new</span>
@@ -1742,7 +1742,7 @@ themes      : ['Default']
           <label>Gender</label>
           <div class="ui dropdown selection">
             <input type="hidden" name="gender">
-            <div class="default text">...</div>
+            <div class="default text">Select Gender</div>
             <i class="dropdown icon"></i>
             <div class="menu">
               <div class="item" data-value="male">Male</div>

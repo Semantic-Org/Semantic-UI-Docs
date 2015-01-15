@@ -455,6 +455,40 @@ themes      : ['Default']
       </div>
     </div>
 
+    <div class="no example">
+      <h4 class="ui header">Triggering show/hide with other content</h4>
+      <p>For convenience calling attach events will allow you to bind events. By default this will toggle the sidebar in and out of view on click</p>
+      <div class="code" data-demo="true">
+      $('.left.demo.sidebar').first()
+        .sidebar('attach events', '.toggle.button')
+      ;
+      $('.toggle.button')
+        .removeClass('disabled')
+      ;
+      </div>
+      <div class="ui disabled secondary labeled icon toggle button">
+        <i class="left arrow icon"></i>
+        Trigger Sidebar
+      </div>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">Triggering custom behavior with other content</h4>
+      <p>You can also specify what behavior should occur when the element is clicked</p>
+      <div class="code" data-demo="true">
+      $('.left.demo.sidebar').first()
+        .sidebar('attach events', '.open.button', 'show')
+      ;
+      $('.open.button')
+        .removeClass('disabled')
+      ;
+      </div>
+      <div class="ui disabled secondary labeled icon open button">
+        <i class="left arrow icon"></i>
+        Open Sidebar
+      </div>
+    </div>
+
     <div class="visible example">
       <h4 class="ui header">Starting Visible</h4>
       <p>A sidebar can start visible by adding the class name <code>visible</code></p>
@@ -501,40 +535,6 @@ themes      : ['Default']
         })
         .sidebar('hide')
       ;
-      </div>
-    </div>
-
-    <div class="no example">
-      <h4 class="ui header">Triggering show/hide with other content</h4>
-      <p>For convenience calling attach events will allow you to bind events. By default this will toggle the sidebar in and out of view on click</p>
-      <div class="code" data-demo="true">
-      $('.left.demo.sidebar').first()
-        .sidebar('attach events', '.toggle.button')
-      ;
-      $('.toggle.button')
-        .removeClass('disabled')
-      ;
-      </div>
-      <div class="ui disabled secondary labeled icon toggle button">
-        <i class="left arrow icon"></i>
-        Trigger Sidebar
-      </div>
-    </div>
-
-    <div class="no example">
-      <h4 class="ui header">Triggering custom behavior with other content</h4>
-      <p>You can also specify what behavior should occur when the element is clicked</p>
-      <div class="code" data-demo="true">
-      $('.left.demo.sidebar').first()
-        .sidebar('attach events', '.open.button', 'show')
-      ;
-      $('.open.button')
-        .removeClass('disabled')
-      ;
-      </div>
-      <div class="ui disabled secondary labeled icon open button">
-        <i class="left arrow icon"></i>
-        Open Sidebar
       </div>
     </div>
 

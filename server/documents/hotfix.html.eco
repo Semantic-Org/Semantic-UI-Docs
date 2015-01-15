@@ -10,13 +10,18 @@ type       : 'Library'
 <script type="text/javascript">
 $(document).ready(function() {
 
-$('.ui.dropdown')
-    .dropdown()
-;
-
-$('.ui.button').on('click', function() {
-    $('.ui.dropdown').dropdown('restore defaults');
+$("#el1").popup({
+    on : "click",
+    position : "bottom center"
 });
+
+$("#el2").popup({
+    on : "click",
+    position : "bottom center"
+});
+
+$("#el1").data("html", "<b>LEFT POPUP</b>");
+$("#el2").data("html", "<b>RIGHT POPUP</b>");
 
 });
 </script>
@@ -24,28 +29,11 @@ $('.ui.button').on('click', function() {
 <!-- TEST CSS HERE !-->
 <style type="text/css">
 </style>
-
 <div class="ui page grid">
     <div class="column">
-    <h2 class="ui dividing header">
-        Restore Defaults on Dropdown
-        <div class="sub header">If you attempt to restore the defaults of a dropdown, it doesn't add the &quot;default&quot; class to the input.</div>
-        <div class="sub header">Neither remove the selected item from the dropdown list.</div>
-    </h2>
-
-    <div class="ui selection dropdown">
-        <input name="gender" type="hidden" />
-        <div class="default text">Default</div>
-        <i class="dropdown icon"></i>
-        <div class="menu">
-            <div class="item" data-value="0">Value</div>
-            <div class="item" data-value="1">Another Value</div>
-        </div>
-     </div>
-
-    <div class="ui button">
-        Restore
+        <h2 class="ui dividing header">
+            <div id="el1" class="ui button">left</div>
+            <div id="el2" class="ui button">right</div>
+        </h2>
     </div>
-
-  </div>
 </div>

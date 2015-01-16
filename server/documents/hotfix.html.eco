@@ -10,19 +10,6 @@ type       : 'Library'
 <script type="text/javascript">
 $(document).ready(function() {
 
-$("#el1").popup({
-    on : "click",
-    position : "bottom center"
-});
-
-$("#el2").popup({
-    on : "click",
-    position : "bottom center"
-});
-
-$("#el1").data("html", "<b>LEFT POPUP</b>");
-$("#el2").data("html", "<b>RIGHT POPUP</b>");
-
 });
 </script>
 
@@ -30,10 +17,16 @@ $("#el2").data("html", "<b>RIGHT POPUP</b>");
 <style type="text/css">
 </style>
 <div class="ui page grid">
-    <div class="column">
-        <h2 class="ui dividing header">
-            <div id="el1" class="ui button">left</div>
-            <div id="el2" class="ui button">right</div>
-        </h2>
+  <div class="column">
+    <div class="ui hidden divider"></div>
+    <div class="ui hidden divider"></div>
+    <div class="ui hidden divider"></div>
+    <div class="ui top attached tabular menu">
+      <div class="active item">Tab 1</div>
+      <div class="item">Tab 2</div>
     </div>
+    <div class="ui bottom attached segment">
+      2
+    </div>
+  </div>
 </div>

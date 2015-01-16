@@ -757,12 +757,14 @@ body#example {
   padding-top: 0px;
   border-top: none;
 }
-#example .another.example i.code,
 #example .example:first-child i.code,
 #example h2 + .example i.code,
 #example h3 + .example i.code,
 #example h4 + .example i.code {
   top: 0.4em;
+}
+#example .another.example i.code {
+  top: 1em;
 }
 
 /* Spaced */

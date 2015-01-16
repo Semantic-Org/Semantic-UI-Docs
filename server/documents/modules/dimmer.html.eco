@@ -1,6 +1,7 @@
 ---
 layout      : 'default'
 css         : 'dim'
+standalone  : true
 
 element     : 'dimmer'
 elementType : 'module'
@@ -80,14 +81,10 @@ themes      : ['Default']
         </div>
         <img class="ui medium wireframe image" src="/images/wireframe/media-paragraph.png">
         <div class="ui dimmer">
-          <div class="content">
-            <div class="center">
-              <h2 class="ui inverted icon header">
-                <i class="heart icon"></i>
-                Dimmed Message!
-              </h2>
-            </div>
-          </div>
+          <h2 class="ui inverted icon header">
+            <i class="heart icon"></i>
+            Dimmed Message!
+          </h2>
         </div>
       </div>
       <div class="ui ignored icon buttons">

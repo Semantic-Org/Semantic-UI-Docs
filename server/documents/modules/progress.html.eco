@@ -285,7 +285,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
     <h2 class="ui header">Task Completion Percent</h2>
 
     <div class="example">
-      <h4 class="ui header">Adding a total value</h4>
+      <h4 class="ui header">Adding a Total Value</h4>
       <p>A progress bar can keep track of the current value as a ratio of a total value. This is useful for tracking the progress of a series of events with a known quantity, for example "uploading 1 of 20" photos.</p>
       <p>Each call to increment will increase the value by 1, or the value specified as the second parameter</p>
       <div class="code" data-type="javascript" data-demo="true">
@@ -311,10 +311,52 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
     </div>
 
     <div class="example">
-      <h4 class="ui header">Initializing with metadata and using custom labels</h4>
+      <h4 class="ui header">Initializing with Metadata</h4>
       <p>A progress bar can keep track of the current value as a ratio of a total value. This is useful for tracking the progress of a series of events with a known quantity, for example "uploading 1 of 20" photos.</p>
       <p>Each call to increment will increase the value by 1, or the value specified as the second parameter</p>
       <p>In addition you can pass in templates text for each state available to your progress bar which will automatically be updated when your progress bar reaches that state</p>
+      <div class="code" data-type="javascript" data-demo="true">
+        $('#example4')
+          .progress('increment')
+        ;
+      </div>
+      <div class="code" data-type="html" data-preview="true">
+        <div class="ui indicating progress" data-value="1" data-total="20" id="example4">
+          <div class="bar">
+            <div class="progress"></div>
+          </div>
+          <div class="label">Adding Photos</div>
+        </div>
+      </div>
+      <div class="evaluated code" data-type="javascript">
+        $('#example4')
+          .progress()
+        ;
+      </div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Adding Custom Labels</h4>
+      <p>You can pass in templates text for each state available to your progress bar which will automatically be updated when your progress bar reaches that state</p>
+      <p>You can use <code>label</code> setting to change progress bar labels between two preset messages. In addition you can customize the messages themselves by specifying the templated text in <code>text</code>. Templated strings will replace three values on render</p>
+      <table class="ui basic celled definition table">
+        <tr>
+          <td>{percent}</td>
+          <td>Current percentage</td>
+        </tr>
+        <tr>
+          <td>{value}</td>
+          <td>Current value</td>
+        </tr>
+        <tr>
+          <td>{total}</td>
+          <td>Total value</td>
+        </tr>
+        <tr>
+          <td>{left}</td>
+          <td>Distance to total, or % progress left</td>
+        </tr>
+      </table>
       <div class="code" data-type="javascript" data-demo="true">
         $('#example4')
           .progress('increment')
@@ -341,9 +383,8 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
     </div>
 
     <div class="example">
-      <h4 class="ui header">Alternate bar labels</h4>
-      <p>Progress bar labels can be set to either a percentage or ratio with percentage being the default state. If you need to translate a progress bar label simply pass in a new templated value as the accompanying text.</p>
-      <p>The following example shows how to localize for <b>Spanish</b>.</p>
+      <h4 class="ui header">Translation</h4>
+      <p>You can also adjust text labels to help strings appear translated</p>
       <div class="code" data-type="javascript" data-demo="true">
         $('#example5')
           .progress('increment')

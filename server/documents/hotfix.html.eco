@@ -9,12 +9,31 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script type="text/javascript">
 $(document).ready(function() {
-  $('.one').popup();
+
+$("#el1").popup({
+    on : "click",
+    position : "bottom center"
+});
+
+$("#el2").popup({
+    on : "click",
+    position : "bottom center"
+});
+
+$("#el1").data("html", "<b>LEFT POPUP</b>");
+$("#el2").data("html", "<b>RIGHT POPUP</b>");
+
 });
 </script>
 
 <!-- TEST CSS HERE !-->
 <style type="text/css">
 </style>
-
-<i class="one circular heart icon link" data-content="Hello. This is a very wide pop-up which allows for lots of content with additional space. You can fit a lot of words here and the paragraphs will be pretty wide." data-variation="wide"></i>
+<div class="ui page grid">
+    <div class="column">
+        <h2 class="ui dividing header">
+            <div id="el1" class="ui button">left</div>
+            <div id="el2" class="ui button">right</div>
+        </h2>
+    </div>
+</div>

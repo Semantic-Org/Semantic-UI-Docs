@@ -505,10 +505,11 @@ standalone  : true
         </div>
         <p>You can specify a success test to check for this <code>success</code> value. This most likely will be set globally for all API requests.</p>
         <div class="code" data-type="javascript">
-        $.fn.api.successTest = function(response) {
+        $.fn.api.settings.successTest = function(response) {
           if(response && response.success) {
             return response.success;
           }
+          return false;
         };
         </div>
       </div>

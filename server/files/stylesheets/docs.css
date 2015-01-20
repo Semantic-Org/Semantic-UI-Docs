@@ -641,12 +641,6 @@ body#example {
   margin: -0.5em 0em 2em;
 }
 
-/* Sticky */
-#example .sticky.example .rail > .wireframe.image,
-#example .pushing.example .rail > .wireframe.image {
-  height: 102px;
-}
-
 #example .pushing.example .rail .sticky {
   margin: 2em 0em;
 }

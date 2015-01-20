@@ -869,9 +869,7 @@ standalone  : true
           <td>
             <div class="code">
             metadata: {
-              action  : 'action',
-              request : 'request',
-              xhr     : 'xhr'
+              action  : 'action'
             }
             </div>
           </td>

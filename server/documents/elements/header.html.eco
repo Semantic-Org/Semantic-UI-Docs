@@ -1,6 +1,7 @@
 ---
 layout      : 'default'
 css         : 'header'
+standalone  : true
 
 element     : 'header'
 elementType : 'element'
@@ -22,7 +23,7 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
 
 
   <div class="example">
-    <h4 class="ui header">Page Headings</h4>
+    <h4 class="ui header">Page Headings (H1-H6)</h4>
     <p class="header">Headers may be oriented to give the heirarchy of a section in the context of the page</p>
     <div class="ignored info ui message">Page headings use standard <code>h1-h6</code> tags, and size themselves relative to the base font of the entire page.</div>
     <h1 class="ui header">First header</h1>
@@ -60,8 +61,8 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
   </div>
 
   <div class="example">
-    <h4 class="ui header">Descriptive Headers</h4>
-    <p>Headers may have sub headers containing further context to the section</p>
+    <h4 class="ui header">Sub Headers</h4>
+    <p>Headers may contain sub headers giving further context to the section</p>
     <h2 class="ui header">
       Account Settings
       <div class="sub header">Manage your account settings and set e-mail preferences.</div>
@@ -88,6 +89,13 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
         Account Settings
         <div class="sub header">Manage your account settings and set e-mail preferences.</div>
       </div>
+    </h2>
+    <img class="ui wireframe image" src="/images/wireframe/media-paragraph.png">
+  </div>
+  <div class="another example">
+    <h2 class="ui center aligned icon header">
+      <i class="circular users icon"></i>
+      Friends
     </h2>
     <img class="ui wireframe image" src="/images/wireframe/centered-paragraph.png">
   </div>
@@ -121,7 +129,7 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
   <div class="example">
     <h4 class="ui header">Block</h4>
     <p>A header can be formatted to appear inside a content block</p>
-    <h3 class="ui black block header">
+    <h3 class="ui block header">
       Block Header
     </h3>
     <img class="ui wireframe image" src="/images/wireframe/media-paragraph.png">

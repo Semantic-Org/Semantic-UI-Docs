@@ -265,11 +265,7 @@ semantic.search.ready = function() {
   ;
 
   $standard
-    .search({
-      apiSettings: {
-        action: 'search'
-      }
-    })
+    .search()
   ;
   $category
     .search({

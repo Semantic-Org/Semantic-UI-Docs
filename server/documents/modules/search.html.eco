@@ -61,7 +61,7 @@ type        : 'UI Module'
       <h4 class="ui header">Local Search</h4>
       <p>A search can look for results inside static local content.</p>
       <div class="ui ignored info message">
-        By default, results will return content first that begin with the query text, but also afterward content that matches the query anywhere inside. To disable full text search modify the <code>searchFullText</code> setting.
+        By default, results will return content first that begin with the query text, but also afterward content that matches the query anywhere inside. To disable full text search you can specify in settings <code>searchFullText: false</code>.
       </div>
       <div class="ui search">
         <div class="ui icon input">
@@ -156,7 +156,7 @@ type        : 'UI Module'
     </div>
 
     <h4 class="ui header">Automatic Routing</h4>
-    <p>By default search will automatically route to the named API endpoint 'search'</p>
+    <p>By default search will automatically route to the named <a href="/behaviors/api.html">API endpoint</a> 'search'</p>
     <div class="code" data-label="javascript">
       // initializes with default endpoint /search/{query}
       $('.ui.search')
@@ -283,9 +283,6 @@ type        : 'UI Module'
 
     <h2 class="ui dividing header">Behaviors</h2>
 
-
-    <h2 class="ui dividing header">Behavior</h2>
-
     <p>All the following behaviors can be called using the syntax:</p>
     <div class="code">
     $('.your.element')
@@ -308,8 +305,8 @@ type        : 'UI Module'
           <td>Displays message in search results with text, using template matching type</td>
         </tr>
         <tr>
-          <td>cancel search</td>
-          <td>Cancels current search</td>
+          <td>cancel query</td>
+          <td>Cancels current remote search query</td>
         </tr>
         <tr>
           <td>search local(query)</td>
@@ -320,15 +317,43 @@ type        : 'UI Module'
           <td>Search remote endpoint for specified query and display results</td>
         </tr>
         <tr>
+          <td>search object(query, object)</td>
+          <td>Search object for specified query and return results</td>
+        </tr>
+        <tr>
           <td>cancel</td>
           <td>Cancels current remote search request</td>
         </tr>
         <tr>
-          <td>read cache(query)</td>
+          <td>is focused</td>
+          <td>Whether search is currently focused</td>
+        </tr>
+        <tr>
+          <td>is visible</td>
+          <td>Whether search results are visible</td>
+        </tr>
+        <tr>
+          <td>is empty</td>
+          <td>Whether search results are empty</td>
+        </tr>
+        <tr>
+          <td>get value</td>
+          <td>Returns current search value</td>
+        </tr>
+        <tr>
+          <td>get result(value)</td>
+          <td>Returns JSON object matching search value</td>
+        </tr>
+        <tr>
+          <td>set value(value)</td>
+          <td>Sets search input to value</td>
+        </tr>
+        <tr>
+          <td>read cachedHTML(query)</td>
           <td>Reads cached results for query</td>
         </tr>
         <tr>
-          <td>write cache(query)</td>
+          <td>write cachedHTML(query)</td>
           <td>Writes cached results for query</td>
         </tr>
         <tr>
@@ -466,14 +491,14 @@ type        : 'UI Module'
       </thead>
       <tbody>
         <tr>
-          <td>onSelect</td>
+          <td>onSelect(result, response)</td>
           <td>module</td>
-          <td>Callback on element selection by user (overrides default action)</td>
+          <td>Callback on element selection by user. The first parameter includes the filtered response results for that element. The function should return false to prevent default action (closing search results and selecting value).</td>
         </tr>
         <tr>
           <td>onResultsAdd(html)</td>
           <td>module</td>
-          <td>Callback after processing element template to add html to results (overrides default action)</td>
+          <td>Callback after processing element template to add html to results. Function should return false to prevent default actions.</td>
         </tr>
         <tr>
           <td>onSearchQuery</td>
@@ -542,10 +567,10 @@ type        : 'UI Module'
             <div class="code">
             className: {
               active  : 'active',
-              down    : 'down',
-              focus   : 'focus',
               empty   : 'empty',
-              loading : 'loading'
+              focus   : 'focus',
+              loading : 'loading',
+              pressed : 'down'
             }
             </div>
           </td>
@@ -571,13 +596,14 @@ type        : 'UI Module'
           <td colspan="2">
             <div class="code">
             error : {
-              source      : 'No source or api action specified',
+              source      : 'Cannot search. No source used, and Semantic API module was not included',
               noResults   : 'Your search returned no results',
               logging     : 'Error in debug logging, exiting.',
               noTemplate  : 'A valid template name was not specified.',
               serverError : 'There was an issue with querying the server.',
+              maxResults  : 'Results must be an array to use maxResults setting',
               method      : 'The method you called is not defined.'
-            }
+            },
             </div>
           </td>
         </tr>

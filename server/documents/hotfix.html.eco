@@ -9,24 +9,27 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script type="text/javascript">
 $(document).ready(function() {
-
+  $('.ui.accordion').accordion().find('.ui.dropdown').dropdown();
 });
 </script>
 
 <!-- TEST CSS HERE !-->
 <style type="text/css">
 </style>
-<div class="ui page grid">
+<div class="ui vertically padded page grid">
   <div class="column">
-    <div class="ui hidden divider"></div>
-    <div class="ui hidden divider"></div>
-    <div class="ui hidden divider"></div>
-    <div class="ui top attached tabular menu">
-      <div class="active item">Tab 1</div>
-      <div class="item">Tab 2</div>
-    </div>
-    <div class="ui bottom attached segment">
-      2
+    <div class="ui huge bulleted list">
+      <a class="item">Gaining Access</a>
+      <a class="item">Inviting Friends</a>
+      <div class="item">
+        <a>Benefits</a>
+        <div class="list">
+          <a class="item">Use Anywhere</a>
+          <a class="item">Rebates</a>
+          <a class="item">Discounts</a>
+        </div>
+      </div>
+      <a class="item">Warranty</a>
     </div>
   </div>
 </div>

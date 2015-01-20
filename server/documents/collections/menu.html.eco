@@ -25,9 +25,6 @@ themes      : ['Default', 'GitHub']
 
     <p>A menu</p>
     <div class="ui menu">
-      <div class="item">
-        <img class="ui tiny image" src="/images/logo.png">
-      </div>
       <a class="active item">
         <i class="home icon"></i> Home
       </a>

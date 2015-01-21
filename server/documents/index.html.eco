@@ -852,7 +852,7 @@ standalone : true
         <img class="ui icon image" src="/images/icons/mobile.png">
         Responsively Designed
       </h2>
-      <p>Semantic is <b>designed complely with em</b> making reponsive sizing a breeze. Design <em>variations</em> built into elements allow you to make the choice how content adjusts for tablet and mobile.</p>
+      <p>Semantic is <b>designed completely with em</b> making reponsive sizing a breeze. Design <em>variations</em> built into elements allow you to make the choice how content adjusts for tablet and mobile.</p>
     </div>
     <div class="column">
       <h2 class="ui icon header">

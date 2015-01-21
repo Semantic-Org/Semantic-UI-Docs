@@ -1480,6 +1480,7 @@ body.progress.animated .ui.progress .bar {
 }
 
 #example .main.container > .right.rail .sticky,
+#example .main.container > .tab > .examples > .right.rail .sticky,
 #example .main.container > .tab > .right.rail .sticky {
   width: 300px;
   padding: 2em 0em;

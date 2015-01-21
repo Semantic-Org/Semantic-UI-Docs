@@ -1,3 +1,4 @@
+
 ---
 layout     : 'blank'
 css        : 'hotfix'
@@ -9,7 +10,19 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script type="text/javascript">
 $(document).ready(function() {
-  $('.ui.accordion').accordion().find('.ui.dropdown').dropdown();
+  // Add javascript here
+  $('.ui.dropdown').dropdown({ allowCategorySelection: true });
+
+  var items = [{text: 'One', value: '1'}, {text: 'Two', value: '2'}, {text: 'Two', value: '2'}, {text: 'Two', value: '2'}, {text: 'Two', value: '2'}, {text: 'Two', value: '2'}, {text: 'Two', value: '2'}, {text: 'Two', value: '2'}, {text: 'Two', value: '2'}, {text: 'Two', value: '2'}, {text: 'Two', value: '2'}, {text: 'Two', value: '2'}, {text: 'Two', value: '2'}, {text: 'Two', value: '2'}, {text: 'Two', value: '2'}, {text: 'Two', value: '2'}, {text: 'Two', value: '2'}, {text: 'Two', value: '2'}, {text: 'Two', value: '2'}, {text: 'Two', value: '2'}]
+
+  setTimeout(function() {
+    $.each(items, function (i, item) {
+        $('#bodyDropdown').append($('<option>', {
+            value: item.value,
+            text : item.text
+        }));
+    });
+  }, 200);
 });
 </script>
 
@@ -18,18 +31,49 @@ $(document).ready(function() {
 </style>
 <div class="ui vertically padded page grid">
   <div class="column">
-    <div class="ui huge bulleted list">
-      <a class="item">Gaining Access</a>
-      <a class="item">Inviting Friends</a>
-      <div class="item">
-        <a>Benefits</a>
-        <div class="list">
-          <a class="item">Use Anywhere</a>
-          <a class="item">Rebates</a>
-          <a class="item">Discounts</a>
-        </div>
+
+    <select class="ui dropdown" id="bodyDropdown"></select>
+
+    <div class="ui hidden divider"></div>
+
+    <div class="ui segment">
+      <div class="ui left corner label">
+        <i class="asterisk icon"></i>
       </div>
-      <a class="item">Warranty</a>
     </div>
+
+    <div class="ui medium image">
+      <a class="ui left corner label">
+        <i class="save icon"></i>
+      </a>
+      <img src="/images/demo/highres2.jpg">
+    </div>
+
+    <div class="ui raised segment">
+      <div class="ui left corner label">
+        <i class="asterisk icon"></i>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+
+    <div class="ui corner labeled input">
+      <input type="text" placeholder="Required Field" style="width: 100px;">
+      <div class="ui corner label">
+        <i class="asterisk icon"></i>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+
+
   </div>
 </div>

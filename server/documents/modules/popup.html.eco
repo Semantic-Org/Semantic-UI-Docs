@@ -556,6 +556,16 @@ themes      : ['Default']
       </thead>
       <tbody>
         <tr>
+          <td>popup</td>
+          <td>false</td>
+          <td>Can specify a DOM element that should be used as the popup. This is useful for including a pre-formatted popup.</td>
+        </tr>
+        <tr>
+          <td>movePopup</td>
+          <td>true</td>
+          <td>Whether to move popup to same offset container as target element when <code>popup</code> is specified in settings. Using a popup inside of an element without <code>overflow:visible</code>, like a sidebar, may require you to set this to <code>false</code></td>
+        </tr>
+        <tr>
           <td>context</td>
           <td>body</td>
           <td>Selector or jquery object specifying where the popup should be created</td>

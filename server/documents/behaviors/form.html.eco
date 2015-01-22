@@ -1,6 +1,7 @@
 ---
 layout      : 'default'
 css         : 'form'
+standalone  : true
 
 element     : 'form'
 elementType : 'behavior'
@@ -27,7 +28,7 @@ type        : 'UI Behavior'
       <h4 class="ui header">Validation Definitions</h4>
       <p>Form validation requires passing in a validation object with the rules required to validate your form.</p>
       <div class="ui ignored info message">
-        <i class="help icon"></i>A validation object includes a list of form elements, and rules to validate each against. Fields are matched by either the <code>id</code> tag, <code>name</code> tag, or the <code>data-validate</code> metadata matching the identifier provided in the settings object.
+        A validation object includes a list of form elements, and rules to validate each against. Fields are matched by either the <code>id</code> tag, <code>name</code> tag, or the <code>data-validate</code> metadata matching the identifier provided in the settings object.
       </div>
       <div class="ignore code">
       $('.ui.form')
@@ -84,7 +85,7 @@ type        : 'UI Behavior'
         })
       ;
       </div>
-      <div class="ui form segment">
+      <form class="ui form segment">
         <p>Tell Us About Yourself</p>
         <div class="two fields">
           <div class="field">
@@ -120,7 +121,7 @@ type        : 'UI Behavior'
         </div>
         <div class="ui blue submit button">Submit</div>
       </div>
-    </div>
+    </form>
 
     <div class="no example">
       <h4 class="ui header">
@@ -228,7 +229,7 @@ type        : 'UI Behavior'
         })
       ;
       </div>
-      <div class="ui form">
+      <form class="ui form">
         <div class="two fields">
           <div class="field">
             <label>Name</label>
@@ -248,7 +249,7 @@ type        : 'UI Behavior'
           </div>
         </div>
         <div class="ui blue submit button">Submit</div>
-      </div>
+      </form>
     </div>
 
     <div class="optional example">
@@ -279,7 +280,7 @@ type        : 'UI Behavior'
         })
       ;
       </div>
-      <div class="ui form">
+      <form class="ui form">
         <p>Your tickets are all ready to print. Where would you like to send a receipt?</p>
         <div class="fields">
           <div class="ten wide field">
@@ -293,14 +294,14 @@ type        : 'UI Behavior'
         </div>
         <div class="ui blue submit button">Submit</div>
         <div class="ui error message"></div>
-      </div>
+      </form>
     </div>
     <div class="example">
       <h4 class="ui header">Displaying Error Messages</h4>
       <p>Forms that contain a <a href="/collections/message.html">ui message</a> error block will automatically be filled in with form validation information.</p>
       <div class="ui ignored info message">The template for error messages can be modified by adjusting settings.template.error</div>
 
-      <div class="ui form segment">
+      <form class="ui form segment">
         <p>Let's go ahead and get you signed up.</p>
         <div class="two fields">
           <div class="field">
@@ -328,7 +329,7 @@ type        : 'UI Behavior'
         </div>
         <div class="ui blue submit button">Submit</div>
         <div class="ui error message"></div>
-      </div>
+      </form>
     </div>
 
     <div class="inline example">
@@ -343,7 +344,7 @@ type        : 'UI Behavior'
           })
         ;
       </div>
-      <div class="ui form segment">
+      <form class="ui form segment">
         <p>Let's go ahead and get you signed up.</p>
         <div class="two fields">
           <div class="field">
@@ -370,7 +371,7 @@ type        : 'UI Behavior'
           </div>
         </div>
         <div class="ui blue submit button">Submit</div>
-      </div>
+      </form>
     </div>
 
     <div class="dog example">
@@ -399,15 +400,18 @@ type        : 'UI Behavior'
         })
       ;
       </div>
-      <div class="ui form segment">
+      <form class="ui form segment">
         <p>Let's go ahead and get you signed up.</p>
         <div class="field">
           <label>Dog</label>
           <input placeholder="Dog" name="dog" type="text">
         </div>
-        <div class="ui blue submit button">Add Dog <i class="add icon"></i></div>
+        <div class="ui blue submit button">
+          <i class="add icon"></i>
+          Add Dog
+        </div>
         <div class="ui error message"></div>
-      </div>
+      </form>
     </div>
 
   </div>

@@ -10,70 +10,156 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script type="text/javascript">
 $(document).ready(function() {
-  // Add javascript here
-  $('.ui.dropdown').dropdown({ allowCategorySelection: true });
+$('.ui.dropdown')
+    .dropdown()
+;
 
-  var items = [{text: 'One', value: '1'}, {text: 'Two', value: '2'}, {text: 'Two', value: '2'}, {text: 'Two', value: '2'}, {text: 'Two', value: '2'}, {text: 'Two', value: '2'}, {text: 'Two', value: '2'}, {text: 'Two', value: '2'}, {text: 'Two', value: '2'}, {text: 'Two', value: '2'}, {text: 'Two', value: '2'}, {text: 'Two', value: '2'}, {text: 'Two', value: '2'}, {text: 'Two', value: '2'}, {text: 'Two', value: '2'}, {text: 'Two', value: '2'}, {text: 'Two', value: '2'}, {text: 'Two', value: '2'}, {text: 'Two', value: '2'}, {text: 'Two', value: '2'}]
+$('.ui.checkbox')
+    .checkbox()
+;
 
-  setTimeout(function() {
-    $.each(items, function (i, item) {
-        $('#bodyDropdown').append($('<option>', {
-            value: item.value,
-            text : item.text
-        }));
-    });
-  }, 200);
+$('.ui.serialize.button')
+    .on('click', function () {
+        var data = $('.ui.form').form('serialize');
+
+        console.warn(data);
+    })
+;
+
+$('.ui.form')
+    .form({
+        name: {
+            identifier: 'name',
+            rules: [
+                {
+                    type: 'empty',
+                    prompt: 'Please enter your name'
+                }
+            ]
+        },
+        gender: {
+            identifier: 'gender',
+            rules: [
+                {
+                    type: 'empty',
+                    prompt: 'Please select a gender'
+                }
+            ]
+        },
+        username: {
+            identifier: 'username',
+            rules: [
+                {
+                    type: 'empty',
+                    prompt: 'Please enter a username'
+                }
+            ]
+        },
+        password: {
+            identifier: 'password',
+            rules: [
+                {
+                    type: 'empty',
+                    prompt: 'Please enter a password'
+                },
+                {
+                    type: 'length[6]',
+                    prompt: 'Your password must be at least 6 characters'
+                }
+            ]
+        },
+        fruit: {
+            identifier: 'fruit',
+            rules: [
+                {
+                    type: 'checked',
+                    prompt: 'You must select at least one fruit?'
+                }
+            ]
+        },
+        terms: {
+            identifier: 'terms',
+            rules: [
+                {
+                    type: 'checked',
+                    prompt: 'You must agree to the terms and conditions'
+                }
+            ]
+        }
+    })
+;
+
 });
 </script>
 
 <!-- TEST CSS HERE !-->
 <style type="text/css">
 </style>
-<div class="ui vertically padded page grid">
-  <div class="column">
 
-    <select class="ui dropdown" id="bodyDropdown"></select>
+<div style="max-width: 1000px;margin:2em auto;">
+  <h2 class="ui dividing header">
+    Form
+    <div class="ui green label">Feature</div>
+    <div class="ui teal label">Enhacement</div>
+    <div class="sub header">Reset the form to its default values.</div>
+  </h2>
 
-    <div class="ui hidden divider"></div>
-
-    <div class="ui segment">
-      <div class="ui left corner label">
-        <i class="asterisk icon"></i>
+  <div class="ui form segment">
+    <p>Tell Us About Yourself</p>
+    <div class="two fields">
+      <div class="field">
+        <label>Name</label>
+        <input placeholder="First Name" name="name" type="text">
+      </div>
+      <div class="field">
+        <label>Gender</label>
+        <div tabindex="0" class="ui selection dropdown">
+          <input name="gender" type="hidden">
+          <div class="default text">Gender</div>
+          <i class="dropdown icon"></i>
+          <div tabindex="-1" class="menu">
+            <div class="item" data-value="male">Male</div>
+            <div class="item" data-value="female">Female</div>
+          </div>
+        </div>
       </div>
     </div>
-
-    <div class="ui medium image">
-      <a class="ui left corner label">
-        <i class="save icon"></i>
-      </a>
-      <img src="/images/demo/highres2.jpg">
+    <div class="field">
+      <label>Username</label>
+      <input placeholder="Username" name="username" type="text">
     </div>
-
-    <div class="ui raised segment">
-      <div class="ui left corner label">
-        <i class="asterisk icon"></i>
+    <div class="field">
+      <label>Password</label>
+      <input name="password" type="password">
+    </div>
+    <div class="grouped inline fields">
+      <div class="field">
+        <div class="ui radio checkbox">
+          <input name="fruit" checked="checked" type="radio" value="apple">
+          <label>Apple</label>
+        </div>
       </div>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-    </div>
-
-    <div class="ui corner labeled input">
-      <input type="text" placeholder="Required Field" style="width: 100px;">
-      <div class="ui corner label">
-        <i class="asterisk icon"></i>
+      <div class="field">
+        <div class="ui radio checkbox">
+          <input name="fruit" type="radio" value="orange">
+          <label>Orange</label>
+        </div>
       </div>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
+      <div class="field">
+        <div class="ui radio checkbox">
+          <input name="fruit" type="radio" value="lemon">
+          <label>Lemon</label>
+        </div>
+      </div>
     </div>
-
-
+    <div class="inline field">
+      <div class="ui checkbox">
+        <input name="terms" type="checkbox">
+        <label>I agree to the terms and conditions</label>
+      </div>
+    </div>
+    <div class="ui blue submit button">Submit</div>
+    <div class="ui reset button">Reset</div>
+    <div class="ui serialize basic icon button"><i class="database icon"></i></div>
   </div>
 </div>

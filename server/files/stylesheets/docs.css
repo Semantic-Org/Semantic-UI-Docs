@@ -1792,6 +1792,7 @@ body.progress.animated .ui.progress .bar {
   #example .fixed.column .fixed {
     width: 250px;
   }
+  /*
   #example > .pusher {
     display: flex;
     min-height: 100vh;
@@ -1801,6 +1802,7 @@ body.progress.animated .ui.progress .bar {
   #example > .pusher > .full.height {
     flex: 1;
   }
+  */
 }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   #example > .pusher > .full.height {

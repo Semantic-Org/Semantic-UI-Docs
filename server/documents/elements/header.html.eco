@@ -79,6 +79,28 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
     </h2>
     <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
   </div>
+  <div class="another example">
+    <h1 class="ui header">
+      H1
+      <div class="sub header">Sub Header</div>
+    </h1>
+    <h2 class="ui header">
+      H2
+      <div class="sub header">Sub Header</div>
+    </h2>
+    <h3 class="ui header">
+      H3
+      <div class="sub header">Sub Header</div>
+    </h3>
+    <h4 class="ui header">
+      H4
+      <div class="sub header">Sub Header</div>
+    </h4>
+    <h5 class="ui header">
+      H5
+      <div class="sub header">Sub Header</div>
+    </h5>
+  </div>
 
   <div class="example">
     <h4 class="ui header">Icon</h4>

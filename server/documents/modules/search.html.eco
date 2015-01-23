@@ -79,23 +79,30 @@ type        : 'UI Module'
       </div>
       <div class="hidden code" data-type="javascript">
       var content = [
-        { title: 'Andorrs' },
+        { title: 'Andorra' },
         { title: 'United Arab Emirates' },
-        { title: 'Afghanistas' },
-        { title: 'Antigus' },
-        { title: 'Anguills' },
-        { title: 'Albanis' },
-        { title: 'Armenis' },
+        { title: 'Afghanistan' },
+        { title: 'Antigua' },
+        { title: 'Anguilla' },
+        { title: 'Albania' },
+        { title: 'Armenia' },
         { title: 'Netherlands Antilles' },
-        { title: 'Angols' },
-        { title: 'Argentins' },
-        { title: 'American Samos' },
-        { title: 'Austris' },
-        { title: 'Australis' },
-        { title: 'Arubs' },
+        { title: 'Angola' },
+        { title: 'Argentina' },
+        { title: 'American Samoa' },
+        { title: 'Austria' },
+        { title: 'Australia' },
+        { title: 'Aruba' },
         { title: 'Aland Islands' },
-        { title: 'Azerbaijas' },
-        { title: 'Bosnis' }
+        { title: 'Azerbaijan' },
+        { title: 'Bosnia' },
+        { title: 'Barbados' },
+        { title: 'Bangladesh' },
+        { title: 'Belgium' },
+        { title: 'Burkina Faso' },
+        { title: 'Bulgaria' },
+        { title: 'Bahrain' },
+        { title: 'Burundi' }
         // etc
       ];
       </div>

@@ -130,7 +130,7 @@ type        : 'UI Behavior'
         <p>Validation rules are a set of conditions required to validate a field</p>
       <div class="ui info message">Validation rules are found in <code>$.fn.form.settings.rules</code>, to add new global validation rules, modify <code>$.fn.form.settings.rules</code> to include your function.</div>
       <div class="in red message">To pass parameters to a rule, use bracket notation in your settings object. For example <code>type: 'not[dog]'</code></div>
-      <table class="ui teal celled sortable definition table">
+      <table class="ui celled sortable basic table">
         <thead>
           <th class="four wide">Name</th>
           <th>Validates</th>
@@ -195,7 +195,197 @@ type        : 'UI Behavior'
         </tbody>
       </table>
     </div>
+
+    <div class="inline example">
+      <h4 class="ui header">Keyboard Shortcuts & Events</h4>
+      <p>
+        Form will automatically attach events to specially labeled form fields
+      </p>
+      <ul class="ui list">
+        <li>Fields will blur on <code>escape</code> key press</li>
+        <li>Fields will submit form on <code>enter</code></li>
+        <li>Submit events will be attached to <code>click</code> on any element inside the form with class  <code>submit</code></li>
+        <li>Reset events will be attached to <code>click</code> on any element inside the form with class <code>reset</code></li>
+        <li>Clear events will be attached to <code>click</code> on any element inside the form with class <code>clear</code></li>
+      </ul>
+      <form class="ui form segment">
+        <div class="field">
+          <label>Test Field</label>
+          <input placeholder="Test Field" name="name" type="text">
+        </div>
+        <div class="ui blue submit button">Submit</div>
+        <div class="ui reset button">Reset</div>
+        <div class="ui clear button">Clear</div>
+      </form>
+    </div>
+
+    <div class="inline example">
+      <h4 class="ui header">Reset / Clear Fields</h4>
+      <p>
+        Calling <code>$('form').form('reset')</code>, or clicking any reset element will return all form values to their <em>default value</em>. This is the value the form fields were set to when the page loaded.
+      </p>
+      <p>Calling <code>$('form').form('clear')</code> will remove all values from form fields and reset dropdowns to placeholder text</p>
+      <div class="ui ignored info message">
+        Reset and clear will modify all form fields, not just those which have validation rules
+      </div>
+      <form class="ui form segment">
+        <div class="two fields">
+          <div class="field">
+            <label>Name</label>
+            <input placeholder="First Name" name="name" type="text">
+          </div>
+          <div class="field">
+            <label>Gender</label>
+            <div class="ui selection dropdown">
+              <input name="gender" type="hidden">
+              <div class="default text">Gender</div>
+              <i class="dropdown icon"></i>
+              <div class="menu">
+                <div class="item" data-value="male">Male</div>
+                <div class="item" data-value="female">Female</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <label>Username</label>
+          <input placeholder="Username" name="username" type="text">
+        </div>
+        <div class="field">
+          <label>Password</label>
+          <input name="password" type="password">
+        </div>
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input name="terms" type="checkbox">
+            <label>I agree to the terms and conditions</label>
+          </div>
+        </div>
+        <div class="ui blue submit button">Submit</div>
+        <div class="ui reset button">Reset</div>
+        <div class="ui clear button">Clear</div>
+      </form>
+    </div>
+
+    <div class="writing no example">
+      <h4 class="ui header">Writing Values</h4>
+      <p>
+        Form includes behaviors for reading from and writing to form fields.
+      </p>
+      <div class="code" data-demo="true">
+      $('.writing.example form')
+        // set one value
+        .form('set value', 'name', 'Jack')
+
+        // set several values
+        .form('set values', {
+          name     : 'Jack',
+          gender   : 'male',
+          username : 'jlukic',
+          password : 'youdliketoknow',
+          terms    : true
+        })
+      ;
+      </div>
+      <form class="ui form segment">
+        <div class="two fields">
+          <div class="field">
+            <label>Name</label>
+            <input placeholder="First Name" name="name" type="text">
+          </div>
+          <div class="field">
+            <label>Gender</label>
+            <div class="ui selection dropdown">
+              <input name="gender" type="hidden">
+              <div class="default text">Gender</div>
+              <i class="dropdown icon"></i>
+              <div class="menu">
+                <div class="item" data-value="male">Male</div>
+                <div class="item" data-value="female">Female</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <label>Username</label>
+          <input placeholder="Username" name="username" type="text">
+        </div>
+        <div class="field">
+          <label>Password</label>
+          <input name="password" type="password">
+        </div>
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input name="terms" type="checkbox">
+            <label>I agree to the terms and conditions</label>
+          </div>
+        </div>
+        <div class="ui blue submit button">Submit</div>
+        <div class="ui clear button">Clear</div>
+      </form>
+    </div>
+
+    <div class="get no example">
+      <h4 class="ui header">Getting Values</h4>
+      <p>
+        You can also read values from form fields using <code>get value</code> and <code>get values</code>
+      </p>
+      <div class="ui ignored info message">
+        Although <code>get values</code> allows you to use any matching identifier, returned values will always use the corresponding <code>name</code> attribute of the element.
+      </div>
+      <div class="code" data-demo="true">
+      var
+        $form = $('.get.example form'),
+        // get one value
+        name = $form.form('get value', 'name'),
+        // get list of values
+        fields = $form.form('get values', ['name', 'gender']),
+        // get all values
+        allFields = $form.form('get values')
+      ;
+      console.log(name);
+      console.log(fields);
+      console.log(allFields);
+      </div>
+      <form class="ui form segment">
+        <div class="two fields">
+          <div class="field">
+            <label>Name</label>
+            <input placeholder="First Name" name="name" type="text">
+          </div>
+          <div class="field">
+            <label>Gender</label>
+            <div class="ui selection dropdown">
+              <input name="gender" type="hidden">
+              <div class="default text">Gender</div>
+              <i class="dropdown icon"></i>
+              <div class="menu">
+                <div class="item" data-value="male">Male</div>
+                <div class="item" data-value="female">Female</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <label>Username</label>
+          <input placeholder="Username" name="username" type="text">
+        </div>
+        <div class="field">
+          <label>Password</label>
+          <input name="password" type="password">
+        </div>
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input name="terms" type="checkbox">
+            <label>I agree to the terms and conditions</label>
+          </div>
+        </div>
+        <div class="ui blue submit button">Submit</div>
+      </form>
+    </div>
+
   </div>
+
   <div class="ui tab" data-tab="examples">
 
     <h2 class="ui dividing header">Examples</h2>
@@ -441,6 +631,22 @@ type        : 'UI Behavior'
       <tr>
         <td>get field(id)</td>
         <td>Returns element with matching name, id, or data-validate metadata to ID</td>
+      </tr>
+      <tr>
+        <td>get value(id)</td>
+        <td>Returns value of element with id</td>
+      </tr>
+      <tr>
+        <td>get values(ids)</td>
+        <td>Returns object of element values that match array of ids. If no IDS are passed will return all fields</td>
+      </tr>
+      <tr>
+        <td>set value(id)</td>
+        <td>Sets value of element with id</td>
+      </tr>
+      <tr>
+        <td>set values(values)</td>
+        <td>Sets key/value pairs from passed values object to matching ids</td>
       </tr>
       <tr>
         <td>get validation(element)</td>

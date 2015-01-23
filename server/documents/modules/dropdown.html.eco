@@ -1566,16 +1566,45 @@ themes      : ['Default']
         </div>
       </div>
     </div>
-    <div class="restore dropdown example">
-      <h4 class="ui header">Restoring Defaults</h4>
-      <p>You can restore a dropdown to its default value using javascript</p>
+
+    <div class="clear dropdown example">
+      <h4 class="ui header">Clearing Dropdown</h4>
+      <p>You can reset a form field to its placeholder value</p>
       <div class="ui selection dropdown">
         <input name="gender" type="hidden" />
-        <div class="default text">Default</div>
+        <div class="default text">Select a value</div>
         <i class="dropdown icon"></i>
         <div class="menu">
             <div class="item" data-value="0">Value</div>
             <div class="item" data-value="1">Another Value</div>
+        </div>
+       </div>
+
+      <div class="ui button">
+        Clear
+      </div>
+      <div class="evaluated code" data-type="javascript">
+        $('.clear.example .button')
+          .on('click', function() {
+            $('.clear.example .ui.dropdown')
+              .dropdown('clear')
+            ;
+          })
+        ;
+      </div>
+    </div>
+
+    <div class="restore dropdown example">
+      <h4 class="ui header">Restoring Defaults</h4>
+      <p>You can restore a dropdown to its value set on page load</p>
+      <div class="ui selection dropdown">
+        <input name="gender" type="hidden" value="default" />
+        <div class="text">Default</div>
+        <i class="dropdown icon"></i>
+        <div class="menu">
+            <div class="item" data-value="0">Value</div>
+            <div class="item" data-value="1">Another Value</div>
+            <div class="item" data-value="default">Default Value</div>
         </div>
        </div>
 
@@ -2142,6 +2171,10 @@ themes      : ['Default']
           <td>Hides dropdown</td>
         </tr>
         <tr>
+          <td>clear</td>
+          <td>Clears </td>
+        </tr>
+        <tr>
           <td>hide others</td>
           <td>Hides all other dropdowns that is not current dropdown</td>
         </tr>
@@ -2171,7 +2204,7 @@ themes      : ['Default']
         </tr>
         <tr>
           <td>set value(value)</td>
-          <td>Sets dropdown input to value</td>
+          <td>Sets dropdown input to value (does not update display state)</td>
         </tr>
         <tr>
           <td>get text</td>

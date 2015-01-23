@@ -28,7 +28,7 @@ semantic.validateForm.ready = function() {
   ;
 
   $.fn.form.settings.onSuccess = function() {
-    alert('Valid form!');
+    // alert('Valid form!');
     return false;
   };
 

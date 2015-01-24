@@ -205,6 +205,32 @@ semantic.ready = function() {
         }
       }
     },
+    swapCSS: function ($choice) {
+      if ($choice.data('rtl') == true) {
+        $('link[data-has-rtl]').each(function () {
+          var $this = $(this),
+              href = $this.prop('href')
+          ;
+          if (href.indexOf('.rtl.css') < 0) {
+            if(href.indexOf('.min.css') > 0)
+              $this.prop('href', href.replace('.min.css', '.rtl.min.css'));
+            else
+              $this.prop('href', href.replace('.css', '.rtl.css'));
+          }            
+
+        });
+      } else {
+        $('link[data-has-rtl]').each(function () {
+          var $this = $(this),
+              href = $this.prop('href')
+          ;
+          if (href.indexOf('.min.css') > 0)
+            $this.prop('href', href.replace('.rtl.min.css', '.min.css'));
+          else
+            $this.prop('href', href.replace('.rtl.css', '.css'));
+        });
+      }
+    },
 
     translatePage: function(languageCode, text, $choice) {
       languageDropdownUsed = true;
@@ -219,6 +245,9 @@ semantic.ready = function() {
         percent = $choice.data('percent') || 0,
         text    = $choice.text()
       ;
+
+      handler.swapCSS($choice);
+
       if(percent < 100 && languageDropdownUsed) {
         languageDropdownUsed = false;
         $languageModal

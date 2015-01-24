@@ -1,3 +1,25 @@
+﻿/*******************************
+        Highlighted Colors
+*******************************/
+
+h1::-moz-selection,
+h2::-moz-selection,
+h3::-moz-selection {
+  background-color: #F1C1C2;
+  color: #222222;
+}
+h1::selection,
+h2::selection,
+h3::selection {
+  background-color: #F1C1C2;
+  color: #222222;
+}
+.ui *::-moz-selection {
+  background-color: #CCE2FF;
+}
+.ui *::selection {
+  background-color: #CCE2FF;
+}
 
 /*******************************
              Global
@@ -14,7 +36,6 @@ pre {
   white-space: -o-pre-wrap;
   word-wrap: break-word;
 }
-/*rtl:ignore*/
 pre {
   background-color: #FFFFFF;
   text-align: left;
@@ -28,9 +49,6 @@ ul.list {
 ul.list li {
   list-style-position: outside;
 }
-
-
-/*rtl:ignore*/
 pre.console {
   background-color: transparent;
   line-height: 1.6;
@@ -46,7 +64,7 @@ code {
   font-family: "Monaco","Menlo","Ubuntu Mono","Consolas","source-code-pro",monospace;
   font-size: 12px;
   font-weight: bold;
-  margin: 0 2px 0px 0px;
+  margin: 0 0px 0px 2px;
   padding: 2px 4px;
   vertical-align: baseline;
 }
@@ -118,7 +136,7 @@ a:hover {
 }
 #example #toc .logo.image {
   width: 35px;
-  margin-right: 1em;
+  margin-left: 1em;
 }
 #example #toc .item {
   position: relative;
@@ -129,7 +147,7 @@ a:hover {
 #example #toc .item .circular.label {
   position: absolute;
   top: 0.75rem;
-  right: 1em;
+  left: 1em;
   opacity: 0.2;
   transition: background 0.3s ease;
 }
@@ -189,6 +207,9 @@ a:hover {
   border-bottom-color: #FFFFFF;
 }
 
+#example .header.segment .download.popup .grid {
+  max-width: 0px;
+}
 #example .header.segment .download.popup .choice.grid .column {
   width: 200px;
 }
@@ -197,7 +218,7 @@ a:hover {
   width: 350px;
 }
 #example .header.segment .download.popup .check.icon {
-  margin-left: -1em;
+  margin-right: -1em;
 }
 #example .header.segment .download.popup .framework.grid,
 #example .header.segment .download.popup .standalone.grid,
@@ -208,7 +229,7 @@ a:hover {
 
 #example.legacy .main.menu,
 #example.legacy .launch.button {
-  left: auto !important;
+  right: auto !important;
 }
 #example.scale.down.pushed .header.segment {
   padding-top: 30px;
@@ -247,8 +268,8 @@ a:hover {
 ---------------*/
 
 #example .advertisement {
-  float: right;
-  margin-left: 2em;
+  float: left;
+  margin-right: 2em;
 }
 #example .index.advertisement {
   display: block;
@@ -258,10 +279,10 @@ a:hover {
   float: none;
   display: table-cell;
   vertical-align: top;
-  padding-left: 2em;
+  padding-right: 2em;
 }
 #example #carbonads-container {
-  float: right;
+  float: left;
 }
 #example .advertisement .carbonad {
   -moz-border-radius: 5px;
@@ -275,7 +296,7 @@ a:hover {
   line-height: 1.3;
 }
 #example .carbonad-tag {
-  text-align: left;
+  text-align: right;
 }
 #example .inverted.advertisement .carbonad {
   background-color: rgba(0, 0, 0, 0.25);
@@ -302,7 +323,7 @@ a:hover {
 #example .main.container a.anchor {
   height: 1px;
   position: absolute;
-  right: 100%;
+  left: 100%;
   top: -2.5em;
   width: 1px;
 }
@@ -314,7 +335,7 @@ a:hover {
 
 #example .fixed.column {
   position: absolute;
-  right: 2em;
+  left: 2em;
   top: 0px;
   width: 300px;
 }
@@ -354,7 +375,7 @@ body#example {
   width: 100%;
 }
 #example .introduction .theme.buttons {
-  margin: -0.1em 0em 0em 0.5em;
+  margin: -0.1em 0.5em 0em 0em;
   vertical-align: middle;
 }
 /*--------------
@@ -376,16 +397,16 @@ body#example {
   opacity: 0.95;
 }
 
-#example.pushable.left.overlay .fixed.launch.button {
+#example.pushable.right.overlay .fixed.launch.button {
   transform: translate3d(0, 0, 0);
 }
 #example.pushable.overlay.left.pushed .fixed.launch.button {
-  transform: translate3d(260px, 0, 0);
+  transform: translate3d(-260px, 0, 0);
 }
 #example .fixed.launch.button {
   position: fixed;
   top: 63px;
-  left: -1px;
+  right: -1px;
 
   width: 55px;
   height: auto;
@@ -417,7 +438,7 @@ body#example {
   position: absolute;
   white-space: nowrap;
   top: auto;
-  left: 54px;
+  right: 54px;
   opacity: 0;
   -webkit-transition:
     0.3s opacity 0.3s
@@ -444,11 +465,11 @@ body#example {
 
 
 #example .shortcuts {
-  float: right;
+  float: left;
   clear: both;
 }
 #example .launch.button .icon {
-  margin-left: 0px;
+  margin-right: 0px;
 }
 
 /*----------------
@@ -483,7 +504,7 @@ body#example {
   display: none !important;
 }
 #example.basic .container {
-  right: 0px !important;
+  left: 0px !important;
 }
 #example.basic .main.container .introduction {
   font-size: 16px;
@@ -500,7 +521,7 @@ body#example {
    Overview Mode
 -----------------*/
 
-#example .right.floated.overview.button {
+#example .left.floated.overview.button {
   margin-bottom: 0.5em;
 }
 
@@ -523,7 +544,7 @@ body#example {
 #example.overview .example p {
   font-size: 1rem;
   font-weight: normal;
-  padding: 0em 0em 0em 0.5em;
+  padding: 0em 0.5em 0em 0em;
   width: auto;
   line-height: 1.4;
 }
@@ -554,7 +575,6 @@ body#example {
 
 
 #example .segment pre {
-  background-color: transparent;
   margin: 0em;
   padding: 0em;
 }
@@ -586,7 +606,7 @@ body#example {
 }
 #example .existing.segment .title + em,
 #example .instructive.segment .title + em {
-  float: right;
+  float: left;
 }
 #example .label + .code {
   margin-top: 1.5em;
@@ -643,6 +663,12 @@ body#example {
   margin: -0.5em 0em 2em;
 }
 
+/* Sticky */
+#example .sticky.example .rail > .wireframe.image,
+#example .pushing.example .rail > .wireframe.image {
+  height: 102px;
+}
+
 #example .pushing.example .rail .sticky {
   margin: 2em 0em;
 }
@@ -670,7 +696,7 @@ body#example {
   margin-bottom: 0em;
 }
 #example .example .toggle.button {
-  min-width: 100px;
+  min-width: 200px;
 }
 
 
@@ -704,8 +730,8 @@ body#example {
 #example .clearing.example {
   overflow: hidden;
   clear: both;
-  padding-left: 1px;
   padding-right: 1px;
+  padding-left: 1px;
   padding-bottom: 1px;
 }
 #example .main.container:after {
@@ -723,12 +749,6 @@ body#example {
 #example .main.container > .tab > h2{
   position: relative;
   margin: 5rem 0rem 3rem;
-}
-#example .main.container .examples > h3,
-#example .main.container > h3,
-#example .main.container > .tab > h3{
-  position: relative;
-  margin: 3rem 0rem 2rem;
 }
 #example .main.container .examples > .rail + h2,
 #example .main.container > .rail + h2,
@@ -753,14 +773,12 @@ body#example {
   padding-top: 0px;
   border-top: none;
 }
+#example .another.example i.code,
 #example .example:first-child i.code,
 #example h2 + .example i.code,
 #example h3 + .example i.code,
 #example h4 + .example i.code {
   top: 0.4em;
-}
-#example .another.example i.code {
-  top: 1em;
 }
 
 /* Spaced */
@@ -789,8 +807,8 @@ body#example {
   cursor: pointer;
   position: absolute;
 
-  top: 2rem;
-  right: 0px;
+  top: 3rem;
+  left: 0px;
   margin: 0;
   opacity: 0.1;
 
@@ -815,7 +833,7 @@ body#example {
   opacity: 1;
 }
 #example .example .grid i.code {
-  right: 25%;
+  left: 25%;
 }
 
 #example .pointing.label + .existing.segment {
@@ -826,36 +844,17 @@ body#example {
   display: none;
 }
 #example .example .annotation {
-  margin: 0em;
+  margin: 1em 0em;
 }
+#example .another.example .annotation {
+  margin: 2em 0em 0em;
+}
+
 
 #example .transition.example .ui.button {
   margin-bottom: 0.5em;
 }
 
-/* HTML Wrapper */
-#example .example > .html {
-  padding: 0em;
-  transition:
-    box-shadow 0.2s ease,
-    padding 0.2s ease
-  ;
-  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
-}
-#example .example > .html > .top.attached.label {
-  display: none;
-  background-color: #F8F8F8;
-  box-shadow: 0px 0px 0px 1px #DDDDDD;
-}
-#example .example > .html.segment > .attached.label {
-  display: block;
-}
-#example .example > .html.segment {
-  padding: 3.5em 1em 1em;
-}
-#example .example .instructive.segment {
-  margin-top: -1px;
-}
 
 /* Fixes for UI */
 #example .segment > .dimmer {
@@ -883,7 +882,7 @@ body#example {
 #example .highlighted.example .grid:before {
   position: absolute;
   top: 1rem;
-  left: 1rem;
+  right: 1rem;
   background-color: #F0F0F0;
   content: '';
   width: calc(100% - 2rem);
@@ -1079,39 +1078,39 @@ body.progress.animated .ui.progress .bar {
 }
 #example .position.example .segment .icon:nth-of-type(1) {
   top: 0em;
-  left: 0em;
+  right: 0em;
 }
 #example .position.example .segment .icon:nth-of-type(2) {
   top: 0em;
-  left: 50%;
-  margin-left: -1em;
+  right: 50%;
+  margin-right: -1em;
 }
 #example .position.example .segment .icon:nth-of-type(3) {
   top: 0em;
-  right: 0em;
+  left: 0em;
 }
 #example .position.example .segment .icon:nth-of-type(4) {
   top: 50%;
   margin-top: -1em;
-  right: 0em;
+  left: 0em;
 }
 #example .position.example .segment .icon:nth-of-type(5) {
   bottom: 0em;
-  right: 0em;
+  left: 0em;
 }
 #example .position.example .segment .icon:nth-of-type(6) {
   bottom: 0em;
-  left: 50%;
-  margin-left: -1em;
+  right: 50%;
+  margin-right: -1em;
 }
 #example .position.example .segment .icon:nth-of-type(7) {
   bottom: 0em;
-  left: 0em;
+  right: 0em;
 }
 #example .position.example .segment .icon:nth-of-type(8) {
   top: 50%;
   margin-top: -1em;
-  left: 0em;
+  right: 0em;
 }
 
 #example .main.ui.grid {
@@ -1123,7 +1122,7 @@ body.progress.animated .ui.progress .bar {
 ---------------*/
 
 #example .icon.example .grid {
-  text-align: left;
+  text-align: right;
 }
 #example .icon.example .grid .code {
   position: static;
@@ -1468,8 +1467,8 @@ body.progress.animated .ui.progress .bar {
   background-color: #FFFFFF;
   margin: 0em auto;
   box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.05);
-  border-left: 1px solid #DDDDDD;
   border-right: 1px solid #DDDDDD;
+  border-left: 1px solid #DDDDDD;
   border-bottom: 1px solid #DDDDDD;
   padding: 2em 2em 7em;
   z-index: 1;
@@ -1477,14 +1476,12 @@ body.progress.animated .ui.progress .bar {
 #example .wide.main.container {
   width: 80%;
   margin: 0 auto;
-  right: 0;
+  left: 0;
   max-width: 1140px;
 }
 
-#example .main.container > .right.rail .sticky,
-#example .main.container > .tab > .examples > .right.rail .sticky,
-#example .main.container > .tab > .right.rail .sticky {
-  width: 300px;
+#example .main.container > .left.rail .sticky,
+#example .main.container > .tab > .left.rail .sticky {
   padding: 2em 0em;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
@@ -1571,7 +1568,7 @@ body.progress.animated .ui.progress .bar {
     display: block;
   }
   #example .container {
-    right: 110px;
+    left: 110px;
   }
 }
 
@@ -1580,8 +1577,8 @@ body.progress.animated .ui.progress .bar {
     display: block;
   }
   #example .advertisement {
-    left: 100%;
-    padding-left: 0em;
+    right: 100%;
+    padding-right: 0em;
     position: absolute;
     top: -1em;
     vertical-align: top;
@@ -1590,29 +1587,25 @@ body.progress.animated .ui.progress .bar {
 @media only screen and (min-width : 998px) and (max-width: 1200px) {
   #example .header.segment .container {
     width: 878px;
-    right: -24px;
+    left: -24px;
   }
   #example .tab.header.segment .tabular.menu {
     width: 680px;
   }
   #example .container {
     width: 680px;
-    right: 75px;
+    left: 75px;
     margin: 0em auto;
   }
   #example .container .right.rail {
     width: 200px;
-    padding-left: 0em;
-  }
-  #example .main.container > .right.rail .sticky,
-  #example .main.container > .tab > .right.rail .sticky {
-    width: 200px;
+    padding-right: 0em;
   }
 }
 @media only screen and (min-width : 1200px) and (max-width: 1355px) {
   #example .container {
     width: 765px;
-    right: 128px;
+    left: 128px;
     margin: 0em auto;
   }
 }
@@ -1683,13 +1676,13 @@ body.progress.animated .ui.progress .bar {
   #example .carbonad-tag {
     float: none;
     display: block;
-    text-align: left;
-    margin-left: 160px;
+    text-align: right;
+    margin-right: 160px;
     width: 170px;
   }
   #example:not(.index) .introduction .button {
     float: none;
-    margin: 0 0.5em 0.5em 0;
+    margin: 0 0 0.5em 0.5em;
   }
 }
 
@@ -1777,7 +1770,7 @@ body.progress.animated .ui.progress .bar {
 }
 @media only screen and (max-width : 998px) {
   #example .examples {
-    margin-right: 230px;
+    margin-left: 230px;
     padding: 1px;
   }
   #example .fixed.column,
@@ -1787,7 +1780,7 @@ body.progress.animated .ui.progress .bar {
 }
 @media only screen and (min-width : 998px) {
   #example .examples {
-    margin-right: 280px;
+    margin-left: 280px;
     padding: 1px;
   }
   #example .fixed.column,
@@ -1796,7 +1789,6 @@ body.progress.animated .ui.progress .bar {
   }
   #example > .pusher {
     display: flex;
-    overflow: visible;
     min-height: 100vh;
     flex-direction: column;
   }

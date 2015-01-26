@@ -10,5 +10,5 @@ window.less = {
 <% if 'development' in @getEnvironments(): %>
 <script src="/javascript/library/less.js"></script>
 <% else: %>
-<script src="/javascript/library/less.js"></script>
+<script src="/javascript/library/less.min.js"></script>
 <% end %>

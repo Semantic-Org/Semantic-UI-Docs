@@ -1139,12 +1139,12 @@ semantic.ready = function() {
       }
     })
     .dropdown({
-      allowTab : false,
-      on       : 'click',
-      onShow   : function() {
+      allowTab   : false,
+      on         : 'click',
+      onShow     : function() {
         $(this).popup('hide');
       },
-      onChange: handler.translatePage
+      onChange : handler.translatePage
     })
   ;
 

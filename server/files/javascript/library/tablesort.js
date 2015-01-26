@@ -31,13 +31,13 @@
         cache       = [],
         fragment    = $('<div/>'),
         sortValueForCell = function(th, td, sorter) {
-          var 
+          var
             sortBy
           ;
           if(th.data().sortBy) {
             sortBy = th.data().sortBy;
-            return (typeof sortBy === 'function') 
-              ? sortBy(th, td, sorter) 
+            return (typeof sortBy === 'function')
+              ? sortBy(th, td, sorter)
               : sortBy
             ;
           }
@@ -139,7 +139,7 @@
         // Sort value A
         if(cache[aIndex]) {
           a = cache[aIndex];
-        } 
+        }
         else {
           a = sortValueForCell(th, self.cellToSort(a), self);
           cache[aIndex] = a;
@@ -147,7 +147,7 @@
         // Sort Value B
         if(cache[bIndex]) {
           b = cache[bIndex];
-        } 
+        }
         else {
           b = sortValueForCell(th, self.cellToSort(b), self);
           cache[bIndex]= b;

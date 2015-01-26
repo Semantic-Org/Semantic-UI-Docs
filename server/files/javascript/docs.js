@@ -330,7 +330,7 @@ semantic.ready = function() {
         .html(html)
       ;
       $sticky = $('<div />')
-        .addClass('ui sticky hidden transition')
+        .addClass('ui sticky')
         .html($followMenu)
       ;
       $rail = $('<div />')
@@ -338,14 +338,10 @@ semantic.ready = function() {
         .html($sticky)
         .prependTo($container)
       ;
-      $sticky
-        .transition('fade', function() {
-          $sticky.sticky({
-            context: $container,
-            offset: 50
-          });
-        })
-      ;
+      $sticky.sticky({
+        context: $container,
+        offset: 50
+      });
       $followMenu
         .accordion({
           exclusive: false,
@@ -992,7 +988,9 @@ semantic.ready = function() {
           });
         },
         onTabLoad : function() {
-          $sticky.filter(':visible').sticky('refresh');
+          $(this).find('> .rail .ui.sticky, .fixed .ui.sticky')
+            .sticky('refresh')
+          ;
         }
       })
     ;

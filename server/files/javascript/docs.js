@@ -54,6 +54,7 @@ semantic.ready = function() {
     $pageTabs            = $('.tab.header.segment .menu .item'),
 
     $languageDropdown    = $('.language.dropdown'),
+    $chineseModal        = $('.chinese.modal'),
     $languageModal       = $('.language.modal'),
 
     $downloadPopup       = $('.download.button'),
@@ -219,7 +220,15 @@ semantic.ready = function() {
         percent = $choice.data('percent') || 0,
         text    = $choice.text()
       ;
-      if(percent < 100 && languageDropdownUsed) {
+      if(languageCode == 'zh' && window.location.host !== 'semantic-ui.cn') {
+        $chineseModal
+          .modal({
+            closable: false
+          })
+          .modal('show')
+        ;
+      }
+      else if(percent < 100 && languageDropdownUsed) {
         languageDropdownUsed = false;
         $languageModal
           .modal()

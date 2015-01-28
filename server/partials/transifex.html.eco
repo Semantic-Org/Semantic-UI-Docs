@@ -1,5 +1,4 @@
-<% if ('development' in @getEnvironments()) or (@document.title? and @document.title is 'Page Not Found'): %>
-<% else: %>
+
 <script type="text/javascript">
   window.liveSettings = {
     api_key    : '9ede3015b9f84c1aabc81ab839c55d74',
@@ -15,4 +14,3 @@
   };
 </script>
 <script type="text/javascript" src="http://cdn.transifex.com/live.js"></script>
-<% end %>

@@ -1550,7 +1550,14 @@ themes      : ['Default']
             <span class="text">Dogs</span>
             <div class="menu">
               <div class="item">Shiba Inu</div>
-              <div class="item">Poodle</div>
+              <div class="item">
+                <i class="dropdown icon"></i>
+                <span class="text">Poodle</span>
+                <div class="menu">
+                  <div class="item">Toy</div>
+                  <div class="item">Standard</div>
+                </div>
+              </div>
               <div class="item">Labrador</div>
             </div>
           </div>

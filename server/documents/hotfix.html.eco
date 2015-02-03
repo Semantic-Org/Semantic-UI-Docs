@@ -1,4 +1,3 @@
-
 ---
 layout     : 'blank'
 css        : 'hotfix'
@@ -10,85 +9,12 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script type="text/javascript">
 $(document).ready(function() {
-$('.ui.dropdown')
-    .dropdown()
-;
-
-$('.ui.checkbox')
-    .checkbox()
-;
-
-$('.ui.serialize.button')
-    .on('click', function () {
-        var data = $('.ui.form').form('serialize');
-
-        console.warn(data);
-    })
-;
-
-$('.ui.form')
-    .form({
-        name: {
-            identifier: 'name',
-            rules: [
-                {
-                    type: 'empty',
-                    prompt: 'Please enter your name'
-                }
-            ]
-        },
-        gender: {
-            identifier: 'gender',
-            rules: [
-                {
-                    type: 'empty',
-                    prompt: 'Please select a gender'
-                }
-            ]
-        },
-        username: {
-            identifier: 'username',
-            rules: [
-                {
-                    type: 'empty',
-                    prompt: 'Please enter a username'
-                }
-            ]
-        },
-        password: {
-            identifier: 'password',
-            rules: [
-                {
-                    type: 'empty',
-                    prompt: 'Please enter a password'
-                },
-                {
-                    type: 'length[6]',
-                    prompt: 'Your password must be at least 6 characters'
-                }
-            ]
-        },
-        fruit: {
-            identifier: 'fruit',
-            rules: [
-                {
-                    type: 'checked',
-                    prompt: 'You must select at least one fruit?'
-                }
-            ]
-        },
-        terms: {
-            identifier: 'terms',
-            rules: [
-                {
-                    type: 'checked',
-                    prompt: 'You must agree to the terms and conditions'
-                }
-            ]
-        }
-    })
-;
-
+  $('.ui.button')
+      .popup({
+        debug: true,
+        transition: 'slide down'
+      })
+  ;
 });
 </script>
 
@@ -97,69 +23,27 @@ $('.ui.form')
 </style>
 
 <div style="max-width: 1000px;margin:2em auto;">
-  <h2 class="ui dividing header">
-    Form
-    <div class="ui green label">Feature</div>
-    <div class="ui teal label">Enhacement</div>
-    <div class="sub header">Reset the form to its default values.</div>
-  </h2>
 
-  <div class="ui form segment">
-    <p>Tell Us About Yourself</p>
-    <div class="two fields">
-      <div class="field">
-        <label>Name</label>
-        <input placeholder="First Name" name="name" type="text">
-      </div>
-      <div class="field">
-        <label>Gender</label>
-        <div tabindex="0" class="ui selection dropdown">
-          <input name="gender" type="hidden">
-          <div class="default text">Gender</div>
-          <i class="dropdown icon"></i>
-          <div tabindex="-1" class="menu">
-            <div class="item" data-value="male">Male</div>
-            <div class="item" data-value="female">Female</div>
-          </div>
+    <div class="ui button">Show flowing popup</div>
+
+    <div class="ui flowing popup">
+      <div class="ui three column divided equal height center aligned grid">
+        <div class="column">
+          <h4 class="ui header">Basic Plan</h4>
+          <p><b>2</b> projects, $10 a month</p>
+          <div class="ui button">Choose</div>
+        </div>
+        <div class="column">
+          <h4 class="ui header">Business Plan</h4>
+          <p><b>5</b> projects, $20 a month</p>
+          <div class="ui button">Choose</div>
+        </div>
+        <div class="column">
+          <h4 class="ui header">Premium Plan</h4>
+          <p><b>8</b> projects, $25 a month</p>
+          <div class="ui button">Choose</div>
         </div>
       </div>
     </div>
-    <div class="field">
-      <label>Username</label>
-      <input placeholder="Username" name="username" type="text">
-    </div>
-    <div class="field">
-      <label>Password</label>
-      <input name="password" type="password">
-    </div>
-    <div class="grouped inline fields">
-      <div class="field">
-        <div class="ui radio checkbox">
-          <input name="fruit" checked="checked" type="radio" value="apple">
-          <label>Apple</label>
-        </div>
-      </div>
-      <div class="field">
-        <div class="ui radio checkbox">
-          <input name="fruit" type="radio" value="orange">
-          <label>Orange</label>
-        </div>
-      </div>
-      <div class="field">
-        <div class="ui radio checkbox">
-          <input name="fruit" type="radio" value="lemon">
-          <label>Lemon</label>
-        </div>
-      </div>
-    </div>
-    <div class="inline field">
-      <div class="ui checkbox">
-        <input name="terms" type="checkbox">
-        <label>I agree to the terms and conditions</label>
-      </div>
-    </div>
-    <div class="ui blue submit button">Submit</div>
-    <div class="ui reset button">Reset</div>
-    <div class="ui serialize basic icon button"><i class="database icon"></i></div>
   </div>
 </div>

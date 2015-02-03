@@ -8,7 +8,6 @@
   <link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/button.less" />
 
   <%- @partial('tracking') %>
-  <%- @partial('transifex') %>
 </head>
 <body id="example" class="<%= @document.css %>" ontouchstart="">
 
@@ -52,9 +51,10 @@
   </script>
   <% end %>
 
-  <script src="/javascript/library/highlight.js"></script>
-  <script src="/javascript/library/highlight.languages.js"></script>
-  <script src="/javascript/library/easing.js"></script>
+  <%- @partial('transifex') %>
+  <script src="/javascript/library/highlight.min.js"></script>
+  <script src="/javascript/library/highlight.languages.min.js"></script>
+  <script src="/javascript/library/easing.min.js"></script>
   <script src="/javascript/library/typing.min.js"></script>
   <%- @partial('ui-javascript') %>
   <script src="/javascript/docs.js"></script>

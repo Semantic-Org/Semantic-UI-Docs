@@ -46,6 +46,11 @@ themes      : ['Default']
     <div class="dropdown example">
       <h4 class="ui header">Selection</h4>
       <p>A dropdown can be used to select between choices in a form</p>
+      <div class="ui ignored info message">
+        <div class="header">Converting Select Elements</div>
+        <p>You can initialize a selection dropdown directly on a select element, any option that is given a blank value will automatically be converted into a placeholder</p>
+        <p>Keep in mind however, if you initialize a dropdown directly on a select element, the dropdown contents will be hidden until javascript can render the element, causing a flash of unstyled content.</p>
+      </div>
       <div class="ui selection dropdown">
         <input type="hidden" name="gender">
         <div class="default text">Gender</div>
@@ -57,11 +62,6 @@ themes      : ['Default']
       </div>
     </div>
     <div class="another dropdown example">
-      <div class="ui ignored info message">
-        <div class="header">Converting Select Elements</div>
-        <p>You can initialize a selection dropdown directly on a select element, any option that is given a blank value will automatically be converted into a placeholder</p>
-        <p>Keep in mind however, if you initialize a dropdown directly on a select element, the dropdown contents will be hidden until javascript can render the element, causing a flash of unstyled content.</p>
-      </div>
       <select class="ui dropdown">
         <option value="">Gender</option>
         <option value="1">Male</option>
@@ -1550,7 +1550,14 @@ themes      : ['Default']
             <span class="text">Dogs</span>
             <div class="menu">
               <div class="item">Shiba Inu</div>
-              <div class="item">Poodle</div>
+              <div class="item">
+                <i class="dropdown icon"></i>
+                <span class="text">Poodle</span>
+                <div class="menu">
+                  <div class="item">Toy</div>
+                  <div class="item">Standard</div>
+                </div>
+              </div>
               <div class="item">Labrador</div>
             </div>
           </div>

@@ -220,30 +220,33 @@ semantic.ready = function() {
         percent = $choice.data('percent') || 0,
         text    = $choice.text()
       ;
-      if(languageCode == 'zh' && window.location.host !== 'semantic-ui.cn') {
-        $chineseModal
-          .modal({
-            closable: false
-          })
-          .modal('show')
-        ;
-      }
-      else if(percent < 100 && languageDropdownUsed) {
-        languageDropdownUsed = false;
-        $languageModal
-          .modal()
-          .find('.header .name')
-            .html(text)
-            .end()
-          .find('.complete')
-            .html(percent)
-            .end()
-        ;
-        $languageModal
-          .modal('show', function() {
-            $('.language.modal .progress .bar').css('width', percent + '%');
-          })
-        ;
+      // dont trigger on translate event every page load
+      if(languageDropdownUsed) {
+        if(languageCode == 'zh' && window.location.host !== 'semantic-ui.cn') {
+          $chineseModal
+            .modal({
+              closable: false
+            })
+            .modal('show')
+          ;
+        }
+        else if(percent < 100) {
+          languageDropdownUsed = false;
+          $languageModal
+            .modal()
+            .find('.header .name')
+              .html(text)
+              .end()
+            .find('.complete')
+              .html(percent)
+              .end()
+          ;
+          $languageModal
+            .modal('show', function() {
+              $('.language.modal .progress .bar').css('width', percent + '%');
+            })
+          ;
+        }
       }
     },
 

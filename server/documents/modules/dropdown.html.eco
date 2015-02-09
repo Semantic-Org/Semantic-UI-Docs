@@ -1675,7 +1675,7 @@ themes      : ['Default']
       <div class="ui ignored info icon message">
         <i class="help circle icon"></i>
         <div class="content">
-          <p>A dropdown will automatically select on page load any menu item that includes the currently value of <code>text</code> or your dropdown's <code>hidden input</code> value.</p>
+          <p>A dropdown will automatically select on page load any menu item that includes the current value of <code>text</code> or your dropdown's <code>hidden input</code> value.</p>
           <p>This is used to preserve a user's selection on page navigation and will automatically remove and default text placeholder formatting.</p>
         </div>
       </div>

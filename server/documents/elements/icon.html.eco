@@ -49,8 +49,8 @@ themes      : ['Default']
         <div class="column"><i class="comments outline icon"></i>Comments Outline</div>
         <div class="column"><i class="copyright icon"></i>Copyright</div>
         <div class="column"><i class="dashboard icon"></i>Dashboard</div>
-        <div class="column"><i class="external link square icon"></i>External Link Square</div>
-        <div class="column"><i class="external link icon"></i>External Link</div>
+        <div class="column"><i class="external square icon"></i>External Square</div>
+        <div class="column"><i class="external icon"></i>External</div>
         <div class="column"><i class="eyedropper icon"></i>Eyedropper</div>
         <div class="column"><i class="feed icon"></i>Feed</div>
         <div class="column"><i class="find icon"></i>Find</div>

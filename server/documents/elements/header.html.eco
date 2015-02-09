@@ -61,11 +61,43 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
   </div>
 
   <div class="example">
-    <h4 class="ui header">Sub Headers</h4>
-    <p>Headers may contain sub headers giving further context to the section</p>
+    <h4 class="ui header">Image</h4>
+    <p>A header can be displayed alongside an image</p>
     <h2 class="ui header">
-      Account Settings
-      <div class="sub header">Manage your account settings and set e-mail preferences.</div>
+      <img src="/images/icons/school.png">
+      <div class="content">
+        Learn More
+      </div>
+    </h2>
+    <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+  </div>
+  <div class="another example">
+    <h2 class="ui header">
+      <img src="/images/avatar/large/chris.jpg" class="ui circular image">
+      Chris
+    </h2>
+    <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+  </div>
+  <div class="another example">
+    <h2 class="ui header">
+      <img src="/images/icons/plugin.png">
+      <div class="content">
+        Plug-ins
+        <div class="sub header">Check out our plug-in marketplace</div>
+      </div>
+    </h2>
+    <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+  </div>
+
+
+  <div class="example">
+    <h4 class="ui header">Icon</h4>
+    <p>A header can be displayed alongside an icon</p>
+    <h2 class="ui header">
+      <i class="plug icon"></i>
+      <div class="content">
+        Uptime Guarantee
+      </div>
     </h2>
     <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
   </div>
@@ -74,8 +106,19 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
       <i class="settings icon"></i>
       <div class="content">
         Account Settings
-        <div class="sub header">Manage your account settings and set e-mail preferences.</div>
+        <div class="sub header">Manage your preferences</div>
       </div>
+    </h2>
+    <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+  </div>
+
+
+  <div class="example">
+    <h4 class="ui header">Sub Headers</h4>
+    <p>Headers may contain sub headers giving further context to the section</p>
+    <h2 class="ui header">
+      Account Settings
+      <div class="sub header">Manage your account settings and set e-mail preferences.</div>
     </h2>
     <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
   </div>
@@ -103,7 +146,7 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
   </div>
 
   <div class="example">
-    <h4 class="ui header">Icon</h4>
+    <h4 class="ui header">Emphasized Icon</h4>
     <p>A header can be formatted to emphasize an icon</p>
     <h2 class="ui icon header">
       <i class="settings icon"></i>
@@ -112,14 +155,14 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
         <div class="sub header">Manage your account settings and set e-mail preferences.</div>
       </div>
     </h2>
-    <img class="ui wireframe image" src="/images/wireframe/media-paragraph.png">
   </div>
+
   <div class="another example">
     <h2 class="ui center aligned icon header">
       <i class="circular users icon"></i>
       Friends
     </h2>
-    <img class="ui wireframe image" src="/images/wireframe/centered-paragraph.png">
+    <img class="ui centered wireframe image" src="/images/wireframe/centered-paragraph.png">
   </div>
 
 

@@ -23,27 +23,13 @@ $(document).ready(function() {
 </style>
 
 <div style="max-width: 1000px;margin:2em auto;">
+  <div class="ui stackable page grid">
+    <div class="right floated six wide column">
+      <div class="ui segment">right floated column</div>
+    </div>
 
-    <div class="ui button">Show flowing popup</div>
-
-    <div class="ui flowing popup">
-      <div class="ui three column divided equal height center aligned grid">
-        <div class="column">
-          <h4 class="ui header">Basic Plan</h4>
-          <p><b>2</b> projects, $10 a month</p>
-          <div class="ui button">Choose</div>
-        </div>
-        <div class="column">
-          <h4 class="ui header">Business Plan</h4>
-          <p><b>5</b> projects, $20 a month</p>
-          <div class="ui button">Choose</div>
-        </div>
-        <div class="column">
-          <h4 class="ui header">Premium Plan</h4>
-          <p><b>8</b> projects, $25 a month</p>
-          <div class="ui button">Choose</div>
-        </div>
-      </div>
+    <div class="ten wide column">
+      <div class="ui segment">normal column</div>
     </div>
   </div>
 </div>

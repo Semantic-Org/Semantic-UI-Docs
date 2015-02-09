@@ -299,7 +299,7 @@ semantic.ready = function() {
           var
             $currentHeader = $(this),
             $nextElements  = $currentHeader.nextUntil('h2'),
-            $examples      = $nextElements.find('.example').andSelf().filter('.example'),
+            $examples      = $nextElements.find('.example:not(.another)').andSelf().filter('.example:not(.another)'),
             activeClass    = (index === 0)
               ? 'active '
               : '',
@@ -685,7 +685,7 @@ semantic.ready = function() {
     createCode: function(type) {
       var
         $example        = $(this).closest('.example'),
-        $header         = $example.children('.ui.header:first-of-type').eq(0).add('p:first-of-type'),
+        $header         = $example.not('.another').children('.ui.header:first-of-type').eq(0).add('p:first-of-type'),
         $annotation     = $example.find('.annotation'),
         $code           = $annotation.find('.code'),
         $html           = $example.children('.html'),

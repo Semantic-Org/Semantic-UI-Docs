@@ -2343,6 +2343,11 @@ themes      : ['Default']
           <td>Whether menu items with sub-menus (categories) should be selectable</td>
         </tr>
         <tr>
+          <td>forceSelection</td>
+          <td>true</td>
+          <td>Whether search selection will force currently selected choice when element is blurred.</td>
+        </tr>
+        <tr>
           <td>sortSelect</td>
           <td>false</td>
           <td>Whether to sort values when creating a dropdown automatically from a select element.</td>

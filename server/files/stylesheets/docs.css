@@ -504,6 +504,7 @@ body#example {
 #example.basic .tab.header.segment .tabular.menu .active.item {
   background-color: #F9F9F9;
   border-bottom-color: #F9F9F9;
+  box-shadow: none;
 }
 
 #example.basic .main.container > .rail,

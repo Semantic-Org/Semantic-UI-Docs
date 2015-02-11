@@ -860,7 +860,7 @@ themes      : ['Default']
         <i class="header icon"></i>
         <i class="indent icon"></i>
         <i class="italic icon"></i>
-        <i class="link icon"></i>
+        <i class="linkify icon"></i>
         <i class="list icon"></i>
         <i class="ordered list icon"></i>
         <i class="outdent icon"></i>

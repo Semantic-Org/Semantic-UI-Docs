@@ -1,6 +1,7 @@
 ---
 layout      : 'default'
 css         : 'card'
+standalone  : true
 
 element     : 'card'
 elementType : 'view'

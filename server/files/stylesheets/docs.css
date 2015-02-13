@@ -1067,13 +1067,6 @@ body#example {
   margin-bottom: 0em;
 }
 
-/*--------------
-      Card
----------------*/
-
-body.card .even.example .card .description {
-  height: 55px;
-}
 
 /*--------------
    Progress

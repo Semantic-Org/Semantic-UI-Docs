@@ -433,6 +433,7 @@ semantic.ready = function() {
             dataType : 'text',
             urlData  : urlData,
             onSuccess: function(content) {
+              console.log(handler.less.parseFile(content));
               window.less.modifyVars( handler.less.parseFile(content) );
               $themeDropdown
                 .api({

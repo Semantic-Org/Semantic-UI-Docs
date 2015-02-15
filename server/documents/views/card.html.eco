@@ -1,6 +1,7 @@
 ---
 layout      : 'default'
 css         : 'card'
+standalone  : true
 
 element     : 'card'
 elementType : 'view'
@@ -347,7 +348,7 @@ themes      : ['Default', 'Basic', 'Classic']
   <div class="example">
     <h4 class="ui header">Link</h4>
     <p>A card can contain contain links as images, headers, or inside content</p>
-    <div class="ui yellow message">To make the entire content of a card link, check out the link variation below
+    <div class="ui ignored info message">To make the entire content of a card link, check out the link variation below
     </div>
     <div class="ui card">
       <a class="image" href="#">

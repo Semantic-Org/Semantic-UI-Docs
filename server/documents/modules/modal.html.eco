@@ -1,6 +1,7 @@
 ---
 layout      : 'default'
 css         : 'modal-page'
+standalone  : true
 
 element     : 'modal'
 elementType : 'module'
@@ -154,13 +155,19 @@ themes      : ['Default', 'Material', 'Fixed-width']
         <div class="ui header">Modal Header</div>
         <p>This is an example of expanded content that will cause the modal's dimmer to scroll</p>
         <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        <div class="ui divider"></div>
         <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        <div class="ui divider"></div>
         <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        <div class="ui divider"></div>
         <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        <div class="ui divider"></div>
         <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        <div class="ui divider"></div>
         <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        <div class="ui divider"></div>
         <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        <div class="ui divider"></div>
         <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
       </div>
     </div>

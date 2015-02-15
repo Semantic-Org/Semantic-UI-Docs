@@ -1,6 +1,7 @@
 ---
 layout      : 'default'
 css         : 'Grid'
+standalone  : true
 
 element     : 'grid'
 elementType : 'collection'
@@ -8,7 +9,6 @@ elementType : 'collection'
 title       : 'Grid'
 description : 'A grid is used to harmonize negative space in a layout'
 type        : 'UI Collection'
-standalone  : true
 
 themes      : ['Default', 'Fixed-width']
 ---
@@ -213,7 +213,7 @@ themes      : ['Default', 'Fixed-width']
       <h4 class="ui header">Page Grid Breakpoints</h4>
       <p>Semantic's page grid, by default, uses percentage values for page gutters. This means your page container will <b>constantly adjust</b> as the browser width changes, giving you the largest possible space for each breakpoint.</p>
       <p>Grids, rows, and columns can receive responsive classes to make them appear only on a particular device.</p>
-      <table class="ui definition table">
+      <table class="ui celled definition table">
         <thead>
           <tr>
             <th>Name</th>
@@ -262,10 +262,111 @@ themes      : ['Default', 'Fixed-width']
         </tbody>
       </table>
     </div>
-    <div class="highlighted example">
+    <div class="highlighted no example">
       <h4 class="ui header">Responsive Patterns</h4>
       <p>Semantic includes two common patterns for adjusting grids on different devices.</p>
-      <p>A <b>Doubling</b> grid automatically doubles its column width on each device jump. For example, four column computer grid, will jump to a two column grid on tablet, and one column on mobile.</p>
+
+      <p>A <code>doubling</code> grid automatically adjusts column width on each device jump. Usually this relationship is an exact doubling of columns, however some adjustments have been made for desplay flexibility. For example, six column computer grid, will jump to a three column grid on tablet, and a two column on mobile.</p>
+
+      <p>A <code>stackable</code> grid will always force a layout to use one column on mobile. These two patterns can also be used together to, for example, force a four column grid to one on mobile.</p>
+
+      <table class="ui celled compact definition table">
+        <thead>
+          <tr>
+            <th class="collapsing">Doubling Columns</th>
+            <th>Tablet</th>
+            <th>Mobile</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>16 Columns</td>
+            <td>8</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>15 Columns</td>
+            <td>7</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>14 Columns</td>
+            <td>7</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>13 Columns</td>
+            <td>7</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>12 Columns</td>
+            <td>6</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>11 Columns</td>
+            <td>5</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>10 Columns</td>
+            <td>5</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>9 Columns</td>
+            <td>4</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>8 Columns</td>
+            <td>4</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>7 Columns</td>
+            <td>3</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>6 Columns</td>
+            <td>3</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>5 Columns</td>
+            <td>3</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>4 Columns</td>
+            <td>2</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>3 Columns</td>
+            <td>2</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>2 Columns</td>
+            <td>8</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>1 Columns</td>
+            <td>8</td>
+            <td>1</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="highlighted example">
+      <h4 class="ui header">Doubling Grid</h4>
+
+      <p>A <code>doubling</code> grid will generally double column widths for each device jump.</p>
 
       <div class="ui grid">
         <div class="doubling eight column row">

@@ -3,6 +3,7 @@ layout      : 'default'
 css         : 'transition'
 element     : 'transition'
 elementType : 'module'
+standalone  : true
 
 title       : 'Transition'
 description : 'A transition is an animation usually used to move content in or out of view'
@@ -22,7 +23,176 @@ type        : 'UI Module'
     </div>
     <div class="examples">
 
-      <h2 class="ui dividing header">Emphasis</h2>
+      <h2 class="ui dividing header">Transitions</h2>
+
+      <div class="no example">
+        <h4 class="ui header">Scale</h4>
+        <p>An element can scale into or out of view</p>
+        <div class="code" data-demo="true">
+        $('.autumn.leaf')
+          .transition('scale')
+        ;
+        </div>
+      </div>
+
+      <div class="no example">
+        <h4 class="ui header">Fade</h4>
+        <p>An element can fade into or out of view descending and ascending</p>
+        <div class="code" data-demo="true">
+        $('.autumn.leaf')
+          .transition('fade')
+        ;
+        </div>
+        <div class="code" data-demo="true">
+        $('.autumn.leaf')
+          .transition('fade up')
+        ;
+        </div>
+        <div class="code" data-demo="true">
+        $('.autumn.leaf')
+          .transition('fade down')
+        ;
+        </div>
+        <div class="code" data-demo="true">
+        $('.autumn.leaf')
+          .transition('fade left')
+        ;
+        </div>
+        <div class="code" data-demo="true">
+        $('.autumn.leaf')
+          .transition('fade right')
+        ;
+        </div>
+      </div>
+
+      <div class="no example">
+        <h4 class="ui header">Flip</h4>
+        <p>An element can flip into or out of view vertically or horizontally</p>
+        <div class="code" data-demo="true">
+        $('.autumn.leaf')
+          .transition('horizontal flip')
+        ;
+        </div>
+        <div class="code" data-demo="true">
+        $('.autumn.leaf')
+          .transition('vertical flip')
+        ;
+        </div>
+      </div>
+
+      <div class="no example">
+        <h4 class="ui header">Drop</h4>
+        <p>An element can drop into view from above </p>
+        <div class="code" data-demo="true">
+        $('.autumn.leaf')
+          .transition('drop')
+        ;
+        </div>
+      </div>
+
+      <div class="no example">
+        <h4 class="ui header">Fly</h4>
+        <p>An element can fly in from off canvas</p>
+        <div class="code" data-demo="true">
+        $('.autumn.leaf')
+          .transition('fly left')
+        ;
+        </div>
+        <div class="code" data-demo="true">
+        $('.autumn.leaf')
+          .transition('fly right')
+        ;
+        </div>
+        <div class="code" data-demo="true">
+        $('.autumn.leaf')
+          .transition('fly up')
+        ;
+        </div>
+        <div class="code" data-demo="true">
+        $('.autumn.leaf')
+          .transition('fly down')
+        ;
+        </div>
+      </div>
+
+      <div class="no example">
+        <h4 class="ui header">Swing</h4>
+        <p>An element can swing into view</p>
+        <div class="code" data-demo="true">
+        $('.autumn.leaf')
+          .transition('swing left')
+        ;
+        </div>
+        <div class="code" data-demo="true">
+        $('.autumn.leaf')
+          .transition('swing right')
+        ;
+        </div>
+        <div class="code" data-demo="true">
+        $('.autumn.leaf')
+          .transition('swing up')
+        ;
+        </div>
+        <div class="code" data-demo="true">
+        $('.autumn.leaf')
+          .transition('swing down')
+        ;
+        </div>
+      </div>
+
+
+      <div class="no example">
+        <h4 class="ui header">Browse</h4>
+
+        <p>An element can appear and disappear as part of a series</p>
+        <div class="code" data-demo="true">
+        $('.autumn.leaf')
+          .transition('browse')
+        ;
+        </div>
+        <div class="code" data-demo="true">
+        $('.autumn.leaf')
+          .transition('browse right')
+        ;
+        </div>
+      </div>
+
+      <div class="no example">
+        <h4 class="ui header">Slide</h4>
+        <p>An element can appear to slide in from above or below
+        <div class="code" data-demo="true">
+        $('.autumn.leaf')
+          .transition('slide down')
+        ;
+        </div>
+        <div class="code" data-demo="true">
+        $('.autumn.leaf')
+          .transition('slide up')
+        ;
+        </div>
+        <div class="code" data-demo="true">
+        $('.autumn.leaf')
+          .transition('slide left')
+        ;
+        </div>
+        <div class="code" data-demo="true">
+        $('.autumn.leaf')
+          .transition('slide right')
+        ;
+        </div>
+      </div>
+
+      <h2 class="ui dividing header">Static Animations</h2>
+
+      <div class="no example">
+        <h4 class="ui header">Jiggle</h4>
+        <p>An element can jiggle to draw attention to its shape</p>
+        <div class="code" data-demo="true">
+        $('.autumn.leaf')
+          .transition('jiggle')
+        ;
+        </div>
+      </div>
       <div class="no example">
         <h4 class="ui header">Flash</h4>
         <p>An element can flash to draw attention to itself</p>
@@ -69,90 +239,6 @@ type        : 'UI Module'
         </div>
       </div>
 
-      <h2 class="ui dividing header">Appearance</h2>
-      <div class="no example">
-        <h4 class="ui header">Drop <span class="ui small horizontal teal label">New</span></h4>
-        <p>An element can drop into view from above </p>
-        <div class="code" data-demo="true">
-        $('.autumn.leaf')
-          .transition('drop')
-        ;
-        </div>
-      </div>
-      <div class="no example">
-        <h4 class="ui header">Browse <span class="ui small horizontal teal label">New</span></h4>
-
-        <p>An element can appear and disappear as part of a series</p>
-        <div class="code" data-demo="true">
-        $('.autumn.leaf')
-          .transition('browse')
-        ;
-        </div>
-        <div class="code" data-demo="true">
-        $('.autumn.leaf')
-          .transition('browse right')
-        ;
-        </div>
-      </div>
-
-      <div class="no example">
-        <h4 class="ui header">Flip</h4>
-        <p>An element can flip into or out of view vertically or horizontally</p>
-        <div class="code" data-demo="true">
-        $('.autumn.leaf')
-          .transition('horizontal flip')
-        ;
-        </div>
-        <div class="code" data-demo="true">
-        $('.autumn.leaf')
-          .transition('vertical flip')
-        ;
-        </div>
-      </div>
-
-      <div class="no example">
-        <h4 class="ui header">Fade</h4>
-        <p>An element can fade into or out of view descending and ascending</p>
-        <div class="code" data-demo="true">
-        $('.autumn.leaf')
-          .transition('fade')
-        ;
-        </div>
-        <div class="code" data-demo="true">
-        $('.autumn.leaf')
-          .transition('fade up')
-        ;
-        </div>
-        <div class="code" data-demo="true">
-        $('.autumn.leaf')
-          .transition('fade down')
-        ;
-        </div>
-      </div>
-      <div class="no example">
-        <h4 class="ui header">Scale</h4>
-        <p>An element can scale into or out of view</p>
-        <div class="code" data-demo="true">
-        $('.autumn.leaf')
-          .transition('scale')
-        ;
-        </div>
-      </div>
-
-      <div class="no example">
-        <h4 class="ui header">Slide</h4>
-        <p>An element can appear to slide in from above or below
-        <div class="code" data-demo="true">
-        $('.autumn.leaf')
-          .transition('slide down')
-        ;
-        </div>
-        <div class="code" data-demo="true">
-        $('.autumn.leaf')
-          .transition('slide up')
-        ;
-        </div>
-      </div>
     </div>
   </div>
   <div class="ui tab" data-tab="examples">

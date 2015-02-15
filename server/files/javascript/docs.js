@@ -54,6 +54,7 @@ semantic.ready = function() {
     $pageTabs            = $('.tab.header.segment .menu .item'),
 
     $languageDropdown    = $('.language.dropdown'),
+    $chineseModal        = $('.chinese.modal'),
     $languageModal       = $('.language.modal'),
 
     $downloadPopup       = $('.download.button'),
@@ -219,7 +220,15 @@ semantic.ready = function() {
         percent = $choice.data('percent') || 0,
         text    = $choice.text()
       ;
-      if(percent < 100 && languageDropdownUsed) {
+      if(languageCode == 'zh' && window.location.host !== 'semantic-ui.cn') {
+        $chineseModal
+          .modal({
+            closable: false
+          })
+          .modal('show')
+        ;
+      }
+      else if(percent < 100 && languageDropdownUsed) {
         languageDropdownUsed = false;
         $languageModal
           .modal()
@@ -290,7 +299,7 @@ semantic.ready = function() {
           var
             $currentHeader = $(this),
             $nextElements  = $currentHeader.nextUntil('h2'),
-            $examples      = $nextElements.find('.example').andSelf().filter('.example'),
+            $examples      = $nextElements.find('.example:not(.another)').andSelf().filter('.example:not(.another)'),
             activeClass    = (index === 0)
               ? 'active '
               : '',
@@ -330,7 +339,7 @@ semantic.ready = function() {
         .html(html)
       ;
       $sticky = $('<div />')
-        .addClass('ui sticky hidden transition')
+        .addClass('ui sticky')
         .html($followMenu)
       ;
       $rail = $('<div />')
@@ -338,14 +347,10 @@ semantic.ready = function() {
         .html($sticky)
         .prependTo($container)
       ;
-      $sticky
-        .transition('fade', function() {
-          $sticky.sticky({
-            context: $container,
-            offset: 50
-          });
-        })
-      ;
+      $sticky.sticky({
+        context: $container,
+        offset: 50
+      });
       $followMenu
         .accordion({
           exclusive: false,
@@ -428,6 +433,7 @@ semantic.ready = function() {
             dataType : 'text',
             urlData  : urlData,
             onSuccess: function(content) {
+              console.log(handler.less.parseFile(content));
               window.less.modifyVars( handler.less.parseFile(content) );
               $themeDropdown
                 .api({
@@ -680,7 +686,7 @@ semantic.ready = function() {
     createCode: function(type) {
       var
         $example        = $(this).closest('.example'),
-        $header         = $example.children('.ui.header:first-of-type').eq(0).add('p:first-of-type'),
+        $header         = $example.not('.another').children('.ui.header:first-of-type').eq(0).add('p:first-of-type'),
         $annotation     = $example.find('.annotation'),
         $code           = $annotation.find('.code'),
         $html           = $example.children('.html'),
@@ -992,7 +998,9 @@ semantic.ready = function() {
           });
         },
         onTabLoad : function() {
-          $sticky.filter(':visible').sticky('refresh');
+          $(this).find('> .rail .ui.sticky, .fixed .ui.sticky')
+            .sticky('refresh')
+          ;
         }
       })
     ;
@@ -1141,12 +1149,12 @@ semantic.ready = function() {
       }
     })
     .dropdown({
-      allowTab : false,
-      on       : 'click',
-      onShow   : function() {
+      allowTab   : false,
+      on         : 'click',
+      onShow     : function() {
         $(this).popup('hide');
       },
-      onChange: handler.translatePage
+      onChange : handler.translatePage
     })
   ;
 

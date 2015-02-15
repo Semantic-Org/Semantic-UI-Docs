@@ -26,8 +26,8 @@
 </script>
 <% end %>
 
-<script src="/javascript/library/highlight.js"></script>
-<script src="/javascript/library/highlight.languages.js"></script>
-<script src="/javascript/library/history.js"></script>
-<script src="/javascript/library/easing.js"></script>
-<script src="/javascript/library/tablesort.js"></script>
+<script src="/javascript/library/easing.min.js"></script>
+<script src="/javascript/library/highlight.min.js"></script>
+<script src="/javascript/library/highlight.languages.min.js"></script>
+<script src="/javascript/library/history.min.js"></script>
+<script src="/javascript/library/tablesort.min.js"></script>

@@ -27,6 +27,11 @@ semantic.validateForm.ready = function() {
     .dropdown()
   ;
 
+  $.fn.form.settings.onSuccess = function() {
+    // alert('Valid form!');
+    return false;
+  };
+
   $.fn.form.settings.defaults = {
     firstName: {
       identifier  : 'first-name',

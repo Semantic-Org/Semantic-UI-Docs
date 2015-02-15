@@ -14,6 +14,7 @@ themes      : ['Default']
 ---
 
 <%- @partial('header') %>
+<script src="/javascript/input.js"></script>
 <link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/input.less" />
 
 <div class="main container">
@@ -97,6 +98,20 @@ themes      : ['Default']
       <input type="text" placeholder="Search...">
       <div class="ui corner label">
         <i class="asterisk icon"></i>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui right labeled input">
+      <input type="text" placeholder="Find domain">
+      <div class="ui dropdown label">
+        <div class="text">.com</div>
+        <i class="dropdown icon"></i>
+        <div class="menu">
+          <div class="item">.com</div>
+          <div class="item">.net</div>
+          <div class="item">.org</div>
+        </div>
       </div>
     </div>
   </div>

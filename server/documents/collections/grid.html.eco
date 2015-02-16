@@ -924,7 +924,7 @@ themes      : ['Default', 'Fixed-width']
       <h4 class="ui header">Equal Width</h4>
       <p>A row can automatically resize all undeclared elements to split the available width evenly</p>
       <div class="ui ignored info message">
-        Equal width rows use a very new technology, <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes" target="_blank">flex-box</a> that is only supported by <a href="http://caniuse.com/#feat=flexbox">modern browsers</a>.
+        Equal width rows require <code>row</code> wrappers to work correctly. This variation uses a very new technology, <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes" target="_blank">flex-box</a> that is only supported by <a href="http://caniuse.com/#feat=flexbox">modern browsers</a>.
       </div>
       <div class="ui equal width grid">
         <div class="row">

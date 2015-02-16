@@ -176,14 +176,37 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
     <div class="example">
       <h4 class="ui header">Attached</h4>
       <p>A progress bar can show progress of an element</p>
-      <div class="ui top attached progress">
-        <div class="bar"></div>
-      </div>
-      <div class="ui attached segment">
+      <div class="ui segment">
+        <div class="ui top attached progress">
+          <div class="bar"></div>
+        </div>
         <p>La la la la</p>
+        <div class="ui bottom attached progress">
+          <div class="bar"></div>
+        </div>
       </div>
-      <div class="ui bottom attached progress">
-        <div class="bar"></div>
+    </div>
+
+    <div class="another example">
+      <div class="ui card">
+        <div class="image">
+          <img src="/images/wireframe/image.png">
+        </div>
+        <div class="content">
+          <a class="header">Project</a>
+          <div class="meta">
+            <span class="date">Started in 2014</span>
+          </div>
+        </div>
+        <div class="extra content">
+          <a>
+            <i class="user icon"></i>
+            22 Friends
+          </a>
+        </div>
+        <div class="ui bottom attached progress">
+          <div class="bar"></div>
+        </div>
       </div>
     </div>
 

@@ -47,7 +47,7 @@ themes      : ['Default', 'Basic', 'Classic']
     </div>
   </div>
 
-  <div class="even example">
+  <div class="example">
     <h4 class="ui header">Cards</h4>
     <p>A group of cards. </p>
     <div class="ui ignored info message">
@@ -277,24 +277,9 @@ themes      : ['Default', 'Basic', 'Classic']
     </div>
   </div>
 
-  <div class="even example">
+  <div class="example">
     <h4 class="ui header">Header</h4>
     <p>A card can contain a header</p>
-    <div class="ignored yellow ui message">
-      <div class="header">
-        <i class="info icon"></i>
-        Equal Size Cards
-      </div>
-      <p>If your cards have content that vary in length you must set a <code>min-height</code> for that content area, or the whole card.</p>
-
-      <p>For example:</p>
-      <div class="code" data-type="css">
-      /* Sets card height to about two lines of description */
-      #my-container .card .description {
-        min-height: 35px;
-      }
-      </div>
-    </div>
     <div class="ui cards">
       <div class="card">
         <div class="content">
@@ -362,7 +347,7 @@ themes      : ['Default', 'Basic', 'Classic']
       </div>
     </div>
   </div>
-  <div class="even example">
+  <div class="example">
     <h4 class="ui header">Buttons</h4>
     <p>A card can contain buttons</p>
     <div class="ui cards">
@@ -467,7 +452,17 @@ themes      : ['Default', 'Basic', 'Classic']
   <div class="example">
     <h4 class="ui header">Fluid Card</h4>
     <p>A fluid card takes up the width of its container</p>
-    <div class="ui two column grid">
+    <div class="ui three column grid">
+      <div class="column">
+        <div class="ui fluid card">
+          <div class="image">
+            <img src="/images/avatar/large/daniel.jpg">
+          </div>
+          <div class="content">
+            <a class="header">Daniel Louise</a>
+          </div>
+        </div>
+      </div>
       <div class="column">
         <div class="ui fluid card">
           <div class="image">
@@ -500,7 +495,7 @@ themes      : ['Default', 'Basic', 'Classic']
           <span class="category">Animals</span>
         </div>
         <div class="description">
-          Click to view more information about this dog at dog.com
+          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
         </div>
       </div>
       <div class="extra content">
@@ -518,7 +513,7 @@ themes      : ['Default', 'Basic', 'Classic']
           <span class="category">Animals</span>
         </div>
         <div class="description">
-          This card simulates a link without using the A tag for use with javascript links.
+          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
         </div>
       </div>
       <div class="extra content">
@@ -544,7 +539,7 @@ themes      : ['Default', 'Basic', 'Classic']
           <span class="category">Animals</span>
         </div>
         <div class="description">
-          Here's a description of a cute dog.
+          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
         </div>
       </div>
       <div class="extra content">
@@ -555,13 +550,13 @@ themes      : ['Default', 'Basic', 'Classic']
     </div>
   </div>
 
-  <div class="even example">
+  <div class="example">
     <h4 class="ui header">Column count</h4>
     <p>A group of cards can set how many cards should exist in a row</p>
     <div class="ui four cards">
       <div class="card">
         <div class="image">
-          <img src="/images/movies/12years.jpg">
+          <img class="ui wireframe image" src="/images/wireframe/image.png">
         </div>
         <div class="extra">
           Rating:
@@ -570,7 +565,7 @@ themes      : ['Default', 'Basic', 'Classic']
       </div>
       <div class="card">
         <div class="image">
-          <img src="/images/movies/totoro.jpg">
+          <img class="ui wireframe image" src="/images/wireframe/image.png">
         </div>
         <div class="extra">
           Rating:
@@ -579,7 +574,7 @@ themes      : ['Default', 'Basic', 'Classic']
       </div>
       <div class="card">
         <div class="image">
-          <img src="/images/movies/watchmen.jpg">
+          <img class="ui wireframe image" src="/images/wireframe/image.png">
         </div>
         <div class="extra">
           Rating:
@@ -588,7 +583,7 @@ themes      : ['Default', 'Basic', 'Classic']
       </div>
       <div class="card">
         <div class="image">
-          <img src="/images/movies/happiness.jpg">
+          <img class="ui wireframe image" src="/images/wireframe/image.png">
         </div>
         <div class="extra">
           Rating:
@@ -597,7 +592,7 @@ themes      : ['Default', 'Basic', 'Classic']
       </div>
       <div class="card">
         <div class="image">
-          <img src="/images/movies/adaptation.jpg">
+          <img class="ui wireframe image" src="/images/wireframe/image.png">
         </div>
         <div class="extra">
           Rating:
@@ -606,7 +601,7 @@ themes      : ['Default', 'Basic', 'Classic']
       </div>
       <div class="card">
         <div class="image">
-          <img src="/images/movies/sherlock.jpg">
+          <img class="ui wireframe image" src="/images/wireframe/image.png">
         </div>
         <div class="extra">
           Rating:
@@ -615,7 +610,7 @@ themes      : ['Default', 'Basic', 'Classic']
       </div>
       <div class="card">
         <div class="image">
-          <img src="/images/movies/hemingway.jpg">
+          <img class="ui wireframe image" src="/images/wireframe/image.png">
         </div>
         <div class="extra">
           Rating:
@@ -624,7 +619,7 @@ themes      : ['Default', 'Basic', 'Classic']
       </div>
       <div class="card">
         <div class="image">
-          <img src="/images/movies/1942.jpg">
+          <img class="ui wireframe image" src="/images/wireframe/image.png">
         </div>
         <div class="extra">
           Rating:
@@ -634,7 +629,7 @@ themes      : ['Default', 'Basic', 'Classic']
     </div>
   </div>
 
-  <div class="even example">
+  <div class="example">
     <h4 class="ui header">Doubling</h4>
     <p>A group of cards can double its column width for mobile</p>
     <div class="ui ignored warning message">Resize your browser to a smaller size to see the cards stack after reaching mobile breakpoints</div>

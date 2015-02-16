@@ -789,7 +789,7 @@ body#example {
   top: 0.4em;
 }
 #example .another.example i.code {
-  top: 1em;
+  top: 0.5em;
 }
 
 /* Spaced */

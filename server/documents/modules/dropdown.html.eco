@@ -1675,7 +1675,7 @@ themes      : ['Default']
       <div class="ui ignored info icon message">
         <i class="help circle icon"></i>
         <div class="content">
-          <p>A dropdown will automatically select on page load any menu item that includes the currently value of <code>text</code> or your dropdown's <code>hidden input</code> value.</p>
+          <p>A dropdown will automatically select on page load any menu item that includes the current value of <code>text</code> or your dropdown's <code>hidden input</code> value.</p>
           <p>This is used to preserve a user's selection on page navigation and will automatically remove and default text placeholder formatting.</p>
         </div>
       </div>
@@ -2343,6 +2343,11 @@ themes      : ['Default']
           <td>Whether menu items with sub-menus (categories) should be selectable</td>
         </tr>
         <tr>
+          <td>forceSelection</td>
+          <td>true</td>
+          <td>Whether search selection will force currently selected choice when element is blurred.</td>
+        </tr>
+        <tr>
           <td>sortSelect</td>
           <td>false</td>
           <td>Whether to sort values when creating a dropdown automatically from a select element.</td>
@@ -2354,7 +2359,7 @@ themes      : ['Default']
         </tr>
         <tr>
           <td>fullTextSearch</td>
-          <td>true</td>
+          <td>false</td>
           <td>Whether search selections should look for string match anywhere in string</td>
         </tr>
         <tr>

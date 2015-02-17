@@ -70,13 +70,13 @@
             </a>
             <a class="ui button" href="http://learnsemantic.com/guide/expert.html">Getting Started</a>
             <h4 class="ui header">Package Managers</h4>
-            <div class="ui form">
+            <div class="ui form"><!--
               <div class="field">
                 <label>Bower</label>
                 <div class="ui fluid input">
                   <input type="text" readonly="readonly" placeholder="Copy Link" value="bower install semantic-ui">
                 </div>
-              </div>
+              </div> -->
               <div class="field">
                 <label>NPM</label>
                 <div class="ui fluid input">

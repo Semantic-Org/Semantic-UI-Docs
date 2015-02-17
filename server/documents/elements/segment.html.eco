@@ -1,6 +1,7 @@
 ---
 layout      : 'default'
 css         : 'segment'
+standalone  : true
 
 element     : 'segment'
 elementType : 'element'
@@ -190,43 +191,43 @@ themes      : ['default', 'GitHub']
     <h4 class="ui header">Colored</h4>
     <p>A segment can be colored</p>
     <div class="ui blue segment">
-      <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-      <div class="ui orange segment">
-        <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-        <div class="ui green segment">
-          <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-          <div class="ui red segment">
-            <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-            <div class="ui purple segment">
-              <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-              <div class="ui teal segment">
-                <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      Blue
+    </div>
+    <div class="ui orange segment">
+      Orange
+    </div>
+    <div class="ui green segment">
+      Green
+    </div>
+    <div class="ui red segment">
+      Red
+    </div>
+    <div class="ui purple segment">
+      Purple
+    </div>
+    <div class="ui teal segment">
+      Teal
     </div>
   </div>
   <div class="another example">
     <p>These colors can be inverted</p>
     <div class="ui blue inverted segment">
-      <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+      Blue
     </div>
     <div class="ui orange inverted segment">
-      <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+      Orange
     </div>
     <div class="ui green inverted segment">
-      <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+      Green
     </div>
     <div class="ui red inverted segment">
-      <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+      Red
     </div>
     <div class="ui purple inverted segment">
-      <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+      Purple
     </div>
     <div class="ui teal inverted segment">
-      <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+      Teal
     </div>
   </div>
 
@@ -322,4 +323,39 @@ themes      : ['default', 'GitHub']
     </div>
   </div>
 
+  <h2 class="ui dividing header">Groups</h2>
+
+
+  <div class="example">
+    <h4 class="ui header">Segment Group</h4>
+    <p>A group of segments can be formatted to appear together</p>
+
+    <div class="ui segments">
+      <div class="ui segment">
+        <p>Top</p>
+      </div>
+      <div class="ui segment">
+        <p>Middle</p>
+      </div>
+      <div class="ui segment">
+        <p>Middle</p>
+      </div>
+      <div class="ui segment">
+        <p>Middle</p>
+      </div>
+      <div class="ui segment">
+        <p>Bottom</p>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui segments">
+      <div class="ui segment">
+        <p>Top</p>
+      </div>
+      <div class="ui secondary segment">
+        <p>Secondary Content</p>
+      </div>
+    </div>
+  </div>
 </div>

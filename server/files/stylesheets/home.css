@@ -35,8 +35,8 @@
 
   background-color: #00B5AD;
   background-position: 50% 50%;
-  background-image: -webkit-radial-gradient(farthest-corner, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.95));
-  background-image: radial-gradient(farthest-corner, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.95));
+  background-image: -webkit-radial-gradient(farthest-corner, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.95));
+  background-image: radial-gradient(farthest-corner, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.95));
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 

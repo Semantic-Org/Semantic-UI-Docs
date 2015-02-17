@@ -1,6 +1,7 @@
 ---
 layout      : 'default'
 css         : 'card'
+standalone  : true
 
 element     : 'card'
 elementType : 'view'
@@ -46,84 +47,62 @@ themes      : ['Default', 'Basic', 'Classic']
     </div>
   </div>
 
-  <div class="even example">
+  <div class="example">
     <h4 class="ui header">Cards</h4>
     <p>A group of cards. </p>
     <div class="ui ignored info message">
-      <h3 class="header">Customizing your views</h3>
-      <p>Cards are designed to be flexible to your content. Meta content can include custom elements related to your content. Each child element inside the <code>extra content</code> or <code>meta</code> group will be automatically formatted to be spaced appropriately.</p>
-      <p>This example includes a category group, a sign-up date, and a friend count which are arbitrary class names used to format users as cards.</p>
+      Cards use <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes" target="_blank">flex-box</a> to make sure rows of content stretch to be equal height.
+    </div>
+    <div class="ui ignored message">
+      <p>Cards are designed to be flexible to your content. <code>content</code> blocks can include any custom elements related to your content.</p>
     </div>
     <div class="ui cards">
       <div class="card">
-        <div class="image">
+        <a class="image">
           <img src="/images/avatar/large/elliot.jpg">
-        </div>
+        </a>
         <div class="content">
-          <div class="header">Elliot Fu</div>
+          <a class="header">Elliot Fu</a>
           <div class="meta">
-            <a class="group">Friends</a>
+            <a>Friends</a>
           </div>
           <div class="description">
             Elliot Fu is a film-maker from New York.
           </div>
         </div>
-        <div class="extra content">
-          <a class="right floated created">
-            Joined in 2011
-          </a>
-          <a class="friends">
-            <i class="user icon"></i>
-            22 Friends
-          </a>
-        </div>
       </div>
       <div class="card">
-        <div class="image">
+        <a class="image">
           <img src="/images/avatar/large/helen.jpg">
-        </div>
+        </a>
         <div class="content">
-          <div class="header">Helen Troy</div>
+          <a class="header">Helen Troy</a>
           <div class="meta">
-            <a class="group">Friends</a>
+            <a>Friends</a>
           </div>
           <div class="description">
             Helen Troy is an archivist living in New York, who enjoys cooking, fine art, and gardening.
           </div>
         </div>
-        <div class="extra content">
-          <a class="right floated created">
-            Joined in 2013
-          </a>
-          <a class="friends">
-            <i class="user icon"></i>
-            22 Friends
-          </a>
-        </div>
       </div>
       <div class="card">
-        <div class="image">
+        <a class="image">
           <img src="/images/avatar/large/jenny.jpg">
-        </div>
+        </a>
         <div class="content">
-          <div class="header">Jenny Hess</div>
+          <a class="header">Jenny Hess</a>
           <div class="meta">
-            <a class="group">Friends</a>
+            <a>Friends</a>
           </div>
           <div class="description">
             Jenny is a student studying Media Management at the New School.
           </div>
         </div>
-        <div class="extra content">
-          <a class="right floated created">
-            Joined in 2012
-          </a>
-          <a class="friends">
-            <i class="user icon"></i>
-            22 Friends
-          </a>
-        </div>
       </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui link cards">
       <div class="card">
         <div class="image">
           <img src="/images/avatar/large/veronika.jpg">
@@ -131,20 +110,20 @@ themes      : ['Default', 'Basic', 'Classic']
         <div class="content">
           <div class="header">Veronika Ossi</div>
           <div class="meta">
-            <a class="group">Friends</a>
+            <a>Friends</a>
           </div>
           <div class="description">
             Veronika Ossi is a set designer living in New York who enjoys kittens, music, and partying.
           </div>
         </div>
         <div class="extra content">
-          <a class="right floated created">
+          <span class="right floated">
             Joined in 2013
-          </a>
-          <a class="friends">
+          </span>
+          <span>
             <i class="user icon"></i>
-            22 Friends
-          </a>
+            75 Friends
+          </span>
         </div>
       </div>
       <div class="card">
@@ -152,7 +131,7 @@ themes      : ['Default', 'Basic', 'Classic']
           <img src="/images/avatar/large/stevie.jpg">
         </div>
         <div class="content">
-          <a class="header">Stevie Feliciano</a>
+          <div class="header">Stevie Feliciano</div>
           <div class="meta">
             <span class="date">Joined in 2014</span>
           </div>
@@ -161,10 +140,13 @@ themes      : ['Default', 'Basic', 'Classic']
           </div>
         </div>
         <div class="extra content">
-          <a>
+          <span class="right floated">
+            Joined in 2011
+          </span>
+          <span>
             <i class="user icon"></i>
-            22 Friends
-          </a>
+            35 Friends
+          </span>
         </div>
       </div>
       <div class="card">
@@ -174,20 +156,20 @@ themes      : ['Default', 'Basic', 'Classic']
         <div class="content">
           <div class="header">Steve Jobes</div>
           <div class="meta">
-            <a class="group">Acquaintances</a>
+            <a>Acquaintances</a>
           </div>
           <div class="description">
             Steve Jobes is a fictional character designed to resemble someone familiar to readers.
           </div>
         </div>
         <div class="extra content">
-          <a class="right floated created">
+          <span class="right floated">
             Joined in 2014
-          </a>
-          <a class="friends">
+          </span>
+          <span>
             <i class="user icon"></i>
-            22 Friends
-          </a>
+            151 Friends
+          </span>
         </div>
       </div>
     </div>
@@ -276,24 +258,9 @@ themes      : ['Default', 'Basic', 'Classic']
     </div>
   </div>
 
-  <div class="even example">
+  <div class="example">
     <h4 class="ui header">Header</h4>
     <p>A card can contain a header</p>
-    <div class="ignored yellow ui message">
-      <div class="header">
-        <i class="info icon"></i>
-        Equal Size Cards
-      </div>
-      <p>If your cards have content that vary in length you must set a <code>min-height</code> for that content area, or the whole card.</p>
-
-      <p>For example:</p>
-      <div class="code" data-type="css">
-      /* Sets card height to about two lines of description */
-      #my-container .card .description {
-        min-height: 35px;
-      }
-      </div>
-    </div>
     <div class="ui cards">
       <div class="card">
         <div class="content">
@@ -328,6 +295,7 @@ themes      : ['Default', 'Basic', 'Classic']
   <div class="example">
     <h4 class="ui header">Metadata</h4>
     <p>A card can contain content metadata</p>
+
     <div class="ui ignored info message">
       <i class="info icon"></i>
       You can include an arbitrary amount of metadata using your own class conventions, all child elements will automatically be spaced
@@ -336,10 +304,10 @@ themes      : ['Default', 'Basic', 'Classic']
       <div class="content">
         <div class="header">Cute Dog</div>
         <div class="meta">
-          <span class="time">2 days ago</span>
-          <span class="category">Animals</span>
-          <a>Link</a>
+          <span>2 days ago</span>
+          <a>Animals</a>
         </div>
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
       </div>
     </div>
   </div>
@@ -356,12 +324,12 @@ themes      : ['Default', 'Basic', 'Classic']
       <div class="content">
         <a class="header" href="#">Steve Jobes</a>
         <div class="meta">
-          <a class="time">Last Seen 2 days ago</a>
+          <a>Last Seen 2 days ago</a>
         </div>
       </div>
     </div>
   </div>
-  <div class="even example">
+  <div class="example">
     <h4 class="ui header">Buttons</h4>
     <p>A card can contain buttons</p>
     <div class="ui cards">
@@ -412,23 +380,26 @@ themes      : ['Default', 'Basic', 'Classic']
         <i class="right floated like icon"></i>
         <i class="right floated star icon"></i>
         <div class="header">Cute Dog</div>
-        <div class="extra content">
-          <span class="like">
-            <i class="like icon"></i>
-            Like
-          </span>
-          <span class="star">
-            <i class="star icon"></i>
-            Favorite
-          </span>
+        <div class="description">
+          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
         </div>
+      </div>
+      <div class="extra content">
+        <span class="left floated like">
+          <i class="like icon"></i>
+          Like
+        </span>
+        <span class="right floated star">
+          <i class="star icon"></i>
+          Favorite
+        </span>
       </div>
     </div>
   </div>
 
   <div class="example">
     <h4 class="ui header">Description</h4>
-    <p>A card can contain a description with a single or multiple paragraphs</p>
+    <p>A card can contain a description with one or more paragraphs</p>
     <div class="ui card">
       <div class="content">
         <div class="header">Cute Dog</div>
@@ -466,7 +437,17 @@ themes      : ['Default', 'Basic', 'Classic']
   <div class="example">
     <h4 class="ui header">Fluid Card</h4>
     <p>A fluid card takes up the width of its container</p>
-    <div class="ui two column grid">
+    <div class="ui three column grid">
+      <div class="column">
+        <div class="ui fluid card">
+          <div class="image">
+            <img src="/images/avatar/large/daniel.jpg">
+          </div>
+          <div class="content">
+            <a class="header">Daniel Louise</a>
+          </div>
+        </div>
+      </div>
       <div class="column">
         <div class="ui fluid card">
           <div class="image">
@@ -499,7 +480,7 @@ themes      : ['Default', 'Basic', 'Classic']
           <span class="category">Animals</span>
         </div>
         <div class="description">
-          Click to view more information about this dog at dog.com
+          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
         </div>
       </div>
       <div class="extra content">
@@ -517,7 +498,7 @@ themes      : ['Default', 'Basic', 'Classic']
           <span class="category">Animals</span>
         </div>
         <div class="description">
-          This card simulates a link without using the A tag for use with javascript links.
+          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
         </div>
       </div>
       <div class="extra content">
@@ -543,7 +524,7 @@ themes      : ['Default', 'Basic', 'Classic']
           <span class="category">Animals</span>
         </div>
         <div class="description">
-          Here's a description of a cute dog.
+          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
         </div>
       </div>
       <div class="extra content">
@@ -554,13 +535,90 @@ themes      : ['Default', 'Basic', 'Classic']
     </div>
   </div>
 
-  <div class="even example">
-    <h4 class="ui header">Column count</h4>
+  <div class="example">
+    <h4 class="ui header">Text Alignment</h4>
+    <p>Any element inside a card can have its text alignment specified</p>
+    <div class="ui ignored info message">
+      <i class="info icon"></i>
+      You can include an arbitrary amount of metadata using your own class conventions, all child elements will automatically be spaced
+    </div>
+    <div class="ui card">
+      <div class="content">
+        <div class="header">Cute Dog</div>
+        <div class="meta">
+          <span class="right floated time">2 days ago</span>
+          <span class="category">Animals</span>
+        </div>
+        <div class="description">
+          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        </div>
+      </div>
+      <div class="extra content">
+        <div class="right floated author">
+          <img class="ui avatar image" src="/images/avatar/small/matt.jpg"> Matt
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Colors</h4>
+    <p>A card can specify a color</p>
+    <div class="ui four cards">
+      <a class="black card">
+        <div class="image">
+          <img class="ui wireframe image" src="/images/wireframe/white-image.png">
+        </div>
+      </a>
+      <a class="blue card">
+        <div class="image">
+          <img class="ui wireframe image" src="/images/wireframe/white-image.png">
+        </div>
+      </a>
+      <a class="green card">
+        <div class="image">
+          <img class="ui wireframe image" src="/images/wireframe/white-image.png">
+        </div>
+      </a>
+      <a class="orange card">
+        <div class="image">
+          <img class="ui wireframe image" src="/images/wireframe/white-image.png">
+        </div>
+      </a>
+      <a class="pink card">
+        <div class="image">
+          <img class="ui wireframe image" src="/images/wireframe/white-image.png">
+        </div>
+      </a>
+      <a class="purple card">
+        <div class="image">
+          <img class="ui wireframe image" src="/images/wireframe/white-image.png">
+        </div>
+      </a>
+      <a class="red card">
+        <div class="image">
+          <img class="ui wireframe image" src="/images/wireframe/white-image.png">
+        </div>
+      </a>
+      <a class="teal card">
+        <div class="image">
+          <img class="ui wireframe image" src="/images/wireframe/white-image.png">
+        </div>
+      </a>
+      <a class="yellow card">
+        <div class="image">
+          <img class="ui wireframe image" src="/images/wireframe/white-image.png">
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="example">
+    <h4 class="ui header">Column Count</h4>
     <p>A group of cards can set how many cards should exist in a row</p>
     <div class="ui four cards">
       <div class="card">
         <div class="image">
-          <img src="/images/movies/12years.jpg">
+          <img class="ui wireframe image" src="/images/wireframe/image.png">
         </div>
         <div class="extra">
           Rating:
@@ -569,7 +627,7 @@ themes      : ['Default', 'Basic', 'Classic']
       </div>
       <div class="card">
         <div class="image">
-          <img src="/images/movies/totoro.jpg">
+          <img class="ui wireframe image" src="/images/wireframe/image.png">
         </div>
         <div class="extra">
           Rating:
@@ -578,7 +636,7 @@ themes      : ['Default', 'Basic', 'Classic']
       </div>
       <div class="card">
         <div class="image">
-          <img src="/images/movies/watchmen.jpg">
+          <img class="ui wireframe image" src="/images/wireframe/image.png">
         </div>
         <div class="extra">
           Rating:
@@ -587,7 +645,7 @@ themes      : ['Default', 'Basic', 'Classic']
       </div>
       <div class="card">
         <div class="image">
-          <img src="/images/movies/happiness.jpg">
+          <img class="ui wireframe image" src="/images/wireframe/image.png">
         </div>
         <div class="extra">
           Rating:
@@ -596,7 +654,7 @@ themes      : ['Default', 'Basic', 'Classic']
       </div>
       <div class="card">
         <div class="image">
-          <img src="/images/movies/adaptation.jpg">
+          <img class="ui wireframe image" src="/images/wireframe/image.png">
         </div>
         <div class="extra">
           Rating:
@@ -605,7 +663,7 @@ themes      : ['Default', 'Basic', 'Classic']
       </div>
       <div class="card">
         <div class="image">
-          <img src="/images/movies/sherlock.jpg">
+          <img class="ui wireframe image" src="/images/wireframe/image.png">
         </div>
         <div class="extra">
           Rating:
@@ -614,7 +672,7 @@ themes      : ['Default', 'Basic', 'Classic']
       </div>
       <div class="card">
         <div class="image">
-          <img src="/images/movies/hemingway.jpg">
+          <img class="ui wireframe image" src="/images/wireframe/image.png">
         </div>
         <div class="extra">
           Rating:
@@ -623,7 +681,7 @@ themes      : ['Default', 'Basic', 'Classic']
       </div>
       <div class="card">
         <div class="image">
-          <img src="/images/movies/1942.jpg">
+          <img class="ui wireframe image" src="/images/wireframe/image.png">
         </div>
         <div class="extra">
           Rating:
@@ -633,7 +691,7 @@ themes      : ['Default', 'Basic', 'Classic']
     </div>
   </div>
 
-  <div class="even example">
+  <div class="example">
     <h4 class="ui header">Doubling</h4>
     <p>A group of cards can double its column width for mobile</p>
     <div class="ui ignored warning message">Resize your browser to a smaller size to see the cards stack after reaching mobile breakpoints</div>

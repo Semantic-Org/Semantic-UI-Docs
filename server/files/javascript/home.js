@@ -29,7 +29,7 @@ semantic.home.ready = function() {
         $header
           .removeClass('zoomed')
         ;
-      }, 1500);
+      }, 500);
 
       $ui.typed({
         replaceBaseText : true,

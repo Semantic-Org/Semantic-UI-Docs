@@ -9,12 +9,65 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script type="text/javascript">
 $(document).ready(function() {
-  $('.ui.button')
-      .popup({
-        debug: true,
-        transition: 'slide down'
-      })
-  ;
+  var validation_settings = {
+        inline : true,
+        on : 'blur'
+};
+var validation_rules =
+{
+
+  gender: {
+      identifier  : 'gender',
+      rules: [
+        {
+          type   : 'empty',
+          prompt : 'Please enter a gender'
+        }
+      ]
+    },
+    name: {
+      identifier  : 'name',
+      rules: [
+        {
+          type   : 'empty',
+          prompt : 'Please enter your name'
+        }
+      ]
+    },
+    username: {
+      identifier  : 'username',
+      rules: [
+        {
+          type   : 'empty',
+          prompt : 'Please enter your username'
+        }
+      ]
+    },
+    password: {
+      identifier  : 'password',
+      rules: [
+        {
+          type   : 'empty',
+          prompt : 'Please enter your password'
+        }
+      ]
+    },
+    terms: {
+      identifier  : 'terms',
+      rules: [
+        {
+          type   : 'checked',
+          prompt : 'You need to agree to the terms and conditions'
+        }
+      ]
+    }
+};
+$('.ui.form').form(validation_rules ,  validation_settings);
+$('.ui.checkbox').checkbox();
+$('.ui.dropdown')
+  .dropdown({
+  })
+;
 });
 </script>
 
@@ -23,27 +76,40 @@ $(document).ready(function() {
 </style>
 
 <div style="max-width: 1000px;margin:2em auto;">
-
-    <div class="ui button">Show flowing popup</div>
-
-    <div class="ui flowing popup">
-      <div class="ui three column divided equal height center aligned grid">
-        <div class="column">
-          <h4 class="ui header">Basic Plan</h4>
-          <p><b>2</b> projects, $10 a month</p>
-          <div class="ui button">Choose</div>
-        </div>
-        <div class="column">
-          <h4 class="ui header">Business Plan</h4>
-          <p><b>5</b> projects, $20 a month</p>
-          <div class="ui button">Choose</div>
-        </div>
-        <div class="column">
-          <h4 class="ui header">Premium Plan</h4>
-          <p><b>8</b> projects, $25 a month</p>
-          <div class="ui button">Choose</div>
+<form class="ui form segment">
+    <p>Tell Us About Yourself</p>
+    <div class="two fields">
+      <div class="field">
+        <label>Name</label>
+        <input placeholder="First Name" name="name" type="text">
+      </div>
+      <div class="field">
+        <label>Gender</label>
+        <div class="ui selection dropdown">
+          <input type="hidden" name="gender">
+          <div class="default text">Gender</div>
+          <i class="dropdown icon"></i>
+          <div class="menu">
+            <div class="item" data-value="male">Male</div>
+            <div class="item" data-value="female">Female</div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+    <div class="field">
+      <label>Username</label>
+      <input placeholder="Username" name="username" type="text">
+    </div>
+    <div class="field">
+      <label>Password</label>
+      <input type="password" name="password">
+    </div>
+    <div class="inline field">
+      <div class="ui checkbox">
+        <input type="checkbox" name="terms">
+        <label>I agree to the terms and conditions</label>
+      </div>
+    </div>
+    <div class="ui blue submit button">Submit</div>
+  </form>
 </div>

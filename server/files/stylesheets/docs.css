@@ -645,7 +645,8 @@ body#example {
   opacity: 0.5;
 }
 #example .example :not(.images) > .wireframe.image {
-  margin: 1rem 0em;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 #example .example :not(.images) > .wireframe.image:first-child {
   margin-top: 0em;
@@ -789,7 +790,7 @@ body#example {
   top: 0.4em;
 }
 #example .another.example i.code {
-  top: 1em;
+  top: 0.5em;
 }
 
 /* Spaced */
@@ -1067,13 +1068,6 @@ body#example {
   margin-bottom: 0em;
 }
 
-/*--------------
-      Card
----------------*/
-
-body.card .even.example .card .description {
-  height: 55px;
-}
 
 /*--------------
    Progress
@@ -1085,6 +1079,14 @@ body.progress.animated .ui.progress .bar {
   -moz-animation: finish 10s ease-in-out infinite;
   -ms-animation: finish 10s ease-in-out infinite;
   animation: finish 10s ease-in-out infinite;
+}
+
+/*--------------
+      Header
+---------------*/
+
+#example.header .wireframe.image {
+  max-width: 500px;
 }
 
 /*--------------

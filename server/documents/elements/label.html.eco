@@ -112,17 +112,23 @@ themes      : ['Default']
     <h4 class="ui header">Corner</h4>
     <p>A label can position itself in the corner of an element</p>
     <div class="yellow ui message">A corner label must be positioned inside a container with <b>position: relative</b> to display properly. If a container is rounded you will need to add <code>overflow:hidden</code> to the container to produce a rounded label.</div>
-    <div class="ui left floated medium image">
-      <a class="ui corner label">
-        <i class="save icon"></i>
-      </a>
-      <img src="/images/demo/highres2.jpg">
-    </div>
-    <div class="ui left floated medium image">
-      <a class="ui left red corner label">
-        <i class="heart icon"></i>
-      </a>
-      <img src="/images/demo/highres3.jpg">
+    <div class="ui two column grid">
+      <div class="column">
+        <div class="ui fluid image">
+          <a class="ui left red corner label">
+            <i class="heart icon"></i>
+          </a>
+          <img src="/images/wireframe/image.png">
+        </div>
+      </div>
+      <div class="column">
+        <div class="ui fluid image">
+          <a class="ui black corner label">
+            <i class="save icon"></i>
+          </a>
+          <img src="/images/wireframe/image.png">
+        </div>
+      </div>
     </div>
   </div>
 
@@ -137,27 +143,48 @@ themes      : ['Default']
   <div class="example">
     <h4 class="ui header">Ribbon</h4>
     <p>A label can appear as a ribbon attaching itself to an element.</p>
-    <div class="ui raised segment">
-      <a class="ui ribbon label">Dogs</a>
-      <p>Pretty nice animals.</p>
-      <a class="ui teal ribbon label">Cats</a>
-      <p>Also pretty nice animals, but can prefer solitude.</p>
-      <a class="ui red ribbon label">Ogres and monsters</a>
-      <p>Never seen one as a pet before, but I imagine they'd make pretty terrible companions.</p>
+    <div class="ui two column grid">
+      <div class="column">
+        <div class="ui raised segment">
+          <a class="ui ribbon label">Label</a>
+          <span>Inline Text</span>
+          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+          <a class="ui teal ribbon label">Label</a>
+          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        </div>
+      </div>
+      <div class="column">
+        <div class="ui segment">
+          <a class="ui right ribbon label">Label</a>
+          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+          <a class="ui teal right ribbon label">Label</a>
+          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        </div>
+      </div>
     </div>
   </div>
   <div class="another example">
-    <div class="ui segment">
-      <a class="ui right ribbon label">Dogs</a>
-      <p>Pretty nice animals.</p>
-      <a class="ui teal right ribbon label">Cats</a>
-      <p>Also pretty nice animals, but can prefer solitude.</p>
-      <a class="ui red right ribbon label">Ogres and monsters</a>
-      <p>Never seen one as a pet before, but I imagine they'd make pretty terrible companions.</p>
+    <div class="ui two column grid">
+      <div class="column">
+        <div class="ui fluid image">
+          <div class="ui black ribbon label">
+            <i class="hotel icon"></i> Hotel
+          </div>
+          <img src="/images/wireframe/image.png">
+        </div>
+      </div>
+      <div class="column">
+        <div class="ui fluid image">
+          <div class="ui blue ribbon label">
+            <i class="spoon icon"></i> Food
+          </div>
+          <img src="/images/wireframe/image.png">
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="example">
+  <div class="clearing example">
     <h4 class="ui header">Attached</h4>
     <p>A label can attach to a content segment</p>
     <div class="ui ignored warning message">
@@ -169,19 +196,19 @@ themes      : ['Default']
         <div class="column">
           <div class="ui segment">
             <div class="ui top attached label">HTML</div>
-            <p>This is some pretend content</p>
+            <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
           </div>
         </div>
         <div class="column">
           <div class="ui segment">
             <div class="ui bottom attached label">CSS</div>
-            <p>This is some pretend content</p>
+            <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
           </div>
         </div>
         <div class="column">
           <div class="ui segment">
             <div class="ui top right attached label">Code</div>
-            <p>This is some pretend content</p>
+            <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
           </div>
         </div>
       </div>
@@ -189,19 +216,19 @@ themes      : ['Default']
         <div class="column">
           <div class="ui segment">
             <div class="ui top left attached label">View</div>
-            <p>This is some pretend content</p>
+            <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
           </div>
         </div>
         <div class="column">
           <div class="ui segment">
             <div class="ui bottom left attached label">User View</div>
-            <p>This is some pretend content</p>
+            <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
           </div>
         </div>
         <div class="column">
           <div class="ui segment">
             <div class="ui bottom right attached label">Admin View</div>
-            <p>This is some pretend content</p>
+            <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
           </div>
         </div>
       </div>

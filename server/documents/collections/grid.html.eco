@@ -246,10 +246,10 @@ themes      : ['Default', 'Fixed-width']
             <td>$computerBreakpoint</td>
           </tr>
           <tr>
-            <td>Large Monitor</td>
+            <td>Large Screen</td>
             <td>Above 1400px</td>
             <td>18%</td>
-            <td>(x) wide large monitor</td>
+            <td>(x) wide large screen</td>
             <td>$largeMonitorBreakpoint</td>
           </tr>
           <tr>

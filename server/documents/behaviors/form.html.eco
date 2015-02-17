@@ -281,6 +281,7 @@ type        : 'UI Behavior'
         .form('set values', {
           name     : 'Jack',
           gender   : 'male',
+          colors   : ['red', 'grey'],
           username : 'jlukic',
           password : 'youdliketoknow',
           terms    : true
@@ -314,6 +315,33 @@ type        : 'UI Behavior'
           <label>Password</label>
           <input name="password" type="password">
         </div>
+        <div class="inline fields">
+          <label for="colors">Favorite Colors</label>
+          <div class="field">
+            <div class="ui checkbox">
+              <input type="checkbox" name="colors[]" value="red" />
+              <label>Red</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui checkbox">
+              <input type="checkbox" name="colors[]" value="blue" />
+              <label>Blue</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui checkbox">
+              <input type="checkbox" name="colors[]" value="green" />
+              <label>Green</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui checkbox">
+              <input type="checkbox" name="colors[]" value="grey" />
+              <label>Grey</label>
+            </div>
+          </div>
+        </div>
         <div class="inline field">
           <div class="ui checkbox">
             <input name="terms" type="checkbox">
@@ -337,13 +365,13 @@ type        : 'UI Behavior'
       var
         $form = $('.get.example form'),
         // get one value
-        name = $form.form('get value', 'name'),
+        colors = $form.form('get value', 'colors'),
         // get list of values
-        fields = $form.form('get values', ['name', 'gender']),
+        fields = $form.form('get values', ['name', 'colors']),
         // get all values
         allFields = $form.form('get values')
       ;
-      console.log(name);
+      console.log(colors);
       console.log(fields);
       console.log(allFields);
       </div>
@@ -373,6 +401,33 @@ type        : 'UI Behavior'
         <div class="field">
           <label>Password</label>
           <input name="password" type="password">
+        </div>
+        <div class="inline fields">
+          <label for="colors">Favorite Colors</label>
+          <div class="field">
+            <div class="ui checkbox">
+              <input type="checkbox" name="colors[]" value="red" />
+              <label>Red</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui checkbox">
+              <input type="checkbox" name="colors[]" value="blue" />
+              <label>Blue</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui checkbox">
+              <input type="checkbox" name="colors[]" value="green" />
+              <label>Green</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui checkbox">
+              <input type="checkbox" name="colors[]" value="grey" />
+              <label>Grey</label>
+            </div>
+          </div>
         </div>
         <div class="inline field">
           <div class="ui checkbox">

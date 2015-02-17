@@ -142,19 +142,19 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
         </div>
       </div>
 
-      <h4 class="ui block top attached header">Optional Survey</h4>
-      <div class="ui bottom attached secondary segment">
+      <h4 class="ui top attached header">Import Settings</h4>
+      <div class="ui bottom attached segment">
         <div class="grouped fields">
-          <label for="alone">Are you a human?</label>
+          <label for="alone">Would you like us to import your current settings?</label>
           <div class="field">
             <div class="ui radio checkbox">
-              <input type="radio" checked="" name="alone">
+              <input type="radio" checked="" name="import">
               <label>Yes</label>
             </div>
           </div>
           <div class="field">
             <div class="ui radio checkbox">
-              <input type="radio" name="alone">
+              <input type="radio" name="import">
               <label>No</label>
             </div>
           </div>

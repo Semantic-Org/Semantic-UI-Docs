@@ -2359,7 +2359,7 @@ themes      : ['Default']
         </tr>
         <tr>
           <td>fullTextSearch</td>
-          <td>true</td>
+          <td>false</td>
           <td>Whether search selections should look for string match anywhere in string</td>
         </tr>
         <tr>

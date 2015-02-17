@@ -102,8 +102,8 @@ themes      : ['Default']
         <i class="comments outline icon"></i>
         <i class="copyright icon"></i>
         <i class="dashboard icon"></i>
-        <i class="external link icon"></i>
-        <i class="external link square icon"></i>
+        <i class="external icon"></i>
+        <i class="f square icon"></i>
         <i class="eyedropper icon"></i>
         <i class="feed icon"></i>
         <i class="find icon"></i>
@@ -959,7 +959,7 @@ themes      : ['Default']
         <i class="header icon"></i>
         <i class="indent icon"></i>
         <i class="italic icon"></i>
-        <i class="link icon"></i>
+        <i class="linkify icon"></i>
         <i class="list icon"></i>
         <i class="ordered list icon"></i>
         <i class="outdent icon"></i>

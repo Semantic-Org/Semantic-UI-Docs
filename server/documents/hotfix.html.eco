@@ -9,65 +9,16 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script type="text/javascript">
 $(document).ready(function() {
-  var validation_settings = {
-        inline : true,
-        on : 'blur'
-};
-var validation_rules =
-{
-
-  gender: {
-      identifier  : 'gender',
-      rules: [
-        {
-          type   : 'empty',
-          prompt : 'Please enter a gender'
+function showModalAndActivatePopups(modalDomElement) {
+    modalDomElement.modal({
+        onShow: function () {
+            $('.popupElement').popup();
         }
-      ]
-    },
-    name: {
-      identifier  : 'name',
-      rules: [
-        {
-          type   : 'empty',
-          prompt : 'Please enter your name'
-        }
-      ]
-    },
-    username: {
-      identifier  : 'username',
-      rules: [
-        {
-          type   : 'empty',
-          prompt : 'Please enter your username'
-        }
-      ]
-    },
-    password: {
-      identifier  : 'password',
-      rules: [
-        {
-          type   : 'empty',
-          prompt : 'Please enter your password'
-        }
-      ]
-    },
-    terms: {
-      identifier  : 'terms',
-      rules: [
-        {
-          type   : 'checked',
-          prompt : 'You need to agree to the terms and conditions'
-        }
-      ]
-    }
-};
-$('.ui.form').form(validation_rules ,  validation_settings);
-$('.ui.checkbox').checkbox();
-$('.ui.dropdown')
-  .dropdown({
-  })
-;
+    }).modal('show');
+}
+$('.showEventResults').click(function () {
+    showModalAndActivatePopups($(this).next('.standard.eventResults.modal'));
+});
 });
 </script>
 
@@ -76,40 +27,27 @@ $('.ui.dropdown')
 </style>
 
 <div style="max-width: 1000px;margin:2em auto;">
-<form class="ui form segment">
-    <p>Tell Us About Yourself</p>
-    <div class="two fields">
-      <div class="field">
-        <label>Name</label>
-        <input placeholder="First Name" name="name" type="text">
-      </div>
-      <div class="field">
-        <label>Gender</label>
-        <div class="ui selection dropdown">
-          <input type="hidden" name="gender">
-          <div class="default text">Gender</div>
-          <i class="dropdown icon"></i>
-          <div class="menu">
-            <div class="item" data-value="male">Male</div>
-            <div class="item" data-value="female">Female</div>
-          </div>
+<div class="eventItem" data-eventid="1"> <a class="ui mini icon green button showEventResults" href="#event_1_results">1<i class="unhide icon"></i>
+    </a>
+
+    <div class="ui standard eventResults modal transition"> <i class="close icon"></i>
+
+        <div class="header">Results for event : 1</div>
+        <div class="content">
+            <div class="description"></div>
         </div>
-      </div>
     </div>
-    <div class="field">
-      <label>Username</label>
-      <input placeholder="Username" name="username" type="text">
+</div>
+<br />
+<div class="eventItem" data-eventid="2"> <a class="ui mini icon green button showEventResults" href="#event_2_results">2<i class="unhide icon"></i>
+    </a>
+
+    <div class="ui standard eventResults modal transition"> <i class="close icon"></i>
+
+        <div class="header">Results for event : 2</div>
+        <div class="content">
+            <div class="description"></div>
+        </div>
     </div>
-    <div class="field">
-      <label>Password</label>
-      <input type="password" name="password">
-    </div>
-    <div class="inline field">
-      <div class="ui checkbox">
-        <input type="checkbox" name="terms">
-        <label>I agree to the terms and conditions</label>
-      </div>
-    </div>
-    <div class="ui blue submit button">Submit</div>
-  </form>
+</div>
 </div>

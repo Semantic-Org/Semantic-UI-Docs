@@ -9,25 +9,16 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script type="text/javascript">
 $(document).ready(function() {
-    $('.ui.sidebar.first')
-        .sidebar({
-            transition: 'overlay',
-            exclusive: true,
-            dimPage: false,
-            closable: false
+    $('.card')
+        .transition({
+            interval: 200,
+            animation: 'fade'
         })
-        .sidebar('attach events', '.button.open-first-sidebar')
-    ;
-    $('.ui.sidebar.second')
-        .sidebar({
-            transition: 'overlay',
-            exclusive: true,
-            dimPage: false,
-            closable: false
+        .transition({
+            interval: 200,
+            animation: 'scale'
         })
-        .sidebar('attach events', '.button.open-second-sidebar')
     ;
-
 });
 </script>
 
@@ -35,35 +26,145 @@ $(document).ready(function() {
 <style type="text/css">
 </style>
 
-<body>
-    <aside class="ui left vertical labeled icon sidebar menu first">
-        <a class="item">
-            <i class="home icon"></i>
-            Sidebar 1
-        </a>
-        <a class="item">
-            <button class="ui button teal open-second-sidebar">
-                Open sidebar 2
-            </button>
-        </a>
-    </aside>
-    <aside class="ui left vertical labeled icon sidebar menu second">
-        <a class="item">
-            <i class="home icon"></i>
-            Sidebar 2
-        </a>
-        <a class="item">
-            <button class="ui button teal open-first-sidebar">
-                Open sidebar 1
-            </button>
-        </a>
-    </aside>
-    <main class="pusher">
-        <button class="ui button teal open-first-sidebar">
-            Open sidebar 1
-        </button>
-        <button class="ui button teal open-second-sidebar">
-            Open sidebar 2
-        </button>
-    </main>
-</body>
+<div style="max-width: 1000px;margin:2em auto;">
+<div class="ui cards">
+    <div class="green card">
+        <div class="image">
+                <img src="images/wireframe/image.png" class="visible content">
+            </div>
+            <div class="content">
+                <a class="header">Card 0</a>
+                <div class="meta">
+                    <div class="ui small star rating"></div>
+                </div>
+                <div class="description">
+                    <a>
+                        <i class="red clock icon"></i>
+                        Today
+                    </a>
+                </div>
+            </div>
+            <div class="extra content">
+                <span class="left floated like">
+                    <i class="like icon"></i>
+                    30+ fans
+                </span>
+            </div>
+    </div>
+    <div class="green card">
+        <div class="image">
+                <img src="images/wireframe/image.png" class="visible content">
+            </div>
+            <div class="content">
+                <a class="header">Card 1</a>
+                <div class="meta">
+                    <div class="ui small star rating"></div>
+                </div>
+                <div class="description">
+                    <a>
+                        <i class="red clock icon"></i>
+                        Today
+                    </a>
+                </div>
+            </div>
+            <div class="extra content">
+                <span class="left floated like">
+                    <i class="like icon"></i>
+                    30+ fans
+                </span>
+            </div>
+    </div>
+    <div class="green card">
+        <div class="image">
+                <img src="images/wireframe/image.png" class="visible content">
+            </div>
+            <div class="content">
+                <a class="header">Card 2</a>
+                <div class="meta">
+                    <div class="ui small star rating"></div>
+                </div>
+                <div class="description">
+                    <a>
+                        <i class="red clock icon"></i>
+                        Today
+                    </a>
+                </div>
+            </div>
+            <div class="extra content">
+                <span class="left floated like">
+                    <i class="like icon"></i>
+                    30+ fans
+                </span>
+            </div>
+    </div>
+    <div class="green card">
+        <div class="image">
+                <img src="images/wireframe/image.png" class="visible content">
+            </div>
+            <div class="content">
+                <a class="header">Card 3</a>
+                <div class="meta">
+                    <div class="ui small star rating"></div>
+                </div>
+                <div class="description">
+                    <a>
+                        <i class="red clock icon"></i>
+                        Today
+                    </a>
+                </div>
+            </div>
+            <div class="extra content">
+                <span class="left floated like">
+                    <i class="like icon"></i>
+                    30+ fans
+                </span>
+            </div>
+    </div>
+    <div class="green card">
+        <div class="image">
+                <img src="images/wireframe/image.png" class="visible content">
+            </div>
+            <div class="content">
+                <a class="header">Card 4</a>
+                <div class="meta">
+                    <div class="ui small star rating"></div>
+                </div>
+                <div class="description">
+                    <a>
+                        <i class="red clock icon"></i>
+                        Today
+                    </a>
+                </div>
+            </div>
+            <div class="extra content">
+                <span class="left floated like">
+                    <i class="like icon"></i>
+                    30+ fans
+                </span>
+            </div>
+    </div>
+    <div class="green card">
+        <div class="image">
+                <img src="images/wireframe/image.png" class="visible content">
+            </div>
+            <div class="content">
+                <a class="header">Card 5</a>
+                <div class="meta">
+                    <div class="ui small star rating"></div>
+                </div>
+                <div class="description">
+                    <a>
+                        <i class="red clock icon"></i>
+                        Today
+                    </a>
+                </div>
+            </div>
+            <div class="extra content">
+                <span class="left floated like">
+                    <i class="like icon"></i>
+                    30+ fans
+                </span>
+            </div>
+    </div>
+</div>
+</div>

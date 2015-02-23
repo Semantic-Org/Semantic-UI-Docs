@@ -255,6 +255,27 @@ type        : 'UI Module'
         .transition('scale')
       ;
       </div>
+
+      <h2 class="ui dividing header">Transition Direction</h2>
+
+      <p>If an animation direction is not specified it will automatically be determined based on the elements current visibility. For no example, if the element is visible the animation "fade out" will be called, if the animation is not visible "fade in".</p>
+
+      <div class="code" data-demo="true" data-title="Automatically choosing direction">
+      $('.stick.image')
+        // fade up out is used if available
+        .transition('fade up')
+        // this is now fade up in
+        .transition('fade up')
+      ;
+      </div>
+      <div class="code" data-demo="true" data-title="Specifying a direction">
+      $('.stick.image')
+        // if a direction if specified it will be obeyed
+        .transition('horizontal flip in')
+        .transition('vertical flip in')
+      ;
+      </div>
+
       <h2 class="ui dividing header">Grouped Transitions</h2>
 
       <h4 class="ui header">Animation Intervals</h4>
@@ -309,28 +330,6 @@ type        : 'UI Module'
         <img src="/images/wireframe/image.png" class="ui wireframe image">
         <img src="/images/wireframe/image.png" class="ui wireframe image">
         <img src="/images/wireframe/image.png" class="ui wireframe image">
-      </div>
-
-
-
-      <h2 class="ui dividing header">Transition Direction</h2>
-
-      <p>If an animation direction is not specified it will automatically be determined based on the elements current visibility. For no example, if the element is visible the animation "fade out" will be called, if the animation is not visible "fade in".</p>
-
-      <div class="code" data-demo="true" data-title="Automatically choosing direction">
-      $('.stick.image')
-        // fade up out is used if available
-        .transition('fade up')
-        // this is now fade up in
-        .transition('fade up')
-      ;
-      </div>
-      <div class="code" data-demo="true" data-title="Specifying a direction">
-      $('.stick.image')
-        // if a direction if specified it will be obeyed
-        .transition('horizontal flip in')
-        .transition('vertical flip in')
-      ;
       </div>
 
       <h2 class="ui dividing header">Static Animations</h2>

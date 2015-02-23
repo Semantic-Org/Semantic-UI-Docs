@@ -144,8 +144,13 @@ type        : 'UI Behavior'
           </tr>
           <tr>
             <td>contains</td>
-            <td>A field contains text</td>
+            <td>A field contains text (case insensitive)</td>
             <td><code>contains[foo]</code></td>
+          </tr>
+          <tr>
+            <td>containsExactly</td>
+            <td>A field contains exactly text</td>
+            <td><code>containsExactly[foo]</code></td>
           </tr>
           <tr>
             <td>email</td>
@@ -164,8 +169,13 @@ type        : 'UI Behavior'
           </tr>
           <tr>
             <td>is</td>
-            <td>A field matches a value</td>
+            <td>A field matches a value (case insensitive)</td>
             <td><code>is[foo]</code></td>
+          </tr>
+          <tr>
+            <td>isExactly</td>
+            <td>A field is exactly text</td>
+            <td><code>isExactly[foo]</code></td>
           </tr>
           <tr>
             <td>length</td>
@@ -184,8 +194,13 @@ type        : 'UI Behavior'
           </tr>
           <tr>
             <td>not</td>
-            <td>A field does not match a value</td>
+            <td>A field does not match a value (case insensitive)</td>
             <td><code>not[foo]</code></td>
+          </tr>
+          <tr>
+            <td>notExactly</td>
+            <td>A field is not exactly text</td>
+            <td><code>notExactly[foo]</code></td>
           </tr>
           <tr>
             <td>url</td>

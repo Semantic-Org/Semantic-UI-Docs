@@ -21,7 +21,7 @@ type        : 'UI Behavior'
         <div class="column">
           <div class="content">
             <div class="ui header"><i class="green check icon"></i>Already Knows Your UI</div>
-            <p>Attach an API event to an input, by default, it will occur <code>oninput</code>. Attach an API event to a button, <code>onclick</code>. API also ties API state to UI state: rate throttling, class adjustments for active, loading, disabled, syncing between multiple elements, and more.</p>
+            <p>Attach an API event to an input, by default, it willn occur <code>oninput</code>. Attach an API event to a button, <code>onclick</code>. API also ties API state to UI state: rate throttling, class adjustments for active, loading, disabled, syncing between multiple elements, and more.</p>
           </div>
         </div>
         <div class="column">

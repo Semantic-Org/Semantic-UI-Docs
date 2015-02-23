@@ -9,16 +9,25 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script type="text/javascript">
 $(document).ready(function() {
-function showModalAndActivatePopups(modalDomElement) {
-    modalDomElement.modal({
-        onShow: function () {
-            $('.popupElement').popup();
-        }
-    }).modal('show');
-}
-$('.showEventResults').click(function () {
-    showModalAndActivatePopups($(this).next('.standard.eventResults.modal'));
-});
+    $('.ui.sidebar.first')
+        .sidebar({
+            transition: 'overlay',
+            exclusive: true,
+            dimPage: false,
+            closable: false
+        })
+        .sidebar('attach events', '.button.open-first-sidebar')
+    ;
+    $('.ui.sidebar.second')
+        .sidebar({
+            transition: 'overlay',
+            exclusive: true,
+            dimPage: false,
+            closable: false
+        })
+        .sidebar('attach events', '.button.open-second-sidebar')
+    ;
+
 });
 </script>
 
@@ -26,28 +35,35 @@ $('.showEventResults').click(function () {
 <style type="text/css">
 </style>
 
-<div style="max-width: 1000px;margin:2em auto;">
-<div class="eventItem" data-eventid="1"> <a class="ui mini icon green button showEventResults" href="#event_1_results">1<i class="unhide icon"></i>
-    </a>
-
-    <div class="ui standard eventResults modal transition"> <i class="close icon"></i>
-
-        <div class="header">Results for event : 1</div>
-        <div class="content">
-            <div class="description"></div>
-        </div>
-    </div>
-</div>
-<br />
-<div class="eventItem" data-eventid="2"> <a class="ui mini icon green button showEventResults" href="#event_2_results">2<i class="unhide icon"></i>
-    </a>
-
-    <div class="ui standard eventResults modal transition"> <i class="close icon"></i>
-
-        <div class="header">Results for event : 2</div>
-        <div class="content">
-            <div class="description"></div>
-        </div>
-    </div>
-</div>
-</div>
+<body>
+    <aside class="ui left vertical labeled icon sidebar menu first">
+        <a class="item">
+            <i class="home icon"></i>
+            Sidebar 1
+        </a>
+        <a class="item">
+            <button class="ui button teal open-second-sidebar">
+                Open sidebar 2
+            </button>
+        </a>
+    </aside>
+    <aside class="ui left vertical labeled icon sidebar menu second">
+        <a class="item">
+            <i class="home icon"></i>
+            Sidebar 2
+        </a>
+        <a class="item">
+            <button class="ui button teal open-first-sidebar">
+                Open sidebar 1
+            </button>
+        </a>
+    </aside>
+    <main class="pusher">
+        <button class="ui button teal open-first-sidebar">
+            Open sidebar 1
+        </button>
+        <button class="ui button teal open-second-sidebar">
+            Open sidebar 2
+        </button>
+    </main>
+</body>

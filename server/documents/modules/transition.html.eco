@@ -537,6 +537,16 @@ type        : 'UI Module'
           <td>Named animation event to used. Must be defined in css.</td>
         </tr>
         <tr>
+          <td>interval</td>
+          <td>0</td>
+          <td>Inteval in MS between each elements transition</td>
+        </tr>
+        <tr>
+          <td>reverse</td>
+          <td>auto</td>
+          <td>When an interval is specified, sets order of animations. <code>auto</code> reverses only animations that are hiding.</td>
+        </tr>
+        <tr>
           <td>displayType</td>
           <td>false</td>
           <td>Specify the final display type (block, inline-block etc) so that it doesn't have to be calculated.</td>

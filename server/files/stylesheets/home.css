@@ -527,6 +527,9 @@
   #example.index .fixed.launch.button {
     display: none;
   }
+  #example .stripe h1 {
+    font-size: 32px;
+  }
 }
 @media only screen and (min-width : 600px) {
   #example .theming .source.button {

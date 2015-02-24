@@ -317,7 +317,6 @@ type        : 'UI Module'
       <h4 class="ui header">Forcing Order</h4>
       <p>If you need to manually force reverse animations regardless of the animation direction, you can use <code>reverse: true</code>.</p>
       <div class="code" data-demo="true" data-title="Reversing Animation Order">
-      // always hide in reverse
       $('.reverse.images .image')
         .transition({
           animation : 'pulse',

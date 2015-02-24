@@ -1099,6 +1099,7 @@ semantic.ready = function() {
 
   $themeDropdown
     .dropdown({
+      allowTab: false,
       onChange: handler.less.changeTheme
     })
   ;

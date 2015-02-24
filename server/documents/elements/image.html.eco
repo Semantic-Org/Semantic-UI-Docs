@@ -54,9 +54,15 @@ themes      : ['Default']
   </h2>
 
   <div class="example">
+    <h4 class="ui header">Hidden</h4>
+    <p>An image can be hidden</p>
+    <img class="hidden ui image" src="/images/wireframe/image.png">
+  </div>
+
+  <div class="example">
     <h4 class="ui header">Disabled</h4>
     <p>An image can show that it is disabled and cannot be selected</p>
-    <img class="medium disabled ui image" src="/images/wireframe/image.png">
+    <img class="disabled medium ui image" src="/images/wireframe/image.png">
   </div>
 
   <h2 class="ui dividing header">Variations</h2>

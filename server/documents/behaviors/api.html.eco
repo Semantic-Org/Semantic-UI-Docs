@@ -1,18 +1,18 @@
 ---
 layout      : 'default'
 css         : 'api'
+standalone  : true
 
 title       : 'API'
 description : 'API allows elements to trigger actions on a server'
 type        : 'UI Behavior'
-standalone  : true
 ---
 
 <script src="/javascript/library/serialize-object.js"></script>
 <script src="/javascript/library/sinon.js"></script>
 <script src="/javascript/api.js"></script>
 
-<%- @partial('header', { tabs: 'behavior' }) %>
+<%- @partial('header',  { tabs: { overview: 'Overview', usage: 'Usage',  behaviors: 'Behaviors',  settings: 'Settings' } }) %>
 
 <div class="main container">
   <div class="ui active tab" data-tab="overview">
@@ -21,7 +21,7 @@ standalone  : true
         <div class="column">
           <div class="content">
             <div class="ui header"><i class="green check icon"></i>Already Knows Your UI</div>
-            <p>Attach an API event to an input, by default, it will occur <code>oninput</code>. Attach an API event to a button, <code>onclick</code>. API also ties API state to UI state: rate throttling, class adjustments for active, loading, disabled, syncing between multiple elements, and more.</p>
+            <p>Attach an API event to an input, by default, it willn occur <code>oninput</code>. Attach an API event to a button, <code>onclick</code>. API also ties API state to UI state: rate throttling, class adjustments for active, loading, disabled, syncing between multiple elements, and more.</p>
           </div>
         </div>
         <div class="column">
@@ -637,15 +637,93 @@ standalone  : true
 
   </div>
 
-  <div class="ui tab" data-tab="examples">
-    <p>Needs to be written still...</p>
-    <!-- Search Example !-->
+  <div class="ui tab" data-tab="behaviors">
 
+    <h2 class="ui dividing header">Behavior</h2>
 
-    <!-- Tab Manual Example !-->
+    <p>All the following behaviors can be called using the syntax:</p>
+    <div class="code">
+    $('.your.element')
+      .api('behavior name', argumentOne, argumentTwo)
+    ;
+    </div>
 
-
-    <!-- Tab Auto Example !-->
+    <table class="ui definition celled sortable table segment">
+      <thead>
+        <th>Behavior</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>query</td>
+          <td>Execute query using existing API settings</td>
+        </tr>
+        <tr>
+          <td>add url data(url, data)</td>
+          <td>Adds data to existing templated url and returns full url string</td>
+        </tr>
+        <tr>
+          <td>get request</td>
+          <td>Gets promise for current API request</td>
+        </tr>
+        <tr>
+          <td>abort</td>
+          <td>Aborts current API request</td>
+        </tr>
+        <tr>
+          <td>reset</td>
+          <td>Removes loading and error state from element</td>
+        </tr>
+        <tr>
+          <td>was cancelled</td>
+          <td>Returns whether last request was cancelled</td>
+        </tr>
+        <tr>
+          <td>was failure</td>
+          <td>Returns whether last request was failure</td>
+        </tr>
+        <tr>
+          <td>was successful</td>
+          <td>Returns whether last request was successful</td>
+        </tr>
+        <tr>
+          <td>was complete</td>
+          <td>Returns whether last request was completed</td>
+        </tr>
+        <tr>
+          <td>is disabled</td>
+          <td>Returns whether element is disabled</td>
+        </tr>
+        <tr>
+          <td>is loading</td>
+          <td>Returns whether element is loading</td>
+        </tr>
+        <tr>
+          <td>set loading</td>
+          <td>Sets loading state to element</td>
+        </tr>
+        <tr>
+          <td>set error</td>
+          <td>Sets error state to element</td>
+        </tr>
+        <tr>
+          <td>remove loading</td>
+          <td>Removes loading state to element</td>
+        </tr>
+        <tr>
+          <td>remove error</td>
+          <td>Removes error state to element</td>
+        </tr>
+        <tr>
+          <td>get event</td>
+          <td>Gets event that API request will occur on</td>
+        </tr>
+        <tr>
+          <td>destroy</td>
+          <td>Removes API settings from the page and all events</td>
+        </tr>
+      </tbody>
+    </table>
 
 
   </div>

@@ -9,65 +9,16 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script type="text/javascript">
 $(document).ready(function() {
-  var validation_settings = {
-        inline : true,
-        on : 'blur'
-};
-var validation_rules =
-{
-
-  gender: {
-      identifier  : 'gender',
-      rules: [
-        {
-          type   : 'empty',
-          prompt : 'Please enter a gender'
-        }
-      ]
-    },
-    name: {
-      identifier  : 'name',
-      rules: [
-        {
-          type   : 'empty',
-          prompt : 'Please enter your name'
-        }
-      ]
-    },
-    username: {
-      identifier  : 'username',
-      rules: [
-        {
-          type   : 'empty',
-          prompt : 'Please enter your username'
-        }
-      ]
-    },
-    password: {
-      identifier  : 'password',
-      rules: [
-        {
-          type   : 'empty',
-          prompt : 'Please enter your password'
-        }
-      ]
-    },
-    terms: {
-      identifier  : 'terms',
-      rules: [
-        {
-          type   : 'checked',
-          prompt : 'You need to agree to the terms and conditions'
-        }
-      ]
-    }
-};
-$('.ui.form').form(validation_rules ,  validation_settings);
-$('.ui.checkbox').checkbox();
-$('.ui.dropdown')
-  .dropdown({
-  })
-;
+    $('.card')
+        .transition({
+            interval: 200,
+            animation: 'fade'
+        })
+        .transition({
+            interval: 200,
+            animation: 'scale'
+        })
+    ;
 });
 </script>
 
@@ -76,40 +27,144 @@ $('.ui.dropdown')
 </style>
 
 <div style="max-width: 1000px;margin:2em auto;">
-<form class="ui form segment">
-    <p>Tell Us About Yourself</p>
-    <div class="two fields">
-      <div class="field">
-        <label>Name</label>
-        <input placeholder="First Name" name="name" type="text">
-      </div>
-      <div class="field">
-        <label>Gender</label>
-        <div class="ui selection dropdown">
-          <input type="hidden" name="gender">
-          <div class="default text">Gender</div>
-          <i class="dropdown icon"></i>
-          <div class="menu">
-            <div class="item" data-value="male">Male</div>
-            <div class="item" data-value="female">Female</div>
-          </div>
-        </div>
-      </div>
+<div class="ui cards">
+    <div class="green card">
+        <div class="image">
+                <img src="images/wireframe/image.png" class="visible content">
+            </div>
+            <div class="content">
+                <a class="header">Card 0</a>
+                <div class="meta">
+                    <div class="ui small star rating"></div>
+                </div>
+                <div class="description">
+                    <a>
+                        <i class="red clock icon"></i>
+                        Today
+                    </a>
+                </div>
+            </div>
+            <div class="extra content">
+                <span class="left floated like">
+                    <i class="like icon"></i>
+                    30+ fans
+                </span>
+            </div>
     </div>
-    <div class="field">
-      <label>Username</label>
-      <input placeholder="Username" name="username" type="text">
+    <div class="green card">
+        <div class="image">
+                <img src="images/wireframe/image.png" class="visible content">
+            </div>
+            <div class="content">
+                <a class="header">Card 1</a>
+                <div class="meta">
+                    <div class="ui small star rating"></div>
+                </div>
+                <div class="description">
+                    <a>
+                        <i class="red clock icon"></i>
+                        Today
+                    </a>
+                </div>
+            </div>
+            <div class="extra content">
+                <span class="left floated like">
+                    <i class="like icon"></i>
+                    30+ fans
+                </span>
+            </div>
     </div>
-    <div class="field">
-      <label>Password</label>
-      <input type="password" name="password">
+    <div class="green card">
+        <div class="image">
+                <img src="images/wireframe/image.png" class="visible content">
+            </div>
+            <div class="content">
+                <a class="header">Card 2</a>
+                <div class="meta">
+                    <div class="ui small star rating"></div>
+                </div>
+                <div class="description">
+                    <a>
+                        <i class="red clock icon"></i>
+                        Today
+                    </a>
+                </div>
+            </div>
+            <div class="extra content">
+                <span class="left floated like">
+                    <i class="like icon"></i>
+                    30+ fans
+                </span>
+            </div>
     </div>
-    <div class="inline field">
-      <div class="ui checkbox">
-        <input type="checkbox" name="terms">
-        <label>I agree to the terms and conditions</label>
-      </div>
+    <div class="green card">
+        <div class="image">
+                <img src="images/wireframe/image.png" class="visible content">
+            </div>
+            <div class="content">
+                <a class="header">Card 3</a>
+                <div class="meta">
+                    <div class="ui small star rating"></div>
+                </div>
+                <div class="description">
+                    <a>
+                        <i class="red clock icon"></i>
+                        Today
+                    </a>
+                </div>
+            </div>
+            <div class="extra content">
+                <span class="left floated like">
+                    <i class="like icon"></i>
+                    30+ fans
+                </span>
+            </div>
     </div>
-    <div class="ui blue submit button">Submit</div>
-  </form>
+    <div class="green card">
+        <div class="image">
+                <img src="images/wireframe/image.png" class="visible content">
+            </div>
+            <div class="content">
+                <a class="header">Card 4</a>
+                <div class="meta">
+                    <div class="ui small star rating"></div>
+                </div>
+                <div class="description">
+                    <a>
+                        <i class="red clock icon"></i>
+                        Today
+                    </a>
+                </div>
+            </div>
+            <div class="extra content">
+                <span class="left floated like">
+                    <i class="like icon"></i>
+                    30+ fans
+                </span>
+            </div>
+    </div>
+    <div class="green card">
+        <div class="image">
+                <img src="images/wireframe/image.png" class="visible content">
+            </div>
+            <div class="content">
+                <a class="header">Card 5</a>
+                <div class="meta">
+                    <div class="ui small star rating"></div>
+                </div>
+                <div class="description">
+                    <a>
+                        <i class="red clock icon"></i>
+                        Today
+                    </a>
+                </div>
+            </div>
+            <div class="extra content">
+                <span class="left floated like">
+                    <i class="like icon"></i>
+                    30+ fans
+                </span>
+            </div>
+    </div>
+</div>
 </div>

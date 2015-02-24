@@ -276,6 +276,61 @@ type        : 'UI Module'
       ;
       </div>
 
+      <h2 class="ui dividing header">Grouped Transitions</h2>
+
+      <h4 class="ui header">Animation Intervals</h4>
+      <p>When animating several different items in a group you may want to use an interval so that each item appears consecutively</p>
+      <div class="code" data-demo="true" data-title="Animation Intervals">
+      $('.jiggle.images .image')
+        .transition({
+          animation : 'jiggle',
+          duration  : 800,
+          interval  : 200
+        })
+      ;
+      </div>
+      <div class="ui small jiggle images">
+        <img src="/images/wireframe/image.png" class="ui wireframe image">
+        <img src="/images/wireframe/image.png" class="ui wireframe image">
+        <img src="/images/wireframe/image.png" class="ui wireframe image">
+      </div>
+      <h4 class="ui header">Animation Order</h4>
+      <p>When hiding groups of elements, the default setting uses <code>reverse: 'auto'</code>. This will automatically reverse the order of animations from back-to-front when hiding elements to avoid layout reflows. When showing elements the order will return to its normal sequence.</p>
+      <div class="code" data-demo="true" data-title="Reversing Animation Order">
+      $('.sequenced.images .image')
+        .transition({
+          animation : 'scale',
+          reverse   : 'auto', // default setting
+          interval  : 200
+        })
+      ;
+      </div>
+      <div class="ui small sequenced images">
+        <img src="/images/wireframe/image.png" class="ui wireframe image">
+        <img src="/images/wireframe/image.png" class="ui wireframe image">
+        <img src="/images/wireframe/image.png" class="ui wireframe image">
+        <img src="/images/wireframe/image.png" class="ui wireframe image">
+        <img src="/images/wireframe/image.png" class="ui wireframe image">
+        <img src="/images/wireframe/image.png" class="ui wireframe image">
+      </div>
+
+      <h4 class="ui header">Forcing Order</h4>
+      <p>If you need to manually force reverse animations regardless of the animation direction, you can use <code>reverse: true</code>.</p>
+      <div class="code" data-demo="true" data-title="Reversing Animation Order">
+      $('.reverse.images .image')
+        .transition({
+          animation : 'pulse',
+          reverse   : true,
+          interval  : 200
+        })
+      ;
+      </div>
+      <div class="ui small reverse images">
+        <img src="/images/wireframe/image.png" class="ui wireframe image">
+        <img src="/images/wireframe/image.png" class="ui wireframe image">
+        <img src="/images/wireframe/image.png" class="ui wireframe image">
+      </div>
+
       <h2 class="ui dividing header">Static Animations</h2>
       <p>Animations that do not have an in or out animation defined, will maintain their current visibility after running</p>
       <div class="code" data-demo="true" data-title="Static transitions">
@@ -482,6 +537,16 @@ type        : 'UI Module'
           <td>Named animation event to used. Must be defined in css.</td>
         </tr>
         <tr>
+          <td>interval</td>
+          <td>0</td>
+          <td>Inteval in MS between each elements transition</td>
+        </tr>
+        <tr>
+          <td>reverse</td>
+          <td>auto</td>
+          <td>When an interval is specified, sets order of animations. <code>auto</code> reverses only animations that are hiding.</td>
+        </tr>
+        <tr>
           <td>displayType</td>
           <td>false</td>
           <td>Specify the final display type (block, inline-block etc) so that it doesn't have to be calculated.</td>
@@ -493,7 +558,7 @@ type        : 'UI Module'
         </tr>
         <tr>
           <td>useFailSafe</td>
-          <td>false</td>
+          <td>true</td>
           <td>If enabled a <code>timeout</code> will be added to ensure <code>animationend</code> callback occurs even if element is hidden</td>
         </tr>
         <tr>

@@ -260,6 +260,7 @@ semantic.search.ready = function() {
 
   $local
     .search({
+      searchFields: ['baz'],
       source: content
     })
   ;

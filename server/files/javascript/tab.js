@@ -3,16 +3,33 @@ semantic.dropdown = {};
 // ready event
 semantic.dropdown.ready = function() {
 
-  // selector cache
+  // sinon
   var
-    // alias
-    handler
+    headers = {
+      'Content-Type': 'text/html'
+    },
+    method       = 'GET',
+    responseCode = 200,
+    body         = {
+      first  : '<h3 class="ui header">AJAX Tab One</h3><img class="ui wireframe image" src="/images/wireframe/paragraph.png"><img class="ui wireframe image" src="/images/wireframe/paragraph.png"><img class="ui wireframe image" src="/images/wireframe/paragraph.png">',
+      second : '<h3 class="ui header">AJAX Tab Two</h3><img class="ui wireframe image" src="/images/wireframe/paragraph.png"><img class="ui wireframe image" src="/images/wireframe/paragraph.png"><img class="ui wireframe image" src="/images/wireframe/paragraph.png">',
+      third  : '<h3 class="ui header">AJAX Tab Three</h3><img class="ui wireframe image" src="/images/wireframe/paragraph.png"><img class="ui wireframe image" src="/images/wireframe/paragraph.png"><img class="ui wireframe image" src="/images/wireframe/paragraph.png">'
+    },
+    server = sinon.fakeServer.create()
   ;
 
-  // event handlers
-  handler = {
+  server.autoRespond = true;
+  server.autoRespondAfter = 600;
 
-  };
+  server
+    .respondWith(/\/first(.*)/, [responseCode, headers, body.first])
+  ;
+  server
+    .respondWith(/\/second(.*)/, [responseCode, headers, body.second])
+  ;
+  server
+    .respondWith(/\/third(.*)/, [responseCode, headers, body.third])
+  ;
 
   $('.first.example .menu .item')
     .tab({
@@ -32,7 +49,8 @@ semantic.dropdown.ready = function() {
     .tab({
       context : '.dynamic.example',
       auto    : true,
-      path    : '/modules/tab.html'
+      histor  : false,
+      path    : '/'
     })
   ;
 

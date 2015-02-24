@@ -17,10 +17,10 @@ semantic.api.ready = function() {
     headers = {
       'Content-Type': 'application/json'
     },
-    method = 'GET',
+    method       = 'GET',
     responseCode = 200,
-    body   = '{ "success": "true" }',
-    server = sinon.fakeServer.create()
+    body         = '{ "success": "true" }',
+    server       = sinon.fakeServer.create()
   ;
 
   server.autoRespond = true;

@@ -367,50 +367,70 @@ themes      : ['Default', 'GitHub']
   <div class="example">
     <h4 class="ui header">Header Item</h4>
     <p>A menu may have a header to help label sections of a menu.</p>
+
+    <div class="ui menu">
+      <div class="header item">
+        Our Company
+      </div>
+      <a class="item">
+        About Us
+      </a>
+      <a class="item">
+        Jobs
+      </a>
+      <a class="item">
+        Locations
+      </a>
+      <div class="header item">
+        Support
+      </div>
+      <a class="item">
+        FAQ
+      </a>
+      <a class="item">
+        E-mail Support
+      </a>
+    </div>
+  </div>
+  <div class="another example">
     <div class="ui vertical menu">
       <div class="header item">
-        <i class="user icon"></i>
-        Communities
+        Products
       </div>
       <div class="item">
-        College
+        CMS Solutions
         <div class="menu">
-          <a class="item">Baseball</a>
-          <a class="item">Basketball</a>
-          <a class="item">Golf</a>
+          <a class="item">Rails</a>
+          <a class="item">Python</a>
+          <a class="item">PHP</a>
         </div>
       </div>
       <a class="item">
-        Dance
+        Hosting
       </a>
       <a class="item">
-        Aerobics
-      </a>
-      <div class="header item">
-        <i class="globe icon"></i>
-        Cities
-      </div>
-      <a class="item">
-        New York
-      </a>
-      <a class="item">
-        Montreal
-      </a>
-      <a class="item">
-        Los Angeles
-      </a>
-      <a class="item">
-        San Francisco
+        Enterprise
       </a>
       <div class="header item">
-        <i class="icon calendar"></i>
-        Months
+        Our Company
       </div>
       <a class="item">
-        August
+        About Us
       </a>
       <a class="item">
-        June
+        Jobs
+      </a>
+      <a class="item">
+        Locations
+      </a>
+      <div class="header item">
+        Support
+      </div>
+      <a class="item">
+        FAQ
+      </a>
+      <a class="item">
+        E-mail Support
       </a>
     </div>
   </div>

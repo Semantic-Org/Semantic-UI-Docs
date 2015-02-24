@@ -21,11 +21,6 @@ themes      : ['Default', 'Fixed-width']
 
   <div class="ui active intro tab" data-tab="overview">
 
-    <div class="ui toggle animation checkbox">
-      <input type="checkbox" name="animation" />
-      <label>Toggle Animation</label>
-    </div>
-
     <h2 class="ui dividing header">Introduction</h2>
 
     <div class="highlighted example">
@@ -37,6 +32,11 @@ themes      : ['Default', 'Fixed-width']
       <div class="ui ignored info message">
         <p>All grid systems use an arbitrary column count. Semantic's default theme assumes <b>16 columns</b>. This number can be adjusted in your project by adjust the <code>@columnCount</code> value in <code>site.variables</code>.</p>
       </div>
+      <div class="ui toggle animation checkbox">
+        <input type="checkbox" name="animation" />
+        <label>Toggle Animation</label>
+      </div>
+      <div class="ui divider"></div>
       <div class="ui grid">
         <div class="four wide column"></div>
         <div class="four wide column"></div>
@@ -1017,6 +1017,26 @@ themes      : ['Default', 'Fixed-width']
     </div>
 
     <div class="example">
+      <h4 class="ui header">Equal Height</h4>
+      <p>A row can specify that it is equal height so all of its columns appear the length of its longest column.</p>
+      <div class="ui three column grid">
+        <div class="equal height divided row">
+          <div class="column">
+            <p>This is a short row</p>
+          </div>
+          <div class="column">
+            <p>This is a short row</p>
+          </div>
+          <div class="column">
+            <p>This is a very long row with lots of text in it and way more text than the other rows</p>
+            <p>It might even span for multiple paragraphs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="example">
       <h4 class="ui header">Doubling</h4>
       <p>A grid can double its column width on tablet and mobile sizes</p>
       <div class="ui text message info ignore">
@@ -1213,26 +1233,6 @@ themes      : ['Default', 'Fixed-width']
         </div>
       </div>
     </div>
-
-    <div class="example">
-      <h4 class="ui header">Equal Height</h4>
-      <p>A row can specify that it is equal height so all of its columns appear the length of its longest column.</p>
-      <div class="ui three column grid">
-        <div class="equal height divided row">
-          <div class="column">
-            <p>This is a short row</p>
-          </div>
-          <div class="column">
-            <p>This is a short row</p>
-          </div>
-          <div class="column">
-            <p>This is a very long row with lots of text in it and way more text than the other rows</p>
-            <p>It might even span for multiple paragraphs.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <div class="another example">
       <div class="ui three column horizontally padded grid">
         <div class="equal height row">

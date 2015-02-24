@@ -93,7 +93,7 @@ themes      : ['Default', 'GitHub', 'Gmail']
 
   <div class="example">
     <h4 class="ui header">Hidden</h4>
-    <p>Text Blocks can be hidden</p>
+    <p>A message can be hidden</p>
     <div class="existing code">
       <div class="ui hidden message">
         <p>You can't see me</p>
@@ -103,7 +103,7 @@ themes      : ['Default', 'GitHub', 'Gmail']
 
   <div class="example">
     <h4 class="ui header">Visible</h4>
-    <p>Text Blocks can be set to visible if they need to force themselves to be shown.</p>
+    <p>A message can be set to visible to force itself to be shown.</p>
     <div class="ui visible message">
       <p>You can always see me</p>
     </div>

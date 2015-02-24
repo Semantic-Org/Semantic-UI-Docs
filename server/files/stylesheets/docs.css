@@ -504,6 +504,7 @@ body#example {
 #example.basic .tab.header.segment .tabular.menu .active.item {
   background-color: #F9F9F9;
   border-bottom-color: #F9F9F9;
+  box-shadow: none;
 }
 
 #example.basic .main.container > .rail,
@@ -1060,7 +1061,7 @@ body#example {
 #example .demo.container .segment.example {
   z-index: 1;
 }
-#example .demo.container .ui.label:not(.empty) {
+#example .demo.container > .ui.label:not(.empty) {
   margin-bottom: 1em;
 }
 #example .demo.container .segment .ui.label {
@@ -1546,14 +1547,18 @@ body.progress.animated .ui.progress .bar {
     padding: 4em 0em;
   }
   #example > .pusher > .footer {
-    padding: 2em 0em;
+    padding: 1em 0em;
   }
   #example .container {
     width: auto;
     margin: 0em 1rem;
   }
+  #example .footer .container {
+    margin: 0em;
+  }
   #example .main.container {
-    padding: 1em;
+    padding: 2em 1em;
+    border: none;
     box-shadow: none;
   }
   #example .header.segment {
@@ -1700,22 +1705,9 @@ body.progress.animated .ui.progress .bar {
   #example #toc .item > .icon {
     font-size: 1em !important;
   }
-  #example .inverted.advertisement .carbonad-img {
-    margin-top: 0px;
-  }
-  #example #carbonads-container {
+  #example .advertisement #carbonads {
     float: none;
-  }
-  #example #carbonads {
-    width: auto;
-  }
-  #example .carbon-text,
-  #example .carbon-poweredby {
-    float: none;
-    display: block;
-    text-align: left;
-    margin-left: 160px;
-    width: 170px;
+    width: 100%;
   }
   #example:not(.index) .introduction .button {
     float: none;

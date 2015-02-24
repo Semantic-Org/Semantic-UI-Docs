@@ -3,6 +3,7 @@ layout      : 'default'
 css         : 'basic'
 element     : 'sticky'
 elementType : 'module'
+standalone  : true
 
 title       : 'Sticky'
 description : 'Sticky content fixes itself to the browser viewport as content is scrolled'

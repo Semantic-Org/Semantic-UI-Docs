@@ -1,0 +1,443 @@
+---
+layout      : 'default'
+css         : 'visibility'
+element     : 'visibility'
+elementType : 'behavior'
+standalone  : true
+
+title       : 'Visibility'
+description : 'Visibility provides a set of callbacks for when a content appears in the viewport'
+type        : 'UI Behavior'
+
+---
+
+<script src="/javascript/visibility.js"></script>
+
+<%- @partial('header', { tabs: {  introduction: 'Introduction', examples: 'Examples', usage: 'Usage', settings: 'Settings' } }) %>
+
+<div class="main container">
+
+  <div class="ui active tab" data-tab="introduction">
+
+    <div class="introduction">
+      <h2 class="ui dividing header">Introduction</h2>
+
+      <p>Visibility provides a set of callbacks that can be attached to any element and trigger when a specific visibility event occurs.</p>
+
+      <p>There are a variety of uses for attaching event's to visibility, here are some of the more common ones.</p>
+
+      <div class="ui large divided very relaxed list">
+        <div class="item">
+          <div class="header">Infinite Scroll</div>
+          <div class="description">You want to start loading more content into a container when a user is partially finished scrolling through the content</div>
+        </div>
+        <div class="item">
+          <div class="header">Sticky Headers</div>
+          <div class="description">You want an element to fix itself to the viewport when it is passed, and return to its original static position afterwards</div>
+        </div>
+        <div class="item">
+          <div class="header">Lazy Loading Images</div>
+          <div class="description">You want to start loading an image just before it is visible to a user</div>
+        </div>
+        <div class="item">
+          <div class="header">Reactive Content</div>
+          <div class="description">You want an element to change based on how far a user has scrolled</div>
+        </div>
+        <div class="item">
+          <div class="header">Event Tracking</div>
+          <div class="description">You want to attach analytics events that match a users engagement with content, for example, to log to Google Analytics when a blog post is 30% read.</div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="ui tab" data-tab="examples">
+
+    <h2 class="ui dividing header">Examples</h2>
+
+    <div class="visibility example">
+      <h4 class="ui header">Lazy Loading Content</h4>
+      <p>As an alternative to pagination you can use <code>onBottomVisible</code> to load content automatically when the bottom of a container is reached.</p>
+
+      <div class="ignored code" data-type="javascript">
+        $('.long.segment')
+          .visibility({
+            once: false,
+            onBottomVisible: function() {
+              // load fake content 5 times
+            }
+          })
+        ;
+      </div>
+
+      <div class="long ui segment">
+        <h3 class="ui header">Header</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet metus molestie, vestibulum neque sit amet, sollicitudin velit. Vivamus tortor odio, porta ut dapibus at, pretium non sapien. Cras bibendum ipsum vel nunc aliquet, vel hendrerit elit varius. Nulla ultrices lorem lectus, et venenatis mi dapibus in. Vestibulum a egestas odio. Ut feugiat lacus diam, a consectetur libero porta nec. Nam tempus tellus vel condimentum condimentum. Donec egestas libero in tempus cursus.</p>
+        <p>Nulla facilisi. Mauris eleifend diam ac risus fringilla scelerisque. In hac habitasse platea dictumst. Pellentesque vitae nulla magna. Donec viverra est in eleifend efficitur. Suspendisse sed nulla vel justo facilisis vulputate id non odio. Nunc imperdiet diam mi, non tincidunt augue ultrices sed. Proin consequat pharetra magna et mollis. Praesent sagittis libero id metus lacinia vestibulum.</p>
+        <p>Mauris bibendum nibh non viverra lacinia. Curabitur ultrices, nisl et elementum imperdiet, ex augue faucibus neque, et tincidunt mauris libero tincidunt quam. Fusce tellus dui, blandit elementum tempus et, tincidunt eu enim. Ut congue sapien id bibendum pharetra. Donec iaculis sapien vitae est consequat feugiat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur blandit lectus non ante congue bibendum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam erat volutpat. Vivamus accumsan laoreet placerat. Suspendisse tristique, erat sit amet interdum egestas, dui tortor porttitor neque, vel bibendum mi eros sed dui. Nulla et purus a dui faucibus efficitur. Praesent luctus rhoncus mauris eget mattis. Etiam dapibus elit rutrum interdum sollicitudin.</p>
+        <p>Sed ut velit ultricies sapien accumsan vehicula. Vestibulum blandit tempor turpis ut efficitur. Etiam nec sodales metus, euismod ultricies ex. Sed quis urna leo. Nulla vehicula dui ut feugiat cursus. Vestibulum pretium imperdiet condimentum. Suspendisse vulputate massa eget erat eleifend scelerisque. Quisque tortor nisl, aliquet et congue at, sagittis non urna.</p>
+        <p>Etiam ligula massa, viverra sed neque a, fringilla elementum dolor. Nunc at justo mi. Duis efficitur, leo ac lacinia iaculis, tellus nibh porttitor dui, id fringilla leo est nec nunc. Aenean non erat ipsum. Suspendisse posuere libero id sagittis pulvinar. Duis lorem sapien, pretium vestibulum ultrices vitae, efficitur eu lorem. Aenean hendrerit dolor id accumsan viverra.</p>
+        <h3 class="ui header">Sub Header</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet metus molestie, vestibulum neque sit amet, sollicitudin velit. Vivamus tortor odio, porta ut dapibus at, pretium non sapien. Cras bibendum ipsum vel nunc aliquet, vel hendrerit elit varius. Nulla ultrices lorem lectus, et venenatis mi dapibus in. Vestibulum a egestas odio. Ut feugiat lacus diam, a consectetur libero porta nec. Nam tempus tellus vel condimentum condimentum. Donec egestas libero in tempus cursus.</p>
+        <p>Nulla facilisi. Mauris eleifend diam ac risus fringilla scelerisque. In hac habitasse platea dictumst. Pellentesque vitae nulla magna. Donec viverra est in eleifend efficitur. Suspendisse sed nulla vel justo facilisis vulputate id non odio. Nunc imperdiet diam mi, non tincidunt augue ultrices sed. Proin consequat pharetra magna et mollis. Praesent sagittis libero id metus lacinia vestibulum.</p>
+        <p>Mauris bibendum nibh non viverra lacinia. Curabitur ultrices, nisl et elementum imperdiet, ex augue faucibus neque, et tincidunt mauris libero tincidunt quam. Fusce tellus dui, blandit elementum tempus et, tincidunt eu enim. Ut congue sapien id bibendum pharetra. Donec iaculis sapien vitae est consequat feugiat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur blandit lectus non ante congue bibendum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam erat volutpat. Vivamus accumsan laoreet placerat. Suspendisse tristique, erat sit amet interdum egestas, dui tortor porttitor neque, vel bibendum mi eros sed dui. Nulla et purus a dui faucibus efficitur. Praesent luctus rhoncus mauris eget mattis. Etiam dapibus elit rutrum interdum sollicitudin.</p>
+      </div>
+      <div class="ui inline text loader">
+        Adding more content...
+      </div>
+    </div>
+
+  </div>
+
+  <div class="ui tab" data-tab="usage">
+
+    <h3 class="ui dividing header">Events</h3>
+
+    <h4 class="ui header">Standard Events</h4>
+    <table class="ui celled definition table">
+      <thead>
+        <tr>
+          <th class="three wide">Event</th>
+          <th class="six wide">Occurs</th>
+          <th>Pseudocode</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            onTopVisible
+          </td>
+          <td>
+            Element's top edge has passed bottom of screen
+          </td>
+          <td>
+            <div class="code" data-type="javascript">screen.bottom >= element.top</div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            onTopPassed
+          </td>
+          <td>
+            Element's top edge has passed top of the screen
+          </td>
+          <td>
+            <div class="code" data-type="javascript">screen.top >= element.top</div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            onBottomVisible
+          </td>
+          <td>
+            Element's bottom edge has passed bottom of screen
+          </td>
+          <td>
+            <div class="code" data-type="javascript">screen.bottom >= element.top</div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            onPassing
+          </td>
+          <td>
+            Any part of an element is visible on screen
+          </td>
+          <td>
+            <div class="code" data-type="javascript">screen.bottom >= element.top && screen.top < element.bottom</div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            onBottomPassed
+          </td>
+          <td>
+            Element's bottom edge has passed top of screen
+          </td>
+          <td>
+            <div class="code" data-type="javascript">screen.top >= element.bottom</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4 class="ui header">Grouped Events</h4>
+    <table class="ui celled definition table">
+      <thead>
+        <tr>
+          <th class="three wide">Event</th>
+          <th class="six wide">Occurs</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            onPassed {}
+          </td>
+          <td>
+            A percentage of an element's content has been passed
+          </td>
+          <td>
+            <div class="code" data-type="javascript">
+            onPassed: {
+              40: function() {
+                // do something at 40%
+              },
+              80: function() {
+                // do something at 80%
+              }
+            }
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4 class="ui header">Reverse Events</h4>
+    <table class="ui celled definition table">
+      <thead>
+        <tr>
+          <th class="three wide">Event</th>
+          <th class="six wide">Occurs</th>
+          <th>Pseudocode</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            onTopVisibleReverse
+          </td>
+          <td>
+            Element's top edge has not passed bottom of screen
+          </td>
+          <td>
+            <div class="code" data-type="javascript">screen.bottom >= element.top</div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            onTopPassedReverse
+          </td>
+          <td>
+            Element's top edge has not passed top of the screen
+          </td>
+          <td>
+            <div class="code" data-type="javascript">screen.top >= element.top</div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            onBottomVisibleReverse
+          </td>
+          <td>
+            Element's bottom edge has not passed bottom of screen
+          </td>
+          <td>
+            <div class="code" data-type="javascript">screen.bottom >= element.top</div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            onPassingReverse
+          </td>
+          <td>
+            Element's top has not passed top of screen but bottom has
+          </td>
+          <td>
+            <div class="code" data-type="javascript">screen.bottom >= element.top && screen.top < element.bottom</div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            onBottomPassedReverse
+          </td>
+          <td>
+            Element's bottom edge has not passed top of screen
+          </td>
+          <td>
+            <div class="code" data-type="javascript">screen.top >= element.bottom</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+
+  </div>
+
+  <div class="ui tab" data-tab="settings">
+
+    <h3 class="ui header">
+      Visibility Settings
+      <div class="sub header">Settings to configure visibility behavior</div>
+    </h3>
+    <table class="ui celled sortable definition table segment">
+      <thead>
+        <th>Setting</th>
+        <th class="four wide">Default</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>throttle</td>
+          <td>false</td>
+          <td>If a time is specified, visibility will only be checked at this interval, defaults to <code>requestAnimationFrame</code></td>
+        </tr>
+        <tr>
+          <td>context</td>
+          <td>false</td>
+          <td>Context which visibility should watch scroll</td>
+        </tr>
+        <tr>
+          <td>includeMargin</td>
+          <td>false</td>
+          <td>Whether top and bottom of an element should include its margin</td>
+        </tr>
+        <tr>
+          <td>type</td>
+          <td>false</td>
+          <td>Offset in pixels from the top of the screen when fixing element to viewport</td>
+        </tr>
+        <tr>
+          <td>bottomOffset</td>
+          <td>0</td>
+          <td>Offset in pixels from the bottom of the screen when fixing element to viewport</td>
+        </tr>
+      </tbody>
+    </table>
+
+     <h4 class="ui header">Callbacks</h4>
+    <p>Callbacks specify a function to occur after a specific behavior.</p>
+
+    <table class="ui celled sortable definition table segment">
+      <thead>
+        <tr>
+          <th class="four wide"></th>
+          <th>Context</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>onReposition</td>
+          <td>$module</td>
+          <td>Callback when element is repositioned from layout change</td>
+        </tr>
+        <tr>
+          <td>onScroll</td>
+          <td>$module</td>
+          <td>Callback when <code>requestAnimationFrame</code> fires from scroll handler.</td>
+        </tr>
+        <tr>
+          <td>onStick</td>
+          <td>$module</td>
+          <td>Callback when element is fixed to page</td>
+        </tr>
+        <tr>
+          <td>onUnstick</td>
+          <td>$module</td>
+          <td>Callback when element is unfixed from page</td>
+        </tr>
+        <tr>
+          <td>onTop</td>
+          <td>$module</td>
+          <td>Callback when element is bound to top of parent container</td>
+        </tr>
+        <tr>
+          <td>onBottom</td>
+          <td>$module</td>
+          <td>Callback when element is bound to bottom of parent container</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 class="ui header">
+      DOM Settings
+      <div class="sub header">DOM settings specify how this module should interface with the DOM</div>
+    </h3>
+    <table class="ui celled sortable definition table segment">
+      <thead>
+        <th class="three wide">Setting</th>
+        <th class="six wide">Default</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>namespace</td>
+          <td>visibility</td>
+          <td>Event namespace. Makes sure module teardown does not effect other events attached to an element.</td>
+        </tr>
+        <tr>
+          <td>className</td>
+          <td>
+            <div class="code">
+            className : {
+              bound     : 'bound',
+              fixed     : 'fixed',
+              supported : 'native',
+              top       : 'top',
+              bottom    : 'bottom'
+            }
+            </div>
+          </td>
+          <td>Class names used to attach style to state</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="ui horizontal divider"><i class="icon setting"></i></div>
+
+    <h3 class="ui header">
+      Debug Settings
+      <div class="sub header">Debug settings controls debug output to the console</div>
+    </h3>
+
+    <table class="ui celled sortable definition table segment">
+      <thead>
+        <th>Setting</th>
+        <th class="four wide">Default</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>name</td>
+          <td>Visibility</td>
+          <td>Name used in debug logs</td>
+        </tr>
+        <tr>
+          <td>debug</td>
+          <td>False</td>
+          <td>Provides standard debug output to console</td>
+        </tr>
+        <tr>
+          <td>performance</td>
+          <td>True</td>
+          <td>Provides standard debug output to console</td>
+        </tr>
+        <tr>
+          <td>verbose</td>
+          <td>True</td>
+          <td>Provides ancillary debug output to console</td>
+        </tr>
+        <tr>
+          <td>errors</td>
+          <td colspan="2">
+            <div class="code">
+            error         : {
+              container      : 'Visibility element must be inside a relative container',
+              visible        : 'Element is hidden, you must call refresh after element becomes visible',
+              method         : 'The method you called is not defined.',
+              invalidContext : 'Context specified does not exist',
+              elementSize    : 'Visibility element is larger than its container, cannot create visibility.'
+            }
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+
+</div>

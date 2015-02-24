@@ -1,7 +1,7 @@
-semantic.dropdown = {};
+semantic.sticky = {};
 
 // ready event
-semantic.dropdown.ready = function() {
+semantic.sticky.ready = function() {
 
   // selector cache
   var
@@ -72,5 +72,5 @@ semantic.dropdown.ready = function() {
 
 // attach ready event
 $(document)
-  .ready(semantic.dropdown.ready)
+  .ready(semantic.sticky.ready)
 ;

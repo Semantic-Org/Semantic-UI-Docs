@@ -95,6 +95,13 @@ themes      : ['Default', 'Duo', 'Pulsar']
     <div class="ui active inline loader"></div>
     <div class="ui active inline loader"></div>
   </div>
+
+  <div class="another example">
+    <div class="ui active centered inline loader"></div>
+    <div class="ui active centered inline loader"></div>
+    <div class="ui active centered inline loader"></div>
+  </div>
+
   <div class="example">
     <h4 class="ui header">Size</h4>
     <p>Loaders can have different sizes</p>

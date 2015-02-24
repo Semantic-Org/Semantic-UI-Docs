@@ -57,34 +57,247 @@ type        : 'UI Behavior'
     <h2 class="ui dividing header">Examples</h2>
 
     <div class="visibility example">
-      <h4 class="ui header">Lazy Loading Content</h4>
+      <h4 class="ui header">Infinite Scroll</h4>
       <p>As an alternative to pagination you can use <code>onBottomVisible</code> to load content automatically when the bottom of a container is reached.</p>
 
-      <div class="ignored code" data-type="javascript">
+      <div class="ignored code" data-type="javascript" data-demo="true">
         $('.long.segment')
           .visibility({
             once: false,
             onBottomVisible: function() {
-              // load fake content 5 times
+              // load fake content (max five times)
+              window.loadFakeContent();
             }
           })
         ;
       </div>
 
       <div class="long ui segment">
-        <h3 class="ui header">Header</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet metus molestie, vestibulum neque sit amet, sollicitudin velit. Vivamus tortor odio, porta ut dapibus at, pretium non sapien. Cras bibendum ipsum vel nunc aliquet, vel hendrerit elit varius. Nulla ultrices lorem lectus, et venenatis mi dapibus in. Vestibulum a egestas odio. Ut feugiat lacus diam, a consectetur libero porta nec. Nam tempus tellus vel condimentum condimentum. Donec egestas libero in tempus cursus.</p>
-        <p>Nulla facilisi. Mauris eleifend diam ac risus fringilla scelerisque. In hac habitasse platea dictumst. Pellentesque vitae nulla magna. Donec viverra est in eleifend efficitur. Suspendisse sed nulla vel justo facilisis vulputate id non odio. Nunc imperdiet diam mi, non tincidunt augue ultrices sed. Proin consequat pharetra magna et mollis. Praesent sagittis libero id metus lacinia vestibulum.</p>
-        <p>Mauris bibendum nibh non viverra lacinia. Curabitur ultrices, nisl et elementum imperdiet, ex augue faucibus neque, et tincidunt mauris libero tincidunt quam. Fusce tellus dui, blandit elementum tempus et, tincidunt eu enim. Ut congue sapien id bibendum pharetra. Donec iaculis sapien vitae est consequat feugiat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur blandit lectus non ante congue bibendum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam erat volutpat. Vivamus accumsan laoreet placerat. Suspendisse tristique, erat sit amet interdum egestas, dui tortor porttitor neque, vel bibendum mi eros sed dui. Nulla et purus a dui faucibus efficitur. Praesent luctus rhoncus mauris eget mattis. Etiam dapibus elit rutrum interdum sollicitudin.</p>
-        <p>Sed ut velit ultricies sapien accumsan vehicula. Vestibulum blandit tempor turpis ut efficitur. Etiam nec sodales metus, euismod ultricies ex. Sed quis urna leo. Nulla vehicula dui ut feugiat cursus. Vestibulum pretium imperdiet condimentum. Suspendisse vulputate massa eget erat eleifend scelerisque. Quisque tortor nisl, aliquet et congue at, sagittis non urna.</p>
-        <p>Etiam ligula massa, viverra sed neque a, fringilla elementum dolor. Nunc at justo mi. Duis efficitur, leo ac lacinia iaculis, tellus nibh porttitor dui, id fringilla leo est nec nunc. Aenean non erat ipsum. Suspendisse posuere libero id sagittis pulvinar. Duis lorem sapien, pretium vestibulum ultrices vitae, efficitur eu lorem. Aenean hendrerit dolor id accumsan viverra.</p>
-        <h3 class="ui header">Sub Header</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet metus molestie, vestibulum neque sit amet, sollicitudin velit. Vivamus tortor odio, porta ut dapibus at, pretium non sapien. Cras bibendum ipsum vel nunc aliquet, vel hendrerit elit varius. Nulla ultrices lorem lectus, et venenatis mi dapibus in. Vestibulum a egestas odio. Ut feugiat lacus diam, a consectetur libero porta nec. Nam tempus tellus vel condimentum condimentum. Donec egestas libero in tempus cursus.</p>
-        <p>Nulla facilisi. Mauris eleifend diam ac risus fringilla scelerisque. In hac habitasse platea dictumst. Pellentesque vitae nulla magna. Donec viverra est in eleifend efficitur. Suspendisse sed nulla vel justo facilisis vulputate id non odio. Nunc imperdiet diam mi, non tincidunt augue ultrices sed. Proin consequat pharetra magna et mollis. Praesent sagittis libero id metus lacinia vestibulum.</p>
-        <p>Mauris bibendum nibh non viverra lacinia. Curabitur ultrices, nisl et elementum imperdiet, ex augue faucibus neque, et tincidunt mauris libero tincidunt quam. Fusce tellus dui, blandit elementum tempus et, tincidunt eu enim. Ut congue sapien id bibendum pharetra. Donec iaculis sapien vitae est consequat feugiat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur blandit lectus non ante congue bibendum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam erat volutpat. Vivamus accumsan laoreet placerat. Suspendisse tristique, erat sit amet interdum egestas, dui tortor porttitor neque, vel bibendum mi eros sed dui. Nulla et purus a dui faucibus efficitur. Praesent luctus rhoncus mauris eget mattis. Etiam dapibus elit rutrum interdum sollicitudin.</p>
+        <h2 class="ui dividing center aligned header">Infinite Scroll Example</h2>
+        <img src="/images/wireframe/centered-paragraph.png" class="ui wireframe image">
+        <div class="ui divider"></div>
+        <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+        <div class="ui divider"></div>
+        <img src="/images/wireframe/media-paragraph.png" class="ui wireframe image">
+        <div class="ui divider"></div>
+        <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+        <div class="ui divider"></div>
+        <div class="ui large centered inline text loader">
+          Adding more content...
+        </div>
       </div>
-      <div class="ui inline text loader">
-        Adding more content...
+    </div>
+
+    <div class="visibility example">
+      <h4 class="ui header">Lazy Loading Images</h4>
+      <p>Visibility includes several shortcuts for setting up common visiblity events. Using the setting <code>type: 'image'</code> will automatically attach events to an images <code>topVisible</code> to load the contents of <code>data-src</code> as <code>src</code>.</p>
+
+      <p>You can specify a placeholder image as the current <code>src</code> to make sure content doesn't jump when an image loads, or you can specify no placeholder and have the image appear.</p>
+
+      <p>By default images will appear without animation, however you can also specify a named <a href="/modules/transition.html">transition</a>, and a duration that should be used for animating the image into view</p>
+
+      <div class="ignored code" data-type="javascript" data-demo="true">
+        $('.cards img')
+          .visibility({
+            type       : 'image',
+            transition : 'fade in',
+            duration   : 2000
+          })
+        ;
+      </div>
+      <div class="ui two cards">
+        <div class="card">
+          <div class="image">
+            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/elliot.jpg">
+          </div>
+          <div class="content">
+            <a class="header">Elliot Fu</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/helen.jpg">
+          </div>
+          <div class="content">
+            <a class="header">Helen Troy</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/jenny.jpg">
+          </div>
+          <div class="content">
+            <a class="header">Jenny Hess</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/veronika.jpg">
+          </div>
+          <div class="content">
+            <a class="header">Veronika Ossi</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/stevie.jpg">
+          </div>
+          <div class="content">
+            <a class="header">Stevie</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/steve.jpg">
+          </div>
+          <div class="content">
+            <a class="header">Steve Jobes</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/ade.jpg">
+          </div>
+          <div class="content">
+            <a class="header">Ade</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/chris.jpg">
+          </div>
+          <div class="content">
+            <a class="header">Chris</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/joe.jpg">
+          </div>
+          <div class="content">
+            <a class="header">Joe Henderson</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/laura.jpg">
+          </div>
+          <div class="content">
+            <a class="header">Laura</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/tom.jpg">
+          </div>
+          <div class="content">
+            <a class="header">Tom</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/nan.jpg">
+          </div>
+          <div class="content">
+            <a class="header">Nan</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/elliot.jpg">
+          </div>
+          <div class="content">
+            <a class="header">Elliot Fu</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/helen.jpg">
+          </div>
+          <div class="content">
+            <a class="header">Helen Troy</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/jenny.jpg">
+          </div>
+          <div class="content">
+            <a class="header">Jenny Hess</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/veronika.jpg">
+          </div>
+          <div class="content">
+            <a class="header">Veronika Ossi</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/stevie.jpg">
+          </div>
+          <div class="content">
+            <a class="header">Stevie</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/steve.jpg">
+          </div>
+          <div class="content">
+            <a class="header">Steve Jobes</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/ade.jpg">
+          </div>
+          <div class="content">
+            <a class="header">Ade</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/chris.jpg">
+          </div>
+          <div class="content">
+            <a class="header">Chris</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/joe.jpg">
+          </div>
+          <div class="content">
+            <a class="header">Joe Henderson</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/laura.jpg">
+          </div>
+          <div class="content">
+            <a class="header">Laura</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/tom.jpg">
+          </div>
+          <div class="content">
+            <a class="header">Tom</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image">
+            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/nan.jpg">
+          </div>
+          <div class="content">
+            <a class="header">Nan</a>
+          </div>
+        </div>
       </div>
     </div>
 

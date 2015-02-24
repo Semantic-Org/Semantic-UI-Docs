@@ -1001,7 +1001,7 @@ semantic.ready = function() {
           });
         },
         onTabLoad : function() {
-          $(this).find('.visibility.example > .segment')
+          $(this).find('.visibility.example > .segment, .visibility.example .user.image')
             .visibility('refresh')
           ;
           $(this).find('> .rail .ui.sticky, .fixed .ui.sticky')

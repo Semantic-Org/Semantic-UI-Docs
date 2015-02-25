@@ -23,7 +23,7 @@ window.loadFakeContent = function() {
   var
     $segment = $('.long.segment'),
     $loader  = $segment.find('.inline.loader'),
-    $content = $('<h3 class="ui header">Loaded Content #' + count + '</h3><img class="ui wireframe image" src="/images/wireframe/paragraph.png"><img class="ui wireframe image" src="/images/wireframe/paragraph.png">')
+    $content = $('<h3 class="ui header">Loaded Content #' + count + '</h3><img class="ui wireframe image" src="/images/wireframe/paragraph.png"><img class="ui wireframe image" src="/images/wireframe/paragraph.png"><img class="ui wireframe image" src="/images/wireframe/paragraph.png">')
   ;
   $loader.addClass('active');
   setTimeout(function() {

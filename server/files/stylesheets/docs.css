@@ -1070,6 +1070,35 @@ body#example {
 
 
 /*--------------
+   Visibility
+---------------*/
+
+/* static */
+.visibility.example .sticky {
+  overflow: hidden;
+  padding: 0em;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+  transition: all 0.5s ease;
+  background: transparent;
+}
+.visibility.example .sticky.fixed + .placeholder {
+  display: none;
+}
+/* fixed */
+.visibility.example .sticky.fixed {
+  background-color: #FFFFFF;
+  position: fixed;
+  z-index: 10;
+  padding: 1em;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+}
+.visibility.example .sticky.fixed + .placeholder {
+  display: block;
+  height: 28px;
+}
+
+
+/*--------------
    Progress
 ---------------*/
 

@@ -32,16 +32,16 @@ type        : 'UI Behavior'
           <div class="description">You want to start loading more content into a container when a user is partially finished scrolling through the content</div>
         </div>
         <div class="item">
-          <div class="header">Sticky Headers</div>
-          <div class="description">You want an element to fix itself to the viewport when it is passed, and return to its original static position afterwards</div>
-        </div>
-        <div class="item">
           <div class="header">Lazy Loading Images</div>
           <div class="description">You want to start loading an image just before it is visible to a user</div>
         </div>
         <div class="item">
           <div class="header">Reactive Content</div>
           <div class="description">You want an element to change based on how far a user has scrolled</div>
+        </div>
+        <div class="item">
+          <div class="header">Sticky Headers</div>
+          <div class="description">You want an element to fix itself to the viewport when it is passed, and return to its original static position afterwards</div>
         </div>
         <div class="item">
           <div class="header">Event Tracking</div>
@@ -77,11 +77,11 @@ type        : 'UI Behavior'
         <h2 class="ui dividing center aligned header">Infinite Scroll Example</h2>
         <img src="/images/wireframe/centered-paragraph.png" class="ui wireframe image">
         <div class="ui divider"></div>
-        <img src="/images/wireframe/short-paragraph.png" clawireframe image">
+        <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
         <div class="ui divider"></div>
         <img src="/images/wireframe/media-paragraph.png" class="ui wireframe image">
         <div class="ui divider"></div>
-        <img src="/images/wireframe/short-paragraph.png" clawireframe image">
+        <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
         <div class="ui divider"></div>
         <div class="ui large centered inline text loader">
           Adding more content...
@@ -115,7 +115,7 @@ type        : 'UI Behavior'
             <h2 class="ui header">Elliot Fu</h2>
             <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
             <div class="ui primary button">Add Friend</div>
-            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
+            <div class="ui right floated button">View <i class="right chevron icon"></i></div>
           </div>
         </div>
         <div class="item">
@@ -126,7 +126,7 @@ type        : 'UI Behavior'
             <h2 class="ui header">Helen Troy</h2>
             <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
             <div class="ui primary button">Add Friend</div>
-            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
+            <div class="ui right floated button">View <i class="right chevron icon"></i></div>
           </div>
         </div>
         <div class="item">
@@ -137,7 +137,7 @@ type        : 'UI Behavior'
             <h2 class="ui header">Jenny Hess</h2>
             <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
             <div class="ui primary button">Add Friend</div>
-            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
+            <div class="ui right floated button">View <i class="right chevron icon"></i></div>
           </div>
         </div>
         <div class="item">
@@ -148,7 +148,7 @@ type        : 'UI Behavior'
             <h2 class="ui header">Veronika Ossi</h2>
             <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
             <div class="ui primary button">Add Friend</div>
-            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
+            <div class="ui right floated button">View <i class="right chevron icon"></i></div>
           </div>
         </div>
         <div class="item">
@@ -159,7 +159,7 @@ type        : 'UI Behavior'
             <h2 class="ui header">Stevie</h2>
             <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
             <div class="ui primary button">Add Friend</div>
-            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
+            <div class="ui right floated button">View <i class="right chevron icon"></i></div>
           </div>
         </div>
         <div class="item">
@@ -170,7 +170,7 @@ type        : 'UI Behavior'
             <h2 class="ui header">Steve Jobes</h2>
             <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
             <div class="ui primary button">Add Friend</div>
-            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
+            <div class="ui right floated button">View <i class="right chevron icon"></i></div>
           </div>
         </div>
         <div class="item">
@@ -181,7 +181,7 @@ type        : 'UI Behavior'
             <h2 class="ui header">Ade</h2>
             <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
             <div class="ui primary button">Add Friend</div>
-            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
+            <div class="ui right floated button">View <i class="right chevron icon"></i></div>
           </div>
         </div>
         <div class="item">
@@ -192,7 +192,7 @@ type        : 'UI Behavior'
             <h2 class="ui header">Chris</h2>
             <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
             <div class="ui primary button">Add Friend</div>
-            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
+            <div class="ui right floated button">View <i class="right chevron icon"></i></div>
           </div>
         </div>
         <div class="item">
@@ -203,7 +203,7 @@ type        : 'UI Behavior'
             <h2 class="ui header">Joe Henderson</h2>
             <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
             <div class="ui primary button">Add Friend</div>
-            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
+            <div class="ui right floated button">View <i class="right chevron icon"></i></div>
           </div>
         </div>
         <div class="item">
@@ -214,7 +214,7 @@ type        : 'UI Behavior'
             <h2 class="ui header">Laura</h2>
             <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
             <div class="ui primary button">Add Friend</div>
-            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
+            <div class="ui right floated button">View <i class="right chevron icon"></i></div>
           </div>
         </div>
         <div class="item">
@@ -225,7 +225,7 @@ type        : 'UI Behavior'
             <h2 class="ui header">Tom</h2>
             <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
             <div class="ui primary button">Add Friend</div>
-            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
+            <div class="ui right floated button">View <i class="right chevron icon"></i></div>
           </div>
         </div>
         <div class="item">
@@ -236,142 +236,83 @@ type        : 'UI Behavior'
             <h2 class="ui header">Nan</h2>
             <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
             <div class="ui primary button">Add Friend</div>
-            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="image">
-            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/elliot.jpg">
-          </div>
-          <div class="content">
-            <h2 class="ui header">Elliot Fu</h2>
-            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-            <div class="ui primary button">Add Friend</div>
-            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="image">
-            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/helen.jpg">
-          </div>
-          <div class="content">
-            <h2 class="ui header">Helen Troy</h2>
-            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-            <div class="ui primary button">Add Friend</div>
-            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="image">
-            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/jenny.jpg">
-          </div>
-          <div class="content">
-            <h2 class="ui header">Jenny Hess</h2>
-            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-            <div class="ui primary button">Add Friend</div>
-            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="image">
-            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/veronika.jpg">
-          </div>
-          <div class="content">
-            <h2 class="ui header">Veronika Ossi</h2>
-            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-            <div class="ui primary button">Add Friend</div>
-            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="image">
-            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/stevie.jpg">
-          </div>
-          <div class="content">
-            <h2 class="ui header">Stevie</h2>
-            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-            <div class="ui primary button">Add Friend</div>
-            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="image">
-            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/steve.jpg">
-          </div>
-          <div class="content">
-            <h2 class="ui header">Steve Jobes</h2>
-            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-            <div class="ui primary button">Add Friend</div>
-            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="image">
-            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/ade.jpg">
-          </div>
-          <div class="content">
-            <h2 class="ui header">Ade</h2>
-            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-            <div class="ui primary button">Add Friend</div>
-            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="image">
-            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/chris.jpg">
-          </div>
-          <div class="content">
-            <h2 class="ui header">Chris</h2>
-            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-            <div class="ui primary button">Add Friend</div>
-            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="image">
-            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/joe.jpg">
-          </div>
-          <div class="content">
-            <h2 class="ui header">Joe Henderson</h2>
-            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-            <div class="ui primary button">Add Friend</div>
-            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="image">
-            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/laura.jpg">
-          </div>
-          <div class="content">
-            <h2 class="ui header">Laura</h2>
-            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-            <div class="ui primary button">Add Friend</div>
-            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="image">
-            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/tom.jpg">
-          </div>
-          <div class="content">
-            <h2 class="ui header">Tom</h2>
-            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-            <div class="ui primary button">Add Friend</div>
-            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="image">
-            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/nan.jpg">
-          </div>
-          <div class="content">
-            <h2 class="ui header">Nan</h2>
-            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-            <div class="ui primary button">Add Friend</div>
-            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
+            <div class="ui right floated button">View <i class="right chevron icon"></i></div>
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="visibility example">
+      <h4 class="ui header">Fixing Content To Viewport</h4>
+      <p>Visibility provides a lightweight method for sticking content to a page's viewport. Using <code>type: fixed</code> will add the class <code>fixed</code> after an element is passed in the viewport. Using this class name you can assign special layout conditions to an item once it is passed.</p>
+      <p>In this example, when an element is passed we fix it to the viewport, add a background color and box shadow so that it can float above other content. We also show an adjacent placeholder element which makes sure that content stays offset the same as if the menu was still in content flow</p>
+      <div class="ui ignored info message">
+        For a more hands-off approach to making elements stick to the viewport, you may also want to try a <a href="/modules/sticky.html">sticky</a> element
+      </div>
+      <div class="ignored code" data-type="javascript" data-demo="true">
+        $('.visibility.example .sticky')
+          .visibility({
+            offset : 55, // fix at 55px from top of page (space for nav menu)
+            type   : 'fixed'
+          })
+        ;
+      </div>
+      <div class="code" data-type="css">
+      /* static */
+      .visibility.example .sticky {
+        padding: 0em;
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+        transition: all 0.5s ease;
+        background: transparent;
+      }
+      .visibility.example .sticky.fixed + .placeholder {
+        display: none;
+      }
+      /* fixed */
+      .visibility.example .sticky.fixed {
+        position: fixed;
+        background-color: #FFFFFF;
+        padding: 1em;
+        box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+        z-index: 10;
+      }
+      .visibility.example .sticky.fixed + .placeholder {
+        display: block;
+        height: 28px;
+      }
+      </div>
+      <div class="sticky">
+        <div class="ui secondary menu">
+          <a class="item">
+            <i class="sidebar icon"></i> Menu
+          </a>
+          <a class="item">Option 1</a>
+          <a class="item">Option 2</a>
+          <a class="item">Option 3</a>
+        </div>
+      </div>
+      <div class="placeholder"></div>
+      <div class="ui clearing divider"></div>
+      <img src="/images/wireframe/centered-paragraph.png" class="ui wireframe image">
+      <div class="ui divider"></div>
+      <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+      <div class="ui divider"></div>
+      <img src="/images/wireframe/media-paragraph.png" class="ui wireframe image">
+      <div class="ui divider"></div>
+      <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+      <div class="ui divider"></div>
+      <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+      <div class="ui divider"></div>
+      <img src="/images/wireframe/centered-paragraph.png" class="ui wireframe image">
+      <div class="ui divider"></div>
+      <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+      <div class="ui divider"></div>
+      <img src="/images/wireframe/media-paragraph.png" class="ui wireframe image">
+      <div class="ui divider"></div>
+      <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+      <div class="ui divider"></div>
+      <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+      <div class="ui divider"></div>
     </div>
 
   </div>
@@ -566,35 +507,65 @@ type        : 'UI Behavior'
       </thead>
       <tbody>
         <tr>
-          <td>throttle</td>
-          <td>false</td>
-          <td>If a time is specified, visibility will only be checked at this interval, defaults to <code>requestAnimationFrame</code></td>
+          <td>once</td>
+          <td>true</td>
+          <td>When set to false a callback will occur each time an element <b>passes the threshold</b> for a condition.</td>
         </tr>
         <tr>
-          <td>context</td>
+          <td>continuous</td>
           <td>false</td>
-          <td>Context which visibility should watch scroll</td>
-        </tr>
-        <tr>
-          <td>includeMargin</td>
-          <td>false</td>
-          <td>Whether top and bottom of an element should include its margin</td>
+          <td>When set to true a callback will occur anytime an element <b>passes a condition</b>  not just immediately after the threshold is met.</td>
         </tr>
         <tr>
           <td>type</td>
           <td>false</td>
-          <td>Offset in pixels from the top of the screen when fixing element to viewport</td>
+          <td>Set to <code>image</code> to load images when on scren. Set to <code>fixed</code> to add class name <code>fixed</code> when passed.</td>
         </tr>
         <tr>
-          <td>bottomOffset</td>
+          <td>type</td>
+          <td>false</td>
+          <td>Set to <code>image</code> to load images when on scren. Set to <code>fixed</code> to add class name <code>fixed</code> when passed.</td>
+        </tr>
+        <tr>
+          <td>initialCheck</td>
+          <td>true</td>
+          <td>Whether visibility conditions should be checked immediately on init</td>
+        </tr>
+        <tr>
+          <td>offset</td>
           <td>0</td>
-          <td>Offset in pixels from the bottom of the screen when fixing element to viewport</td>
+          <td>Value that context <code>scrollTop</code> should be adjusted in pixels. Useful for making content appear below content fixed to the page.</td>
+        </tr>
+        <tr>
+          <td>includeMargin</td>
+          <td>false</td>
+          <td>Whether element calculations should include its margin</td>
+        </tr>
+        <tr>
+          <td>throttle</td>
+          <td>false</td>
+          <td>When set to a value, scroll position will be debounced using this ms value. Defaults to <code>useAnimationFrame</code> for adjusting visibility.</td>
+        </tr>
+        <tr>
+          <td>observeChanges</td>
+          <td>true</td>
+          <td>Whether to automatically refresh content when changes are made to the element's DOM subtree </td>
+        </tr>
+        <tr>
+          <td>transition</td>
+          <td>false</td>
+          <td>When using <code>type: image</code> allows you to specify transition when showing a loaded image</td>
+        </tr>
+        <tr>
+          <td>duration</td>
+          <td>1000</td>
+          <td>When using <code>type: image</code> allows you to specify transition duration</td>
         </tr>
       </tbody>
     </table>
 
-     <h4 class="ui header">Callbacks</h4>
-    <p>Callbacks specify a function to occur after a specific behavior.</p>
+   <h4 class="ui header">Visiblity Callbacks</h4>
+    <p>Callbacks that occur on named visibility events</p>
 
     <table class="ui celled sortable definition table segment">
       <thead>
@@ -606,37 +577,85 @@ type        : 'UI Behavior'
       </thead>
       <tbody>
         <tr>
-          <td>onReposition</td>
-          <td>$module</td>
-          <td>Callback when element is repositioned from layout change</td>
+          <td>onTopVisible</td>
+          <td>$element</td>
+          <td>Element's top edge has passed bottom of screen</td>
         </tr>
         <tr>
-          <td>onScroll</td>
-          <td>$module</td>
-          <td>Callback when <code>requestAnimationFrame</code> fires from scroll handler.</td>
+          <td>onTopPassed</td>
+          <td>$element</td>
+          <td>Element's top edge has passed top of the screen</td>
         </tr>
         <tr>
-          <td>onStick</td>
-          <td>$module</td>
-          <td>Callback when element is fixed to page</td>
+          <td>onBottomVisible</td>
+          <td>$element</td>
+          <td>Element's bottom edge has passed bottom of screen</td>
         </tr>
         <tr>
-          <td>onUnstick</td>
-          <td>$module</td>
-          <td>Callback when element is unfixed from page</td>
+          <td>onPassing</td>
+          <td>$element</td>
+          <td>Any part of an element is visible on screen</td>
+          </td>
         </tr>
         <tr>
-          <td>onTop</td>
-          <td>$module</td>
-          <td>Callback when element is bound to top of parent container</td>
+          <td>onBottomPassed</td>
+          <td>$element</td>
+          <td>Element's bottom edge has passed top of screen</td>
         </tr>
         <tr>
-          <td>onBottom</td>
-          <td>$module</td>
-          <td>Callback when element is bound to bottom of parent container</td>
+          <td>onTopVisibleReverse</td>
+          <td>$element</td>
+          <td>Element's top edge has not passed bottom of screen</td>
+        </tr>
+        <tr>
+          <td>onTopPassedReverse</td>
+          <td>$element</td>
+          <td>Element's top edge has not passed top of the screen</td>
+        </tr>
+        <tr>
+          <td>onBottomVisibleReverse</td>
+          <td>$element</td>
+          <td>Element's bottom edge has not passed bottom of screen</td>
+        </tr>
+        <tr>
+          <td>onPassingReverse</td>
+          <td>$element</td>
+          <td>Element's top has not passed top of screen but bottom has</td>
+          </td>
+        </tr>
+        <tr>
+          <td>onBottomPassedReverse</td>
+          <td>$element</td>
+          <td>Element's bottom edge has not passed top of screen</td>
         </tr>
       </tbody>
     </table>
+
+   <h4 class="ui header">Visiblity Callbacks</h4>
+    <p>Callbacks that occur on named visibility events</p>
+
+    <table class="ui celled sortable definition table segment">
+      <thead>
+        <tr>
+          <th class="four wide"></th>
+          <th>Context</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>onScroll</td>
+          <td>$element</td>
+          <td>Occurs immediately before debounced scroll event</td>
+        </tr>
+        <tr>
+          <td>onRefresh</td>
+          <td>$element</td>
+          <td>Occurs whenever element's visibility is refreshed</td>
+        </tr>
+      </tbody>
+    </table>
+
 
     <h3 class="ui header">
       DOM Settings
@@ -659,11 +678,7 @@ type        : 'UI Behavior'
           <td>
             <div class="code">
             className : {
-              bound     : 'bound',
               fixed     : 'fixed',
-              supported : 'native',
-              top       : 'top',
-              bottom    : 'bottom'
             }
             </div>
           </td>
@@ -710,12 +725,8 @@ type        : 'UI Behavior'
           <td>errors</td>
           <td colspan="2">
             <div class="code">
-            error         : {
-              container      : 'Visibility element must be inside a relative container',
-              visible        : 'Element is hidden, you must call refresh after element becomes visible',
-              method         : 'The method you called is not defined.',
-              invalidContext : 'Context specified does not exist',
-              elementSize    : 'Visibility element is larger than its container, cannot create visibility.'
+            error : {
+              method : 'The method you called is not defined.',
             }
             </div>
           </td>

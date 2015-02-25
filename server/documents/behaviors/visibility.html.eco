@@ -91,7 +91,7 @@ type        : 'UI Behavior'
 
     <div class="visibility example">
       <h4 class="ui header">Lazy Loading Images</h4>
-      <p>Visibility includes several shortcuts for setting up common visiblity events. Using the setting <code>type: 'image'</code> will automatically attach events to an images <code>topVisible</code> to load the contents of <code>data-src</code> as <code>src</code>.</p>
+      <p>Visibility includes several shortcuts for setting up common visibility events. Using the setting <code>type: 'image'</code> will automatically attach events to an images <code>topVisible</code> to load the contents of <code>data-src</code> as <code>src</code>.</p>
 
       <p>You can specify a placeholder image as the current <code>src</code> to make sure content doesn't jump when an image loads, or you can specify no placeholder and have the image appear.</p>
 
@@ -564,7 +564,7 @@ type        : 'UI Behavior'
       </tbody>
     </table>
 
-   <h4 class="ui header">Visiblity Callbacks</h4>
+   <h4 class="ui header">Visibility Callbacks</h4>
     <p>Callbacks that occur on named visibility events</p>
 
     <table class="ui celled sortable definition table segment">
@@ -631,7 +631,7 @@ type        : 'UI Behavior'
       </tbody>
     </table>
 
-   <h4 class="ui header">Visiblity Callbacks</h4>
+   <h4 class="ui header">Utility Callbacks</h4>
     <p>Callbacks that occur on named visibility events</p>
 
     <table class="ui celled sortable definition table segment">

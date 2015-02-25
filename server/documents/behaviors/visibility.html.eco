@@ -77,11 +77,11 @@ type        : 'UI Behavior'
         <h2 class="ui dividing center aligned header">Infinite Scroll Example</h2>
         <img src="/images/wireframe/centered-paragraph.png" class="ui wireframe image">
         <div class="ui divider"></div>
-        <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+        <img src="/images/wireframe/short-paragraph.png" clawireframe image">
         <div class="ui divider"></div>
         <img src="/images/wireframe/media-paragraph.png" class="ui wireframe image">
         <div class="ui divider"></div>
-        <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+        <img src="/images/wireframe/short-paragraph.png" clawireframe image">
         <div class="ui divider"></div>
         <div class="ui large centered inline text loader">
           Adding more content...
@@ -98,205 +98,277 @@ type        : 'UI Behavior'
       <p>By default images will appear without animation, however you can also specify a named <a href="/modules/transition.html">transition</a>, and a duration that should be used for animating the image into view</p>
 
       <div class="ignored code" data-type="javascript" data-demo="true">
-        $('.cards img')
+        $('.items img')
           .visibility({
             type       : 'image',
             transition : 'fade in',
-            duration   : 2000
+            duration   : 1000
           })
         ;
       </div>
-      <div class="ui two cards">
-        <div class="card">
+      <div class="ui divided items">
+        <div class="item">
           <div class="image">
             <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/elliot.jpg">
           </div>
           <div class="content">
-            <a class="header">Elliot Fu</a>
+            <h2 class="ui header">Elliot Fu</h2>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            <div class="ui primary button">Add Friend</div>
+            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
           </div>
         </div>
-        <div class="card">
+        <div class="item">
           <div class="image">
             <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/helen.jpg">
           </div>
           <div class="content">
-            <a class="header">Helen Troy</a>
+            <h2 class="ui header">Helen Troy</h2>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            <div class="ui primary button">Add Friend</div>
+            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
           </div>
         </div>
-        <div class="card">
+        <div class="item">
           <div class="image">
             <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/jenny.jpg">
           </div>
           <div class="content">
-            <a class="header">Jenny Hess</a>
+            <h2 class="ui header">Jenny Hess</h2>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            <div class="ui primary button">Add Friend</div>
+            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
           </div>
         </div>
-        <div class="card">
+        <div class="item">
           <div class="image">
             <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/veronika.jpg">
           </div>
           <div class="content">
-            <a class="header">Veronika Ossi</a>
+            <h2 class="ui header">Veronika Ossi</h2>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            <div class="ui primary button">Add Friend</div>
+            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
           </div>
         </div>
-        <div class="card">
+        <div class="item">
           <div class="image">
             <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/stevie.jpg">
           </div>
           <div class="content">
-            <a class="header">Stevie</a>
+            <h2 class="ui header">Stevie</h2>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            <div class="ui primary button">Add Friend</div>
+            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
           </div>
         </div>
-        <div class="card">
+        <div class="item">
           <div class="image">
             <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/steve.jpg">
           </div>
           <div class="content">
-            <a class="header">Steve Jobes</a>
+            <h2 class="ui header">Steve Jobes</h2>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            <div class="ui primary button">Add Friend</div>
+            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
           </div>
         </div>
-        <div class="card">
+        <div class="item">
           <div class="image">
             <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/ade.jpg">
           </div>
           <div class="content">
-            <a class="header">Ade</a>
+            <h2 class="ui header">Ade</h2>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            <div class="ui primary button">Add Friend</div>
+            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
           </div>
         </div>
-        <div class="card">
+        <div class="item">
           <div class="image">
             <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/chris.jpg">
           </div>
           <div class="content">
-            <a class="header">Chris</a>
+            <h2 class="ui header">Chris</h2>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            <div class="ui primary button">Add Friend</div>
+            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
           </div>
         </div>
-        <div class="card">
+        <div class="item">
           <div class="image">
             <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/joe.jpg">
           </div>
           <div class="content">
-            <a class="header">Joe Henderson</a>
+            <h2 class="ui header">Joe Henderson</h2>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            <div class="ui primary button">Add Friend</div>
+            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
           </div>
         </div>
-        <div class="card">
+        <div class="item">
           <div class="image">
             <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/laura.jpg">
           </div>
           <div class="content">
-            <a class="header">Laura</a>
+            <h2 class="ui header">Laura</h2>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            <div class="ui primary button">Add Friend</div>
+            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
           </div>
         </div>
-        <div class="card">
+        <div class="item">
           <div class="image">
             <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/tom.jpg">
           </div>
           <div class="content">
-            <a class="header">Tom</a>
+            <h2 class="ui header">Tom</h2>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            <div class="ui primary button">Add Friend</div>
+            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
           </div>
         </div>
-        <div class="card">
+        <div class="item">
           <div class="image">
             <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/nan.jpg">
           </div>
           <div class="content">
-            <a class="header">Nan</a>
+            <h2 class="ui header">Nan</h2>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            <div class="ui primary button">Add Friend</div>
+            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
           </div>
         </div>
-        <div class="card">
+        <div class="item">
           <div class="image">
             <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/elliot.jpg">
           </div>
           <div class="content">
-            <a class="header">Elliot Fu</a>
+            <h2 class="ui header">Elliot Fu</h2>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            <div class="ui primary button">Add Friend</div>
+            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
           </div>
         </div>
-        <div class="card">
+        <div class="item">
           <div class="image">
             <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/helen.jpg">
           </div>
           <div class="content">
-            <a class="header">Helen Troy</a>
+            <h2 class="ui header">Helen Troy</h2>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            <div class="ui primary button">Add Friend</div>
+            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
           </div>
         </div>
-        <div class="card">
+        <div class="item">
           <div class="image">
             <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/jenny.jpg">
           </div>
           <div class="content">
-            <a class="header">Jenny Hess</a>
+            <h2 class="ui header">Jenny Hess</h2>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            <div class="ui primary button">Add Friend</div>
+            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
           </div>
         </div>
-        <div class="card">
+        <div class="item">
           <div class="image">
             <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/veronika.jpg">
           </div>
           <div class="content">
-            <a class="header">Veronika Ossi</a>
+            <h2 class="ui header">Veronika Ossi</h2>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            <div class="ui primary button">Add Friend</div>
+            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
           </div>
         </div>
-        <div class="card">
+        <div class="item">
           <div class="image">
             <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/stevie.jpg">
           </div>
           <div class="content">
-            <a class="header">Stevie</a>
+            <h2 class="ui header">Stevie</h2>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            <div class="ui primary button">Add Friend</div>
+            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
           </div>
         </div>
-        <div class="card">
+        <div class="item">
           <div class="image">
             <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/steve.jpg">
           </div>
           <div class="content">
-            <a class="header">Steve Jobes</a>
+            <h2 class="ui header">Steve Jobes</h2>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            <div class="ui primary button">Add Friend</div>
+            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
           </div>
         </div>
-        <div class="card">
+        <div class="item">
           <div class="image">
             <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/ade.jpg">
           </div>
           <div class="content">
-            <a class="header">Ade</a>
+            <h2 class="ui header">Ade</h2>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            <div class="ui primary button">Add Friend</div>
+            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
           </div>
         </div>
-        <div class="card">
+        <div class="item">
           <div class="image">
             <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/chris.jpg">
           </div>
           <div class="content">
-            <a class="header">Chris</a>
+            <h2 class="ui header">Chris</h2>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            <div class="ui primary button">Add Friend</div>
+            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
           </div>
         </div>
-        <div class="card">
+        <div class="item">
           <div class="image">
             <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/joe.jpg">
           </div>
           <div class="content">
-            <a class="header">Joe Henderson</a>
+            <h2 class="ui header">Joe Henderson</h2>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            <div class="ui primary button">Add Friend</div>
+            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
           </div>
         </div>
-        <div class="card">
+        <div class="item">
           <div class="image">
             <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/laura.jpg">
           </div>
           <div class="content">
-            <a class="header">Laura</a>
+            <h2 class="ui header">Laura</h2>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            <div class="ui primary button">Add Friend</div>
+            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
           </div>
         </div>
-        <div class="card">
+        <div class="item">
           <div class="image">
             <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/tom.jpg">
           </div>
           <div class="content">
-            <a class="header">Tom</a>
+            <h2 class="ui header">Tom</h2>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            <div class="ui primary button">Add Friend</div>
+            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
           </div>
         </div>
-        <div class="card">
+        <div class="item">
           <div class="image">
             <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/nan.jpg">
           </div>
           <div class="content">
-            <a class="header">Nan</a>
+            <h2 class="ui header">Nan</h2>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            <div class="ui primary button">Add Friend</div>
+            <div class="ui right floated button">Profile <i class="right chevron icon"></i></div>
           </div>
         </div>
       </div>

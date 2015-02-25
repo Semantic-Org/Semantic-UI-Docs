@@ -25,16 +25,14 @@ window.loadFakeContent = function() {
     $loader  = $segment.find('.inline.loader'),
     $content = $('<h3 class="ui header">Loaded Content #' + count + '</h3><img class="ui wireframe image" src="/images/wireframe/paragraph.png"><img class="ui wireframe image" src="/images/wireframe/paragraph.png">')
   ;
-  if(count <= 5) {
-    $loader.addClass('active');
-    setTimeout(function() {
-      $loader
-        .removeClass('active')
-        .before($content)
-      ;
-      $segment.visibility('refresh');
-    }, 500);
-  }
+  $loader.addClass('active');
+  setTimeout(function() {
+    $loader
+      .removeClass('active')
+      .before($content)
+    ;
+    $segment.visibility('refresh');
+  }, 500);
   count++;
 }
 

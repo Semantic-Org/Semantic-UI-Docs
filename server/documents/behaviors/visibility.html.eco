@@ -64,8 +64,9 @@ type        : 'UI Behavior'
         $('.long.segment')
           .visibility({
             once: false,
+            observeChanges: true,
             onBottomVisible: function() {
-              // load fake content (max five times)
+              // load fake content
               window.loadFakeContent();
             }
           })

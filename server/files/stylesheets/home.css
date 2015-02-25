@@ -189,7 +189,7 @@
     Demo
 ---------------*/
 
-#example .demo.row .ui.label:not(.empty) {
+#example .demo.row .example > .ui.label:not(.empty) {
   margin-bottom: 1em;
 }
 #example .demo.row .ui.progress {

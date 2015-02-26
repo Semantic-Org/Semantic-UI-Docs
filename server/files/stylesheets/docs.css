@@ -219,6 +219,10 @@ a:hover {
   margin-bottom: 0em;
 }
 
+#example .main.menu .title.item b {
+  margin-right: 0.5em;
+}
+
 
 #example .download.menu {
   margin-top: 0em;

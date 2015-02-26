@@ -40,6 +40,10 @@ themes      : ['Default', 'GitHub']
         </div>
       </div>
     </div>
+    <div class="ui segment">
+      <img class="ui wireframe image" src="/images/wireframe/media-paragraph.png">
+      <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+    </div>
   </div>
 
   <div class="example">

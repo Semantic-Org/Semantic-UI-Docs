@@ -400,7 +400,7 @@ type        : 'UI Module'
 
       <h3 class="ui header">Display Type</h3>
 
-      <p>Animations can be used on any display type not just block level elements. For example you can animate a button while preserving its inline-block status.</p>
+      <p>Animations can be used on any display type not just block level elements. For example you can animate a button while preserving its <code>inline-block</code> status.</p>
       <div class="code" data-demo="true" data-title="Queueing animations">
       $('.test.button')
         .transition('horizontal flip', '500ms')
@@ -422,6 +422,74 @@ type        : 'UI Module'
         })
       ;
       </div>
+
+      <h3 class="ui header">Hide/Show Without Transition</h3>
+
+      <p>You can use transitions <code>show</code> and <code>hide</code> behavior to hide content without animation. This will preserve the display type, like <code>flex</code> or <code>table-cell</code> of an element just like animations.</p>
+
+      <div class="code" data-demo="true" data-title="Toggling State">
+      $('.demo.table tr:last-child')
+        .transition('toggle')
+      ;
+      </div>
+      <div class="code" data-demo="true" data-title="Hiding">
+      $('.demo.table td:last-child')
+        .transition('hide')
+      ;
+      </div>
+
+      <table class="ui demo table">
+        <tbody>
+          <tr>
+            <td>John Lilki</td>
+            <td>jhlilk22@yahoo.com</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>Jamie Harington</td>
+            <td>jamieharingonton@yahoo.com</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>Jill Lewis</td>
+            <td>jilsewris22@yahoo.com</td>
+            <td>Yes</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 class="ui header">Stopping Animations</h3>
+
+      <div class="code" data-demo="true" data-title="Stopping animations">
+      $('.green.leaf')
+        .transition('horizontal flip', '5s')
+        .transition('horizontal flip', '5s')
+      ;
+      setTimeout(function() {
+        $('.green.leaf').transition('stop');
+      }, 2000);
+      </div>
+
+      <p>Animations can be stopped using three methods. <code>stop</code> will end the current animation, <code>stop all</code> will end animation and remove queued animations, and <code>clear queue</code> will continue the current playback but remove queued animations.</p>
+
+      <div class="code" data-demo="true" data-title="Stopping animations">
+      $('.green.leaf')
+        .transition('horizontal flip', '5s')
+        .transition('horizontal flip', '5s')
+      ;
+      setTimeout(function() {
+        $('.green.leaf').transition('stop');
+      }, 2000);
+      </div>
+      <div class="code" data-demo="true" data-title="Stopping animations">
+      // executes once
+      $('.green.leaf')
+        .transition('horizontal flip', '500ms')
+        .transition('horizontal flip', '500ms')
+        .transition('clear queue')
+      ;
+      </div>
+
       <h2 class="ui dividing header">Behavior</h2>
 
       <p>All the following behaviors can be called using the syntax:</p>
@@ -439,6 +507,30 @@ type        : 'UI Module'
           </tr>
         </thead>
         <tbody>
+          <tr>
+            <td>stop</td>
+            <td>Stop current animation and preserve queue</td>
+          </tr>
+          <tr>
+            <td>stop all</td>
+            <td>Stop current animation and queued animations</td>
+          </tr>
+          <tr>
+            <td>clear queue</td>
+            <td>Clears all queued animations</td>
+          </tr>
+          <tr>
+            <td>show</td>
+            <td>Stop current animation and show element</td>
+          </tr>
+          <tr>
+            <td>hide</td>
+            <td>Stop current animation and hide element</td>
+          </tr>
+          <tr>
+            <td>toggle</td>
+            <td>Toggles between hide and show</td>
+          </tr>
           <tr>
             <td>force repaint</td>
             <td>Forces reflow using a more expensive but stable method</td>
@@ -460,16 +552,12 @@ type        : 'UI Module'
             <td>Removes looping state from element</td>
           </tr>
           <tr>
-            <td>stop</td>
-            <td>Stops current transition</td>
+            <td>disable</td>
+            <td>Adds disabled state (stops ability to animate)</td>
           </tr>
           <tr>
-            <td>start</td>
-            <td>Restarts a stopped transition</td>
-          </tr>
-          <tr>
-            <td>toggle</td>
-            <td>Toggles current transition on/off</td>
+            <td>enable</td>
+            <td>Removes disabled state</td>
           </tr>
           <tr>
             <td>set duration(duration)</td>

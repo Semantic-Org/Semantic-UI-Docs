@@ -575,7 +575,7 @@ themes      : ['Default', 'Fixed-width']
       <p>A page grid is used to layout page contents into a grid system.
 
       <div class="ui ignored info message">
-        <p>A page grid has gutters to the left and right of its columns to center content on a page. These gutterss adjust as the width of the browser changes, ensuring your grid uses a sensible amount of the browser.</p>
+        <p>A page grid has gutters to the left and right of its columns to center content on a page. These gutters adjust as the width of the browser changes, ensuring your grid uses a sensible amount of the browser.</p>
       </div>
 
       <div class="ui page grid">

@@ -27,144 +27,53 @@ $(document).ready(function() {
 </style>
 
 <div style="max-width: 1000px;margin:2em auto;">
-<div class="ui cards">
-    <div class="green card">
-        <div class="image">
-                <img src="images/wireframe/image.png" class="visible content">
+<!-- First try -->
+<div class="ui page grid">
+    <div class="ui column ">
+        <div class="ui  inverted blue menu">
+            <div class="ui left aligned item">
+                <a class="ui item"><i class="large sidebar icon"></i></a>
+                <svg viewBox="0 0 100 100"
+                     preserveAspectRatio="xMinYMin meet" width="2em" height="2em">
+                    <circle cx="50" cy="50" r="40"
+                         stroke="red" stroke-width="4" fill="yellow" />
+                </svg>
+                <a class="ui item" id="runDateItem">January 1st, 2015</a>
             </div>
-            <div class="content">
-                <a class="header">Card 0</a>
-                <div class="meta">
-                    <div class="ui small star rating"></div>
-                </div>
-                <div class="description">
-                    <a>
-                        <i class="red clock icon"></i>
-                        Today
-                    </a>
-                </div>
+            <div class="ui left aligned item">
+                <div class="ui red button">Cancel</div>
             </div>
-            <div class="extra content">
-                <span class="left floated like">
-                    <i class="like icon"></i>
-                    30+ fans
-                </span>
-            </div>
+        </div>
+        <div class="ui blue segment">
+            <p>Here goes content</p>
+        </div>
     </div>
-    <div class="green card">
-        <div class="image">
-                <img src="images/wireframe/image.png" class="visible content">
-            </div>
-            <div class="content">
-                <a class="header">Card 1</a>
-                <div class="meta">
-                    <div class="ui small star rating"></div>
+</div>
+
+<!-- Second try -->
+<div class="ui page grid">
+    <div class="ui column ">
+        <div class="ui borderless  inverted blue menu">
+            <div class="ui left aligned item">
+                <a class="ui item"><i class="large sidebar icon"></i></a>
+                <div class="ui item">
+                <svg viewBox="0 0 100 100"
+                    preserveAspectRatio="xMinYMin meet"
+                    width="2em" height="2em">
+                    <circle cx="50" cy="50" r="40"
+                        stroke="red" stroke-width="4" fill="yellow" />
+                </svg>
                 </div>
-                <div class="description">
-                    <a>
-                        <i class="red clock icon"></i>
-                        Today
-                    </a>
-                </div>
+                <a class="ui item" id="runDateItem">January 1st, 2015</a>
             </div>
-            <div class="extra content">
-                <span class="left floated like">
-                    <i class="like icon"></i>
-                    30+ fans
-                </span>
+            <div class="ui left aligned item">
+                <div class="ui red button">Cancel</div>
             </div>
-    </div>
-    <div class="green card">
-        <div class="image">
-                <img src="images/wireframe/image.png" class="visible content">
-            </div>
-            <div class="content">
-                <a class="header">Card 2</a>
-                <div class="meta">
-                    <div class="ui small star rating"></div>
-                </div>
-                <div class="description">
-                    <a>
-                        <i class="red clock icon"></i>
-                        Today
-                    </a>
-                </div>
-            </div>
-            <div class="extra content">
-                <span class="left floated like">
-                    <i class="like icon"></i>
-                    30+ fans
-                </span>
-            </div>
-    </div>
-    <div class="green card">
-        <div class="image">
-                <img src="images/wireframe/image.png" class="visible content">
-            </div>
-            <div class="content">
-                <a class="header">Card 3</a>
-                <div class="meta">
-                    <div class="ui small star rating"></div>
-                </div>
-                <div class="description">
-                    <a>
-                        <i class="red clock icon"></i>
-                        Today
-                    </a>
-                </div>
-            </div>
-            <div class="extra content">
-                <span class="left floated like">
-                    <i class="like icon"></i>
-                    30+ fans
-                </span>
-            </div>
-    </div>
-    <div class="green card">
-        <div class="image">
-                <img src="images/wireframe/image.png" class="visible content">
-            </div>
-            <div class="content">
-                <a class="header">Card 4</a>
-                <div class="meta">
-                    <div class="ui small star rating"></div>
-                </div>
-                <div class="description">
-                    <a>
-                        <i class="red clock icon"></i>
-                        Today
-                    </a>
-                </div>
-            </div>
-            <div class="extra content">
-                <span class="left floated like">
-                    <i class="like icon"></i>
-                    30+ fans
-                </span>
-            </div>
-    </div>
-    <div class="green card">
-        <div class="image">
-                <img src="images/wireframe/image.png" class="visible content">
-            </div>
-            <div class="content">
-                <a class="header">Card 5</a>
-                <div class="meta">
-                    <div class="ui small star rating"></div>
-                </div>
-                <div class="description">
-                    <a>
-                        <i class="red clock icon"></i>
-                        Today
-                    </a>
-                </div>
-            </div>
-            <div class="extra content">
-                <span class="left floated like">
-                    <i class="like icon"></i>
-                    30+ fans
-                </span>
-            </div>
+        </div>
+
+        <div class="ui blue segment">
+            <p>Here goes content</p>
+        </div>
     </div>
 </div>
 </div>

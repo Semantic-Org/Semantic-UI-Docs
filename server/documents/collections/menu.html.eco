@@ -381,15 +381,17 @@ themes      : ['Default', 'GitHub']
       <a class="item">
         Locations
       </a>
-      <div class="header item">
-        Support
+      <div class="right menu">
+        <div class="header item">
+          Support
+        </div>
+        <a class="item">
+          FAQ
+        </a>
+        <a class="item">
+          E-mail Support
+        </a>
       </div>
-      <a class="item">
-        FAQ
-      </a>
-      <a class="item">
-        E-mail Support
-      </a>
     </div>
   </div>
   <div class="another example">
@@ -459,13 +461,13 @@ themes      : ['Default', 'GitHub']
     <h4 class="ui header">Input</h4>
     <p>A menu item can contain an <a href="/elements/input.html">input</a> inside of it</p>
     <div class="ui menu">
-      <div class="right item">
+      <div class="item">
         <div class="ui icon input">
           <input type="text" placeholder="Search...">
           <i class="search icon"></i>
         </div>
       </div>
-      <div class="item">
+      <div class="right item">
         <div class="ui action input">
           <input type="text" placeholder="Navigate to...">
           <div class="ui button">Go</div>
@@ -797,7 +799,7 @@ themes      : ['Default', 'GitHub']
   </div>
 
   <div class="example">
-    <h4 class="ui header">Icons</h4>
+    <h4 class="ui header">Labeled Icon</h4>
     <p>A menu may have labeled icons</p>
     <div class="ui labeled icon menu">
       <a class="red item">
@@ -902,7 +904,7 @@ themes      : ['Default', 'GitHub']
       </a>
       <a class="item">
         <i class="mail icon"></i> Messages
-      </a>1
+      </a>
       <div class="right menu">
         <div class="item">
           <div class="ui icon input">
@@ -931,7 +933,7 @@ themes      : ['Default', 'GitHub']
       </a>
       <a class="item">
         <i class="mail icon"></i> Messages
-      </a>1
+      </a>
       <div class="right menu">
         <div class="item">
           <div class="ui icon input">

@@ -1075,7 +1075,6 @@ body#example {
 
 /* static */
 .visibility.example .sticky {
-  overflow: hidden;
   padding: 0em;
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
   transition: all 0.5s ease;
@@ -1086,11 +1085,11 @@ body#example {
 }
 /* fixed */
 .visibility.example .sticky.fixed {
-  background-color: #FFFFFF;
   position: fixed;
-  z-index: 10;
+  background-color: #FFFFFF;
   padding: 1em;
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+  z-index: 10;
 }
 .visibility.example .sticky.fixed + .placeholder {
   display: block;

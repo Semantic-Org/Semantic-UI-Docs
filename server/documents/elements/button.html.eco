@@ -31,8 +31,8 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
     <div class="ui ignored info message">
       A button will only be keyboard focusable if you set the property <code>tabindex="0"</code>, or if you use a <code>&#x3C;button&#x3E;</code>. You can read more about keyboard focus standards at <a href="http://webaim.org/techniques/keyboard/tabindex">webAIM</a>.
     </div>
-    <button class="ui button">
-      Focusable
+    <button class="ui button" disabled>
+      Button
     </button>
     <div class="ui button" tabindex="0">
       Focusable

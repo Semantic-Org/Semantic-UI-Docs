@@ -266,7 +266,7 @@ themes      : ['Default', 'Fixed-width']
       <h4 class="ui header">Responsive Patterns</h4>
       <p>Semantic includes two common patterns for adjusting grids on different devices.</p>
 
-      <p>A <code>doubling</code> grid automatically adjusts column width on each device jump. Usually this relationship is an exact doubling of columns, however some adjustments have been made for desplay flexibility. For example, six column computer grid, will jump to a three column grid on tablet, and a two column on mobile.</p>
+      <p>A <code>doubling</code> grid automatically adjusts column width on each device jump. Usually this relationship is an exact doubling of columns, however some adjustments have been made for display flexibility. For example, six column computer grid, will jump to a three column grid on tablet, and a two column on mobile.</p>
 
       <p>A <code>stackable</code> grid will always force a layout to use one column on mobile. These two patterns can also be used together to, for example, force a four column grid to one on mobile.</p>
 

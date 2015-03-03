@@ -849,11 +849,6 @@ type        : 'UI Behavior'
           <td>Occurs each time an elements calculations are updated</td>
         </tr>
         <tr>
-          <td>onScroll</td>
-          <td>$element</td>
-          <td>Occurs immediately before debounced scroll event</td>
-        </tr>
-        <tr>
           <td>onRefresh</td>
           <td>$element</td>
           <td>Occurs whenever element's visibility is refreshed</td>

@@ -1072,11 +1072,6 @@ body#example {
   margin-bottom: 0em;
 }
 
-.example .log.segment {
-  overflow: auto;
-  height: 500px;
-}
-
 
 /*--------------
    Visibility
@@ -1600,8 +1595,7 @@ body.progress.animated .ui.progress .bar {
 #example .main.container > .right.rail .sticky,
 #example .main.container > .tab > .examples > .right.rail .sticky,
 #example .main.container > .tab > .right.rail .sticky {
-  width: 300px;
-  padding: 2em 0em;
+  margin: 2em 0em;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }

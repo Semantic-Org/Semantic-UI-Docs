@@ -17,7 +17,7 @@ semantic.visiblity.ready = function() {
       .sticky({
         observeChanges : false,
         context        : '.visibility.example .demo.segment',
-        offset         : 250,
+        offset         : 80,
         onStick        : function() {
           if($(this).hasClass('hidden')) {
             $(this).transition('fade in');
@@ -39,15 +39,24 @@ semantic.visiblity.ready = function() {
           $.each(calculations, function(name, value) {
             var
               value = (typeof value == 'integer')
-                ? parseFloat(value, 1)
-                : value.toString()
+                ? parseInt(value, 10)
+                : value.toString(),
+              $td
             ;
-            if(name == 'percentagePassed') {
+            if(name == 'pixelsPassed' || name == 'width' || name == 'height') {
+              value = parseInt(value, 10) + 'px';
+            }
+            else if(name == 'percentagePassed') {
               value = parseInt(value * 100, 10) + '%';
             }
-            $('.demo.segment .sticky tr.'+name+' td:last-child')
-              .html(value)
-            ;
+            $td = $('.demo.segment .sticky tr.'+ name +' td:last-child');
+            if($td.html() !== value) {
+              if(value == 'true' || value == 'false') {
+                $td.removeClass('highlight').addClass('highlight');
+                setTimeout(function(){ $td.removeClass('highlight'); }, 2000);
+              }
+              $td.html(value);
+            }
           });
         }
       })

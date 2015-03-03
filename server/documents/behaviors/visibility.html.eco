@@ -321,13 +321,31 @@ type        : 'UI Behavior'
 
     <h2 class="ui header">Usage</h2>
 
-    <div class="no visibility demo example">
+    <div class="visibility demo example">
       <h4 class="ui header">How To Use</h4>
       <p>Visibility provides a set of callbacks which can be used to attach events to an element's position on screen.</p>
 
       <p>Each scroll change will trigger an animation frame request that will fire callbacks for an element.</p>
 
-      <div class="ui demo segment" style="margin-right: 375px;">
+      <div class="ui ignored code">
+      // some example callbacks
+      $('.demo.segment')
+        .visibility({
+          onTopVisible: function(calculations) {
+            // top is on screen
+          },
+          onTopPassed: function(calculations) {
+            // top of element passed
+          },
+          onUpdate: function(calculations) {
+            // do something whenever calculations adjust
+            updateTable(calculations);
+          }
+        })
+      ;
+      </div>
+
+      <div class="ui demo segment" style="margin-right: 345px;">
         <div class="ui right rail">
           <div class="ui sticky">
             <table class="ui celled red two column table">
@@ -428,6 +446,62 @@ type        : 'UI Behavior'
       <p>Setting <code>continuous: true</code> will make the callback fire <b>anytime the callback contitions are met</b>. So for example if you set a "top visible" callback, this callback will fire with each change in scroll when the top is visible on the page.</p>
 
       <p>Setting <code>once: false</code> will make the callback fire each time a callback <b>becomes true</b>. So, using the same "top visible" example, the callback will fire each time the top of an element is passed. Even if you scroll back up and pass the element again</p>
+
+      <div class="ui demo segment" style="margin-right: 345px;">
+        <div class="ui right rail">
+          <div class="ui sticky segments">
+            <div class="ui segment">
+              Settings
+            </div>
+            <div class="ui segment">
+              <div class="ui toggle checkbox">
+                <input type="checkbox" name="continuous" />
+                <label>Continuous</label>
+              </div>
+              <div class="ui divider"></div>
+              <div class="ui toggle checkbox">
+                <input type="checkbox" name="once" />
+                <label>Once</label>
+              </div>
+            </div>
+            <div class="ui segment">
+              Callback log
+            </div>
+            <div class="ui segment">
+
+            </div>
+          </div>
+        </div>
+        <img src="/images/wireframe/centered-paragraph.png" class="ui wireframe image">
+        <div class="ui divider"></div>
+        <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+        <div class="ui divider"></div>
+        <img src="/images/wireframe/media-paragraph.png" class="ui wireframe image">
+        <div class="ui divider"></div>
+        <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+        <div class="ui divider"></div>
+        <img src="/images/wireframe/centered-paragraph.png" class="ui wireframe image">
+        <div class="ui divider"></div>
+        <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+        <div class="ui divider"></div>
+        <img src="/images/wireframe/media-paragraph.png" class="ui wireframe image">
+        <div class="ui divider"></div>
+        <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+        <div class="ui divider"></div>
+        <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+        <div class="ui divider"></div>
+        <img src="/images/wireframe/centered-paragraph.png" class="ui wireframe image">
+        <div class="ui divider"></div>
+        <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+        <div class="ui divider"></div>
+        <img src="/images/wireframe/media-paragraph.png" class="ui wireframe image">
+        <div class="ui divider"></div>
+        <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+        <div class="ui divider"></div>
+        <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+        <div class="ui divider"></div>
+      </div>
+    </div>
 
 
       <h2 class="ui dividing header">Callbacks</h4>

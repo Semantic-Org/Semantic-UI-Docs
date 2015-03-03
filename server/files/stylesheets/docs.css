@@ -1100,6 +1100,54 @@ body#example {
   height: 28px;
 }
 
+/* Flash Animation */
+.main.container .highlight {
+  -moz-animation: highlight 2s ease-out;
+    -moz-animation-iteration-count: 1;
+    -webkit-animation: highlight 2s ease-out;
+    -webkit-animation-iteration-count: 1;
+    -ms-animation: highlight 2s ease-out;
+    -ms-animation-iteration-count: 1;
+    animation: highlight 2s ease-out;
+    animation-iteration-count: 1;
+}
+
+@-webkit-keyframes highlight {
+    0% {
+      background-color: none;
+    }
+    30% {
+      background-color: #ffff00;
+    }
+    100% {
+      background-color: none;
+    }
+}
+
+@-moz-keyframes highlight {
+    0% {
+      background-color: none;
+    }
+    30% {
+      background-color: #ffff00;
+    }
+    100% {
+      background-color: none;
+    }
+}
+
+@-ms-keyframes highlight {
+    0% {
+      background-color: none;
+    }
+    30% {
+      background-color: #ffff00;
+    }
+    100% {
+      background-color: none;
+    }
+}
+
 
 /*--------------
    Progress

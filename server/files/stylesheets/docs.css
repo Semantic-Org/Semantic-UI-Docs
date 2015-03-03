@@ -1072,6 +1072,11 @@ body#example {
   margin-bottom: 0em;
 }
 
+.example .log.segment {
+  overflow: auto;
+  height: 500px;
+}
+
 
 /*--------------
    Visibility

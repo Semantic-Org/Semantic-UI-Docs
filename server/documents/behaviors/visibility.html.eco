@@ -56,26 +56,27 @@ type        : 'UI Behavior'
 
     <h2 class="ui dividing header">Examples</h2>
 
-    <div class="visibility example">
+    <div class="visibility infinite example">
       <h4 class="ui header">Infinite Scroll</h4>
       <p>As an alternative to pagination you can use <code>onBottomVisible</code> to load content automatically when the bottom of a container is reached.</p>
 
-      <div class="ignored code" data-type="javascript" data-demo="true">
-        $('.long.segment')
+      <div class="evaluated code" data-type="javascript">
+        $('.infinite.example .demo.segment')
           .visibility({
             once: false,
             // update size when new content loads
             observeChanges: true,
             // load content on bottom edge visible
             onBottomVisible: function() {
+              // loads a max of 5 times
               window.loadFakeContent();
             }
           })
         ;
       </div>
 
-      <div class="long ui segment">
-        <h2 class="ui dividing center aligned header">Infinite Scroll Example</h2>
+      <div class="ui demo segment">
+        <h3 class="ui dividing center aligned header">Infinite Scroll Example</h3>
         <img src="/images/wireframe/centered-paragraph.png" class="ui wireframe image">
         <div class="ui divider"></div>
         <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
@@ -98,8 +99,8 @@ type        : 'UI Behavior'
 
       <p>By default images will appear without animation, however you can also specify a named <a href="/modules/transition.html">transition</a>, and a duration that should be used for animating the image into view</p>
 
-      <div class="ignored code" data-type="javascript" data-demo="true">
-        $('.items img')
+      <div class="evaluated code" data-type="javascript">
+        $('.demo.items img')
           .visibility({
             type       : 'image',
             transition : 'fade in',
@@ -107,7 +108,7 @@ type        : 'UI Behavior'
           })
         ;
       </div>
-      <div class="ui divided items">
+      <div class="ui divided demo items">
         <div class="item">
           <div class="image">
             <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/elliot.jpg">
@@ -220,16 +221,16 @@ type        : 'UI Behavior'
         </div>
       </div>
     </div>
-    <div class="changing example">
+    <div class="changing visibility example">
       <h4 class="ui header">Gradual Changes</h4>
       <p>Each callback receives all calculated values as its first parameter, allowing you to adjust an element using </p>
 
-      <div class="ignored code" data-type="javascript" data-demo="true">
-        $('.changing.example .long.segment')
+      <div class="evaluated code" data-type="javascript">
+        $('.changing.example .demo.segment')
           .visibility({
             once       : false,
             continuous : true,
-            onPassing: function(calculations) {
+            onPassing  : function(calculations) {
               var newColor = 'rgba(0, 0, 0, ' + calculations.percentagePassed +')';
               $(this)
                 .css('background-color', newColor)
@@ -238,19 +239,19 @@ type        : 'UI Behavior'
           })
         ;
       </div>
-      <div class="ui long segment" style="height: 800px;"></div>
+      <div class="ui demo segment" style="height: 1000px;"></div>
     </div>
 
 
-    <div class="visibility example">
+    <div class="visibility overlay example">
       <h4 class="ui header">Fixing Content To Viewport</h4>
       <p>Visibility provides a lightweight method for sticking content to a page's viewport. Using <code>type: fixed</code> will add the class <code>fixed</code> after an element is passed in the viewport. Using this class name you can assign special layout conditions to an item once it is passed.</p>
       <p>In this example, when an element is passed we fix it to the viewport, add a background color and box shadow so that it can float above other content. We also show an adjacent placeholder element which makes sure that content stays offset the same as if the menu was still in content flow</p>
       <div class="ui warning message">
         Using <code>visibility</code> to create fixed content is meant as a more hands-on solution. For those who aren't too familiar with javascript it might be best to use <a href="/modules/sticky.html">sticky</a> content
       </div>
-      <div class="ignored code" data-type="javascript" data-demo="true">
-        $('.visibility.example .overlay')
+      <div class="evaluated code" data-type="javascript">
+        $('.overlay.example .overlay')
           .visibility({
             offset : 55, // fix at 55px from top of page (space for nav menu)
             type   : 'fixed'
@@ -314,18 +315,19 @@ type        : 'UI Behavior'
       <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
       <div class="ui divider"></div>
     </div>
-
   </div>
 
   <div class="ui overview tab" data-tab="usage">
 
     <h2 class="ui header">Usage</h2>
 
-    <div class="visibility demo example">
+    <div class="first visibility example">
       <h4 class="ui header">How To Use</h4>
       <p>Visibility provides a set of callbacks which can be used to attach events to an element's position on screen.</p>
 
       <p>Each scroll change will trigger an animation frame request that will fire callbacks for an element.</p>
+
+      <div class="ui ignored info message">The following examples use sticky columns to help display data alongside each example. Please consult the <a href="/modules/sticky.html">sticky documentation</a> for usage examples.</div>
 
       <div class="ui ignored code">
       // some example callbacks
@@ -345,10 +347,41 @@ type        : 'UI Behavior'
       ;
       </div>
 
-      <div class="ui demo segment" style="margin-right: 345px;">
-        <div class="ui right rail">
+      <div class="two column equal height ui grid">
+        <div class="main column">
+          <div class="ui first demo segment">
+            <img src="/images/wireframe/centered-paragraph.png" class="ui wireframe image">
+            <div class="ui divider"></div>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            <div class="ui divider"></div>
+            <img src="/images/wireframe/media-paragraph.png" class="ui wireframe image">
+            <div class="ui divider"></div>
+            <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+            <div class="ui divider"></div>
+            <img src="/images/wireframe/centered-paragraph.png" class="ui wireframe image">
+            <div class="ui divider"></div>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            <div class="ui divider"></div>
+            <img src="/images/wireframe/media-paragraph.png" class="ui wireframe image">
+            <div class="ui divider"></div>
+            <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+            <div class="ui divider"></div>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            <div class="ui divider"></div>
+            <img src="/images/wireframe/centered-paragraph.png" class="ui wireframe image">
+            <div class="ui divider"></div>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            <div class="ui divider"></div>
+            <img src="/images/wireframe/media-paragraph.png" class="ui wireframe image">
+            <div class="ui divider"></div>
+            <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+            <div class="ui divider"></div>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+          </div>
+        </div>
+        <div class="column">
           <div class="ui sticky">
-            <table class="ui celled red two column table">
+            <table class="ui basic celled sortable two column table">
               <thead>
                 <th>Calculation</th>
                 <th>Value</th>
@@ -406,38 +439,10 @@ type        : 'UI Behavior'
             </table>
           </div>
         </div>
-        <img src="/images/wireframe/centered-paragraph.png" class="ui wireframe image">
-        <div class="ui divider"></div>
-        <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-        <div class="ui divider"></div>
-        <img src="/images/wireframe/media-paragraph.png" class="ui wireframe image">
-        <div class="ui divider"></div>
-        <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
-        <div class="ui divider"></div>
-        <img src="/images/wireframe/centered-paragraph.png" class="ui wireframe image">
-        <div class="ui divider"></div>
-        <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-        <div class="ui divider"></div>
-        <img src="/images/wireframe/media-paragraph.png" class="ui wireframe image">
-        <div class="ui divider"></div>
-        <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
-        <div class="ui divider"></div>
-        <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-        <div class="ui divider"></div>
-        <img src="/images/wireframe/centered-paragraph.png" class="ui wireframe image">
-        <div class="ui divider"></div>
-        <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-        <div class="ui divider"></div>
-        <img src="/images/wireframe/media-paragraph.png" class="ui wireframe image">
-        <div class="ui divider"></div>
-        <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
-        <div class="ui divider"></div>
-        <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-        <div class="ui divider"></div>
       </div>
     </div>
 
-    <div class="no example">
+    <div class="second visibility example">
 
       <h4 class="ui header">Changing Callback Frequency</h4>
 
@@ -447,68 +452,70 @@ type        : 'UI Behavior'
 
       <p>Setting <code>once: false</code> will make the callback fire each time a callback <b>becomes true</b>. So, using the same "top visible" example, the callback will fire each time the top of an element is passed. Even if you scroll back up and pass the element again</p>
 
-      <div class="ui demo segment" style="margin-right: 345px;">
-        <div class="ui right rail">
+      <div class="two column equal height ui grid">
+        <div class="main column">
+          <div class="ui demo segment">
+            <img src="/images/wireframe/centered-paragraph.png" class="ui wireframe image">
+            <div class="ui divider"></div>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            <div class="ui divider"></div>
+            <img src="/images/wireframe/media-paragraph.png" class="ui wireframe image">
+            <div class="ui divider"></div>
+            <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+            <div class="ui divider"></div>
+            <img src="/images/wireframe/centered-paragraph.png" class="ui wireframe image">
+            <div class="ui divider"></div>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            <div class="ui divider"></div>
+            <img src="/images/wireframe/media-paragraph.png" class="ui wireframe image">
+            <div class="ui divider"></div>
+            <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+            <div class="ui divider"></div>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            <div class="ui divider"></div>
+            <img src="/images/wireframe/centered-paragraph.png" class="ui wireframe image">
+            <div class="ui divider"></div>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            <div class="ui divider"></div>
+            <img src="/images/wireframe/media-paragraph.png" class="ui wireframe image">
+            <div class="ui divider"></div>
+            <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+            <div class="ui divider"></div>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+          </div>
+        </div>
+        <div class="column">
           <div class="ui sticky segments">
             <div class="ui segment">
-              Settings
-            </div>
-            <div class="ui segment">
+              <div class="ui right floated compact clear button">
+                Clear
+              </div>
+              <div class="ui toggle checkbox">
+                <input type="checkbox" checked name="once" />
+                <label>Once</label>
+              </div>
+              <div class="ui divider"></div>
               <div class="ui toggle checkbox">
                 <input type="checkbox" name="continuous" />
                 <label>Continuous</label>
               </div>
-              <div class="ui divider"></div>
-              <div class="ui toggle checkbox">
-                <input type="checkbox" name="once" />
-                <label>Once</label>
-              </div>
             </div>
             <div class="ui segment">
-              Callback log
+              Event Log
             </div>
             <div class="ui segment">
-
+              <pre class="console"></pre>
             </div>
           </div>
         </div>
-        <img src="/images/wireframe/centered-paragraph.png" class="ui wireframe image">
-        <div class="ui divider"></div>
-        <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-        <div class="ui divider"></div>
-        <img src="/images/wireframe/media-paragraph.png" class="ui wireframe image">
-        <div class="ui divider"></div>
-        <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
-        <div class="ui divider"></div>
-        <img src="/images/wireframe/centered-paragraph.png" class="ui wireframe image">
-        <div class="ui divider"></div>
-        <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-        <div class="ui divider"></div>
-        <img src="/images/wireframe/media-paragraph.png" class="ui wireframe image">
-        <div class="ui divider"></div>
-        <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
-        <div class="ui divider"></div>
-        <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-        <div class="ui divider"></div>
-        <img src="/images/wireframe/centered-paragraph.png" class="ui wireframe image">
-        <div class="ui divider"></div>
-        <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-        <div class="ui divider"></div>
-        <img src="/images/wireframe/media-paragraph.png" class="ui wireframe image">
-        <div class="ui divider"></div>
-        <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
-        <div class="ui divider"></div>
-        <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-        <div class="ui divider"></div>
       </div>
     </div>
 
+    <h2 class="ui dividing header">Callbacks</h4>
 
-      <h2 class="ui dividing header">Callbacks</h4>
+    <p>Callbacks are separated into two categories. Standard events will occur the first animation frame where the conditions evaluated to true.</p>
 
-
-      <p>Callbacks are separated into two categories. Standard events will occur the first animation frame where the conditions evaluated to true.</p>
-
+    <div class="no example">
       <h4 class="ui header">Standard Events</h4>
       <table class="ui celled definition table">
         <thead>
@@ -576,7 +583,8 @@ type        : 'UI Behavior'
           </tr>
         </tbody>
       </table>
-
+    </div>
+    <div class="no example">
       <h4 class="ui header">Grouped Events</h4>
       <p><code>onPassed</code> allows you to specify a collection of callbacks that occur after different percentages of an element are passed</p>
       <table class="ui celled definition table">
@@ -683,33 +691,6 @@ type        : 'UI Behavior'
         </tbody>
       </table>
     </div>
-
-    <div class="no example">
-
-      <h4 class="ui header">Calculations</h4>
-
-      <p>Each callback receives as its first parameter a <code>calculations</code> object which contains useful derived calculations for that element's visiblity</p>
-
-      <table class="ui celled definition table">
-        <thead>
-          <tr>
-            <th class="three wide">Name</th>
-            <th>Value</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              onTopVisibleReverse
-            </td>
-            <td>
-              Element's top edge has not passed bottom of screen
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
   </div>
 
   <div class="ui tab" data-tab="settings">

@@ -14,7 +14,7 @@ semantic.search.ready = function() {
   ;
 
   content = [
-    { title: 'Andorra' },
+    { title: 'And + orra' },
     { title: 'United Arab Emirates' },
     { title: 'Afghanistan' },
     { title: 'Antigua' },
@@ -260,7 +260,7 @@ semantic.search.ready = function() {
 
   $local
     .search({
-      searchFields: ['baz'],
+      searchFields: ['title'],
       source: content
     })
   ;

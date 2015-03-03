@@ -12,9 +12,47 @@ semantic.visiblity.ready = function() {
   // event handlers
   handler = {
   };
-
-
-
+  setTimeout(function() {
+    $('.visibility.example .demo.segment .sticky')
+      .sticky({
+        observeChanges : false,
+        context        : '.visibility.example .demo.segment',
+        offset         : 250,
+        onStick        : function() {
+          if($(this).hasClass('hidden')) {
+            $(this).transition('fade in');
+          }
+        },
+        onBottom: function() {
+          /*if(!$(this).hasClass('hidden')) {
+            $(this).transition('fade out');
+          }*/
+        }
+      })
+    ;
+    $('.visibility.example .demo.segment')
+      .visibility({
+        once           : false,
+        continuous     : true,
+        observeChanges : false,
+        onUpdate       : function(calculations) {
+          $.each(calculations, function(name, value) {
+            var
+              value = (typeof value == 'integer')
+                ? parseFloat(value, 1)
+                : value.toString()
+            ;
+            if(name == 'percentagePassed') {
+              value = parseInt(value * 100, 10) + '%';
+            }
+            $('.demo.segment .sticky tr.'+name+' td:last-child')
+              .html(value)
+            ;
+          });
+        }
+      })
+    ;
+  }, 2000);
 };
 
 var count = 1;

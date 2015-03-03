@@ -514,8 +514,8 @@ themes      : ['Default']
 
       <div class="ui selection dropdown">
         <input type="hidden" name="transition">
-        <div class="default text">Choose a transition</div>
         <i class="dropdown icon"></i>
+        <div class="default text">Choose a transition</div>
         <div class="menu">
           <div class="item">Horizontal Flip</div>
           <div class="item">Vertical Flip</div>
@@ -559,6 +559,11 @@ themes      : ['Default']
           <td>popup</td>
           <td>false</td>
           <td>Can specify a DOM element that should be used as the popup. This is useful for including a pre-formatted popup.</td>
+        </tr>
+        <tr>
+          <td>exclusive</td>
+          <td>true</td>
+          <td>Whether all other popups should be hidden when this popup is opened</td>
         </tr>
         <tr>
           <td>movePopup</td>

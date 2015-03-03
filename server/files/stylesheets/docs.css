@@ -1078,24 +1078,24 @@ body#example {
 ---------------*/
 
 /* static */
-.visibility.example .sticky {
+.visibility.example .overlay {
   padding: 0em;
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
   transition: all 0.5s ease;
   background: transparent;
 }
-.visibility.example .sticky.fixed + .placeholder {
+.visibility.example .overlay.fixed + .placeholder {
   display: none;
 }
 /* fixed */
-.visibility.example .sticky.fixed {
+.visibility.example .overlay.fixed {
   position: fixed;
   background-color: #FFFFFF;
   padding: 1em;
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
   z-index: 10;
 }
-.visibility.example .sticky.fixed + .placeholder {
+.visibility.example .overlay.fixed + .placeholder {
   display: block;
   height: 28px;
 }

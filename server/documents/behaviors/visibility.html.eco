@@ -64,9 +64,10 @@ type        : 'UI Behavior'
         $('.long.segment')
           .visibility({
             once: false,
+            // update size when new content loads
             observeChanges: true,
+            // load content on bottom edge visible
             onBottomVisible: function() {
-              // load fake content
               window.loadFakeContent();
             }
           })
@@ -217,40 +218,39 @@ type        : 'UI Behavior'
             <div class="ui right floated button">View <i class="right chevron icon"></i></div>
           </div>
         </div>
-        <div class="item">
-          <div class="image">
-            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/tom.jpg">
-          </div>
-          <div class="content">
-            <h2 class="ui header">Tom</h2>
-            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-            <div class="ui primary button">Add Friend</div>
-            <div class="ui right floated button">View <i class="right chevron icon"></i></div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="image">
-            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/nan.jpg">
-          </div>
-          <div class="content">
-            <h2 class="ui header">Nan</h2>
-            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-            <div class="ui primary button">Add Friend</div>
-            <div class="ui right floated button">View <i class="right chevron icon"></i></div>
-          </div>
-        </div>
       </div>
     </div>
+    <div class="changing example">
+      <h4 class="ui header">Gradual Changes</h4>
+      <p>Each callback receives all calculated values as its first parameter, allowing you to adjust an element using </p>
+
+      <div class="ignored code" data-type="javascript" data-demo="true">
+        $('.changing.example .long.segment')
+          .visibility({
+            once       : false,
+            continuous : true,
+            onPassing: function(calculations) {
+              var newColor = 'rgba(0, 0, 0, ' + calculations.percentagePassed +')';
+              $(this)
+                .css('background-color', newColor)
+              ;
+            }
+          })
+        ;
+      </div>
+      <div class="ui long segment" style="height: 800px;"></div>
+    </div>
+
 
     <div class="visibility example">
       <h4 class="ui header">Fixing Content To Viewport</h4>
       <p>Visibility provides a lightweight method for sticking content to a page's viewport. Using <code>type: fixed</code> will add the class <code>fixed</code> after an element is passed in the viewport. Using this class name you can assign special layout conditions to an item once it is passed.</p>
       <p>In this example, when an element is passed we fix it to the viewport, add a background color and box shadow so that it can float above other content. We also show an adjacent placeholder element which makes sure that content stays offset the same as if the menu was still in content flow</p>
-      <div class="ui ignored info message">
-        For a more hands-off approach to making elements stick to the viewport, you may also want to try a <a href="/modules/sticky.html">sticky</a> element
+      <div class="ui warning message">
+        Using <code>visibility</code> to create fixed content is meant as a more hands-on solution. For those who aren't too familiar with javascript it might be best to use <a href="/modules/sticky.html">sticky</a> content
       </div>
       <div class="ignored code" data-type="javascript" data-demo="true">
-        $('.visibility.example .sticky')
+        $('.visibility.example .overlay')
           .visibility({
             offset : 55, // fix at 55px from top of page (space for nav menu)
             type   : 'fixed'
@@ -258,30 +258,30 @@ type        : 'UI Behavior'
         ;
       </div>
       <div class="code" data-type="css">
-      /* static */
-      .visibility.example .sticky {
+      .visibility.example .overlay {
         padding: 0em;
         box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
         transition: all 0.5s ease;
         background: transparent;
       }
-      .visibility.example .sticky.fixed + .placeholder {
+      .visibility.example .fixed.overlay + .placeholder {
         display: none;
       }
+
       /* fixed */
-      .visibility.example .sticky.fixed {
+      .visibility.example .fixed.overlay {
         position: fixed;
         background-color: #FFFFFF;
         padding: 1em;
         box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
         z-index: 10;
       }
-      .visibility.example .sticky.fixed + .placeholder {
+      .visibility.example .fixed.overlay + .placeholder {
         display: block;
         height: 28px;
       }
       </div>
-      <div class="sticky">
+      <div class="overlay">
         <div class="ui secondary menu">
           <a class="item">
             <i class="sidebar icon"></i> Menu
@@ -317,179 +317,324 @@ type        : 'UI Behavior'
 
   </div>
 
-  <div class="ui tab" data-tab="usage">
+  <div class="ui overview tab" data-tab="usage">
 
-    <h3 class="ui dividing header">Events</h3>
+    <h2 class="ui header">Usage</h2>
 
-    <h4 class="ui header">Standard Events</h4>
-    <table class="ui celled definition table">
-      <thead>
-        <tr>
-          <th class="three wide">Event</th>
-          <th class="six wide">Occurs</th>
-          <th>Pseudocode</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            onTopVisible
-          </td>
-          <td>
-            Element's top edge has passed bottom of screen
-          </td>
-          <td>
-            <div class="code" data-type="javascript">screen.bottom >= element.top</div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            onTopPassed
-          </td>
-          <td>
-            Element's top edge has passed top of the screen
-          </td>
-          <td>
-            <div class="code" data-type="javascript">screen.top >= element.top</div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            onBottomVisible
-          </td>
-          <td>
-            Element's bottom edge has passed bottom of screen
-          </td>
-          <td>
-            <div class="code" data-type="javascript">screen.bottom >= element.top</div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            onPassing
-          </td>
-          <td>
-            Any part of an element is visible on screen
-          </td>
-          <td>
-            <div class="code" data-type="javascript">screen.bottom >= element.top && screen.top < element.bottom</div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            onBottomPassed
-          </td>
-          <td>
-            Element's bottom edge has passed top of screen
-          </td>
-          <td>
-            <div class="code" data-type="javascript">screen.top >= element.bottom</div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="no visibility demo example">
+      <h4 class="ui header">How To Use</h4>
+      <p>Visibility provides a set of callbacks which can be used to attach events to an element's position on screen.</p>
 
-    <h4 class="ui header">Grouped Events</h4>
-    <table class="ui celled definition table">
-      <thead>
-        <tr>
-          <th class="three wide">Event</th>
-          <th class="six wide">Occurs</th>
-          <th>Example</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            onPassed {}
-          </td>
-          <td>
-            A percentage of an element's content has been passed
-          </td>
-          <td>
-            <div class="code" data-type="javascript">
-            onPassed: {
-              40: function() {
-                // do something at 40%
-              },
-              80: function() {
-                // do something at 80%
+      <p>Each scroll change will trigger an animation frame request that will fire callbacks for an element.</p>
+
+      <div class="ui demo segment" style="margin-right: 375px;">
+        <div class="ui right rail">
+          <div class="ui sticky">
+            <table class="ui celled red two column table">
+              <thead>
+                <th>Calculation</th>
+                <th>Value</th>
+              </thead>
+              <tbody>
+                <tr class="pixelsPassed">
+                  <td>pixelsPassed</td>
+                  <td></td>
+                </tr>
+                <tr class="percentagePassed">
+                  <td>percentagePassed</td>
+                  <td></td>
+                </tr>
+                <tr class="fits">
+                  <td>fits</td>
+                  <td></td>
+                </tr>
+                <tr class="passing">
+                  <td>passing</td>
+                  <td></td>
+                </tr>
+                <tr class="topPassed">
+                  <td>topPassed</td>
+                  <td></td>
+                </tr>
+                <tr class="bottomPassed">
+                  <td>bottomPassed</td>
+                  <td></td>
+                </tr>
+                <tr class="topVisible">
+                  <td>topVisible</td>
+                  <td></td>
+                </tr>
+                <tr class="bottomVisible">
+                  <td>bottomVisible</td>
+                  <td></td>
+                </tr>
+                <tr class="width">
+                  <td>width</td>
+                  <td></td>
+                </tr>
+                <tr class="height">
+                  <td>height</td>
+                  <td></td>
+                </tr>
+                <tr class="visible">
+                  <td>visible</td>
+                  <td></td>
+                </tr>
+                <tr class="hidden">
+                  <td>hidden</td>
+                  <td></td>
+                </tr>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <img src="/images/wireframe/centered-paragraph.png" class="ui wireframe image">
+        <div class="ui divider"></div>
+        <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+        <div class="ui divider"></div>
+        <img src="/images/wireframe/media-paragraph.png" class="ui wireframe image">
+        <div class="ui divider"></div>
+        <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+        <div class="ui divider"></div>
+        <img src="/images/wireframe/centered-paragraph.png" class="ui wireframe image">
+        <div class="ui divider"></div>
+        <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+        <div class="ui divider"></div>
+        <img src="/images/wireframe/media-paragraph.png" class="ui wireframe image">
+        <div class="ui divider"></div>
+        <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+        <div class="ui divider"></div>
+        <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+        <div class="ui divider"></div>
+        <img src="/images/wireframe/centered-paragraph.png" class="ui wireframe image">
+        <div class="ui divider"></div>
+        <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+        <div class="ui divider"></div>
+        <img src="/images/wireframe/media-paragraph.png" class="ui wireframe image">
+        <div class="ui divider"></div>
+        <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+        <div class="ui divider"></div>
+        <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+        <div class="ui divider"></div>
+      </div>
+    </div>
+
+    <div class="no example">
+
+      <h4 class="ui header">Changing Callback Frequency</h4>
+
+      <p>Visibility's default settings will only have each callback occur <b>the first time</b> which the conditions are met. On subsequent occurences the event will not fire.</p>
+
+      <p>Setting <code>continuous: true</code> will make the callback fire <b>anytime the callback contitions are met</b>. So for example if you set a "top visible" callback, this callback will fire with each change in scroll when the top is visible on the page.</p>
+
+      <p>Setting <code>once: false</code> will make the callback fire each time a callback <b>becomes true</b>. So, using the same "top visible" example, the callback will fire each time the top of an element is passed. Even if you scroll back up and pass the element again</p>
+
+
+      <h2 class="ui dividing header">Callbacks</h4>
+
+
+      <p>Callbacks are separated into two categories. Standard events will occur the first animation frame where the conditions evaluated to true.</p>
+
+      <h4 class="ui header">Standard Events</h4>
+      <table class="ui celled definition table">
+        <thead>
+          <tr>
+            <th class="three wide">Event</th>
+            <th class="six wide">Occurs</th>
+            <th>Pseudocode</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              onTopVisible
+            </td>
+            <td>
+              Element's top edge has passed bottom of screen
+            </td>
+            <td>
+              <div class="code" data-type="javascript">screen.bottom >= element.top</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              onTopPassed
+            </td>
+            <td>
+              Element's top edge has passed top of the screen
+            </td>
+            <td>
+              <div class="code" data-type="javascript">screen.top >= element.top</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              onBottomVisible
+            </td>
+            <td>
+              Element's bottom edge has passed bottom of screen
+            </td>
+            <td>
+              <div class="code" data-type="javascript">screen.bottom >= element.top</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              onPassing
+            </td>
+            <td>
+              Any part of an element is visible on screen
+            </td>
+            <td>
+              <div class="code" data-type="javascript">screen.bottom >= element.top && screen.top < element.bottom</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              onBottomPassed
+            </td>
+            <td>
+              Element's bottom edge has passed top of screen
+            </td>
+            <td>
+              <div class="code" data-type="javascript">screen.top >= element.bottom</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h4 class="ui header">Grouped Events</h4>
+      <p><code>onPassed</code> allows you to specify a collection of callbacks that occur after different percentages of an element are passed</p>
+      <table class="ui celled definition table">
+        <thead>
+          <tr>
+            <th class="three wide">Event</th>
+            <th class="six wide">Occurs</th>
+            <th>Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              onPassed {}
+            </td>
+            <td>
+              A percentage of an element's content has been passed
+            </td>
+            <td>
+              <div class="code" data-type="javascript">
+              onPassed: {
+                40: function() {
+                  // do something at 40%
+                },
+                80: function() {
+                  // do something at 80%
+                }
               }
-            }
-            </div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-    <h4 class="ui header">Reverse Events</h4>
-    <table class="ui celled definition table">
-      <thead>
-        <tr>
-          <th class="three wide">Event</th>
-          <th class="six wide">Occurs</th>
-          <th>Pseudocode</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            onTopVisibleReverse
-          </td>
-          <td>
-            Element's top edge has not passed bottom of screen
-          </td>
-          <td>
-            <div class="code" data-type="javascript">screen.bottom >= element.top</div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            onTopPassedReverse
-          </td>
-          <td>
-            Element's top edge has not passed top of the screen
-          </td>
-          <td>
-            <div class="code" data-type="javascript">screen.top >= element.top</div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            onBottomVisibleReverse
-          </td>
-          <td>
-            Element's bottom edge has not passed bottom of screen
-          </td>
-          <td>
-            <div class="code" data-type="javascript">screen.bottom >= element.top</div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            onPassingReverse
-          </td>
-          <td>
-            Element's top has not passed top of screen but bottom has
-          </td>
-          <td>
-            <div class="code" data-type="javascript">screen.bottom >= element.top && screen.top < element.bottom</div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            onBottomPassedReverse
-          </td>
-          <td>
-            Element's bottom edge has not passed top of screen
-          </td>
-          <td>
-            <div class="code" data-type="javascript">screen.top >= element.bottom</div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="no example">
 
+      <h4 class="ui header">Reverse Events</h4>
+      <p>Reverse events will occur under the same conditions but as a user scrolls back up the page.</p>
+      <table class="ui celled definition table">
+        <thead>
+          <tr>
+            <th class="three wide">Event</th>
+            <th class="six wide">Occurs</th>
+            <th>Pseudocode</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              onTopVisibleReverse
+            </td>
+            <td>
+              Element's top edge has not passed bottom of screen
+            </td>
+            <td>
+              <div class="code" data-type="javascript">screen.bottom >= element.top</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              onTopPassedReverse
+            </td>
+            <td>
+              Element's top edge has not passed top of the screen
+            </td>
+            <td>
+              <div class="code" data-type="javascript">screen.top >= element.top</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              onBottomVisibleReverse
+            </td>
+            <td>
+              Element's bottom edge has not passed bottom of screen
+            </td>
+            <td>
+              <div class="code" data-type="javascript">screen.bottom >= element.top</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              onPassingReverse
+            </td>
+            <td>
+              Element's top has not passed top of screen but bottom has
+            </td>
+            <td>
+              <div class="code" data-type="javascript">screen.bottom >= element.top && screen.top < element.bottom</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              onBottomPassedReverse
+            </td>
+            <td>
+              Element's bottom edge has not passed top of screen
+            </td>
+            <td>
+              <div class="code" data-type="javascript">screen.top >= element.bottom</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="no example">
+
+      <h4 class="ui header">Calculations</h4>
+
+      <p>Each callback receives as its first parameter a <code>calculations</code> object which contains useful derived calculations for that element's visiblity</p>
+
+      <table class="ui celled definition table">
+        <thead>
+          <tr>
+            <th class="three wide">Name</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              onTopVisibleReverse
+            </td>
+            <td>
+              Element's top edge has not passed bottom of screen
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
   </div>
 
@@ -643,6 +788,11 @@ type        : 'UI Behavior'
         </tr>
       </thead>
       <tbody>
+        <tr>
+          <td>onUpdate(calculations)</td>
+          <td>$element</td>
+          <td>Occurs each time an elements calculations are updated</td>
+        </tr>
         <tr>
           <td>onScroll</td>
           <td>$element</td>

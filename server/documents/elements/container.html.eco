@@ -1,0 +1,30 @@
+---
+layout      : 'default'
+css         : 'container-page'
+element     : 'container'
+elementType : 'element'
+standalone  : true
+
+title       : 'Container'
+description : 'A container adds a fixed width to a group of elements'
+type        : 'UI Element'
+
+themes      : ['Default']
+---
+<link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/container.less" />
+
+<%- @partial('header') %>
+
+<div class="main container">
+
+  <h2 class="ui dividing header">Types</h2>
+
+  <div class="follow example">
+    <h4 class="ui header">Container</h4>
+    <p>A standard container</p>
+    <div class="ui container">
+
+    </div>
+  </div>
+
+</div>

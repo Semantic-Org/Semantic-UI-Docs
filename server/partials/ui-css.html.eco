@@ -5,6 +5,7 @@
 <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/site.css">
 
 <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/button.css">
+<link rel="stylesheet" type="text/css" class="ui" href="/dist/components/container.css">
 <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/divider.css">
 <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/flag.css">
 <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/header.css">

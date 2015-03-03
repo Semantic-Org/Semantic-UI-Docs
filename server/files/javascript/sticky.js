@@ -14,10 +14,6 @@ semantic.sticky.ready = function() {
 
   };
 
-  setTimeout(function() {
-    $('.main.container .sticky.example .sticky').sticky('refresh');
-    $('.main.container .pushing.example .sticky').sticky('refresh');
-  }, 500);
 
   $('.main.container .pushing.example')
     .each(function() {
@@ -74,3 +70,8 @@ semantic.sticky.ready = function() {
 $(document)
   .ready(semantic.sticky.ready)
 ;
+
+$(window).load(function() {
+  $('.main.container .sticky.example .sticky').sticky('refresh');
+  $('.main.container .pushing.example .sticky').sticky('refresh');
+});

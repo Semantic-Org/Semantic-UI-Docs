@@ -13,7 +13,7 @@ type        : 'UI Behavior'
 
 <script src="/javascript/visibility.js"></script>
 
-<%- @partial('header', { tabs: {  introduction: 'Introduction', examples: 'Examples', usage: 'Usage', settings: 'Settings' } }) %>
+<%- @partial('header', { tabs: {  introduction: 'Introduction', usage: 'Usage', examples: 'Examples', settings: 'Settings' } }) %>
 
 <div class="main container">
 
@@ -744,7 +744,7 @@ type        : 'UI Behavior'
         <tr>
           <td>throttle</td>
           <td>false</td>
-          <td>When set to a value, scroll position will be debounced using this ms value. Defaults to <code>useAnimationFrame</code> for adjusting visibility.</td>
+          <td>When set to an integer, scroll position will be debounced using this ms value. <code>false</code> will debounce with <code>requestAnimationFrame</code>.</td>
         </tr>
         <tr>
           <td>observeChanges</td>

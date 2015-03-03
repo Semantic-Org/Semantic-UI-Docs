@@ -167,7 +167,7 @@ window.loadFakeContent = function() {
       $('.visibility.example > .overlay, .visibility.example > .demo.segment, .visibility.example .items img')
         .visibility('refresh')
       ;
-    }, 500);
+    }, 1000);
   }
   count++;
 }

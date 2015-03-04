@@ -399,26 +399,6 @@ type        : 'UI Behavior'
                   <td>fits</td>
                   <td></td>
                 </tr>
-                <tr class="passing">
-                  <td>passing</td>
-                  <td></td>
-                </tr>
-                <tr class="topPassed">
-                  <td>topPassed</td>
-                  <td></td>
-                </tr>
-                <tr class="bottomPassed">
-                  <td>bottomPassed</td>
-                  <td></td>
-                </tr>
-                <tr class="topVisible">
-                  <td>topVisible</td>
-                  <td></td>
-                </tr>
-                <tr class="bottomVisible">
-                  <td>bottomVisible</td>
-                  <td></td>
-                </tr>
                 <tr class="width">
                   <td>width</td>
                   <td></td>
@@ -433,6 +413,26 @@ type        : 'UI Behavior'
                 </tr>
                 <tr class="hidden">
                   <td>hidden</td>
+                  <td></td>
+                </tr>
+                <tr class="passing">
+                  <td>passing</td>
+                  <td></td>
+                </tr>
+                <tr class="topVisible">
+                  <td>topVisible</td>
+                  <td></td>
+                </tr>
+                <tr class="bottomVisible">
+                  <td>bottomVisible</td>
+                  <td></td>
+                </tr>
+                <tr class="topPassed">
+                  <td>topPassed</td>
+                  <td></td>
+                </tr>
+                <tr class="bottomPassed">
+                  <td>bottomPassed</td>
                   <td></td>
                 </tr>
               </tr>

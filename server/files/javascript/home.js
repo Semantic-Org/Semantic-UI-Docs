@@ -328,7 +328,9 @@ semantic.home.ready = function() {
   }
 
   $('.ui.sidebar')
-    .sidebar('setting', 'transition', 'overlay')
+    .sidebar('setting', {
+      transition: 'overlay'
+    })
   ;
 
   handler.createDemos();

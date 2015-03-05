@@ -44,11 +44,9 @@ $(document)
           animation = animation.toLowerCase();
         }
         $('.transition.demo .image')
-          .each(function(index, value){
-            var $this = $(this);
-            setTimeout(function() {
-              $this.transition(animation);
-            }, index * 100)
+          .transition({
+            animation: animation,
+            interval: 200
           })
         ;
       })

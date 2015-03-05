@@ -296,7 +296,7 @@ type        : 'UI Module'
       </div>
       <h4 class="ui header">Animation Order</h4>
       <p>When hiding groups of elements, the default setting uses <code>reverse: 'auto'</code>. This will automatically reverse the order of animations from back-to-front when hiding elements to avoid layout reflows. When showing elements the order will return to its normal sequence.</p>
-      <div class="code" data-demo="true" data-title="Reversing Animation Order">
+      <div class="code" data-demo="true" data-title="Reversing Animation Order" data-type="javascript">
       $('.sequenced.images .image')
         .transition({
           animation : 'scale',

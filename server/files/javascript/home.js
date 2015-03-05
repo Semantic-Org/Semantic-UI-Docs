@@ -194,13 +194,13 @@ semantic.home.ready = function() {
       $.proxy(handler.less.changeTheme, this)(value);
     },
     createDemos: function() {
-      $('.demo.menu .item')
+      $('.demo.menu .item, .demo.buttons .button')
         .on('click', function() {
           if(!$(this).hasClass('dropdown')) {
             $(this)
               .addClass('active')
-              .closest('.ui.menu')
-              .find('.item')
+              .closest('.ui.menu, .ui.buttons')
+              .find('.item, .button')
                 .not($(this))
                 .removeClass('active')
             ;

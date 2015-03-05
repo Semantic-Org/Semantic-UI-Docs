@@ -40,8 +40,8 @@ standalone : true
           <i class="sidebar icon"></i> Menu
         </a>
         <a href="http://www.learnsemantic.com" data-site="learn" class="additional item">Learn</a>
-        <span class="additional item" data-site="themes" data-content="Coming Soon">Themes</span>
-        <span class="additional item" data-site="layout" data-content="Coming Soon">Layouts</span>
+        <!-- <span class="additional item" data-site="themes" data-content="Coming Soon">Themes</span>
+        <span class="additional item" data-site="layout" data-content="Coming Soon">Layouts</span> -->
       </div>
     </div>
   </div>
@@ -59,7 +59,7 @@ standalone : true
           </span>
           <b data-text="User Interface">HTML</b>
           <span class="typed-cursor">|</span>
-          <span class="text">is the vocabulary of the web.</span>
+          <span class="text">is the language of the web.</span>
         </h1>
         <div class="ui hidden divider"></div>
         <a href="<%= @getZip() %>" class="ui huge basic inverted teal download button">
@@ -79,6 +79,114 @@ standalone : true
     </div>
   </div>
 </div>
+<div class="ui vertical stripe segment">
+  <div class="ui stackable very relaxed center aligned page grid">
+    <div class="row">
+      <div class="twelve wide column">
+        <img class="ui fluid image" src="/images/devices.png">
+        <h1 class="ui header">Design Beautiful Websites Quicker</h1>
+        <p style="font-size:21px">Semantic is a web development framework that helps teams create responsive, mobile-friendly layouts using human-friendly HTML.</p>
+      </div>
+    </div>
+  </div>
+  <div class="stackable very relaxed ui page grid">
+    <div class="row">
+      <div class="six wide right aligned column">
+        <h2 class="ui header">Beautiful HTML</h2>
+        <p>Semantic UI treats words and classes as exchangeable concepts.</p>
+        <p>Classes use syntax from natural languages like noun/modifier relationships, word order, and plurality to link concepts intuitively.</p>
+        <p>Get the same benefits as <a href="https://en.bem.info" target="_blank">BEM</a> or <a href="https://smacss.com" target="_blank">SMACSS</a>, but without the tedium.</p>
+        </p>
+      </div>
+      <div class="ten wide column">
+        <div class="hidden code" data-type="html">
+          <div class="ui three buttons">
+            <button class="ui active button">One</button>
+            <button class="ui button">Two</button>
+            <button class="ui button">Three</button>
+          </div>
+        </div>
+        <div class="ui three demo buttons">
+          <div class="ui active button">One</div>
+          <div class="ui button">Two</div>
+          <div class="ui button">Three</div>
+        </div>
+      </div>
+    </div>
+    <div class="ui divider"></div>
+    <div class="row">
+      <div class="six wide right aligned column">
+        <h2 class="ui header">Intuitive Javascript</h2>
+        <p>Semantic uses simple phrases called <b>behaviors</b> that trigger functionality.</p>
+        <p>Any arbitrary decision in a component is included as a setting that developers can modify.</p>
+      </div>
+      <div class="ten wide column">
+        <div class="hidden code" data-demo="true" data-type="javascript">
+          $('.gender.dropdown')
+            .dropdown('setting', 'transition', 'vertical flip')
+            .dropdown('set selected', 'female')
+            .popup('setting', 'content', 'Select your gender')
+          ;
+        </div>
+        <div class="hidden code" data-type="html">
+          <select class="ui gender dropdown">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+        <select class="ui gender dropdown" style="display:block;">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+    </div>
+    <div class="ui divider"></div>
+    <div class="row">
+      <div class="six wide right aligned column">
+        <h2 class="ui header">Simplified Debugging</h2>
+        <p>Performance logging lets you track down bottlenecks without digging through stack traces.</p>
+        <div class="ui info message">Don't have access to development tools right now? Check out <a href="http://t.co/GOUQx8iCyG">this short clip</a>.</a>
+        </div>
+      </div>
+      <div class="ten wide column">
+        <div class="hidden code" data-demo="true" data-type="javascript">
+        $('.sequenced.images .image')
+          .transition({
+            debug     : true,
+            animation : 'pulse',
+            interval  : 200
+          })
+        ;
+        </div>
+        <div class="ui small sequenced images">
+          <img src="/images/avatar/large/stevie.jpg" class="ui circular image">
+          <img src="/images/avatar/large/daniel.jpg" class="ui circular image">
+          <img src="/images/avatar/large/joe.jpg" class="ui circular image">
+          <img src="/images/avatar/large/veronika.jpg" class="ui circular image">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ui email alternate stripe vertical segment">
+  <div class="ui center aligned page grid">
+    <div class="column">
+      <h3 class="ui header">
+        Semantic is growing fast. Want to see just how much? Sign up and we'll let you know
+      </h3>
+      <form class="ui form" method="post" action="//semantic-ui.us9.list-manage.com/subscribe/post?u=1bb099283b001a74133a94364&amp;id=1b77a619a7">
+        <div class="field">
+          <div class="ui huge input">
+            <input type="text" name="EMAIL" data-validate="email" placeholder="E-mail">
+          </div>
+          <button type="submit" class="ui huge secondary submit button">
+            Sign-up
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 <div class="ui stripe theming vertical segment">
   <div class="ui stackable very relaxed two column page grid">
     <div class="center aligned column">
@@ -86,7 +194,8 @@ standalone : true
         <img src="/images/icons/theming.png" class="ui icon image">
         Unbelievable Theming
       </h1>
-      <p>Semantic offers complete design freedom. High level variables and an intuitive inheritance system lets you change the look and feel of your components with just a handful of lines.</p>
+      <p>Semantic comes equipped with an intuitive inheritance system and high level theming variables that let you have complete design freedom.</p>
+      <p>Develop your UI once, then deploy with the same code everywhere.</p>
       <div class="ui large source button" style="display:none;">
         <i class="docs code icon"></i> View Source
       </div>
@@ -122,8 +231,8 @@ standalone : true
         <i class="star icon"></i>
         Rate
       </div>
-      <div class="ui buttons">
-        <div class="ui button">1</div>
+      <div class="ui demo buttons">
+        <div class="ui active button">1</div>
         <div class="ui button">2</div>
         <div class="ui button">3</div>
       </div>
@@ -142,31 +251,12 @@ standalone : true
     </div>
   </div>
 </div>
-<div class="ui email stripe vertical segment">
-  <div class="ui center aligned page grid">
-    <div class="column">
-      <h3 class="ui header">
-        Semantic is growing fast. Want to see just how much? Sign up and we'll let you know
-      </h3>
-      <form class="ui form" method="post" action="//semantic-ui.us9.list-manage.com/subscribe/post?u=1bb099283b001a74133a94364&amp;id=1b77a619a7">
-        <div class="field">
-          <div class="ui huge input">
-            <input type="text" name="EMAIL" data-validate="email" placeholder="E-mail">
-          </div>
-          <button type="submit" class="ui huge secondary submit button">
-            Sign-up
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
 <div class="feature alternate ui stripe vertical segment">
   <div class="ui three column equal height center aligned divided relaxed stackable page grid">
     <div class="column">
       <h2 class="ui icon header">
         <img class="ui icon image" src="/images/icons/paint.png">
-        3000+ CSS Variables
+        3000+ Theming Variables
       </h2>
       <p>The only dogma from this framework: <em>everything arbitrary is mutable</em>.</p>
       <a class="ui large button" href="http://learnsemantic.com/developing/customizing.html">Integration Guide</a>
@@ -174,7 +264,7 @@ standalone : true
     <div class="column">
       <h2 class="ui icon header">
         <img class="ui icon image" src="/images/icons/book.png">
-        50+ UI Definitions
+        50+ UI Components
       </h2>
       <p>Build your entire site with one UI stack. Share your UI between multiple projects.</p>
       <div class="ui primary view-ui large button">Browse UI</div>
@@ -182,7 +272,7 @@ standalone : true
     <div class="column">
       <h2 class="ui icon header">
         <img class="ui icon image" src="/images/icons/lab.png">
-        2800+ Commits
+        3,800+ Commits
       </h2>
       <p>
         Semantic UI is a <b>free open source</b> project already used in multiple <a href="http://www.quirky.com" target="_blank">large</a> scale <a href="http://www.newrepublic.com" target="_blank">production</a> environments.
@@ -200,7 +290,7 @@ standalone : true
       </h1>
       <p>Definitions aren't limited to just buttons on a page. Semantic's components allow several distinct types of definitions: elements, collections, views, modules and behaviors which cover the gamut of interface design.</p>
       <a class="ui large primary button" href="/kitchen-sink.html">
-        View Kitchen Sink
+        See More Examples
         <i class="right chevron icon"></i>
       </a>
     </div>
@@ -859,29 +949,6 @@ standalone : true
         Partners with Libraries You Love
       </h2>
       <p>Semantic has integrations with <b>Angular, Meteor, Ember</b> and many other frameworks to help organize your UI layer alongside your application logic.</p>
-    </div>
-  </div>
-</div>
-<div class="ui inverted stripe codebase vertical segment">
-  <div class="ui stackable center aligned page grid">
-    <div class="fourteen wide column">
-      <h1 class="ui inverted icon header">
-        <img src="/images/icons/pen.png" class="icon image">
-        Simplify Your Codebase
-      </h1>
-      <p>Semantic's conventions are based around <a href="https://www.princeton.edu/~achaney/tmve/wiki100k/docs/Descriptive_linguistics.html" target="_blank"><b>common usage</b></a> and not prescription. Syntax borrows useful principles from natural language like plurality, tense, and word order so your code explains itself.</p>
-      <div class="hidden code" data-type="html">
-        <div class="ui stackable center aligned page grid">
-          <div class="fourteen wide column">
-            <h1 class="ui inverted icon header">
-              <img src="/images/icons/pen.png" class="icon image">
-              Simplify Your Codebase
-            </h1>
-            <p>Semantic's conventions are based around <a target="_blank"><b>common usage</b></a> and not prescription. Syntax borrows useful principles from natural language like plurality, tense, and word order so your code explains itself.</p>
-            <!-- Recursion Omitted (Turtles all the way down) !-->
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </div>

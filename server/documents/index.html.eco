@@ -91,14 +91,14 @@ standalone : true
   </div>
   <div class="stackable very relaxed ui page grid">
     <div class="row">
-      <div class="six wide right aligned column">
+      <div class="seven wide column">
         <h2 class="ui header">Concise HTML</h2>
         <p>Semantic UI treats words and classes as exchangeable concepts.</p>
         <p>Classes use syntax from natural languages like noun/modifier relationships, word order, and plurality to link concepts intuitively.</p>
         <p>Get the same benefits as <a href="https://en.bem.info" target="_blank">BEM</a> or <a href="https://smacss.com" target="_blank">SMACSS</a>, but without the tedium.</p>
         </p>
       </div>
-      <div class="ten wide column">
+      <div class="nine wide column">
         <div class="hidden code" data-type="html">
           <div class="ui three buttons">
             <button class="ui active button">One</button>
@@ -115,12 +115,12 @@ standalone : true
     </div>
     <div class="ui divider"></div>
     <div class="row">
-      <div class="six wide right aligned column">
+      <div class="seven wide column">
         <h2 class="ui header">Intuitive Javascript</h2>
         <p>Semantic uses simple phrases called behaviors that trigger functionality.</p>
         <p>Any arbitrary decision in a component is included as a setting that developers can modify.</p>
       </div>
-      <div class="ten wide column">
+      <div class="nine wide column">
         <div class="hidden code" data-demo="true" data-type="javascript">
           $('.gender.dropdown')
             .dropdown('setting', 'transition', 'vertical flip')
@@ -142,13 +142,13 @@ standalone : true
     </div>
     <div class="ui divider"></div>
     <div class="row">
-      <div class="six wide right aligned column">
+      <div class="seven wide column">
         <h2 class="ui header">Simplified Debugging</h2>
         <p>Performance logging lets you track down bottlenecks without digging through stack traces.</p>
         <div class="ui info message">Don't have access to development tools right now? Check out <a href="http://t.co/GOUQx8iCyG">this short clip</a>.</a>
         </div>
       </div>
-      <div class="ten wide column">
+      <div class="nine wide column">
         <div class="hidden code" data-demo="true" data-type="javascript">
         $('.sequenced.images .image')
           .transition({
@@ -160,9 +160,8 @@ standalone : true
         ;
         </div>
         <div class="ui small sequenced images">
-          <img src="/images/avatar/large/stevie.jpg" class="ui circular image">
           <img src="/images/avatar/large/daniel.jpg" class="ui circular image">
-          <img src="/images/avatar/large/joe.jpg" class="ui circular image">
+          <img src="/images/avatar/large/stevie.jpg" class="ui circular image">
           <img src="/images/avatar/large/veronika.jpg" class="ui circular image">
         </div>
       </div>

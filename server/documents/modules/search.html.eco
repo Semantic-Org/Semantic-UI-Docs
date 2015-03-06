@@ -435,13 +435,6 @@ type        : 'UI Module'
           <td>Duration of animation events</td>
         </tr>
         <tr>
-          <td>easing</td>
-          <td>
-            easeOutExpo
-          </td>
-          <td>Easing equation when using fallback javascript animation</td>
-        </tr>
-        <tr>
           <td>maxResults</td>
           <td>7</td>
           <td>Maximum results to display when using local and simple search, maximum category count for category search</td>
@@ -481,7 +474,14 @@ type        : 'UI Module'
         <tr>
           <td>searchDelay</td>
           <td>300</td>
-          <td>Delay before showing results on inputchange</td>
+          <td>Delay before querying results on inputchange</td>
+        </tr>
+        <tr>
+          <td>easing</td>
+          <td>
+            easeOutExpo
+          </td>
+          <td>Easing equation when using fallback javascript animation</td>
         </tr>
       </tbody>
     </table>

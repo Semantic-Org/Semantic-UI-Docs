@@ -9,54 +9,45 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script type="text/javascript">
 $(document).ready(function() {
-
-  $.extend($.fn.api.settings.api, {
-    categorySearch: '//api.semantic-ui.com/search/category/{query}',
-    search: '//api.semantic-ui.com/search/{query}'
-  });
-   $('#search').search({
-    minCharacters: 0,
-    onSelect: function(result, response) {
-        alert(result ? result.title : 'null');
-    }
-});
-
-$('#search2').search({
-    source: [
-        { title: 'Andorra' },
-        { title: 'United Arab Emirates' },
-        { title: 'Afghanistan' }
-    ],
-    onSelect: function(result, response) {
-        alert(result ? result.title : 'null');
-    },
-    minCharacters: 0
-});
 });
 </script>
 
 <!-- TEST CSS HERE !-->
 <style type="text/css">
+.my-content {
+    position: relative;
+    background-color: #fff;
+    margin-bottom: 0.5rem;
+}
 </style>
 
 <div style="max-width: 1000px;margin:2em auto;">
-<div id="search" class="ui search">
-    Name:
-    <div class="ui icon input">
-        <input class="prompt" placeholder="Name" type="text" id="name" />
-        <i class="circular search icon"></i>
+<div class="ui grid">
+    <div class="two column equal height row">
+        <div class="column">
+            <div class="ui segment">
+                sample content 1
+            </div>
+            <div class="ui segment">
+                sample content 2
+                sample content 2
+                sample content 2
+                sample content 2
+                sample content 2
+                sample content 2
+                sample content 2
+                sample content 2
+                sample content 2
+                sample content 2
+                sample content 2
+                sample content 2
+            </div>
+        </div>
+        <div class="column">
+            <div class="ui segment">
+                sample content 3
+            </div>
+        </div>
     </div>
-
-    <div class="results"></div>
-</div>
-
-<div id="search2" class="ui search">
-    Name:
-    <div class="ui icon input">
-        <input class="prompt" placeholder="Name" type="text" id="name" />
-        <i class="circular search icon"></i>
-    </div>
-
-    <div class="results"></div>
 </div>
 </div>

@@ -14,7 +14,7 @@ semantic.search.ready = function() {
   ;
 
   content = [
-    { title: 'And + orra' },
+    { title: 'Andorra' },
     { title: 'United Arab Emirates' },
     { title: 'Afghanistan' },
     { title: 'Antigua' },

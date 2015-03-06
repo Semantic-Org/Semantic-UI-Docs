@@ -929,50 +929,71 @@ themes      : ['Default', 'Fixed-width']
       <div class="ui equal width grid">
         <div class="row">
           <div class="column">
-            <img class="ui wireframe image" src="/images/wireframe/image.png">
+            <div class="ui segment">
+              1
+            </div>
           </div>
           <div class="column">
-            <img class="ui wireframe image" src="/images/wireframe/image.png">
+            <div class="ui segment">
+              2
+            </div>
           </div>
           <div class="column">
-            <img class="ui wireframe image" src="/images/wireframe/image.png">
+            <div class="ui segment">
+              3
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="another example">
+      <div class="ui equal width grid">
+        <div class="row">
+          <div class="column">
+            <div class="ui segment">1</div>
           </div>
           <div class="column">
-            <img class="ui wireframe image" src="/images/wireframe/image.png">
+            <div class="ui segment">2</div>
           </div>
           <div class="column">
-            <img class="ui wireframe image" src="/images/wireframe/image.png">
+            <div class="ui segment">3</div>
           </div>
           <div class="column">
-            <img class="ui wireframe image" src="/images/wireframe/image.png">
+            <div class="ui segment">4</div>
           </div>
           <div class="column">
-            <img class="ui wireframe image" src="/images/wireframe/image.png">
+            <div class="ui segment">5</div>
           </div>
           <div class="column">
-            <img class="ui wireframe image" src="/images/wireframe/image.png">
+            <div class="ui segment">6</div>
+          </div>
+          <div class="column">
+            <div class="ui segment">7</div>
+          </div>
+          <div class="column">
+            <div class="ui segment">8</div>
           </div>
         </div>
         <div class="row">
           <div class="column">
-            <img class="ui wireframe image" src="/images/wireframe/image.png">
+            <div class="ui segment">1</div>
           </div>
           <div class="column">
-            <img class="ui wireframe image" src="/images/wireframe/image.png">
+            <div class="ui segment">2</div>
           </div>
           <div class="column">
-            <img class="ui wireframe image" src="/images/wireframe/image.png">
+            <div class="ui segment">3</div>
           </div>
           <div class="column">
-            <img class="ui wireframe image" src="/images/wireframe/image.png">
+            <div class="ui segment">4</div>
           </div>
         </div>
         <div class="row">
           <div class="column">
-            <img class="ui wireframe image" src="/images/wireframe/image.png">
+            <div class="ui segment">1</div>
           </div>
           <div class="column">
-            <img class="ui wireframe image" src="/images/wireframe/image.png">
+            <div class="ui segment">2</div>
           </div>
         </div>
       </div>
@@ -985,17 +1006,6 @@ themes      : ['Default', 'Fixed-width']
             <img class="ui wireframe image" src="/images/wireframe/image.png">
           </div>
           <div class="four wide column">
-            <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-          </div>
-          <div class="column">
-            <img class="ui wireframe image" src="/images/wireframe/image.png">
-          </div>
-        </div>
-        <div class="row">
-          <div class="column">
-            <img class="ui wireframe image" src="/images/wireframe/image.png">
-          </div>
-          <div class="six wide column">
             <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
           </div>
           <div class="column">
@@ -1019,21 +1029,62 @@ themes      : ['Default', 'Fixed-width']
     <div class="example">
       <h4 class="ui header">Equal Height</h4>
       <p>A row can specify that it is equal height so all of its columns appear the length of its longest column.</p>
-      <div class="ui three column grid">
-        <div class="equal height divided row">
-          <div class="column">
-            <p>This is a short row</p>
+      <div class="ui three column equal height grid">
+        <div class="column">
+          <div class="ui segment">
+            1
           </div>
-          <div class="column">
-            <p>This is a short row</p>
+        </div>
+        <div class="column">
+          <div class="ui segment">
+            1
           </div>
-          <div class="column">
-            <p>This is a very long row with lots of text in it and way more text than the other rows</p>
-            <p>It might even span for multiple paragraphs.</p>
+          <div class="ui segment">
+            2
+          </div>
+        </div>
+        <div class="column">
+          <div class="ui segment">
+            1
+          </div>
+          <div class="ui segment">
+            2
+          </div>
+          <div class="ui segment">
+            3
           </div>
         </div>
       </div>
     </div>
+
+    <div class="another example">
+      <div class="ui equal width very relaxed divided grid">
+        <div class="equal height row">
+          <div class="column">
+            <div class="ui segment">
+              1
+            </div>
+            <div class="ui segment">
+              2
+            </div>
+          </div>
+          <div class="six wide column">
+            <div class="ui segment">
+              <img class="ui image" src="/images/wireframe/image.png">
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui segment">
+              1
+            </div>
+            <div class="ui segment">
+              2
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
 
     <div class="example">
@@ -1044,29 +1095,19 @@ themes      : ['Default', 'Fixed-width']
       </div>
       <div class="five column doubling ui grid">
         <div class="column">
-          <div class="ui segment">
-            <img class="ui wireframe image" src="/images/wireframe/image.png">
-          </div>
+          <img class="ui wireframe image" src="/images/wireframe/image.png">
         </div>
         <div class="column">
-          <div class="ui segment">
-            <img class="ui wireframe image" src="/images/wireframe/image.png">
-          </div>
+          <img class="ui wireframe image" src="/images/wireframe/image.png">
         </div>
         <div class="column">
-          <div class="ui segment">
-            <img class="ui wireframe image" src="/images/wireframe/image.png">
-          </div>
+          <img class="ui wireframe image" src="/images/wireframe/image.png">
         </div>
         <div class="column">
-          <div class="ui segment">
-            <img class="ui wireframe image" src="/images/wireframe/image.png">
-          </div>
+          <img class="ui wireframe image" src="/images/wireframe/image.png">
         </div>
         <div class="column">
-          <div class="ui segment">
-            <img class="ui wireframe image" src="/images/wireframe/image.png">
-          </div>
+          <img class="ui wireframe image" src="/images/wireframe/image.png">
         </div>
       </div>
     </div>

@@ -480,6 +480,9 @@
 #example.index .feature.stripe .grid .row {
   margin: 0rem;
 }
+#example.index .feature.stripe .column {
+  display: flex;
+}
 #example.index .feature.stripe p {
   -webkit-flex: 1 0 auto;
   -moz-flex: 1 0 auto;

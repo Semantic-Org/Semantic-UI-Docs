@@ -1029,37 +1029,41 @@ themes      : ['Default', 'Fixed-width']
     <div class="example">
       <h4 class="ui header">Equal Height</h4>
       <p>A row can specify that it is equal height so all of its columns appear the length of its longest column.</p>
-      <div class="ui three column equal height grid">
-        <div class="column">
-          <div class="ui segment">
-            1
+      <div class="ui three column middle aligned divided equal height grid">
+        <div class="row">
+          <div class="column">
+            <div class="ui segment">
+              1
+            </div>
           </div>
-        </div>
-        <div class="column">
-          <div class="ui segment">
-            1
+          <div class="column">
+            <div class="ui segment">
+              1
+            </div>
+            <div class="ui segment">
+              2
+            </div>
           </div>
-          <div class="ui segment">
-            2
-          </div>
-        </div>
-        <div class="column">
-          <div class="ui segment">
-            1
-          </div>
-          <div class="ui segment">
-            2
-          </div>
-          <div class="ui segment">
-            3
+          <div class="column">
+            <div class="ui segment">
+              1
+            </div>
+            <div class="ui segment">
+              2
+            </div>
+            <div class="ui segment">
+              3
+            </div>
           </div>
         </div>
       </div>
     </div>
-
     <div class="another example">
-      <div class="ui equal width very relaxed divided grid">
-        <div class="equal height row">
+      <div class="ui ignored info message">
+        To make equal height column content grow to take the whole column height, use the <code>stretched</code> variation. Keep in mind flex items do not have <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin_collapsing">margin collapse</a> so they may display differently.
+      </div>
+      <div class="ui equal width grid">
+        <div class="equal height stretched row">
           <div class="column">
             <div class="ui segment">
               1

@@ -938,19 +938,21 @@ standalone : true
 </div>
 <div class="ui stripe community vertical segment">
   <div class="ui two column equal height center aligned divided very relaxed stackable page grid">
-    <div class="column">
-      <h2 class="ui icon header">
-        <img class="ui icon image" src="/images/icons/mobile.png">
-        Responsively Designed
-      </h2>
-      <p>Semantic is <b>designed completely with em</b> making reponsive sizing a breeze. Design <em>variations</em> built into elements allow you to make the choice how content adjusts for tablet and mobile.</p>
-    </div>
-    <div class="column">
-      <h2 class="ui icon header">
-        <img class="ui icon image" src="/images/icons/heart.png">
-        Partners with Libraries You Love
-      </h2>
-      <p>Semantic has integrations with <b>Angular, Meteor, Ember</b> and many other frameworks to help organize your UI layer alongside your application logic.</p>
+    <div class="row">
+      <div class="column">
+        <h2 class="ui icon header">
+          <img class="ui icon image" src="/images/icons/mobile.png">
+          Responsively Designed
+        </h2>
+        <p>Semantic is <b>designed completely with em</b> making reponsive sizing a breeze. Design <em>variations</em> built into elements allow you to make the choice how content adjusts for tablet and mobile.</p>
+      </div>
+      <div class="column">
+        <h2 class="ui icon header">
+          <img class="ui icon image" src="/images/icons/heart.png">
+          Partners with Libraries You Love
+        </h2>
+        <p>Semantic has integrations with <b>Angular, Meteor, Ember</b> and many other frameworks to help organize your UI layer alongside your application logic.</p>
+      </div>
     </div>
   </div>
 </div>

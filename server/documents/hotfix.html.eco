@@ -9,45 +9,26 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script type="text/javascript">
 $(document).ready(function() {
+  $('.ui.modal').modal('show');
 });
 </script>
 
 <!-- TEST CSS HERE !-->
 <style type="text/css">
-.my-content {
-    position: relative;
-    background-color: #fff;
-    margin-bottom: 0.5rem;
-}
 </style>
 
 <div style="max-width: 1000px;margin:2em auto;">
-<div class="ui grid">
-    <div class="two column equal height row">
-        <div class="column">
-            <div class="ui segment">
-                sample content 1
-            </div>
-            <div class="ui segment">
-                sample content 2
-                sample content 2
-                sample content 2
-                sample content 2
-                sample content 2
-                sample content 2
-                sample content 2
-                sample content 2
-                sample content 2
-                sample content 2
-                sample content 2
-                sample content 2
-            </div>
-        </div>
-        <div class="column">
-            <div class="ui segment">
-                sample content 3
-            </div>
-        </div>
+
+
+<div class="ui modal">
+  <div class="content">
+    <div class="ui animated button">
+      <div class="visible content">Next</div>
+      <div class="hidden content">
+        <i class="right arrow icon"></i>
+      </div>
     </div>
+  </div>
 </div>
+
 </div>

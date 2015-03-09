@@ -1029,7 +1029,7 @@ themes      : ['Default', 'Fixed-width']
     <div class="example">
       <h4 class="ui header">Equal Height</h4>
       <p>A row can specify that it is equal height so all of its columns appear the length of its longest column.</p>
-      <div class="ui three column middle aligned divided equal height grid">
+      <div class="ui three column divided equal height grid">
         <div class="row">
           <div class="column">
             <div class="ui segment">

@@ -42,7 +42,7 @@ code {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
   display: inline-block;
   font-family: "Monaco","Menlo","Ubuntu Mono","Consolas","source-code-pro",monospace;
-  font-size: 12px;
+  font-size: 0.85714em;
   font-weight: bold;
   margin: 0 2px 0px 0px;
   padding: 2px 4px;
@@ -155,7 +155,7 @@ a:hover {
 
 
 /* segment headers */
-#example .header.segment {
+#example .top.segment {
   position: relative;
   z-index: 2;
   margin: 0em;
@@ -166,41 +166,42 @@ a:hover {
   border-bottom: 1px solid #DDDDDD;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
-#example .header.segment h1 {
+#example .top.segment h1 {
   margin-bottom: 0em;
 }
-#example .tab.header.segment {
+#example .tab.top.segment {
+  display: block;
   padding-bottom: 0em;
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1) inset;
 }
-#example .tab.header.segment .vertical.menu {
+#example .tab.top.segment .vertical.menu {
   display: none;
   margin: 2rem 0em 1rem;
 }
-#example .tab.header.segment .tabular.menu {
+#example .tab.top.segment .tabular.menu {
   clear: both;
   margin: 2rem 0px 0em;
   border-bottom: none;
 }
-#example .tab.header.segment .tabular.menu .active.item {
+#example .tab.top.segment .tabular.menu .active.item {
   background-color: #FFFFFF;
   border-bottom-color: #FFFFFF;
 }
 
-#example .header.segment .download.popup .choice.grid .column {
+#example .top.segment .download.popup .choice.grid .column {
   width: 200px;
 }
-#example .header.segment .download.popup .framework.grid .column,
-#example .header.segment .download.popup .standalone.grid .column {
+#example .top.segment .download.popup .framework.grid .column,
+#example .top.segment .download.popup .standalone.grid .column {
   width: 350px;
 }
-#example .header.segment .download.popup .check.icon {
+#example .top.segment .download.popup .check.icon {
   margin-left: -1em;
 }
-#example .header.segment .download.popup .framework.grid,
-#example .header.segment .download.popup .standalone.grid,
-#example .header.segment .download.popup .integration.grid,
-#example .header.segment .download.popup .link.grid {
+#example .top.segment .download.popup .framework.grid,
+#example .top.segment .download.popup .standalone.grid,
+#example .top.segment .download.popup .integration.grid,
+#example .top.segment .download.popup .link.grid {
   display: none;
 }
 
@@ -208,7 +209,7 @@ a:hover {
 #example.legacy .launch.button {
   left: auto !important;
 }
-#example.scale.down.pushed .header.segment {
+#example.scale.down.pushed .top.segment {
   padding-top: 30px;
 }
 
@@ -351,7 +352,7 @@ a:hover {
   width: 300px;
 }
 
-#example .tab.header.segment .fixed .tabular.menu {
+#example .tab.top.segment .fixed .tabular.menu {
   position: fixed;
   top: 50px;
 }
@@ -487,11 +488,6 @@ body#example {
    Basic Display
 -----------------*/
 
-#example.basic .container {
-  width: 650px !important;
-  max-width: 100%;
-}
-
 #example.basic .main.container {
   background: transparent !important;
   border: none !important;
@@ -505,7 +501,7 @@ body#example {
   background-color: #F9F9F9;
   box-shadow: 0 -1px 0 1px #F9F9F9;
 }
-#example.basic .tab.header.segment .tabular.menu .active.item {
+#example.basic .tab.top.segment .tabular.menu .active.item {
   background-color: #F9F9F9;
   border-bottom-color: #F9F9F9;
   box-shadow: none;
@@ -514,9 +510,6 @@ body#example {
 #example.basic .main.container > .rail,
 #example.basic .main.container > .tab > .rail {
   display: none !important;
-}
-#example.basic .container {
-  right: 0px !important;
 }
 #example.basic .main.container .introduction {
   font-size: 16px;
@@ -1575,9 +1568,16 @@ body.progress.animated .ui.progress .bar {
   clear: both;
 }
 
+#example .fixed.menu > .container,
+#example .main.container,
+#example .top > .container,
+#example .footer > .container {
+  position: relative;
+  width: 800px;
+}
+
 #example .main.container {
   background-color: #FFFFFF;
-  margin: 0em auto;
   box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.05);
   border-left: 1px solid #DDDDDD;
   border-right: 1px solid #DDDDDD;
@@ -1588,7 +1588,6 @@ body.progress.animated .ui.progress .bar {
 #example .wide.main.container {
   width: 80%;
   margin: 0 auto;
-  right: 0;
   max-width: 1140px;
 }
 
@@ -1598,11 +1597,6 @@ body.progress.animated .ui.progress .bar {
   margin: 2em 0em;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-}
-#example .container {
-  position: relative;
-  width: 915px;
-  margin: 0px auto;
 }
 
 #example .following.menu .menu .active.item {
@@ -1628,19 +1622,7 @@ body.progress.animated .ui.progress .bar {
   #example > .pusher > .footer {
     padding: 1em 0em;
   }
-  #example .container {
-    width: auto;
-    margin: 0em 1rem;
-  }
-  #example .footer .container {
-    margin: 0em;
-  }
-  #example .main.container {
-    padding: 2em 1em;
-    border: none;
-    box-shadow: none;
-  }
-  #example .header.segment {
+  #example .top.segment {
     padding-top: 60px;
     padding-bottom: 20px;
   }
@@ -1653,15 +1635,8 @@ body.progress.animated .ui.progress .bar {
 }
 
 @media only screen and (min-width : 600px) and (max-width : 998px) {
-  #example .container {
-    width: auto;
-    margin: 0em 2rem;
-  }
   #example .header .button {
     margin-bottom: 0.5em;
-  }
-  #example .main.container {
-    padding: 1em 2em;
   }
 }
 
@@ -1684,9 +1659,6 @@ body.progress.animated .ui.progress .bar {
   #example .following.menu {
     display: block;
   }
-  #example .container {
-    right: 110px;
-  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -1702,19 +1674,10 @@ body.progress.animated .ui.progress .bar {
   }
 }
 @media only screen and (min-width : 998px) and (max-width: 1200px) {
-  #example .header.segment .container {
-    width: 878px;
-    right: -24px;
-  }
-  #example .tab.header.segment .tabular.menu {
+  #example .tab.top.segment .tabular.menu {
     width: 680px;
   }
-  #example .container {
-    width: 680px;
-    right: 75px;
-    margin: 0em auto;
-  }
-  #example .container .right.rail {
+  #example .full.height > .container .right.rail {
     width: 200px;
     padding-left: 0em;
   }
@@ -1723,23 +1686,6 @@ body.progress.animated .ui.progress .bar {
     width: 200px;
   }
 }
-@media only screen and (min-width : 1200px) and (max-width: 1355px) {
-  #example .container {
-    width: 765px;
-    right: 128px;
-    margin: 0em auto;
-  }
-}
-@media only screen and (min-width : 1355px) {
-  #example .container {
-    width: 850px;
-  }
-  #example.item .container,
-  #example.card .container {
-    width: 965px;
-  }
-}
-
 
 
 /*******************************
@@ -1750,11 +1696,6 @@ body.progress.animated .ui.progress .bar {
   #example .fixed .section,
   #example .fixed .title b {
     display: none;
-  }
-  #example .fixed .container {
-    width: auto;
-    margin: 0px auto;
-    max-width: 9999px;
   }
   #example .fixed.launch.button {
     display: none;
@@ -1804,11 +1745,11 @@ body.progress.animated .ui.progress .bar {
   #example .fixed .next {
     display: none;
   }
-  #example .tab.header.segment .tabular.menu {
+  #example .tab.top.segment .tabular.menu {
     display: none;
   }
 
-  #example .tab.header.segment .vertical.menu {
+  #example .tab.top.segment .vertical.menu {
     display: block;
   }
 }
@@ -1856,7 +1797,7 @@ body.progress.animated .ui.progress .bar {
 }
 
 @media only screen and (max-width : 640px) {
-  #example .header.segment .download.button {
+  #example .top.segment .download.button {
     display: none;
   }
   #example .language.dropdown .menu {

@@ -16,7 +16,7 @@ themes      : ['Default']
 <script src="/javascript/popup.js"></script>
 
 <%- @partial('header', { tabs: 'module' }) %>
-<div class="main container">
+<div class="main ui container">
 
   <div class="ui active tab" data-tab="definition">
 

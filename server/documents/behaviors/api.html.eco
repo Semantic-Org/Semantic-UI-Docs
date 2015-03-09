@@ -14,7 +14,7 @@ type        : 'UI Behavior'
 
 <%- @partial('header',  { tabs: { overview: 'Overview', usage: 'Usage',  behaviors: 'Behaviors',  settings: 'Settings' } }) %>
 
-<div class="main container">
+<div class="main ui container">
   <div class="ui active tab" data-tab="overview">
     <div class="ui two column very relaxed stackable grid">
       <div class="row">

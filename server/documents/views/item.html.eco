@@ -18,7 +18,7 @@ themes      : ['Default']
 <link rel="stylesheet/less" type="text/css" href="/src/definitions/views/item.less" />
 <script src="/javascript/item.js"></script>
 
-<div class="main container">
+<div class="main ui container">
 
   <h2 class="ui dividing header">Types</h2>
 

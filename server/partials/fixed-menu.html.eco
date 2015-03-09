@@ -4,7 +4,7 @@
 <% pageCollection    = @getPageCollection(currentCollection, @document.id) %>
 
 <div class="ui fixed inverted main menu">
-  <div class="container">
+  <div class="ui container">
     <a class="launch item">
       <i class="content icon"></i>
       Menu
@@ -47,7 +47,7 @@
       <a class="popup icon github item" data-content="View project on GitHub" href="https://github.com/Semantic-Org/Semantic-UI">
         <i class="alternate github icon"></i>
       </a>
-      <div class="ui language dropdown item" id="languages" data-content="Select Language">
+      <div class="ui language dropdown icon item" id="languages" data-content="Select Language">
         <i class="world icon"></i>
         <%- @partial('languages') %>
       </div>

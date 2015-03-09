@@ -15,7 +15,7 @@ themes      : ['Default', 'Chubby']
 <%- @partial('header') %>
 <link rel="stylesheet/less" type="text/css" href="/src/definitions/views/comment.less" />
 
-<div class="main container">
+<div class="main ui container">
 
   <h2 class="ui dividing header">Types</h2>
 

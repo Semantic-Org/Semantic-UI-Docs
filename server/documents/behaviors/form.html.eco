@@ -18,7 +18,7 @@ type        : 'UI Behavior'
 
 <%- @partial('header', { tabs: { usage: 'Usage', examples: 'Examples', settings: 'Settings'} }) %>
 
-<div class="main container">
+<div class="main ui container">
 
   <div class="ui active tab" data-tab="usage">
 

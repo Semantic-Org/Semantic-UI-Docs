@@ -9,7 +9,7 @@ type        : 'Library'
 
 <%- @partial('header', { tabs: {  framework: 'Framework',  components: 'Components', integrations: 'Integrations' } }) %>
 
-<div class="main container">
+<div class="main ui container">
 
   <div class="ui active tab" data-tab="framework">
 

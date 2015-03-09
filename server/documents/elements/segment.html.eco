@@ -14,7 +14,7 @@ themes      : ['default', 'GitHub']
 <%- @partial('header') %>
 <link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/segment.less" />
 
-<div class="main container">
+<div class="main ui container">
 
   <h2 class="ui dividing header">Types</h2>
 

@@ -15,7 +15,7 @@ themes      : ['Default']
 <link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/list.less" />
 
 <%- @partial('header') %>
-<div class="main container">
+<div class="main ui container">
 
   <h2 class="ui dividing header">Types</h2>
   <div class="example">

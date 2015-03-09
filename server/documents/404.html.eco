@@ -5,6 +5,6 @@ type        : '404'
 ---
 <%- @partial('header') %>
 
-<div class="main container">
+<div class="main ui container">
 
 </div>

@@ -17,7 +17,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
 
 <%- @partial('header') %>
 
-<div class="main container">
+<div class="main ui container">
 
   <h2 class="ui dividing header">Types</h2>
 

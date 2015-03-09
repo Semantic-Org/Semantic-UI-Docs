@@ -19,7 +19,7 @@ themes      : ['Default']
 
 <%- @partial('header', { tabs: 'module' }) %>
 
-<div class="main container">
+<div class="main ui container">
 
   <div class="ui active tab" data-tab="definition">
     <h2 class="ui dividing header">Types</h2>

@@ -16,7 +16,7 @@
     <i class="download icon"></i> <b>Download</b>
   </a>
   <a class="item" href="/kitchen-sink.html">
-    <i class="food icon"></i> <b>Kitchen Sink</b>
+    <i class="cubes icon"></i> <b>All UI</b>
   </a>
   <div class="item">
     <div class="ui small <%= if @document.elementType is 'global' then 'active ' %> inverted header">Globals</div>

@@ -100,7 +100,7 @@ type        : 'UI Behavior'
       <p>By default images will appear without animation, however you can also specify a named <a href="/modules/transition.html">transition</a>, and a duration that should be used for animating the image into view</p>
 
       <div class="evaluated code" data-type="javascript">
-        $('.demo.items img')
+        $('.demo.items .image img')
           .visibility({
             type       : 'image',
             transition : 'fade in',
@@ -317,7 +317,7 @@ type        : 'UI Behavior'
     </div>
   </div>
 
-  <div class="ui overview tab" data-tab="usage">
+  <div class="ui tab" data-tab="usage">
 
     <h2 class="ui header">Usage</h2>
 

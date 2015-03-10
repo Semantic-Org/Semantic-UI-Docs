@@ -188,12 +188,17 @@ a:hover {
   border-bottom-color: #FFFFFF;
 }
 
+<<<<<<< HEAD
 #example .top.segment .download.popup .choice.grid .column {
   width: 200px;
 }
 #example .top.segment .download.popup .framework.grid .column,
 #example .top.segment .download.popup .standalone.grid .column {
   width: 350px;
+=======
+#example .header.segment .download.popup {
+  width: 400px;
+>>>>>>> 1b47fb3bd1365a03ecf713c122268e88cb58d312
 }
 #example .top.segment .download.popup .check.icon {
   margin-left: -1em;

@@ -10,7 +10,7 @@ title       : 'Grid'
 description : 'A grid is used to harmonize negative space in a layout'
 type        : 'UI Collection'
 
-themes      : ['Default', 'Fixed-width']
+themes      : ['Default']
 ---
 <link rel="stylesheet/less" type="text/css" href="/src/definitions/collections/grid.less" />
 <script src="/javascript/grid.js"></script>

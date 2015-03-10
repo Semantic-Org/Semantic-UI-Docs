@@ -5,7 +5,7 @@ semantic.visiblity.ready = function() {
 
   // selector cache
   var
-    $pageTabs           = $('.tab.header.segment .menu .item'),
+    $pageTabs           = $('.top.tab.segment .menu .item'),
     $firstColumn        = $('.first.example .main.column'),
     $firstSegment       = $('.first.example .demo.segment'),
     $firstSticky        = $('.first.example .grid .sticky'),
@@ -171,12 +171,6 @@ window.loadFakeContent = function() {
   }
   count++;
 }
-
-$(window).load(function() {
-  $('.visibility.example .overlay, .visibility.example .demo.segment, .visibility.example .items img')
-    .visibility('refresh')
-  ;
-});
 
 // attach ready event
 $(document)

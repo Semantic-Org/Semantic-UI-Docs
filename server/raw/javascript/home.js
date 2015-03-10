@@ -228,29 +228,32 @@ semantic.home.ready = function() {
   if($(window).width() > 600) {
     $('body')
       .visibility({
-        offset: -1,
+        debug: true,
+        offset: -10,
         once: false,
         continuous: false,
         onTopPassed: function() {
-          $('.following.bar')
-            .addClass('light fixed')
-            .find('.menu')
-              .removeClass('inverted')
-          ;
           requestAnimationFrame(function() {
+            $('.following.bar')
+              .addClass('light fixed')
+              .find('.menu')
+                .removeClass('inverted')
+            ;
             $('.following .additional.item')
               .transition('scale in', 750)
             ;
           });
         },
         onTopPassedReverse: function() {
-          $('.following.bar')
-            .removeClass('light fixed')
-            .find('.menu')
-              .addClass('inverted')
-              .find('.additional.item')
-                .transition('hide')
-          ;
+          requestAnimationFrame(function() {
+            $('.following.bar')
+              .removeClass('light fixed')
+              .find('.menu')
+                .addClass('inverted')
+                .find('.additional.item')
+                  .transition('hide')
+            ;
+          });
         }
       })
     ;

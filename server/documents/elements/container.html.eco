@@ -31,7 +31,7 @@ themes      : ['Default']
 
       <p>Unlike a page grid, which continues to grow as a percentage of total screen width, containers maintain a single size, making responsive styling simpler.</p>
 
-      <p>Containers are designed to be compatible with standard grids. The default theme uses a maximum container width of <code>1200px</code> which gives a <code>16 column ui grid</code> exactly <code>75px</code> per column inside a container element.</p>
+      <p>Containers are designed to be compatible with grids The default theme uses a maximum container width of <code>1200px</code> which gives a <code>16 column ui grid</code> exactly <code>75px</code> per column inside a container element.</p>
 
       <h3 class="ui header">Comparison of Features</h3>
 
@@ -113,6 +113,43 @@ themes      : ['Default']
         </tbody>
       </table>
 
+      <h3 class="ui header">Default Theme Sizes</h3>
+
+      <table class="ui celled padded definition table">
+        <thead>
+          <th></th>
+          <th class="six wide">Container</th>
+          <th class="six wide">Page Grid</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Mobile</td>
+            <td><code>100%</code> width, <code>1em</code> fixed gutter</td>
+            <td><code>100%</code> width, <code>1em</code> fixed gutter</td>
+          </tr>
+          <tr>
+            <td>Tablet</td>
+            <td><code>752px</code> Centered</td>
+            <td><code>100%</code> width, <code>2em</code> fixed gutter</td>
+          </tr>
+          <tr>
+            <td>Computer</td>
+            <td>
+              <code>1040px</code> centered below <code>1228px</code>
+              <div class="ui divider"></div>
+              <code>1200px</code> above <code>1228px</code>
+            </td>
+            <td>
+              8% gutters below <code>1400px</code>
+              <div class="ui divider"></div>
+              15% gutters below <code>1920px</code>
+              <div class="ui divider"></div>
+              23% gutters above <code>1920px</code>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
     </div>
   </div>
 </div>
@@ -147,7 +184,7 @@ themes      : ['Default']
     enim. Donec pede justo, fringilla vel, aliquet nec,
     vulputate eget, arcu. In enim justo, rhoncus ut,
     imperdiet a, venenatis vitae, justo. Nullam dictum
-    felis eu pede <a class="external ext" href="#">link</a>
+    felis eu pede <a href="#">link</a>
     mollis pretium. Integer tincidunt. Cras dapibus.
     Vivamus elementum semper nisi. Aenean vulputate
     eleifend tellus. Aenean leo ligula, porttitor eu,
@@ -162,7 +199,10 @@ themes      : ['Default']
 
     <div class="no example">
       <h4 class="ui header">Text Container</h4>
-      <p>A container can reduce its maximum width to more naturally accomodate text</p>
+      <p>A container can reduce its maximum width to more naturally accomodate a single column of text</p>
+      <div class="ui info message">
+        A text container is a simpler markup alternative to using a grid with a single column.
+      </div>
     </div>
 
     <div class="ui ignored code">
@@ -172,12 +212,47 @@ themes      : ['Default']
   </div>
 
   <div class="ui text container">
-    <img src="/images/wireframe/media-paragraph.png" class="ui fluid wireframe image">
-    <div class="ui hidden divider"></div>
-    <img src="/images/wireframe/paragraph.png" class="ui fluid wireframe image">
-    <div class="ui hidden divider"></div>
-    <img src="/images/wireframe/paragraph.png" class="ui fluid wireframe image">
+    <h2 class="ui header">Header</h2>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing
+    elit. Aenean commodo ligula eget dolor. Aenean massa
+    <strong>strong</strong>. Cum sociis natoque penatibus
+    et magnis dis parturient montes, nascetur ridiculus
+    mus. Donec quam felis, ultricies nec, pellentesque
+    eu, pretium quis, sem. Nulla consequat massa quis
+    enim. Donec pede justo, fringilla vel, aliquet nec,
+    vulputate eget, arcu. In enim justo, rhoncus ut,
+    imperdiet a, venenatis vitae, justo. Nullam dictum
+    felis eu pede <a href="#">link</a>
+    mollis pretium. Integer tincidunt. Cras dapibus.
+    Vivamus elementum semper nisi. Aenean vulputate
+    eleifend tellus. Aenean leo ligula, porttitor eu,
+    consequat vitae, eleifend ac, enim. Aliquam lorem ante,
+    dapibus in, viverra quis, feugiat a, tellus. Phasellus
+    viverra nulla ut metus varius laoreet. Quisque rutrum.
+    Aenean imperdiet. Etiam ultricies nisi vel augue.
+    Curabitur ullamcorper ultricies nisi.</p>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing
+    elit. Aenean commodo ligula eget dolor. Aenean massa
+    <strong>strong</strong>. Cum sociis natoque penatibus
+    et magnis dis parturient montes, nascetur ridiculus
+    mus. Donec quam felis, ultricies nec, pellentesque
+    eu, pretium quis, sem. Nulla consequat massa quis
+    enim. Donec pede justo, fringilla vel, aliquet nec,
+    vulputate eget, arcu. In enim justo, rhoncus ut,
+    imperdiet a, venenatis vitae, justo. Nullam dictum
+    felis eu pede <a href="#">link</a>
+    mollis pretium. Integer tincidunt. Cras dapibus.
+    Vivamus elementum semper nisi. Aenean vulputate
+    eleifend tellus. Aenean leo ligula, porttitor eu,
+    consequat vitae, eleifend ac, enim. Aliquam lorem ante,
+    dapibus in, viverra quis, feugiat a, tellus. Phasellus
+    viverra nulla ut metus varius laoreet. Quisque rutrum.
+    Aenean imperdiet. Etiam ultricies nisi vel augue.
+    Curabitur ullamcorper ultricies nisi.</p>
   </div>
+
+  <div class="main container"></div>
+
 </div>
 
 <div class="ui tab" data-tab="examples">
@@ -188,42 +263,60 @@ themes      : ['Default']
 
     <div class="no example">
       <h4 class="ui header">Containers with grids</h4>
-      <p>A container can use a nested grid to provide columns of content</p>
+      <p>A container can be combined with a grid allowing you to use all of the layout and alignment available for <a href="/collections/grid.html">grids</a> including responsive patterns.</p>
     </div>
 
     <div class="ui ignored code">
-      <div class="ui container">
-        <div class="ui two column grid">
-          <div class="column">
-            <p></p>
-            <p></p>
-          </div>
-          <div class="column">
-            <p></p>
-            <p></p>
-          </div>
+      <div class="ui four column doubling grid container">
+        <div class="column">
+          <p></p>
+          <p></p>
+        </div>
+        <div class="column">
+          <p></p>
+          <p></p>
+        </div>
+        <div class="column">
+          <p></p>
+          <p></p>
+        </div>
+        <div class="column">
+          <p></p>
+          <p></p>
         </div>
       </div>
     </div>
 
   </div>
 
-  <div class="ui container">
-    <div class="ui two column grid">
-      <div class="column">
-        <img src="/images/wireframe/media-paragraph.png" class="ui wireframe image">
-        <div class="ui hidden divider"></div>
-        <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
-        <div class="ui hidden divider"></div>
-        <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
-      </div>
-      <div class="column">
-        <img src="/images/wireframe/media-paragraph.png" class="ui wireframe image">
-        <div class="ui hidden divider"></div>
-        <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
-        <div class="ui hidden divider"></div>
-        <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
-      </div>
+  <div class="ui four column doubling stackable grid container">
+    <div class="column">
+      <img src="/images/wireframe/media-paragraph.png" class="ui wireframe image">
+      <div class="ui hidden divider"></div>
+      <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+      <div class="ui hidden divider"></div>
+      <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+    </div>
+    <div class="column">
+      <img src="/images/wireframe/media-paragraph.png" class="ui wireframe image">
+      <div class="ui hidden divider"></div>
+      <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+      <div class="ui hidden divider"></div>
+      <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+    </div>
+    <div class="column">
+      <img src="/images/wireframe/media-paragraph.png" class="ui wireframe image">
+      <div class="ui hidden divider"></div>
+      <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+      <div class="ui hidden divider"></div>
+      <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+    </div>
+    <div class="column">
+      <img src="/images/wireframe/media-paragraph.png" class="ui wireframe image">
+      <div class="ui hidden divider"></div>
+      <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+      <div class="ui hidden divider"></div>
+      <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
     </div>
   </div>
 
@@ -231,20 +324,23 @@ themes      : ['Default']
 
     <div class="no example">
       <h4 class="ui header">Container Segment</h4>
-      <p>A container can be used with a <a href="/elements/segment.html">segment</a> to provide a background and padding</p>
+      <p>A container can be used with a <a href="/elements/segment.html">segment</a></p>
     </div>
 
     <div class="ui ignored code">
-      <div class="ui container segment">
+      <div class="ui raised padded text container segment">
+        <h2 class="ui black dividing header">Dogs Roles with Humans</h2>
+        <p></p>
+        <p></p>
       </div>
     </div>
   </div>
 
-  <div class="ui container segment">
-    <img src="/images/wireframe/media-paragraph.png" class="ui wireframe image">
-    <div class="ui hidden divider"></div>
-    <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
-    <div class="ui hidden divider"></div>
-    <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+  <div class="ui raised text container padded segment">
+    <h2 class="ui black dividing header">Dogs Roles with Humans</h2>
+    <p>Domestic dogs inherited complex behaviors, such as bite inhibition, from their wolf ancestors, which would have been pack hunters with complex body language. These sophisticated forms of social cognition and communication may account for their trainability, playfulness, and ability to fit into human households and social situations, and these attributes have given dogs a relationship with humans that has enabled them to become one of the most successful species on the planet today.</p>
+    <p>The dogs' value to early human hunter-gatherers led to them quickly becoming ubiquitous across world cultures. Dogs perform many roles for people, such as hunting, herding, pulling loads, protection, assisting police and military, companionship, and, more recently, aiding handicapped individuals. This impact on human society has given them the nickname "man's best friend" in the Western world. In some cultures, however, dogs are also a source of meat.</p>
   </div>
+
+  <div class="main container"></div>
 </div>

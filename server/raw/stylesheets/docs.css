@@ -39,19 +39,22 @@ pre.console {
 }
 code {
   background-color: rgba(0, 0, 0, 0.02);
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
   display: inline-block;
   font-family: "Monaco","Menlo","Ubuntu Mono","Consolas","source-code-pro",monospace;
   font-size: 0.85714em;
   font-weight: bold;
   margin: 0 2px 0px 0px;
-  padding: 2px 4px;
+  padding: 2px 5px;
   vertical-align: baseline;
 }
 pre code {
   border: none;
   padding: 0px;
   font-size: 1em;
+}
+p code {
+  font-family: 'Lato', Arial, sans-serif;
 }
 /* Code block */
 .ui.message code {
@@ -188,17 +191,8 @@ a:hover {
   border-bottom-color: #FFFFFF;
 }
 
-<<<<<<< HEAD
-#example .top.segment .download.popup .choice.grid .column {
-  width: 200px;
-}
-#example .top.segment .download.popup .framework.grid .column,
-#example .top.segment .download.popup .standalone.grid .column {
-  width: 350px;
-=======
-#example .header.segment .download.popup {
+#example .top.segment .download.popup {
   width: 400px;
->>>>>>> 1b47fb3bd1365a03ecf713c122268e88cb58d312
 }
 #example .top.segment .download.popup .check.icon {
   margin-left: -1em;
@@ -497,29 +491,30 @@ body#example {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
-  padding: 2em 0em !important;
-}
-#example.basic > .pusher > .full.height {
-  background-color: #F9F9F9;
-}
-#example.basic .main.container .definition.table thead th:first-child {
-  background-color: #F9F9F9;
-  box-shadow: 0 -1px 0 1px #F9F9F9;
-}
-#example.basic .tab.top.segment .tabular.menu .active.item {
-  background-color: #F9F9F9;
-  border-bottom-color: #F9F9F9;
-  box-shadow: none;
+  padding: 4em 0em !important;
 }
 
+#example.basic .fixed.menu > .container,
+#example.basic .main.container,
+#example.basic .top > .container,
+#example.basic .footer > .container {
+  position: relative;
+  width: 700px;
+}
+
+#example.basic > .pusher > .full.height {
+  background-color: #FFFFFF !important;
+}
 #example.basic .main.container > .rail,
 #example.basic .main.container > .tab > .rail {
   display: none !important;
 }
-#example.basic .main.container .introduction {
-  font-size: 16px;
-}
-#example.basic .main.container .introduction p {
+#example.basic .main.container .introduction p,
+#example.basic .main.container .tab > p,
+#example.basic .main.container .example > p,
+#example.basic .main.container > p {
+  font-size: 18px;
+  line-height: 1.5;
   color: rgba(0, 0, 0, 0.8);
 }
 
@@ -960,7 +955,7 @@ body#example {
 }
 #example .negative.example > .button {
   position: relative;
-  z-index: 10;
+  z-index: 100;
 }
 #example .highlighted.special.example .page.grid > .column:first-child:after,
 #example .highlighted.special.example .page.grid > .column:last-child:after {

@@ -3,11 +3,11 @@ layout      : 'default'
 css         : 'accordion'
 element     : 'accordion'
 elementType : 'module'
+standalone  : true
 
 title       : 'Accordion'
 description : 'An accordion allows users to toggle the display of sections of content'
 type        : 'UI Module'
-standalone  : true
 
 themes      : ['Default', 'Chubby']
 ---
@@ -148,7 +148,7 @@ themes      : ['Default', 'Chubby']
     <h2 class="ui dividing header">Examples</h2>
 
     <div class="example">
-      <h4 class="ui header">Nested</h4>
+      <h4 class="ui header">Nested Accordions</h4>
       <p>An accordion can have multiple levels of nested content. This content can either be in a nested <code>accordion</code> or simply another level of <code>title</code> and <code>content</code></p>
       <div class="ui styled accordion">
         <div class="active title">
@@ -246,8 +246,46 @@ themes      : ['Default', 'Chubby']
       </div>
     </div>
 
+    <div class="trigger example">
+      <h4 class="ui header">Changing Trigger</h4>
+      <p>An accordion normally triggers when its title is clicked. However you can change the trigger selector to specify an element inside a title to use as an activator</p>
+      <div class="ui code" data-type="javascript" data-demo="true">
+        $('.trigger.example .accordion')
+          .accordion({
+            selector: {
+              trigger: '.title .icon'
+            }
+          })
+        ;
+      </div>
+      <div class="ui accordion">
+        <div class="active title">
+          <i class="dropdown icon"></i>
+          What is a dog?
+        </div>
+        <div class="active content">
+          <p>A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.</p>
+        </div>
+        <div class="title">
+          <i class="dropdown icon"></i>
+          What kinds of dogs are there?
+        </div>
+        <div class="content">
+          <p>There are many breeds of dogs. Each breed varies in size and temperament. Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.</p>
+        </div>
+        <div class="title">
+          <i class="dropdown icon"></i>
+          How do you acquire a dog?
+        </div>
+        <div class="content">
+          <p>Three common ways for a prospective owner to acquire a dog is from pet shops, private owners, or shelters.</p>
+          <p>A pet shop may be the most convenient way to buy a dog. Buying a dog from a private owner allows you to assess the pedigree and upbringing of your dog before choosing to take it home. Lastly, finding your dog from a shelter, helps give a good home to a dog who may not find one so readily.</p>
+        </div>
+      </div>
+    </div>
+
     <div class="example">
-      <h4 class="ui header">Form</h4>
+      <h4 class="ui header">Form Fields</h4>
       <p>An accordion can be used anywhere where content can be shown or hidden. For example, to show optional form fields.</p>
       <div class="ui segment">
         <div class="ui fluid form">
@@ -276,7 +314,7 @@ themes      : ['Default', 'Chubby']
       </div>
     </div>
     <div class="example">
-      <h4 class="ui header">Menu</h4>
+      <h4 class="ui header">Accordion Menu</h4>
       <p>An accordion can be used to create content drawers inside a menu</p>
       <div class="ui vertical accordion menu">
         <div class="item">

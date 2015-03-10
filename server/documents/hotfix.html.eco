@@ -9,29 +9,11 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script type="text/javascript">
 $(document).ready(function() {
-
-  $.extend($.fn.api.settings.api, {
-    categorySearch: '//api.semantic-ui.com/search/category/{query}',
-    search: '//api.semantic-ui.com/search/{query}'
-  });
-   $('#search').search({
-    minCharacters: 0,
-    onSelect: function(result, response) {
-        alert(result ? result.title : 'null');
-    }
-});
-
-$('#search2').search({
-    source: [
-        { title: 'Andorra' },
-        { title: 'United Arab Emirates' },
-        { title: 'Afghanistan' }
-    ],
-    onSelect: function(result, response) {
-        alert(result ? result.title : 'null');
-    },
-    minCharacters: 0
-});
+      $('.dropdown').dropdown({
+        onChange: function(value, text, $element){
+            console.log('Item Selected', $element.data('value'));
+        }
+    });
 });
 </script>
 
@@ -40,23 +22,17 @@ $('#search2').search({
 </style>
 
 <div style="max-width: 1000px;margin:2em auto;">
-<div id="search" class="ui search">
-    Name:
-    <div class="ui icon input">
-        <input class="prompt" placeholder="Name" type="text" id="name" />
-        <i class="circular search icon"></i>
-    </div>
 
-    <div class="results"></div>
-</div>
 
-<div id="search2" class="ui search">
-    Name:
-    <div class="ui icon input">
-        <input class="prompt" placeholder="Name" type="text" id="name" />
-        <i class="circular search icon"></i>
-    </div>
+<select class="ui search dropdown">
+  <option value="">State</option>
+  <option value="AL">Alabama</option>
+  <option value="AL">Alabama</option>
+  <option value="AK">Alaska</option>
+  <option value="AZ">Arizona</option>
+  <option value="AR">Arkansas</option>
+  <option value="CA">California</option>
+  <option value="CO">Colorado</option>
+</select>
 
-    <div class="results"></div>
-</div>
 </div>

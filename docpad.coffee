@@ -29,7 +29,11 @@ docpadConfig = {
 			# Here are some old site urls that you would like to redirect from
 			oldUrls: [],
 
+<<<<<<< HEAD
 			version: "1.11.0",
+=======
+			version: "1.11.4",
+>>>>>>> 2896e9bf49990f915c385ad465306589f56f2000
 
 			# The default title of our website
 			title: "Semantic UI"

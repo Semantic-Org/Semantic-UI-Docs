@@ -1,9 +1,9 @@
 ---
 layout      : 'default'
 css         : 'custom'
-title       : 'Kitchen Sink'
+title       : 'All UI'
 type        : 'Semantic'
-description : 'Examples of all interface elements'
+description : 'Examples of all user interface elements'
 ---
 
 <%- @partial('header', { tabs: {  elements: 'Elements', collections: 'Collections', views: 'Views', modules: 'Modules' } }) %>

@@ -63,7 +63,7 @@ semantic.ready = function() {
     $downloadInput       = $('.download.popup input'),
     $downloadStandalone  = $('.standalone.column .button'),
 
-    $helpPopup           = $('.header .help.icon'),
+    $helpPopup           = $('.header .help'),
 
     $example             = $('.example'),
     $shownExample        = $example.filter('.shown'),
@@ -178,14 +178,17 @@ semantic.ready = function() {
           $section       = $(this),
           index          = $sectionHeaders.index($section),
           $followSection = $followMenu.children('.item'),
-          $activeSection = $followSection.eq(index)
+          $activeSection = $followSection.eq(index),
+          isActive       = $activeSection.hasClass('active')
         ;
-        $followSection
-          .removeClass('active')
-        ;
-        $activeSection
-          .addClass('active')
-        ;
+        if(!isActive) {
+          $followSection
+            .removeClass('active')
+          ;
+          $activeSection
+            .addClass('active')
+          ;
+        }
       },
       example: function() {
         var
@@ -194,9 +197,10 @@ semantic.ready = function() {
           $followSection = $followMenu.find('.menu > .item'),
           $activeSection = $followSection.eq(index),
           inClosedTab    = ($(this).closest('.tab:not(.active)').size() > 0),
-          anotherExample = ($(this).filter('.another.example').size() > 0)
+          anotherExample = ($(this).filter('.another.example').size() > 0),
+          isActive       = $activeSection.hasClass('active')
         ;
-        if(!inClosedTab && !anotherExample) {
+        if(!inClosedTab && !anotherExample && !isActive) {
           $followSection
             .removeClass('active')
           ;
@@ -265,7 +269,8 @@ semantic.ready = function() {
         .each(function() {
           var
             $section = $(this),
-            safeName = $section.text().trim().replace(/\s+/g, '-').replace(/[^-,'A-Za-z0-9]+/g, '').toLowerCase(),
+            text     = handler.getText($section),
+            safeName = handler.getSafeName(text),
             id       = window.escape(safeName),
             $anchor  = $('<a />').addClass('anchor').attr('id', id)
           ;
@@ -278,7 +283,8 @@ semantic.ready = function() {
         .each(function() {
           var
             $title   = $(this).children('h4').eq(0),
-            safeName = $title.text().trim().replace(/\s+/g, '-').replace(/[^-,'A-Za-z0-9]+/g, '').toLowerCase(),
+            text     = handler.getText($title),
+            safeName = handler.getSafeName(text),
             id       = window.escape(safeName),
             $anchor  = $('<a />').addClass('anchor').attr('id', id)
           ;
@@ -288,6 +294,22 @@ semantic.ready = function() {
         })
       ;
 
+    },
+
+    getSafeName: function(text) {
+      return text.replace(/\s+/g, '-').replace(/[^-,'A-Za-z0-9]+/g, '').toLowerCase();
+    },
+
+    getText: function($element) {
+      var
+        $text = $element.contents().filter(function(){
+          return this.nodeType == 3;
+        })
+      ;
+      return ($text.length > 0)
+        ? $text[0].nodeValue.trim()
+        : ''
+      ;
     },
 
     createMenu: function() {
@@ -306,7 +328,8 @@ semantic.ready = function() {
             activeClass    = (index === 0)
               ? 'active '
               : '',
-            safeName = $currentHeader.text().trim().replace(/\s+/g, '-').replace(/[^-,'A-Za-z0-9]+/g, '').toLowerCase(),
+            text     = handler.getText($currentHeader),
+            safeName = handler.getSafeName(text),
             id       = window.escape(safeName),
             $anchor  = $('<a />').addClass('anchor').attr('id', id)
           ;
@@ -323,12 +346,13 @@ semantic.ready = function() {
               .each(function() {
                 var
                   $title   = $(this).children('h4').eq(0),
-                  safeName = $title.text().trim().replace(/\s+/g, '-').replace(/[^-,'A-Za-z0-9]+/g, '').toLowerCase(),
+                  text     = handler.getText($title),
+                  safeName = handler.getSafeName(text),
                   id       = window.escape(safeName),
                   $anchor  = $('<a />').addClass('anchor').attr('id', id)
                 ;
                 if($title.size() > 0) {
-                  html += '<a class="item" href="#'+id+'">' + $title.text() + '</a>';
+                  html += '<a class="item" href="#'+id+'">' + text + '</a>';
                 }
               })
             ;
@@ -1112,7 +1136,8 @@ semantic.ready = function() {
 
   $helpPopup
     .popup({
-      position: 'bottom right'
+      position: 'top left',
+      variation: 'inverted'
     })
   ;
 
@@ -1164,8 +1189,8 @@ semantic.ready = function() {
 
   //$.fn.api.settings.base = '//api.semantic-ui.com';
   $.extend($.fn.api.settings.api, {
-    categorySearch: '//api.semantic-ui.com/search/category/{query}',
-    search: '//api.semantic-ui.com/search/{query}'
+    categorySearch : '//api.semantic-ui.com/search/category/{query}',
+    search         : '//api.semantic-ui.com/search/{query}'
   });
 
   if(window.Transifex !== undefined) {

@@ -267,7 +267,7 @@ themes      : ['Default', 'Basic', 'Classic']
   <div class="example">
     <h4 class="ui header">Positive / Negative</h4>
     <p>A cell or row may let a user know whether a value is good or bad</p>
-    <table class="ui table">
+    <table class="ui celled table">
       <thead>
         <tr>
           <th>Name</th>
@@ -304,7 +304,7 @@ themes      : ['Default', 'Basic', 'Classic']
   <div class="example">
     <h4 class="ui header">Error</h4>
     <p>A cell or row may call attention to an error or a negative value</p>
-    <table class="ui table">
+    <table class="ui celled table">
       <thead>
         <tr>
           <th>Name</th>
@@ -340,7 +340,7 @@ themes      : ['Default', 'Basic', 'Classic']
   <div class="example">
     <h4 class="ui header">Warning</h4>
     <p>A cell or row may warn a user</p>
-    <table class="ui table">
+    <table class="ui celled table">
       <thead>
         <tr>
           <th>Name</th>
@@ -376,7 +376,7 @@ themes      : ['Default', 'Basic', 'Classic']
   <div class="example">
     <h4 class="ui header">Active</h4>
     <p>A cell or row can be active or selected by a user</p>
-    <table class="ui table">
+    <table class="ui celled table">
       <thead>
         <tr>
           <th>Name</th>
@@ -411,7 +411,7 @@ themes      : ['Default', 'Basic', 'Classic']
   <div class="example">
     <h4 class="ui header">Disabled</h4>
     <p>A cell can be disabled</p>
-    <table class="ui table">
+    <table class="ui celled table">
       <thead>
         <tr>
           <th>Name</th>

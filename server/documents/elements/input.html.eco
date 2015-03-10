@@ -17,7 +17,7 @@ themes      : ['Default']
 <script src="/javascript/input.js"></script>
 <link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/input.less" />
 
-<div class="main container">
+<div class="main ui container">
 
   <h2 class="ui dividing header">Types</h2>
 

@@ -9,7 +9,7 @@ type        : 'Semantic'
 
 <%- @partial('header') %>
 
-<div class="main container">
+<div class="main ui container">
   <h2 class="ui dividing header">Types of Collections</h2>
 
   <div class="ui type two stackable collection cards">

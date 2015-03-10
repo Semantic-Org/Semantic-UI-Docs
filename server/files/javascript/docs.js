@@ -50,8 +50,8 @@ semantic.ready = function() {
     $menuMusic           = $('.ui.main.menu .music.item'),
     $menuPopup           = $('.ui.main.menu .popup.item'),
     $pageDropdown        = $('.ui.main.menu .page.dropdown'),
-    $pageTabMenu         = $('.tab.header.segment .tabular.menu'),
-    $pageTabs            = $('.tab.header.segment .menu .item'),
+    $pageTabMenu         = $('.top.tab.segment .tabular.menu'),
+    $pageTabs            = $('.top.tab.segment .menu .item'),
 
     $languageDropdown    = $('.language.dropdown'),
     $chineseModal        = $('.chinese.modal'),
@@ -68,7 +68,7 @@ semantic.ready = function() {
     $example             = $('.example'),
     $shownExample        = $example.filter('.shown'),
 
-    $overview            = $('.header.segment .overview'),
+    $overview            = $('.top.segment .overview'),
     //$developer         = $('.header .developer.item'),
     //$designer          = $('.header .designer.item'),
 
@@ -255,7 +255,7 @@ semantic.ready = function() {
     },
 
     tryCreateMenu: function(event) {
-      if($(window).width() > 640) {
+      if($(window).width() > 640 && !$('body').hasClass('basic')) {
         if($container.size() > 0 && $container.find('.following.menu').size() === 0) {
           handler.createMenu();
           handler.createWaypoints();

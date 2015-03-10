@@ -15,7 +15,7 @@ themes      : ['Default', 'Basic', 'Resetcss']
 
 <%- @partial('header', { tabs: {  overview: 'Overview', test: 'Test' } }) %>
 
-<div class="main container">
+<div class="main ui container">
   <div class="ui active tab" data-tab="overview">
     <h2 class="ui dividing header">What's In Our Reset</h2>
     <p>Semantic's default theme includes the latest <a href="http://necolas.github.io/normalize.css/">Normalize css</a> to provide a base line HTML reset. In addition, Semantic UI requires a <b>Box-sizing</b> reset, to make sure that elements handle width definitions in the same way.</p>

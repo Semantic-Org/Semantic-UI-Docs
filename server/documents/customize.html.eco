@@ -37,7 +37,7 @@ type        : 'Draft'
 
 </script>
 
-<div class="main container">
+<div class="main ui container">
   <h2 class="ui header">Configurations</h2>
   <div class="ui two buttons">
     <div class="ui active button">

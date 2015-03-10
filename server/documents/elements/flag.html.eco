@@ -13,7 +13,7 @@ type        : 'UI Element'
 
 <%- @partial('header', { tabs: { flags: 'Flags' } }) %>
 
-<div class="main container">
+<div class="main ui container">
 
   <div class="ui active tab" data-tab="flags">
 

@@ -13,7 +13,7 @@ type        : 'UI Element'
 
 <%- @partial('header') %>
 
-<div class="main container">
+<div class="main ui container">
 
   <div class="introduction">
     <h2 class="ui dividing header">Introduction</h2>

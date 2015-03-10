@@ -15,7 +15,7 @@ themes      : ['Default', 'Duo', 'Pulsar']
 <%- @partial('header') %>
 <link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/loader.less" />
 
-<div class="main container">
+<div class="main ui container">
 
   <h2 class="ui dividing header">Types</h2>
   <div class="example">

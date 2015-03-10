@@ -14,7 +14,7 @@ themes      : ['Default', 'GitHub', 'Gmail']
 <link rel="stylesheet/less" type="text/css" href="/src/definitions/collections/message.less" />
 <%- @partial('header') %>
 
-<div class="main container">
+<div class="main ui container">
 
   <h2 class="ui dividing header">Types</h2>
 

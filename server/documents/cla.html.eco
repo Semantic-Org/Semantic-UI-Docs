@@ -8,7 +8,7 @@ type        : 'Legal'
 
 <%- @partial('header', { tabs: {  individual: 'Individual', entity: 'Entity' } }) %>
 
-<div class="main container">
+<div class="main ui container">
   <div class="ui info icon message">
     <i class="help circle icon"></i>
     <div class="content">

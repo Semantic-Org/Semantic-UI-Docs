@@ -14,6 +14,7 @@
 }
 #example > .pusher {
   display: block;
+  min-height: 0px;
   flex-direction: initial;
 }
 #example > .pusher > .full.height {

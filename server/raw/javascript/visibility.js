@@ -63,6 +63,7 @@ semantic.visiblity.ready = function() {
   $firstSticky
     .sticky({
       observeChanges : false,
+      pushing        : true,
       context        : $firstColumn,
       offset         : 60
     })
@@ -142,6 +143,7 @@ semantic.visiblity.ready = function() {
   $secondSticky
     .sticky({
       observeChanges : false,
+      pushing        : true,
       context        : $secondColumn,
       offset         : 60
     })

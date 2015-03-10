@@ -482,6 +482,10 @@
 }
 #example.index .feature.stripe .column {
   display: flex;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
 }
 #example.index .feature.stripe p {
   -webkit-flex: 1 0 auto;

@@ -417,7 +417,7 @@ body#example {
 #example .fixed.launch.button {
   position: fixed;
   top: 63px;
-  left: -1px;
+  left: 0px;
 
   width: 55px;
   height: auto;
@@ -513,7 +513,7 @@ body#example {
 #example.basic .main.container .tab > p,
 #example.basic .main.container .example > p,
 #example.basic .main.container > p {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.8);
 }

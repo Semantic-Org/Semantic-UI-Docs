@@ -789,8 +789,8 @@ themes      : ['Default']
             Home
           </a>
           <div class="ui pointing dropdown link item">
-            <i class="dropdown icon"></i>
             <span class="text">Shopping</span>
+            <i class="dropdown icon"></i>
             <div class="menu">
               <div class="header">Categories</div>
               <div class="item">

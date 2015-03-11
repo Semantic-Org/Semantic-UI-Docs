@@ -347,8 +347,8 @@ themes      : ['Default']
       </div>
       <div class="ui menu">
         <a class="browse item">
-          <i class="dropdown icon"></i>
           Browse
+          <i class="dropdown icon"></i>
         </a>
         <div class="ui fluid popup">
           <div class="ui four column relaxed equal height divided grid">

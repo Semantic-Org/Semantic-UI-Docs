@@ -414,9 +414,6 @@
 #example.index.pushed .following.bar {
   transition: none;
 }
-#example.index .following.bar .additional.item {
-  display: none;
-}
 #example.index .following.bar .additional.item[data-site="learn"]:hover {
   color: #D9499A;
 }

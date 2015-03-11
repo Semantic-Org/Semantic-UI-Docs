@@ -234,21 +234,21 @@ themes      : ['Default']
           <tr>
             <td>Tablet</td>
             <td>Above 768px and below 992px</td>
-            <td>8%</td>
+            <td>4em</td>
             <td>tablet only, (x) wide tablet</td>
             <td>$tabletBreakpoint</td>
           </tr>
           <tr>
             <td>Computer</td>
             <td>Above 992px</td>
-            <td>13%</td>
+            <td>3%</td>
             <td>computer only, (x) wide computer</td>
             <td>$computerBreakpoint</td>
           </tr>
           <tr>
             <td>Large Screen</td>
             <td>Above 1400px</td>
-            <td>18%</td>
+            <td>15%</td>
             <td>(x) wide large screen</td>
             <td>$largeMonitorBreakpoint</td>
           </tr>

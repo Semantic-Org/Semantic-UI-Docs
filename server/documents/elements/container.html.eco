@@ -54,7 +54,7 @@ themes      : ['Default']
             </td>
             <td>
               <ul class="ui list">
-                <li>Layouts that use full width backgrounds, negative space and do not heavily use  segmented content</li>
+                <li>Layouts that use full width backgrounds, and prefer white space to segmented content</li>
                 <li>Scalable, graphic-heavy content like homepages, or product list pages.</li>
                 <li>Web application with several columns using fluid components</li>
               </ul>
@@ -90,6 +90,7 @@ themes      : ['Default']
             </td>
             <td>
               <ul class="ui list">
+                <li>Page gutters are optimized for specific breakpoints like 1080p and 1440p, which means at "in-between" resolutions they may not take up as much space</li>
                 <li>Content columns may flow too wide on large devices</li>
                 <li>Percentage layouts can have longer browser reflow times</li>
               </ul>
@@ -292,12 +293,83 @@ themes      : ['Default']
 
 <div class="ui tab" data-tab="examples">
 
+
   <div class="ui main container">
 
     <h2 class="ui dividing header">Examples</h2>
 
     <div class="no example">
-      <h4 class="ui header">Containers with grids</h4>
+      <h4 class="ui header">Comparing Page Grids to Grid Containers</h4>
+      <p>The following shows a side-by-side comparison of using both containers and page grids to achieve a four column layout.</p>
+      <p>These grids use the <code>equal width</code> variation which splits all undeclared column widths evenly in size.</p>
+    </div>
+
+    <div class="ui ignored code">
+      <div class="ui equal width grid container">
+        <div class="column">
+          <img>
+        </div>
+        <div class="seven wide column">
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+        <div class="column">
+          <img>
+        </div>
+      </div>
+    </div>
+    <div class="ui ignored code">
+      <div class="ui equal width page grid">
+        <div class="column">
+          <img>
+        </div>
+        <div class="seven wide column">
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+        <div class="column">
+          <img>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="ui center aligned header">Container</h3>
+  <div class="ui equal width grid container">
+    <div class="column">
+      <img src="/images/wireframe/white-image.png" class="ui bordered wireframe image">
+    </div>
+    <div class="seven wide column">
+      <h2 class="ui header">Dogs Roles with Humans</h2>
+      <p>Domestic dogs inherited complex behaviors, such as bite inhibition, from their wolf ancestors, which would have been pack hunters with complex body language. These sophisticated forms of social cognition and communication may account for their trainability, playfulness, and ability to fit into human households and social situations, and these attributes have given dogs a relationship with humans that has enabled them to become one of the most successful species on the planet today.</p>
+      <p>The dogs' value to early human hunter-gatherers led to them quickly becoming ubiquitous across world cultures. Dogs perform many roles for people, such as hunting, herding, pulling loads, protection, assisting police and military, companionship, and, more recently, aiding handicapped individuals. This impact on human society has given them the nickname "man's best friend" in the Western world. In some cultures, however, dogs are also a source of meat.</p>
+    </div>
+    <div class="column">
+      <img src="/images/wireframe/white-image.png" class="ui bordered wireframe image">
+    </div>
+  </div>
+
+  <h3 class="ui center aligned header">Page Grid</h3>
+  <div class="ui equal width page grid">
+    <div class="column">
+      <img src="/images/wireframe/white-image.png" class="ui bordered wireframe image">
+    </div>
+    <div class="seven wide column">
+      <h2 class="ui header">Dogs Roles with Humans</h2>
+      <p>Domestic dogs inherited complex behaviors, such as bite inhibition, from their wolf ancestors, which would have been pack hunters with complex body language. These sophisticated forms of social cognition and communication may account for their trainability, playfulness, and ability to fit into human households and social situations, and these attributes have given dogs a relationship with humans that has enabled them to become one of the most successful species on the planet today.</p>
+      <p>The dogs' value to early human hunter-gatherers led to them quickly becoming ubiquitous across world cultures. Dogs perform many roles for people, such as hunting, herding, pulling loads, protection, assisting police and military, companionship, and, more recently, aiding handicapped individuals. This impact on human society has given them the nickname "man's best friend" in the Western world. In some cultures, however, dogs are also a source of meat.</p>
+    </div>
+    <div class="column">
+      <img src="/images/wireframe/white-image.png" class="ui bordered wireframe image">
+    </div>
+  </div>
+
+  <div class="ui main container">
+
+    <div class="no example">
+      <h4 class="ui header">Containers Using Grids</h4>
       <p>A container can be combined with a grid allowing you to use all of the layout and alignment available for <a href="/collections/grid.html">grids</a> including responsive patterns.</p>
     </div>
 
@@ -321,7 +393,6 @@ themes      : ['Default']
         </div>
       </div>
     </div>
-
   </div>
 
   <div class="ui four column doubling stackable grid container">
@@ -356,44 +427,44 @@ themes      : ['Default']
   </div>
 
   <div class="ui main container">
-
-    <div class="no example">
-      <h4 class="ui header">Container Segment</h4>
-      <p>A container can be used with a <a href="/elements/segment.html">segment</a></p>
-    </div>
-
-    <div class="ui ignored code">
-      <div class="ui raised text container segment">
-        <h2 class="ui header">Dogs Roles with Humans</h2>
-        <p></p>
-        <p></p>
-      </div>
-    </div>
-  </div>
-
-  <div class="ui raised text container segment">
-    <h2 class="ui header">Dogs Roles with Humans</h2>
-    <p>Domestic dogs inherited complex behaviors, such as bite inhibition, from their wolf ancestors, which would have been pack hunters with complex body language. These sophisticated forms of social cognition and communication may account for their trainability, playfulness, and ability to fit into human households and social situations, and these attributes have given dogs a relationship with humans that has enabled them to become one of the most successful species on the planet today.</p>
-    <p>The dogs' value to early human hunter-gatherers led to them quickly becoming ubiquitous across world cultures. Dogs perform many roles for people, such as hunting, herding, pulling loads, protection, assisting police and military, companionship, and, more recently, aiding handicapped individuals. This impact on human society has given them the nickname "man's best friend" in the Western world. In some cultures, however, dogs are also a source of meat.</p>
-  </div>
-
-  <div class="ui main container">
     <div class="no example">
       <h4 class="ui header">Centered Menu</h4>
-      <p>A container can be used inside of a menu to make sure menu contents appear in line with page contents</p>
+      <p>A container can be used inside of a menu to make sure menu items appear inline with page contents</p>
     </div>
 
     <div class="ui ignored code">
+      <div class="ui attached menu">
+        <div class="ui text container">
+          <a class="item">
+            <i class="home icon"></i> Home
+          </a>
+          <a class="item">
+            <i class="grid layout icon"></i> Browse
+          </a>
+          <a class="item">
+            <i class="mail icon"></i> Messages
+          </a>
+          <div class="ui simple dropdown item">
+            More
+            <i class="dropdown icon"></i>
+            <div class="menu">
+              <a class="item"><i class="edit icon"></i> Edit Profile</a>
+              <a class="item"><i class="globe icon"></i> Choose Language</a>
+              <a class="item"><i class="settings icon"></i> Account Settings</a>
+            </div>
+          </div>
+          <div class="right menu">
+            <div class="item">
+              <div class="ui input"><input type="text" placeholder="Search..."></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="ui attached black menu">
+  <div class="ui attached menu">
     <div class="ui text container">
-      <div class="right menu">
-        <div class="item">
-          <div class="ui input"><input type="text" placeholder="Search..."></div>
-        </div>
-      </div>
       <a class="item">
         <i class="home icon"></i> Home
       </a>
@@ -412,7 +483,34 @@ themes      : ['Default']
           <a class="item"><i class="settings icon"></i> Account Settings</a>
         </div>
       </div>
+      <div class="right menu">
+        <div class="item">
+          <div class="ui input"><input type="text" placeholder="Search..."></div>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <div class="ui main container">
+
+    <div class="no example">
+      <h4 class="ui header">Container Segment</h4>
+      <p>A container can be used with a <a href="/elements/segment.html">segment</a></p>
+    </div>
+
+    <div class="ui ignored code">
+      <div class="ui raised very padded text container segment">
+        <h2 class="ui header">Dogs Roles with Humans</h2>
+        <p></p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui raised very padded text container segment">
+    <h2 class="ui header">Dogs Roles with Humans</h2>
+    <p>Domestic dogs inherited complex behaviors, such as bite inhibition, from their wolf ancestors, which would have been pack hunters with complex body language. These sophisticated forms of social cognition and communication may account for their trainability, playfulness, and ability to fit into human households and social situations, and these attributes have given dogs a relationship with humans that has enabled them to become one of the most successful species on the planet today.</p>
+    <p>The dogs' value to early human hunter-gatherers led to them quickly becoming ubiquitous across world cultures. Dogs perform many roles for people, such as hunting, herding, pulling loads, protection, assisting police and military, companionship, and, more recently, aiding handicapped individuals. This impact on human society has given them the nickname "man's best friend" in the Western world. In some cultures, however, dogs are also a source of meat.</p>
   </div>
 
 

@@ -42,7 +42,7 @@ standalone : true
         <a class="view-ui item">
           <i class="sidebar icon"></i> Menu
         </a>
-        <a href="http://www.learnsemantic.com" data-site="learn" class="additional item">Learn</a>
+        <a href="http://www.learnsemantic.com" data-site="learn" class="transition hidden additional item">Learn</a>
         <!-- <span class="additional item" data-site="themes" data-content="Coming Soon">Themes</span>
         <span class="additional item" data-site="layout" data-content="Coming Soon">Layouts</span> -->
       </div>

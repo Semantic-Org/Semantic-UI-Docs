@@ -27,15 +27,15 @@ themes      : ['Default']
 
       <h3 class="ui header">When To Use</h3>
 
-      <p>A container is a simpler alternative to a <a href="/collections/grid.html#page-grid">page grid</a> for holding site content. Containers provide a wrapper to make sure content stays within a maximum width for each device.</p>
+      <p>A container is a simpler alternative to a <a href="/collections/grid.html#page-grid">page grid</a> for holding site content. Containers provide a content wrapper that ensures content does not flow too widely on pages.</p>
 
-      <p>Unlike a page grid, which continues to grow as a percentage of total screen width, containers maintain a single size, making responsive styling simpler.</p>
+      <p>Unlike a <code>page grid</code>, which continues to grow as a percentage of total screen width, containers maintain a single size, making responsive styling simpler.</p>
 
-      <p>Containers are designed to be compatible with grids The default theme uses a maximum container width of <code>1200px</code> which gives a <code>16 column ui grid</code> exactly <code>75px</code> per column inside a container element.</p>
+      <p>Containers are designed to be compatible with grids The default theme uses a maximum container width of <code>1200px</code> which gives each grid column exactly <code>75px</code> when nested inside a container element.</p>
 
       <h3 class="ui header">Comparison of Features</h3>
 
-      <table class="ui celled padded definition table">
+      <table class="ui padded definition table">
         <thead>
           <th></th>
           <th class="six wide">Container</th>
@@ -57,6 +57,41 @@ themes      : ['Default']
                 <li>Layouts that use full width backgrounds, negative space and do not heavily use  segmented content</li>
                 <li>Scalable, graphic-heavy content like homepages, or product list pages.</li>
                 <li>Web application with several columns using fluid components</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Benefits</td>
+            <td>
+              <ul class="ui list">
+                <li>Requires content resizes only once per device (3 possible exact sizes)</li>
+                <li>Simpler to achieve layouts using a styled centered container</li>
+                <li>Less markup, no need for column and row markers</li>
+                <li>Works well with custom css and precise content dimensions</li>
+                <li>Quicker reflow on resizing, less calculations</li>
+              </ul>
+            </td>
+            <td>
+              <ul class="ui list">
+                <li>More spacious layouts that continue to adapt with wide screens</li>
+                <li>Easier for layouts with full width color "stripes" like homepages</li>
+                <li>More comfortably fills page on very large monitors like cinema displays</li>
+                <li>Grid columns provide rules on content spacing that force you to harmonize negative space</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Drawbacks</td>
+            <td>
+              <ul class="ui list">
+                <li>Maximum width may seem not wide enough to showcase content on large screens</li>
+                <li>Containers use pixel values which make responsive styling using <code>em</code> more difficult.</li>
+              </ul>
+            </td>
+            <td>
+              <ul class="ui list">
+                <li>Content columns may flow too wide on large devices</li>
+                <li>Percentage layouts can have longer browser reflow times</li>
               </ul>
             </td>
           </tr>
@@ -91,14 +126,14 @@ themes      : ['Default']
             <td>Fluid Width</td>
           </tr>
           <tr>
-            <td>Segment Compatibility</td>
-            <td>Can be used together with <code>ui segment</code></td>
+            <td>Segments</td>
+            <td>Can be used together on the same element with <code>ui segment</code></td>
             <td><code>ui segment</code> must be nested inside columns</td>
           </tr>
           <tr>
             <td>Backgrounds</td>
             <td>Yes, and will appear same size as container</td>
-            <td>Appears <code>100%</code> width. Must be set on rows and columns only, grids use negative margins.</td>
+            <td>Full width only. Must be set on rows and columns because grids use negative margins to offset columns.</td>
           </tr>
           <tr>
             <td>Centering</td>
@@ -328,19 +363,58 @@ themes      : ['Default']
     </div>
 
     <div class="ui ignored code">
-      <div class="ui raised padded text container segment">
-        <h2 class="ui black dividing header">Dogs Roles with Humans</h2>
+      <div class="ui raised text container segment">
+        <h2 class="ui header">Dogs Roles with Humans</h2>
         <p></p>
         <p></p>
       </div>
     </div>
   </div>
 
-  <div class="ui raised text container padded segment">
-    <h2 class="ui black dividing header">Dogs Roles with Humans</h2>
+  <div class="ui raised text container segment">
+    <h2 class="ui header">Dogs Roles with Humans</h2>
     <p>Domestic dogs inherited complex behaviors, such as bite inhibition, from their wolf ancestors, which would have been pack hunters with complex body language. These sophisticated forms of social cognition and communication may account for their trainability, playfulness, and ability to fit into human households and social situations, and these attributes have given dogs a relationship with humans that has enabled them to become one of the most successful species on the planet today.</p>
     <p>The dogs' value to early human hunter-gatherers led to them quickly becoming ubiquitous across world cultures. Dogs perform many roles for people, such as hunting, herding, pulling loads, protection, assisting police and military, companionship, and, more recently, aiding handicapped individuals. This impact on human society has given them the nickname "man's best friend" in the Western world. In some cultures, however, dogs are also a source of meat.</p>
   </div>
+
+  <div class="ui main container">
+    <div class="no example">
+      <h4 class="ui header">Centered Menu</h4>
+      <p>A container can be used inside of a menu to make sure menu contents appear in line with page contents</p>
+    </div>
+
+    <div class="ui ignored code">
+    </div>
+  </div>
+
+  <div class="ui attached black menu">
+    <div class="ui text container">
+      <div class="right menu">
+        <div class="item">
+          <div class="ui input"><input type="text" placeholder="Search..."></div>
+        </div>
+      </div>
+      <a class="item">
+        <i class="home icon"></i> Home
+      </a>
+      <a class="item">
+        <i class="grid layout icon"></i> Browse
+      </a>
+      <a class="item">
+        <i class="mail icon"></i> Messages
+      </a>
+      <div class="ui simple dropdown item">
+        More
+        <i class="dropdown icon"></i>
+        <div class="menu">
+          <a class="item"><i class="edit icon"></i> Edit Profile</a>
+          <a class="item"><i class="globe icon"></i> Choose Language</a>
+          <a class="item"><i class="settings icon"></i> Account Settings</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <div class="main container"></div>
 </div>

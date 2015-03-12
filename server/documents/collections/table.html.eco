@@ -575,6 +575,39 @@ themes      : ['Default', 'Basic', 'Classic']
 
   </div>
 
+  <div class="example">
+    <h4 class="ui header">Vertical Alignment</h4>
+    <p>A table header, row, or cell can adjust its vertical alignment</p>
+    <table class="ui striped table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Status</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="top aligned">
+          <td>John</td>
+          <td>Approved</td>
+          <td class="top aligned">
+            Notes<br>
+            1<br>
+            2<br>
+          </td>
+        </tr>
+        <tr>
+          <td>Jamie</td>
+          <td class="bottom aligned">Approved</td>
+          <td>
+            Notes<br>
+            1<br>
+            2<br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
   <div class="example">
     <h4 class="ui header">Text Alignment</h4>

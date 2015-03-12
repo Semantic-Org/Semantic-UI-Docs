@@ -561,7 +561,7 @@ themes      : ['Default', 'Material', 'Fixed-width']
       <div class="sub header">Modal settings modify the modal's behavior</div>
     </h3>
 
-    <table class="ui red celled sortable definition table segment">
+    <table class="ui celled sortable definition table segment">
       <thead>
         <tr>
           <th>Setting</th>

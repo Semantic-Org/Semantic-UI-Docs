@@ -23,11 +23,11 @@ themes      : ['Default', 'GitHub']
   <div class="example">
     <h4 class="ui header">
       Menu
-      <span class="ui teal label">Uses Flexbox</span>
+      <span class="ui teal label">Flexbox</span>
     </h4>
     <p>A menu</p>
     <div class="ui ignored message">
-      Flexbox menus have been added in <code>1.12.0</code>. Flexbox makes sure each menu item will automatically stretch to the size of the largest element.
+      Starting in <code>1.12.0</code> menus now use flexbox. This allows for additional layout flexibility, like making sure each menu item will automatically stretch to the size of the largest item regardless of its size.
     </div>
     <div class="ui menu">
       <div class="item">
@@ -83,43 +83,6 @@ themes      : ['Default', 'GitHub']
       <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
     </div>
   </div>
-  <div class="another example">
-    <div class="another example">
-      <div class="ui vertical menu">
-        <div class="item">
-          <div class="header">Products</div>
-          <div class="menu">
-            <a class="item">Enterprise</a>
-            <a class="item">Consumer</a>
-          </div>
-        </div>
-        <div class="item">
-          <div class="header">CMS Solutions</div>
-          <div class="menu">
-            <a class="item">Rails</a>
-            <a class="item">Python</a>
-            <a class="item">PHP</a>
-          </div>
-        </div>
-        <div class="item">
-          <div class="header">Hosting</div>
-          <div class="menu">
-            <a class="item">Shared</a>
-            <a class="item">Dedicated</a>
-          </div>
-        </div>
-        <div class="item">
-          <div class="header">Support</div>
-          <div class="menu">
-            <a class="item">E-mail Support</a>
-            <a class="item">FAQs</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
 
   <div class="example">
     <h4 class="ui header">Secondary Menu</h4>
@@ -206,6 +169,16 @@ themes      : ['Default', 'GitHub']
     <h4 class="ui header">Tabular</h4>
     <p>A message can be formatted to show tabs of information</p>
     <div class="ui tabular menu">
+      <a class="active item">
+        Bio
+      </a>
+      <a class="item">
+        Photos
+      </a>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui top attached tabular menu">
       <div class="item">
         <img src="/images/logo.png">
       </div>
@@ -213,7 +186,7 @@ themes      : ['Default', 'GitHub']
         Bio
       </a>
       <a class="item">
-        <i class="photo icon"></i> Photos
+        Photos
       </a>
       <div class="right menu">
         <div class="item">
@@ -224,18 +197,33 @@ themes      : ['Default', 'GitHub']
         </div>
       </div>
     </div>
+    <div class="ui bottom attached segment">
+      <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+    </div>
   </div>
   <div class="another example">
-    <div class="ui top attached tabular menu">
-      <a class="active item">
-        Bio
-      </a>
-      <a class="item">
-        Pics
-      </a>
-    </div>
-    <div class="ui bottom attached segment">
-      This is the content of the tab.
+    <div class="ui equal height stretched grid">
+      <div class="four wide column">
+        <div class="ui vertical fluid tabular menu">
+          <a class="active item">
+            Bio
+          </a>
+          <a class="item">
+            Pics
+          </a>
+          <a class="item">
+            Companies
+          </a>
+          <a class="item">
+            Links
+          </a>
+        </div>
+      </div>
+      <div class="column">
+        <div class="ui segment">
+          This is an equal height grid. This segment will always match the tab height
+        </div>
+      </div>
     </div>
   </div>
 

@@ -63,6 +63,74 @@ themes      : ['Default', 'Basic', 'Classic']
     </table>
   </div>
   <div class="another example">
+    <table class="ui very basic table">
+      <thead>
+        <th class="collapsing">Rank</th>
+        <th>Name</th>
+        <th>Correct Guesses</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="ui small statistic">
+              <span class="value">1</span>
+            </div>
+          </td>
+          <td>
+            <h4 class="ui image header">
+              <img src="/images/avatar/small/ade.jpg" class="ui avatar image">
+              <div class="content">
+                Ade
+                <div class="sub header">Accounting
+              </div>
+            </div>
+          </td>
+          <td>
+            22
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="ui small statistic">
+              <span class="value">2</span>
+            </div>
+          </td>
+          <td>
+            <h4 class="ui image header">
+              <img src="/images/avatar/small/veronika.jpg" class="ui avatar image">
+              <div class="content">
+                Veronika
+                <div class="sub header">Fabric Design
+              </div>
+            </div>
+          </td>
+          <td>
+            15
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="ui small statistic">
+              <span class="value">3</span>
+            </div>
+          </td>
+          <td>
+            <h4 class="ui image header">
+              <img src="/images/avatar/small/justen.jpg" class="ui avatar image">
+              <div class="content">
+                Justen
+                <div class="sub header">Executive
+              </div>
+            </div>
+          </td>
+          <td>
+            11
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="another example">
     <table class="ui celled striped table">
       <thead>
         <th colspan="3">

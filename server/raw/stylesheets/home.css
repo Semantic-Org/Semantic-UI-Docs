@@ -644,6 +644,10 @@
 
 
 @media only screen and (max-width : 600px) {
+  #example.index .solid,
+  #example.index .stripe {
+    padding: 4em 0em;
+  }
   #example.index .masthead.segment h1 .text {
     margin-left: 0em;
   }

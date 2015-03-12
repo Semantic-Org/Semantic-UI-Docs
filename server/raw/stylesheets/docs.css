@@ -1573,7 +1573,6 @@ body.progress.animated .ui.progress .bar {
 #example .top > .container,
 #example .footer > .container {
   position: relative;
-  width: 800px;
 }
 
 #example .main.container {
@@ -1610,149 +1609,24 @@ body.progress.animated .ui.progress .bar {
   padding: 0.5rem 0.25rem;
 }
 
-@media only screen and (max-width : 400px) {
-  #example .advertisement {
-    max-width: 260px;
-  }
-}
-@media only screen and (max-width : 600px) {
-  #example .solid, #example .stripe {
-    padding: 4em 0em;
-  }
-  #example > .pusher > .footer {
-    padding: 1em 0em;
-  }
-  #example .top.segment {
-    padding-top: 60px;
-    padding-bottom: 20px;
-  }
-  #example .example i.code {
-    opacity: 0.3;
-  }
-  #example .example i.code:hover {
-    opacity: 1;
-  }
-}
-
-@media only screen and (min-width : 600px) and (max-width : 998px) {
-  #example .header .button {
-    margin-bottom: 0.5em;
-  }
-}
-
-@media only screen and (max-width : 998px) {
-
-  #example > .pusher {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-  #example > .pusher > .full.height {
-    display: block;
-    height: auto;
-  }
-  #example .following.menu {
-    display: none;
-  }
-}
-@media only screen and (min-width : 998px) {
-  #example .following.menu {
-    display: block;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  #example .introduction {
-    display: block;
-  }
-  #example .advertisement {
-    left: 100%;
-    padding-left: 0em;
-    position: absolute;
-    top: -1em;
-    vertical-align: top;
-  }
-}
-@media only screen and (min-width : 998px) and (max-width: 1200px) {
-  #example .tab.top.segment .tabular.menu {
-    width: 680px;
-  }
-  #example .full.height > .container .right.rail {
-    width: 200px;
-    padding-left: 0em;
-  }
-  #example .main.container > .right.rail .sticky,
-  #example .main.container > .tab > .right.rail .sticky {
-    width: 200px;
-  }
-}
 
 
 /*******************************
           Responsive
 *******************************/
 
-@media only screen and (max-width : 998px) {
-  #example .fixed .section,
-  #example .fixed .title b {
-    display: none;
-  }
-  #example .fixed.launch.button {
-    display: none;
-  }
-  #example .fixed .launch {
-    cursor: pointer;
-    display: inline-block;
-  }
+/* Defaults */
+
+#example .masthead .mobile.buttons {
+  display: none;
 }
 
-
-@media only screen and (max-width : 780px) {
-  pre.console {
-    height: 150px;
-  }
-  #example .introduction {
-    display: block;
-  }
+@media only screen and (max-width : 400px) {
   #example .advertisement {
-    display: block;
-    margin: 1em auto;
-    padding: 0em;
-  }
-  #example #toc .hide.item {
-    display: block;
-  }
-  #example #toc .item > .icon {
-    font-size: 1em !important;
-  }
-  #example .advertisement #carbonads {
-    float: none;
-    width: 100%;
-  }
-  #example:not(.index) .introduction .button {
-    float: none;
-    margin: 0 0.5em 0.5em 0;
+    max-width: 260px;
   }
 }
 
-@media only screen and (max-width : 600px) {
-  #example .main.menu .borderless.item {
-    display: none;
-  }
-  #example .fixed .developer,
-  #example .fixed .designer,
-  #example .fixed .previous,
-  #example .fixed .next {
-    display: none;
-  }
-  #example .tab.top.segment .tabular.menu {
-    display: none;
-  }
-
-  #example .tab.top.segment .vertical.menu {
-    display: block;
-  }
-}
 @media only screen and (max-width : 450px) {
   #example .main.menu .icon.item {
     display: none;
@@ -1771,9 +1645,6 @@ body.progress.animated .ui.progress .bar {
   }
 }
 
-#example .masthead .mobile.buttons {
-  display: none;
-}
 @media only screen and (max-width : 470px) {
   #example .masthead .tag.label {
     display: none;
@@ -1793,6 +1664,39 @@ body.progress.animated .ui.progress .bar {
     -moz-animation-name: none;
     -o-animation-name: none;
     animation-name: none;
+  }
+}
+
+
+@media only screen and (max-width : 600px) {
+  #example > .pusher > .footer {
+    padding: 1em 0em;
+  }
+  #example .top.segment {
+    padding-top: 60px;
+    padding-bottom: 20px;
+  }
+  #example .example i.code {
+    opacity: 0.3;
+  }
+  #example .example i.code:hover {
+    opacity: 1;
+  }
+  #example .main.menu .borderless.item {
+    display: none;
+  }
+  #example .fixed .developer,
+  #example .fixed .designer,
+  #example .fixed .previous,
+  #example .fixed .next {
+    display: none;
+  }
+  #example .tab.top.segment .tabular.menu {
+    display: none;
+  }
+
+  #example .tab.top.segment .vertical.menu {
+    display: block;
   }
 }
 
@@ -1817,17 +1721,167 @@ body.progress.animated .ui.progress .bar {
     display: none;
   }
 }
+
+@media only screen and (max-width : 780px) {
+  pre.console {
+    height: 150px;
+  }
+
+  #example .fixed.menu .music.item {
+    display: none;
+  }
+
+  /* Sidebar Nav Hide Link */
+  #example #toc .hide.item {
+    display: block;
+  }
+  #example #toc .item > .icon {
+    font-size: 1em !important;
+  }
+
+  /* Introduction Button Float */
+  #example:not(.index) .introduction .button {
+    float: none;
+    margin: 0 0.5em 0.5em 0;
+  }
+
+  /* Advertisement */
+  #example .introduction {
+    display: block;
+  }
+  #example .advertisement {
+    display: block;
+    margin: 1em auto;
+    padding: 0em;
+  }
+  #example .advertisement #carbonads {
+    float: none;
+    width: 100%;
+  }
+
+  /* Resize Containers */
+  #example .main.container,
+  #example .top > .container,
+  #example .footer > .container,
+  #example .fixed.menu > .container {
+    width: 100% !important;
+    margin-left: 0em !important;
+    margin-right: 0em !important;
+    padding-left: 2em !important;
+    padding-right: 2em !important;
+    border-left: none !important;
+    border-right: none !important;
+    box-shadow: none !important;
+  }
+  #example .fixed.menu > .container {
+    padding-left: 0em !important;
+    padding-right: 0em !important;
+  }
+
+  /* Resize Sticky */
+  #example .container .right.rail,
+  #example .main.container > .right.rail .sticky,
+  #example .main.container > .tab > .right.rail .sticky {
+    display: none;
+  }
+}
+
 @media only screen and (max-width : 998px) {
+  /* Nav Bar Items */
+  #example .fixed.menu .section,
+  #example .fixed.menu .title b {
+    display: none;
+  }
+  #example .fixed.menu .launch {
+    cursor: pointer;
+    display: inline-block;
+  }
+
+  /* Hide Fixed Launch Button */
+  #example .fixed.launch.button {
+    display: none;
+  }
+
+  /* What is this? */
+  #example .header .button {
+    margin-bottom: 0.5em;
+  }
   #example .examples {
     margin-right: 230px;
     padding: 1px;
   }
-  #example .fixed.column,
-  #example .fixed.column .fixed {
+}
+
+@media only screen and (min-width : 781px) and (max-width : 998px) {
+
+
+  /* Remove Sticky Footer */
+  #example > .pusher {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  #example > .pusher > .full.height {
+    display: block;
+    height: auto;
+  }
+
+  /* Resize Containers */
+  #example .fixed.menu > .container {
+    width: 100% !important;
+    margin-left: 0em !important;
+    margin-right: 0em !important;
+  }
+  #example .main.container,
+  #example .top > .container,
+  #example .footer > .container {
+    width: auto !important;
+    margin-left: 2em !important;
+  }
+  #example .main.container,
+  #example .top > .container,
+  #example .footer > .container {
+    margin-right: 235px !important;
+  }
+
+  /* Resize Sticky */
+  #example .container .right.rail {
+    width: 200px;
+    padding-left: 0em;
+  }
+  #example .main.container > .right.rail .sticky,
+  #example .main.container > .tab > .right.rail .sticky {
     width: 200px;
   }
+
+  /* Advert in Rail */
+  #example .introduction {
+    display: block;
+    padding-right: 115px;
+  }
+  #example .advertisement {
+    left: 100%;
+    margin-left: -115px;
+    position: absolute;
+    top: 0em;
+    vertical-align: top;
+  }
 }
-@media only screen and (min-width : 998px) {
+
+@media only screen and (min-width : 999px) {
+
+  /* Advert in Rail */
+  #example .introduction {
+    display: block;
+  }
+  #example .advertisement {
+    left: 100%;
+    padding-left: 0em;
+    position: absolute;
+    top: 0em;
+    vertical-align: top;
+  }
+
   #example .examples {
     margin-right: 280px;
     padding: 1px;
@@ -1836,15 +1890,53 @@ body.progress.animated .ui.progress .bar {
   #example .fixed.column .fixed {
     width: 250px;
   }
+
+  /* Sticky Footers */
   #example > .pusher {
     display: flex;
     overflow: visible;
     min-height: 100vh;
     flex-direction: column;
   }
-
   #example > .pusher > .full.height {
     flex: 1;
+  }
+}
+
+
+/* Switch to Fluid Width */
+@media only screen and (min-width : 999px) and (max-width: 1232px) {
+  #example .main.container,
+  #example .top > .container,
+  #example .footer > .container {
+    margin-left: 85px !important;
+    margin-right: 350px !important;
+    width: auto;
+  }
+  /* Fixed Top Menu */
+  #example .fixed.menu > .container {
+    margin-left: 85px !important;
+    margin-right: 350px !important;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1233px) {
+  #example .fixed.menu > .container,
+  #example .main.container,
+  #example .top > .container,
+  #example .footer > .container {
+    width: 800px;
+    left: -122px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  #example .fixed.menu > .container,
+  #example .main.container,
+  #example .top > .container,
+  #example .footer > .container {
+    width: 850px;
+    left: -122px;
   }
 }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {

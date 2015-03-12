@@ -287,7 +287,39 @@ themes      : ['Default']
     Curabitur ullamcorper ultricies nisi.</p>
   </div>
 
-  <div class="main container"></div>
+  <div class="ui main container">
+
+
+    <h2 class="ui dividing header">Variations</h2>
+
+    <h4 class="ui header">Text Alignment</h4>
+    <p>A container can specify its text alignment</p>
+
+    <div class="ui ignored code">
+      <div class="ui left aligned container">
+        Left Aligned
+      </div>
+      <div class="ui center aligned container">
+        Center Aligned
+      </div>
+      <div class="ui right aligned container">
+        Right Aligned
+      </div>
+    </div>
+
+  </div>
+
+  <div class="ui left aligned container">
+    Left Aligned
+  </div>
+  <div class="ui center aligned container">
+    Center Aligned
+  </div>
+  <div class="ui right aligned container">
+    Right Aligned
+  </div>
+
+  <div class="ui main container"></div>
 
 </div>
 

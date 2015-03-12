@@ -172,6 +172,19 @@ themes      : ['default', 'GitHub']
   </div>
 
   <div class="example">
+    <h4 class="ui header">Padded</h4>
+    <p>A segment can increase its padding</p>
+    <div class="ui padded segment">
+      <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui very padded segment">
+      <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+    </div>
+  </div>
+
+  <div class="example">
     <h4 class="ui header">Compact</h4>
     <p>A segment may take up only as much space as is necessary</p>
     <div class="ui compact segment">

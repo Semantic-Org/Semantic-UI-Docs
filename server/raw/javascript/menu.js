@@ -6,6 +6,7 @@ semantic.menu.ready = function() {
   // selector cache
   var
     $dropdownItem = $('.main.container .menu .dropdown .item'),
+    $popupItem    = $('.main.container .popup.example .browse.item'),
     $menuItem     = $('.main.container .menu a.item, .menu .link.item').not($dropdownItem),
     $dropdown     = $('.main.container .menu .dropdown'),
     // alias
@@ -29,6 +30,19 @@ semantic.menu.ready = function() {
   $dropdown
     .dropdown({
       on: 'hover'
+    })
+  ;
+
+
+  $popupItem
+    .popup({
+      inline   : true,
+      hoverable: true,
+      position : 'bottom left',
+      delay: {
+        show: 300,
+        hide: 800
+      }
     })
   ;
 

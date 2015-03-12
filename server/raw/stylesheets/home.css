@@ -215,18 +215,8 @@
 }
 
 */
-
-
-#example.index .fixed.following.bar {
-  background-image: none;
-}
-#example.index .fixed.following.bar {
-  position: fixed;
-  top: 0px;
+#example.index .light.following.bar {
   padding: 1em 0em;
-  background-color: #FFFFFF;
-}
-#example.index .fixed.light.following.bar {
   background-color: #FFFFFF;
   border-bottom: 1px solid #DDDDDD;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.04);
@@ -402,7 +392,7 @@
 ---------------*/
 
 #example.index .following.bar {
-  position: absolute;
+  position: fixed;
   top: 0px;
   z-index: 900;
   left: 0%;
@@ -424,9 +414,6 @@
 #example.index.pushed .following.bar {
   transition: none;
 }
-#example.index .following.bar .additional.item {
-  display: none;
-}
 #example.index .following.bar .additional.item[data-site="learn"]:hover {
   color: #D9499A;
 }
@@ -445,10 +432,10 @@
 #example.index .following.bar .network.menu .view-ui {
   margin-right: 1em;
 }
-#example.index .fixed.following.bar .network.menu .view-ui {
+#example.index .light.following.bar .network.menu .view-ui {
   color: #00B5AD;
 }
-#example.index .fixed.following.bar .inverted.network.menu .view-ui {
+#example.index .light.following.bar .inverted.network.menu .view-ui {
   color: #6DFFFF;
 }
 #example.index .following .logo {
@@ -482,6 +469,10 @@
 }
 #example.index .feature.stripe .column {
   display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 #example.index .feature.stripe p {
   -webkit-flex: 1 0 auto;

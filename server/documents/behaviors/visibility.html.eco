@@ -52,272 +52,9 @@ type        : 'UI Behavior'
     </div>
 
   </div>
-  <div class="ui tab" data-tab="examples">
-
-    <h2 class="ui dividing header">Examples</h2>
-
-    <div class="visibility infinite example">
-      <h4 class="ui header">Infinite Scroll</h4>
-      <p>As an alternative to pagination you can use <code>onBottomVisible</code> to load content automatically when the bottom of a container is reached.</p>
-
-      <div class="evaluated code" data-type="javascript">
-        $('.infinite.example .demo.segment')
-          .visibility({
-            once: false,
-            // update size when new content loads
-            observeChanges: true,
-            // load content on bottom edge visible
-            onBottomVisible: function() {
-              // loads a max of 5 times
-              window.loadFakeContent();
-            }
-          })
-        ;
-      </div>
-
-      <div class="ui demo segment">
-        <h3 class="ui dividing center aligned header">Infinite Scroll Example</h3>
-        <img src="/images/wireframe/centered-paragraph.png" class="ui wireframe image">
-        <div class="ui divider"></div>
-        <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-        <div class="ui divider"></div>
-        <img src="/images/wireframe/media-paragraph.png" class="ui wireframe image">
-        <div class="ui divider"></div>
-        <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-        <div class="ui divider"></div>
-        <div class="ui large centered inline text loader">
-          Adding more content...
-        </div>
-      </div>
-    </div>
-
-    <div class="visibility example">
-      <h4 class="ui header">Lazy Loading Images</h4>
-      <p>Visibility includes several shortcuts for setting up common visibility events. Using the setting <code>type: 'image'</code> will automatically attach events to an images <code>topVisible</code> to load the contents of <code>data-src</code> as <code>src</code>.</p>
-
-      <p>You can specify a placeholder image as the current <code>src</code> to make sure content doesn't jump when an image loads, or you can specify no placeholder and have the image appear.</p>
-
-      <p>By default images will appear without animation, however you can also specify a named <a href="/modules/transition.html">transition</a>, and a duration that should be used for animating the image into view</p>
-
-      <div class="evaluated code" data-type="javascript">
-        $('.demo.items img')
-          .visibility({
-            type       : 'image',
-            transition : 'fade in',
-            duration   : 1000
-          })
-        ;
-      </div>
-      <div class="ui divided demo items">
-        <div class="item">
-          <div class="image">
-            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/elliot.jpg">
-          </div>
-          <div class="content">
-            <h2 class="ui header">Elliot Fu</h2>
-            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-            <div class="ui primary button">Add Friend</div>
-            <div class="ui right floated button">View <i class="right chevron icon"></i></div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="image">
-            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/helen.jpg">
-          </div>
-          <div class="content">
-            <h2 class="ui header">Helen Troy</h2>
-            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-            <div class="ui primary button">Add Friend</div>
-            <div class="ui right floated button">View <i class="right chevron icon"></i></div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="image">
-            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/jenny.jpg">
-          </div>
-          <div class="content">
-            <h2 class="ui header">Jenny Hess</h2>
-            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-            <div class="ui primary button">Add Friend</div>
-            <div class="ui right floated button">View <i class="right chevron icon"></i></div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="image">
-            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/veronika.jpg">
-          </div>
-          <div class="content">
-            <h2 class="ui header">Veronika Ossi</h2>
-            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-            <div class="ui primary button">Add Friend</div>
-            <div class="ui right floated button">View <i class="right chevron icon"></i></div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="image">
-            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/stevie.jpg">
-          </div>
-          <div class="content">
-            <h2 class="ui header">Stevie</h2>
-            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-            <div class="ui primary button">Add Friend</div>
-            <div class="ui right floated button">View <i class="right chevron icon"></i></div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="image">
-            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/steve.jpg">
-          </div>
-          <div class="content">
-            <h2 class="ui header">Steve Jobes</h2>
-            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-            <div class="ui primary button">Add Friend</div>
-            <div class="ui right floated button">View <i class="right chevron icon"></i></div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="image">
-            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/ade.jpg">
-          </div>
-          <div class="content">
-            <h2 class="ui header">Ade</h2>
-            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-            <div class="ui primary button">Add Friend</div>
-            <div class="ui right floated button">View <i class="right chevron icon"></i></div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="image">
-            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/chris.jpg">
-          </div>
-          <div class="content">
-            <h2 class="ui header">Chris</h2>
-            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-            <div class="ui primary button">Add Friend</div>
-            <div class="ui right floated button">View <i class="right chevron icon"></i></div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="image">
-            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/joe.jpg">
-          </div>
-          <div class="content">
-            <h2 class="ui header">Joe Henderson</h2>
-            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-            <div class="ui primary button">Add Friend</div>
-            <div class="ui right floated button">View <i class="right chevron icon"></i></div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="image">
-            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/laura.jpg">
-          </div>
-          <div class="content">
-            <h2 class="ui header">Laura</h2>
-            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-            <div class="ui primary button">Add Friend</div>
-            <div class="ui right floated button">View <i class="right chevron icon"></i></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="changing visibility example">
-      <h4 class="ui header">Gradual Changes</h4>
-      <p>Each callback receives all calculated values as its first parameter, allowing you to adjust an element using </p>
-
-      <div class="evaluated code" data-type="javascript">
-        $('.changing.example .demo.segment')
-          .visibility({
-            once       : false,
-            continuous : true,
-            onPassing  : function(calculations) {
-              var newColor = 'rgba(0, 0, 0, ' + calculations.percentagePassed +')';
-              $(this)
-                .css('background-color', newColor)
-              ;
-            }
-          })
-        ;
-      </div>
-      <div class="ui demo segment" style="height: 1000px;"></div>
-    </div>
 
 
-    <div class="visibility overlay example">
-      <h4 class="ui header">Fixing Content To Viewport</h4>
-      <p>Visibility provides a lightweight method for sticking content to a page's viewport. Using <code>type: fixed</code> will add the class <code>fixed</code> after an element is passed in the viewport. Using this class name you can assign special layout conditions to an item once it is passed.</p>
-      <p>In this example, when an element is passed we fix it to the viewport, add a background color and box shadow so that it can float above other content. We also show an adjacent placeholder element which makes sure that content stays offset the same as if the menu was still in content flow</p>
-      <div class="ui warning message">
-        Using <code>visibility</code> to create fixed content is meant as a more hands-on solution. For those who aren't too familiar with javascript it might be best to use <a href="/modules/sticky.html">sticky</a> content
-      </div>
-      <div class="evaluated code" data-type="javascript">
-        $('.overlay.example .overlay')
-          .visibility({
-            offset : 55, // fix at 55px from top of page (space for nav menu)
-            type   : 'fixed'
-          })
-        ;
-      </div>
-      <div class="code" data-type="css">
-      .visibility.example .overlay {
-        padding: 0em;
-        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-        transition: all 0.5s ease;
-        background: transparent;
-      }
-      .visibility.example .fixed.overlay + .placeholder {
-        display: none;
-      }
-
-      /* fixed */
-      .visibility.example .fixed.overlay {
-        position: fixed;
-        background-color: #FFFFFF;
-        padding: 1em;
-        box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
-        z-index: 10;
-      }
-      .visibility.example .fixed.overlay + .placeholder {
-        display: block;
-        height: 28px;
-      }
-      </div>
-      <div class="overlay">
-        <div class="ui secondary menu">
-          <a class="item">
-            <i class="sidebar icon"></i> Menu
-          </a>
-          <a class="item">Option 1</a>
-          <a class="item">Option 2</a>
-          <a class="item">Option 3</a>
-        </div>
-      </div>
-      <div class="placeholder"></div>
-      <div class="ui clearing divider"></div>
-      <img src="/images/wireframe/centered-paragraph.png" class="ui wireframe image">
-      <div class="ui divider"></div>
-      <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-      <div class="ui divider"></div>
-      <img src="/images/wireframe/media-paragraph.png" class="ui wireframe image">
-      <div class="ui divider"></div>
-      <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
-      <div class="ui divider"></div>
-      <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-      <div class="ui divider"></div>
-      <img src="/images/wireframe/centered-paragraph.png" class="ui wireframe image">
-      <div class="ui divider"></div>
-      <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-      <div class="ui divider"></div>
-      <img src="/images/wireframe/media-paragraph.png" class="ui wireframe image">
-      <div class="ui divider"></div>
-      <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
-      <div class="ui divider"></div>
-      <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-      <div class="ui divider"></div>
-    </div>
-  </div>
-
-  <div class="ui overview tab" data-tab="usage">
+  <div class="ui tab" data-tab="usage">
 
     <h2 class="ui header">Usage</h2>
 
@@ -696,6 +433,272 @@ type        : 'UI Behavior'
       </table>
     </div>
   </div>
+
+  <div class="ui tab" data-tab="examples">
+
+    <h2 class="ui dividing header">Examples</h2>
+
+    <div class="visibility infinite example">
+      <h4 class="ui header">Infinite Scroll</h4>
+      <p>As an alternative to pagination you can use <code>onBottomVisible</code> to load content automatically when the bottom of a container is reached.</p>
+
+      <div class="evaluated code" data-type="javascript">
+        $('.infinite.example .demo.segment')
+          .visibility({
+            once: false,
+            // update size when new content loads
+            observeChanges: true,
+            // load content on bottom edge visible
+            onBottomVisible: function() {
+              // loads a max of 5 times
+              window.loadFakeContent();
+            }
+          })
+        ;
+      </div>
+
+      <div class="ui demo segment">
+        <h3 class="ui dividing center aligned header">Infinite Scroll Example</h3>
+        <img src="/images/wireframe/centered-paragraph.png" class="ui wireframe image">
+        <div class="ui divider"></div>
+        <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+        <div class="ui divider"></div>
+        <img src="/images/wireframe/media-paragraph.png" class="ui wireframe image">
+        <div class="ui divider"></div>
+        <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+        <div class="ui divider"></div>
+        <div class="ui large centered inline text loader">
+          Adding more content...
+        </div>
+      </div>
+    </div>
+
+    <div class="visibility example">
+      <h4 class="ui header">Lazy Loading Images</h4>
+      <p>Visibility includes several shortcuts for setting up common visibility events. Using the setting <code>type: 'image'</code> will automatically attach events to an images <code>topVisible</code> to load the contents of <code>data-src</code> as <code>src</code>.</p>
+
+      <p>You can specify a placeholder image as the current <code>src</code> to make sure content doesn't jump when an image loads, or you can specify no placeholder and have the image appear.</p>
+
+      <p>By default images will appear without animation, however you can also specify a named <a href="/modules/transition.html">transition</a>, and a duration that should be used for animating the image into view</p>
+
+      <div class="evaluated code" data-type="javascript">
+        $('.demo.items .image img')
+          .visibility({
+            type       : 'image',
+            transition : 'fade in',
+            duration   : 1000
+          })
+        ;
+      </div>
+      <div class="ui divided demo items">
+        <div class="item">
+          <div class="image">
+            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/elliot.jpg">
+          </div>
+          <div class="content">
+            <h2 class="ui header">Elliot Fu</h2>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            <div class="ui primary button">Add Friend</div>
+            <div class="ui right floated button">View <i class="right chevron icon"></i></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="image">
+            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/helen.jpg">
+          </div>
+          <div class="content">
+            <h2 class="ui header">Helen Troy</h2>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            <div class="ui primary button">Add Friend</div>
+            <div class="ui right floated button">View <i class="right chevron icon"></i></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="image">
+            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/jenny.jpg">
+          </div>
+          <div class="content">
+            <h2 class="ui header">Jenny Hess</h2>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            <div class="ui primary button">Add Friend</div>
+            <div class="ui right floated button">View <i class="right chevron icon"></i></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="image">
+            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/veronika.jpg">
+          </div>
+          <div class="content">
+            <h2 class="ui header">Veronika Ossi</h2>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            <div class="ui primary button">Add Friend</div>
+            <div class="ui right floated button">View <i class="right chevron icon"></i></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="image">
+            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/stevie.jpg">
+          </div>
+          <div class="content">
+            <h2 class="ui header">Stevie</h2>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            <div class="ui primary button">Add Friend</div>
+            <div class="ui right floated button">View <i class="right chevron icon"></i></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="image">
+            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/steve.jpg">
+          </div>
+          <div class="content">
+            <h2 class="ui header">Steve Jobes</h2>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            <div class="ui primary button">Add Friend</div>
+            <div class="ui right floated button">View <i class="right chevron icon"></i></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="image">
+            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/ade.jpg">
+          </div>
+          <div class="content">
+            <h2 class="ui header">Ade</h2>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            <div class="ui primary button">Add Friend</div>
+            <div class="ui right floated button">View <i class="right chevron icon"></i></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="image">
+            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/chris.jpg">
+          </div>
+          <div class="content">
+            <h2 class="ui header">Chris</h2>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            <div class="ui primary button">Add Friend</div>
+            <div class="ui right floated button">View <i class="right chevron icon"></i></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="image">
+            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/joe.jpg">
+          </div>
+          <div class="content">
+            <h2 class="ui header">Joe Henderson</h2>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            <div class="ui primary button">Add Friend</div>
+            <div class="ui right floated button">View <i class="right chevron icon"></i></div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="image">
+            <img src="/images/wireframe/square-image.png" data-src="/images/avatar/large/laura.jpg">
+          </div>
+          <div class="content">
+            <h2 class="ui header">Laura</h2>
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+            <div class="ui primary button">Add Friend</div>
+            <div class="ui right floated button">View <i class="right chevron icon"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="changing visibility example">
+      <h4 class="ui header">Gradual Changes</h4>
+      <p>Each callback receives all calculated values as its first parameter, allowing you to adjust an element using </p>
+
+      <div class="evaluated code" data-type="javascript">
+        $('.changing.example .demo.segment')
+          .visibility({
+            once       : false,
+            continuous : true,
+            onPassing  : function(calculations) {
+              var newColor = 'rgba(0, 0, 0, ' + calculations.percentagePassed +')';
+              $(this)
+                .css('background-color', newColor)
+              ;
+            }
+          })
+        ;
+      </div>
+      <div class="ui demo segment" style="height: 1000px;"></div>
+    </div>
+
+
+    <div class="visibility overlay example">
+      <h4 class="ui header">Fixing Content To Viewport</h4>
+      <p>Visibility provides a lightweight method for sticking content to a page's viewport. Using <code>type: fixed</code> will add the class <code>fixed</code> after an element is passed in the viewport. Using this class name you can assign special layout conditions to an item once it is passed.</p>
+      <p>In this example, when an element is passed we fix it to the viewport, add a background color and box shadow so that it can float above other content. We also show an adjacent placeholder element which makes sure that content stays offset the same as if the menu was still in content flow</p>
+      <div class="ui warning message">
+        Using <code>visibility</code> to create fixed content is meant as a more hands-on solution. For those who aren't too familiar with javascript it might be best to use <a href="/modules/sticky.html">sticky</a> content
+      </div>
+      <div class="evaluated code" data-type="javascript">
+        $('.overlay.example .overlay')
+          .visibility({
+            offset : 55, // fix at 55px from top of page (space for nav menu)
+            type   : 'fixed'
+          })
+        ;
+      </div>
+      <div class="code" data-type="css">
+      .visibility.example .overlay {
+        padding: 0em;
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+        transition: all 0.5s ease;
+        background: transparent;
+      }
+      .visibility.example .fixed.overlay + .placeholder {
+        display: none;
+      }
+
+      /* fixed */
+      .visibility.example .fixed.overlay {
+        position: fixed;
+        background-color: #FFFFFF;
+        padding: 1em;
+        box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+        z-index: 10;
+      }
+      .visibility.example .fixed.overlay + .placeholder {
+        display: block;
+        height: 28px;
+      }
+      </div>
+      <div class="overlay">
+        <div class="ui secondary menu">
+          <a class="item">
+            <i class="sidebar icon"></i> Menu
+          </a>
+          <a class="item">Option 1</a>
+          <a class="item">Option 2</a>
+          <a class="item">Option 3</a>
+        </div>
+      </div>
+      <div class="placeholder"></div>
+      <div class="ui clearing divider"></div>
+      <img src="/images/wireframe/centered-paragraph.png" class="ui wireframe image">
+      <div class="ui divider"></div>
+      <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+      <div class="ui divider"></div>
+      <img src="/images/wireframe/media-paragraph.png" class="ui wireframe image">
+      <div class="ui divider"></div>
+      <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+      <div class="ui divider"></div>
+      <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+      <div class="ui divider"></div>
+      <img src="/images/wireframe/centered-paragraph.png" class="ui wireframe image">
+      <div class="ui divider"></div>
+      <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+      <div class="ui divider"></div>
+      <img src="/images/wireframe/media-paragraph.png" class="ui wireframe image">
+      <div class="ui divider"></div>
+      <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+      <div class="ui divider"></div>
+      <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+      <div class="ui divider"></div>
+    </div>
+  </div>
+
 
   <div class="ui tab" data-tab="settings">
 

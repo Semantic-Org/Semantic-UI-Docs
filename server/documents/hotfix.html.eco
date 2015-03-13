@@ -9,10 +9,17 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script type="text/javascript">
 $(document).ready(function() {
-      $('.dropdown').dropdown({
-        onChange: function(value, text, $element){
-            console.log('Item Selected', $element.data('value'));
+      $('#passwordDlg').form({
+        password: {
+            identifier: 'password',
+            rules: [{
+                type: 'length[6]',
+                prompt: 'Adgangskoden skal indeholde mindst 6 tegn'
+            }]
         }
+    }, {
+        on: 'change',
+        inline: true
     });
 });
 </script>
@@ -22,17 +29,12 @@ $(document).ready(function() {
 </style>
 
 <div style="max-width: 1000px;margin:2em auto;">
-
-
-<select class="ui search dropdown">
-  <option value="">State</option>
-  <option value="AL">Alabama</option>
-  <option value="AL">Alabama</option>
-  <option value="AK">Alaska</option>
-  <option value="AZ">Arizona</option>
-  <option value="AR">Arkansas</option>
-  <option value="CA">California</option>
-  <option value="CO">Colorado</option>
-</select>
-
+<form class="ui form">
+  <div class="inline field disabled">
+     <div class="ui toggle checkbox">
+         <input type="checkbox" disabled="disabled">
+          <label>Disabled check</label>
+      </div>
+   </div>
+</form>
 </div>

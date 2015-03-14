@@ -158,7 +158,7 @@ a:hover {
 
 
 /* segment headers */
-#example .top.segment {
+#example .masthead.segment {
   position: relative;
   z-index: 2;
   margin: 0em;
@@ -169,38 +169,38 @@ a:hover {
   border-bottom: 1px solid #DDDDDD;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
-#example .top.segment h1 {
+#example .masthead.segment h1 {
   margin-bottom: 0em;
 }
-#example .tab.top.segment {
+#example .tab.masthead.segment {
   display: block;
   padding-bottom: 0em;
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1) inset;
 }
-#example .tab.top.segment .vertical.menu {
+#example .tab.masthead.segment .vertical.menu {
   display: none;
   margin: 2rem 0em 1rem;
 }
-#example .tab.top.segment .tabular.menu {
+#example .tab.masthead.segment .tabular.menu {
   clear: both;
   margin: 2rem 0px 0em;
   border-bottom: none;
 }
-#example .tab.top.segment .tabular.menu .active.item {
+#example .tab.masthead.segment .tabular.menu .active.item {
   background-color: #FFFFFF;
   border-bottom-color: #FFFFFF;
 }
 
-#example .top.segment .download.popup {
+#example .masthead.segment .download.popup {
   width: 400px;
 }
-#example .top.segment .download.popup .check.icon {
+#example .masthead.segment .download.popup .check.icon {
   margin-left: -1em;
 }
-#example .top.segment .download.popup .framework.grid,
-#example .top.segment .download.popup .standalone.grid,
-#example .top.segment .download.popup .integration.grid,
-#example .top.segment .download.popup .link.grid {
+#example .masthead.segment .download.popup .framework.grid,
+#example .masthead.segment .download.popup .standalone.grid,
+#example .masthead.segment .download.popup .integration.grid,
+#example .masthead.segment .download.popup .link.grid {
   display: none;
 }
 
@@ -208,7 +208,7 @@ a:hover {
 #example.legacy .launch.button {
   left: auto !important;
 }
-#example.scale.down.pushed .top.segment {
+#example.scale.down.pushed .masthead.segment {
   padding-top: 30px;
 }
 
@@ -351,7 +351,7 @@ a:hover {
   width: 300px;
 }
 
-#example .tab.top.segment .fixed .tabular.menu {
+#example .tab.masthead.segment .fixed .tabular.menu {
   position: fixed;
   top: 50px;
 }
@@ -376,9 +376,6 @@ body#example {
 #example .masthead .grid {
   position: relative;
   z-index: 2;
-}
-#example .masthead .column {
-  display: table;
 }
 #example .introduction {
   display: table-cell;
@@ -1233,8 +1230,8 @@ body.progress.animated .ui.progress .bar {
   position: static;
 }
 #example .icon.example .grid > .row > .column {
-  height: 6em;
   opacity: 0.8;
+  height: 7em;
   text-align: center;
   color: #888888;
 
@@ -1570,7 +1567,7 @@ body.progress.animated .ui.progress .bar {
 
 #example .fixed.menu > .container,
 #example .main.container,
-#example .top > .container,
+#example .masthead > .container,
 #example .footer > .container {
   position: relative;
 }
@@ -1672,7 +1669,7 @@ body.progress.animated .ui.progress .bar {
   #example > .pusher > .footer {
     padding: 1em 0em;
   }
-  #example .top.segment {
+  #example .masthead.segment {
     padding-top: 60px;
     padding-bottom: 20px;
   }
@@ -1691,17 +1688,17 @@ body.progress.animated .ui.progress .bar {
   #example .fixed .next {
     display: none;
   }
-  #example .tab.top.segment .tabular.menu {
+  #example .tab.masthead.segment .tabular.menu {
     display: none;
   }
 
-  #example .tab.top.segment .vertical.menu {
+  #example .tab.masthead.segment .vertical.menu {
     display: block;
   }
 }
 
 @media only screen and (max-width : 640px) {
-  #example .top.segment .download.button {
+  #example .masthead.segment .download.button {
     display: none;
   }
   #example .language.dropdown .menu {
@@ -1761,7 +1758,7 @@ body.progress.animated .ui.progress .bar {
 
   /* Resize Containers */
   #example .main.container,
-  #example .top > .container,
+  #example .masthead > .container,
   #example .footer > .container,
   #example .fixed.menu > .container {
     width: 100% !important;
@@ -1833,13 +1830,13 @@ body.progress.animated .ui.progress .bar {
     margin-right: 0em !important;
   }
   #example .main.container,
-  #example .top > .container,
+  #example .masthead > .container,
   #example .footer > .container {
     width: auto !important;
     margin-left: 2em !important;
   }
   #example .main.container,
-  #example .top > .container,
+  #example .masthead > .container,
   #example .footer > .container {
     margin-right: 235px !important;
   }
@@ -1907,7 +1904,7 @@ body.progress.animated .ui.progress .bar {
 /* Switch to Fluid Width */
 @media only screen and (min-width : 999px) and (max-width: 1232px) {
   #example .main.container,
-  #example .top > .container,
+  #example .masthead > .container,
   #example .footer > .container {
     margin-left: 85px !important;
     margin-right: 350px !important;
@@ -1923,7 +1920,7 @@ body.progress.animated .ui.progress .bar {
 @media only screen and (min-width: 1233px) {
   #example .fixed.menu > .container,
   #example .main.container,
-  #example .top > .container,
+  #example .masthead > .container,
   #example .footer > .container {
     width: 800px;
     left: -122px;
@@ -1933,7 +1930,7 @@ body.progress.animated .ui.progress .bar {
 @media only screen and (min-width: 1600px) {
   #example .fixed.menu > .container,
   #example .main.container,
-  #example .top > .container,
+  #example .masthead > .container,
   #example .footer > .container {
     width: 850px;
     left: -122px;

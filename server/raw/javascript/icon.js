@@ -5,7 +5,7 @@ semantic.icon.ready = function() {
 
   // selector cache
   var
-    $grid         = $('.ui.six.column.doubling.grid'),
+    $grid         = $('.ui.five.column.doubling.grid'),
     // alias
     handler
   ;
@@ -15,7 +15,7 @@ semantic.icon.ready = function() {
     createTable: function() {
       var
         $grid = $(this),
-        columnCount = 6
+        columnCount = 5
       ;
       $grid
         .find('.column:nth-child('+columnCount+'n+1)')
@@ -37,7 +37,7 @@ semantic.icon.ready = function() {
               });
           })
           .end()
-        .addClass('middle aligned internally celled')
+        .addClass('middle aligned equal height internally celled')
       ;
     }
   };

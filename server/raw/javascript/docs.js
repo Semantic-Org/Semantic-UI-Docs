@@ -50,8 +50,8 @@ semantic.ready = function() {
     $menuMusic           = $('.ui.main.menu .music.item'),
     $menuPopup           = $('.ui.main.menu .popup.item'),
     $pageDropdown        = $('.ui.main.menu .page.dropdown'),
-    $pageTabMenu         = $('.top.tab.segment .tabular.menu'),
-    $pageTabs            = $('.top.tab.segment .menu .item'),
+    $pageTabMenu         = $('.masthead.tab.segment .tabular.menu'),
+    $pageTabs            = $('.masthead.tab.segment .menu .item'),
 
     $languageDropdown    = $('.language.dropdown'),
     $chineseModal        = $('.chinese.modal'),
@@ -68,7 +68,7 @@ semantic.ready = function() {
     $example             = $('.example'),
     $shownExample        = $example.filter('.shown'),
 
-    $overview            = $('.top.segment .overview'),
+    $overview            = $('.masthead.segment .overview'),
     //$developer         = $('.header .developer.item'),
     //$designer          = $('.header .designer.item'),
 

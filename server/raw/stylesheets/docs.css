@@ -1231,7 +1231,6 @@ body.progress.animated .ui.progress .bar {
 }
 #example .icon.example .grid > .row > .column {
   opacity: 0.8;
-  height: 7em;
   text-align: center;
   color: #888888;
 

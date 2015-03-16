@@ -1049,6 +1049,7 @@ semantic.ready = function() {
   });
   $menu
     .sidebar({
+      dimPage          : false,
       transition       : 'uncover',
       mobileTransition : 'uncover'
     })

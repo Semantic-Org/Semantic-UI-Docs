@@ -33,7 +33,7 @@ themes      : ['Default']
 
       <p>Containers are designed to be compatible with grids The default theme uses a maximum container width of <code>1200px</code> which gives each grid column exactly <code>75px</code> when nested inside a container element.</p>
 
-      <h3 class="ui header">Comparison of Features</h3>
+      <h3 class="ui header">Feature Comparison</h3>
 
       <table class="ui padded definition table">
         <thead>
@@ -65,10 +65,9 @@ themes      : ['Default']
             <td>
               <ul class="ui list">
                 <li>Requires content resizes only once per device (3 possible exact sizes)</li>
-                <li>Simpler to achieve layouts using a styled centered container</li>
-                <li>Less markup, no need for column and row markers</li>
+                <li>Simpler to achieve layouts with a styled centered container</li>
+                <li>Less markup, no need for column and row markers, or to nest segments</li>
                 <li>Works well with custom css and precise content dimensions</li>
-                <li>Quicker reflow on resizing, less calculations</li>
               </ul>
             </td>
             <td>

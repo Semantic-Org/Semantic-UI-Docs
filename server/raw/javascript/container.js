@@ -4,7 +4,7 @@ semantic.container = {};
 semantic.container.ready = function() {
 
   var
-    $pageTabs = $('.top.tab.segment .menu .item')
+    $pageTabs = $('.masthead.tab.segment .menu .item')
   ;
 
   $pageTabs

@@ -8,7 +8,7 @@ description : 'Examples of all user interface elements'
 
 <%- @partial('header', { tabs: {  elements: 'Elements', collections: 'Collections', views: 'Views', modules: 'Modules' } }) %>
 
-<div class="main demo container">
+<div class="main demo ui container">
 
   <div class="ui active tab" data-tab="elements">
     <h2 class="ui dividing header">

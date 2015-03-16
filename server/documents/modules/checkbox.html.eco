@@ -234,7 +234,7 @@ themes      : ['Default']
     <h2 class="ui dividing header">Initializing</h2>
 
     <div class="no example">
-      <h4 class="ui dividing header">Checkbox</h4>
+      <h4 class="ui header">Checkbox</h4>
       <p>A checkbox can be initialized with javascript for increase programmatic control</p>
 
       <div class="code">
@@ -251,7 +251,7 @@ themes      : ['Default']
     </div>
 
     <div class="no example">
-      <h4 class="ui dividing header">Basic Checkbox</h4>
+      <h4 class="ui header">Basic Checkbox</h4>
       <p>A checkbox can also be used without using javascript by matching the <code>id</code> attribute of the input field to the <code>for</code> attribute of the accompanying label</p>
       <div class="code" data-type="html">
         <div class="ui checkbox">

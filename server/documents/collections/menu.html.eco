@@ -219,7 +219,7 @@ themes      : ['Default', 'GitHub']
           </a>
         </div>
       </div>
-      <div class="column">
+      <div class="twelve wide column">
         <div class="ui segment">
           This is an equal height grid. This segment will always match the tab height
         </div>

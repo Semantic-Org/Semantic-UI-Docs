@@ -1000,7 +1000,7 @@ themes      : ['Default']
           <div class="column">
             <img class="ui wireframe image" src="/images/wireframe/image.png">
           </div>
-          <div class="four wide column">
+          <div class="ten wide column">
             <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
           </div>
           <div class="column">
@@ -1057,9 +1057,41 @@ themes      : ['Default']
       </div>
     </div>
     <div class="another example">
-      <div class="ui ignored info message">
-        To make equal height column content grow to take the whole column height, use the <code>stretched</code> variation. Keep in mind flex items do not have <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin_collapsing">margin collapse</a> so they may display differently.
+      <div class="ui three column middle aligned divided equal height grid">
+        <div class="row">
+          <div class="column">
+            <div class="ui segment">
+              1
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui segment">
+              1
+            </div>
+            <div class="ui segment">
+              2
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui segment">
+              1
+            </div>
+            <div class="ui segment">
+              2
+            </div>
+            <div class="ui segment">
+              3
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
+    <div class="example">
+      <h4 class="ui header">
+        Equal Height Stretched
+        <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes" target="_blank" class="ui teal label">Flexbox</a>
+      </h4>
+      <p>An equal height row can stretch its contents to take up the entire column height</p>
       <div class="ui three column divided equal height grid">
         <div class="stretched row">
           <div class="column">
@@ -1167,7 +1199,6 @@ themes      : ['Default']
     </div>
 
     <div class="example">
-
       <h4 class="ui header">Text Alignment</h4>
       <p>A grid can specify its text alignment</p>
       <div class="ui center aligned three column grid">
@@ -1202,6 +1233,73 @@ themes      : ['Default']
         </div>
       </div>
     </div>
+    <div class="another example">
+      <div class="ui center aligned three column grid">
+        <div class="row">
+          <div class="column">
+            <div class="ui vertical fluid menu">
+              <div class="header item">
+                Cats
+              </div>
+            </div>
+          </div>
+          <div class="left aligned column">
+            <div class="ui vertical fluid menu">
+              <div class="header item">
+                Dogs
+              </div>
+              <div class="item">
+                Poodle
+              </div>
+              <div class="item">
+                Cockerspaniel
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui vertical fluid menu">
+              <div class="header item">
+                Monkeys
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="another example">
+      <div class="ui right aligned three column grid">
+        <div class="row">
+          <div class="column">
+            <div class="ui vertical fluid menu">
+              <div class="header item">
+                Cats
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui vertical fluid menu">
+              <div class="header item">
+                Dogs
+              </div>
+              <div class="item">
+                Poodle
+              </div>
+              <div class="item">
+                Cockerspaniel
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui vertical fluid menu">
+              <div class="header item">
+                Monkeys
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
     <div class="example">
       <h4 class="ui header">Vertical Alignment</h4>
@@ -1267,10 +1365,8 @@ themes      : ['Default']
       </div>
     </div>
 
-    <h3 class="ui header">Rows</h3>
-
     <div class="example">
-      <h4 class="ui header">Responsive Visibility</h4>
+      <h4 class="ui header">Responsive Visibility <span class="ui teal label">Rows / Columns Only</span></h4>
       <p>A grid can have its columns, or rows only show content for computer, tablet, or mobile.</p>
       <div class="ui text message info ignore">
         <i class="icon heart"></i> Breakpoints are 768px and below for mobile, 768-992px for tablet and 992px+ for computer</i>
@@ -1368,10 +1464,8 @@ themes      : ['Default']
       </div>
     </div>
 
-    <h3 class="ui header">Columns</h3>
-
     <div class="example">
-      <h4 class="ui header">Floating</h4>
+      <h4 class="ui header">Floating <span class="ui teal label">Columns Only</span></h4>
       <p>A column can be "floated" to either the left or right of its row.</p>
       <div class="ui grid">
         <div class="left floated five wide column">
@@ -1383,7 +1477,7 @@ themes      : ['Default']
       </div>
     </div>
     <div class="example">
-      <h4 class="ui header">Column Width</h4>
+      <h4 class="ui header">Column Width <span class="ui teal label">Columns Only</span></h4>
       <p>A column can vary in width taking up more than a single grid column.</p>
       <div class="ui grid">
         <div class="four wide column">
@@ -1398,7 +1492,7 @@ themes      : ['Default']
       </div>
     </div>
     <div class="example">
-      <h4 class="ui header">Responsive Width</h4>
+      <h4 class="ui header">Responsive Width <span class="ui teal label">Columns Only</span></h4>
       <p>A grid row can specify a width for a specific device</p>
       <div class="ui ignored info message">
         <p>It's recommended to use a responsive pattern like <code>doubling</code> or <code>stackable</code> to reduce complexity when designing responsively, however in some circumstances specifying exact widths for screen sizes may be necessary.</p>

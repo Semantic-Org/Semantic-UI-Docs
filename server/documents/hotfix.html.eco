@@ -9,18 +9,10 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script type="text/javascript">
 $(document).ready(function() {
-      $('#passwordDlg').form({
-        password: {
-            identifier: 'password',
-            rules: [{
-                type: 'length[6]',
-                prompt: 'Adgangskoden skal indeholde mindst 6 tegn'
-            }]
-        }
-    }, {
-        on: 'change',
-        inline: true
-    });
+   // Add javascript here
+$('.ui.dropdown').dropdown({
+    debug: true
+});
 });
 </script>
 
@@ -29,12 +21,39 @@ $(document).ready(function() {
 </style>
 
 <div style="max-width: 1000px;margin:2em auto;">
-<form class="ui form">
-  <div class="inline field disabled">
-     <div class="ui toggle checkbox">
-         <input type="checkbox" disabled="disabled">
-          <label>Disabled check</label>
-      </div>
-   </div>
-</form>
+<div class="ui fixed inverted menu">
+    <div class="ui search selection dropdown item">
+        <input type="hidden" name="country"> <i class="dropdown icon"></i>
+
+        <div class="default text">Select Country</div>
+        <div class="menu">
+            <div class="item" data-value="ad"><i class="ad flag"></i>Andorra</div>
+            <div class="item" data-value="ae"><i class="ae flag"></i>United Arab Emirates</div>
+            <div class="item" data-value="af"><i class="af flag"></i>Afghanistan</div>
+            <div class="item" data-value="ag"><i class="ag flag"></i>Antigua</div>
+            <!-- Omitted Some Countries !-->
+            <div class="item" data-value="zm"><i class="zm flag"></i>Zambia</div>
+            <div class="item" data-value="zw"><i class="zw flag"></i>Zimbabwe</div>
+        </div>
+    </div>
+</div>
+
+<h2 class="ui dividing header">
+    Fork this jsfiddle
+    <div class="sub header">By hitting the button above in the blue menu</div>
+</h2>
+    <div class="ui search selection dropdown">
+        <input type="hidden" name="country"> <i class="dropdown icon"></i>
+
+        <div class="default text">Select Country</div>
+        <div class="menu">
+            <div class="item" data-value="ad"><i class="ad flag"></i>Andorra</div>
+            <div class="item" data-value="ae"><i class="ae flag"></i>United Arab Emirates</div>
+            <div class="item" data-value="af"><i class="af flag"></i>Afghanistan</div>
+            <div class="item" data-value="ag"><i class="ag flag"></i>Antigua</div>
+            <!-- Omitted Some Countries !-->
+            <div class="item" data-value="zm"><i class="zm flag"></i>Zambia</div>
+            <div class="item" data-value="zw"><i class="zw flag"></i>Zimbabwe</div>
+        </div>
+    </div>
 </div>

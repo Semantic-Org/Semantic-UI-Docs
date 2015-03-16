@@ -1234,6 +1234,10 @@ body.progress.animated .ui.progress .bar {
   text-align: center;
   color: #888888;
 
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+
   -webkit-transition:
     color 0.3s ease,
     opacity 0.3s ease

@@ -134,6 +134,9 @@ themes      : ['default']
       <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
       <div class="ui inverted divider"></div>
       <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+      <h4 class="ui horizontal inverted divider">
+        Horizontal
+      </h4>
     </div>
   </div>
 

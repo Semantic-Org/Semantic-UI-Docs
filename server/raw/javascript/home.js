@@ -153,7 +153,6 @@ semantic.home.ready = function() {
         $themeDropdown
           .api({
             on       : 'now',
-            debug    : true,
             url      : variableURL,
             dataType : 'text',
             urlData  : urlData,

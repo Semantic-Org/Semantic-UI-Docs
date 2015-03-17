@@ -13,7 +13,7 @@ semantic.menu.ready = function() {
     handler = {
 
       activate: function() {
-        if(!$(this).hasClass('dropdown')) {
+        if(!$(this).hasClass('dropdown browse')) {
           $(this)
             .addClass('active')
             .closest('.ui.menu')
@@ -33,6 +33,17 @@ semantic.menu.ready = function() {
     })
   ;
 
+  $('.school.example .browse.item')
+    .popup({
+      popup     : '.admission.popup',
+      hoverable : true,
+      position  : 'bottom left',
+      delay     : {
+        show: 300,
+        hide: 800
+      }
+    })
+  ;
 
   $popupItem
     .popup({

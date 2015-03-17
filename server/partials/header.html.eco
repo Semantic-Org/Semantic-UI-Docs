@@ -32,7 +32,7 @@
       <% if @document.themes? && @document.themes.length > 1: %>
       <div class="ui floating dropdown theme basic button" data-element="<%= @document.element %>" data-type="<%= @document.elementType %>">
         <span class="text"><%= @document.themes.length %> Themes</span>
-        <div class="menu ui transition hidden">
+        <div class="menu transition hidden">
           <% for id, name of @document.themes: %>
             <div class="item" data-value="<%= name %>" data-text="<%= name %> Theme"><%= (name.charAt(0).toUpperCase() + name.slice(1)) %></div>
           <% end %>
@@ -70,13 +70,7 @@
             </a>
             <a class="ui button" href="http://learnsemantic.com/guide/expert.html">Getting Started</a>
             <h4 class="ui header">Package Managers</h4>
-            <div class="ui form"><!--
-              <div class="field">
-                <label>Bower</label>
-                <div class="ui fluid input">
-                  <input type="text" readonly="readonly" placeholder="Copy Link" value="bower install semantic-ui">
-                </div>
-              </div> -->
+            <div class="ui form">
               <div class="field">
                 <label>NPM</label>
                 <div class="ui fluid input">
@@ -128,7 +122,7 @@
       <% end %>
     </div>
     <div class="advertisement">
-      <% unless 'sdevelopment' in @getEnvironments(): %>
+      <% unless 'development' in @getEnvironments(): %>
       <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=semanticuicom" id="_carbonads_js"></script>
       <% end %>
     </div>

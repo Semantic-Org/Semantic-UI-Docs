@@ -1160,6 +1160,14 @@ body.progress.animated .ui.progress .bar {
 }
 
 /*--------------
+      Modal
+---------------*/
+
+#example.modal-page .main.container {
+  z-index: auto;
+}
+
+/*--------------
       Popup
 ---------------*/
 

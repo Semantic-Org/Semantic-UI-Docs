@@ -132,7 +132,8 @@ semantic.ready = function() {
       $footer
         .visibility({
           once: false,
-          onTopVisible: function() {
+          onBottomVisible: function(calculations) {
+            console.log(calculations);
             var
               $title = $followMenu.find('> .item > .title').last()
             ;
@@ -376,7 +377,7 @@ semantic.ready = function() {
       ;
       $sticky.sticky({
         context: $container,
-        offset: 50
+        offset: 70
       });
       $followMenu
         .accordion({

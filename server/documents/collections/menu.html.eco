@@ -10,7 +10,7 @@ title       : 'Menu'
 description : 'A menu displays grouped navigation actions'
 type        : 'UI Collection'
 
-themes      : ['Default', 'GitHub']
+themes      : ['Default', 'Chubby', 'GitHub', 'Material']
 ---
 <link rel="stylesheet/less" type="text/css" href="/src/definitions/collections/menu.less" />
 <script src="/javascript/menu.js"></script>
@@ -27,15 +27,85 @@ themes      : ['Default', 'GitHub']
     </h4>
     <p>A menu</p>
     <div class="ui ignored message">
-      Starting in <code>1.12.0</code> menus now use flexbox. This allows for additional layout flexibility, like making sure each menu item will automatically stretch to the size of the largest item regardless of its size.
+      Starting in <code>1.12.0</code> menus now use flexbox. This allows each menu item to automatically stretch to the size of the largest item.
     </div>
     <div class="ui menu">
+      <a class="active item">Editorials</a>
+      <a class="item">Reviews</a>
+      <a class="item">Upcoming Events</a>
+    </div>
+  </div>
+  <div class="another school example">
+    <div class="ui ignored code" data-type="javascript" data-label="Javascript" data-language="Javascript">
+      $('.menu .browse')
+        .popup({
+          popup     : '.admission.popup',
+          hoverable : true,
+          position  : 'bottom left',
+          delay     : {
+            show: 300,
+            hide: 800
+          }
+        })
+      ;
+      $('.menu .dropdown')
+        .dropdown()
+      ;
+    </div>
+    <div class="ui text menu">
       <div class="item">
-        <img src="/images/logo.png">
+        <img src="/images/new-school.jpg">
       </div>
-      <a class="item">Features</a>
-      <a class="item">Testimonials</a>
-      <a class="item">Sign-in</a>
+      <div class="ui dropdown item">
+        Admissions
+        <i class="dropdown icon"></i>
+        <div class="menu">
+          <div class="item">Applications</div>
+          <div class="item">International Students</div>
+          <div class="item">Scholarships</div>
+        </div>
+      </div>
+      <a class="browse item">Academics <i class="dropdown icon"></i></a>
+      <a class="item">About</a>
+      <a class="item">Contact</a>
+      <div class="right menu">
+        <div class="item">
+          <div class="ui icon input">
+            <input type="text" placeholder="Search...">
+            <i class="search link icon"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ui flowing basic admission popup">
+      <div class="ui three column relaxed equal height divided grid">
+        <div class="column">
+          <h4 class="ui header">Business</h4>
+          <div class="ui link list">
+            <a class="item">Design & Urban Ecologies</a>
+            <a class="item">Fashion Design</a>
+            <a class="item">Fine Art</a>
+            <a class="item">Strategic Design</a>
+          </div>
+        </div>
+        <div class="column">
+          <h4 class="ui header">Liberal Arts</h4>
+          <div class="ui link list">
+            <a class="item">Anthropology</a>
+            <a class="item">Economics</a>
+            <a class="item">Media Studies</a>
+            <a class="item">Philosophy</a>
+          </div>
+        </div>
+        <div class="column">
+          <h4 class="ui header">Social Sciences</h4>
+          <div class="ui link list">
+            <a class="item">Food Studies</a>
+            <a class="item">Journalism</a>
+            <a class="item">Non Profit Management</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="another example">
@@ -530,7 +600,7 @@ themes      : ['Default', 'GitHub']
       </a>
       <div class="ui fluid popup">
         <div class="ui four column relaxed equal height divided grid">
-          <div class="ui column">
+          <div class="column">
             <h4 class="ui header">Fabrics</h4>
             <div class="ui link list">
               <a class="item">Cashmere</a>
@@ -539,7 +609,7 @@ themes      : ['Default', 'GitHub']
               <a class="item">Viscose</a>
             </div>
           </div>
-          <div class="ui column">
+          <div class="column">
             <h4 class="ui header">Sizes</h4>
             <div class="ui link list">
               <a class="item">Small</a>
@@ -548,7 +618,7 @@ themes      : ['Default', 'GitHub']
               <a class="item">Plus Sizes</a>
             </div>
           </div>
-          <div class="ui column">
+          <div class="column">
             <h4 class="ui header">Colors</h4>
             <div class="ui link list">
               <a class="item">Neutrals</a>
@@ -556,7 +626,7 @@ themes      : ['Default', 'GitHub']
               <a class="item">Pastels</a>
             </div>
           </div>
-          <div class="ui column">
+          <div class="column">
             <h4 class="ui header">Types</h4>
             <div class="ui link list">
               <a class="item">Knitwear</a>
@@ -655,6 +725,21 @@ themes      : ['Default', 'GitHub']
 
   <h2 class="ui dividing header">Variations</h2>
 
+  <div class="example">
+    <h4 class="ui header">Stackable</h4>
+    <div class="ui ignored info message">
+      Stackable menus are intended to be used with only simple menu content. Stacked menus will not replicate all additional stylings for vertical menus like adjusting dropdown position.
+    </div>
+    <p>A menu can stack at mobile resolutions</p>
+    <div class="ui stackable menu">
+      <div class="item">
+        <img src="/images/logo.png">
+      </div>
+      <a class="item">Features</a>
+      <a class="item">Testimonials</a>
+      <a class="item">Sign-in</a>
+    </div>
+  </div>
   <h3 class="ui header">Menu</h3>
   <div class="example">
     <h4 class="ui header">Inverted</h4>

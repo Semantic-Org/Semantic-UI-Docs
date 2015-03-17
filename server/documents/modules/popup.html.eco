@@ -352,7 +352,7 @@ themes      : ['Default']
         </a>
         <div class="ui fluid popup">
           <div class="ui four column relaxed equal height divided grid">
-            <div class="ui column">
+            <div class="column">
               <h4 class="ui header">Fabrics</h4>
               <div class="ui link list">
                 <a class="item">Cashmere</a>
@@ -361,7 +361,7 @@ themes      : ['Default']
                 <a class="item">Viscose</a>
               </div>
             </div>
-            <div class="ui column">
+            <div class="column">
               <h4 class="ui header">Sizes</h4>
               <div class="ui link list">
                 <a class="item">Small</a>
@@ -370,7 +370,7 @@ themes      : ['Default']
                 <a class="item">Plus Sizes</a>
               </div>
             </div>
-            <div class="ui column">
+            <div class="column">
               <h4 class="ui header">Colors</h4>
               <div class="ui link list">
                 <a class="item">Neutrals</a>
@@ -378,7 +378,7 @@ themes      : ['Default']
                 <a class="item">Pastels</a>
               </div>
             </div>
-            <div class="ui column">
+            <div class="column">
               <h4 class="ui header">Types</h4>
               <div class="ui link list">
                 <a class="item">Knitwear</a>

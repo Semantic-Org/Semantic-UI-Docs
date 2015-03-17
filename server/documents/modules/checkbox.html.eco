@@ -306,8 +306,12 @@ themes      : ['Default']
         <td>Returns whether element is not checked</td>
       </tr>
       <tr>
-        <td>can check</td>
-        <td>Returns whether element is able to be checked</td>
+        <td>can change</td>
+        <td>Returns whether element is able to be changed</td>
+      </tr>
+      <tr>
+        <td>can uncheck</td>
+        <td>Returns whether element is able to be unchecked</td>
       </tr>
     </table>
   </div>

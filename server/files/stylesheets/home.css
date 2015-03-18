@@ -427,6 +427,8 @@
 #example.index .following.bar .column > .menu {
   margin-top: 0px;
   height: 35px;
+}
+#example.index .following.bar .network.menu .item {
   font-weight: bold;
 }
 #example.index .following.bar .network.menu .view-ui {

@@ -29,7 +29,7 @@ docpadConfig = {
 			# Here are some old site urls that you would like to redirect from
 			oldUrls: [],
 
-			version: "2.0",
+			version: "2.0.0",
 
 			# The default title of our website
 			title: "Semantic UI"
@@ -129,6 +129,10 @@ docpadConfig = {
 	# Here we can define handlers for events that DocPad fires
 	# You can find a full listing of events on the DocPad Wiki
 	# events:
+	events:
+    extendCollections: (opts) ->
+        @docpad.getCollection('files').on('add', (document) ->
+            document.setMetaDefaults(standalone:true))
 
 
 }

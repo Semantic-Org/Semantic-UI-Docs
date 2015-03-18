@@ -33,6 +33,15 @@ semantic.menu.ready = function() {
     })
   ;
 
+  $('.ui.search')
+    .search({
+      type: 'category',
+      apiSettings: {
+        action: 'categorySearch'
+      }
+    })
+  ;
+
   $('.school.example .browse.item')
     .popup({
       popup     : '.admission.popup',

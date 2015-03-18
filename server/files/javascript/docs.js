@@ -112,6 +112,7 @@ semantic.ready = function() {
     createWaypoints: function() {
       $sectionHeaders
         .visibility({
+          observeChanges: false,
           once: false,
           offset: 70,
           onTopVisible: handler.activate.accordion,
@@ -123,6 +124,7 @@ semantic.ready = function() {
 
       $sectionExample
         .visibility({
+          observeChanges: false,
           once: false,
           offset: 70,
           onTopPassed: handler.activate.example,
@@ -131,6 +133,7 @@ semantic.ready = function() {
       ;
       $footer
         .visibility({
+          observeChanges: false,
           once: false,
           onBottomVisible: function(calculations) {
             console.log(calculations);

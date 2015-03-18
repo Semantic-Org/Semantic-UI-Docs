@@ -77,8 +77,6 @@ themes      : ['Default']
       </div>
     </div>
 
-
-
     <h2 class="ui dividing header">Variations</h2>
 
     <div class="no left example">
@@ -284,6 +282,9 @@ themes      : ['Default']
       }
       </div>
       <p>Adding an overflow to <code>html</code> is necessary to make sure elements translated off-screen with 3d transformations do not cause iOS to trigger native canvas resizing.</p>
+      <div class="ui ignored info message">
+        To get scroll position in iOS check scrolltop on body <code>document.body.scrollTop</code>
+      </div>
     </div>
 
     <h2 class="ui dividing header">Behavior</h2>

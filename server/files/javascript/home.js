@@ -227,8 +227,8 @@ semantic.home.ready = function() {
   if($(window).width() > 600) {
     $('body')
       .visibility({
-        debug: true,
         offset: -10,
+        observeChanges: false,
         once: false,
         continuous: false,
         onTopPassed: function() {

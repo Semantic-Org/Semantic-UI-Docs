@@ -584,7 +584,6 @@ themes      : ['Default']
       <select class="ui search dropdown">
         <option value="">State</option>
         <option value="AL">Alabama</option>
-        <option value="AL">Alabama</option>
         <option value="AK">Alaska</option>
         <option value="AZ">Arizona</option>
         <option value="AR">Arkansas</option>
@@ -639,7 +638,6 @@ themes      : ['Default']
       <div class="existing code">
       <select class="ui search dropdown">
         <option value="">State</option>
-        <option value="AL">Alabama</option>
         <option value="AL">Alabama</option>
         <option value="AK">Alaska</option>
         <option value="AZ">Arizona</option>
@@ -784,74 +782,70 @@ themes      : ['Default']
     <h4 class="ui header">Pointing</h4>
     <p>A dropdown can be formatted so that its menu is pointing</p>
       <div class="ui menu">
-        <div class="menu">
-          <a class="item">
-            Home
-          </a>
-          <div class="ui pointing dropdown link item">
-            <span class="text">Shopping</span>
-            <i class="dropdown icon"></i>
-            <div class="menu">
-              <div class="header">Categories</div>
-              <div class="item">
-                <i class="dropdown icon"></i>
-                <span class="text">Clothing</span>
-                <div class="menu">
-                  <div class="header">Mens</div>
-                  <div class="item">Shirts</div>
-                  <div class="item">Pants</div>
-                  <div class="item">Jeans</div>
-                  <div class="item">Shoes</div>
-                  <div class="divider"></div>
-                  <div class="header">Womens</div>
-                  <div class="item">Dresses</div>
-                  <div class="item">Shoes</div>
-                  <div class="item">Bags</div>
-                </div>
+        <a class="item">
+          Home
+        </a>
+        <div class="ui pointing dropdown link item">
+          <span class="text">Shopping</span>
+          <i class="dropdown icon"></i>
+          <div class="menu">
+            <div class="header">Categories</div>
+            <div class="item">
+              <i class="dropdown icon"></i>
+              <span class="text">Clothing</span>
+              <div class="menu">
+                <div class="header">Mens</div>
+                <div class="item">Shirts</div>
+                <div class="item">Pants</div>
+                <div class="item">Jeans</div>
+                <div class="item">Shoes</div>
+                <div class="divider"></div>
+                <div class="header">Womens</div>
+                <div class="item">Dresses</div>
+                <div class="item">Shoes</div>
+                <div class="item">Bags</div>
               </div>
-              <div class="item">Home Goods</div>
-              <div class="item">Bedroom</div>
-              <div class="divider"></div>
-              <div class="header">Order</div>
-              <div class="item">Status</div>
-              <div class="item">Cancellations</div>
             </div>
+            <div class="item">Home Goods</div>
+            <div class="item">Bedroom</div>
+            <div class="divider"></div>
+            <div class="header">Order</div>
+            <div class="item">Status</div>
+            <div class="item">Cancellations</div>
           </div>
-          <a class="item">
-            Forums
-          </a>
-          <a class="item">
-            Contact Us
-          </a>
         </div>
+        <a class="item">
+          Forums
+        </a>
+        <a class="item">
+          Contact Us
+        </a>
       </div>
     </div>
     <div class="another hover example">
       <div class="ui vertical menu">
-        <div class="menu">
-          <a class="item">
-            Home
-          </a>
-          <div class="ui left pointing dropdown link item">
-            <i class="dropdown icon"></i>
-            Messages
-            <div class="menu">
-              <div class="item">Inbox</div>
-              <div class="item">Starred</div>
-              <div class="item">Sent Mail</div>
-              <div class="item">Drafts (143)</div>
-              <div class="divider"></div>
-              <div class="item">Spam (1009)</div>
-              <div class="item">Trash</div>
-            </div>
+        <a class="item">
+          Home
+        </a>
+        <div class="ui left pointing dropdown link item">
+          <i class="dropdown icon"></i>
+          Messages
+          <div class="menu">
+            <div class="item">Inbox</div>
+            <div class="item">Starred</div>
+            <div class="item">Sent Mail</div>
+            <div class="item">Drafts (143)</div>
+            <div class="divider"></div>
+            <div class="item">Spam (1009)</div>
+            <div class="item">Trash</div>
           </div>
-          <a class="item">
-            Browse
-          </a>
-          <a class="item">
-            Help
-          </a>
         </div>
+        <a class="item">
+          Browse
+        </a>
+        <a class="item">
+          Help
+        </a>
       </div>
     </div>
     <div class="another button example">
@@ -1992,7 +1986,6 @@ themes      : ['Default']
       <select class="ui search selection dropdown" id="search-select">
         <option value="">State</option>
         <option value="AL">Alabama</option>
-        <option value="AL">Alabama</option>
         <option value="AK">Alaska</option>
         <option value="AZ">Arizona</option>
         <option value="AR">Arkansas</option>
@@ -2048,7 +2041,6 @@ themes      : ['Default']
       <div class="code" data-label="HTML" data-type="html">
         <select class="ui search selection dropdown" id="search-select">
           <option value="">State</option>
-          <option value="AL">Alabama</option>
           <option value="AL">Alabama</option>
           <option value="AK">Alaska</option>
           <option value="AZ">Arizona</option>

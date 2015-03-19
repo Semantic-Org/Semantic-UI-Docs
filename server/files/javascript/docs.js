@@ -305,7 +305,7 @@ semantic.ready = function() {
     },
 
     getText: function($element) {
-      $element = ($element.find('a').length > 0)
+      $element = ($element.find('a').not('.label').length > 0)
         ? $element.find('a')
         : $element
       ;
@@ -314,7 +314,6 @@ semantic.ready = function() {
           return this.nodeType == 3;
         })
       ;
-      console.log($element, $text);
       return ($text.length > 0)
         ? $text[0].nodeValue.trim()
         : $element.find('a').text().trim()
@@ -469,7 +468,6 @@ semantic.ready = function() {
             dataType : 'text',
             urlData  : urlData,
             onSuccess: function(content) {
-              console.log(handler.less.parseFile(content));
               window.less.modifyVars( handler.less.parseFile(content) );
               $themeDropdown
                 .api({

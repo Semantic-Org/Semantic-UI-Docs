@@ -305,14 +305,19 @@ semantic.ready = function() {
     },
 
     getText: function($element) {
+      $element = ($element.find('a').length > 0)
+        ? $element.find('a')
+        : $element
+      ;
       var
         $text = $element.contents().filter(function(){
           return this.nodeType == 3;
         })
       ;
+      console.log($element, $text);
       return ($text.length > 0)
         ? $text[0].nodeValue.trim()
-        : ''
+        : $element.find('a').text().trim()
       ;
     },
 

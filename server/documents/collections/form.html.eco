@@ -61,8 +61,8 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
       </div>
       <div class="two fields">
         <div class="field">
-          <label>State</label>
-          <select class="ui search dropdown">
+          <label>States Lived In</label>
+          <select multiple class="ui search dropdown">
             <option value="">State</option>
             <option value="AL">Alabama</option>
             <option value="AL">Alabama</option>

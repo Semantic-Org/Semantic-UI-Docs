@@ -6,45 +6,45 @@ standalone : true
 <div class="following bar">
   <div class="ui page grid">
     <div class="column">
-      <div class="ui logo shape">
-        <div class="sides">
-          <div class="active ui side">
-            <img class="ui image" src="/images/logo.png">
-          </div>
-          <div class="learn side">
-            <img class="ui image" src="/images/learn-logo.png">
-          </div>
-        </div>
-      </div>
-      <div class="ui inverted right floated secondary menu">
-        <div class="item">
-          <a class="twitter-share-button twitter"
-            href="http://twitter.com/share"
-            data-text="Semantic UI is a next-gen UI library"
-            data-url="http://semantic-ui.com"
-            data-via="semanticui">
-          </a>
-          <% if 'development' in @getEnvironments(): %>
-          <% else: %>
-          <script type="text/javascript">
-          window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
-          </script>
-          <iframe class="github" src="http://ghbtns.com/github-btn.html?user=semantic-org&amp;repo=semantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
-          <% end %>
-        </div>
-        <div class="ui language floating dropdown link item" id="languages">
-          <i class="world icon"></i>
-          <div class="text">English</div>
-          <%- @partial('languages') %>
-        </div>
-      </div>
       <div class="ui large inverted secondary network menu">
+        <div class="item">
+          <div class="ui logo shape">
+            <div class="sides">
+              <div class="active ui side">
+                <img class="ui image" src="/images/logo.png">
+              </div>
+              <div class="learn side">
+                <img class="ui image" src="/images/learn-logo.png">
+              </div>
+            </div>
+          </div>
+        </div>
         <a class="view-ui item">
           <i class="sidebar icon"></i> Menu
         </a>
         <a href="http://www.learnsemantic.com" data-site="learn" class="transition hidden additional item">Learn</a>
-        <!-- <span class="additional item" data-site="themes" data-content="Coming Soon">Themes</span>
-        <span class="additional item" data-site="layout" data-content="Coming Soon">Layouts</span> -->
+        <div class="right menu">
+          <div class="item">
+            <a class="twitter-share-button twitter"
+              href="http://twitter.com/share"
+              data-text="Semantic UI is a next-gen UI library"
+              data-url="http://semantic-ui.com"
+              data-via="semanticui">
+            </a>
+            <% if 'development' in @getEnvironments(): %>
+            <% else: %>
+            <script type="text/javascript">
+            window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
+            </script>
+            <iframe class="github" src="http://ghbtns.com/github-btn.html?user=semantic-org&amp;repo=semantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
+            <% end %>
+          </div>
+          <div class="ui language floating dropdown link item" id="languages">
+            <i class="world icon"></i>
+            <div class="text">English</div>
+            <%- @partial('languages') %>
+          </div>
+        </div>
       </div>
     </div>
   </div>

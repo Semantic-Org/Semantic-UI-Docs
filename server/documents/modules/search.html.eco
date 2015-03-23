@@ -413,7 +413,7 @@ type        : 'UI Module'
           }
           </div>
           </td>
-          <td>Settings for <a href="/modules/api.html#/usage">API</a> call.</td>
+          <td>Settings for <a href="/behaviors/api.html#/usage">API</a> call.</td>
         </tr>
         <tr>
           <td>minCharacters</td>

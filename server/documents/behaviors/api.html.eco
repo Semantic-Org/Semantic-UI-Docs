@@ -553,9 +553,9 @@ type        : 'UI Behavior'
         <h4 class="ui header">Coupling with State Module</h4>
         <p>Initializing an API action with the state module gives you more granular control over UI states, like setting an activated or de-activated state and the ability to adjust text values for each state:</p>
 
-        <p>
+     <!--    <p>
           For additional examples of the possibilities available with state behaviors check the <a href="#">state module documentation</a>
-        </p>
+        </p> -->
 
         <div class="code" data-demo="true">
         $('.follow.button')

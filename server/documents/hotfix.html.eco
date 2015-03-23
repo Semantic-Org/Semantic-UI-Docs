@@ -87,7 +87,6 @@ $(document).ready(function() {
       </div>
     </div>
   </div>
-<!--
   <div class="ui section divider"></div>
 
   <div class="ui fluid multiple search selection dropdown">
@@ -590,5 +589,5 @@ $(document).ready(function() {
       <div class="item" data-value="zm"><i class="zm flag"></i>Zambia</div>
       <div class="item" data-value="zw"><i class="zw flag"></i>Zimbabwe</div>
     </div>
-  </div> -->
+  </div>
 </div>

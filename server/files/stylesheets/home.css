@@ -14,6 +14,7 @@
 }
 #example > .pusher {
   display: block;
+  min-height: 0px;
   flex-direction: initial;
 }
 #example > .pusher > .full.height {
@@ -471,9 +472,9 @@
 }
 #example.index .feature.stripe .column {
   display: flex;
+  -ms-flex-direction: column;
   -webkit-flex-direction: column;
   -moz-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
 }
 #example.index .feature.stripe p {

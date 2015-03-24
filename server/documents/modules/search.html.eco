@@ -417,7 +417,7 @@ type        : 'UI Module'
         </tr>
         <tr>
           <td>minCharacters</td>
-          <td>2</td>
+          <td>1</td>
           <td>Minimum characters to query for results</td>
         </tr>
         <tr>
@@ -468,12 +468,12 @@ type        : 'UI Module'
         </tr>
         <tr>
           <td>hideDelay</td>
-          <td>300</td>
+          <td>0</td>
           <td>Delay before hiding results after search blur</code></td>
         </tr>
         <tr>
           <td>searchDelay</td>
-          <td>300</td>
+          <td>100</td>
           <td>Delay before querying results on inputchange</td>
         </tr>
         <tr>
@@ -590,7 +590,7 @@ type        : 'UI Module'
         </tr>
         <tr>
           <td>performance</td>
-          <td>false</td>
+          <td>true</td>
           <td>Show <code>console.table</code> output with performance metrics</td>
         </tr>
         <tr>

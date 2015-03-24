@@ -577,7 +577,7 @@ themes      : ['Default', 'Chubby']
         </tr>
         <tr>
           <td>performance</td>
-          <td>false</td>
+          <td>true</td>
           <td>Show <code>console.table</code> output with performance metrics</td>
         </tr>
         <tr>

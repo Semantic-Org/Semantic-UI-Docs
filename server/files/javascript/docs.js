@@ -226,7 +226,7 @@ semantic.ready = function() {
       ;
       // dont trigger on translate event every page load
       if(languageDropdownUsed) {
-        if(languageCode == 'zh' && window.location.host !== 'semantic-ui.cn') {
+        if(languageCode == 'zh' && window.location.host.replace('www.','') !== 'semantic-ui.cn') {
           $chineseModal
             .modal({
               closable: false

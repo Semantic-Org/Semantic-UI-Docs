@@ -568,7 +568,8 @@
   margin: 2rem 2rem -4rem;
 }
 #example .theming .source.grid.visible {
-  display: block !important;
+  display: block;
+  display: flex !important;
 }
 
 #example .theming.stripe .buttons {

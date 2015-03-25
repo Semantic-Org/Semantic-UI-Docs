@@ -31,7 +31,7 @@ themes      : ['Default']
 
       <p>Unlike a <code>page grid</code>, which continues to grow as a percentage of total screen width, containers maintain a single size, making responsive styling simpler.</p>
 
-      <p>Containers are designed to be compatible with grids The default theme uses a maximum container width of <code>1200px</code> which gives each grid column exactly <code>75px</code> when nested inside a container element.</p>
+      <p>Containers are designed to be compatible with grids. The default theme uses a maximum container width of <code>1200px</code> which gives each grid column exactly <code>75px</code> when nested inside a container element.</p>
 
       <h3 class="ui header">Feature Comparison</h3>
 
@@ -331,7 +331,7 @@ themes      : ['Default']
 
     <div class="no example">
       <h4 class="ui header">Comparing Page Grids to Grid Containers</h4>
-      <p>The following shows a side-by-side comparison of using both containers and page grids to achieve a four column layout.</p>
+      <p>The following shows a side-by-side comparison of using both containers and page grids to create a page layout. Containers will remain a fixed size, while page grids will adapt their width constantly with browser changes.</p>
       <p>These grids use the <code>equal width</code> variation which splits all undeclared column widths evenly in size.</p>
     </div>
 

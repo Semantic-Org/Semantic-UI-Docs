@@ -63,7 +63,7 @@ themes      : ['Default', 'Basic', 'Classic']
     </table>
   </div>
   <div class="another example">
-    <table class="ui very basic table">
+    <table class="ui very basic celled table">
       <thead>
         <th class="collapsing">Rank</th>
         <th>Name</th>

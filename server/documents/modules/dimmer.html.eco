@@ -183,7 +183,7 @@ themes      : ['Default']
             </div>
           </div>
         </div>
-        <img class="ui wireframe image" src="/images/wireframe/image.png">
+        <img class="ui image" src="/images/wireframe/image.png">
       </div>
       <div class="ui circular image">
         <div class="ui dimmer">

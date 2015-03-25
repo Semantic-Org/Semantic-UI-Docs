@@ -30,9 +30,9 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
     </h4>
     <p>A menu</p>
     <div class="ui ignored message">
-      Starting in <code>1.12.0</code> menus now use flexbox. This allows each menu item to automatically stretch to the size of the largest item.
+      Starting in <code>2.0</code> menus now use flexbox. This allows each menu item to automatically stretch to the size of the largest item.
     </div>
-    <div class="ui menu">
+    <div class="ui three item menu">
       <a class="active item">Editorials</a>
       <a class="item">Reviews</a>
       <a class="item">Upcoming Events</a>
@@ -65,10 +65,10 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
       </div>
     </div>
     <div class="ui flowing basic admission popup">
-      <div class="ui three column relaxed equal height divided grid">
+      <div class="ui three column relaxed divided grid">
         <div class="column">
           <h4 class="ui header">Business</h4>
-          <div class="ui small link list">
+          <div class="ui link list">
             <a class="item">Design & Urban Ecologies</a>
             <a class="item">Fashion Design</a>
             <a class="item">Fine Art</a>
@@ -77,7 +77,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
         </div>
         <div class="column">
           <h4 class="ui header">Liberal Arts</h4>
-          <div class="ui small link list">
+          <div class="ui link list">
             <a class="item">Anthropology</a>
             <a class="item">Economics</a>
             <a class="item">Media Studies</a>
@@ -86,7 +86,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
         </div>
         <div class="column">
           <h4 class="ui header">Social Sciences</h4>
-          <div class="ui small link list">
+          <div class="ui link list">
             <a class="item">Food Studies</a>
             <a class="item">Journalism</a>
             <a class="item">Non Profit Management</a>
@@ -96,7 +96,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
     </div>
   </div>
   <div class="another example">
-    <div class="ui menu">
+    <div class="ui top attached menu">
       <div class="ui dropdown icon item">
         <i class="wrench icon"></i>
         <div class="menu">
@@ -134,7 +134,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
         </div>
       </div>
     </div>
-    <div class="ui segment">
+    <div class="ui bottom attached segment">
       <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
     </div>
   </div>
@@ -217,6 +217,9 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
   <div class="example">
     <h4 class="ui header">Tabular</h4>
     <p>A message can be formatted to show tabs of information</p>
+    <div class="ui ignored info message">
+      Be sure to visit the <a href="/modules/tab.html">tab documentation</a> for information on how to set up dynamic tabs
+    </div>
     <div class="ui tabular menu">
       <a class="active item">
         Bio
@@ -251,7 +254,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
     </div>
   </div>
   <div class="another example">
-    <div class="ui equal height stretched grid">
+    <div class="ui grid">
       <div class="four wide column">
         <div class="ui vertical fluid tabular menu">
           <a class="active item">
@@ -268,9 +271,9 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
           </a>
         </div>
       </div>
-      <div class="twelve wide column">
+      <div class="twelve wide stretched column">
         <div class="ui segment">
-          This is an equal height grid. This segment will always match the tab height
+          This is an stretched grid column. This segment will always match the tab height
         </div>
       </div>
     </div>
@@ -324,19 +327,19 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
   <div class="another example">
     <div class="ui secondary vertical menu">
       <a class="active item">
-        <i class="users icon"></i>
-        Friends
+        Account
       </a>
       <a class="item">
-        Messages
+        Settings
       </a>
       <div class="ui dropdown item">
         <i class="dropdown icon"></i>
-        More
+        Display Options
         <div class="menu">
-          <a class="item"><i class="edit icon"></i> Edit Profile</a>
-          <a class="item"><i class="globe icon"></i> Choose Language</a>
-          <a class="item"><i class="settings icon"></i> Account Settings</a>
+          <div class="header">Text Size</div>
+          <a class="item">Small</a>
+          <a class="item">Medium</a>
+          <a class="item">Large</a>
         </div>
       </div>
     </div>
@@ -480,22 +483,21 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
   </div>
 
   <div class="example">
-    <h4 class="ui header">Text Item</h4>
-    <p>A menu may have a simple text item.</p>
-    <div class="ui ignore info message">
-      <p><i class="icon heart"></i> Single paragraphs are automatically formatted as text. You can also specify an item as textual by adding the classname <b>text</b></p>
-    </div>
+    <h4 class="ui header">Text</h4>
+    <p>A vertical menu item can include any type of text content.</p>
     <div class="ui vertical menu">
-      <div class="header item">
-        Promotions
-        <span class="ui teal label">New</span>
-      </div>
-      <div class="text item">
-        <a>Join now</a> and save $10 on a pro membership!
-      </div>
-      <div class="item">
-        <p><a>Join tomorrow</a> and save $5 on pro.</p>
-      </div>
+      <a class="item">
+        <h4 class="ui header">Promotions</h4>
+        <p>Check out our new promotions</p>
+      </a>
+      <a class="item">
+        <h4 class="ui header">Coupons</h4>
+        <p>Check out our collection of coupons</p>
+      </a>
+      <a class="item">
+        <h4 class="ui header">Rebates</h4>
+        <p>Visit our rebate forum for information on claiming rebates</p>
+      </a>
     </div>
   </div>
 
@@ -746,6 +748,62 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
       <a class="item">
         Friends
       </a>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui inverted vertical menu">
+      <a class="active item">
+        Home
+      </a>
+      <a class="item">
+        Messages
+      </a>
+      <a class="item">
+        Friends
+      </a>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui inverted vertical pointing menu">
+      <a class="active item">
+        Home
+      </a>
+      <a class="item">
+        Messages
+      </a>
+      <a class="item">
+        Friends
+      </a>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui inverted segment">
+      <div class="ui inverted secondary menu">
+        <a class="active item">
+          Home
+        </a>
+        <a class="item">
+          Messages
+        </a>
+        <a class="item">
+          Friends
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui inverted segment">
+      <div class="ui inverted secondary pointing menu">
+        <a class="active item">
+          Home
+        </a>
+        <a class="item">
+          Messages
+        </a>
+        <a class="item">
+          Friends
+        </a>
+      </div>
     </div>
   </div>
   <div class="example">
@@ -1030,6 +1088,27 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
     </div>
     <div class="ui bottom attached segment">
       There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui top attached menu">
+      <a class="active item">
+        Section 1
+      </a>
+      <a class="item">
+        Section 2
+      </a>
+    </div>
+    <div class="ui attached segment">
+      There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+    </div>
+    <div class="ui bottom attached menu">
+      <a class="active item">
+        Section 1
+      </a>
+      <a class="item">
+        Section 2
+      </a>
     </div>
   </div>
 

@@ -45,11 +45,6 @@ themes      : ['default', 'GitHub']
   <div class="example">
     <h4 class="ui header">Horizontal Segment</h4>
     <p>A horizontal segment formats its content to be aligned as part of a horizontal group</p>
-    <div class="ui ignored info message">
-      <div class="header">When to Use Horizontal Segments</div>
-      <p>Horizontal segments are most effectively used with grids, to allow for text groups that are aligned across grid rows.</p>
-      <p>A <code>horizontal segment</code> adds horizontal padding and a horizontal border, while a <code>basic horizontal segment</code> adds only the padding <b>but not the border</b>.</p>
-    </div>
     <div class="ui three column grid">
       <div class="column">
         <div class="ui horizontal segment">

@@ -42,7 +42,14 @@ standalone : true
           <div class="ui language floating dropdown link item" id="languages">
             <i class="world icon"></i>
             <div class="text">English</div>
-            <%- @partial('languages') %>
+            <div class="menu">
+              <div class="header">Search Languages</div>
+              <div class="ui icon search input">
+                <i class="search icon"></i>
+                <input type="text" placeholder="Search languages...">
+              </div>
+              <%- @partial('languages') %>
+            </div>
           </div>
         </div>
       </div>

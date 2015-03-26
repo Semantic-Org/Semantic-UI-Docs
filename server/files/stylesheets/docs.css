@@ -442,6 +442,11 @@ body#example {
   ;
 }
 
+
+#example .language.dropdown > .menu {
+  min-width: 250px;
+}
+
 #example .fixed.launch.button .text {
   position: absolute;
   white-space: nowrap;
@@ -1714,13 +1719,6 @@ body.progress.animated .ui.progress .bar {
 @media only screen and (max-width : 640px) {
   #example .masthead.segment .download.button {
     display: none;
-  }
-  #example .language.dropdown .menu {
-    overflow-x: hidden;
-    overflow-y: auto;
-    backface-visibility: hidden;
-    -webkit-overflow-scrolling: touch;
-    max-height: 316px;
   }
   #example.transition .fixed.column {
     display: none;

@@ -593,7 +593,7 @@ type        : 'UI Behavior'
       <p>Validation messages can also appear inline. UI Forms automatically format <a href="/elements/label.html">labels</a> with the class name <code>prompt</code>. These validation prompts are also set to appear on input change instead of form submission.</p>
       <div class="ui ignored warning message">This example also uses a different validation event. Each element will be validated on input blur instead of the default form submit.</div>
       <div class="code" data-type="javascript">
-        $('.ui.dropdown')
+        $('.ui.form')
           .form(validationRules, {
             inline : true,
             on     : 'blur'

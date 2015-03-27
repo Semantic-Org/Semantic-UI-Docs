@@ -22,7 +22,10 @@ themes      : ['Default']
   <h2 class="ui dividing header">Types</h2>
 
   <div class="example">
-    <h4 class="ui header">Input</h4>
+    <h4 class="ui header">
+      Input
+      <span class="ui teal label">Flexbox</span>
+    </h4>
     <p>A standard input</p>
     <div class="ui input">
       <input type="text" placeholder="Search...">

@@ -345,13 +345,13 @@ themes      : ['Default']
     <div class="ui large label">
       Large
     </div>
-    <div class="ui large label">
+    <div class="ui big label">
       Big
     </div>
     <div class="ui huge label">
       Huge
     </div>
-    <div class="ui huge label">
+    <div class="ui massive label">
       Massive
     </div>
   </div>

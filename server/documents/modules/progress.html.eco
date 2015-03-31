@@ -171,6 +171,11 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
           <div class="label">Error</div>
         </div>
       </div>
+      <div class="ignored">
+        <div class="ui icon buttons">
+          <div class="increment ui basic green button"><i class="plus icon"></i></div>
+        </div>
+      </div>
     </div>
 
     <div class="example">
@@ -183,6 +188,12 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
         <p>La la la la</p>
         <div class="ui bottom attached progress">
           <div class="bar"></div>
+        </div>
+      </div>
+      <div class="ignored">
+        <div class="ui icon buttons">
+          <div class="decrement ui basic red button"><i class="minus icon"></i></div>
+          <div class="increment ui basic green button"><i class="plus icon"></i></div>
         </div>
       </div>
     </div>
@@ -206,6 +217,12 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
         </div>
         <div class="ui bottom attached progress">
           <div class="bar"></div>
+        </div>
+      </div>
+      <div class="ignored">
+        <div class="ui icon buttons">
+          <div class="decrement ui basic red button"><i class="minus icon"></i></div>
+          <div class="increment ui basic green button"><i class="plus icon"></i></div>
         </div>
       </div>
     </div>
@@ -235,6 +252,12 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
       <div class="ui big progress">
         <div class="bar"></div>
         <div class="label">Big</div>
+      </div>
+      <div class="ignored">
+        <div class="ui icon buttons">
+          <div class="decrement ui basic red button"><i class="minus icon"></i></div>
+          <div class="increment ui basic green button"><i class="plus icon"></i></div>
+        </div>
       </div>
     </div>
 
@@ -267,6 +290,12 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
       </div>
       <div class="ui yellow progress">
         <div class="bar"></div>
+      </div>
+      <div class="ignored">
+        <div class="ui icon buttons">
+          <div class="decrement ui basic red button"><i class="minus icon"></i></div>
+          <div class="increment ui basic green button"><i class="plus icon"></i></div>
+        </div>
       </div>
     </div>
 
@@ -351,11 +380,6 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
           <div class="label">Adding Photos</div>
         </div>
       </div>
-      <div class="evaluated code" data-type="javascript">
-        $('#example4')
-          .progress()
-        ;
-      </div>
     </div>
 
     <div class="example">
@@ -381,20 +405,18 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
         </tr>
       </table>
       <div class="code" data-type="javascript" data-demo="true">
-        $('#example4')
+        $('#example5')
           .progress('increment')
         ;
       </div>
       <div class="code" data-type="html" data-preview="true">
-        <div class="ui indicating progress" data-value="1" data-total="20" id="example4">
-          <div class="bar">
-            <div class="progress"></div>
-          </div>
+        <div class="ui indicating progress" data-value="1" data-total="20" id="example5">
+          <div class="bar"></div>
           <div class="label">Adding Photos</div>
         </div>
       </div>
       <div class="evaluated code" data-type="javascript">
-        $('#example4')
+        $('#example5')
           .progress({
             text: {
               active  : 'Adding {value} of {total} photos',
@@ -409,12 +431,12 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
       <h4 class="ui header">Translation</h4>
       <p>You can also adjust text labels to help strings appear translated</p>
       <div class="code" data-type="javascript" data-demo="true">
-        $('#example5')
+        $('#example6')
           .progress('increment')
         ;
       </div>
       <div class="code" data-type="html" data-preview="true">
-        <div class="ui teal progress" data-value="15" data-total="20" id="example5">
+        <div class="ui progress" data-value="15" data-total="20" id="example6">
           <div class="bar">
             <div class="progress"></div>
           </div>
@@ -422,7 +444,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
         </div>
       </div>
       <div class="evaluated code" data-type="javascript">
-        $('#example5')
+        $('#example6')
           .progress({
             label: 'ratio',
             text: {

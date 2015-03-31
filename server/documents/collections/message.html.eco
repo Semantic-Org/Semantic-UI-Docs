@@ -44,7 +44,10 @@ themes      : ['Default', 'GitHub', 'Gmail']
   </div>
 
   <div class="example">
-    <h4 class="ui header">Icon Message</h4>
+    <h4 class="ui header">
+      Icon Message
+      <span class="ui teal label">Flexbox</span>
+    </h4>
     <p>A message can contain an icon.</p>
     <div class="ui icon message">
       <i class="inbox icon"></i>

@@ -140,6 +140,7 @@ type        : 'UI Behavior'
           </div>
         </div>
         <div class="ui blue submit button">Submit</div>
+        <div class="ui error message"></div>
       </div>
     </form>
 
@@ -211,6 +212,21 @@ type        : 'UI Behavior'
             <td>maxLength</td>
             <td>A field is less than a max length</td>
             <td><code>maxLength[50]</code></td>
+          </tr>
+          <tr>
+            <td>minCount</td>
+            <td>A multiple select field contains at minimum (count) selections</td>
+            <td><code>minCount[count]</code></td>
+          </tr>
+          <tr>
+            <td>exactCount</td>
+            <td>A multiple select field contains exactly (count) selections</td>
+            <td><code>exactCount[count]</code></td>
+          </tr>
+          <tr>
+            <td>maxCount</td>
+            <td>A multiple select field contains at maximum (count) selections</td>
+            <td><code>maxCount[count]</code></td>
           </tr>
           <tr>
             <td>not</td>
@@ -576,6 +592,7 @@ type        : 'UI Behavior'
             <input type="text" name="cc-email">
           </div>
         </div>
+        <div class="ui divider"></div>
         <div class="ui blue submit button">Submit</div>
         <div class="ui error message"></div>
       </form>

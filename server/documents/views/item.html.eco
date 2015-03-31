@@ -23,7 +23,10 @@ themes      : ['Default']
   <h2 class="ui dividing header">Types</h2>
 
   <div class="example">
-    <h4 class="ui header">Items</h4>
+    <h4 class="ui header">
+      Items
+      <span class="ui teal label">Flexbox</span>
+    </h4>
     <p>A group of items.</p>
     <div class="ui ignored positive icon message">
       <i class="mobile icon"></i>
@@ -168,7 +171,7 @@ themes      : ['Default']
             <span class="stay">2 Weeks</span>
           </div>
           <div class="description">
-            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">homebrew.
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
           </div>
         </div>
       </div>
@@ -473,6 +476,47 @@ themes      : ['Default']
           <div class="header">Jenny Hess</div>
           <div class="description">
             <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Vertical Alignment</h4>
+    <p>Content can specify its vertical alignment</p>
+    <div class="ui ignored info message">
+      <i class="info icon"></i>
+      You can include an arbitrary amount of metadata using your own class conventions, all child elements will automatically be spaced
+    </div>
+    <div class="ui items">
+      <div class="item">
+        <div class="ui small image">
+          <img src="/images/wireframe/image.png">
+        </div>
+        <div class="content">
+          <div class="header">
+            Top Aligned
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="ui small image">
+          <img src="/images/wireframe/image.png">
+        </div>
+        <div class="middle aligned content">
+          <div class="header">
+            Middle Aligned
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="ui small image">
+          <img src="/images/wireframe/image.png">
+        </div>
+        <div class="bottom aligned content">
+          <div class="header">
+            Bottom Aligned
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 ---
 layout      : 'default'
 css         : 'breadcrumb'
+standalone  : true
 
 element     : 'breadcrumb'
 elementType : 'collection'
@@ -33,6 +34,17 @@ themes      : ['Default']
       <div class="active section">T-Shirt</div>
     </div>
   </div>
+
+  <div class="another example">
+    <div class="ui breadcrumb segment">
+      <a class="section">Home</a>
+      <i class="right triangle icon divider"></i>
+      <a class="section">Store</a>
+      <i class="right triangle icon divider"></i>
+      <div class="active section">T-Shirt</div>
+    </div>
+  </div>
+
 
   <h2 class="ui dividing header">Elements</h2>
 

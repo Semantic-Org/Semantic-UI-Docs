@@ -3,6 +3,7 @@ layout      : 'default'
 css         : 'site'
 element     : 'site'
 elementType : 'global'
+standalone  : true
 
 title       : 'Site'
 description : 'A site is a set of global constraints that define the basic parameters of all UI elements'
@@ -135,14 +136,14 @@ themes      : ['Default', 'Material']
     <h4 class="ui header">Colors</h4>
     <p>A site can define a set of hex values for common named colors</p>
     <div class="ui four column stackable padded grid">
-      <div class="blue column"></div>
-      <div class="green column"></div>
-      <div class="orange column"></div>
-      <div class="pink column"></div>
-      <div class="purple column"></div>
-      <div class="red column"></div>
-      <div class="teal column"></div>
-      <div class="yellow column"></div>
+      <div class="blue column">Blue</div>
+      <div class="green column">Green</div>
+      <div class="orange column">Orange</div>
+      <div class="pink column">Pink</div>
+      <div class="purple column">Purple</div>
+      <div class="red column">Red</div>
+      <div class="teal column">Teal</div>
+      <div class="yellow column">Yellow</div>
     </div>
   </div>
 

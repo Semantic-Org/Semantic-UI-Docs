@@ -1300,7 +1300,6 @@ themes      : ['Default']
       <i class="circular inverted teal users icon"></i>
     </div>
 
-
     <div class="example">
       <h4 class="ui header">Bordered</h4>
       <div class="ui ignored info message">
@@ -1326,13 +1325,54 @@ themes      : ['Default']
 
     <div class="example">
       <h4 class="ui header">Inverted</h4>
-      <p>an icon can have its colors inverted for contrast</p>
-      <i class="inverted black users icon"></i>
-      <i class="inverted blue user icon"></i>
-      <i class="inverted red users icon"></i>
-      <i class="inverted green user icon"></i>
-      <i class="inverted purple chat icon"></i>
-      <i class="inverted teal comment icon"></i>
+      <p>An icon can have its colors inverted for contrast</p>
+      <div class="ui inverted segment">
+        <i class="inverted users icon"></i>
+        <i class="inverted black users icon"></i>
+        <i class="inverted blue user icon"></i>
+        <i class="inverted red users icon"></i>
+        <i class="inverted green user icon"></i>
+        <i class="inverted purple chat icon"></i>
+        <i class="inverted teal comment icon"></i>
+      </div>
+    </div>
+
+    <h2 class="ui dividing header">Groups</h2>
+
+    <div class="example">
+      <h4 class="ui header">Icon Group</h4>
+      <p>Several icons can be used together as a group</p>
+      <i class="huge icons">
+        <i class="big thin circle icon"></i>
+        <i class="user icon"></i>
+      </i>
+    </div>
+    <div class="another example">
+      <i class="huge icons">
+        <i class="big red dont icon"></i>
+        <i class="black user icon"></i>
+      </i>
+      <i class="huge icons">
+        <i class="big loading sun icon"></i>
+        <i class="user icon"></i>
+      </i>
+    </div>
+    <div class="example">
+      <h4 class="ui header">Corner Icon</h4>
+      <p>A group of icons can display a smaller corner icon</p>
+      <i class="huge icons">
+        <i class="puzzle icon"></i>
+        <i class="corner add icon"></i>
+      </i>
+    </div>
+    <div class="another example">
+      <h2 class="ui header">
+        <i class="large icons">
+          <i class="twitter icon"></i>
+          <i class="inverted corner add icon"></i>
+        </i>
+        Add on Twitter
+      </h2>
     </div>
 
   </div>

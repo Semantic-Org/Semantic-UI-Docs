@@ -168,7 +168,7 @@ themes      : ['Default']
       <div class="code" data-type="javascript">
         $('.ui.rating')
           .rating({
-            rating: 3,
+            initialRating: 3,
             maxRating: 5
           })
         ;

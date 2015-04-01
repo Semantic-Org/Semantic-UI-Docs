@@ -208,7 +208,7 @@ themes      : ['Default', 'Basic', 'Classic']
     </div>
     <div class="ui special cards">
       <div class="card">
-        <div class="dimmable image">
+        <div class="blurring dimmable image">
           <div class="ui dimmer">
             <div class="content">
               <div class="center">
@@ -232,7 +232,7 @@ themes      : ['Default', 'Basic', 'Classic']
         </div>
       </div>
       <div class="card">
-        <div class="dimmable image">
+        <div class="blurring dimmable image">
           <div class="ui inverted dimmer">
             <div class="content">
               <div class="center">

@@ -481,7 +481,7 @@ standalone : true
             <a href="/views/card.html">Card</a>
           </h4>
           <div class="ui card">
-            <div class="image dimmable">
+            <div class="blurring dimmable image">
               <div class="ui dimmer">
                 <div class="content">
                   <div class="center">

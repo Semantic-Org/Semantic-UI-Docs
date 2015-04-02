@@ -419,9 +419,8 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
   <h2 class="ui dividing header">Elements</h2>
 
   <div class="example">
-    <h4 class="ui header">Header Item</h4>
-    <p>A menu may have a header to help label sections of a menu.</p>
-
+    <h4 class="ui header">Header</h4>
+    <p>A menu item may include a header or may itself be a header</p>
     <div class="ui menu">
       <div class="header item">
         Our Company

@@ -1,6 +1,7 @@
 ---
 layout      : 'default'
 css         : 'reveal'
+standalone  : true
 
 element     : 'reveal'
 elementType : 'element'
@@ -19,22 +20,21 @@ themes      : ['Default']
   <h2 class="ui dividing header">Types</h2>
 
   <div class="example">
-    <h4 class="ui header">Reveal</h4>
-    <p>A standard reveal has no special formatting</p>
-    <div class="ui ignored warning message">
-      A reveal will take no action unless a type of reveal is specified.
-    </div>
-    <div class="ui circular reveal">
-      <img class="visible content" src="/images/demo/stickfigure.jpg">
-      <img class="hidden content" src="/images/demo/photo2.jpg">
-    </div>
-  </div>
-  <div class="example">
     <h4 class="ui header">Fade</h4>
     <p>An element can disappear to reveal content below</p>
     <div class="ui fade reveal">
-      <img class="visible content" src="/images/demo/invention.jpg">
-      <img class="hidden content" src="/images/demo/title.png">
+      <div class="visible content">
+        <img src="/images/wireframe/square-image.png" class="ui small image">
+      </div>
+      <div class="hidden content">
+        <img src="/images/avatar/large/ade.jpg" class="ui small image">
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui small fade reveal image">
+      <img class="visible content" src="/images/wireframe/square-image.png">
+      <img class="hidden content" src="/images/avatar/large/ade.jpg">
     </div>
   </div>
 
@@ -42,63 +42,90 @@ themes      : ['Default']
     <h4 class="ui header">Move</h4>
     <p>An element can move in a direction to reveal content</p>
     <div class="ui move reveal">
-      <img class="visible content" src="/images/demo/invention.jpg">
-      <img class="hidden content" src="/images/demo/title.png">
+      <div class="visible content">
+        <img src="/images/wireframe/square-image.png" class="ui small image">
+      </div>
+      <div class="hidden content">
+        <img src="/images/avatar/large/chris.jpg" class="ui small image">
+      </div>
     </div>
   </div>
   <div class="another example">
     <div class="ui move right reveal">
-      <img class="visible content" src="/images/demo/invention.jpg">
-      <img class="hidden content" src="/images/demo/title.png">
+      <div class="visible content">
+        <img src="/images/wireframe/square-image.png" class="ui small image">
+      </div>
+      <div class="hidden content">
+        <img src="/images/avatar/large/jenny.jpg" class="ui small image">
+      </div>
     </div>
   </div>
 
   <div class="another example">
     <div class="ui move up reveal">
-      <img class="visible content" src="/images/demo/invention.jpg">
-      <img class="hidden content" src="/images/demo/title.png">
+      <div class="visible content">
+        <img src="/images/wireframe/square-image.png" class="ui small image">
+      </div>
+      <div class="hidden content">
+        <img src="/images/avatar/large/justen.jpg" class="ui small image">
+      </div>
     </div>
   </div>
 
   <div class="another example">
     <div class="ui move down reveal">
-      <img class="visible content" src="/images/demo/invention.jpg">
-      <img class="hidden content" src="/images/demo/title.png">
+      <div class="visible content">
+        <img src="/images/wireframe/square-image.png" class="ui small image">
+      </div>
+      <div class="hidden content">
+        <img src="/images/avatar/large/nan.jpg" class="ui small image">
+      </div>
     </div>
   </div>
 
   <div class="example">
     <h4 class="ui header">Rotate</h4>
     <p>An element can rotate to reveal content below</p>
-    <div class="ui circular rotate reveal image">
-      <img class="visible content" src="/images/demo/stickfigure.jpg">
-      <img class="hidden content" src="/images/demo/photo2.jpg">
+    <div class="ui small circular rotate reveal image">
+      <img src="/images/wireframe/square-image.png" class="visible content">
+      <img src="/images/avatar/large/stevie.jpg" class="hidden content">
     </div>
   </div>
   <div class="another example">
-    <div class="ui circular rotate left reveal image">
-      <img class="visible content" src="/images/demo/stickfigure.jpg">
-      <img class="hidden content" src="/images/demo/photo2.jpg">
+    <div class="ui small circular rotate left reveal image">
+      <img src="/images/wireframe/square-image.png" class="visible content">
+      <img src="/images/avatar/large/veronika.jpg" class="hidden content">
+    </div>
+  </div>
+
+  <h2 class="ui dividing header">States</h2>
+
+
+  <div class="example">
+    <h4 class="ui header">Active</h4>
+    <p>An active reveal displays its hidden content</p>
+    <div class="ui ignored info message">
+      Adding the class <code>active</code> can allow you to show the hidden contents programatically
+    </div>
+    <div class="ui active move left reveal">
+      <div class="visible content">
+        <img src="/images/wireframe/square-image.png" class="ui small image">
+      </div>
+      <div class="hidden content">
+        <img src="/images/avatar/large/nan.jpg" class="ui small image">
+      </div>
     </div>
   </div>
 
   <h2 class="ui dividing header">Variations</h2>
 
-  <div class="example">
-    <h4 class="ui header">Masked</h4>
-    <p>An element can mask its content so that an element does not escape its parent</p>
-    <div class="ui masked move reveal">
-      <img class="visible content" src="/images/demo/invention.jpg">
-      <img class="hidden content" src="/images/demo/title.png">
-    </div>
-  </div>
 
   <div class="example">
     <h4 class="ui header">Instant</h4>
     <p>An element can show its content without delay</p>
     <div class="ui instant masked move reveal">
-      <img class="visible content" src="/images/demo/invention.jpg">
-      <img class="hidden content" src="/images/demo/title.png">
+      <img class="visible content" src="/images/wireframe/square-image.png">
+      <img class="hidden content" src="/images/avatar/large/chris.jpg">
     </div>
   </div>
 
@@ -108,9 +135,9 @@ themes      : ['Default']
   <div class="example">
     <h4 class="ui header">Disabled</h4>
     <p>A disabled reveal will not animate when hovered</p>
-    <div class="ui circular disabled move reveal">
-      <img class="visible content" src="/images/demo/stickfigure.jpg">
-      <img class="hidden content" src="/images/demo/photo2.jpg">
+    <div class="ui disabled masked move reveal">
+      <img class="visible content" src="/images/wireframe/square-image.png">
+      <img class="hidden content" src="/images/avatar/large/chris.jpg">
     </div>
   </div>
 

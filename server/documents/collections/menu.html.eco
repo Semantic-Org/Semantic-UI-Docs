@@ -13,8 +13,6 @@ type        : 'UI Collection'
 themes      : ['Default', 'Chubby', 'GitHub', 'Material']
 ---
 
-
-
 <link rel="stylesheet/less" type="text/css" href="/src/definitions/collections/menu.less" />
 <script src="/javascript/menu.js"></script>
 

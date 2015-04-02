@@ -1383,15 +1383,28 @@ body.progress.animated .ui.progress .bar {
       Search
 ---------------*/
 
-#search input {
-  max-width: 800px;
-  color: white;
+.fixed.menu .right.searching.menu .borderless.item,
+.fixed.menu .right.searching.menu .popup.item,
+.fixed.menu .right.searching.menu .language.item {
+  display: none;
 }
 
+#search input {
+  color: white;
+  width: 146px;
+  text-align: right;
+}
+#search.hidden input {
+  padding: 0 0.8em 0 0 !important;
+  width: 0;
+}
+#search .results {
+  margin-top: 1em;
+  border-radius: 0px 0px 3px 3px;
+}
 #search.ui.input input::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.75);
 }
-
 #search.ui.input input::-moz-placeholder {
   color: rgba(255, 255, 255, 0.75);
 }
@@ -1793,7 +1806,9 @@ body.progress.animated .ui.progress .bar {
     float: none;
     width: 100%;
   }
-
+  #example .fixed.menu .launch {
+    padding-left: 1.142em;
+  }
   /* Resize Containers */
   #example .main.container,
   #example .masthead > .container,

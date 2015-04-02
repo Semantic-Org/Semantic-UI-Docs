@@ -26,6 +26,7 @@
 </script>
 <% end %>
 
+<script src="/javascript/library/jquery.hotkeys.js"></script>
 <script src="/javascript/library/easing.min.js"></script>
 <script src="/javascript/library/highlight.min.js"></script>
 <script src="/javascript/library/highlight.languages.min.js"></script>

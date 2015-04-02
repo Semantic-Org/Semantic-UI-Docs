@@ -26,7 +26,7 @@ semantic.ready = function() {
 
   // selector cache
   var
-
+    $document            = $(document),
     $sortableTables      = $('.sortable.table'),
     $sticky              = $('.ui.sticky'),
 
@@ -36,6 +36,7 @@ semantic.ready = function() {
     $swap                = $('.theme.menu .item'),
     $menu                = $('#toc'),
     $hideMenu            = $('#toc .hide.item'),
+    $search              = $('#search'),
     $sortTable           = $('.sortable.table'),
     $demo                = $('.demo'),
 
@@ -1067,6 +1068,69 @@ semantic.ready = function() {
       event.preventDefault();
     })
   ;
+
+  // Load search data the first time user focuses the search input.
+  $search.find('input').on('focus', function() {
+    // Unbind listener
+    $(this).off('focus');
+    $search.addClass('loading');
+    $.getJSON('/src/metadata.json').always(function() {
+      $search.removeClass('loading');
+    }).fail(function(err) {
+      console.log('Failed to load search metadata');
+      $search.remove();
+    }).done(function(data) {
+      $search.search({
+        source: data,
+        searchFields: [ 'title' ],
+        searchFullText: true,
+        onSelect: function(results, response) {
+          window.location = '/' + results.filename;
+        }
+      });
+    });
+  });
+
+  // setup keyboard shortcuts
+  var shortcuts = [
+    { name: 'Search',
+      key: 's',
+      aka: 's',
+      d: 'Focus search bar',
+      fn: function() {
+        $('#search').find('input').focus();
+      }
+    },
+    { name: 'Help',
+      key: 'shift+/',
+      aka: '?',
+      d: 'Show keyboard shortcuts',
+      fn: function() {
+        var $modal = $('#shortcuts');
+        if (!$modal.length) {
+          var s = '<div class="ui small modal" id="shortcuts">';
+          s += '<div class="header">Keyboard Shortcuts</div>';
+          s += '<div class="content">';
+          s += '<table class="ui small collapsing striped basic table">';
+          for (var i = 0; i < shortcuts.length; i++) {
+            var d = shortcuts[i];
+            s += '<tr><td><b>' + d.aka + '</b></td><td>' + d.d + '</td></tr>';
+          }
+          s += '</table>';
+          s += '<div class="actions"><div class="ui small teal button">OK</div></div>';
+          s += '</div></div>';
+
+          $('body').append(s);
+          $modal = $('#shortcuts');
+        }
+        $('#shortcuts').modal('show');
+      }
+    }
+  ];
+
+  $.each(shortcuts, function(i, d) {
+    $document.bind('keyup', d.key, d.fn);
+  });
 
   handler.createIcon();
   $example

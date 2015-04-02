@@ -10,8 +10,14 @@
       Menu
     </a>
     <% if @document.title: %>
-      <div class="title item">
-        <b><%= @document.type %>:</b> <%= @document.title %>
+      <div class="search item">
+        <div class="ui search input" id="search">
+          <div class="ui transparent icon input">
+            <input class="prompt" type="text" placeholder="<%= @document.type %>: <%= @document.title %>">
+            <i class="inverted search icon"></i>
+          </div>
+          <div class="results"></div>
+        </div>
       </div>
       <% if pageNumber > 1 and currentCollection[pageNumber - 2]?: %>
       <a class="icon item" href="<%= currentCollection[pageNumber - 2].url %>"><i class="left chevron icon"></i></a>

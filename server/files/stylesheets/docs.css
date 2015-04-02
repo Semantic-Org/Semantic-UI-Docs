@@ -1379,6 +1379,29 @@ body.progress.animated .ui.progress .bar {
 }
 
 
+/*--------------
+      Search
+---------------*/
+
+#search input {
+  max-width: 800px;
+  color: white;
+}
+
+#search.ui.input input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+#search.ui.input input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+#shortcuts.ui.modal .actions {
+    padding: 0;
+    border: none;
+    background: none;
+}
+
 /*******************************
          Code Samples
 *******************************/

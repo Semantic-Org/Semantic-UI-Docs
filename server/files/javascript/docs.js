@@ -304,7 +304,7 @@ semantic.ready = function() {
     },
 
     loadSearch: function() {
-      if( 1 ) {
+      if( !$search.hasClass('loaded') ) {
         $search.addClass('loading');
         $.getJSON('/metadata.json')
           .always(function() {

@@ -110,6 +110,50 @@ semantic.ready = function() {
       ;
     },
 
+    search: {
+      focus: function() {
+        $(this).val('');
+        $(this).closest('.search').removeClass('hidden');
+        $(this).closest('.menu').addClass('searching');
+        handler.loadSearch();
+      },
+      blur: function() {
+        $(this).closest('.search').addClass('hidden');
+        $(this).closest('.menu').removeClass('searching');
+      }
+    },
+
+    shortcut: {
+      search: function() {
+        $('#search').find('input').focus();
+      },
+      modal: function() {
+        var
+          $modal = $('#shortcuts'),
+          shortcut,
+          index
+        ;
+        if(!$modal.length) {
+          var
+            html = '<div class="ui small modal" id="shortcuts">'
+          ;
+          html += '<div class="header">Keyboard Shortcuts</div>';
+          html += '<div class="content">';
+          html += '<table class="ui small collapsing striped basic table">';
+          for (index = 0; index < shortcuts.length; index++) {
+            shortcut = shortcuts[index];
+            html     += '<tr><td><b>' + shortcut.aka + '</b></td><td>' + shortcut.d + '</td></tr>';
+          }
+          html += '</table>';
+          html += '<div class="actions"><div class="ui small teal button">OK</div></div>';
+          html += '</div></div>';
+          $('body').append(html);
+          $modal = $('#shortcuts');
+        }
+        $('#shortcuts').modal('show');
+      }
+    },
+
     createWaypoints: function() {
       $sectionHeaders
         .visibility({
@@ -256,6 +300,34 @@ semantic.ready = function() {
             })
           ;
         }
+      }
+    },
+
+    loadSearch: function() {
+      if( 1 ) {
+        $search.addClass('loading');
+        $.getJSON('/metadata.json')
+          .always(function() {
+            $search.removeClass('loading');
+          })
+          .fail(function(err) {
+            console.log('Failed to load search metadata');
+          })
+          .done(function(data) {
+            $search
+              .addClass('loaded')
+              .search({
+                transition     : 'slide down',
+                searchFullText : false,
+                source         : data,
+                searchFields   : [ 'title', 'category'],
+                onSelect       : function(results, response) {
+                  window.location = '/' + results.filename;
+                }
+              })
+            ;
+          })
+        ;
       }
     },
 
@@ -999,11 +1071,13 @@ semantic.ready = function() {
 
   semantic.handler = handler;
 
-
+  // add anchors to docs headers
   handler.createAnchors();
 
+  // register less files
   window.less.registerStylesheets();
 
+  // load page tabs
   if( $pageTabs.size() > 0 ) {
     $pageTabs
       .tab({
@@ -1048,6 +1122,7 @@ semantic.ready = function() {
     });
   }
 
+  // code highlighting languages
   window.hljs.configure({
     languages: [
       'xml',
@@ -1055,6 +1130,8 @@ semantic.ready = function() {
       'javascript'
     ]
   });
+
+  // main sidebar
   $menu
     .sidebar({
       dimPage          : false,
@@ -1062,6 +1139,8 @@ semantic.ready = function() {
       mobileTransition : 'uncover'
     })
   ;
+
+  // launch buttons
   $('.launch.button, .view-ui, .launch.item')
     .on('click', function(event) {
       $menu.sidebar('toggle');
@@ -1069,62 +1148,31 @@ semantic.ready = function() {
     })
   ;
 
-  // Load search data the first time user focuses the search input.
-  $search.find('input').on('focus', function() {
-    // Unbind listener
-    $(this).off('focus');
-    $search.addClass('loading');
-    $.getJSON('/src/metadata.json').always(function() {
-      $search.removeClass('loading');
-    }).fail(function(err) {
-      console.log('Failed to load search metadata');
-      $search.remove();
-    }).done(function(data) {
-      $search.search({
-        source: data,
-        searchFields: [ 'title' ],
-        searchFullText: true,
-        onSelect: function(results, response) {
-          window.location = '/' + results.filename;
-        }
-      });
-    });
-  });
+  $search
+    .children('.icon')
+      .on('click', handler.shortcut.search)
+      .end()
+    // Load search data the first time user focuses the search input.
+    .find('input')
+      .on('focus', handler.search.focus)
+      .on('blur', handler.search.blur)
+  ;
 
   // setup keyboard shortcuts
   var shortcuts = [
-    { name: 'Search',
-      key: 's',
-      aka: 's',
-      d: 'Focus search bar',
-      fn: function() {
-        $('#search').find('input').focus();
-      }
+    {
+      name : 'Search',
+      key  : 's',
+      aka  : 's',
+      d    : 'Focus search bar',
+      fn   : handler.shortcut.search
     },
-    { name: 'Help',
-      key: 'shift+/',
-      aka: '?',
-      d: 'Show keyboard shortcuts',
-      fn: function() {
-        var $modal = $('#shortcuts');
-        if (!$modal.length) {
-          var s = '<div class="ui small modal" id="shortcuts">';
-          s += '<div class="header">Keyboard Shortcuts</div>';
-          s += '<div class="content">';
-          s += '<table class="ui small collapsing striped basic table">';
-          for (var i = 0; i < shortcuts.length; i++) {
-            var d = shortcuts[i];
-            s += '<tr><td><b>' + d.aka + '</b></td><td>' + d.d + '</td></tr>';
-          }
-          s += '</table>';
-          s += '<div class="actions"><div class="ui small teal button">OK</div></div>';
-          s += '</div></div>';
-
-          $('body').append(s);
-          $modal = $('#shortcuts');
-        }
-        $('#shortcuts').modal('show');
-      }
+    {
+      name : 'Help',
+      key  : 'shift+/',
+      aka  : '?',
+      d    : 'Show keyboard shortcuts',
+      fn   : handler.shortcut.modal
     }
   ];
 

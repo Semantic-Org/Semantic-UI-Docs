@@ -33,7 +33,7 @@ semantic.menu.ready = function() {
     })
   ;
 
-  $('.ui.search')
+  $('.main.container .ui.search')
     .search({
       type: 'category',
       apiSettings: {

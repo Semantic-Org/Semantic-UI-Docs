@@ -10,14 +10,8 @@
       Menu
     </a>
     <% if @document.title: %>
-      <div class="search item">
-        <div class="ui search input" id="search">
-          <div class="ui transparent icon input">
-            <input class="prompt" type="text" placeholder="<%= @document.type %>: <%= @document.title %>">
-            <i class="inverted search icon"></i>
-          </div>
-          <div class="results"></div>
-        </div>
+      <div class="item">
+        <%= @document.title %>
       </div>
       <% if pageNumber > 1 and currentCollection[pageNumber - 2]?: %>
       <a class="icon item" href="<%= currentCollection[pageNumber - 2].url %>"><i class="left chevron icon"></i></a>
@@ -41,12 +35,12 @@
       <% end %>
     <% end %>
     <div class="right menu">
+      <% if 'developments' in @getEnvironments(): %>
+      <% else: %>
       <div class="vertically fitted borderless item">
-        <% if 'development' in @getEnvironments(): %>
-        <% else: %>
         <iframe class="github" src="http://ghbtns.com/github-btn.html?user=semantic-org&amp;repo=semantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
-        <% end %>
       </div>
+      <% end %>
       <a class="popup icon music item" data-content="Play Music">
         <i class="alternate music icon"></i>
       </a>
@@ -62,6 +56,15 @@
             <input type="text" placeholder="Search languages...">
           </div>
           <%- @partial('languages') %>
+        </div>
+      </div>
+      <div class="item">
+        <div class="ui hidden right aligned search input" id="search">
+          <div class="ui transparent icon input">
+            <input class="prompt" type="text" placeholder="Search...">
+            <i class="inverted search link icon" data-content="Search UI"></i>
+          </div>
+          <div class="results"></div>
         </div>
       </div>
     </div>

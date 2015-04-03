@@ -159,7 +159,7 @@ semantic.ready = function() {
         .visibility({
           observeChanges: false,
           once: false,
-          offset: 70,
+          offset: 0,
           onTopVisible: handler.activate.accordion,
           onTopPassed: handler.activate.section,
           onBottomPassed: handler.activate.section,
@@ -171,7 +171,7 @@ semantic.ready = function() {
         .visibility({
           observeChanges: false,
           once: false,
-          offset: 70,
+          offset: 0,
           onTopPassed: handler.activate.example,
           onBottomPassedReverse: handler.activate.example
         })
@@ -443,7 +443,7 @@ semantic.ready = function() {
         })
       ;
       $followMenu = $('<div />')
-        .addClass('ui secondary vertical following fluid accordion menu')
+        .addClass('ui vertical following fluid accordion menu')
         .html(html)
       ;
       $sticky = $('<div />')
@@ -457,7 +457,7 @@ semantic.ready = function() {
       ;
       $sticky.sticky({
         context: $container,
-        offset: 70
+        offset: 0
       });
       $followMenu
         .accordion({
@@ -1183,35 +1183,25 @@ semantic.ready = function() {
   handler.createIcon();
   $example
     .each(function() {
+      $(this)
+        .popup({
+          preserve: true,
+          on       : 'hover',
+          variation: 'inverted',
+          delay: {
+            show: 300,
+            hide: 100
+          },
+          position : 'top right',
+          offset   : 5,
+          content  : 'View Source',
+          target   : $(this).find('i.code')
+        })
+        .find('i.code')
+          .on('click', handler.createCode)
+      ;
       $.proxy(handler.generateCode, this)();
     })
-    .find('i.code')
-      .popup({
-        preserve: false,
-        position: 'top right',
-        offset: 5,
-        variation: 'inverted',
-        content: 'View Source'
-      })
-      .on('click', handler.createCode)
-      .end()
-    .not('.no').eq(0)
-      .find('i.code')
-        .popup('destroy')
-        .end()
-      .popup({
-        preserve: false,
-        on       : 'hover',
-        variation: 'inverted',
-        delay: {
-          show: 300,
-          hide: 100
-        },
-        position : 'top right',
-        offset   : 5,
-        content  : 'View Source',
-        target   : $example.not('.no').eq(0).find('i.code')
-      })
   ;
 
   $menuMusic

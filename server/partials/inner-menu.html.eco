@@ -1,0 +1,100 @@
+<% uiGlobals         = @getCollection("documents").findAll({type: $in: ['UI Global']},[{title: 1}]).toJSON() %>
+<% uiElements        = @getCollection("documents").findAll({type: $in: ['UI Element']},[{title: 1}]).toJSON() %>
+<% uiCollections     = @getCollection("documents").findAll({type: $in: ['UI Collection']},[{title: 1}]).toJSON() %>
+<% uiViews           = @getCollection("documents").findAll({type: $in: ['UI View']},[{title: 1}]).toJSON() %>
+<% uiModules         = @getCollection("documents").findAll({type: $in: ['UI Module']},[{title: 1}]).toJSON() %>
+<% uiBehavior        = @getCollection("documents").findAll({type: $in: ['UI Behavior']},[{title: 1}]).toJSON() %>
+
+<div class="ui vertical inverted menu">
+  <div class="item">
+    <a class="ui mini image" href="/">
+      <img src="/images/logo.png">
+    </a>
+  </div>
+  <a class="item" href="<%= @getZip() %>">
+    <i class="download icon"></i>
+    <b>Download</b>
+  </a>
+  <a class="item" href="/kitchen-sink.html">
+    <i class="cubes icon"></i>
+    <b>All UI</b>
+  </a>
+  <div class="item">
+    <div class="<%= if @document.elementType is 'global' then 'active ' %> header">Globals</div>
+    <div class="menu">
+      <% for element in uiGlobals: %>
+        <a class="<%= if element.id is @document.id then 'active ' %>item" href="<%= element.url %>">
+          <%= element.title %>
+          <% if element.status?: %>
+          <span class="ui mini empty yellow circular ui label"></span>
+          <% end %>
+        </a>
+      <% end %>
+    </div>
+  </div>
+  <div class="item">
+    <div class="<%= if @document.elementType is 'element' then 'active ' %> header">Elements</div>
+    <div class="menu">
+      <% for element in uiElements: %>
+        <a class="<%= if element.id is @document.id then 'active ' %>item" href="<%= element.url %>">
+          <%= element.title %>
+          <% if element.status?: %>
+          <span class="ui mini empty yellow circular ui label"></span>
+          <% end %>
+        </a>
+      <% end %>
+    </div>
+  </div>
+  <div class="item">
+    <div class="<%= if @document.elementType is 'collection' then 'active ' %> header">Collections</div>
+    <div class="menu">
+      <% for element in uiCollections: %>
+        <a class="<%= if element.id is @document.id then 'active ' %>item" href="<%= element.url %>">
+          <%= element.title %>
+          <% if element.status?: %>
+          <span class="ui mini empty yellow circular ui label"></span>
+          <% end %>
+        </a>
+      <% end %>
+    </div>
+  </div>
+  <div class="item">
+    <div class="<%= if @document.elementType is 'view' then 'active ' %> header">Views</div>
+    <div class="menu">
+      <% for element in uiViews: %>
+        <a class="<%= if element.id is @document.id then 'active ' %>item" href="<%= element.url %>">
+          <%= element.title %>
+          <% if element.status?: %>
+          <span class="ui mini empty yellow circular ui label"></span>
+          <% end %>
+        </a>
+      <% end %>
+    </div>
+  </div>
+  <div class="item">
+    <div class="<%= if @document.elementType is 'module' then 'active ' %> header">Modules</div>
+    <div class="menu">
+      <% for element in uiModules: %>
+        <a class="<%= if element.id is @document.id then 'active ' %>item" href="<%= element.url %>">
+          <%= element.title %>
+          <% if element.status?: %>
+          <span class="ui mini empty yellow circular ui label"></span>
+          <% end %>
+        </a>
+    <% end %>
+    </div>
+  </div>
+  <div class="item">
+    <div class="<%= if @document.elementType is 'behavior' then 'active ' %> header">Behaviors</div>
+    <div class="menu">
+      <% for element in uiBehavior: %>
+        <a class="<%= if element.id is @document.id then 'active ' %>item" href="<%= element.url %>">
+          <%= element.title %>
+          <% if element.status?: %>
+          <span class="ui mini empty yellow circular ui label"></span>
+          <% end %>
+        </a>
+      <% end %>
+    </div>
+  </div>
+</div>

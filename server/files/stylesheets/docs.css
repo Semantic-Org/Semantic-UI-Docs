@@ -631,12 +631,8 @@ body#example {
 -----------------*/
 
 #example .example {
-  background-color: #FFFFFF;
-  border: 1px solid rgba(34, 36, 38, 0.15);
-  border-radius: 4px;
-  box-shadow: 0 1px 1px 0 rgba(34, 36, 38, 0.08);
-  margin: 3em 0;
-  padding: 2em;
+  margin: 4em 0em;
+  padding: 4em 0em;
   position: relative;
   -webkit-tap-highlight-color: transparent;
 }
@@ -667,9 +663,7 @@ body#example {
 
 /* Description */
 #example .example .anchor + p {
-  border-bottom: 1px solid rgba(35, 34, 38, 0.08);
   font-size: 14px;
-  margin-bottom: 1.5em;
   margin-top: 0;
   padding-bottom: 1.5em;
 }
@@ -700,10 +694,8 @@ body#example {
 
 /* Another */
 #example .another.example {
-  border-radius: 0 0 3px 3px;
-  box-shadow: 0 1px 1px 0 rgba(34, 36, 38, 0.08);
-  margin-top: -4em;
-  padding-top: 4em;
+  margin-top: 0em;
+  padding-top: 2em;
 }
 
 /* Spaced */
@@ -833,7 +825,7 @@ body#example {
   position: absolute;
 
   top: 2rem;
-  right: 2rem;
+  right: 0rem;
   margin: 0;
   opacity: 0.1;
 
@@ -1343,7 +1335,7 @@ body.progress.animated .ui.progress .bar {
 }
 
 #example .another.example i.code ~ .ignored.message {
-  margin: 0em 0em 3em;
+  margin: 0em 0em 2em;
 }
 
 /*--------------

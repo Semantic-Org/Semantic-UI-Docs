@@ -18,6 +18,7 @@
   flex-direction: initial;
 }
 #example > .pusher > .full.height {
+  display: block;
   flex: none !important;
 }
 

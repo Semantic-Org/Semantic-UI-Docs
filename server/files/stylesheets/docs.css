@@ -616,7 +616,8 @@ body#example {
 }
 #example .existing.segment .title + em,
 #example .instructive.segment .title + em {
-  float: right;
+  position: absolute;
+  right: 1em;
 }
 #example .label + .code {
   margin-top: 1.5em;

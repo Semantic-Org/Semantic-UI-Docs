@@ -159,7 +159,7 @@ semantic.ready = function() {
         .visibility({
           observeChanges: false,
           once: false,
-          offset: 0,
+          offset: 30,
           onTopVisible: handler.activate.accordion,
           onTopPassed: handler.activate.section,
           onBottomPassed: handler.activate.section,
@@ -171,7 +171,7 @@ semantic.ready = function() {
         .visibility({
           observeChanges: false,
           once: false,
-          offset: 0,
+          offset: 30,
           onTopPassed: handler.activate.example,
           onBottomPassedReverse: handler.activate.example
         })
@@ -443,7 +443,7 @@ semantic.ready = function() {
         })
       ;
       $followMenu = $('<div />')
-        .addClass('ui vertical following fluid accordion menu')
+        .addClass('ui vertical secondary following fluid accordion menu')
         .html(html)
       ;
       $sticky = $('<div />')
@@ -457,7 +457,7 @@ semantic.ready = function() {
       ;
       $sticky.sticky({
         context: $container,
-        offset: 0
+        offset: 30
       });
       $followMenu
         .accordion({
@@ -1094,7 +1094,7 @@ semantic.ready = function() {
           $(this).find('> .rail .ui.sticky, .fixed .ui.sticky')
             .sticky({
               context: $container,
-              offset: 0
+              offset: 30
             })
           ;
           $sectionHeaders = $container.children('h2');

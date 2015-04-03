@@ -640,6 +640,9 @@ body#example {
   position: relative;
   -webkit-tap-highlight-color: transparent;
 }
+#example .example:last-child {
+  margin-bottom: none;
+}
 
 /* Header */
 #example .example > h4:first-child {
@@ -1634,14 +1637,14 @@ body.progress.animated .ui.progress .bar {
 
 /* page layout */
 #example .full.height > .toc {
+  background-color: #1b1c1d;
   width: 250px;
   flex: 0 1 auto;
 }
-#example .full.height > .toc .menu {
+#example .full.height > .toc .ui.menu {
   border-radius: 0;
   border-width: 0 1px 0 0;
   box-shadow: none;
-  float: left;
   margin: 0;
   width: 100%;
 }

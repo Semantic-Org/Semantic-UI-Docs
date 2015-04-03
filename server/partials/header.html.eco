@@ -134,7 +134,7 @@
       <% for id, name of @tabs: %>
         <% tabCount++ %>
       <% end %>
-      <div class="<%= numbers[tabCount] %> tabular ui menu">
+      <div class="<%= numbers[tabCount] %> ui menu">
         <% for id, name of @tabs: %>
           <a class="<%= if index == 0 then 'active ' %>item" data-tab="<%= id %>"><%= name %></a>
           <% index++ %>

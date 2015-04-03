@@ -631,8 +631,8 @@ body#example {
 -----------------*/
 
 #example .example {
-  margin: 4em 0em;
-  padding: 4em 0em;
+  margin: 2em 0em;
+  padding: 2em 0em;
   position: relative;
   -webkit-tap-highlight-color: transparent;
 }

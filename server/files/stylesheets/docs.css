@@ -795,7 +795,7 @@ body#example {
   top: 0.75em;
 }
 #example .another.example i.code {
-  top: 1em;
+  top: -0.5em;
 }
 
 /* Spaced */
@@ -1631,7 +1631,7 @@ body.progress.animated .ui.progress .bar {
 #example .full.height > .toc {
   background-color: #1b1c1d;
   width: 250px;
-  flex: 0 1 auto;
+  flex: 0 0 auto;
 }
 #example .full.height > .toc .ui.menu {
   border-radius: 0;

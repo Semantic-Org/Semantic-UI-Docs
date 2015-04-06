@@ -1,3 +1,4 @@
+
 // namespace
 window.semantic = {
   handler: {}
@@ -130,19 +131,20 @@ semantic.ready = function() {
       modal: function() {
         var
           $modal = $('#shortcuts'),
+          shortcutModalExists,
           shortcut,
           index
         ;
-        if(!$modal.length) {
+        if(!shortcutModalExists) {
           var
             html = '<div class="ui small modal" id="shortcuts">'
           ;
           html += '<div class="header">Keyboard Shortcuts</div>';
           html += '<div class="content">';
-          html += '<table class="ui small collapsing striped basic table">';
+          html += '<table class="ui striped basic table">';
           for (index = 0; index < shortcuts.length; index++) {
             shortcut = shortcuts[index];
-            html     += '<tr><td><b>' + shortcut.aka + '</b></td><td>' + shortcut.d + '</td></tr>';
+            html     += '<tr><td><b>' + shortcut.aka + '</b></td><td>' + shortcut.description + '</td></tr>';
           }
           html += '</table>';
           html += '<div class="actions"><div class="ui small teal button">OK</div></div>';
@@ -181,7 +183,6 @@ semantic.ready = function() {
           observeChanges: false,
           once: false,
           onBottomVisible: function(calculations) {
-            console.log(calculations);
             var
               $title = $followMenu.find('> .item > .title').last()
             ;
@@ -451,7 +452,7 @@ semantic.ready = function() {
         .html($followMenu)
       ;
       $rail = $('<div />')
-        .addClass('ui close right rail')
+        .addClass('ui right rail')
         .html($sticky)
         .prependTo($container)
       ;
@@ -967,7 +968,7 @@ semantic.ready = function() {
 
       // wrap
       $code = $code
-        .wrap('<div class="ui ' + name + ' secondary segment"></div>')
+        .wrap('<div class="ui ' + name + ' segment"></div>')
         .wrap('<pre></pre>')
       ;
 
@@ -1135,11 +1136,19 @@ semantic.ready = function() {
   $menu
     .sidebar({
       dimPage          : false,
-      transition       : 'uncover',
+      transition       : 'overlay',
       mobileTransition : 'uncover'
     })
   ;
-
+/*
+  // inner sticky menu (mozilla only)
+  $('.full.height > .toc > .sticky')
+    .sticky({
+      offset: 1,
+      context: $('.full.height > .article')
+    })
+  ;
+*/
   // launch buttons
   $('.launch.button, .view-ui, .launch.item')
     .on('click', function(event) {
@@ -1161,45 +1170,51 @@ semantic.ready = function() {
   // setup keyboard shortcuts
   var shortcuts = [
     {
-      name : 'Search',
-      key  : 's',
-      aka  : 's',
-      d    : 'Focus search bar',
-      fn   : handler.shortcut.search
+      name        : 'Search',
+      key         : 's',
+      aka         : 's',
+      description : 'Focus search bar',
+      action      : handler.shortcut.search
     },
     {
-      name : 'Help',
-      key  : 'shift+/',
-      aka  : '?',
-      d    : 'Show keyboard shortcuts',
-      fn   : handler.shortcut.modal
+      name        : 'Help',
+      key         : 'z',
+      aka         : '?',
+      description : 'Show keyboard shortcuts',
+      action      : handler.shortcut.modal
     }
   ];
-
-  $.each(shortcuts, function(i, d) {
-    $document.bind('keyup', d.key, d.fn);
+/*  $.each(shortcuts, function(index, shortcut) {
+    $document
+      .on('keydown', shortcut.key, shortcut.action)
+    ;
   });
-
+*/
   handler.createIcon();
   $example
     .each(function() {
-      $(this)
-        .popup({
-          preserve: false,
-          on       : 'hover',
-          variation: 'inverted',
-          delay: {
-            show: 300,
-            hide: 100
-          },
-          position : 'top right',
-          offset   : 5,
-          content  : 'View Source',
-          target   : $(this).find('i.code')
-        })
-        .find('i.code')
-          .on('click', handler.createCode)
-      ;
+      if($(this).is('.no')) {
+        return;
+      }
+      else {
+        $(this)
+          .popup({
+            preserve: false,
+            on       : 'hover',
+            variation: 'inverted',
+            delay: {
+              show: 300,
+              hide: 100
+            },
+            position : 'top right',
+            offset   : 5,
+            content  : 'View Source',
+            target   : $(this).find('i.code')
+          })
+          .find('i.code')
+            .on('click', handler.createCode)
+        ;
+      }
       $.proxy(handler.generateCode, this)();
     })
   ;

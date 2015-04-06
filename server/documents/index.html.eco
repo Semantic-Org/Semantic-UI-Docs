@@ -262,7 +262,7 @@ standalone : true
   </div>
 </div>
 <div class="feature alternate ui stripe vertical segment">
-  <div class="ui three column equal height center aligned divided relaxed stackable page grid">
+  <div class="ui three column center aligned divided relaxed stackable page grid">
     <div class="row">
       <div class="column">
         <h2 class="ui icon header">
@@ -947,7 +947,7 @@ standalone : true
   </div>
 </div>
 <div class="ui stripe community vertical segment">
-  <div class="ui two column equal height center aligned divided very relaxed stackable page grid">
+  <div class="ui two column center aligned divided very relaxed stackable page grid">
     <div class="row">
       <div class="column">
         <h2 class="ui icon header">

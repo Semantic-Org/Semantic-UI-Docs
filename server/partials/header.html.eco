@@ -122,7 +122,7 @@
       <% end %>
     </div>
     <div class="advertisement">
-      <% unless 'development' in @getEnvironments(): %>
+      <% unless 'developments' in @getEnvironments(): %>
       <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=semanticuicom" id="_carbonads_js"></script>
       <% end %>
     </div>

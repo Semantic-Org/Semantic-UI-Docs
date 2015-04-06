@@ -58,6 +58,9 @@
 #example.index .following.bar iframe.github {
   margin-top: 0px;
 }
+#example.index .following.bar .menu .item {
+  display: block;
+}
 #example.index.pushed .masthead,
 #example.index.pushed .following.bar {
   -webkit-transform: translate3d(0, 0, 0);

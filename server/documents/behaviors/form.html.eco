@@ -151,7 +151,7 @@ type        : 'UI Behavior'
         <p>Validation rules are a set of conditions required to validate a field</p>
       <div class="ui info message">Validation rules are found in <code>$.fn.form.settings.rules</code>, to add new global validation rules, modify <code>$.fn.form.settings.rules</code> to include your function.</div>
       <div class="in red message">To pass parameters to a rule, use bracket notation in your settings object. For example <code>type: 'not[dog]'</code></div>
-      <table class="ui celled sortable basic table">
+      <table class="ui celled sortable basic table segment">
         <thead>
           <th class="four wide">Name</th>
           <th>Validates</th>

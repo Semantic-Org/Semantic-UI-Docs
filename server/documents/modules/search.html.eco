@@ -320,6 +320,10 @@ type        : 'UI Module'
           <td>Search local object for specified query and display results</td>
         </tr>
         <tr>
+          <td>has minimum characters</td>
+          <td>Whether has minimum characters</td>
+        </tr>
+        <tr>
           <td>search remote(query)</td>
           <td>Search remote endpoint for specified query and display results</td>
         </tr>
@@ -328,7 +332,7 @@ type        : 'UI Module'
           <td>Search object for specified query and return results</td>
         </tr>
         <tr>
-          <td>cancel</td>
+          <td>cancel query</td>
           <td>Cancels current remote search request</td>
         </tr>
         <tr>
@@ -356,11 +360,15 @@ type        : 'UI Module'
           <td>Sets search input to value</td>
         </tr>
         <tr>
-          <td>read cachedHTML(query)</td>
+          <td>read cache(query)</td>
           <td>Reads cached results for query</td>
         </tr>
         <tr>
-          <td>write cachedHTML(query)</td>
+          <td>clear cache(query)</td>
+          <td>Clears value from cache, if no parameter passed clears all cache</td>
+        </tr>
+        <tr>
+          <td>write cache(query)</td>
           <td>Writes cached results for query</td>
         </tr>
         <tr>

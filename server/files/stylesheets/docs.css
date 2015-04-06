@@ -351,6 +351,10 @@ a:hover {
   width: 300px;
 }
 
+#example .tab.masthead .item.menu {
+  margin: 3rem 0rem 2rem;
+}
+
 #example .tab.masthead.segment .fixed .tabular.menu {
   position: fixed;
   top: 50px;

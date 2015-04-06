@@ -1185,7 +1185,7 @@ semantic.ready = function() {
     .each(function() {
       $(this)
         .popup({
-          preserve: true,
+          preserve: false,
           on       : 'hover',
           variation: 'inverted',
           delay: {

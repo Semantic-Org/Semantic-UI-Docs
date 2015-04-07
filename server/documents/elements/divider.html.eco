@@ -37,9 +37,9 @@ themes      : ['default']
       A vertical divider will automatically adjust to a horizontal divider at mobile resolutions when used inside a <a href="/collections/grid.html#stackable-grid">stackable grid</a>
     </div>
     <p>A divider can segment content vertically</p>
-    <div class="ui two column middle aligned relaxed fitted stackable grid">
+    <div class="ui two column middle aligned very relaxed fitted stackable grid">
       <div class="column">
-        <div class="ui form segment">
+        <div class="ui form">
           <div class="field">
             <label>Username</label>
             <div class="ui left icon input">
@@ -75,7 +75,7 @@ themes      : ['default']
     <div class="ui ignored positive message">Horizontal dividers can also be used in combination with <a href="/elements/header.html">headers</a> and <a href="/elements/icon.html">icons</a> to create different styles of dividers.
     </div>
     <div class="ui ignored message">Dividers  will automatically vary the size of their dividing rules to match the length of your text</div>
-    <div class="ui center aligned compact segment">
+    <div class="ui center aligned basic segment">
       <div class="ui left icon action input">
         <i class="search icon"></i>
         <input type="text" placeholder="Order #">

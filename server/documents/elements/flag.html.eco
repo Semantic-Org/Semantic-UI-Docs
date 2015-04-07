@@ -11,7 +11,7 @@ type        : 'UI Element'
 ---
 <link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/flag.less" />
 
-<%- @partial('header', { tabs: { flags: 'Flags' } }) %>
+<%- @partial('header') %>
 
 <div class="main ui container">
 

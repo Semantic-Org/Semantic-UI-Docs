@@ -9,15 +9,9 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script type="text/javascript">
 $(document).ready(function() {
-  $('.dropdown').dropdown({
-    onChange: function(value, text, $selectedItem) {
-      console.log(value, text, $selectedItem);
-    }
-  });
-
-  window.postback = function() {
-     $('.log').append("Postback.<br>");
-  }
+  $('.ui.accordion')
+        .accordion()
+    ;
 });
 </script>
 
@@ -25,13 +19,16 @@ $(document).ready(function() {
 <style type="text/css">
 </style>
 
-<div class="ui container">
-
-    <select class="ui dropdown">
-      <option value="111">Abcd</option>
-      <option value="222">Efgh</option>
-    </select>
-    <div class="log"></div>
-</div>
-
+<div class="five column doubling ui grid">
+    <div class="column">1</div>
+    <div class="column">2</div>
+    <div class="column">3</div>
+    <div class="column">4</div>
+    <div class="column">5</div>
+    <div class="four column doubling row">
+        <div class="column">1</div>
+        <div class="column">2</div>
+        <div class="column">3</div>
+        <div class="column">4</div>
+    </div>
 </div>

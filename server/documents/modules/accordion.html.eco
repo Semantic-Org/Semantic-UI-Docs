@@ -506,14 +506,24 @@ themes      : ['Default', 'Chubby']
       </thead>
       <tbody>
         <tr>
+          <td>onOpening</td>
+          <td>active content</td>
+          <td>Callback before element opens</td>
+        </tr>
+        <tr>
           <td>onOpen</td>
           <td>active content</td>
-          <td>Callback on element open</td>
+          <td>Callback after element is open</td>
+        </tr>
+        <tr>
+          <td>onClosing</td>
+          <td>active content</td>
+          <td>Callback before element closes</td>
         </tr>
         <tr>
           <td>onClose</td>
           <td>active content</td>
-          <td>Callback on element close</td>
+          <td>Callback after element is closed</td>
         </tr>
         <tr>
           <td>onChange</td>

@@ -346,7 +346,7 @@ a:hover {
 
 #example .fixed.column {
   position: absolute;
-  right: 2em;
+  right: -2em;
   top: 0px;
   width: 300px;
 }
@@ -570,6 +570,7 @@ body#example {
 #example > .pusher > .footer {
   margin: 0em;
   border-radius: 0em;
+  background-color: #262626 !important;
   padding: 4em 0em 5em 250px;
 }
 
@@ -836,7 +837,7 @@ body#example {
   top: 2rem;
   right: 0rem;
   margin: 0;
-  opacity: 0.1;
+  opacity: 0.5;
 
   font-size: 20px;
   color: #000000;
@@ -853,7 +854,7 @@ body#example {
   content: "\e600";
 }
 #example .example:hover i.code {
-  opacity: 0.7;
+  opacity: 0.85;
 }
 #example .example:hover i.code:hover {
   opacity: 1;

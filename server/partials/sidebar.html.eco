@@ -19,7 +19,7 @@
     <i class="cubes icon"></i> <b>All UI</b>
   </a>
   <div class="item">
-    <div class="ui small <%= if @document.elementType is 'global' then 'active ' %> inverted header">Globals</div>
+    <div class="<%= if @document.elementType is 'global' then 'active ' %>header">Globals</div>
     <div class="menu">
       <% for element in uiGlobals: %>
         <a class="<%= if element.id is @document.id then 'active ' %>item" href="<%= element.url %>">
@@ -32,7 +32,7 @@
     </div>
   </div>
   <div class="item">
-    <div class="ui small <%= if @document.elementType is 'element' then 'active ' %> inverted header">Elements</div>
+    <div class="<%= if @document.elementType is 'element' then 'active ' %>header">Elements</div>
     <div class="menu">
       <% for element in uiElements: %>
         <a class="<%= if element.id is @document.id then 'active ' %>item" href="<%= element.url %>">
@@ -45,7 +45,7 @@
     </div>
   </div>
   <div class="item">
-    <div class="ui small <%= if @document.elementType is 'collection' then 'active ' %> inverted header">Collections</div>
+    <div class="<%= if @document.elementType is 'collection' then 'active ' %>header">Collections</div>
     <div class="menu">
       <% for element in uiCollections: %>
         <a class="<%= if element.id is @document.id then 'active ' %>item" href="<%= element.url %>">
@@ -58,7 +58,7 @@
     </div>
   </div>
   <div class="item">
-    <div class="ui small <%= if @document.elementType is 'view' then 'active ' %> inverted header">Views</div>
+    <div class="<%= if @document.elementType is 'view' then 'active ' %>header">Views</div>
     <div class="menu">
       <% for element in uiViews: %>
         <a class="<%= if element.id is @document.id then 'active ' %>item" href="<%= element.url %>">
@@ -71,7 +71,7 @@
     </div>
   </div>
   <div class="item">
-    <div class="ui small <%= if @document.elementType is 'module' then 'active ' %> inverted header">Modules</div>
+    <div class="<%= if @document.elementType is 'module' then 'active ' %>header">Modules</div>
     <div class="menu">
       <% for element in uiModules: %>
         <a class="<%= if element.id is @document.id then 'active ' %>item" href="<%= element.url %>">
@@ -84,7 +84,7 @@
     </div>
   </div>
   <div class="item">
-    <div class="ui small <%= if @document.elementType is 'behavior' then 'active ' %> inverted header">Behaviors</div>
+    <div class="<%= if @document.elementType is 'behavior' then 'active ' %>header">Behaviors</div>
     <div class="menu">
       <% for element in uiBehavior: %>
         <a class="<%= if element.id is @document.id then 'active ' %>item" href="<%= element.url %>">

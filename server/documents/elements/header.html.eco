@@ -123,6 +123,23 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
   </div>
 
   <div class="another example">
+    <h2 class="ui small sub header">
+      Price
+    </h2>
+    <span>$10.99</span>
+    <div class="ui divider"></div>
+    <h2 class="ui large sub header">
+      Price
+    </h2>
+    <span>$10.99</span>
+    <div class="ui divider"></div>
+    <h2 class="ui huge sub header">
+      Price
+    </h2>
+    <span>$10.99</span>
+  </div>
+
+  <div class="another example">
     <div class="ui horizontal divided relaxed list">
       <div class="item">
         <img class="ui avatar image" src="/images/avatar/small/daniel.jpg">
@@ -147,7 +164,7 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
   </div>
 
   <div class="example">
-    <h4 class="ui header">Including Sub Headers</h4>
+    <h4 class="ui header">Header with Sub Header</h4>
     <p>Headers may contain sub headers giving further context to the section</p>
     <h2 class="ui header">
       Account Settings

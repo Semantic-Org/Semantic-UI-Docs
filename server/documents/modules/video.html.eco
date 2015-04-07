@@ -1,6 +1,8 @@
 ---
 layout      : 'default'
 css         : ''
+standalone  : true
+
 element     : 'video'
 elementType : 'module'
 
@@ -55,8 +57,8 @@ status      : 'Undocumented'
       <div class="code" data-type="html" data-preview="true">
         <div class="ui video"
           data-source="youtube"
-          data-id="i_mKY2CQ9Kk"
-          data-image="/images/cat.jpg"
+          data-id="pfdu_gTry8E"
+          data-image="/images/bear-waving.jpg"
         ></div>
       </div>
     </div>

@@ -953,7 +953,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
   <div class="example">
     <h4 class="ui header">Error</h4>
     <p>If a form is in an error state, it will automatically show any error message blocks:</p>
-    <div class="ui error form segment">
+    <div class="ui form error">
       <div class="ui error message">
         <div class="header">Action Forbidden</div>
         <p>You can only sign up for an account once with a given e-mail address.</p>

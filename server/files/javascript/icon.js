@@ -37,7 +37,7 @@ semantic.icon.ready = function() {
               });
           })
           .end()
-        .addClass('middle aligned equal height relaxed internally celled')
+        .addClass('middle aligned relaxed')
       ;
     }
   };

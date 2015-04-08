@@ -1265,7 +1265,7 @@ body.progress.animated .ui.progress .bar {
 #example .icon.example .grid > .row > .column {
   opacity: 0.8;
   text-align: center;
-  color: #888888;
+  color: transparent;
 
   -moz-align-items: center;
   -ms-align-items: center;
@@ -1291,6 +1291,9 @@ body.progress.animated .ui.progress .bar {
     color 0.3s ease,
     opacity 0.3s ease
   ;
+}
+#example .icon.example .attached.segment .grid > .row > .column  {
+  color: #555555;
 }
 #example .icon.example .column .icon {
   opacity: 1;
@@ -1322,10 +1325,10 @@ body.progress.animated .ui.progress .bar {
   ;
 }
 #example .icon.example .grid:hover > .row > .column {
-  color: #CCCCCC;
+  color: #777777;
 }
 #example .icon.example .grid:hover > .row > .column .icon {
-  color: #888888;
+  color: #333333;
 }
 
 #example .icon.example .grid > .row > .column:hover .icon {
@@ -1471,14 +1474,14 @@ body.progress.animated .ui.progress .bar {
 .hljs-phpdoc,
 .hljs-dartdoc,
 .tex .hljs-formula {
-  color: #009991;
+  color: #008C79;
 }
 .code:hover .hljs-string,
 .code:hover .hljs-tag .hljs-value,
 .code:hover .hljs-phpdoc,
 .code:hover .hljs-dartdoc,
 .code:hover .tex .hljs-formula {
-  color: #009991;
+  color: #007b6b;
 }
 
 /* Comment */
@@ -1495,7 +1498,7 @@ body.progress.animated .ui.progress .bar {
 .hljs-tag,
 .hljs-rules .hljs-property,
 .django .hljs-tag .hljs-keyword {
-  color: #999999;
+  color: #D1D1D1;
   font-weight: normal;
 }
 
@@ -1508,7 +1511,7 @@ body.progress.animated .ui.progress .bar {
 
 /* HTML Tag */
 .hljs-tag .hljs-title {
-  color: #7E7079;
+  color: #D1CDD4;
   font-weight: normal;
 }
 .code:hover .hljs-tag .hljs-title {
@@ -1519,7 +1522,7 @@ body.progress.animated .ui.progress .bar {
 .hljs-attribute,
 .hljs-variable,
 .lisp .hljs-body {
-  color: #8E6E6E;
+  color: #D1CECE;
   transition: color 0.3s;
 }
 .code:hover .hljs-attribute,

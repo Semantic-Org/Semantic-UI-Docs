@@ -13,7 +13,6 @@ type        : 'UI Element'
 themes      : ['Default']
 ---
 <link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/label.less" />
----
 
 <%- @partial('header') %>
 

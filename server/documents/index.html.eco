@@ -133,7 +133,9 @@ standalone : true
       <div class="nine wide column">
         <div class="hidden code" data-demo="true" data-type="javascript">
           $('.gender.dropdown')
-            .dropdown('setting', 'transition', 'vertical flip')
+            .dropdown({
+              transition: 'vertical flip'
+            })
             .dropdown('set selected', 'female')
             .popup('setting', 'content', 'Select your gender')
           ;

@@ -3083,6 +3083,25 @@ themes      : ['Default']
           </div>
         </tr>
         <tr>
+          <td>match</td>
+          <td>both</td>
+          <td>When using <code>search selection</code> specifies how to match values.
+          <div class="ui vertical divided list">
+            <div class="item">
+              <div class="header">both</div>
+              <div class="description">Matches against text and value</div>
+            </div>
+            <div class="item">
+              <div class="header">value</div>
+              <div class="description">matches against value only</div>
+            </div>
+            <div class="item">
+              <div class="header">text</div>
+              <div class="description">matches against text only</div>
+            </div>
+          </div>
+        </tr>
+        <tr>
           <td>on</td>
           <td>click</td>
           <td>Event used to trigger dropdown (Hover, Click, Custom Event)</td>

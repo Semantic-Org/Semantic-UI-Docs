@@ -9,26 +9,17 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script type="text/javascript">
 $(document).ready(function() {
-  $('.ui.accordion')
-        .accordion()
-    ;
+  $('.gender.dropdown')
+      .dropdown()
+      .dropdown('set selected', 'female')
+  ;
 });
 </script>
 
 <!-- TEST CSS HERE !-->
 <style type="text/css">
 </style>
-
-<div class="five column doubling ui grid">
-    <div class="column">1</div>
-    <div class="column">2</div>
-    <div class="column">3</div>
-    <div class="column">4</div>
-    <div class="column">5</div>
-    <div class="four column doubling row">
-        <div class="column">1</div>
-        <div class="column">2</div>
-        <div class="column">3</div>
-        <div class="column">4</div>
-    </div>
-</div>
+<select class="ui gender dropdown">
+  <option value="male">Male</option>
+  <option value="female">Female</option>
+</select>

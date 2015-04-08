@@ -9,17 +9,26 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script type="text/javascript">
 $(document).ready(function() {
-  $('.gender.dropdown')
-      .dropdown()
-      .dropdown('set selected', 'female')
-  ;
+    $('.ui.dropdown').dropdown();
 });
 </script>
 
 <!-- TEST CSS HERE !-->
 <style type="text/css">
 </style>
-<select class="ui gender dropdown">
-  <option value="male">Male</option>
-  <option value="female">Female</option>
-</select>
+<div class="ui fixed inverted menu">
+    <div class="ui search selection dropdown item">
+        <input type="hidden" name="country">
+
+        <div class="default text">Select Country</div><i class="dropdown icon"></i>
+        <div class="menu">
+            <div class="item" data-value="ad"><i class="ad flag"></i>Andorra</div>
+            <div class="item" data-value="ae"><i class="ae flag"></i>United Arab Emirates</div>
+            <div class="item" data-value="af"><i class="af flag"></i>Afghanistan</div>
+            <div class="item" data-value="ag"><i class="ag flag"></i>Antigua</div>
+            <!-- Omitted Some Countries !-->
+            <div class="item" data-value="zm"><i class="zm flag"></i>Zambia</div>
+            <div class="item" data-value="zw"><i class="zw flag"></i>Zimbabwe</div>
+        </div>
+    </div>
+</div>

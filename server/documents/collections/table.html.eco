@@ -179,6 +179,7 @@ themes      : ['Default', 'Basic', 'Classic']
   <div class="example">
     <h4 class="ui header">Definition</h4>
     <p>A table may be formatted to emphasize a first column that defines a rows content</p>
+    <div class="ui ignored info message">Definition tables are designed to display on a single background color. You can adjust this by changing <code>@definitionPageBackground</code>, or specifying a background color on the first cell</div>
     <table class="ui definition table">
       <thead>
         <th></th>

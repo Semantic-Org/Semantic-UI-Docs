@@ -9,26 +9,32 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script type="text/javascript">
 $(document).ready(function() {
-    $('.ui.dropdown').dropdown();
+    $('a').on('click', function() {
+        $('.ui.modal').modal('show');
+    });
+
+    $('.ui.search')
+        .search({
+            source: [{ title: 'Adam' }, { title: 'Alan' }, { title: 'Alvin' }]
+        })
+    ;
 });
 </script>
 
 <!-- TEST CSS HERE !-->
 <style type="text/css">
 </style>
-<div class="ui fixed inverted menu">
-    <div class="ui search selection dropdown item">
-        <input type="hidden" name="country">
-
-        <div class="default text">Select Country</div><i class="dropdown icon"></i>
-        <div class="menu">
-            <div class="item" data-value="ad"><i class="ad flag"></i>Andorra</div>
-            <div class="item" data-value="ae"><i class="ae flag"></i>United Arab Emirates</div>
-            <div class="item" data-value="af"><i class="af flag"></i>Afghanistan</div>
-            <div class="item" data-value="ag"><i class="ag flag"></i>Antigua</div>
-            <!-- Omitted Some Countries !-->
-            <div class="item" data-value="zm"><i class="zm flag"></i>Zambia</div>
-            <div class="item" data-value="zw"><i class="zw flag"></i>Zimbabwe</div>
+<div class="ui small modal">
+    <div class="content">
+        Here is a search:
+        <div class="ui search">
+            <div class="ui icon input">
+                <input class="prompt" type="text" placeholder="Where did you go?" />
+                <i class="search icon"></i>
+            </div>
+           <div class="results"></div>
         </div>
     </div>
 </div>
+
+<a>Open Modal</a>

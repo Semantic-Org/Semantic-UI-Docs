@@ -8,33 +8,52 @@ type       : 'Library'
 ---
 <!-- TEST JS HERE !-->
 <script type="text/javascript">
-$(document).ready(function() {
-    $('a').on('click', function() {
-        $('.ui.modal').modal('show');
-    });
+$(document).ready(function() {h
 
-    $('.ui.search')
-        .search({
-            source: [{ title: 'Adam' }, { title: 'Alan' }, { title: 'Alvin' }]
-        })
-    ;
 });
 </script>
 
 <!-- TEST CSS HERE !-->
 <style type="text/css">
 </style>
-<div class="ui small modal">
-    <div class="content">
-        Here is a search:
-        <div class="ui search">
-            <div class="ui icon input">
-                <input class="prompt" type="text" placeholder="Where did you go?" />
-                <i class="search icon"></i>
+<div class="ui container">
+
+    <div class="ui form">
+        <div class="three fields">
+            <div class="field">
+                <input type="text" />
             </div>
-           <div class="results"></div>
+            <div class="field">
+                <input type="text" />
+            </div>
+            <div class="field">
+                <input type="text" />
+            </div>
+        </div>
+        <div class="fields">
+            <div class='five wide field'>
+                <div class='ui labeled input'>
+                    <div class='ui label'>from:</div>
+                    <input type="text" class="" />
+                </div>
+            </div>
+            <div class='five wide field'>
+                <div class='ui icon input'>
+                    <i class='facebook icon'></i>
+                    <input type="text" class="" />
+                </div>
+            </div>
+            <div class='three wide field'>
+                <div class='ui right labeled input'>
+                    <input type="text" class="" />
+                    <div class='ui label'>value</div>
+                </div>
+            </div>
+            <div class='three wide field'>
+                <div class="ui button red icon"> <i class="trash icon"></i>
+
+                </div>
+            </div>
         </div>
     </div>
 </div>
-
-<a>Open Modal</a>

@@ -421,7 +421,7 @@ themes      : ['Default']
         </div>
       </div>
       <div class="evaluated code" data-type="javascript">
-      // showing multiple
+      // using context
       $('.context.example .ui.sidebar')
         .sidebar({
           context: $('.context.example .bottom.segment')

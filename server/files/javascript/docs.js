@@ -379,7 +379,7 @@ semantic.ready = function() {
     },
 
     getText: function($element) {
-      $element = ($element.find('a').not('.label').length > 0)
+      $element = ($element.find('a').not('.label, .anchor').length > 0)
         ? $element.find('a')
         : $element
       ;
@@ -417,7 +417,7 @@ semantic.ready = function() {
           ;
           html += '<div class="item">';
           if($examples.size() === 0) {
-            html += '<a class="'+activeClass+'title" href="#'+id+'"><b>' + $(this).text() + '</b></a>';
+            html += '<a class="'+activeClass+'title" href="#'+ id +'"><b>' + $(this).text() + '</b></a>';
           }
           else {
             html += '<a class="'+activeClass+'title"><i class="dropdown icon"></i> <b>' + $(this).text() + '</b></a>';
@@ -476,7 +476,7 @@ semantic.ready = function() {
     scrollTo: function(event) {
       var
         id       = $(this).attr('href').replace('#', ''),
-        $element = $('#'+id),
+        $element = $('#' + id),
         position = $element.offset().top + 10
       ;
       $element
@@ -1204,7 +1204,7 @@ semantic.ready = function() {
             on       : 'hover',
             variation: 'inverted',
             delay: {
-              show: 300,
+              show: 500,
               hide: 100
             },
             position : 'top right',

@@ -641,7 +641,83 @@ type        : 'UI Behavior'
           </tbody>
         </table>
       </div>
-    </div>
+
+      <h2 class="ui dividing header">Alternative Uses</h2>
+
+
+        <div class="no example">
+          <h4 class="ui header">Adjusting Server Responses</h4>
+          <p>In <code>2.0</code> API includes an <code>onResponse</code> callback which lets you adjust a server's response before a response is validated, allowing you to transform your response before other callbacks fire. This is useful for situations where an API response cannot be modified, but you need the response to conform with a required JSON structure.</p>
+          <div class="code" data-type="javascript">
+            $('.pseudo.example')
+              .api({
+                onResponse: function(response) {
+                  // modify your response json
+                  return {
+                    success: true,
+                    data: response
+                  };
+                },
+                onSuccess: function() {
+                  // this will always fire
+                }
+              })
+            ;
+          </div>
+        </div>
+
+        <div class="no sync mocked example">
+          <h4 class="ui header">Mocking Responses</h4>
+          <p>In <code>2.0</code> API includes two new parameter <code>mockResponse</code> and <code>mockResponseAsync</code> which allows you to specify a string, or as a sync or aync function for returning an API response</p>
+          <div class="code" data-type="javascript" data-demo="true">
+            $('.sync.mocked .button')
+              .api({
+                mockResponse: {
+                  success: true
+                }
+              })
+              .state({
+                text: {
+                  inactive   : 'Off',
+                  active     : 'On'
+                }
+              })
+            ;
+          </div>
+          <div class="ui toggle button">
+            Off
+          </div>
+        </div>
+
+        <div class="no async mocked example">
+          <h4 class="ui header">Using Custom Backends</h4>
+          <p>Using <code>mockResponseAsync</code> you can specify a function which can execute your API request. This allows for you to use custom backends or wrappers outside of <code>$.ajax</code> for integrating API requests.</p>
+          <div class="code" data-type="javascript" data-demo="true">
+            $('.async.mocked .button')
+              .api({
+                mockResponseAsync: function(settings, callback) {
+                  var response = {
+                    success: true
+                  };
+                  // do any asynchronous task here
+                  setTimeout(function() {
+                    callback(response);
+                  }, 500);
+                }
+              })
+              .state({
+                text: {
+                  inactive   : 'Off',
+                  active     : 'On'
+                }
+              })
+            ;
+          </div>
+          <div class="ui toggle button">
+            Off
+          </div>
+        </div>
+      </div>
 
   </div>
 

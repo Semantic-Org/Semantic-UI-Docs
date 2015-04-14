@@ -467,6 +467,11 @@ themes      : ['Default', 'Chubby']
           <td>Only allow one section open at a time</td>
         </tr>
         <tr>
+          <td>on</td>
+          <td>click</td>
+          <td>Event on <code>title</code> that will cause accordion to open</td>
+        </tr>
+        <tr>
           <td>animateChildren</td>
           <td>true</td>
           <td>Whether child content opacity should be animated (may cause performance issues with many child elements)</td>

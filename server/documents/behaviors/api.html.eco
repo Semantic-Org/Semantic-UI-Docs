@@ -467,22 +467,27 @@ type        : 'UI Behavior'
         <h4 class="ui header">Response Callbacks</h4>
         <p>Succesful responses from the server will trigger <code>onSuccess</code>, invalid results <code>onFailure</code>.<p>
         <p><code>onError</code> will only trigger on <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">XHR</a> errors (except due to page navigation like clicking a link), but not invalid JSON responses.</p>
+        <p>You can use the <code>onResponse</code> callback to adjust the json response before being parsed against a success test.
         <div class="code" data-type="javascript">
         $('.follow.button')
           .api({
+            onResponse: function(response) {
+              // do some adjustments to response
+              return response;
+            },
             successTest: function(response) {
               return response.success || false;
             }
-            onSuccess: function() {
+            onSuccess: function(response) {
               // valid response and response.success = true
             },
-            onFailure: function() {
+            onFailure: function(errorMessage) {
               // valid response but response.success = false
             },
-            onError: function() {
+            onError: function(errorMessage) {
               // invalid response
             },
-            onAbort: function() {
+            onAbort: function(errorMessage) {
               // user cancelled request
             }
           })
@@ -494,6 +499,9 @@ type        : 'UI Behavior'
         <h4 class="ui header">Determining JSON Success</h4>
         <p>API has special success conditions for <code>JSON</code> responses. Instead of providing success and failure callbacks based on the HTTP response of the request. A request is considered succesful only if the server's response tells you the action was successful. The response is passed to a validation test <code>successTest</code> which can be used to check the JSON for a valid response.</p>
         <p>For example you might expect all successful JSON responses to return a top level property signifying the success of the response<p>
+        <div class="ui ignored info message">
+          You can use the <code>onResponse</code> callback to modify a server's response by returning a new translated response value before it is parsed by a success test.
+        </div>
         <div class="code" data-type="json" data-title="Example Server Response">
         {
           "success": true,
@@ -858,9 +866,24 @@ type        : 'UI Behavior'
           <td>Allows modifying XHR object for request</td>
         </tr>
         <tr>
+          <td>onRequest(promise, xhr)</td>
+          <td>state context</td>
+          <td>Callback that occurs when request is made. Receives both the api success promise and the xhr request promise.</td>
+        </tr>
+        <tr>
+          <td>onResponse(response)</td>
+          <td>state context</td>
+          <td>Allows modifying the server's response before parsed by other callbacks to determine API event success</td>
+        </tr>
+        <tr>
           <td>onSuccess(response, element)</td>
           <td>state context</td>
           <td>Callback on response object that passed <code>successTest</code></td>
+        </tr>
+        <tr>
+          <td>onComplete(response, element)</td>
+          <td>state context</td>
+          <td>Callback on request complete regardless of conditions</td>
         </tr>
         <tr>
           <td>onFailure(response, element)</td>
@@ -876,11 +899,6 @@ type        : 'UI Behavior'
           <td>onAbort(errorMessage, element)</td>
           <td>state context</td>
           <td>Callback on abort caused by user clicking a link or manually cancelling request</td>
-        </tr>
-        <tr>
-          <td>onComplete(response, element)</td>
-          <td>state context</td>
-          <td>Callback on request complete regardless of conditions</td>
         </tr>
       </tbody>
     </table>

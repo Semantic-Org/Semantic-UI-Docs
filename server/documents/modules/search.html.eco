@@ -539,6 +539,44 @@ type        : 'UI Module'
     </table>
 
     <h2 class="ui dividing header">
+      Templates
+    </h2>
+
+    <p>These templates are used to generate the html structures for search results</p>
+
+    <div class="ui ignored info message">
+      By specifying a search as <code>type: 'customType'</code>, and a custom template under <code>$.fn.search.settings.templates.customType</code> you can create custom search results. Keep in mind that <code>.title</code> will be used for matching results <code>onSelect</code>
+    </div>
+     <table class="ui sortable celled definition table">
+      <thead>
+        <th></th>
+        <th class="twelve wide">Functions</th>
+      </thead>
+        <tr>
+          <td>templates</td>
+          <td>
+            <div class="code" data-type="css">
+            $.fn.search.settings.templates : {
+              escape: function(string) {
+                // returns escaped string for injected results
+              },
+              message: function(message, type) {
+               // returns html for message with given message and type
+              },
+              category: function(response) {
+               // returns results html for category results
+              },
+              standard: function(response) {
+               // returns results html for standard results
+              }
+            }
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="ui dividing header">
       Module
     </h2>
 
@@ -562,6 +600,18 @@ type        : 'UI Module'
           <td>Event namespace. Makes sure module teardown does not effect other events attached to an element.</td>
         </tr>
         <tr>
+          <td>regExp</td>
+          <td>
+            <div class="code" data-type="css">
+            regExp: {
+              escape     : /[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g,
+              beginsWith : '(?:\s|^)'
+            }
+            </div>
+          </td>
+          <td>Regular expressions used for matching</td>
+        </tr>
+        <tr>
           <td>selector</td>
           <td>
             <div class="code" data-type="css">
@@ -575,6 +625,18 @@ type        : 'UI Module'
             </div>
           </td>
           <td>Selectors used to find parts of a module</td>
+        </tr>
+        <tr>
+          <td>metadata</td>
+          <td>
+            <div class="code">
+            metadata: {
+              cache   : 'cache',
+              results : 'results'
+            }
+            </div>
+          </td>
+          <td>HTML5 metadata attributes used internally</td>
         </tr>
         <tr>
           <td>className</td>

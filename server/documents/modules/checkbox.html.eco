@@ -8,7 +8,7 @@ title       : 'Checkbox'
 description : "A checkbox allows a user to select a value from a small set of options, often binary"
 type        : 'UI Module'
 
-themes      : ['Default']
+themes      : ['Default', 'Colored']
 ---
 <script src="/javascript/checkbox.js"></script>
 <link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/checkbox.less" />

@@ -96,6 +96,7 @@ themes      : ['Default']
     </div>
     <div class="another dropdown example">
       <select class="ui search dropdown">
+        <%- @partial('examples/single/state-options') %>
       </select>
       <div class="existing code">
       <select class="ui search dropdown">

@@ -432,17 +432,6 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
       <a class="item">
         Locations
       </a>
-      <div class="right menu">
-        <div class="header item">
-          Support
-        </div>
-        <a class="item">
-          FAQ
-        </a>
-        <a class="item">
-          E-mail Support
-        </a>
-      </div>
     </div>
   </div>
   <div class="another example">

@@ -155,7 +155,7 @@ type        : 'UI Behavior'
         <thead>
           <th class="four wide">Name</th>
           <th>Validates</th>
-          <th>Example</th>
+          <th class="six wide">Example</th>
         </thead>
         <tbody>
           <tr>
@@ -227,6 +227,15 @@ type        : 'UI Behavior'
             <td>maxCount</td>
             <td>A multiple select field contains at maximum (count) selections</td>
             <td><code>maxCount[count]</code></td>
+          </tr>
+          <tr>
+            <td>regExp[expression]</td>
+            <td>Matches against a regular expression</td>
+            <td>
+              <code>regExp[/^[a-z0-9_-]{3,16}$/gi]]</code>
+              <div class="ui horizontal divider">Or</div>
+              <code>regExp[^[a-z0-9_-]{3,16}$]]</code>
+            </td>
           </tr>
           <tr>
             <td>not</td>

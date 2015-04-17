@@ -6,18 +6,13 @@
 <% uiBehavior        = @getCollection("documents").findAll({type: $in: ['UI Behavior']},[{title: 1}]).toJSON() %>
 
 <div class="ui vertical inverted sticky menu">
-  <div class="item">
-    <a class="ui mini image" href="/">
-      <img src="/images/logo.png">
-    </a>
-  </div>
   <a class="item" href="<%= @getZip() %>">
     <i class="download icon"></i>
     <b>Download</b>
   </a>
   <a class="item" href="/kitchen-sink.html">
     <i class="cubes icon"></i>
-    <b>All UI</b>
+    <b>UI Examples</b>
   </a>
   <div class="item">
     <div class="<%= if @document.elementType is 'global' then 'active ' %> header">Globals</div>

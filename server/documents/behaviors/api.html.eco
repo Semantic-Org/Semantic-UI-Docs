@@ -29,7 +29,6 @@ type        : 'UI Behavior'
           <p>Use API actions like 'follow user' and not server urls in your code. Centrally manage your entire API making sure you aren't caught modifying urls across your codebase. Define your endpoints using an intuitive templating system that automatically passes data found in your UI.</p>
         </div>
       </div>
-    </div>
       <div class="column">
         <div class="content">
           <div class="ui header"><i class="green check icon"></i>State Management</div>

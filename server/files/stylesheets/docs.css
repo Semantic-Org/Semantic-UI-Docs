@@ -1656,6 +1656,7 @@ body.progress.animated .ui.progress .bar {
 }
 #example .article {
   flex: 1 1 auto;
+  min-width: 0px;
 }
 
 /*******************************
@@ -1687,6 +1688,7 @@ body.progress.animated .ui.progress .bar {
 #example .main.container > .tab > .examples > .right.rail .sticky,
 #example .main.container > .tab > .right.rail .sticky {
   margin: 2em 0em;
+  padding-bottom: 2em;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }

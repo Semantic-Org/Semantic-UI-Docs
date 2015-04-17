@@ -10,7 +10,7 @@ title       : 'Modal'
 description : 'A modal displays content that temporarily blocks interactions with the main view of a site'
 type        : 'UI Module'
 
-themes      : ['Default', 'Material', 'Fixed-width']
+themes      : ['Default', 'Material']
 ---
 <link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/modal.less" />
 <script src="/javascript/modal.js"></script>
@@ -52,28 +52,24 @@ themes      : ['Default', 'Material', 'Fixed-width']
     </div>
   </div>
 
-  <div class="ui basic test modal">
-    <div class="header">
+  <div class="ui small basic test modal">
+    <div class="ui icon header">
+      <i class="archive icon"></i>
       Archive Old Messages
     </div>
     <div class="content">
-      <div class="image">
-        <i class="archive icon"></i>
-      </div>
       <div class="description">
         <p>Your inbox is getting full, would you like us to enable automatic archiving of old messages?</p>
       </div>
     </div>
     <div class="actions">
-      <div class="two fluid ui inverted buttons">
-        <div class="ui red basic cancel inverted button">
-          <i class="remove icon"></i>
-          No
-        </div>
-        <div class="ui green ok basic inverted button">
-          <i class="checkmark icon"></i>
-          Yes
-        </div>
+      <div class="ui red basic cancel inverted button">
+        <i class="remove icon"></i>
+        No
+      </div>
+      <div class="ui green ok inverted button">
+        <i class="checkmark icon"></i>
+        Yes
       </div>
     </div>
   </div>

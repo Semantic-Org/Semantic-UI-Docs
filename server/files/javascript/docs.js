@@ -995,7 +995,7 @@ semantic.ready = function() {
       // add run code button
       if(demo) {
         $('<a>')
-          .addClass('ui pointing below label')
+          .addClass('ui teal pointing below label')
           .html('Run Code')
           .on('click', function() {
             eval(code);

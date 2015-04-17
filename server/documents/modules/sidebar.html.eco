@@ -27,7 +27,8 @@ themes      : ['Default']
       <h4 class="ui header">Sidebar</h4>
       <p>A sidebar</p>
       <div class="ui ignored info message">
-        <p>Sidebars do not have any inherent formatting, and can be used to display any off-canvas content of your choosing. Sidebar have a loose coupling with <a href="/collections/menu.html">ui menu</a> which can provide additional structure for content.</p>
+        <p>Sidebars do not have any inherent formatting, and can be used alongside other UI to display any off-canvas content of your choosing.</p>
+        <p>The following example uses additional classes from <a href="/collections/menu.html">ui menu</a> to provide structure for sidebar content.</p>
       </div>
       <div class="code" data-type="html" data-title="Example HTML">
         <div class="ui left vertical inverted labeled icon sidebar menu">

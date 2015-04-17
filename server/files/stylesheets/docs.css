@@ -38,14 +38,12 @@ pre.console {
   direction:ltr;
 }
 code {
-  background-color: rgba(0, 0, 0, 0.02);
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.08);
   display: inline-block;
   font-family: "Monaco","Menlo","Ubuntu Mono","Consolas","source-code-pro",monospace;
   font-size: 0.85714em;
   font-weight: bold;
-  margin: 0 2px 0px 0px;
-  padding: 0px 4px;
+  padding: 2px 4px;
   vertical-align: baseline;
 }
 pre code {
@@ -53,12 +51,9 @@ pre code {
   padding: 0px;
   font-size: 1em;
 }
-p code {
-  font-family: 'Lato', Arial, sans-serif;
-}
 /* Code block */
 .ui.message code {
-  background-color: rgba(255, 255, 255, 0.6);
+  //background-color: rgba(255, 255, 255, 0.6);
 }
 
 p {
@@ -673,7 +668,6 @@ body#example {
 
 /* Description */
 #example .example .anchor + p {
-  font-size: 14px;
   margin-top: 0;
   padding-bottom: 1em;
 }

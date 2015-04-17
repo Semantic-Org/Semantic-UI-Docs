@@ -16,34 +16,31 @@ type        : 'UI Behavior'
 
 <div class="main ui container">
   <div class="ui active tab" data-tab="overview">
-    <div class="ui two column very relaxed stackable grid">
-      <div class="row">
-        <div class="column">
-          <div class="content">
-            <div class="ui header"><i class="green check icon"></i>Already Knows Your UI</div>
-            <p>Attach an API event to an input, by default, it willn occur <code>oninput</code>. Attach an API event to a button, <code>onclick</code>. API also ties API state to UI state: rate throttling, class adjustments for active, loading, disabled, syncing between multiple elements, and more.</p>
-          </div>
-        </div>
-        <div class="column">
-          <div class="content">
-            <div class="ui header"><i class="green check icon"></i>Deal with resources not URLs</div>
-            <p>Use API actions like 'follow user' and not server urls in your code. Centrally manage your entire API making sure you aren't caught modifying urls across your codebase. Define your endpoints using an intuitive templating system that automatically passes data found in your UI.</p>
-          </div>
+    <div class="ui one column grid">
+      <div class="column">
+        <div class="content">
+          <div class="ui header"><i class="green check icon"></i>Already Knows Your UI</div>
+          <p>Attach an API event to an input, by default, it will occur <code>oninput</code>. Attach an API event to a button, <code>onclick</code>. API also ties API state to UI state: rate throttling, class adjustments for active, loading, disabled, syncing between multiple elements, and more.</p>
         </div>
       </div>
-    <div class="row">
-        <div class="column">
-          <div class="content">
-            <div class="ui header"><i class="green check icon"></i>State Management</div>
-            <p>API helps your UI keep track of server events, and is designed to work with Semantic's state naming conventions to track loading, disabled, and active states.</p>
-            <p>This allows you to do things like set maximum and minimum UI load times, toggle between text states, and sync UI states between multiple elements with the same API actions.</p>
-          </div>
+      <div class="column">
+        <div class="content">
+          <div class="ui header"><i class="green check icon"></i>Deal with resources not URLs</div>
+          <p>Use API actions like 'follow user' and not server urls in your code. Centrally manage your entire API making sure you aren't caught modifying urls across your codebase. Define your endpoints using an intuitive templating system that automatically passes data found in your UI.</p>
         </div>
-        <div class="column">
-          <div class="content">
-            <div class="ui header"><i class="green check icon"></i>Server Traces For Humans</div>
-            <p>View your API request as it occurs in your web console, get errors if required url variables are missing, and useful performance metrics.</p>
-          </div>
+      </div>
+    </div>
+      <div class="column">
+        <div class="content">
+          <div class="ui header"><i class="green check icon"></i>State Management</div>
+          <p>API helps your UI keep track of server events, and is designed to work with Semantic's state naming conventions to track loading, disabled, and active states.</p>
+          <p>This allows you to do things like set maximum and minimum UI load times, toggle between text states, and sync UI states between multiple elements with the same API actions.</p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <div class="ui header"><i class="green check icon"></i>Server Traces For Humans</div>
+          <p>View your API request as it occurs in your web console, get errors if required url variables are missing, and useful performance metrics.</p>
         </div>
       </div>
     </div>

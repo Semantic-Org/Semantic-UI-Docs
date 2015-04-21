@@ -72,9 +72,14 @@ standalone : true
           <span class="text">is the language of the web.</span>
         </h1>
         <div class="ui hidden divider"></div>
-        <a href="<%= @getZip() %>" class="ui huge basic inverted teal download button">
+
+        <a href="https://github.com/Semantic-Org/Semantic-UI/archive/next.zip" class="ui huge basic inverted teal download button">
           Download Now
         </a>
+        <!--
+        <a href="<%= @getZip() %>" class="ui huge basic inverted teal download button">
+          Download Now
+        </a> -->
       </div>
       <div class="inverted advertisement">
         <% unless 'development' in @getEnvironments(): %>

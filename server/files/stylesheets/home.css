@@ -46,6 +46,11 @@
   -webkit-transition: background-color 3s ease-in-out 1s;
   transition: background-color 3s ease-in-out 1s;
 }
+
+#example.index .masthead .container {
+  margin-right: auto !important;
+}
+
 #example.index .masthead.zoomed {
   background-color: #2A2A2A;
   animation: none;

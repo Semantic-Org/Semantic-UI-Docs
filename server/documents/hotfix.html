@@ -1,0 +1,58 @@
+---
+layout     : 'blank'
+css        : 'hotfix'
+standalone : true
+
+title      : 'Test Page'
+type       : 'Library'
+---
+<!-- TEST JS HERE !-->
+<script type="text/javascript">
+$(document).ready(function() {
+$.fn.search.settings.templates.github = function(response) {
+    var html = '';
+
+    html += '<div class="category">';
+    html += '<div class="name">' + 'Repositories' + '</div>';
+
+    $.each(response.results, function(index, result) {
+      html += '<div class="result">';
+      html += '<div class="content">';
+      html += '<div class="title">' + result.name + '</div>';
+      html += '</div>';
+      html += '</div>';
+    });
+
+    html += '</div>'; // close category
+    return html;
+};
+
+$('.ui.tag.search')
+  .search({
+    apiSettings: {
+        url: 'https://api.github.com/orgs/semantic-org/repos',
+        onResponse: function(response) {
+          return {results: response};
+        }
+    },
+    type: 'github',
+    onSelect: function(result, response) {
+        console.log(result, response);
+    }
+  })
+;
+
+});
+</script>
+
+<style></style>
+
+<div class="ui container">
+<div class="ui category tag search">
+       <div class="ui icon input">
+          <input class="prompt" type="text" placeholder="search tags...">
+          <i class="search icon"></i>
+       </div>
+       <div class="results"></div>
+    </div>
+</div>

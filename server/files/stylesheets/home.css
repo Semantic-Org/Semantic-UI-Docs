@@ -57,7 +57,7 @@
   -webkit-animation: none;
 }
 #example .masthead .grid {
-  margin: 0em;
+  margin: 0em auto !important;
   padding: 15rem 0em;
 }
 #example.index .following.bar iframe.github {
@@ -74,7 +74,7 @@
 }
 
 /* Animation */
-/*#example.index .masthead:before {
+#example.index .masthead:before {
   position: absolute;
   z-index: 1;
   width: 100%;
@@ -224,7 +224,6 @@
  }
 }
 
-*/
 #example.index .light.following.bar {
   padding: 1em 0em;
   background-color: #FFFFFF;
@@ -618,6 +617,9 @@
   color: rgba(0, 0, 0, 0.5);
 }
 
+#example.index > .pusher > .footer {
+  padding-left: 0em;
+}
 
 
 /*--------------

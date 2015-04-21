@@ -1,6 +1,7 @@
 ---
 layout      : 'default'
 css         : 'shape'
+standalone  : true
 
 element     : 'shape'
 elementType : 'module'
@@ -187,108 +188,45 @@ themes      : ['default']
       <h4 class="ui header">Shape with Content</h4>
       <p>Any type of element can be used as a side of a shape.</p>
 
-      <div class="dog ui shape">
+      <div class="ui dog shape">
         <div class="sides">
           <div class="active side">
-            <div class="ui cards">
-              <div class="card">
-                <div class="image">
-                  <a class="ui like corner label">
-                    <i class="like icon"></i>
-                  </a>
-                  <img src="/images/demo/highres2.jpg">
-                </div>
-                <div class="content">
-                  <div class="header">Cute Dog</div>
-                  <p class="description">This dog has some things going for it. Its pretty cute and looks like it'd be fun to cuddle up with.</p>
-                </div>
+            <div class="ui card">
+              <div class="image">
+                <a class="ui like corner label">
+                  <i class="like icon"></i>
+                </a>
+                <img src="/images/demo/highres.jpg">
+              </div>
+              <div class="content">
+                <div class="header">Cute Dog</div>
+                <p class="description">This dog has some things going for it. Its pretty cute and looks like it'd be fun to cuddle up with.</p>
               </div>
             </div>
           </div>
           <div class="side">
-            <div class="ui cards">
-              <div class="card">
-                <div class="image">
-                  <a class="ui like corner label">
-                    <i class="like icon"></i>
-                  </a>
-                  <img src="/images/demo/highres5.jpg">
+            <div class="ui icon message">
+              <i class="inbox icon"></i>
+              <div class="content">
+                <div class="header">
+                  Have you heard about our mailing list?
                 </div>
-                <div class="content">
-                  <div class="header">Silly Dog</div>
-                  <p class="description">Silly dogs can be quite fun to have as companions. You never know what kind of ridiculous thing they will do.</p>
-                </div>
+                <p>Get the best news in your e-mail every day.</p>
               </div>
             </div>
           </div>
           <div class="side">
-            <div class="ui cards">
-              <div class="card">
-                <div class="image">
-                  <a class="ui like corner label">
-                    <i class="like icon"></i>
-                  </a>
-                  <img src="/images/demo/highres4.jpg">
-                </div>
-                <div class="content">
-                  <div class="header">Faithful Dog</div>
-                  <div class="meta">5 days ago</div>
-                  <p class="description">Sometimes its more important to have a dog you know you can trust. But not every dog is trustworthy, you can tell by looking at its smile.</p>
-                </div>
+            <div class="ui card">
+              <div class="image">
+                <a class="ui like corner label">
+                  <i class="like icon"></i>
+                </a>
+                <img src="/images/demo/highres6.jpg">
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="dog ui shape">
-        <div class="sides">
-          <div class="active side">
-            <div class="ui cards">
-              <div class="card">
-                <div class="image">
-                  <a class="ui like corner label">
-                    <i class="like icon"></i>
-                  </a>
-                  <img src="/images/demo/highres.jpg">
-                </div>
-                <div class="content">
-                  <div class="header">Cute Dog</div>
-                  <p class="description">This dog has some things going for it. Its pretty cute and looks like it'd be fun to cuddle up with.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="side">
-            <div class="ui cards">
-              <div class="card">
-                <div class="image">
-                  <a class="ui like corner label">
-                    <i class="like icon"></i>
-                  </a>
-                  <img src="/images/demo/highres4.jpg">
-                </div>
-                <div class="content">
-                  <div class="header">Silly Dog</div>
-                  <p class="description">Silly dogs can be quite fun to have as companions. You never know what kind of ridiculous thing they will do.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="side">
-            <div class="ui cards">
-              <div class="card">
-                <div class="image">
-                  <a class="ui like corner label">
-                    <i class="like icon"></i>
-                  </a>
-                  <img src="/images/demo/highres6.jpg">
-                </div>
-                <div class="content">
-                  <div class="header">Faithful Dog</div>
-                  <div class="meta">5 days ago</div>
-                  <p class="description">Sometimes its more important to have a dog you know you can trust. But not every dog is trustworthy, you can tell by looking at its smile.</p>
-                </div>
+              <div class="content">
+                <div class="header">Faithful Dog</div>
+                <div class="meta">5 days ago</div>
+                <p class="description">Sometimes its more important to have a dog you know you can trust. But not every dog is trustworthy, you can tell by looking at its smile.</p>
               </div>
             </div>
           </div>

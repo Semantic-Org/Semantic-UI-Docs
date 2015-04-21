@@ -1,6 +1,8 @@
 ---
 layout      : 'default'
 css         : 'custom'
+standalone  : true
+
 title       : 'All UI'
 type        : 'Semantic'
 description : 'Examples of all user interface elements'

@@ -4,7 +4,7 @@ css        : 'index'
 standalone : true
 ---
 <div class="following bar">
-  <div class="ui page grid">
+  <div class="ui grid container">
     <div class="column">
       <div class="ui large inverted secondary network menu">
         <div class="item">
@@ -57,7 +57,7 @@ standalone : true
   </div>
 </div>
 <div class="zoomed masthead segment">
-  <div class="ui page grid">
+  <div class="ui grid container">
     <div class="column">
       <div class="introduction">
         <a class="ui black version label" href="https://github.com/Semantic-Org/Semantic-UI/blob/master/RELEASE-NOTES.md">
@@ -90,7 +90,7 @@ standalone : true
   </div>
 </div>
 <div class="ui vertical stripe intro segment">
-  <div class="ui stackable very relaxed center aligned page grid">
+  <div class="ui stackable very relaxed center aligned grid container">
     <div class="row">
       <div class="twelve wide column">
         <img class="ui fluid image" src="/images/devices.png">
@@ -99,7 +99,7 @@ standalone : true
       </div>
     </div>
   </div>
-  <div class="stackable very relaxed ui page grid">
+  <div class="stackable very relaxed ui grid container">
     <div class="row">
       <div class="seven wide column">
         <h2 class="ui header">Concise HTML</h2>
@@ -181,7 +181,7 @@ standalone : true
   </div>
 </div>
 <div class="ui email alternate stripe vertical segment">
-  <div class="ui center aligned page grid">
+  <div class="ui center aligned grid container">
     <div class="column">
       <h3 class="ui header">
         Semantic is growing fast. Want to see just how much? Sign up and we'll let you know
@@ -200,7 +200,7 @@ standalone : true
   </div>
 </div>
 <div class="ui stripe theming vertical segment">
-  <div class="ui stackable very relaxed two column page grid">
+  <div class="ui stackable very relaxed two column grid container">
     <div class="center aligned column">
       <h1 class="ui icon header">
         <img src="/images/icons/theming.png" class="ui icon image">
@@ -264,7 +264,7 @@ standalone : true
   </div>
 </div>
 <div class="feature alternate ui stripe vertical segment">
-  <div class="ui three column center aligned divided relaxed stackable page grid">
+  <div class="ui three column center aligned divided relaxed stackable grid container">
     <div class="row">
       <div class="column">
         <h2 class="ui icon header">
@@ -296,7 +296,7 @@ standalone : true
   </div>
 </div>
 <div class="ui stripe vertical segment">
-  <div class="ui stackable very relaxed page grid">
+  <div class="ui stackable very relaxed grid container">
     <div class="fourteen wide center aligned centered column">
       <h1 class="ui icon header">
         <img src="/images/icons/toolbox.png" class="ui icon image">
@@ -847,28 +847,55 @@ standalone : true
           </div>
 
           <div class="ui divider"></div>
-          <div tabindex="0" class="ui searchable floating dropdown labeled icon button">
+          <div class="ui floating dropdown labeled icon button">
             <i class="filter icon"></i>
             <span class="text">Filter Posts</span>
-            <div tabindex="-1" class="menu">
+            <div class="menu">
+              <div class="ui icon search input">
+                <i class="search icon"></i>
+                <input type="text" placeholder="Search tags...">
+              </div>
               <div class="header">
-                Filter by Tag
+                <i class="tags icon"></i>
+                Tag Label
               </div>
-              <div class="item">
-                <div class="ui red empty circular label"></div>
-                Important
-              </div>
-              <div class="item">
-                <div class="ui blue empty circular label"></div>
-                Announcement
-              </div>
-              <div class="item">
-                <div class="ui black empty circular label"></div>
-                Cannot Fix
-              </div>
-              <div class="item">
-                <div class="ui green empty circular label"></div>
-                Discussion
+              <div class="scrolling menu">
+                <div class="item">
+                  <div class="ui red empty circular label"></div>
+                  Important
+                </div>
+                <div class="item">
+                  <div class="ui blue empty circular label"></div>
+                  Announcement
+                </div>
+                <div class="item">
+                  <div class="ui black empty circular label"></div>
+                  Cannot Fix
+                </div>
+                <div class="item">
+                  <div class="ui purple empty circular label"></div>
+                  News
+                </div>
+                <div class="item">
+                  <div class="ui orange empty circular label"></div>
+                  Enhancement
+                </div>
+                <div class="item">
+                  <div class="ui empty circular label"></div>
+                  Change Declined
+                </div>
+                <div class="item">
+                  <div class="ui yellow empty circular label"></div>
+                  Off Topic
+                </div>
+                <div class="item">
+                  <div class="ui pink empty circular label"></div>
+                  Interesting
+                </div>
+                <div class="item">
+                  <div class="ui green empty circular label"></div>
+                  Discussion
+                </div>
               </div>
             </div>
           </div>
@@ -949,7 +976,7 @@ standalone : true
   </div>
 </div>
 <div class="ui stripe community vertical segment">
-  <div class="ui two column center aligned divided very relaxed stackable page grid">
+  <div class="ui two column center aligned divided very relaxed stackable grid container">
     <div class="row">
       <div class="column">
         <h2 class="ui icon header">
@@ -969,7 +996,7 @@ standalone : true
   </div>
 </div>
 <div class="ui alternate stripe vertical segment">
-  <div class="ui stackable center aligned page grid">
+  <div class="ui stackable center aligned grid container">
     <div class="fourteen wide column">
       <h1 class="ui icon header">
         <img class="ui inline icon image" src="/images/icons/rocket.png">

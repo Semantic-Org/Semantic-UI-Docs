@@ -53,6 +53,7 @@ semantic.shape.ready = function() {
         .each(handler.removeShape)
       ;
       $demo
+        .removeAttr('style')
         .addClass(shape)
       ;
     }

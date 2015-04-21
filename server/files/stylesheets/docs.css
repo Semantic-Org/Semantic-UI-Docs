@@ -643,6 +643,9 @@ body#example {
 #example .example .wireframe.image {
   opacity: 0.5;
 }
+#example .example .accordion .content > .wireframe.image {
+  opacity: 0.5 !important;
+}
 #example .example :not(.images) > .wireframe.image {
   margin-top: 1rem;
   margin-bottom: 1rem;

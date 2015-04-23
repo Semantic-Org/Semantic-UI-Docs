@@ -48,6 +48,7 @@
 }
 
 #example.index .masthead .container {
+  margin-left: auto !important;
   margin-right: auto !important;
 }
 
@@ -57,7 +58,6 @@
   -webkit-animation: none;
 }
 #example .masthead .grid {
-  margin: 0em auto !important;
   padding: 15rem 0em;
 }
 #example.index .following.bar iframe.github {
@@ -73,8 +73,12 @@
   transform: translate3d(0, 0, 0);
 }
 
+#example.index > .pusher > .footer {
+  padding-left: 0em;
+}
+
 /* Animation */
-#example.index .masthead:before {
+/*#example.index .masthead:before {
   position: absolute;
   z-index: 1;
   width: 100%;
@@ -224,6 +228,7 @@
  }
 }
 
+*/
 #example.index .light.following.bar {
   padding: 1em 0em;
   background-color: #FFFFFF;
@@ -617,9 +622,6 @@
   color: rgba(0, 0, 0, 0.5);
 }
 
-#example.index > .pusher > .footer {
-  padding-left: 0em;
-}
 
 
 /*--------------

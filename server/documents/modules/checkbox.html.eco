@@ -352,7 +352,7 @@ themes      : ['Default', 'Colored']
         <tr>
           <td>onChange</td>
           <td>HTML input element</td>
-          <td>Callback after a checkbox is either disabled or enabled.</td>
+          <td>Callback after a checkbox is either checked or unchecked.</td>
         </tr>
         <tr>
           <td>onChecked</td>

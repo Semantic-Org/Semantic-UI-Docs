@@ -1,6 +1,6 @@
 ---
 layout      : 'default'
-css         : 'card'
+css         : 'basic card'
 standalone  : true
 
 element     : 'card'
@@ -700,48 +700,30 @@ themes      : ['Default', 'Basic', 'Classic']
         <div class="image">
           <img src="/images/avatar/large/elliot.jpg">
         </div>
-        <div class="content">
-          <a class="header">Elliot Fu</a>
-        </div>
       </div>
       <div class="card">
         <div class="image">
           <img src="/images/avatar/large/helen.jpg">
-        </div>
-        <div class="content">
-          <a class="header">Helen Troy</a>
         </div>
       </div>
       <div class="card">
         <div class="image">
           <img src="/images/avatar/large/jenny.jpg">
         </div>
-        <div class="content">
-          <a class="header">Jenny Hess</a>
-        </div>
       </div>
       <div class="card">
         <div class="image">
           <img src="/images/avatar/large/veronika.jpg">
-        </div>
-        <div class="content">
-          <a class="header">Veronika Ossi</a>
         </div>
       </div>
       <div class="card">
         <div class="image">
           <img src="/images/avatar/large/stevie.jpg">
         </div>
-        <div class="content">
-          <a class="header">Stevie</a>
-        </div>
       </div>
       <div class="card">
         <div class="image">
           <img src="/images/avatar/large/steve.jpg">
-        </div>
-        <div class="content">
-          <a class="header">Steve Jobes</a>
         </div>
       </div>
     </div>

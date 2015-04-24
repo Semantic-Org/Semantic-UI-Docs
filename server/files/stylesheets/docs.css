@@ -53,7 +53,8 @@ pre code {
 }
 /* Code block */
 .ui.message code {
-  //background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1) inset;
 }
 
 p {
@@ -329,9 +330,10 @@ p:last-child {
 
 #example .fixed.column {
   position: absolute;
-  right: -2em;
+  right: -0.5em;
   top: 0px;
   width: 300px;
+  padding-top: 2em;
 }
 
 #example .tab.masthead .item.menu {
@@ -346,7 +348,7 @@ p:last-child {
   display: none;
 }
 #example .fixed.column .sticky {
-  padding-top: 4em;
+  margin-top: 0em;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
@@ -492,6 +494,7 @@ body#example {
   position: relative;
   width: 700px;
   left: 0px;
+  margin-right: 4em !important;
 }
 
 #example.basic > .pusher > .full.height {
@@ -554,18 +557,18 @@ body#example {
   margin: 0em;
   border-radius: 0em;
   background-color: #262626 !important;
-  padding: 4em 0em 5em 250px;
+  padding: 4em 350px 5em 250px;
 }
 
 /*----------------
   Settings Table
 -----------------*/
-
+/*
 #example .main.container .ui.celled.definition.table thead:not(.full-width) th:first-child {
   background-color: #f7f7f7;
   box-shadow: 0 -1px 0 1px #f7f7f7;
 }
-
+*/
 #example .settings.table {
   margin-bottom: 20px;
 }
@@ -629,6 +632,13 @@ body#example {
   position: relative;
   -webkit-tap-highlight-color: transparent;
 }
+#example .example > .ignored,
+#example .example > .ignore,
+#example .no.example > *,
+#example .example > p {
+  max-width: 700px;
+}
+
 #example .example:last-child {
   margin-bottom: none;
 }
@@ -1622,7 +1632,7 @@ body.progress.animated .ui.progress .bar {
   flex-direction: row;
 }
 #example:not(.site) > .pusher > .full.height {
-  background-color: #F7F7F7;
+  background-color: #FFFFFF;
 }
 
 /* page layout */
@@ -1673,6 +1683,7 @@ body.progress.animated .ui.progress .bar {
 #example .main.container > .tab > .examples > .right.rail,
 #example .main.container > .tab > .right.rail {
   padding-top: 2em;
+  width: 250px;
 }
 #example .main.container > .right.rail .sticky,
 #example .main.container > .tab > .examples > .right.rail .sticky,
@@ -1972,7 +1983,7 @@ body.progress.animated .ui.progress .bar {
   }
   #example .masthead > .container,
   #example .main.container {
-    margin-right: 380px !important;
+    margin-right: 350px !important;
   }
   #example .masthead > .container .advertisement {
     padding-left: 33px;
@@ -1990,7 +2001,6 @@ body.progress.animated .ui.progress .bar {
   #example .masthead > .container,
   #example .main.container {
     margin-right: 380px !important;
-    max-width: 800px !important;
   }
   #example .masthead > .container .advertisement {
     padding-left: 26px;

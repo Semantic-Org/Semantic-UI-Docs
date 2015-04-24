@@ -9,38 +9,70 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script type="text/javascript">
 $(document).ready(function() {
-$.fn.search.settings.templates.github = function(response) {
-    var html = '';
+var test = {
+    $ct: $('#container'),
+    $content: $('#views'),
+    $tabs: $('#tabs'),
 
-    html += '<div class="category">';
-    html += '<div class="name">' + 'Repositories' + '</div>';
+    init: function() {
+        var that = this;
 
-    $.each(response.results, function(index, result) {
-      html += '<div class="result">';
-      html += '<div class="content">';
-      html += '<div class="title">' + result.name + '</div>';
-      html += '</div>';
-      html += '</div>';
-    });
+        that.$ct.on('click', 'a.item', function() {
+            that.selectTab($(this).attr('id'));
+        });
 
-    html += '</div>'; // close category
-    return html;
+        that.openTab('tab1', 'Tab 1');
+        that.selectTab('tab1');
+
+        //this.$tabs.find('#tab1').click();
+    },
+
+    selectTab: function(id) {
+        this.$tabs.find('#' + id).addClass('active').siblings().removeClass('active');
+        this.$content.find('#' + id).addClass('active').siblings().removeClass('active');
+    },
+
+    openTab: function(id, name) {
+        var that = this;
+
+        //create tab view
+        that.$content.append(
+            '<div id="' + id + '" class="ui bottom attached tab" data-tab="' + id + '"></div>'
+        );
+
+        //create tab 'handle'
+        that.$tabs.append(
+            '<a id="' + id + '" class="item" data-tab="' + id + '">'+
+                name +
+            '</a>'
+        )
+        .find('> .item').last().tab( that.getTabParameters(id) );
+    },
+
+    getTabParameters: function(id) {
+        var that = this;
+
+        return {
+            context: that.$ct,
+            debug: true,
+            apiSettings: {
+              mockResponse: "Tab 1 Content <script type='text/javascript'>$(function() { alert('tab1 is selected'); }); <\/script>"
+            },
+            cache: true,
+            auto: true,
+            path: '/tabs',
+            onTabInit: function(tabPath, parameterArray, historyEvent) {
+                console.log('Initialized tab: ' + tabPath);
+            },
+            onTabLoad: function(tabPath, parameterArray, historyEvent) { //tab selected
+                console.log('Selected tab: ' + tabPath);
+            }
+        };
+    }
 };
 
-$('.ui.tag.search')
-  .search({
-    apiSettings: {
-        url: 'https://api.github.com/orgs/semantic-org/repos',
-        onResponse: function(response) {
-          return {results: response};
-        }
-    },
-    type: 'github',
-    onSelect: function(result, response) {
-        console.log(result, response);
-    }
-  })
-;
+
+test.init();
 
 });
 </script>
@@ -48,11 +80,13 @@ $('.ui.tag.search')
 <style></style>
 
 <div class="ui container">
-<div class="ui category tag search">
-       <div class="ui icon input">
-          <input class="prompt" type="text" placeholder="search tags...">
-          <i class="search icon"></i>
-       </div>
-       <div class="results"></div>
+<div id="container">
+    <div id="tabs" class="ui top attached pointing secondary menu">
+
     </div>
+
+    <div id="views">
+
+    </div>
+</div>
 </div>

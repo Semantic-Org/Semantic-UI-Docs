@@ -5,7 +5,7 @@ semantic.visiblity.ready = function() {
 
   // selector cache
   var
-    $pageTabs           = $('.top.tab.segment .menu .item'),
+    $pageTabs           = $('.masthead.tab.segment .menu .item'),
     $firstColumn        = $('.first.example .main.column'),
     $firstSegment       = $('.first.example .demo.segment'),
     $firstSticky        = $('.first.example .grid .sticky'),

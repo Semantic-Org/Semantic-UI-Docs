@@ -13,28 +13,13 @@ semantic.api = {};
 // ready event
 semantic.api.ready = function() {
 
-  var
-    headers = {
-      'Content-Type': 'application/json'
-    },
-    method       = 'GET',
-    responseCode = 200,
-    body         = '{ "success": "true" }',
-    server       = sinon.fakeServer.create()
-  ;
-
-  server.autoRespond = true;
-  server.autoRespondAfter = 600;
-
-  server
-    .respondWith(/\/follow\/(\d+)/, [responseCode, headers, body])
-  ;
-  server
-    .respondWith(/\/create\/(.*)/, [responseCode, headers, body])
-  ;
-  server
-    .respondWith(/\/search\/(.*)/, [responseCode, headers, body])
-  ;
+  $.fn.api.settings.mockResponseAsync = function(callback) {
+    setTimeout(function() {
+      callback({
+        "success": "true"
+      });
+    }, 500);
+  };
 
   $('form .ui.dropdown')
     .dropdown()

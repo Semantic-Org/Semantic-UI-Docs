@@ -30,6 +30,7 @@ semantic.ready = function() {
     $document            = $(document),
     $sortableTables      = $('.sortable.table'),
     $sticky              = $('.ui.sticky'),
+    $tocSticky           = $('.toc .ui.sticky'),
 
     $themeDropdown       = $('.theme.dropdown'),
 
@@ -162,10 +163,10 @@ semantic.ready = function() {
           observeChanges: false,
           once: false,
           offset: 50,
-          onTopVisible: handler.activate.accordion,
+          //onTopVisible: handler.activate.accordion,
           onTopPassed: handler.activate.section,
-          onBottomPassed: handler.activate.section,
           onTopPassedReverse: handler.activate.previous
+          //onBottomPassed: handler.activate.section,
         })
       ;
 
@@ -219,9 +220,6 @@ semantic.ready = function() {
           $followSection = $followMenu.children('.item'),
           $activeSection = $followSection.eq(index)
         ;
-        $followMenu
-          .accordion('open', index)
-        ;
       },
       section: function() {
         var
@@ -231,14 +229,15 @@ semantic.ready = function() {
           $activeSection = $followSection.eq(index),
           isActive       = $activeSection.hasClass('active')
         ;
-        if(!isActive) {
-          $followSection
-            .removeClass('active')
-          ;
-          $activeSection
-            .addClass('active')
-          ;
-        }
+        $followSection
+          .removeClass('active')
+        ;
+        $activeSection
+          .addClass('active')
+        ;
+        $followMenu
+          .accordion('open', index)
+        ;
       },
       example: function() {
         var
@@ -444,7 +443,7 @@ semantic.ready = function() {
         })
       ;
       $followMenu = $('<div />')
-        .addClass('ui vertical following fluid accordion menu')
+        .addClass('ui vertical following fluid accordion text menu')
         .html(html)
       ;
       $sticky = $('<div />')
@@ -453,7 +452,7 @@ semantic.ready = function() {
       ;
       $sticky.prepend('<h4 class="ui header">Definition</h4>');
       $rail = $('<div />')
-        .addClass('ui right rail')
+        .addClass('ui dividing right rail')
         .html($sticky)
         .prependTo($container)
       ;
@@ -464,6 +463,7 @@ semantic.ready = function() {
       $followMenu
         .accordion({
           exclusive: false,
+          animateChildren: false,
           onChange: function() {
             $sticky.sticky('refresh');
           }
@@ -1295,6 +1295,11 @@ semantic.ready = function() {
       allowTab : false
     })
   ;
+
+  $tocSticky
+    .sticky()
+  ;
+
   $languageDropdown
     .popup({
       position : 'bottom center',

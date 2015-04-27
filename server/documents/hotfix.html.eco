@@ -1,0 +1,38 @@
+---
+layout     : 'blank'
+css        : 'hotfix'
+standalone : true
+
+title      : 'Test Page'
+type       : 'Library'
+---
+<!-- TEST JS HERE !-->
+<script type="text/javascript">
+$(document).ready(function() {
+});
+</script>
+
+<!-- TEST CSS HERE !-->
+<style type="text/css">
+</style>
+
+<div style="max-width: 1000px;margin:2em auto;">
+<div class="ui form segment">
+  <div class="ui middle aligned page grid">
+    <div class="six wide column">
+      <label>
+        <i class="disk outline icon"></i>
+        Foo:
+      </label>
+    </div>
+    <div class="ten wide column">
+      <div class="ui labeled input">
+        <div class="ui label">
+           abcdefghijklmnopqrstuvwxyz
+        </div>
+        <input type="text" />
+      </div>
+    </div>
+  </div>
+</div>
+</div>

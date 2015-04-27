@@ -572,6 +572,11 @@ themes      : ['Default', 'Material']
           <td>If set to false will prevent the modal from being moved to inside the dimmer</td>
         </tr>
         <tr>
+          <td>autofocus</td>
+          <td>true</td>
+          <td>When true, the first form input inside the modal will receive focus when shown.  Set this to false to prevent this behavior.</td>
+        </tr>
+        <tr>
           <td>allowMultiple</td>
           <td>false</td>
           <td>If set to true will not close other visible modals when opening a new one</td>

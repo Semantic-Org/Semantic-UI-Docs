@@ -172,6 +172,7 @@ type        : 'UI Module'
         })
       ;
     </div>
+
     <h4 class="ui header">Named URL</h4>
     <p>You can specify custom API settings to adjust the url, callback settings, or specify a different api action.</p>
     <div class="code" data-label="javascript">
@@ -186,6 +187,7 @@ type        : 'UI Module'
         })
       ;
     </div>
+
     <h4 class="ui header">Local Object</h4>
     <p>Local search results allow you to search across specified properties of a javacript object literal looking for matching values</p>
     <p>
@@ -215,7 +217,8 @@ type        : 'UI Module'
         })
       ;
     </div>
-    <h3 class="ui header">Server Responses</h3>
+
+    <h2 class="ui dividing header">Server Responses</h2>
 
     <div class="ui info message">You may also consider adding a top level property like <code>success: true</code> and using API's <code>successTest</code> parameter to determine wheter a server response is actually succesful, even if it returns the correct HTTP code</div>
 
@@ -288,6 +291,30 @@ type        : 'UI Module'
       }
     </div>
 
+
+    <h2 class="ui dividing header">Retreiving Results</h2>
+
+    <h4 class="ui header">Unique IDs</h4>
+    <p>If no <code>id</code> property is included on a result, a key will automatically be generated when your results are returned for each result.</p>
+    <p>IDs are generated using the position in the results, for example the first element will receive the id <code>1</code>, and the first category result will receive the id <code>a1</code>.</p>
+    <p>An <code>id</code> or search result title can then be used with <code>get result(value)</code> to return the result object.
+    </p>
+    <div class="code" data-label="javascript">
+      // get result from current query results with the title cat
+      $('.ui.search')
+        .search('get result', 'cat')
+      ;
+      // get first result from first category with category search
+      $('.ui.search')
+        .search('get result', 'a1')
+      ;
+      // get first result from standard search
+      $('.ui.search')
+        .search('get result', '1')
+      ;
+    </div>
+
+
     <h2 class="ui dividing header">Behaviors</h2>
 
     <p>All the following behaviors can be called using the syntax:</p>
@@ -328,7 +355,7 @@ type        : 'UI Module'
           <td>Search remote endpoint for specified query and display results</td>
         </tr>
         <tr>
-          <td>search object(query, object)</td>
+          <td>search object(query, object, searchFields)</td>
           <td>Search object for specified query and return results</td>
         </tr>
         <tr>
@@ -353,7 +380,7 @@ type        : 'UI Module'
         </tr>
         <tr>
           <td>get result(value)</td>
-          <td>Returns JSON object matching search value</td>
+          <td>Returns JSON object matching searched title or id (see above)</td>
         </tr>
         <tr>
           <td>set value(value)</td>

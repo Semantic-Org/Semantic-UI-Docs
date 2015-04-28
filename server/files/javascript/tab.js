@@ -45,6 +45,12 @@ semantic.dropdown.ready = function() {
     })
   ;
 
+  $('.paths.example .menu .item')
+    .tab({
+      context: '.paths.example'
+    })
+  ;
+
   $('.dynamic.example .menu .item')
     .tab({
       context : '.dynamic.example',

@@ -18,7 +18,7 @@ themes      : ['Default']
 
 <div class="main ui container">
 
-  <h2 class="ui dividing header">Types</h2>
+  <h2 class="ui dividing header">Content</h2>
 
   <div class="example">
     <h4 class="ui header">Label</h4>
@@ -37,38 +37,78 @@ themes      : ['Default']
   </div>
 
   <div class="example">
-    <h4 class="ui header">Removable</h4>
-    <p>A label can contain a delete icon</p>
+    <h4 class="ui header">Link</h4>
+    <p>A label can be a link or contain an item that links</p>
+    <a class="ui label">
+      <i class="mail icon"></i> 23
+    </a>
+  </div>
+  <div class="another example">
+    <div class="ui label">
+      <i class="mail icon"></i>
+      23
+      <a class="detail">View Mail</a>
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Delete Icon</h4>
+    <p>A label can contain an icon used to remove itself</p>
     <div class="ui label">
       Witty
       <i class="delete icon"></i>
     </div>
   </div>
 
-  <div class="example">
-    <h4 class="ui header">Link</h4>
-    <p>A label can contain a text link</p>
-    <div class="ui label">
-      Inbox
-      <a class="detail"><i class="mail icon"></i> 23</a>
-    </div>
-  </div>
+  <h2 class="ui dividing header">Types</h2>
 
   <div class="example">
     <h4 class="ui header">Image</h4>
     <p>A label can be formatted to include an image</p>
     <a class="ui image label">
-      <img src="/images/demo/photo2.jpg">
-      dog@doggington.com
+      <img src="/images/avatar/small/joe.jpg">
+      Joe
     </a>
     <a class="ui image label">
-      <img src="/images/demo/avatar3.jpg">
-      kelly@bellyscratcher.com
+      <img src="/images/avatar/small/elliot.jpg">
+      Elliot
+    </a>
+    <a class="ui image label">
+      <img src="/images/avatar/small/stevie.jpg">
+      Stevie
+    </a>
+  </div>
+  <div class="another example">
+    <a class="ui blue image label">
+      <img src="/images/avatar/small/veronika.jpg">
+      Veronika
       <div class="detail">Friend</div>
     </a>
+    <a class="ui teal image label">
+      <img src="/images/avatar/small/jenny.jpg">
+      Veronika
+      <div class="detail">Student</div>
+    </a>
+    <a class="ui yellow image label">
+      <img src="/images/avatar/small/christian.jpg">
+      Helen
+      <div class="detail">Co-worker</div>
+    </a>
+  </div>
+  <div class="another example">
     <div class="ui image label">
-      <img src="/images/demo/avatar2.jpg">
-      james@thepooch.com
+      <img src="/images/avatar/small/ade.jpg">
+      Adrienne
+      <i class="delete icon"></i>
+    </div>
+    <div class="ui image label">
+      <img src="/images/avatar/small/zoe.jpg">
+      Zoe
+      <i class="delete icon"></i>
+    </div>
+    <div class="ui image label">
+      <img src="/images/avatar/small/nan.jpg">
+      Nan
       <i class="delete icon"></i>
     </div>
   </div>

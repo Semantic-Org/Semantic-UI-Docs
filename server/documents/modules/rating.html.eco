@@ -1,6 +1,7 @@
 ---
 layout      : 'default'
 css         : 'rating'
+standalone  : true
 
 element     : 'rating'
 elementType : 'module'
@@ -40,7 +41,7 @@ themes      : ['Default']
     <div class="example">
       <h4 class="ui header">Heart</h4>
       <p>A rating can use a set of heart icons</p>
-      <div class="ui heart rating" data-rating="7" data-max-rating="10"></div>
+      <div class="ui heart rating" data-rating="1" data-max-rating="3"></div>
     </div>
 
     <h2 class="ui dividing header">Variations</h2>

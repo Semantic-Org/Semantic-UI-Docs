@@ -249,7 +249,7 @@ semantic.ready = function() {
           anotherExample = ($(this).filter('.another.example').size() > 0),
           isActive       = $activeSection.hasClass('active')
         ;
-        if(!inClosedTab && !anotherExample && !isActive) {
+        if(index !== -1 && !inClosedTab && !anotherExample && !isActive) {
           $followSection
             .removeClass('active')
           ;
@@ -465,7 +465,7 @@ semantic.ready = function() {
           exclusive: false,
           animateChildren: false,
           onChange: function() {
-            $sticky.sticky('refresh');
+            $('.ui.sticky').sticky('refresh');
           }
         })
         .find('.menu a[href], .title[href]')
@@ -559,7 +559,7 @@ semantic.ready = function() {
                       .addClass('override')
                       .appendTo('body')
                     ;
-                    $('.sticky').sticky('refresh');
+                    $sticky.sticky('refresh');
                   }
                 })
               ;
@@ -1109,7 +1109,7 @@ semantic.ready = function() {
           });
         },
         onTabLoad : function() {
-          $(this).find('> .rail .ui.sticky, .fixed .ui.sticky')
+          $sticky
             .sticky('refresh')
           ;
         }

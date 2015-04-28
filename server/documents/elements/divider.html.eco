@@ -21,8 +21,8 @@ themes      : ['default']
   <h2 class="ui dividing header">Types</h2>
   <div class="example">
     <h4 class="ui header">Divider</h4>
-    <div class="ignored ui warning message">If you are looking to add a divider in between grid rows, you can use the <code>ui divided grid</code> variation. For more information check out <a href="/collections/grid.html">the grid definition</a></div>
     <p>A standard divider</p>
+    <div class="ignored ui warning message">If you are looking to add a divider in between grid rows, you can use the <code>ui divided grid</code> variation. For more information check out <a href="/collections/grid.html">the grid definition</a></div>
     <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
     <div class="ui divider"></div>
     <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
@@ -30,13 +30,13 @@ themes      : ['default']
 
   <div class="example">
     <h4 class="ui header">Vertical Divider</h4>
-    <div class="ui ignored warning message">
+    <p>A divider can segment content vertically</p>
+    <div class="ui ignored message">
       Vertical and horizontal dividers require you to add <code>position: relative</code> to the element that you would like to contain the divider
     </div>
     <div class="ui info ignored message">
       A vertical divider will automatically adjust to a horizontal divider at mobile resolutions when used inside a <a href="/collections/grid.html#stackable-grid">stackable grid</a>
     </div>
-    <p>A divider can segment content vertically</p>
     <div class="ui two column middle aligned very relaxed fitted stackable grid">
       <div class="column">
         <div class="ui form">
@@ -72,9 +72,9 @@ themes      : ['default']
   <div class="example">
     <h4 class="ui header">Horizontal Divider</h4>
     <p>A divider can segment content horizontally</p>
-    <div class="ui ignored positive message">Horizontal dividers can also be used in combination with <a href="/elements/header.html">headers</a> and <a href="/elements/icon.html">icons</a> to create different styles of dividers.
+    <div class="ui ignored message">Horizontal dividers can also be used in combination with <a href="/elements/header.html">headers</a> and <a href="/elements/icon.html">icons</a> to create different styles of dividers.
     </div>
-    <div class="ui ignored message">Dividers  will automatically vary the size of their dividing rules to match the length of your text</div>
+    <div class="ui ignored info message">Dividers will automatically vary the size of their dividing rules to match the length of your text</div>
     <div class="ui center aligned basic segment">
       <div class="ui left icon action input">
         <i class="search icon"></i>

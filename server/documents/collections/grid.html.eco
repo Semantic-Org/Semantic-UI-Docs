@@ -80,7 +80,7 @@ themes      : ['Default']
 
     <div class="example">
       <h4 class="ui header">Stretched rows</h4>
-      <p>The new <code>stretched</code> adjusts each columns contents to grow to take the full height of the column. This makes creating equal height segments a cinch.</p>
+      <p>The new <code>stretched</code> variation adjusts each column's contents to grow to the full height of the column.</p>
       <div class="ui three column stretched grid">
         <div class="row">
           <div class="column">

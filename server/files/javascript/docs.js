@@ -816,7 +816,7 @@ semantic.ready = function() {
         $annotation = $('<div/>')
           .addClass('annotation')
           .hide()
-          .appendTo($example)
+          .insertAfter($demo.last())
         ;
       }
 

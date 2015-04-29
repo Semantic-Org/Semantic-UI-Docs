@@ -27,28 +27,6 @@ themes      : ['default']
 
     <div class="example">
       <h4 class="ui header">Shape</h4>
-      <p>A standard shape</p>
-
-      <div class="code" data-type="html">
-      <div class="ui shape">
-        <div class="sides">
-          <div class="active side">This side starts visible.</div>
-          <div class="side">This is yet another side</div>
-          <div class="side">This is the last side</div>
-        </div>
-      </div>
-      </div>
-      <div class="ui clearing divider"></div>
-      <div class="ignored code">
-      // shows next side
-      $('.ui.shape')
-        .shape('flip over')
-      ;
-      </div>
-    </div>
-
-    <div class="example">
-      <h4 class="ui header">Shape</h4>
       <p>A shape is a three dimensional object including any flat content as a side.</p>
 
       <div class="ui people shape">
@@ -263,36 +241,59 @@ themes      : ['default']
 
     <h2 class="ui dividing header">Getting Started</h2>
 
-    <p>Initializing a shape</p>
-    <div class="code">
-      $('.shape').shape();
+    <div class="no example">
+      <h4 class="ui header">Required Markup</h4>
+      <p>Shapes can have any arbitrary content, just wrap each side in <code>side</code></p>
+      <div class="code" data-type="html">
+        <div class="ui shape">
+          <div class="sides">
+            <div class="active side">This side starts visible.</div>
+            <div class="side">This is yet another side</div>
+            <div class="side">This is the last side</div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <p>Transitions automatically assume next side is the next sibling (or first if last element)</p>
-    <div class="code">
-      $('.shape').shape('flip up');
+    <div class="no example">
+
+      <h4 class="ui header">Animating with Javascript</h4>
+      <p>Animations use CSS3 transitions and javascript to set-up the correct conditions.</p>
+
+      <p>Initializing a shape</p>
+      <div class="code">
+        $('.shape').shape();
+      </div>
+
+      <p>Transitions automatically assume next side is the next sibling (or first if last element)</p>
+      <div class="code">
+        $('.shape').shape('flip up');
+      </div>
+
+      <p>To manually set the next side to appear use a selector or jQuery object</p>
+      <div class="code">
+      $('.shape')
+        .shape('set next side', '.second.side')
+        .shape('flip up')
+      ;
+      </div>
+
+      <p>Any internal method can be invoked programmatically</p>
+      <div class="code">
+        $('.shape').shape('repaint');
+      </div>
+
     </div>
 
-    <p>To manually set the next side to appear use a selector or jQuery object</p>
-    <div class="code">
-    $('.shape')
-      .shape('set next side', '.second.side')
-      .shape('flip up')
-    ;
-    </div>
+    <h2 class="ui dividing header">Behavior</h2>
 
-    <p>Any internal method can be invoked programmatically</p>
-    <div class="code">
-      $('.shape').shape('repaint');
-    </div>
-
-     <h2 class="ui dividing header">Behavior</h2>
-
-    <p>All the following behaviors can be called using the syntax:</p>
-    <div class="code">
-    $('.your.element')
-      .shape('behavior name', argumentOne, argumentTwo)
-    ;
+    <div class="no example">
+      <p>All the following behaviors can be called using the syntax:</p>
+      <div class="code">
+      $('.your.element')
+        .shape('behavior name', argumentOne, argumentTwo)
+      ;
+      </div>
     </div>
 
     <table class="ui definition sortable celled table segment">

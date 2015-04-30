@@ -132,6 +132,8 @@ themes      : ['Default']
     <div class="example">
       <h4 class="ui header">Size</h4>
       <p>A popup can vary in size</p>
+      <i class="circular heart icon link" data-content="Hello. This is a mini popup" data-variation="mini"></i>
+      <i class="circular heart icon link" data-content="Hello. This is a tiny popup" data-variation="tiny"></i>
       <i class="circular heart icon link" data-content="Hello. This is a small popup" data-variation="small"></i>
       <i class="circular heart icon link" data-content="Hello. This is a large popup" data-variation="large"></i>
       <i class="circular heart icon link" data-content="Hello. This is a huge popup" data-variation="huge"></i>
@@ -400,6 +402,9 @@ themes      : ['Default']
     <div class="example">
       <h4 class="ui header">Specifying a selector for a popup</h4>
       <p>If its not possible to include the popup content as the next sibling, you can also specify a custom selector to help link the popup contents to its activator.</p>
+      <div class="ui warning ignored message">
+        Using an <code>inline</code> popup may require specifying a <code>min-width</code> on your popup, if your popup content will appear outside the boundaries of its parent element.
+      </div>
       <div class="evaluated code">
       $('.example .custom.button')
         .popup({

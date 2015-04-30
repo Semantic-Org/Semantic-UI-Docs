@@ -46,6 +46,9 @@ themes      : ['Default']
     <div class="dropdown example">
       <h4 class="ui header">Selection</h4>
       <p>A dropdown can be used to select between choices in a form</p>
+      <div class="ui ignored info message">
+        Selection dropdowns can be initialized directly on a <code>select</code> or with the matching html and a hidden <code>input</code>.
+      </div>
       <div class="ui selection dropdown">
         <input type="hidden" name="gender">
         <div class="default text">Gender</div>
@@ -57,11 +60,6 @@ themes      : ['Default']
       </div>
     </div>
     <div class="another dropdown example">
-      <div class="ui ignored info message">
-        <div class="header">Converting Select Elements</div>
-        <p>You can initialize a selection dropdown directly on a select element, any option that is given a blank value will automatically be converted into a placeholder</p>
-        <p>Keep in mind however, if you initialize a dropdown directly on a select element, the dropdown contents will be hidden until javascript can render the element, causing a flash of unstyled content.</p>
-      </div>
       <select class="ui dropdown">
         <option value="">Gender</option>
         <option value="1">Male</option>
@@ -73,6 +71,14 @@ themes      : ['Default']
           <option value="1">Male</option>
           <option value="0">Female</option>
         </select>
+      </div>
+    </div>
+    <div class="another dropdown example">
+      <div class="ui fluid selection dropdown">
+        <input type="hidden" name="country">
+        <i class="dropdown icon"></i>
+        <div class="default text">Select Country</div>
+        <%- @partial('examples/single/flag-menu') %>
       </div>
     </div>
 
@@ -255,7 +261,7 @@ themes      : ['Default']
     </div>
 
     <div class="another dropdown example">
-      <div class="ui basic multiple dropdown">
+      <div class="ui multiple dropdown">
         <i class="filter icon"></i>
         <span class="text">Filter Posts</span>
         <div class="menu">
@@ -1153,7 +1159,7 @@ themes      : ['Default']
 
     <div class="transition example">
       <h4 class="ui header">Changing Transitions</h4>
-      <p>A dropdown can specify a different <a href="/modules/transition.html">transitions</a>.</p>
+      <p>A dropdown can specify a different <a href="/modules/transition.html">transition</a>.</p>
 
       <div class="code" data-type="javascript">
       $('.dropdown')

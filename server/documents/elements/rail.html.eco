@@ -1,8 +1,9 @@
 ---
 layout      : 'default'
-css         : 'basic'
+css         : 'basic minimal'
 element     : 'rail'
 elementType : 'element'
+standalone  : true
 
 title       : 'Rail'
 description : 'A rail is used to show accompanying content outside the boundaries of the main view of a site'

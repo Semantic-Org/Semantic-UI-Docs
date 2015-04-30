@@ -517,6 +517,30 @@ body#example {
   max-width: 100%;
 }
 
+
+/* Always Hidden Sidebar */
+#example.minimal.basic > .launch.button {
+  display: block;
+}
+#example.minimal.basic .full.height > .toc {
+  display: none;
+}
+#example.minimal.basic .fixed.menu > .container,
+#example.minimal.basic .main.container,
+#example.minimal.basic .masthead > .container,
+#example.minimal.basic .footer > .container {
+  position: relative;
+  width: 800px !important;
+  left: 0px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+#example.minimal > .pusher > .footer {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+
 /*----------------
    Overview Mode
 -----------------*/

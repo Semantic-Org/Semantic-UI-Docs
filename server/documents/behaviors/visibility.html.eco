@@ -1,6 +1,6 @@
 ---
 layout      : 'default'
-css         : 'visibility'
+css         : 'visibility basic minimal'
 element     : 'visibility'
 elementType : 'behavior'
 standalone  : true

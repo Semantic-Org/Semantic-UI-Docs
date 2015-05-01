@@ -77,8 +77,33 @@ themes      : ['Default']
       <div class="ui fluid selection dropdown">
         <input type="hidden" name="country">
         <i class="dropdown icon"></i>
-        <div class="default text">Select Country</div>
-        <%- @partial('examples/single/flag-menu') %>
+        <div class="default text">Select Friend</div>
+        <div class="menu">
+          <div class="item">
+            <img class="ui mini avatar image" src="/images/avatar/small/jenny.jpg">
+            Jenny Hess
+          </div>
+          <div class="item">
+            <img class="ui mini avatar image" src="/images/avatar/small/elliot.jpg">
+            Elliot Fu
+          </div>
+          <div class="item">
+            <img class="ui mini avatar image" src="/images/avatar/small/stevie.jpg">
+            Stevie Feliciano
+          </div>
+          <div class="item">
+            <img class="ui mini avatar image" src="/images/avatar/small/christian.jpg">
+            Christian
+          </div>
+          <div class="item">
+            <img class="ui mini avatar image" src="/images/avatar/small/matt.jpg">
+            Matt
+          </div>
+          <div class="item">
+            <img class="ui mini avatar image" src="/images/avatar/small/justen.jpg">
+            Justen Kitsune
+          </div>
+        </div>
       </div>
     </div>
 
@@ -932,9 +957,6 @@ themes      : ['Default']
       </div>
     </div>
     <div class="another dropdown example">
-      <div class="ui ignored info message">
-        <code>scrolling</code> can also be specified on a menu
-      </div>
       <div class="ui dropdown">
         <i class="filter icon"></i>
         <span class="text">Filter Posts</span>
@@ -1147,12 +1169,12 @@ themes      : ['Default']
       <h4 class="ui header">Maximum Selections</h4>
       <p>Using <code>maxSelections</code> lets you force a maximum number of selections. You can also use <a href="http://laptop-vm:9778/behaviors/form.html#validation-rules">form validation</a> rules to specify minimum and maximum validation settings for multi-selects inside forms.</p>
 
+      <div class="ui sub header">Selection</div>
       <select multiple name="skills" class="ui fluid dropdown">
         <%- @partial('examples/single/skill-menu') %>
       </select>
 
-      <div class="ui horizontal divider">or</div>
-
+      <div class="ui sub header">Search Selection</div>
       <div class="ui fluid multiple search selection dropdown">
         <input type="hidden" name="country">
         <i class="dropdown icon"></i>
@@ -1170,16 +1192,27 @@ themes      : ['Default']
     </div>
 
     <div class="tag example">
-      <h4 class="ui header">Tagging</h4>
+      <h4 class="ui header">Tagging and User Additions</h4>
       <p>Using <code>allowAdditions: true</code> gives users the ability to add their own options. This can work with either single or multiple search select dropdowns</p>
 
+      <div class="ui ignored warning message">
+        Although all dropdowns support <code>select</code> initialization, custom choices <b>will not be saved on page refresh</b> unless you use a hidden input. This is because <code>option</code> created dynamically are not preserved on page refresh.
+      </div>
+
+      <div class="ui sub header">Single</div>
       <select name="skills" class="ui fluid search dropdown">
         <%- @partial('examples/single/skill-menu') %>
       </select>
-      <div class="ui horizontal divider">or</div>
-      <select name="skills" multiple class="ui fluid search dropdown">
-        <%- @partial('examples/single/skill-menu') %>
-      </select>
+
+      <div class="ui sub header">Multiple</div>
+      <div class="ui fluid multiple search selection dropdown">
+        <input name="tags" type="hidden" />
+        <i class="dropdown icon"></i>
+        <div class="default text">Skills</div>
+        <div class="menu">
+          <%- @partial('examples/single/preset-menu') %>
+        </div>
+      </div>
 
       <div class="evaluated code" data-type="javascript">
         $('.tag.example .ui.dropdown')
@@ -1408,95 +1441,8 @@ themes      : ['Default']
 
     </div>
 
-    <div class="dropdown example">
-    <h4 class="ui header">Button Group</h4>
-      <p>A <a href="/elements/button.html">button group</a> can be formatted to show additional content as a dropdown</p>
-      <div class="ui icon buttons">
-        <div class="ui top left pointing dropdown button">
-          <i class="user icon"></i>
-          <div class="menu">
-            <div class="item"><i class="edit icon"></i>Edit User</div>
-            <div class="item"><i class="delete icon"></i>Remove User</div>
-            <div class="item"><i class="hide icon"></i>Make Invisible</div>
-          </div>
-        </div>
-        <div class="ui top left pointing dropdown button">
-          <i class="users icon"></i>
-          <div class="menu">
-            <div class="item"><i class="edit icon"></i>Edit Group</div>
-            <div class="item"><i class="delete icon"></i>Remove Group</div>
-            <div class="item"><i class="hide icon"></i>Hide from Group</div>
-          </div>
-        </div>
-        <div class="ui top right pointing dropdown button">
-          <i class="settings icon"></i>
-          <div class="menu">
-            <div class="item"><i class="edit icon"></i> Edit</div>
-            <div class="item"><i class="delete icon"></i> Remove</div>
-            <div class="item"><i class="hide icon"></i> Hide</div>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="hover example">
-      <h4 class="ui header">Menu</h4>
-      <p>A <a href="/collections/menu.html">menu</a> element can contain a dropdown</p>
-        <div class="ui purple inverted menu">
-          <a class="item">
-            Home
-          </a>
-          <a class="ui dropdown item">
-            Messages
-            <i class="dropdown icon"></i>
-            <div class="menu">
-              <div class="item">
-                <i class="dropdown icon"></i>
-                <span class="text">Categories</span>
-                <div class="menu">
-                  <div class="item">Unread</div>
-                  <div class="item">Promotions</div>
-                  <div class="item">Updates</div>
-                </div>
-              </div>
-              <div class="item">Archive</div>
-            </div>
-          </a>
-          <a class="item">
-            Browse
-          </a>
-        </div>
-    </div>
-
-    <div class="dropdown example">
-      <h4 class="ui header">Form</h4>
-      <p>A dropdown can be formatted to allow selection inside a <a href="/collections/form.html">form</a></p>
-      <div class="ui form segment">
-        <p>Let's go ahead and get you signed up.</p>
-        <div class="two fields">
-          <div class="field">
-            <label>First Name</label>
-            <input placeholder="First Name" type="text">
-          </div>
-          <div class="field">
-            <label>Last Name</label>
-            <input placeholder="Last Name" type="text">
-          </div>
-        </div>
-        <div class="field">
-          <label>Gender</label>
-          <div class="ui dropdown selection">
-            <input type="hidden" name="gender">
-            <div class="default text">Select Gender</div>
-            <i class="dropdown icon"></i>
-            <div class="menu">
-              <div class="item" data-value="male">Male</div>
-              <div class="item" data-value="female">Female</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <h2 class="ui header">Adjusting Actions</h2>
 
     <div class="button example">
       <h4 class="ui header">Combo Dropdowns</h4>
@@ -1545,6 +1491,97 @@ themes      : ['Default']
           <a class="item" href="#link1"><i class="home icon"></i> Home</a>
           <a class="item" href="#link2"><i class="users icon"></i> Browse</a>
           <a class="item" href="#link3"><i class="search icon"></i> Search</a>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="ui header">Coupling</h2>
+
+    <div class="dropdown example">
+    <h4 class="ui header">Button Group</h4>
+      <p>A <a href="/elements/button.html">button group</a> can be formatted to show additional content as a dropdown</p>
+      <div class="ui icon buttons">
+        <div class="ui top left pointing dropdown button">
+          <i class="user icon"></i>
+          <div class="menu">
+            <div class="item"><i class="edit icon"></i>Edit User</div>
+            <div class="item"><i class="delete icon"></i>Remove User</div>
+            <div class="item"><i class="hide icon"></i>Make Invisible</div>
+          </div>
+        </div>
+        <div class="ui top left pointing dropdown button">
+          <i class="users icon"></i>
+          <div class="menu">
+            <div class="item"><i class="edit icon"></i>Edit Group</div>
+            <div class="item"><i class="delete icon"></i>Remove Group</div>
+            <div class="item"><i class="hide icon"></i>Hide from Group</div>
+          </div>
+        </div>
+        <div class="ui top right pointing dropdown button">
+          <i class="settings icon"></i>
+          <div class="menu">
+            <div class="item"><i class="edit icon"></i> Edit</div>
+            <div class="item"><i class="delete icon"></i> Remove</div>
+            <div class="item"><i class="hide icon"></i> Hide</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hover example">
+      <h4 class="ui header">Menu</h4>
+      <p>A <a href="/collections/menu.html">menu</a> element can contain a dropdown</p>
+        <div class="ui menu">
+          <a class="item">
+            Home
+          </a>
+          <a class="ui dropdown item">
+            Messages
+            <i class="dropdown icon"></i>
+            <div class="menu">
+              <div class="item">
+                <i class="dropdown icon"></i>
+                <span class="text">Categories</span>
+                <div class="menu">
+                  <div class="item">Unread</div>
+                  <div class="item">Promotions</div>
+                  <div class="item">Updates</div>
+                </div>
+              </div>
+              <div class="item">Archive</div>
+            </div>
+          </a>
+          <a class="item">
+            Browse
+          </a>
+        </div>
+    </div>
+
+    <div class="dropdown example">
+      <h4 class="ui header">Form</h4>
+      <p>A dropdown can be formatted to allow selection inside a <a href="/collections/form.html">form</a></p>
+      <div class="ui form segment">
+        <div class="two fields">
+          <div class="field">
+            <label>First Name</label>
+            <input placeholder="First Name" type="text">
+          </div>
+          <div class="field">
+            <label>Last Name</label>
+            <input placeholder="Last Name" type="text">
+          </div>
+        </div>
+        <div class="field">
+          <label>Gender</label>
+          <div class="ui dropdown selection">
+            <input type="hidden" name="gender">
+            <div class="default text">Select Gender</div>
+            <i class="dropdown icon"></i>
+            <div class="menu">
+              <div class="item" data-value="male">Male</div>
+              <div class="item" data-value="female">Female</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1730,6 +1767,84 @@ themes      : ['Default']
         </select>
       </div>
     </div>
+    <div class="no example">
+      <h4 class="ui header">Multiple Selections</h4>
+      <p>You can allow multiple selections by the <code>multiple</code> property on a <code>select</code> element, or by including the class <code>multiple</code> on a dropdown.</p>
+      <p>When a hidden input is used values will be passed through a single value separated by a delimiter. The default is "," but this can be changed by adjusting the <code>delimiter</code> setting.</p>
+      <div class="code" data-type="javascript" data-demo="true">
+        $('#multi-select')
+          .dropdown()
+        ;
+      </div>
+
+      <select class="ui search selection dropdown" multiple id="multi-select">
+        <%- @partial('examples/single/state-options') %>
+      </select>
+
+      <div class="ui ignored hidden divider"></div>
+
+      <h5 class="ui sub header">Dropdown</h5>
+      <div class="code" data-label="HTML" data-type="html">
+        <div class="ui multiple selection dropdown">
+          <!-- This will receive comma separated value like OH,TX,WY !-->
+          <input name="states" type="hidden" />
+          <i class="dropdown icon"></i>
+          <div class="default text">States</div>
+          <div class="menu">
+            <div data-value="AL">Alabama</div>
+            <div data-value="AK">Alaska</div>
+            <div data-value="AZ">Arizona</div>
+            <div data-value="AR">Arkansas</div>
+            <div data-value="CA">California</div>
+            <!-- Saving your scroll sanity !-->
+            <div data-value="OH">Ohio</div>
+            <div data-value="OK">Oklahoma</div>
+            <div data-value="OR">Oregon</div>
+            <div data-value="PA">Pennsylvania</div>
+            <div data-value="RI">Rhode Island</div>
+            <div data-value="SC">South Carolina</div>
+            <div data-value="SD">South Dakota</div>
+            <div data-value="TN">Tennessee</div>
+            <div data-value="TX">Texas</div>
+            <div data-value="UT">Utah</div>
+            <div data-value="VT">Vermont</div>
+            <div data-value="VA">Virginia</div>
+            <div data-value="WA">Washington</div>
+            <div data-value="WV">West Virginia</div>
+            <div data-value="WI">Wisconsin</div>
+            <div data-value="WY">Wyoming</div>
+          </div>
+        </div>
+      </div>
+
+      <h5 class="ui sub header">Select</h5>
+      <div class="code" data-label="HTML" data-type="html">
+        <select name="states" class="ui selection dropdown" multiple id="multi-select">
+          <option value="">States</option>
+          <option value="AL">Alabama</option>
+          <option value="AK">Alaska</option>
+          <option value="AZ">Arizona</option>
+          <option value="AR">Arkansas</option>
+          <option value="CA">California</option>
+          <option value="OH">Ohio</option>
+          <option value="OK">Oklahoma</option>
+          <option value="OR">Oregon</option>
+          <option value="PA">Pennsylvania</option>
+          <option value="RI">Rhode Island</option>
+          <option value="SC">South Carolina</option>
+          <option value="SD">South Dakota</option>
+          <option value="TN">Tennessee</option>
+          <option value="TX">Texas</option>
+          <option value="UT">Utah</option>
+          <option value="VT">Vermont</option>
+          <option value="VA">Virginia</option>
+          <option value="WA">Washington</option>
+          <option value="WV">West Virginia</option>
+          <option value="WI">Wisconsin</option>
+          <option value="WY">Wyoming</option>
+        </select>
+      </div>
+    </div>
 
 
     <div class="no example">
@@ -1759,6 +1874,10 @@ themes      : ['Default']
           <tr>
             <td>hide</td>
             <td>Hides the dropdown menu but does nothing</td>
+          </tr>
+          <tr>
+            <td>function(text, value){}</td>
+            <td>Custom action</td>
           </tr>
           <tr>
             <td>nothing</td>

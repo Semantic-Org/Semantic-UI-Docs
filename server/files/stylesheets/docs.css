@@ -1662,7 +1662,7 @@ body.progress.animated .ui.progress .bar {
 /* page layout */
 #example .full.height > .toc {
   position: relative;
-  z-index: 2;
+  z-index: 1;
   background-color: #1b1c1d;
   width: 250px;
   flex: 0 0 auto;

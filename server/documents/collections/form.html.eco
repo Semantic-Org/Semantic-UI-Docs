@@ -59,7 +59,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
       <div class="two fields">
         <div class="field">
           <label>State</label>
-          <select class="ui fluid search dropdown">
+          <select multiple class="ui fluid dropdown">
             <option value="">State</option>
             <option value="AL">Alabama</option>
             <option value="AK">Alaska</option>

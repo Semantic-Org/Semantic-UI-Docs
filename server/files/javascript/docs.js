@@ -69,6 +69,7 @@ semantic.ready = function() {
     $helpPopup           = $('.header .help'),
 
     $example             = $('.example'),
+    $popupExample        = $example.not('.no'),
     $shownExample        = $example.filter('.shown'),
 
     $overview            = $('.masthead.segment .overview'),
@@ -1133,6 +1134,7 @@ semantic.ready = function() {
     ]
   });
 
+
   // main sidebar
   $menu
     .sidebar({
@@ -1192,40 +1194,36 @@ semantic.ready = function() {
   });
 */
   handler.createIcon();
-  $example
-    .each(function() {
-      if($(this).is('.no')) {
-        return;
-      }
-      else {
-        $(this)
-          .popup({
-            preserve: false,
-            on       : 'hover',
-            variation: 'inverted',
-            delay: {
-              show: 500,
-              hide: 100
-            },
-            position : 'top right',
-            offset   : 5,
-            content  : 'View Source',
-            target   : $(this).find('i.code')
-          })
-          .find('i.code')
-            .on('click', handler.createCode)
-        ;
-      }
-      $.proxy(handler.generateCode, this)();
-    })
-  ;
 
-  $menuMusic
-    .on('click', handler.openMusic)
+  $popupExample
+    .each(function() {
+      $(this)
+        .popup({
+          preserve: false,
+          on       : 'hover',
+          variation: 'inverted',
+          delay: {
+            show: 500,
+            hide: 100
+          },
+          exclusive: true,
+          position : 'top right',
+          offset   : 5,
+          content  : 'View Source',
+          target   : $(this).find('i.code')
+        })
+      ;
+    })
+    .find('i.code')
+      .on('click', handler.createCode)
   ;
 
   $shownExample
     .each(handler.createCode)
+  ;
+
+  $menuMusic
+    .on('click', handler.openMusic)
   ;
 
   $downloadPopup

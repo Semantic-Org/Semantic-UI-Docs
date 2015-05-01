@@ -75,31 +75,31 @@ themes      : ['Default']
     </div>
     <div class="another dropdown example">
       <div class="ui fluid selection dropdown">
-        <input type="hidden" name="country">
+        <input type="hidden" name="user">
         <i class="dropdown icon"></i>
         <div class="default text">Select Friend</div>
         <div class="menu">
-          <div class="item">
+          <div class="item" data-value="jenny">
             <img class="ui mini avatar image" src="/images/avatar/small/jenny.jpg">
             Jenny Hess
           </div>
-          <div class="item">
+          <div class="item" data-value="elliot">
             <img class="ui mini avatar image" src="/images/avatar/small/elliot.jpg">
             Elliot Fu
           </div>
-          <div class="item">
+          <div class="item" data-value="stevie">
             <img class="ui mini avatar image" src="/images/avatar/small/stevie.jpg">
             Stevie Feliciano
           </div>
-          <div class="item">
+          <div class="item" data-value="christian">
             <img class="ui mini avatar image" src="/images/avatar/small/christian.jpg">
             Christian
           </div>
-          <div class="item">
+          <div class="item" data-value="matt">
             <img class="ui mini avatar image" src="/images/avatar/small/matt.jpg">
             Matt
           </div>
-          <div class="item">
+          <div class="item" data-value="justen">
             <img class="ui mini avatar image" src="/images/avatar/small/justen.jpg">
             Justen Kitsune
           </div>
@@ -1954,7 +1954,7 @@ themes      : ['Default']
         </tr>
         <tr>
           <td>clear</td>
-          <td>Clears </td>
+          <td>Clears dropdown of selection</td>
         </tr>
         <tr>
           <td>hide others</td>

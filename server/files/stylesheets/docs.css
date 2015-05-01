@@ -358,10 +358,6 @@ p:last-child {
     Masthead
 ---------------*/
 
-body#example {
-  background: #2C2C2C !important;
-}
-
 #example .masthead .grid {
   position: relative;
   z-index: 2;

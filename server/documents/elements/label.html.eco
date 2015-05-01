@@ -37,6 +37,23 @@ themes      : ['Default']
   </div>
 
   <div class="example">
+    <h4 class="ui header">Image</h4>
+    <p>A label can include an image</p>
+    <a class="ui label">
+      <img src="/images/avatar/small/joe.jpg">
+      Joe
+    </a>
+    <a class="ui label">
+      <img src="/images/avatar/small/elliot.jpg">
+      Elliot
+    </a>
+    <a class="ui label">
+      <img src="/images/avatar/small/stevie.jpg">
+      Stevie
+    </a>
+  </div>
+
+  <div class="example">
     <h4 class="ui header">Link</h4>
     <p>A label can be a link or contain an item that links</p>
     <a class="ui label">
@@ -64,7 +81,7 @@ themes      : ['Default']
 
   <div class="example">
     <h4 class="ui header">Image</h4>
-    <p>A label can be formatted to include an image</p>
+    <p>A label can be formatted to emphasize an image</p>
     <a class="ui image label">
       <img src="/images/avatar/small/joe.jpg">
       Joe

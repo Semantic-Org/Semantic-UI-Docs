@@ -1,6 +1,6 @@
 ---
 layout      : 'default'
-css         : ''
+css         : 'basic minimal'
 standalone  : true
 
 element     : 'sidebar'
@@ -84,7 +84,7 @@ themes      : ['Default']
       <h4 class="ui header">Transitions</h4>
       <p>A sidebar can use different transitions to display itself</p>
       <div class="ui ignored message">
-        <p>Browsers that do not support <code>translate3D</code>, like <b>IE < 10</b> will automatically fall back to javascript transitions, you can also force this behavior using <code>useLegacy: true</code>.</p>
+        <p>If you require legacy browser support setting <code>useLegacy: auto</code> will add feature detection for <code>translate3D</code> to make sure that older browsers like <b>IE < 10</b> will automatically fall back to javascript animations.</p>
       </div>
       <table class="ui celled definition collapsing table">
         <thead>
@@ -621,8 +621,8 @@ themes      : ['Default']
         </tr>
         <tr>
           <td>useLegacy</td>
-          <td>auto</td>
-          <td>Whether javascript animations should be used. Defaults to <code>auto</code> using for only browsers that do not support CSS transforms</td>
+          <td>false</td>
+          <td>Whether javascript animations should be used. Defaults to <code>false</code>. Setting to <code>auto</code> will use legacy animations only for browsers that do not support CSS transforms</td>
         </tr>
         <tr>
           <td>duration</td>

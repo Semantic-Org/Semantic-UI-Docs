@@ -129,10 +129,10 @@ themes      : ['Default']
   <div class="another example">
     <div class="ui right labeled left icon input">
       <i class="tags icon"></i>
-      <input type="text" placeholder="Enter categories">
-      <div class="ui tag label">
-        Tags
-      </div>
+      <input type="text" placeholder="Enter tags">
+      <a class="ui tag label">
+        Add Tag
+      </a>
     </div>
   </div>
 
@@ -151,6 +151,20 @@ themes      : ['Default']
         Checkout
       </button>
       <input type="text" value="$52.03">
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui right action left icon input">
+      <i class="search icon"></i>
+      <input type="text" placeholder="Search">
+      <div class="ui dropdown button">
+        <div class="text">This Page</div>
+        <i class="dropdown icon"></i>
+        <div class="menu">
+          <div class="item">This Organization</div>
+          <div class="item">Entire Site</div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="another example">

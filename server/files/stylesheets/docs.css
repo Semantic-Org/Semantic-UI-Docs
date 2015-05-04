@@ -52,7 +52,8 @@ pre code {
   font-size: 1em;
 }
 /* Code block */
-.ui.message code {
+.ui.message > p > code,
+.ui.message > code {
   background-color: rgba(255, 255, 255, 0.6);
   box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1) inset;
 }

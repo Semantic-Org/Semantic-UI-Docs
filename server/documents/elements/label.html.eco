@@ -44,11 +44,11 @@ themes      : ['Default']
       Joe
     </a>
     <a class="ui label">
-      <img src="/images/avatar/small/elliot.jpg">
+      <img class="ui right spaced image" src="/images/avatar/small/elliot.jpg">
       Elliot
     </a>
     <a class="ui label">
-      <img src="/images/avatar/small/stevie.jpg">
+      <img class="ui right spaced circular image" src="/images/avatar/small/stevie.jpg">
       Stevie
     </a>
   </div>

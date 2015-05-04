@@ -748,7 +748,7 @@ semantic.ready = function() {
         $annotation = $example.find('.annotation'),
         $code       = $annotation.find('.code'),
         $header     = $example.not('.another').children('.ui.header:first-of-type').eq(0).add('p:first-of-type'),
-        $ignored    = $('i.code:last-child, .wireframe, .anchor, .code, .existing, .pointing.below.label, .instructive, .language.label, .annotation, br, .ignore, .ignored'),
+        $ignored    = $('i.code:last-child, .wireframe, .anchor, .code, .existing, .instructive, .language.label, .annotation, br, .ignore, .ignored'),
         $demo       = $example.children().not($header).not($ignored),
         code        = ''
       ;
@@ -988,7 +988,7 @@ semantic.ready = function() {
       }
       if(label) {
         $('<div>')
-          .addClass('ui pointing below language label')
+          .addClass('ui pointing below ignored language label')
           .html(displayType[contentType] || contentType)
           .insertBefore ( $code.closest('.segment') )
         ;
@@ -996,7 +996,7 @@ semantic.ready = function() {
       // add run code button
       if(demo) {
         $('<a>')
-          .addClass('ui teal pointing below label')
+          .addClass('ui black pointing below ignored label')
           .html('Run Code')
           .on('click', function() {
             eval(code);

@@ -1110,7 +1110,10 @@ semantic.ready = function() {
           });
         },
         onTabLoad : function() {
-          $sticky
+          $tocSticky
+            .sticky('refresh')
+          ;
+          $(this).find('.ui.sticky')
             .sticky('refresh')
           ;
         }

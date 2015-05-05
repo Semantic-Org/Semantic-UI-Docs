@@ -12,7 +12,7 @@ type        : 'UI Module'
 status      : 'Undocumented'
 ---
 
-<%- @partial('header', { tabs: {  overview: 'Overview' } }) %>
+<%- @partial('header') %>
 
 <script src="/javascript/library/cookie.js"></script>
 

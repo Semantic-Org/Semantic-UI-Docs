@@ -291,8 +291,8 @@ themes      : ['Default', 'Basic', 'Classic']
         <tr>
           <td>Alpha Team</td>
           <td>Project 1</td>
-          <td>2</td>
-          <td>
+          <td class="right aligned">2</td>
+          <td class="center aligned">
             <i class="large green checkmark icon"></i>
           </td>
           <td></td>
@@ -301,8 +301,8 @@ themes      : ['Default', 'Basic', 'Classic']
         <tr>
           <td rowspan="3">Beta Team</td>
           <td>Project 1</td>
-          <td>52</td>
-          <td>
+          <td class="right aligned">52</td>
+          <td class="center aligned">
             <i class="large green checkmark icon"></i>
           </td>
           <td></td>
@@ -310,17 +310,17 @@ themes      : ['Default', 'Basic', 'Classic']
         </tr>
         <tr>
           <td>Project 2</td>
-          <td>12</td>
+          <td class="right aligned">12</td>
           <td></td>
-          <td>
+          <td class="center aligned">
             <i class="large green checkmark icon"></i>
           </td>
           <td></td>
         </tr>
         <tr>
           <td>Project 3</td>
-          <td>21</td>
-          <td>
+          <td class="right aligned">21</td>
+          <td class="center aligned">
             <i class="large green checkmark icon"></i>
           </td>
           <td></td>

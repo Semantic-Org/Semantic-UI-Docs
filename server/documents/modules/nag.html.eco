@@ -3,6 +3,7 @@ layout      : 'default'
 css         : ''
 element     : 'nag'
 elementType : 'module'
+standalone  : true
 
 title       : 'Nag'
 description : 'A nag is an important message that persists until dismissed by a user'
@@ -12,6 +13,8 @@ status      : 'Undocumented'
 ---
 
 <%- @partial('header', { tabs: {  overview: 'Overview' } }) %>
+
+<script src="/javascript/library/cookie.js"></script>
 
 <div class="main ui container">
 

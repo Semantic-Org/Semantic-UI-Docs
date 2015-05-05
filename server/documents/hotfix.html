@@ -9,70 +9,8 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script type="text/javascript">
 $(document).ready(function() {
-var test = {
-    $ct: $('#container'),
-    $content: $('#views'),
-    $tabs: $('#tabs'),
-
-    init: function() {
-        var that = this;
-
-        that.$ct.on('click', 'a.item', function() {
-            that.selectTab($(this).attr('id'));
-        });
-
-        that.openTab('tab1', 'Tab 1');
-        that.selectTab('tab1');
-
-        //this.$tabs.find('#tab1').click();
-    },
-
-    selectTab: function(id) {
-        this.$tabs.find('#' + id).addClass('active').siblings().removeClass('active');
-        this.$content.find('#' + id).addClass('active').siblings().removeClass('active');
-    },
-
-    openTab: function(id, name) {
-        var that = this;
-
-        //create tab view
-        that.$content.append(
-            '<div id="' + id + '" class="ui bottom attached tab" data-tab="' + id + '"></div>'
-        );
-
-        //create tab 'handle'
-        that.$tabs.append(
-            '<a id="' + id + '" class="item" data-tab="' + id + '">'+
-                name +
-            '</a>'
-        )
-        .find('> .item').last().tab( that.getTabParameters(id) );
-    },
-
-    getTabParameters: function(id) {
-        var that = this;
-
-        return {
-            context: that.$ct,
-            debug: true,
-            apiSettings: {
-              mockResponse: "Tab 1 Content <script type='text/javascript'>$(function() { alert('tab1 is selected'); }); <\/script>"
-            },
-            cache: true,
-            auto: true,
-            path: '/tabs',
-            onTabInit: function(tabPath, parameterArray, historyEvent) {
-                console.log('Initialized tab: ' + tabPath);
-            },
-            onTabLoad: function(tabPath, parameterArray, historyEvent) { //tab selected
-                console.log('Selected tab: ' + tabPath);
-            }
-        };
-    }
-};
-
-
-test.init();
+// Add javascript here
+$('.ui.dropdown').dropdown();
 
 });
 </script>
@@ -80,13 +18,15 @@ test.init();
 <style></style>
 
 <div class="ui container">
-<div id="container">
-    <div id="tabs" class="ui top attached pointing secondary menu">
-
-    </div>
-
-    <div id="views">
-
-    </div>
+<div class="ui action fluid input">
+<input type="text" name="by" id="by" placeholder="What do you want to search?">
+<select class="ui selection dropdown">
+    <option value="">Item types</option>
+    <option value="all-items">select all</option>
+    <option value="type-1">First</option>
+    <option value="type-2">Second</option>
+    <option value="type-3">Third</option>
+    </select>
+    <button type="submit" class="ui button primary">Search</button>
 </div>
 </div>

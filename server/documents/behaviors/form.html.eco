@@ -205,8 +205,13 @@ type        : 'UI Behavior'
           </tr>
           <tr>
             <td>match</td>
-            <td>A field matches the value of another validation field</td>
+            <td>A field should match the value of another validation field, for example to confirm passwords</td>
             <td><code>match[password]</code></td>
+          </tr>
+          <tr>
+            <td>different</td>
+            <td>A field should be different than another specified field</td>
+            <td><code>different[choice]</code></td>
           </tr>
           <tr>
             <td>maxLength</td>

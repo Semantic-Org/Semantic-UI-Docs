@@ -169,6 +169,17 @@ themes      : ['Default']
   </div>
   <div class="another example">
     <div class="ui action input">
+      <input type="text" placeholder="Search...">
+      <select class="ui compact selection dropdown">
+        <option value="all">All</option>
+        <option value="articles">Articles</option>
+        <option value="products">Products</option>
+      </select>
+      <div type="submit" class="ui button">Search</div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui action input">
       <input type="text" value="http://ww.short.url/c0opq">
       <button class="ui teal right labeled icon button">
         <i class="copy icon"></i>

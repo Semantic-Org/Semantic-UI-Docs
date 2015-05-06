@@ -9,24 +9,53 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script type="text/javascript">
 $(document).ready(function() {
-// Add javascript here
-$('.ui.dropdown').dropdown();
-
+        $('.ui.form.login').form({fields: {
+            username: {
+                identifier: 'username',
+                rules: [
+                    {
+                        type: 'empty',
+                        prompt: 'Please enter your username or email address'
+                    }
+                ]
+            },
+            password: {
+                identifier: 'password',
+                rules: [
+                    {
+                        type: 'empty',
+                        prompt: 'Please enter your password'
+                    }
+                ]
+            }
+        },
+            inline: true,
+            debug: true
+        });
 });
 </script>
 
 <style></style>
 
 <div class="ui container">
-<div class="ui action fluid input">
-<input type="text" name="by" id="by" placeholder="What do you want to search?">
-<select class="ui selection dropdown">
-    <option value="">Item types</option>
-    <option value="all-items">select all</option>
-    <option value="type-1">First</option>
-    <option value="type-2">Second</option>
-    <option value="type-3">Third</option>
-    </select>
-    <button type="submit" class="ui button primary">Search</button>
-</div>
+<form method="post" class="ui form login">
+    <div class="required field">
+    <label for="username">Username or email address</label>
+    <input type="text" name="username" id="username" value="" />
+  </div>
+  <div class="required field">
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" />
+  </div>
+    <div class="inline field">
+    <div class="ui checkbox">
+      <input name="rememberme" type="checkbox" id="rememberme" value="forever" />
+      <label for="rememberme">Remember me</label>
+    </div>
+  </div>
+    <input type="submit" class="ui right floated button" name="login" value="Login" />
+    <p class="lost_password">
+        <a href="#">Lost your password?</a>
+  </p>
+</form>
 </div>

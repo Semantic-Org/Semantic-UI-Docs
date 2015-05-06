@@ -784,7 +784,8 @@ semantic.ready = function() {
                 code += $this.get(0).outerHTML + "\n";
               }
               else {
-                code += $this.removeAttr('style').get(0).outerHTML + "\n";
+                code += $this.removeAttr('tabindex').removeAttr('style').get(0).outerHTML + "\n";
+                code = code.replace(/tabindex=".*"/, '');
               }
             }
           })

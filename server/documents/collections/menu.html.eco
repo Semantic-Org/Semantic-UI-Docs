@@ -41,24 +41,17 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
       <div class="item">
         <img src="/images/new-school.jpg">
       </div>
-      <div class="ui dropdown item">
-        Admissions
+      <a class="browse item">
+        Browse Courses
+        <i class="dropdown icon"></i>
+      </a>
+      <div class="ui right dropdown item">
+        More
         <i class="dropdown icon"></i>
         <div class="menu">
           <div class="item">Applications</div>
           <div class="item">International Students</div>
           <div class="item">Scholarships</div>
-        </div>
-      </div>
-      <a class="browse item">Academics <i class="dropdown icon"></i></a>
-      <a class="item">About</a>
-      <a class="item">Contact</a>
-      <div class="right menu">
-        <div class="item">
-          <div class="ui icon input">
-            <input type="text" placeholder="Search...">
-            <i class="search link icon"></i>
-          </div>
         </div>
       </div>
     </div>

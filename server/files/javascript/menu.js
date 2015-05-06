@@ -8,7 +8,7 @@ semantic.menu.ready = function() {
     $dropdownItem = $('.main.container .menu .dropdown .item'),
     $popupItem    = $('.main.container .popup.example .browse.item'),
     $menuItem     = $('.main.container .menu a.item, .menu .link.item').not($dropdownItem),
-    $dropdown     = $('.main.container .menu .dropdown'),
+    $dropdown     = $('.main.container .menu .ui.dropdown'),
     // alias
     handler = {
 

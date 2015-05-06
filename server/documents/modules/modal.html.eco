@@ -683,6 +683,11 @@ themes      : ['Default', 'Material']
           <td>When true, the first form input inside the modal will receive focus when shown.  Set this to false to prevent this behavior.</td>
         </tr>
         <tr>
+          <td>observeChanges</td>
+          <td>false</td>
+          <td>Whether any change in <code>modal</code> dom should automatically refresh cached positions</td>
+        </tr>
+        <tr>
           <td>allowMultiple</td>
           <td>false</td>
           <td>If set to true will not close other visible modals when opening a new one</td>

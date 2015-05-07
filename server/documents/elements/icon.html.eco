@@ -67,6 +67,8 @@ themes      : ['Default']
         <div class="column"><i class="options icon"></i>Options</div>
         <div class="column"><i class="paint brush icon"></i>Paint Brush</div>
         <div class="column"><i class="payment icon"></i>Payment</div>
+        <div class="column"><i class="phone icon"></i>Phone</div>
+        <div class="column"><i class="phone square icon"></i>Phone Square</div>
         <div class="column"><i class="privacy icon"></i>Privacy</div>
         <div class="column"><i class="protect icon"></i>Protect</div>
         <div class="column"><i class="search icon"></i>Search</div>
@@ -120,6 +122,8 @@ themes      : ['Default']
         <i class="options icon"></i>
         <i class="paint brush icon"></i>
         <i class="payment icon"></i>
+        <i class="phone icon"></i>
+        <i class="phone square icon"></i>
         <i class="privacy icon"></i>
         <i class="protect icon"></i>
         <i class="search icon"></i>

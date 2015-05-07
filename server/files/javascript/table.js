@@ -15,6 +15,12 @@ semantic.table.ready = function() {
     }
   });
 
+  $('.ui.rating')
+    .rating({
+      interactive: false
+    })
+  ;
+
 
 };
 

@@ -58,44 +58,42 @@ themes      : ['Default', 'Basic', 'Classic']
     </div>
     <div class="ui cards">
       <div class="card">
-        <a class="image">
-          <img src="/images/avatar/large/elliot.jpg">
-        </a>
         <div class="content">
-          <a class="header">Elliot Fu</a>
+          <img class="right floated mini ui image" src="/images/avatar/large/elliot.jpg">
+          <div class="header">
+            Elliot Fu
+          </div>
           <div class="meta">
-            <a>Friends</a>
+            Friends of Veronika
           </div>
           <div class="description">
-            Elliot Fu is a film-maker from New York.
+            Elliot requested permission to view your contact details
+          </div>
+        </div>
+        <div class="extra content">
+          <div class="ui two buttons">
+            <div class="ui basic green button">Approve</div>
+            <div class="ui basic red button">Decline</div>
           </div>
         </div>
       </div>
       <div class="card">
-        <a class="image">
-          <img src="/images/avatar/large/helen.jpg">
-        </a>
         <div class="content">
-          <a class="header">Helen Troy</a>
+          <img class="right floated mini ui image" src="/images/avatar/large/jenny.jpg">
+          <div class="header">
+            Jenny Hess
+          </div>
           <div class="meta">
-            <a>Friends</a>
+            New Member
           </div>
           <div class="description">
-            Helen Troy is an archivist living in New York, who enjoys cooking, fine art, and gardening.
+            Jenny wants to add you to the group <b>best friends</b>
           </div>
         </div>
-      </div>
-      <div class="card">
-        <a class="image">
-          <img src="/images/avatar/large/jenny.jpg">
-        </a>
-        <div class="content">
-          <a class="header">Jenny Hess</a>
-          <div class="meta">
-            <a>Friends</a>
-          </div>
-          <div class="description">
-            Jenny is a student studying Media Management at the New School.
+        <div class="extra content">
+          <div class="ui two buttons">
+            <div class="ui basic green button">Approve</div>
+            <div class="ui basic red button">Decline</div>
           </div>
         </div>
       </div>

@@ -32,7 +32,7 @@ themes      : ['Default', 'Basic', 'Classic']
         <p>Tables will automatically stack their layouts for mobile devices. To disable this behavior, use the <code>unstackable</code> variation or <code>tablet stackable</code> to allow responsive adjustments for tablet as well.</p>
       </div>
     </div>
-    <table class="ui celled padded table">
+    <table class="ui celled table">
       <thead>
         <th>Header</th>
         <th>Header</th>
@@ -57,7 +57,7 @@ themes      : ['Default', 'Basic', 'Classic']
       </tbody>
       <tfoot>
         <th colspan="3">
-          <div class="ui pagination menu">
+          <div class="ui secondary menu">
             <a class="icon item">
               <i class="left chevron icon"></i>
             </a>

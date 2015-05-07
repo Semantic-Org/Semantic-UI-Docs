@@ -9,53 +9,37 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script type="text/javascript">
 $(document).ready(function() {
-        $('.ui.form.login').form({fields: {
-            username: {
-                identifier: 'username',
-                rules: [
-                    {
-                        type: 'empty',
-                        prompt: 'Please enter your username or email address'
-                    }
-                ]
-            },
-            password: {
-                identifier: 'password',
-                rules: [
-                    {
-                        type: 'empty',
-                        prompt: 'Please enter your password'
-                    }
-                ]
-            }
-        },
-            inline: true,
-            debug: true
-        });
+// Add javascript here
+$('.ui.dropdown').dropdown({});
+
+$('.ui.dropdown>input[type="hidden"]').on('change', function(e){
+    alert( $(this).val() );
+});
 });
 </script>
 
 <style></style>
 
 <div class="ui container">
-<form method="post" class="ui form login">
-    <div class="required field">
-    <label for="username">Username or email address</label>
-    <input type="text" name="username" id="username" value="" />
-  </div>
-  <div class="required field">
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password" />
-  </div>
-    <div class="inline field">
-    <div class="ui checkbox">
-      <input name="rememberme" type="checkbox" id="rememberme" value="forever" />
-      <label for="rememberme">Remember me</label>
+<div class="ui floating dropdown labeled icon small button">
+    <input type="hidden" name="mc_code" value="" />
+    <i class="search icon"></i>
+    <span class="text">Select a Merchant Category Code</span>
+    <div class="menu">
+        <div class="dropdown link item" data-value="itemA">
+            <i class="dropdown icon"></i>
+            Item A
+            <div class="menu">
+                <div class="dropdown link item" data-value="itemAA">
+                    <i class="dropdown icon"></i>
+                    Sub Item A
+                    <div class="menu">
+                        <div class="item" data-value="itemAAA">Sub Sub Item A</div>
+                        <div class="item" data-value="itemAAB">Sub Sub Item B</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-    <input type="submit" class="ui right floated button" name="login" value="Login" />
-    <p class="lost_password">
-        <a href="#">Lost your password?</a>
-  </p>
-</form>
+</div>
 </div>

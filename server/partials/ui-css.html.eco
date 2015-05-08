@@ -37,6 +37,7 @@
 <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/checkbox.css">
 <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/dimmer.css">
 <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/dropdown.css">
+<link rel="stylesheet" type="text/css" class="ui" href="/dist/components/embed.css">
 <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/modal.css">
 <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/nag.css">
 <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/popup.css">
@@ -48,7 +49,6 @@
 <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/sticky.css">
 <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/tab.css">
 <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/transition.css">
-<link rel="stylesheet" type="text/css" class="ui" href="/dist/components/video.css">
 <% else: %>
 <link rel="stylesheet" type="text/css" class="ui" href="/dist/semantic.min.css">
 <% end %>

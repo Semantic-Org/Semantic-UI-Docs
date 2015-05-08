@@ -5,6 +5,7 @@
 <script src="/dist/components/checkbox.js"></script>
 <script src="/dist/components/dimmer.js"></script>
 <script src="/dist/components/dropdown.js"></script>
+<script src="/dist/components/embed.js"></script>
 <script src="/dist/components/form.js"></script>
 <script src="/dist/components/modal.js"></script>
 <script src="/dist/components/nag.js"></script>
@@ -19,7 +20,6 @@
 <script src="/dist/components/sticky.js"></script>
 <script src="/dist/components/tab.js"></script>
 <script src="/dist/components/transition.js"></script>
-<script src="/dist/components/video.js"></script>
 <script src="/dist/components/visibility.js"></script>
 
 <% else: %>

@@ -28,17 +28,32 @@ themes      : ['Default', 'Material']
       <h4 class="ui header">Dropdown</h4>
       <p>A dropdown</p>
       <div class="ui dropdown">
-        <div class="text">Shop</div>
+        <div class="text">File</div>
         <i class="dropdown icon"></i>
         <div class="menu">
-          <div class="header">Categories</div>
-          <div class="item">Clothing</div>
-          <div class="item">Home Goods</div>
-          <div class="item">Bedroom</div>
+          <div class="item">New</div>
+          <div class="item">
+            <span class="description">ctrl + o</span>
+            <i class="icon"></i>
+            Open...
+          </div>
+          <div class="item">
+            <span class="description">ctrl + r</span>
+            Rename
+          </div>
+          <div class="item">Make a copy</div>
+          <div class="item">
+            <i class="folder icon"></i>
+            Move to folder
+          </div>
+          <div class="item">
+            <i class="trash icon"></i>
+            Move to trash
+          </div>
           <div class="divider"></div>
-          <div class="header">Order</div>
-          <div class="item">Status</div>
-          <div class="item">Cancellations</div>
+          <div class="item">Download As...</div>
+          <div class="item">Publish To Web</div>
+          <div class="item">E-mail Collaborators</div>
         </div>
       </div>
     </div>
@@ -738,16 +753,16 @@ themes      : ['Default', 'Material']
           </div>
           <div class="divider"></div>
           <div class="item">
-            Important
             <span class="description">2 new</span>
+            Important
           </div>
           <div class="item">
-            Announcement
             <span class="description">10 new</span>
+            Announcement
           </div>
           <div class="item">
-            Discussion
             <span class="description">5 new</span>
+            Discussion
           </div>
         </div>
       </div>

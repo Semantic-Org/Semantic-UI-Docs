@@ -18,6 +18,7 @@ semantic.embed.ready = function() {
   $('.embed.example .ui.embed')
     .embed()
   ;
+  $('.existing.code .embed').removeClass('embed').addClass('ui embed');
 
 
 };

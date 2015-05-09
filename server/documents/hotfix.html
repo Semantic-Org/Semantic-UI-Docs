@@ -9,37 +9,76 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script type="text/javascript">
 $(document).ready(function() {
-// Add javascript here
-$('.ui.dropdown').dropdown({});
-
-$('.ui.dropdown>input[type="hidden"]').on('change', function(e){
-    alert( $(this).val() );
-});
+    $('.tip')
+    .popup({
+        popup : $('.custom.popup'),
+        on : 'hover'
+    });
 });
 </script>
 
-<style></style>
+<style>
+.container {
+    margin-top: 100px /* for demo only */
+    position: relative;
+}
 
-<div class="ui container">
-<div class="ui floating dropdown labeled icon small button">
-    <input type="hidden" name="mc_code" value="" />
-    <i class="search icon"></i>
-    <span class="text">Select a Merchant Category Code</span>
-    <div class="menu">
-        <div class="dropdown link item" data-value="itemA">
-            <i class="dropdown icon"></i>
-            Item A
-            <div class="menu">
-                <div class="dropdown link item" data-value="itemAA">
-                    <i class="dropdown icon"></i>
-                    Sub Item A
-                    <div class="menu">
-                        <div class="item" data-value="itemAAA">Sub Sub Item A</div>
-                        <div class="item" data-value="itemAAB">Sub Sub Item B</div>
-                    </div>
-                </div>
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -200px;
+    width: 400px;
+    height: 400px;
+    background: #5B5959;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.3);
+       -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.3);
+            box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.3);
+}
+.button {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 150px;
+    height: 50px;
+    background: #fff;
+}
+.tip {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: -10px;
+    right: -10px;
+}
+.tip:before {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+    content: "\f06a";
+    color: #CF1E20;
+    background: #fff;
+    border-radius: 50%;
+    font-size: 20px;
+}
+</style>
+
+<div class="ui container" style="padding-top:300px;">
+
+    <div class="container">
+        <div class="box">
+            <div class="button">button
+                <span class="tip"></span>
             </div>
-        </div>
+        </div><!-- /box -->
+    </div><!-- /container -->
+
+    <!-- this popup will be place anywhere -->
+    <div class="ui custom popup">
+    I'm not on the same level as the button, but i can still be found.
     </div>
-</div>
 </div>

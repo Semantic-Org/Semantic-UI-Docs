@@ -43,7 +43,7 @@ type        : 'UI Module'
       </div>
 
       <div class="existing code">
-        <div class="ui embed"
+        <div class="embed"
           data-source="youtube"
           data-id="pfdu_gTry8E"
           data-placeholder="/images/bear-waving.jpg">
@@ -62,6 +62,13 @@ type        : 'UI Module'
         data-source="youtube"
         data-id="pfdu_gTry8E"
         data-placeholder="/images/bear-waving.jpg">
+      </div>
+      <div class="existing code">
+        <div class="4:3 embed"
+          data-source="youtube"
+          data-id="pfdu_gTry8E"
+          data-placeholder="/images/bear-waving.jpg">
+        </div>
       </div>
 
     </div>

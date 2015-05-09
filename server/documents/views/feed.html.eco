@@ -46,27 +46,6 @@ themes      : ['Default', 'Timeline']
       </div>
       <div class="event">
         <div class="label">
-          <i class="pencil icon"></i>
-        </div>
-        <div class="content">
-          <div class="summary">
-            You submitted a new post to the page
-            <div class="date">
-              3 days ago
-            </div>
-          </div>
-          <div class="extra text">
-            I'm having a BBQ this weekend. Come by around 4pm if you can.
-          </div>
-          <div class="meta">
-            <a class="like">
-              <i class="like icon"></i> 11 Likes
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="event">
-        <div class="label">
           <img src="/images/avatar/small/helen.jpg">
         </div>
         <div class="content">

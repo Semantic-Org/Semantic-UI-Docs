@@ -24,7 +24,7 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
 
   <div class="example">
     <h4 class="ui header">Page Headings (H1-H6)</h4>
-    <p class="header">Headers may be oriented to give the heirarchy of a section in the context of the page</p>
+    <p class="header">Headers may be oriented to give the hierarchy of a section in the context of the page</p>
     <div class="ignored info ui message">Page headings use standard <code>h1-h6</code> tags, and size themselves relative to the base font of the entire page.</div>
     <h1 class="ui header">First header</h1>
     <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">

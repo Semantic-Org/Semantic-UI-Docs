@@ -2185,6 +2185,11 @@ themes      : ['Default', 'Material']
           </div>
         </tr>
         <tr>
+          <td>keepOnScreen</td>
+          <td>true</td>
+          <td>Whether menu should adjust position to appear on screen before showing</td>
+        </tr>
+        <tr>
           <td>match</td>
           <td>both</td>
           <td>When using <code>search selection</code> specifies how to match values.

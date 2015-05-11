@@ -90,7 +90,7 @@ themes      : ['Default']
   <div class="another example">
     <div class="ui icon input">
       <input type="text" placeholder="Search...">
-      <i class="inverted search icon"></i>
+      <i class="inverted cicular search icon"></i>
     </div>
   </div>
 

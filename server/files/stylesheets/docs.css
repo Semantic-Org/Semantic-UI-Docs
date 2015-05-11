@@ -145,7 +145,7 @@ p:last-child {
 /* segment headers */
 #example .masthead.segment {
   position: relative;
-  z-index: 2;
+  z-index: 1;
   margin: 0em;
   min-height: 185px;
   padding: 3em 0em;

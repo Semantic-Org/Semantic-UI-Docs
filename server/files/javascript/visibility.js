@@ -84,6 +84,14 @@ semantic.visiblity.ready = function() {
 
   $secondSegment
     .visibility({
+      onOnScreen: function() {
+        $log.append('<div class="highlight">onOnScreen fired</div>');
+        $log.scrollTop(999999);
+      },
+      onOffScreen: function() {
+        $log.append('<div class="highlight">onOffScreen fired</div>');
+        $log.scrollTop(999999);
+      },
       onTopVisible: function() {
         $log.append('<div class="highlight">onTopVisible fired</div>');
         $log.scrollTop(999999);

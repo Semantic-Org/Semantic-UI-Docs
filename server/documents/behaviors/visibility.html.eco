@@ -145,12 +145,12 @@ type        : 'UI Behavior'
                     <td>height</td>
                     <td></td>
                   </tr>
-                  <tr class="visible">
-                    <td>visible</td>
+                  <tr class="onScreen">
+                    <td>onScreen</td>
                     <td></td>
                   </tr>
-                  <tr class="hidden">
-                    <td>hidden</td>
+                  <tr class="offScreen">
+                    <td>offScreen</td>
                     <td></td>
                   </tr>
                   <tr class="passing">

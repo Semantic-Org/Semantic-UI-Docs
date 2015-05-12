@@ -948,6 +948,41 @@ themes      : ['Default', 'Material']
     <h2 class="ui dividing header">States</h2>
 
     <div class="dropdown example">
+      <h4 class="ui header">Loading</h4>
+      <p>An dropddown can show that it is currently loading data</p>
+      <div class="ui loading dropdown">
+        Dropdown <i class="dropdown icon"></i>
+        <div class="menu">
+          <div class="item">Choice 1</div>
+          <div class="item">Choice 2</div>
+          <div class="item">Choice 3</div>
+        </div>
+      </div>
+    </div>
+    <div class="another dropdown example">
+      <div class="ui loading fluid multiple search selection dropdown">
+        <input type="hidden" name="country" value="kp">
+        <i class="dropdown icon"></i>
+        <input class="search">
+        <div class="default text">Search...</div>
+        <div class="menu">
+          <div class="item">Choice 1</div>
+          <div class="item">Choice 2</div>
+          <div class="item">Choice 3</div>
+        </div>
+      </div>
+    </div>
+    <div class="another dropdown example">
+      <div class="ui loading selection dropdown">
+        Dropdown <i class="dropdown icon"></i>
+        <div class="menu">
+          <div class="item">Choice 1</div>
+          <div class="item">Choice 2</div>
+          <div class="item">Choice 3</div>
+        </div>
+      </div>
+    </div>
+    <div class="dropdown example">
       <h4 class="ui header">Error</h4>
       <p>An errored dropddown can alert a user to a problem</p>
       <div class="ui floating dropdown error">
@@ -958,7 +993,8 @@ themes      : ['Default', 'Material']
           <div class="item">Choice 3</div>
         </div>
       </div>
-      <br><br>
+    </div>
+    <div class="another dropdown example">
       <div class="ui selection dropdown error">
         Dropdown <i class="dropdown icon"></i>
         <div class="menu">

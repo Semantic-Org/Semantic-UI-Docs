@@ -896,6 +896,12 @@ type        : 'UI Behavior'
           <td></td>
         </tr>
         <tr>
+          <td>cache</td>
+          <td>false</td>
+          <td>Whether requests should be cached locally to avoid server requests on identical urls.</td>
+          <td>true or false</td>
+        </tr>
+        <tr>
           <td>method</td>
           <td>get</td>
           <td>Method for transmitting request to server</td>

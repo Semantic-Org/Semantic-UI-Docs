@@ -1210,7 +1210,6 @@ semantic.ready = function() {
             show: 500,
             hide: 100
           },
-          exclusive: true,
           position : 'top right',
           offset   : 5,
           content  : 'View Source',

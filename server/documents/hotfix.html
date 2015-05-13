@@ -9,87 +9,33 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script type="text/javascript">
 $(document).ready(function() {
-    $('.error-note')
-    .popup({
-        debug: true,
-        popup : $('.custom.popup'),
-        position: 'left center',
-        on : 'hover',
-        prefer : 'opposite'
-    });
+
+    $(".ui.dropdown").dropdown("set selected", "A");
+
+    $(".ui.dropdown").find(".menu").html(
+        '<div class="item" data-value="">Not Selected</div>'+
+        '<div class="item" data-value="C">C</div>'+
+        '<div class="item" data-value="D">D</div>'
+    );
+    $('.ui.dropdown').dropdown('set selected', 'C');
+
+
 });
 </script>
 
 <style>
-body {
-    overflow: visible;
-}
 
-.container {
-    margin-top: 100px /* for demo only */
-    position: relative;
-}
-
-.box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -200px;
-    margin-left: -200px;
-    width: 90%;
-    height: 400px;
-    background: #5B5959;
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.3);
-       -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.3);
-            box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.3);
-}
-.button {
-    position: absolute;
-    top: 100px;
-
-    right: 10px;
-    width: 150px;
-    height: 50px;
-    background: #fff;
-}
-.error-note {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    top: -10px;
-    right: -10px;
-}
-.error-note:before {
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    transform: translate(0, 0);
-    content: "\f06a";
-    color: #CF1E20;
-    background: #fff;
-    border-radius: 50%;
-    font-size: 20px;
-}
-
-.custom.popup {
-    min-width: 200px;
-}
 </style>
 
 <div class="ui container" style="padding-top:300px;">
-<div class="container">
-    <div class="box">
-        <div class="button">button
-            <span class="error-note"></div>
-        </div>
-    </div><!-- /box -->
-</div><!-- /container -->
-
-<!-- this popup will be place anywhere -->
-<div class="ui custom popup">
-I'm not on the same level as the button, but i can still be found.
+<div class="ui selection dropdown">
+    <input type="hidden" name="test" value="" />
+    <div class="text">Test</div>
+    <i class="dropdown icon"></i>
+    <div class="menu">
+        <div class="item" data-value="">Not Selected</div>
+        <div class="item" data-value="A">A</div>
+        <div class="item" data-value="B">B</div>
+    </div>
 </div>
 </div>

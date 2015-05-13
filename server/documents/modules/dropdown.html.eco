@@ -1273,6 +1273,65 @@ themes      : ['Default', 'Material']
 
     <h2 class="ui header">Selection Dropdowns</h2>
 
+    <div class="remote example">
+      <h4 class="ui header">Remote Content</h4>
+      <p>Search selection dropdowns can specify <a href="/behaviors/api.html">API</a> settings for retrieving values remotely, this can use either a named API <code>action</code> or <code>url</code>.</p>
+      <p class="ignored">Using API can allow users to select choices from large datasets that would be too large to include directly in page markups.</p>
+      <div class="ui ignored info message">
+        A <code>menu</code> element does not need to be included when initializing remote content, it will automatically be generated on first use.
+      </div>
+
+      <div class="ui form">
+        <div class="field">
+          <label>Favorite Animals</label>
+          <div class="ui multiple search selection dropdown">
+            <input type="hidden">
+            <i class="dropdown icon"></i>
+            <input type="text" class="search">
+            <div class="default text">Select animals</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="evaluated code" data-type="javascript">
+        $('.remote.example .ui.dropdown')
+          .dropdown({
+            apiSettings: {
+              url: '//api.semantic-ui.com/tags/{query}'
+            }
+          })
+        ;
+      </div>
+      <div class="code" data-type="JSON">
+      {
+          "success": true,
+          "results": [
+            {
+              "name"  : "Choice 1",
+              "value" : "value1"
+            },
+            {
+              "name"  : "Choice 2",
+              "value" : "value2"
+            },
+            {
+              "name"  : "Choice 3",
+              "value" : "value3"
+            },
+            {
+              "name"  : "Choice 4",
+              "value" : "value4"
+            },
+            {
+              "name"  : "Choice 5",
+              "value" : "value5"
+            }
+          ]
+      }
+      </div>
+    </div>
+
+
     <div class="max example">
       <h4 class="ui header">Maximum Selections</h4>
       <p>Using <code>maxSelections</code> lets you force a maximum number of selections. You can also use <a href="http://laptop-vm:9778/behaviors/form.html#validation-rules">form validation</a> rules to specify minimum and maximum validation settings for multi-selects inside forms.</p>

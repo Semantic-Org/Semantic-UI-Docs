@@ -2828,7 +2828,7 @@ themes      : ['Default']
 
     <div class="no example">
       <h4 class="ui header">Specifying Select Action</h4>
-      <p>Dropdowns have multiple built-in actions that can occur on item selection, you can specify a built by passing in a value to <code>settings.action</code> that is either a built in action, or a custom function that performs an action.</p>
+      <p>Dropdowns have multiple built-in actions that can occur on item selection. You can specify an action by passing its name to <code>settings.action</code> that is either a built-in action, or a custom function that performs an action.</p>
 
       <table class="ui definition sortable celled table segment">
         <thead>

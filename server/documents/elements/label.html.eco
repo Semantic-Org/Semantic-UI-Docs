@@ -40,10 +40,6 @@ themes      : ['Default']
     <h4 class="ui header">Image</h4>
     <p>A label can include an image</p>
     <a class="ui label">
-      <img src="/images/avatar/small/joe.jpg">
-      Joe
-    </a>
-    <a class="ui label">
       <img class="ui right spaced image" src="/images/avatar/small/elliot.jpg">
       Elliot
     </a>
@@ -202,18 +198,18 @@ themes      : ['Default']
     <div class="ui two column grid">
       <div class="column">
         <div class="ui raised segment">
-          <a class="ui ribbon label">Label</a>
-          <span>Inline Text</span>
+          <a class="ui red ribbon label">Overview</a>
+          <span>Account Details</span>
           <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-          <a class="ui teal ribbon label">Label</a>
+          <a class="ui blue ribbon label">Community</a> User Reviews
           <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
         </div>
       </div>
       <div class="column">
         <div class="ui segment">
-          <a class="ui right ribbon label">Label</a>
+          <a class="ui orange right ribbon label">Specs</a>
           <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-          <a class="ui teal right ribbon label">Label</a>
+          <a class="ui teal right ribbon label">Reviews</a>
           <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
         </div>
       </div>

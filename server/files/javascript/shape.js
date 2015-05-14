@@ -66,6 +66,7 @@ semantic.shape.ready = function() {
   $directionButton
     .on('click', handler.rotate)
     .popup({
+      delay     : 0,
       position  : 'bottom center'
     })
   ;

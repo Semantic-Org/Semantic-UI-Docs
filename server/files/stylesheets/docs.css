@@ -1694,7 +1694,6 @@ body.progress.animated .ui.progress .bar {
 
 #example .main.container {
   padding: 2em 0em 7em;
-  z-index: 1;
 }
 #example .wide.main.container {
   width: 80%;

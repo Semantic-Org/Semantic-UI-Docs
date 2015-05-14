@@ -1275,20 +1275,30 @@ themes      : ['Default', 'Material']
 
     <div class="remote example">
       <h4 class="ui header">Remote Content</h4>
-      <p>Search selection dropdowns can specify <a href="/behaviors/api.html">API</a> settings for retrieving values remotely, this can use either a named API <code>action</code> or <code>url</code>.</p>
+      <p>Search selection dropdowns can specify <a href="/behaviors/api.html">API settings</a> for retrieving values remotely, this can use either a named API <code>action</code> or <code>url</code>.</p>
       <p class="ignored">Using API can allow users to select choices from large datasets that would be too large to include directly in page markups.</p>
-      <div class="ui ignored info message">
-        A <code>menu</code> element does not need to be included when initializing remote content, it will automatically be generated on first use.
-      </div>
+      <div class="ui ignored info message">When a user refreshes the page, selection labels are automatically recreated by using <code>sessionStorage</code> to store the corresponding names for selected values. You can disable this feature by setting <code>saveRemoteData: false</code></div>
+      <div class="ui info ignored message">If your backend is not designed to return the correct markup you can use API's <code>onResponse</code> callback to adjust the format of an API response after it is received from the server.</div>
 
       <div class="ui form">
-        <div class="field">
-          <label>Favorite Animals</label>
-          <div class="ui multiple search selection dropdown">
-            <input type="hidden">
-            <i class="dropdown icon"></i>
-            <input type="text" class="search">
-            <div class="default text">Select animals</div>
+        <div class="two fields">
+          <div class="field">
+            <label>Favorite Animal</label>
+            <div class="ui search selection dropdown">
+              <input type="hidden">
+              <i class="dropdown icon"></i>
+              <input type="text" class="search">
+              <div class="default text">Select one...</div>
+            </div>
+          </div>
+          <div class="field">
+            <label>Favorite Animals</label>
+            <div class="ui multiple search selection dropdown">
+              <input type="hidden">
+              <i class="dropdown icon"></i>
+              <input type="text" class="search">
+              <div class="default text">Select...</div>
+            </div>
           </div>
         </div>
       </div>
@@ -2333,6 +2343,16 @@ themes      : ['Default', 'Material']
           <td>preserveHTML</td>
           <td>true</td>
           <td>Whether html included in dropdown values should be preserved. (Allows icons to show up in selected value)</td>
+        </tr>
+        <tr>
+          <td>apiSettings</td>
+          <td>false</td>
+          <td>Can be set to an object to specify <a href="/behaviors/api.html">API settings</a> for retrieving remote selection menu content from an API endpoint</td>
+        </tr>
+        <tr>
+          <td>saveRemoteData</td>
+          <td>true</td>
+          <td>When enabled will automatically store selected name/value pairs in <code>sessionStorage</code> to preserve user selection on page refresh. Disabling will clear remote dropdown values on refresh.</td>
         </tr>
         <tr>
           <td>sortSelect</td>

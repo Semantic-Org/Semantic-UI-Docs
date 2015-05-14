@@ -898,8 +898,8 @@ type        : 'UI Behavior'
         <tr>
           <td>cache</td>
           <td>false</td>
-          <td>Whether requests should be cached locally to avoid server requests on identical urls.</td>
-          <td>true or false</td>
+          <td>Can be set to "local" to cache request contents locally to avoid a server request on repeated requests to the same url. Settings to true, will request the page normally, and false will use jQuery style "cache breaking" parameters.</td>
+          <td>"local", true or false</td>
         </tr>
         <tr>
           <td>method</td>

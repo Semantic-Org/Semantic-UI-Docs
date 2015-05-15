@@ -1,6 +1,6 @@
 ---
 layout      : 'default'
-css         : 'basic'
+css         : 'basic minimal'
 element     : 'container'
 elementType : 'element'
 standalone  : true

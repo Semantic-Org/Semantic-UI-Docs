@@ -1,6 +1,6 @@
 ---
 layout      : 'default'
-css         : 'basic card'
+css         : 'card'
 standalone  : true
 
 element     : 'card'

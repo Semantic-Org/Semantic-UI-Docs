@@ -1020,13 +1020,22 @@ themes      : ['Default', 'Material']
 
     <div class="example">
       <h4 class="ui header">Disabled</h4>
-      <p>A disabled dropdown menu will not open or close</p>
-      <div class="ui ignored info message">A disabled state will prevent all dropdowns from allowing the menu to open.</div>
-      <div class="ui simple disabled dropdown">
+      <p>A disabled dropdown menu or item does not allow user interaction</p>
+      <div class="ui disabled dropdown">
         Dropdown <i class="dropdown icon"></i>
         <div class="menu">
           <div class="item">Choice 1</div>
           <div class="item">Choice 2</div>
+          <div class="item">Choice 3</div>
+        </div>
+      </div>
+    </div>
+    <div class="another dropdown example">
+      <div class="ui dropdown">
+        Disabled Item <i class="dropdown icon"></i>
+        <div class="menu">
+          <div class="item">Choice 1</div>
+          <div class="disabled item">Disabled</div>
           <div class="item">Choice 3</div>
         </div>
       </div>

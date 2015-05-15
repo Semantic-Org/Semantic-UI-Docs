@@ -3,6 +3,7 @@ layout      : 'default'
 css         : 'checkbox'
 element     : 'checkbox'
 elementType : 'module'
+standalone  : true
 
 title       : 'Checkbox'
 description : "A checkbox allows a user to select a value from a small set of options, often binary"
@@ -40,6 +41,38 @@ themes      : ['Default', 'Colored']
       </div>
     </div>
 
+    <div class="another example">
+      <div class="ui form">
+        <div class="grouped fields">
+          <div class="field">
+          <label>Outbound Throughput</label>
+            <div class="ui slider checkbox">
+              <input type="radio" name="throughput" checked="checked">
+              <label>20 mbps max</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui slider checkbox">
+              <input type="radio" name="throughput">
+              <label>10mbps max</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui slider checkbox">
+              <input type="radio" name="throughput">
+              <label>5mbps max</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui slider checkbox checked">
+              <input type="radio" name="throughput">
+              <label>Unmetered</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="example">
       <h4 class="ui header">Toggle</h4>
       <p>A checkbox can be formatted to show an on or off choice</p>
@@ -58,25 +91,25 @@ themes      : ['Default', 'Colored']
         <div class="grouped inline fields">
           <div class="field">
             <div class="ui radio checkbox">
-              <input type="radio" name="fruit" checked="checked" />
+              <input type="radio" name="frequency" checked="checked" />
               <label>Once a week</label>
             </div>
           </div>
           <div class="field">
             <div class="ui radio checkbox">
-              <input type="radio" name="fruit" />
+              <input type="radio" name="frequency" />
               <label>2-3 times a week</label>
             </div>
           </div>
           <div class="field">
             <div class="ui radio checkbox">
-              <input type="radio" name="fruit" />
+              <input type="radio" name="frequency" />
               <label>Once a day</label>
             </div>
           </div>
           <div class="field">
             <div class="ui radio checkbox">
-              <input type="radio" name="fruit" />
+              <input type="radio" name="frequency" />
               <label>Twice a day</label>
             </div>
           </div>

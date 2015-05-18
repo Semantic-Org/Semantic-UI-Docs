@@ -949,26 +949,26 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
     <h4 class="ui header">Icons</h4>
     <p>A menu may have just icons</p>
     <div class="ui icon menu">
-      <a class="red item">
-        <i class="mail icon"></i>
+      <a class="item">
+        <i class="gamepad icon"></i>
       </a>
-      <a class="teal item">
-        <i class="lab icon"></i>
+      <a class="item">
+        <i class="video camera icon"></i>
       </a>
-      <a class="green item">
-        <i class="star icon"></i>
+      <a class="item">
+        <i class="video play icon"></i>
       </a>
     </div>
     <br><br>
     <div class="ui vertical icon menu">
-      <a class="red item">
-        <i class="mail icon"></i>
+      <a class="item">
+        <i class="gamepad icon"></i>
       </a>
-      <a class="teal item">
-        <i class="lab icon"></i>
+      <a class="item">
+        <i class="video camera icon"></i>
       </a>
-      <a class="green item">
-        <i class="star icon"></i>
+      <a class="item">
+        <i class="video play icon"></i>
       </a>
     </div>
   </div>
@@ -977,32 +977,32 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
     <h4 class="ui header">Labeled Icon</h4>
     <p>A menu may have labeled icons</p>
     <div class="ui labeled icon menu">
-      <a class="red item">
-        <i class="mail icon"></i>
-        Mail
+      <a class="item">
+        <i class="gamepad icon"></i>
+        Games
       </a>
-      <a class="teal item">
-        <i class="lab icon"></i>
-        Lab
+      <a class="item">
+        <i class="video camera icon"></i>
+        Channels
       </a>
-      <a class="green item">
-        <i class="star icon"></i>
-        Favorites
+      <a class="item">
+        <i class="video play icon"></i>
+        Videos
       </a>
     </div>
     <br><br>
     <div class="ui vertical labeled icon menu">
-      <a class="red item">
-        <i class="mail icon"></i>
-        Mail
+      <a class="item">
+        <i class="gamepad icon"></i>
+        Games
       </a>
-      <a class="teal item">
-        <i class="lab icon"></i>
-        Lab
+      <a class="item">
+        <i class="video camera icon"></i>
+        Channels
       </a>
-      <a class="green item">
-        <i class="star icon"></i>
-        Favorites
+      <a class="item">
+        <i class="video play icon"></i>
+        Videos
       </a>
     </div>
   </div>

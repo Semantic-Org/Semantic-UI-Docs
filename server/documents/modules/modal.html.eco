@@ -40,7 +40,7 @@ themes      : ['Default', 'Material']
       </div>
     </div>
     <div class="actions">
-      <div class="primary ui button">Proceed</div>
+      <div class="ui primary button">Proceed</div>
     </div>
   </div>
   <div class="ui small second coupled modal">
@@ -104,7 +104,7 @@ themes      : ['Default', 'Material']
     <div class="header">
       Update Your Settings
     </div>
-    <div class="image content">
+    <div class="content">
       <div class="ui form">
         <h4 class="ui dividing header">Give us your feedback</h4>
         <div class="field">
@@ -174,7 +174,7 @@ themes      : ['Default', 'Material']
       </div>
     </div>
     <div class="actions">
-      <div class="ui primary button">
+      <div class="ui primary approve button">
         Proceed
         <i class="right chevron icon"></i>
       </div>
@@ -197,7 +197,7 @@ themes      : ['Default', 'Material']
       </div>
     </div>
     <div class="actions">
-      <div class="ui black button">
+      <div class="ui black deny button">
         Nope
       </div>
       <div class="ui positive right labeled icon button">
@@ -236,7 +236,7 @@ themes      : ['Default', 'Material']
             </div>
           </div>
           <div class="actions">
-            <div class="ui black button">
+            <div class="ui black deny button">
               Nope
             </div>
             <div class="ui positive right labeled icon button">
@@ -304,7 +304,7 @@ themes      : ['Default', 'Material']
       <h4 class="ui header">
         Content
       </h4>
-      <p>A modal can contain any content</p>
+      <p>A modal can contain content</p>
       <div class="code" data-type="html">
         <div class="ui modal">
           <div class="header">Header</div>
@@ -320,28 +320,13 @@ themes      : ['Default', 'Material']
     <div class="no example">
       <h4 class="ui header">
         Image Content
-      </h4>
-      <p>A modal can contain any content</p>
-      <div class="code" data-type="html">
-        <div class="ui modal">
-          <div class="header">Header</div>
-          <div class="content">
-            <img>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="no example">
-      <h4 class="ui header">
-        Image Content
-        <span class="ui label">
-          New
+        <span class="ui teal label">
+          2.0
         </span>
       </h4>
       <p>A modal can contain image content</p>
       <div class="ui ignored info message">
-        Modals with image content must contain <code>image content</code> class in <code>2.0</code> this is to make sure flex rules only apply to the container for adjacent content
+        Modals with image content must use the <code>image content</code> class in <code>2.0</code>. This is to make sure flex-box rules do not affect regular content.
       </div>
       <div class="code" data-type="html">
         <div class="ui modal">
@@ -368,7 +353,7 @@ themes      : ['Default', 'Material']
           deny     : '.negative, .deny, .cancel'
         </div>
       </div>
-      <div class="ui ignored info message">
+      <div class="ui ignored warning message">
         <p>To prevent a modal action from causing the modal to close, you can <code>return false;</code> from either callback.</p>
       </div>
       <div class="code" data-type="html">

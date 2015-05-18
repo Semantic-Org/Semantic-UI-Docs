@@ -2490,7 +2490,17 @@ themes      : ['Default', 'Material']
         <tr>
           <td>onChange(value, text, $choice)</td>
           <td>Dropdown</td>
-          <td>Is called after a dropdown item is selected. receives the name and value of selection and the active menu element</td>
+          <td>Is called after a dropdown value changes. Receives the name and value of selection and the active menu element</td>
+        </tr>
+        <tr>
+          <td>onAdd(addedValue, addedText, $addedChoice)</td>
+          <td>Dropdown</td>
+          <td>Is called after a dropdown selection is added using a multiple select dropdown, only receives the added value</td>
+        </tr>
+        <tr>
+          <td>onRemove(removedValue, removedText, $removedChoice)</td>
+          <td>Dropdown</td>
+          <td>Is called after a dropdown selection is removed using a multiple select dropdown, only receives the removed value</td>
         </tr>
         <tr>
           <td>onLabelCreate($label)</td>

@@ -13,7 +13,7 @@ semantic.api = {};
 // ready event
 semantic.api.ready = function() {
 
-  $.fn.api.settings.mockResponseAsync = function(callback) {
+  $.fn.api.settings.mockResponseAsync = function(settings, callback) {
     setTimeout(function() {
       callback({
         "success": "true"

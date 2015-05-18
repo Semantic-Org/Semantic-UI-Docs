@@ -10,15 +10,18 @@ type       : 'Library'
 <script type="text/javascript">
 $(document).ready(function() {
 
-    $(".ui.dropdown").dropdown("set selected", "A");
-
-    $(".ui.dropdown").find(".menu").html(
-        '<div class="item" data-value="">Not Selected</div>'+
-        '<div class="item" data-value="C">C</div>'+
-        '<div class="item" data-value="D">D</div>'
-    );
-    $('.ui.dropdown').dropdown('set selected', 'C');
-
+    $('.ui.menu .item')
+        .on('click', function() {
+            $('.ui.menu .item').removeClass('active');
+            $(this).addClass('active');
+        })
+    ;
+    $('.ui.menu .item .item')
+        .on('click', function() {
+            $('.ui.menu .item').removeClass('active');
+            $(this).addClass('active');
+        })
+    ;
 
 });
 </script>
@@ -28,14 +31,74 @@ $(document).ready(function() {
 </style>
 
 <div class="ui container" style="padding-top:300px;">
-<div class="ui selection dropdown">
-    <input type="hidden" name="test" value="" />
-    <div class="text">Test</div>
-    <i class="dropdown icon"></i>
-    <div class="menu">
-        <div class="item" data-value="">Not Selected</div>
-        <div class="item" data-value="A">A</div>
-        <div class="item" data-value="B">B</div>
+    <div class="ui pointing menu">
+      <a class="active item">
+        Home
+      </a>
+      <a class="item">
+        Messages
+      </a>
+      <a class="item">
+        Friends
+      </a>
+      <div class="right menu">
+        <div class="item">
+          <div class="ui transparent icon input">
+            <input type="text" placeholder="Search...">
+            <i class="search link icon"></i>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
+    <div class="ui teal inverted pointing menu">
+      <a class="active item">
+        Home
+      </a>
+      <a class="item">
+        Messages
+      </a>
+      <a class="item">
+        Friends
+      </a>
+    </div>
+    <div class="ui inverted pointing menu">
+      <a class="active item">
+        Home
+      </a>
+      <a class="item">
+        Messages
+      </a>
+    </div>
+    <div class="ui vertical pointing menu">
+      <a class="active item">
+        Home
+      </a>
+      <a class="item">
+        Messages
+      </a>
+      <div class="item">
+        Friends
+        <div class="menu">
+            <a class="item">One</a>
+            <a class="item">Two</a>
+            <a class="item">Three</a>
+        </div>
+      </div>
+    </div>
+    <div class="ui inverted vertical pointing menu">
+      <a class="active item">
+        Home
+      </a>
+      <a class="item">
+        Messages
+      </a>
+      <div class="item">
+        Friends
+        <div class="menu">
+            <a class="item">One</a>
+            <a class="item">Two</a>
+            <a class="item">Three</a>
+        </div>
+      </div>
+    </div>
 </div>

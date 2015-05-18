@@ -14,34 +14,23 @@ type        : 'UI Behavior'
 <%- @partial('header',  { tabs: { overview: 'Overview', usage: 'Usage',  behaviors: 'Behaviors',  settings: 'Settings' } }) %>
 
 <div class="main ui container">
-  <div class="ui active tab" data-tab="overview">
-    <div class="ui one column grid">
-      <div class="column">
-        <div class="content">
-          <div class="ui header"><i class="green check icon"></i>Already Knows Your UI</div>
-          <p>Attach an API event to an input, by default, it will occur <code>oninput</code>. Attach an API event to a button, <code>onclick</code>. API also ties API state to UI state: rate throttling, class adjustments for active, loading, disabled, syncing between multiple elements, and more.</p>
-        </div>
-      </div>
-      <div class="column">
-        <div class="content">
-          <div class="ui header"><i class="green check icon"></i>Deal with resources not URLs</div>
-          <p>Use API actions like 'follow user' and not server urls in your code. Centrally manage your entire API making sure you aren't caught modifying urls across your codebase. Define your endpoints using an intuitive templating system that automatically passes data found in your UI.</p>
-        </div>
-      </div>
-      <div class="column">
-        <div class="content">
-          <div class="ui header"><i class="green check icon"></i>State Management</div>
-          <p>API helps your UI keep track of server events, and is designed to work with Semantic's state naming conventions to track loading, disabled, and active states.</p>
-          <p>This allows you to do things like set maximum and minimum UI load times, toggle between text states, and sync UI states between multiple elements with the same API actions.</p>
-        </div>
-      </div>
-      <div class="column">
-        <div class="content">
-          <div class="ui header"><i class="green check icon"></i>Server Traces For Humans</div>
-          <p>View your API request as it occurs in your web console, get errors if required url variables are missing, and useful performance metrics.</p>
-        </div>
-      </div>
-    </div>
+  <div class="ui active introduction tab" data-tab="overview">
+
+    <div class="ui header"><i class="green check icon"></i>Integrates Seamlessly with UI</div>
+    <p>Attach an API event to a <a href="/elements/input.html">input</a>, by default, it will occur <code>oninput</code>. Attach an API event to a <a href="/elements/button.html">button</a>, it will occur <code>onclick</code>. API also ties API state to UI state: rate throttling, class adjustments for active, loading, disabled, syncing between multiple elements, and more.</p>
+
+    <div class="ui header"><i class="green check icon"></i>Templated URLs</div>
+    <p>Use API actions like 'follow user' and not server urls in your code. Centrally manage your entire API making sure you aren't caught modifying urls across your codebase. Define your endpoints using an intuitive templating system that automatically passes data found in your UI.</p>
+
+    <div class="ui header"><i class="green check icon"></i>Locally Cached Responses</div>
+    <p>When local caching is enabled repeated requests for the same endpoint will automatically return locally cached responses, avoiding a server roundtrip.</p>
+
+    <div class="ui header"><i class="green check icon"></i>Text State Management</div>
+    <p>API helps your UI keep track of server events, and is designed to work with Semantic's state naming conventions to track loading, disabled, and active states.</p>
+    <p>This allows you to do things like set maximum and minimum UI load times, toggle between text states, and sync UI states between multiple elements with the same API actions.</p>
+
+    <div class="ui header"><i class="green check icon"></i>Server Traces For Humans</div>
+    <p>View your API request as it occurs in your web console, get errors if required url variables are missing, and useful performance metrics.</p>
   </div>
 
   <div class="ui intro tab" data-tab="usage">
@@ -345,7 +334,10 @@ type        : 'UI Behavior'
               action: 'follow user',
               beforeSend: function(settings) {
                 // cancel request
-                return isLoggedIn;
+                if(!isLoggedIn) {
+                  $(this).state('flash text', 'Requires Login!');
+                  return false;
+                }
               }
             })
           ;
@@ -775,6 +767,10 @@ type        : 'UI Behavior'
           <td>Returns whether element is disabled</td>
         </tr>
         <tr>
+          <td>is mocked</td>
+          <td>Returns whether element response is mocked</td>
+        </tr>
+        <tr>
           <td>is loading</td>
           <td>Returns whether element is loading</td>
         </tr>
@@ -797,6 +793,18 @@ type        : 'UI Behavior'
         <tr>
           <td>get event</td>
           <td>Gets event that API request will occur on</td>
+        </tr>
+        <tr>
+          <td>read cached response(url)</td>
+          <td>Reads a locally cached response for a URL</td>
+        </tr>
+        <tr>
+          <td>write cached response(url, response)</td>
+          <td>Writes a cached response for a URL</td>
+        </tr>
+        <tr>
+          <td>create cache</td>
+          <td>Creates new server resposne cache, removing all locally cached URLs</td>
         </tr>
         <tr>
           <td>destroy</td>
@@ -837,6 +845,11 @@ type        : 'UI Behavior'
             </div>
           </td>
           <td>Selector filter for elements that should not be triggerable</td>
+        </tr>
+        <tr>
+          <td>cache</td>
+          <td>true</td>
+          <td>Can be set to 'local' to cache <b>successful</b> returned AJAX responses when using a JSON API. This helps avoid server roundtrips when API endpoints will return the same results when accessed repeatedly. Setting to <code>false</code>, will add cache busting parameters to the URL.</td>
         </tr>
         <tr>
           <td>stateContext</td>
@@ -896,10 +909,16 @@ type        : 'UI Behavior'
           <td></td>
         </tr>
         <tr>
-          <td>cache</td>
+          <td>mockResponse</td>
           <td>false</td>
-          <td>Can be set to "local" to cache request contents locally to avoid a server request on repeated requests to the same url. Settings to true, will request the page normally, and false will use jQuery style "cache breaking" parameters.</td>
-          <td>"local", true or false</td>
+          <td>Can be set to a javascript object which will be returned automatically instead of requesting JSON from server </td>
+          <td>{} or false</td>
+        </tr>
+        <tr>
+          <td>mockResponseAsync(settings, callback)</td>
+          <td>false</td>
+          <td>When specified, this function can be used to retreive content from a server and return it asynchronously <b>instead of</b> a standard AJAX call. The callback function should return the server response.</td>
+          <td>function or false</td>
         </tr>
         <tr>
           <td>method</td>

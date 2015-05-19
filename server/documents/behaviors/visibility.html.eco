@@ -628,20 +628,22 @@ type        : 'UI Behavior'
     <div class="visibility overlay example">
       <h4 class="ui header">Fixing Content To Viewport</h4>
       <p>Visibility provides a lightweight method for sticking content to a page's viewport. Using <code>type: fixed</code> will add the class <code>fixed</code> after an element is passed in the viewport. Using this class name you can assign special layout conditions to an item once it is passed.</p>
+      <p>Using the special visibility type <code>fixed</code> will automatically create a placeholder element, which will be shown or hidden after an element is passed, to ensure that the page's position does not change when the element is "fixed" and removed from normal layout flow.</p>
       <p>In this example, when an element is passed we fix it to the viewport, add a background color and box shadow so that it can float above other content. We also show an adjacent placeholder element which makes sure that content stays offset the same as if the menu was still in content flow</p>
       <div class="ui warning message">
-        Using <code>visibility</code> to create fixed content is meant as a more hands-on solution. For those who aren't too familiar with javascript it might be best to use <a href="/modules/sticky.html">sticky</a> content
+        You may need to adjust your fixed content's <code>z-index</code> to ensure it appears above other page content.
       </div>
       <div class="evaluated code" data-type="javascript">
         $('.overlay.example .overlay')
           .visibility({
-            offset : 55, // fix at 55px from top of page (space for nav menu)
-            type   : 'fixed'
+            type   : 'fixed',
+            offset : 15 // give some space from top of screen
           })
         ;
       </div>
       <div class="code" data-type="css">
       .visibility.example .overlay {
+        background-color: #FFFFFF;
         padding: 0em;
         box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
         transition: all 0.5s ease;
@@ -654,14 +656,8 @@ type        : 'UI Behavior'
       /* fixed */
       .visibility.example .fixed.overlay {
         position: fixed;
-        background-color: #FFFFFF;
         padding: 1em;
         box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
-        z-index: 10;
-      }
-      .visibility.example .fixed.overlay + .placeholder {
-        display: block;
-        height: 28px;
       }
       </div>
       <div class="overlay">

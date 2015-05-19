@@ -654,8 +654,8 @@ p:last-child {
   position: relative;
   -webkit-tap-highlight-color: transparent;
 }
-#example .example > .ignored,
-#example .example > .ignore,
+#example .example > .ignored.message,
+#example .example > .ignore.message,
 #example .example > p {
   max-width: 700px;
 }

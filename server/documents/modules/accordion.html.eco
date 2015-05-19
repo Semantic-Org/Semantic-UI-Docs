@@ -568,6 +568,7 @@ themes      : ['Default', 'Chubby']
             selector    : {
               accordion : '.accordion',
               title     : '.title',
+              trigger   : '.title',
               content   : '.content'
             }
             </div>
@@ -578,8 +579,9 @@ themes      : ['Default', 'Chubby']
           <td>className</td>
           <td>
             <div class="code">
-            className : {
-              active : 'active'
+            className   : {
+              active    : 'active',
+              animating : 'animating'
             }
             </div>
           </td>

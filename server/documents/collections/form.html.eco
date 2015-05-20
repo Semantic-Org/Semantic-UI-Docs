@@ -463,7 +463,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
         </div>
       </div>
 
-      <div class="ui raised segment">
+      <div class="ui segment">
         <div class="field">
           <div class="ui toggle checkbox">
             <input type="checkbox" name="gift">

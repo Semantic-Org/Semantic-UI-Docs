@@ -230,15 +230,17 @@ semantic.ready = function() {
           $activeSection = $followSection.eq(index),
           isActive       = $activeSection.hasClass('active')
         ;
-        $followSection
-          .removeClass('active')
-        ;
-        $activeSection
-          .addClass('active')
-        ;
-        $followMenu
-          .accordion('open', index)
-        ;
+        if(!isActive) {
+          $followSection.filter('.active')
+            .removeClass('active')
+          ;
+          $activeSection
+            .addClass('active')
+          ;
+          $followMenu
+            .accordion('open', index)
+          ;
+        }
       },
       example: function() {
         var
@@ -251,7 +253,7 @@ semantic.ready = function() {
           isActive       = $activeSection.hasClass('active')
         ;
         if(index !== -1 && !inClosedTab && !anotherExample && !isActive) {
-          $followSection
+          $followSection.filter('.active')
             .removeClass('active')
           ;
           $activeSection

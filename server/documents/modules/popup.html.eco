@@ -636,11 +636,6 @@ themes      : ['Default']
           <td>Duration of animation events</td>
         </tr>
         <tr>
-          <td>hideOnScroll</td>
-          <td>auto</td>
-          <td>Whether popup should hide on scroll and touchmove, auto only hides for popups withohut <code>on:click</code></td>
-        </tr>
-        <tr>
           <td>setFluidWidth</td>
           <td>true</td>
           <td>Whether popup should set fluid popup variation width on load to avoid <code>width: 100%</code> including padding</td>
@@ -654,6 +649,12 @@ themes      : ['Default']
           <td>closable</td>
           <td>true</td>
           <td>When using <code>on: 'click'</code> specifies whether clicking the page should close the popup</td>
+        </tr>
+        <tr>
+          <td>hideOnScroll</td>
+          <td>auto</td>
+          <td>Whether popup should hide on scroll or touchmove, <b>auto</b> only hides for popups withohut <code>on:click</code>.<br>
+          Set this to <b>false</b> to prevent mobile browsers from closing popups when your tap inside input fields.</td>
         </tr>
         <tr>
           <td>target</td>

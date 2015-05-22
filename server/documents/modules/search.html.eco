@@ -499,7 +499,7 @@ type        : 'UI Module'
               ]
             </div>
           </td>
-          <td>Specify object properties inside source object which will be searched</td>
+          <td>Specify object properties inside local source object which will be searched</td>
         </tr>
         <tr>
           <td>hideDelay</td>

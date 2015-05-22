@@ -607,7 +607,7 @@ themes      : ['Default']
         <tr>
           <td>on</td>
           <td>hover</td>
-          <td>Event used to trigger popup. Can be either <b>focus, click, hover, or manual</b>. Manul popups must be triggered with <code>$('.element').popup('show');</code></td>
+          <td>Event used to trigger popup. Can be either <b>focus, click, hover, or manual</b>. Manual popups must be triggered with <code>$('.element').popup('show');</code></td>
         </tr>
         <tr>
           <td>delay</td>

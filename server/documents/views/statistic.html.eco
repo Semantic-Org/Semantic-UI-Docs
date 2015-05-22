@@ -180,7 +180,7 @@ themes      : ['Default']
     <h4 class="ui header">Colored</h4>
     <p>A statistic can be formatted to be different colors</p>
     <div class="ui statistics">
-      <div class="yellow statistic">
+      <div class="red statistic">
         <div class="value">
           27
         </div>
@@ -188,7 +188,7 @@ themes      : ['Default']
           Yellow Labradors
         </div>
       </div>
-      <div class="green statistic">
+      <div class="orange statistic">
         <div class="value">
           8
         </div>
@@ -196,7 +196,7 @@ themes      : ['Default']
           Green
         </div>
       </div>
-      <div class="blue statistic">
+      <div class="yellow statistic">
         <div class="value">
           28
         </div>
@@ -204,7 +204,7 @@ themes      : ['Default']
           Blue
         </div>
       </div>
-      <div class="orange statistic">
+      <div class="green statistic">
         <div class="value">
           14
         </div>
@@ -212,7 +212,7 @@ themes      : ['Default']
           Orange
         </div>
       </div>
-      <div class="purple statistic">
+      <div class="teal statistic">
         <div class="value">
           82
         </div>
@@ -220,7 +220,7 @@ themes      : ['Default']
           Purple
         </div>
       </div>
-      <div class="pink statistic">
+      <div class="blue statistic">
         <div class="value">
           1
         </div>
@@ -228,7 +228,7 @@ themes      : ['Default']
           Pink
         </div>
       </div>
-      <div class="red statistic">
+      <div class="purple statistic">
         <div class="value">
           22
         </div>
@@ -236,7 +236,7 @@ themes      : ['Default']
           Red
         </div>
       </div>
-      <div class="teal statistic">
+      <div class="pink statistic">
         <div class="value">
           15
         </div>
@@ -244,6 +244,102 @@ themes      : ['Default']
           Teal
         </div>
       </div>
+      <div class="black statistic">
+        <div class="value">
+          15
+        </div>
+        <div class="label">
+          Teal
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="example">
+    <h4 class="ui header">Inverted</h4>
+    <p>A statistic can be formatted to fit on a dark background</p>
+    <div class="ui inverted segment">
+    <div class="ui statistics">
+      <div class="inverted statistic">
+        <div class="value">
+          27
+        </div>
+        <div class="label">
+          White Poodles
+        </div>
+      </div>
+      <div class="red inverted statistic">
+        <div class="value">
+          27
+        </div>
+        <div class="label">
+          Yellow Labradors
+        </div>
+      </div>
+      <div class="orange inverted statistic">
+        <div class="value">
+          8
+        </div>
+        <div class="label">
+          Green
+        </div>
+      </div>
+      <div class="yellow inverted statistic">
+        <div class="value">
+          28
+        </div>
+        <div class="label">
+          Blue
+        </div>
+      </div>
+      <div class="green inverted statistic">
+        <div class="value">
+          14
+        </div>
+        <div class="label">
+          Orange
+        </div>
+      </div>
+      <div class="teal inverted statistic">
+        <div class="value">
+          82
+        </div>
+        <div class="label">
+          Purple
+        </div>
+      </div>
+      <div class="blue inverted statistic">
+        <div class="value">
+          1
+        </div>
+        <div class="label">
+          Pink
+        </div>
+      </div>
+      <div class="purple inverted statistic">
+        <div class="value">
+          22
+        </div>
+        <div class="label">
+          Red
+        </div>
+      </div>
+      <div class="pink inverted statistic">
+        <div class="value">
+          15
+        </div>
+        <div class="label">
+          Teal
+        </div>
+      </div>
+      <div class="black inverted statistic">
+        <div class="value">
+          15
+        </div>
+        <div class="label">
+          Teal
+        </div>
+      </div>
+    </div>
     </div>
   </div>
 
@@ -283,84 +379,6 @@ themes      : ['Default']
         </div>
         <div class="label">
           Team Members
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="example">
-    <h4 class="ui header">Inverted</h4>
-    <p>A statistic can be formatted to fit on a dark background</p>
-    <div class="ui inverted segment">
-      <div class="ui inverted statistic">
-        <div class="value">
-          2,204
-        </div>
-        <div class="label">
-          Views
-        </div>
-      </div>
-      <div class="ui inverted yellow statistic">
-        <div class="value">
-          27
-        </div>
-        <div class="label">
-          Yellow Labradors
-        </div>
-      </div>
-      <div class="ui inverted green statistic">
-        <div class="value">
-          8
-        </div>
-        <div class="label">
-          Green Poodles
-        </div>
-      </div>
-      <div class="ui inverted blue statistic">
-        <div class="value">
-          28
-        </div>
-        <div class="label">
-          Blue Shiba-Inus
-        </div>
-      </div>
-      <div class="ui inverted orange statistic">
-        <div class="value">
-          14
-        </div>
-        <div class="label">
-          Orange Chihuahuas
-        </div>
-      </div>
-      <div class="ui inverted purple statistic">
-        <div class="value">
-          82
-        </div>
-        <div class="label">
-          Purple Labradoodles
-        </div>
-      </div>
-      <div class="ui inverted pink statistic">
-        <div class="value">
-          1
-        </div>
-        <div class="label">
-          Pink Labradors
-        </div>
-      </div>
-      <div class="ui inverted red statistic">
-        <div class="value">
-          22
-        </div>
-        <div class="label">
-          Red Mastifs
-        </div>
-      </div>
-      <div class="ui inverted teal statistic">
-        <div class="value">
-          15
-        </div>
-        <div class="label">
-          Teal Cockerspaniels
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 ---
 layout      : 'default'
 css         : 'table'
+standalone  : true
 
 element     : 'table'
 elementType : 'collection'
@@ -8,7 +9,6 @@ elementType : 'collection'
 title       : 'Table'
 description : 'A table displays a collections of data grouped into rows'
 type        : 'UI Collection'
-standalone  : true
 
 themes      : ['Default', 'Basic', 'Classic']
 ---
@@ -57,7 +57,7 @@ themes      : ['Default', 'Basic', 'Classic']
       </tbody>
       <tfoot>
         <th colspan="3">
-          <div class="ui secondary menu">
+          <div class="ui right floated pagination menu">
             <a class="icon item">
               <i class="left chevron icon"></i>
             </a>
@@ -121,19 +121,13 @@ themes      : ['Default', 'Basic', 'Classic']
     </table>
   </div>
   <div class="another example">
-    <table class="ui very basic table">
+    <table class="ui very basic celled center aligned table">
       <thead>
-        <th class="collapsing">Rank</th>
         <th>Name</th>
         <th>Correct Guesses</th>
       </thead>
       <tbody>
         <tr>
-          <td>
-            <div class="ui small statistic">
-              <span class="value">1</span>
-            </div>
-          </td>
           <td>
             <h4 class="ui image header">
               <img src="/images/avatar/small/ade.jpg" class="ui avatar image">
@@ -149,11 +143,6 @@ themes      : ['Default', 'Basic', 'Classic']
         </tr>
         <tr>
           <td>
-            <div class="ui small statistic">
-              <span class="value">2</span>
-            </div>
-          </td>
-          <td>
             <h4 class="ui image header">
               <img src="/images/avatar/small/veronika.jpg" class="ui avatar image">
               <div class="content">
@@ -167,11 +156,6 @@ themes      : ['Default', 'Basic', 'Classic']
           </td>
         </tr>
         <tr>
-          <td>
-            <div class="ui small statistic">
-              <span class="value">3</span>
-            </div>
-          </td>
           <td>
             <h4 class="ui image header">
               <img src="/images/avatar/small/justen.jpg" class="ui avatar image">
@@ -1086,36 +1070,167 @@ themes      : ['Default', 'Basic', 'Classic']
   <div class="example">
     <h4 class="ui header">Colored</h4>
     <p>A table can be given a color to distinguish it from other tables.</p>
-    <table class="ui blue table">
+    <table class="ui red table">
       <thead>
-        <tr>
-          <th>Name</th>
-          <th>Status</th>
-          <th>Notes</th>
-        </tr>
-      </thead>
+        <th>Food</th>
+        <th>Calories</th>
+        <th>Protein</th>
       <tbody>
         <tr>
-          <td>John</td>
-          <td>Approved</td>
-          <td>None</td>
+          <td>Apples</td>
+          <td>200</td>
+          <td>0g</td>
         </tr>
         <tr>
-          <td>Jamie</td>
-          <td>Approved</td>
-          <td>Requires call</td>
-        </tr>
-        <tr>
-          <td>Jill</td>
-          <td>Denied</td>
-          <td>None</td>
+          <td>Orange</td>
+          <td>310</td>
+          <td>0g</td>
         </tr>
       </tbody>
-      <tfoot>
-        <th>3 People</th>
-        <th>2 Approved</th>
-        <th></th>
-      </tfoot>
+    </table>
+    <table class="ui orange table">
+      <thead>
+        <th>Food</th>
+        <th>Calories</th>
+        <th>Protein</th>
+      <tbody>
+        <tr>
+          <td>Apples</td>
+          <td>200</td>
+          <td>0g</td>
+        </tr>
+        <tr>
+          <td>Orange</td>
+          <td>310</td>
+          <td>0g</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="ui yellow table">
+      <thead>
+        <th>Food</th>
+        <th>Calories</th>
+        <th>Protein</th>
+      <tbody>
+        <tr>
+          <td>Apples</td>
+          <td>200</td>
+          <td>0g</td>
+        </tr>
+        <tr>
+          <td>Orange</td>
+          <td>310</td>
+          <td>0g</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="ui green table">
+      <thead>
+        <th>Food</th>
+        <th>Calories</th>
+        <th>Protein</th>
+      <tbody>
+        <tr>
+          <td>Apples</td>
+          <td>200</td>
+          <td>0g</td>
+        </tr>
+        <tr>
+          <td>Orange</td>
+          <td>310</td>
+          <td>0g</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="ui teal table">
+      <thead>
+        <th>Food</th>
+        <th>Calories</th>
+        <th>Protein</th>
+      <tbody>
+        <tr>
+          <td>Apples</td>
+          <td>200</td>
+          <td>0g</td>
+        </tr>
+        <tr>
+          <td>Orange</td>
+          <td>310</td>
+          <td>0g</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="ui blue table">
+      <thead>
+        <th>Food</th>
+        <th>Calories</th>
+        <th>Protein</th>
+      <tbody>
+        <tr>
+          <td>Apples</td>
+          <td>200</td>
+          <td>0g</td>
+        </tr>
+        <tr>
+          <td>Orange</td>
+          <td>310</td>
+          <td>0g</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="ui purple table">
+      <thead>
+        <th>Food</th>
+        <th>Calories</th>
+        <th>Protein</th>
+      <tbody>
+        <tr>
+          <td>Apples</td>
+          <td>200</td>
+          <td>0g</td>
+        </tr>
+        <tr>
+          <td>Orange</td>
+          <td>310</td>
+          <td>0g</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="ui pink table">
+      <thead>
+        <th>Food</th>
+        <th>Calories</th>
+        <th>Protein</th>
+      <tbody>
+        <tr>
+          <td>Apples</td>
+          <td>200</td>
+          <td>0g</td>
+        </tr>
+        <tr>
+          <td>Orange</td>
+          <td>310</td>
+          <td>0g</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="ui black table">
+      <thead>
+        <th>Food</th>
+        <th>Calories</th>
+        <th>Protein</th>
+      <tbody>
+        <tr>
+          <td>Apples</td>
+          <td>200</td>
+          <td>0g</td>
+        </tr>
+        <tr>
+          <td>Orange</td>
+          <td>310</td>
+          <td>0g</td>
+        </tr>
+      </tbody>
     </table>
   </div>
 
@@ -1192,34 +1307,165 @@ themes      : ['Default', 'Basic', 'Classic']
   <div class="another example">
     <table class="ui inverted red table">
       <thead>
-        <tr>
-          <th>Name</th>
-          <th>Status</th>
-          <th>Notes</th>
-        </tr>
-      </thead>
+        <th>Food</th>
+        <th>Calories</th>
+        <th>Protein</th>
       <tbody>
         <tr>
-          <td>John</td>
-          <td>Approved</td>
-          <td>None</td>
+          <td>Apples</td>
+          <td>200</td>
+          <td>0g</td>
         </tr>
         <tr>
-          <td>Jamie</td>
-          <td>Approved</td>
-          <td>Requires call</td>
-        </tr>
-        <tr>
-          <td>Jill</td>
-          <td>Denied</td>
-          <td>None</td>
+          <td>Orange</td>
+          <td>310</td>
+          <td>0g</td>
         </tr>
       </tbody>
-      <tfoot>
-        <th>3 People</th>
-        <th>2 Approved</th>
-        <th></th>
-      </tfoot>
+    </table>
+    <table class="ui inverted orange table">
+      <thead>
+        <th>Food</th>
+        <th>Calories</th>
+        <th>Protein</th>
+      <tbody>
+        <tr>
+          <td>Apples</td>
+          <td>200</td>
+          <td>0g</td>
+        </tr>
+        <tr>
+          <td>Orange</td>
+          <td>310</td>
+          <td>0g</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="ui inverted yellow table">
+      <thead>
+        <th>Food</th>
+        <th>Calories</th>
+        <th>Protein</th>
+      <tbody>
+        <tr>
+          <td>Apples</td>
+          <td>200</td>
+          <td>0g</td>
+        </tr>
+        <tr>
+          <td>Orange</td>
+          <td>310</td>
+          <td>0g</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="ui inverted green table">
+      <thead>
+        <th>Food</th>
+        <th>Calories</th>
+        <th>Protein</th>
+      <tbody>
+        <tr>
+          <td>Apples</td>
+          <td>200</td>
+          <td>0g</td>
+        </tr>
+        <tr>
+          <td>Orange</td>
+          <td>310</td>
+          <td>0g</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="ui inverted teal table">
+      <thead>
+        <th>Food</th>
+        <th>Calories</th>
+        <th>Protein</th>
+      <tbody>
+        <tr>
+          <td>Apples</td>
+          <td>200</td>
+          <td>0g</td>
+        </tr>
+        <tr>
+          <td>Orange</td>
+          <td>310</td>
+          <td>0g</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="ui inverted blue table">
+      <thead>
+        <th>Food</th>
+        <th>Calories</th>
+        <th>Protein</th>
+      <tbody>
+        <tr>
+          <td>Apples</td>
+          <td>200</td>
+          <td>0g</td>
+        </tr>
+        <tr>
+          <td>Orange</td>
+          <td>310</td>
+          <td>0g</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="ui inverted purple table">
+      <thead>
+        <th>Food</th>
+        <th>Calories</th>
+        <th>Protein</th>
+      <tbody>
+        <tr>
+          <td>Apples</td>
+          <td>200</td>
+          <td>0g</td>
+        </tr>
+        <tr>
+          <td>Orange</td>
+          <td>310</td>
+          <td>0g</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="ui inverted pink table">
+      <thead>
+        <th>Food</th>
+        <th>Calories</th>
+        <th>Protein</th>
+      <tbody>
+        <tr>
+          <td>Apples</td>
+          <td>200</td>
+          <td>0g</td>
+        </tr>
+        <tr>
+          <td>Orange</td>
+          <td>310</td>
+          <td>0g</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="ui inverted black table">
+      <thead>
+        <th>Food</th>
+        <th>Calories</th>
+        <th>Protein</th>
+      <tbody>
+        <tr>
+          <td>Apples</td>
+          <td>200</td>
+          <td>0g</td>
+        </tr>
+        <tr>
+          <td>Orange</td>
+          <td>310</td>
+          <td>0g</td>
+        </tr>
+      </tbody>
     </table>
   </div>
 

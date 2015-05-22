@@ -555,42 +555,42 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
         Browse
         <i class="dropdown icon"></i>
       </a>
-      <div class="ui fluid popup">
-        <div class="ui four column relaxed equal height divided grid">
-          <div class="column">
-            <h4 class="ui header">Fabrics</h4>
-            <div class="ui link list">
-              <a class="item">Cashmere</a>
-              <a class="item">Linen</a>
-              <a class="item">Cotton</a>
-              <a class="item">Viscose</a>
-            </div>
+    </div>
+    <div class="ui fluid popup">
+      <div class="ui four column relaxed equal height divided grid">
+        <div class="column">
+          <h4 class="ui header">Fabrics</h4>
+          <div class="ui link list">
+            <a class="item">Cashmere</a>
+            <a class="item">Linen</a>
+            <a class="item">Cotton</a>
+            <a class="item">Viscose</a>
           </div>
-          <div class="column">
-            <h4 class="ui header">Sizes</h4>
-            <div class="ui link list">
-              <a class="item">Small</a>
-              <a class="item">Medium</a>
-              <a class="item">Large</a>
-              <a class="item">Plus Sizes</a>
-            </div>
+        </div>
+        <div class="column">
+          <h4 class="ui header">Sizes</h4>
+          <div class="ui link list">
+            <a class="item">Small</a>
+            <a class="item">Medium</a>
+            <a class="item">Large</a>
+            <a class="item">Plus Sizes</a>
           </div>
-          <div class="column">
-            <h4 class="ui header">Colors</h4>
-            <div class="ui link list">
-              <a class="item">Neutrals</a>
-              <a class="item">Brights</a>
-              <a class="item">Pastels</a>
-            </div>
+        </div>
+        <div class="column">
+          <h4 class="ui header">Colors</h4>
+          <div class="ui link list">
+            <a class="item">Neutrals</a>
+            <a class="item">Brights</a>
+            <a class="item">Pastels</a>
           </div>
-          <div class="column">
-            <h4 class="ui header">Types</h4>
-            <div class="ui link list">
-              <a class="item">Knitwear</a>
-              <a class="item">Outerwear</a>
-              <a class="item">Pants</a>
-              <a class="item">Shoes</a>
-            </div>
+        </div>
+        <div class="column">
+          <h4 class="ui header">Types</h4>
+          <div class="ui link list">
+            <a class="item">Knitwear</a>
+            <a class="item">Outerwear</a>
+            <a class="item">Pants</a>
+            <a class="item">Shoes</a>
           </div>
         </div>
       </div>
@@ -789,27 +789,19 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
     <h4 class="ui header">Colors</h4>
     <p>Additional colors can be specified.</p>
     <div class="ui menu">
-      <a class="active green item">
-        Green
-      </a>
-      <a class="red item">
-        Red
-      </a>
-      <a class="blue item">
-        Blue
-      </a>
-      <a class="orange item">
-        Orange
-      </a>
-      <a class="purple item">
-        Purple
-      </a>
-      <a class="teal item">
-        Teal
-      </a>
+      <a class="ui active red item">Red</a>
+      <a class="ui orange item">Orange</a>
+      <a class="ui yellow item">Yellow</a>
+      <a class="ui green item">Green</a>
+      <a class="ui teal item">Teal</a>
+      <a class="ui blue item">Blue</a>
+      <a class="ui purple item">Purple</a>
+      <a class="ui pink item">Pink</a>
+      <a class="ui black item">Black</a>
     </div>
-    <br>
-    <div class="ui red menu">
+  </div>
+  <div class="another example">
+    <div class="ui red three item menu">
       <a class="active item">
         Home
       </a>
@@ -820,8 +812,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
         Friends
       </a>
     </div>
-    <br>
-    <div class="ui blue menu">
+    <div class="ui orange three item menu">
       <a class="active item">
         Home
       </a>
@@ -832,8 +823,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
         Friends
       </a>
     </div>
-    <br>
-    <div class="ui orange menu">
+    <div class="ui yellow three item menu">
       <a class="active item">
         Home
       </a>
@@ -844,8 +834,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
         Friends
       </a>
     </div>
-    <br>
-    <div class="ui purple menu">
+    <div class="ui green three item menu">
       <a class="active item">
         Home
       </a>
@@ -856,8 +845,51 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
         Friends
       </a>
     </div>
-    <br>
-    <div class="ui teal menu">
+    <div class="ui teal three item menu">
+      <a class="active item">
+        Home
+      </a>
+      <a class="item">
+        Messages
+      </a>
+      <a class="item">
+        Friends
+      </a>
+    </div>
+    <div class="ui blue three item menu">
+      <a class="active item">
+        Home
+      </a>
+      <a class="item">
+        Messages
+      </a>
+      <a class="item">
+        Friends
+      </a>
+    </div>
+    <div class="ui purple three item menu">
+      <a class="active item">
+        Home
+      </a>
+      <a class="item">
+        Messages
+      </a>
+      <a class="item">
+        Friends
+      </a>
+    </div>
+    <div class="ui pink three item menu">
+      <a class="active item">
+        Home
+      </a>
+      <a class="item">
+        Messages
+      </a>
+      <a class="item">
+        Friends
+      </a>
+    </div>
+    <div class="ui black three item menu">
       <a class="active item">
         Home
       </a>
@@ -871,7 +903,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
   </div>
   <div class="another example">
     <p>These colors can also be inverted</p>
-    <div class="ui green inverted menu">
+    <div class="ui red three item inverted menu">
       <a class="active item">
         Home
       </a>
@@ -882,8 +914,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
         Friends
       </a>
     </div>
-    <br>
-    <div class="ui red inverted menu">
+    <div class="ui orange three item inverted menu">
       <a class="active item">
         Home
       </a>
@@ -894,8 +925,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
         Friends
       </a>
     </div>
-    <br>
-    <div class="ui blue inverted menu">
+    <div class="ui yellow three item inverted menu">
       <a class="active item">
         Home
       </a>
@@ -906,8 +936,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
         Friends
       </a>
     </div>
-    <br>
-    <div class="ui orange inverted menu">
+    <div class="ui green three item inverted menu">
       <a class="active item">
         Home
       </a>
@@ -918,8 +947,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
         Friends
       </a>
     </div>
-    <br>
-    <div class="ui purple inverted menu">
+    <div class="ui teal three item inverted menu">
       <a class="active item">
         Home
       </a>
@@ -930,8 +958,40 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
         Friends
       </a>
     </div>
-    <br>
-    <div class="ui teal inverted menu">
+    <div class="ui blue three item inverted menu">
+      <a class="active item">
+        Home
+      </a>
+      <a class="item">
+        Messages
+      </a>
+      <a class="item">
+        Friends
+      </a>
+    </div>
+    <div class="ui purple three item inverted menu">
+      <a class="active item">
+        Home
+      </a>
+      <a class="item">
+        Messages
+      </a>
+      <a class="item">
+        Friends
+      </a>
+    </div>
+    <div class="ui pink three item inverted menu">
+      <a class="active item">
+        Home
+      </a>
+      <a class="item">
+        Messages
+      </a>
+      <a class="item">
+        Friends
+      </a>
+    </div>
+    <div class="ui black three item inverted menu">
       <a class="active item">
         Home
       </a>

@@ -321,7 +321,7 @@ themes      : ['Default', 'Material']
       <h4 class="ui header">
         Image Content
         <span class="ui teal label">
-          2.0
+          New in 2.0
         </span>
       </h4>
       <p>A modal can contain image content</p>

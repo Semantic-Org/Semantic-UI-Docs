@@ -77,7 +77,7 @@ themes      : ['default', 'GitHub']
     </div>
   </div>
 
-  <div class="example">
+  <div class="piled example">
     <h4 class="ui header">Piled</h4>
     <p>A segment can be formatted to look like a pile of pages</p>
     <div class="ui ignored warning message">
@@ -198,45 +198,27 @@ themes      : ['default', 'GitHub']
   <div class="example">
     <h4 class="ui header">Colored</h4>
     <p>A segment can be colored</p>
-    <div class="ui blue segment">
-      Blue
-    </div>
-    <div class="ui orange segment">
-      Orange
-    </div>
-    <div class="ui green segment">
-      Green
-    </div>
-    <div class="ui red segment">
-      Red
-    </div>
-    <div class="ui purple segment">
-      Purple
-    </div>
-    <div class="ui teal segment">
-      Teal
-    </div>
+    <div class="ui red segment">Red</div>
+    <div class="ui orange segment">Orange</div>
+    <div class="ui yellow segment">Yellow</div>
+    <div class="ui green segment">Green</div>
+    <div class="ui teal segment">Teal</div>
+    <div class="ui blue segment">Blue</div>
+    <div class="ui purple segment">Purple</div>
+    <div class="ui pink segment">Pink</div>
+    <div class="ui black segment">Black</div>
   </div>
   <div class="another example">
     <p>These colors can be inverted</p>
-    <div class="ui blue inverted segment">
-      Blue
-    </div>
-    <div class="ui orange inverted segment">
-      Orange
-    </div>
-    <div class="ui green inverted segment">
-      Green
-    </div>
-    <div class="ui red inverted segment">
-      Red
-    </div>
-    <div class="ui purple inverted segment">
-      Purple
-    </div>
-    <div class="ui teal inverted segment">
-      Teal
-    </div>
+    <div class="ui red inverted segment">Red</div>
+    <div class="ui orange inverted segment">Orange</div>
+    <div class="ui yellow inverted segment">Yellow</div>
+    <div class="ui green inverted segment">Green</div>
+    <div class="ui teal inverted segment">Teal</div>
+    <div class="ui blue inverted segment">Blue</div>
+    <div class="ui purple inverted segment">Purple</div>
+    <div class="ui pink inverted segment">Pink</div>
+    <div class="ui black inverted segment">Black</div>
   </div>
 
   <div class="example">

@@ -590,12 +590,12 @@ themes      : ['Default']
         <tr>
           <td>transition</td>
           <td>auto</td>
-          <td>Named <a href="/modules/transition.html">ui transitions</a> to use when animating sidebar. Defaults to 'auto' which selects transition from <code>defaultTransition</code> based on direction.</td>
+          <td>Named transition to use when animating sidebar. Defaults to 'auto' which selects transition from <code>defaultTransition</code> based on direction.</td>
         </tr>
         <tr>
           <td>mobileTransition</td>
           <td>auto</td>
-          <td>Named <a href="/modules/transition.html">ui transitions</a> to use when animating when detecting mobile device. Defaults to 'auto' which selects transition from <code>defaultTransition</code> based on direction.</td>
+          <td>Named transition to use when animating when detecting mobile device. Defaults to 'auto' which selects transition from <code>defaultTransition</code> based on direction.</td>
         </tr>
         <tr>
           <td>defaultTransition</td>

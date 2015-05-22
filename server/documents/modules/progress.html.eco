@@ -264,37 +264,118 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
     <div class="example">
       <h4 class="ui header">Color</h4>
       <p>Can have different colors:</p>
-      <div class="ui black progress">
-        <div class="bar"></div>
-      </div>
-      <div class="ui blue progress">
-        <div class="bar"></div>
-      </div>
-      <div class="ui green progress">
+      <div class="ui red progress">
         <div class="bar"></div>
       </div>
       <div class="ui orange progress">
         <div class="bar"></div>
       </div>
-      <div class="ui pink progress">
+      <div class="ui yellow progress">
         <div class="bar"></div>
       </div>
-      <div class="ui purple progress">
-        <div class="bar"></div>
-      </div>
-      <div class="ui red progress">
+      <div class="ui green progress">
         <div class="bar"></div>
       </div>
       <div class="ui teal progress">
         <div class="bar"></div>
       </div>
-      <div class="ui yellow progress">
+      <div class="ui blue progress">
+        <div class="bar"></div>
+      </div>
+      <div class="ui violet progress">
+        <div class="bar"></div>
+      </div>
+      <div class="ui purple progress">
+        <div class="bar"></div>
+      </div>
+      <div class="ui pink progress">
+        <div class="bar"></div>
+      </div>
+      <div class="ui brown progress">
+        <div class="bar"></div>
+      </div>
+      <div class="ui grey progress">
+        <div class="bar"></div>
+      </div>
+      <div class="ui black progress">
         <div class="bar"></div>
       </div>
       <div class="ignored">
         <div class="ui icon buttons">
           <div class="decrement ui basic red button"><i class="minus icon"></i></div>
           <div class="increment ui basic green button"><i class="plus icon"></i></div>
+        </div>
+      </div>
+    </div>
+    <div class="example">
+      <h4 class="ui header">Inverted Color</h4>
+      <p>These colors can also be inverted for improved contrast on dark backgrounds</p>
+      <div class="ui inverted segment">
+        <div class="ui red inverted progress">
+          <div class="bar">
+            <div class="progress"></div>
+          </div>
+        </div>
+        <div class="ui orange inverted progress">
+          <div class="bar">
+            <div class="progress"></div>
+          </div>
+        </div>
+        <div class="ui yellow inverted progress">
+          <div class="bar">
+            <div class="progress"></div>
+          </div>
+        </div>
+        <div class="ui green inverted progress">
+          <div class="bar">
+            <div class="progress"></div>
+          </div>
+        </div>
+        <div class="ui teal inverted progress">
+          <div class="bar">
+            <div class="progress"></div>
+          </div>
+        </div>
+        <div class="ui blue inverted progress">
+          <div class="bar">
+            <div class="progress"></div>
+          </div>
+        </div>
+        <div class="ui violet inverted progress">
+          <div class="bar">
+            <div class="progress"></div>
+          </div>
+        </div>
+        <div class="ui purple inverted progress">
+          <div class="bar">
+            <div class="progress"></div>
+          </div>
+        </div>
+        <div class="ui pink inverted progress">
+          <div class="bar">
+            <div class="progress"></div>
+          </div>
+        </div>
+        <div class="ui brown inverted progress">
+          <div class="bar">
+            <div class="progress"></div>
+          </div>
+        </div>
+        <div class="ui grey inverted progress">
+          <div class="bar">
+            <div class="progress"></div>
+          </div>
+        </div>
+        <div class="ui black inverted progress">
+          <div class="bar">
+            <div class="progress"></div>
+          </div>
+        </div>
+        <div class="ignored">
+          <div class="ui icon buttons">
+            <div class="decrement ui basic inverted red button"><i class="minus icon"></i></div>
+            <div class="increment ui basic inverted green button"><i class="plus icon"></i></div>
+          </div>
         </div>
       </div>
     </div>

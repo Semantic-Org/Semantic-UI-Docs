@@ -136,14 +136,16 @@ themes      : ['Default', 'Material']
     <h4 class="ui header">Colors</h4>
     <p>A site can define a set of hex values for common named colors</p>
     <div class="ui four column stackable padded grid">
-      <div class="blue column">Blue</div>
-      <div class="green column">Green</div>
-      <div class="orange column">Orange</div>
-      <div class="pink column">Pink</div>
-      <div class="purple column">Purple</div>
       <div class="red column">Red</div>
-      <div class="teal column">Teal</div>
+      <div class="orange column">Orange</div>
       <div class="yellow column">Yellow</div>
+      <div class="green column">Green</div>
+      <div class="teal column">Teal</div>
+      <div class="blue column">Blue</div>
+      <div class="purple column">Purple</div>
+      <div class="pink column">Pink</div>
+      <div class="grey column">Grey</div>
+      <div class="black column">Black</div>
     </div>
   </div>
 

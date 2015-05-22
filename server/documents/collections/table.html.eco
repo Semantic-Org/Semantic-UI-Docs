@@ -1030,6 +1030,41 @@ themes      : ['Default', 'Basic', 'Classic']
     </table>
   </div>
 
+  <div class="example">
+    <h4 class="ui header">Single Line</h4>
+    <p>A table can specify that its cell contents should remain on a single line, and not wrap.</p>
+    <table class="ui single line table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Registration Date</th>
+          <th>E-mail address</th>
+          <th>Premium Plan</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>John Lilki</td>
+          <td>September 14, 2013</td>
+          <td>jhlilk22@yahoo.com</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>Jamie Harington</td>
+          <td>January 11, 2014</td>
+          <td>jamieharingonton@yahoo.com</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Jill Lewis</td>
+          <td>May 11, 2014</td>
+          <td>jilsewris22@yahoo.com</td>
+          <td>Yes</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
 
   <div class="example">
     <h4 class="ui header">Collapsing</h4>
@@ -1178,6 +1213,24 @@ themes      : ['Default', 'Basic', 'Classic']
         </tr>
       </tbody>
     </table>
+    <table class="ui violet table">
+      <thead>
+        <th>Food</th>
+        <th>Calories</th>
+        <th>Protein</th>
+      <tbody>
+        <tr>
+          <td>Apples</td>
+          <td>200</td>
+          <td>0g</td>
+        </tr>
+        <tr>
+          <td>Orange</td>
+          <td>310</td>
+          <td>0g</td>
+        </tr>
+      </tbody>
+    </table>
     <table class="ui purple table">
       <thead>
         <th>Food</th>
@@ -1214,7 +1267,7 @@ themes      : ['Default', 'Basic', 'Classic']
         </tr>
       </tbody>
     </table>
-    <table class="ui black table">
+    <table class="ui grey table">
       <thead>
         <th>Food</th>
         <th>Calories</th>
@@ -1232,38 +1285,21 @@ themes      : ['Default', 'Basic', 'Classic']
         </tr>
       </tbody>
     </table>
-  </div>
-
-  <div class="example">
-    <h4 class="ui header">Single Line</h4>
-    <p>A table can specify that cell contents should be kept to a single line</p>
-    <table class="ui single line table">
+    <table class="ui black table">
       <thead>
-        <tr>
-          <th>Name</th>
-          <th>Registration Date</th>
-          <th>E-mail address</th>
-          <th>Premium Plan</th>
-        </tr>
-      </thead>
+        <th>Food</th>
+        <th>Calories</th>
+        <th>Protein</th>
       <tbody>
         <tr>
-          <td>John Lilki</td>
-          <td>September 14, 2013</td>
-          <td>jhlilk22@yahoo.com</td>
-          <td>No</td>
+          <td>Apples</td>
+          <td>200</td>
+          <td>0g</td>
         </tr>
         <tr>
-          <td>Jamie Harington</td>
-          <td>January 11, 2014</td>
-          <td>jamieharingonton@yahoo.com</td>
-          <td>Yes</td>
-        </tr>
-        <tr>
-          <td>Jill Lewis</td>
-          <td>May 11, 2014</td>
-          <td>jilsewris22@yahoo.com</td>
-          <td>Yes</td>
+          <td>Orange</td>
+          <td>310</td>
+          <td>0g</td>
         </tr>
       </tbody>
     </table>
@@ -1413,6 +1449,24 @@ themes      : ['Default', 'Basic', 'Classic']
         </tr>
       </tbody>
     </table>
+    <table class="ui inverted violet table">
+      <thead>
+        <th>Food</th>
+        <th>Calories</th>
+        <th>Protein</th>
+      <tbody>
+        <tr>
+          <td>Apples</td>
+          <td>200</td>
+          <td>0g</td>
+        </tr>
+        <tr>
+          <td>Orange</td>
+          <td>310</td>
+          <td>0g</td>
+        </tr>
+      </tbody>
+    </table>
     <table class="ui inverted purple table">
       <thead>
         <th>Food</th>
@@ -1449,7 +1503,25 @@ themes      : ['Default', 'Basic', 'Classic']
         </tr>
       </tbody>
     </table>
-    <table class="ui inverted black table">
+    <table class="ui inverted brown table">
+      <thead>
+        <th>Food</th>
+        <th>Calories</th>
+        <th>Protein</th>
+      <tbody>
+        <tr>
+          <td>Apples</td>
+          <td>200</td>
+          <td>0g</td>
+        </tr>
+        <tr>
+          <td>Orange</td>
+          <td>310</td>
+          <td>0g</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="ui inverted grey table">
       <thead>
         <th>Food</th>
         <th>Calories</th>

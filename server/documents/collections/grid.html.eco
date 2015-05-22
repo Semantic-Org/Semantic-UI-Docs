@@ -1014,6 +1014,67 @@ themes      : ['Default']
         </div>
       </div>
     </div>
+
+    <div class="example">
+      <h4 class="ui header">Colored</h4>
+      <p>A grid row or column can be colored</p>
+      <div class="ui four column padded grid">
+        <div class="red column">Red</div>
+        <div class="orange column">Orange</div>
+        <div class="yellow column">Yellow</div>
+        <div class="green column">Green</div>
+        <div class="teal column">Teal</div>
+        <div class="blue column">Blue</div>
+        <div class="violet column">Violet</div>
+        <div class="purple column">Purple</div>
+        <div class="pink column">Pink</div>
+        <div class="brown column">Brown</div>
+        <div class="grey column">Grey</div>
+        <div class="black column">Black</div>
+      </div>
+    </div>
+    <div class="another example">
+      <div class="ui padded grid">
+        <div class="red row">
+          <div class="column">Red</div>
+        </div>
+        <div class="orange row">
+          <div class="column">Orange</div>
+        </div>
+        <div class="yellow row">
+          <div class="column">Yellow</div>
+        </div>
+        <div class="green row">
+          <div class="column">Green</div>
+        </div>
+        <div class="teal row">
+          <div class="column">Teal</div>
+        </div>
+        <div class="blue row">
+          <div class="column">Blue</div>
+        </div>
+        <div class="violet row">
+          <div class="column">Violet</div>
+        </div>
+        <div class="purple row">
+          <div class="column">Purple</div>
+        </div>
+        <div class="pink row">
+          <div class="column">Pink</div>
+        </div>
+        <div class="brown row">
+          <div class="column">Brown</div>
+        </div>
+        <div class="grey row">
+          <div class="column">Grey</div>
+        </div>
+        <div class="black row">
+          <div class="column">Black</div>
+        </div>
+      </div>
+    </div>
+
+
     <div class="example">
       <h4 class="ui header">Centered</h4>
       <p>A grid can have its columns centered</p>

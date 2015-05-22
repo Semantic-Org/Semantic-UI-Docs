@@ -185,7 +185,7 @@ themes      : ['Default']
           27
         </div>
         <div class="label">
-          Redabradors
+          Red
         </div>
       </div>
       <div class="orange statistic">
@@ -228,6 +228,14 @@ themes      : ['Default']
           Blue
         </div>
       </div>
+      <div class="violet statistic">
+        <div class="value">
+          22
+        </div>
+        <div class="label">
+          Violet
+        </div>
+      </div>
       <div class="purple statistic">
         <div class="value">
           22
@@ -244,12 +252,20 @@ themes      : ['Default']
           Pink
         </div>
       </div>
-      <div class="black statistic">
+      <div class="brown statistic">
         <div class="value">
           15
         </div>
         <div class="label">
-          Black
+          Grey
+        </div>
+      </div>
+      <div class="grey statistic">
+        <div class="value">
+          15
+        </div>
+        <div class="label">
+          Grey
         </div>
       </div>
     </div>
@@ -258,16 +274,15 @@ themes      : ['Default']
     <h4 class="ui header">Inverted</h4>
     <p>A statistic can be formatted to fit on a dark background</p>
     <div class="ui inverted segment">
-    <div class="ui statistics">
-      <div class="inverted statistic">
+      <div class="ui inverted statistic">
         <div class="value">
           27
         </div>
         <div class="label">
-          White Poodles
+          Inverted
         </div>
       </div>
-      <div class="red inverted statistic">
+      <div class="ui red inverted statistic">
         <div class="value">
           27
         </div>
@@ -275,7 +290,7 @@ themes      : ['Default']
           Red
         </div>
       </div>
-      <div class="orange inverted statistic">
+      <div class="ui orange inverted statistic">
         <div class="value">
           8
         </div>
@@ -283,7 +298,7 @@ themes      : ['Default']
           Orange
         </div>
       </div>
-      <div class="yellow inverted statistic">
+      <div class="ui yellow inverted statistic">
         <div class="value">
           28
         </div>
@@ -291,7 +306,7 @@ themes      : ['Default']
           Yellow
         </div>
       </div>
-      <div class="green inverted statistic">
+      <div class="ui green inverted statistic">
         <div class="value">
           14
         </div>
@@ -299,7 +314,7 @@ themes      : ['Default']
           Green
         </div>
       </div>
-      <div class="teal inverted statistic">
+      <div class="ui teal inverted statistic">
         <div class="value">
           82
         </div>
@@ -307,7 +322,7 @@ themes      : ['Default']
           Teal
         </div>
       </div>
-      <div class="blue inverted statistic">
+      <div class="ui blue inverted statistic">
         <div class="value">
           1
         </div>
@@ -315,7 +330,15 @@ themes      : ['Default']
           Blue
         </div>
       </div>
-      <div class="purple inverted statistic">
+      <div class="ui violet inverted statistic">
+        <div class="value">
+          22
+        </div>
+        <div class="label">
+          Violet
+        </div>
+      </div>
+      <div class="ui purple inverted statistic">
         <div class="value">
           22
         </div>
@@ -323,7 +346,7 @@ themes      : ['Default']
           Purple
         </div>
       </div>
-      <div class="pink inverted statistic">
+      <div class="ui pink inverted statistic">
         <div class="value">
           15
         </div>
@@ -331,15 +354,22 @@ themes      : ['Default']
           Pink
         </div>
       </div>
-      <div class="black inverted statistic">
+      <div class="ui brown inverted statistic">
         <div class="value">
           15
         </div>
         <div class="label">
-          Black
+          Brown
         </div>
       </div>
-    </div>
+      <div class="ui grey inverted statistic">
+        <div class="value">
+          15
+        </div>
+        <div class="label">
+          Grey
+        </div>
+      </div>
     </div>
   </div>
 

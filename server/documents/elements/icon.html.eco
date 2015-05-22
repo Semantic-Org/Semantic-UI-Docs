@@ -1319,12 +1319,17 @@ themes      : ['Default']
     <div class="example">
       <h4 class="ui header">Colors</h4>
       <p>An icon can be formatted with different colors</p>
-      <i class="black users icon"></i>
-      <i class="blue user icon"></i>
       <i class="red users icon"></i>
-      <i class="green user icon"></i>
-      <i class="purple chat icon"></i>
-      <i class="teal comment icon"></i>
+      <i class="orange users icon"></i>
+      <i class="yellow users icon"></i>
+      <i class="green users icon"></i>
+      <i class="teal users icon"></i>
+      <i class="blue users icon"></i>
+      <i class="violet users icon"></i>
+      <i class="purple users icon"></i>
+      <i class="pink users icon"></i>
+      <i class="brown users icon"></i>
+      <i class="grey users icon"></i>
     </div>
 
     <div class="example">
@@ -1332,12 +1337,17 @@ themes      : ['Default']
       <p>An icon can have its colors inverted for contrast</p>
       <div class="ui inverted segment">
         <i class="inverted users icon"></i>
-        <i class="inverted black users icon"></i>
-        <i class="inverted blue user icon"></i>
         <i class="inverted red users icon"></i>
-        <i class="inverted green user icon"></i>
-        <i class="inverted purple chat icon"></i>
-        <i class="inverted teal comment icon"></i>
+        <i class="inverted orange users icon"></i>
+        <i class="inverted yellow users icon"></i>
+        <i class="inverted green users icon"></i>
+        <i class="inverted teal users icon"></i>
+        <i class="inverted blue users icon"></i>
+        <i class="inverted violet users icon"></i>
+        <i class="inverted purple users icon"></i>
+        <i class="inverted pink users icon"></i>
+        <i class="inverted brown users icon"></i>
+        <i class="inverted grey users icon"></i>
       </div>
     </div>
 

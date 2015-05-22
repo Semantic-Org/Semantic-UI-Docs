@@ -322,32 +322,32 @@ themes      : ['Default']
   <div class="example">
     <h4 class="ui header">Circular</h4>
     <p>A label can be circular</p>
-    <a class="ui black circular label">
-      12
-    </a>
-    <a class="ui green circular label">
-      11
-    </a>
-    <a class="ui red circular label">
-      10
-    </a>
-    <a class="ui blue circular label">
-      64
-    </a>
-    <a class="ui purple circular label">
-      62
-    </a>
-    <a class="ui teal circular label">
-      1
-    </a>
+    <a class="ui red circular label">2</a>
+    <a class="ui orange circular label">2</a>
+    <a class="ui yellow circular label">2</a>
+    <a class="ui green circular label">2</a>
+    <a class="ui teal circular label">2</a>
+    <a class="ui blue circular label">2</a>
+    <a class="ui violet circular label">2</a>
+    <a class="ui purple circular label">2</a>
+    <a class="ui pink circular label">2</a>
+    <a class="ui brown circular label">2</a>
+    <a class="ui grey circular label">2</a>
+    <a class="ui black circular label">2</a>
   </div>
   <div class="another example">
-    <div class="ui black empty circular label"></div>
-    <div class="ui green empty circular label"></div>
-    <div class="ui red empty circular label"></div>
-    <div class="ui blue empty circular label"></div>
-    <div class="ui purple empty circular label"></div>
-    <div class="ui teal empty circular label"></div>
+    <a class="ui red empty circular label"></a>
+    <a class="ui orange empty circular label"></a>
+    <a class="ui yellow empty circular label"></a>
+    <a class="ui green empty circular label"></a>
+    <a class="ui teal empty circular label"></a>
+    <a class="ui blue empty circular label"></a>
+    <a class="ui violet empty circular label"></a>
+    <a class="ui purple empty circular label"></a>
+    <a class="ui pink empty circular label"></a>
+    <a class="ui brown empty circular label"></a>
+    <a class="ui grey empty circular label"></a>
+    <a class="ui black empty circular label"></a>
   </div>
 
   <div class="example">
@@ -369,15 +369,18 @@ themes      : ['Default']
   <div class="example">
     <h4 class="ui header">Colors</h4>
     <p>A label can have different colors</p>
-    <a class="ui red label">Red Label</a>
-    <a class="ui orange label">Orange Label</a>
-    <a class="ui yellow label">Yellow Label</a>
-    <a class="ui green label">Green Label</a>
-    <a class="ui teal label">Teal Label</a>
-    <a class="ui blue label">Blue Label</a>
-    <a class="ui purple label">Purple Label</a>
-    <a class="ui pink label">Pink Label</a>
-    <a class="ui black label">Black Label</a>
+    <a class="ui red label">Red</a>
+    <a class="ui orange label">Orange</a>
+    <a class="ui yellow label">Yellow</a>
+    <a class="ui green label">Green</a>
+    <a class="ui teal label">Teal</a>
+    <a class="ui blue label">Blue</a>
+    <a class="ui violet label">Violet</a>
+    <a class="ui purple label">Purple</a>
+    <a class="ui pink label">Pink</a>
+    <a class="ui brown label">Brown</a>
+    <a class="ui grey label">Grey</a>
+    <a class="ui black label">Black</a>
   </div>
 
   <div class="example">

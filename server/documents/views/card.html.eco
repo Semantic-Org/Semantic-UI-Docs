@@ -563,17 +563,7 @@ themes      : ['Default', 'Basic', 'Classic']
     <h4 class="ui header">Colors</h4>
     <p>A card can specify a color</p>
     <div class="ui four cards">
-      <a class="black card">
-        <div class="image">
-          <img class="ui wireframe image" src="/images/wireframe/white-image.png">
-        </div>
-      </a>
-      <a class="blue card">
-        <div class="image">
-          <img class="ui wireframe image" src="/images/wireframe/white-image.png">
-        </div>
-      </a>
-      <a class="green card">
+      <a class="red card">
         <div class="image">
           <img class="ui wireframe image" src="/images/wireframe/white-image.png">
         </div>
@@ -583,17 +573,12 @@ themes      : ['Default', 'Basic', 'Classic']
           <img class="ui wireframe image" src="/images/wireframe/white-image.png">
         </div>
       </a>
-      <a class="pink card">
+      <a class="yellow card">
         <div class="image">
           <img class="ui wireframe image" src="/images/wireframe/white-image.png">
         </div>
       </a>
-      <a class="purple card">
-        <div class="image">
-          <img class="ui wireframe image" src="/images/wireframe/white-image.png">
-        </div>
-      </a>
-      <a class="red card">
+      <a class="green card">
         <div class="image">
           <img class="ui wireframe image" src="/images/wireframe/white-image.png">
         </div>
@@ -603,7 +588,37 @@ themes      : ['Default', 'Basic', 'Classic']
           <img class="ui wireframe image" src="/images/wireframe/white-image.png">
         </div>
       </a>
-      <a class="yellow card">
+      <a class="blue card">
+        <div class="image">
+          <img class="ui wireframe image" src="/images/wireframe/white-image.png">
+        </div>
+      </a>
+      <a class="violet card">
+        <div class="image">
+          <img class="ui wireframe image" src="/images/wireframe/white-image.png">
+        </div>
+      </a>
+      <a class="purple card">
+        <div class="image">
+          <img class="ui wireframe image" src="/images/wireframe/white-image.png">
+        </div>
+      </a>
+      <a class="pink card">
+        <div class="image">
+          <img class="ui wireframe image" src="/images/wireframe/white-image.png">
+        </div>
+      </a>
+      <a class="brown card">
+        <div class="image">
+          <img class="ui wireframe image" src="/images/wireframe/white-image.png">
+        </div>
+      </a>
+      <a class="grey card">
+        <div class="image">
+          <img class="ui wireframe image" src="/images/wireframe/white-image.png">
+        </div>
+      </a>
+      <a class="black card">
         <div class="image">
           <img class="ui wireframe image" src="/images/wireframe/white-image.png">
         </div>

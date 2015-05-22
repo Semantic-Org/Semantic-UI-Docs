@@ -383,9 +383,6 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
     <h4 class="ui header">Pagination</h4>
     <p>A pagination menu is specially formatted to present links to pages of content</p>
     <div class="ui pagination menu">
-      <a class="icon item">
-        <i class="left arrow icon"></i>
-      </a>
       <a class="active item">
         1
       </a>
@@ -400,9 +397,6 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
       </a>
       <a class="item">
         12
-      </a>
-      <a class="icon item">
-        <i class="right arrow icon"></i>
       </a>
     </div>
   </div>
@@ -795,9 +789,10 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
       <a class="ui green item">Green</a>
       <a class="ui teal item">Teal</a>
       <a class="ui blue item">Blue</a>
+      <a class="ui violet item">Violet</a>
       <a class="ui purple item">Purple</a>
       <a class="ui pink item">Pink</a>
-      <a class="ui black item">Black</a>
+      <a class="ui brown item">Brown</a>
     </div>
   </div>
   <div class="another example">
@@ -867,6 +862,17 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
         Friends
       </a>
     </div>
+    <div class="ui violet three item menu">
+      <a class="active item">
+        Home
+      </a>
+      <a class="item">
+        Messages
+      </a>
+      <a class="item">
+        Friends
+      </a>
+    </div>
     <div class="ui purple three item menu">
       <a class="active item">
         Home
@@ -889,7 +895,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
         Friends
       </a>
     </div>
-    <div class="ui black three item menu">
+    <div class="ui brown three item menu">
       <a class="active item">
         Home
       </a>
@@ -969,6 +975,17 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
         Friends
       </a>
     </div>
+    <div class="ui violet three item inverted menu">
+      <a class="active item">
+        Home
+      </a>
+      <a class="item">
+        Messages
+      </a>
+      <a class="item">
+        Friends
+      </a>
+    </div>
     <div class="ui purple three item inverted menu">
       <a class="active item">
         Home
@@ -991,7 +1008,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
         Friends
       </a>
     </div>
-    <div class="ui black three item inverted menu">
+    <div class="ui brown three item inverted menu">
       <a class="active item">
         Home
       </a>

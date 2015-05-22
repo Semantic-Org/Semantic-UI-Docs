@@ -58,6 +58,7 @@ semantic.menu.ready = function() {
     .popup({
       inline   : true,
       hoverable: true,
+      popup    : '.fluid.popup',
       position : 'bottom left',
       delay: {
         show: 300,

@@ -164,10 +164,8 @@ semantic.ready = function() {
           observeChanges: false,
           once: false,
           offset: 50,
-          //onTopVisible: handler.activate.accordion,
           onTopPassed: handler.activate.section,
           onTopPassedReverse: handler.activate.previous
-          //onBottomPassed: handler.activate.section,
         })
       ;
 

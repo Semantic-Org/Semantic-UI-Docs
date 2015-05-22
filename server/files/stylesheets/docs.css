@@ -772,6 +772,10 @@ p:last-child {
   padding-right: 1px;
   padding-bottom: 1px;
 }
+#example .piled.example {
+  position: relative;
+  z-index: 1;
+}
 #example .main.container:after {
   content: '';
   display: block;
@@ -1671,6 +1675,8 @@ body.progress.animated .ui.progress .bar {
   box-shadow: none;
   margin: 0;
   width: inherit;
+  overflow: hidden;
+  will-change: transform;
 }
 #example .article {
   flex: 1 1 auto;

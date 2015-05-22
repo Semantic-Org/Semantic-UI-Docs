@@ -369,14 +369,15 @@ themes      : ['Default']
   <div class="example">
     <h4 class="ui header">Colors</h4>
     <p>A label can have different colors</p>
-    <a class="ui black label">Black Label</a>
+    <a class="ui red label">Red Label</a>
+    <a class="ui orange label">Orange Label</a>
     <a class="ui yellow label">Yellow Label</a>
     <a class="ui green label">Green Label</a>
-    <a class="ui blue label">Blue Label</a>
-    <a class="ui orange label">Orange Label</a>
-    <a class="ui purple label">Purple Label</a>
-    <a class="ui red label">Red Label</a>
     <a class="ui teal label">Teal Label</a>
+    <a class="ui blue label">Blue Label</a>
+    <a class="ui purple label">Purple Label</a>
+    <a class="ui pink label">Pink Label</a>
+    <a class="ui black label">Black Label</a>
   </div>
 
   <div class="example">

@@ -185,7 +185,7 @@ themes      : ['Default']
           27
         </div>
         <div class="label">
-          Yellow Labradors
+          Redabradors
         </div>
       </div>
       <div class="orange statistic">
@@ -193,7 +193,7 @@ themes      : ['Default']
           8
         </div>
         <div class="label">
-          Green
+          Orange
         </div>
       </div>
       <div class="yellow statistic">
@@ -201,7 +201,7 @@ themes      : ['Default']
           28
         </div>
         <div class="label">
-          Blue
+          Yellow
         </div>
       </div>
       <div class="green statistic">
@@ -209,7 +209,7 @@ themes      : ['Default']
           14
         </div>
         <div class="label">
-          Orange
+          Green
         </div>
       </div>
       <div class="teal statistic">
@@ -217,7 +217,7 @@ themes      : ['Default']
           82
         </div>
         <div class="label">
-          Purple
+          Teal
         </div>
       </div>
       <div class="blue statistic">
@@ -225,7 +225,7 @@ themes      : ['Default']
           1
         </div>
         <div class="label">
-          Pink
+          Blue
         </div>
       </div>
       <div class="purple statistic">
@@ -233,7 +233,7 @@ themes      : ['Default']
           22
         </div>
         <div class="label">
-          Red
+          Purple
         </div>
       </div>
       <div class="pink statistic">
@@ -241,7 +241,7 @@ themes      : ['Default']
           15
         </div>
         <div class="label">
-          Teal
+          Pink
         </div>
       </div>
       <div class="black statistic">
@@ -249,7 +249,7 @@ themes      : ['Default']
           15
         </div>
         <div class="label">
-          Teal
+          Black
         </div>
       </div>
     </div>
@@ -272,7 +272,7 @@ themes      : ['Default']
           27
         </div>
         <div class="label">
-          Yellow Labradors
+          Red
         </div>
       </div>
       <div class="orange inverted statistic">
@@ -280,7 +280,7 @@ themes      : ['Default']
           8
         </div>
         <div class="label">
-          Green
+          Orange
         </div>
       </div>
       <div class="yellow inverted statistic">
@@ -288,7 +288,7 @@ themes      : ['Default']
           28
         </div>
         <div class="label">
-          Blue
+          Yellow
         </div>
       </div>
       <div class="green inverted statistic">
@@ -296,7 +296,7 @@ themes      : ['Default']
           14
         </div>
         <div class="label">
-          Orange
+          Green
         </div>
       </div>
       <div class="teal inverted statistic">
@@ -304,7 +304,7 @@ themes      : ['Default']
           82
         </div>
         <div class="label">
-          Purple
+          Teal
         </div>
       </div>
       <div class="blue inverted statistic">
@@ -312,7 +312,7 @@ themes      : ['Default']
           1
         </div>
         <div class="label">
-          Pink
+          Blue
         </div>
       </div>
       <div class="purple inverted statistic">
@@ -320,7 +320,7 @@ themes      : ['Default']
           22
         </div>
         <div class="label">
-          Red
+          Purple
         </div>
       </div>
       <div class="pink inverted statistic">
@@ -328,7 +328,7 @@ themes      : ['Default']
           15
         </div>
         <div class="label">
-          Teal
+          Pink
         </div>
       </div>
       <div class="black inverted statistic">
@@ -336,7 +336,7 @@ themes      : ['Default']
           15
         </div>
         <div class="label">
-          Teal
+          Black
         </div>
       </div>
     </div>

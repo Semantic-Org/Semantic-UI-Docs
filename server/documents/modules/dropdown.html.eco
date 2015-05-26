@@ -2257,7 +2257,7 @@ themes      : ['Default']
         </tr>
         <tr>
           <td>remove active</td>
-          <td>rRemoves dropdown active state
+          <td>Removes dropdown active state
         <tr>
           <td>remove visible</td>
           <td>Removes dropdown visible state</td>

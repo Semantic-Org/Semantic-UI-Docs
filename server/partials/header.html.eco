@@ -16,9 +16,7 @@
         </div>
       </h1>
 
-      <% if @document.type is 'UI Element' or @document.type is 'UI View' or @document.type is 'UI Collection': %>
-      <div class="ui divider"></div>
-      <% end %>
+      <div class="ui hidden divider"></div>
 
       <div class="ui right floated main menu">
         <a class="music popup icon item" data-content="Play Music">

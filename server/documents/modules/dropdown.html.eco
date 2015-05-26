@@ -906,7 +906,7 @@ themes      : ['Default', 'Material']
 
     <div class="dropdown example">
       <h4 class="ui header">Image</h4>
-      <p>A dropdown menu can contain an <a href="/elements/input.html">image</a></p>
+      <p>A dropdown menu can contain an <a href="/elements/image.html">image</a></p>
       <div class="ui floating labeled icon dropdown button">
         <i class="add user icon"></i>
         <span class="text">Add User</span>
@@ -2219,7 +2219,7 @@ themes      : ['Default', 'Material']
         </tr>
         <tr>
           <td>remove active</td>
-          <td>rRemoves dropdown active state
+          <td>Removes dropdown active state
         <tr>
           <td>remove visible</td>
           <td>Removes dropdown visible state</td>

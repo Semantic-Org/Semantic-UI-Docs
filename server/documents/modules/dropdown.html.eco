@@ -550,7 +550,7 @@ themes      : ['Default', 'Material']
         <i class="filter icon"></i>
         <span class="text">Filter Posts</span>
         <div class="menu">
-          <div class="ui icon input">
+          <div class="ui search icon input">
             <i class="search icon"></i>
             <input type="text" name="search" placeholder="Search issues...">
           </div>
@@ -577,15 +577,15 @@ themes      : ['Default', 'Material']
             Filter by date
           </div>
           <div class="item">
-            <i class="circle icon"></i>
+            <i class="olive circle icon"></i>
             This Week
           </div>
           <div class="item">
-            <i class="circle icon"></i>
+            <i class="violet circle icon"></i>
             This Month
           </div>
           <div class="item">
-            <i class="circle icon"></i>
+            <i class="orange circle icon"></i>
             This Year
           </div>
         </div>
@@ -595,7 +595,7 @@ themes      : ['Default', 'Material']
       <div class="ui right pointing dropdown icon button">
         <i class="settings icon"></i>
         <div class="menu">
-          <div class="ui transparent left icon input">
+          <div class="ui left search icon input">
             <i class="search icon"></i>
             <input type="text" name="search" placeholder="Search issues...">
           </div>
@@ -621,7 +621,7 @@ themes      : ['Default', 'Material']
       <div class="ui left pointing dropdown icon button">
         <i class="settings icon"></i>
         <div class="menu">
-          <div class="ui transparent left icon input">
+          <div class="ui left search icon input">
             <i class="search icon"></i>
             <input type="text" name="search" placeholder="Search issues...">
           </div>

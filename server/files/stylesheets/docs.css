@@ -153,9 +153,24 @@ p:last-child {
   border-bottom: 1px solid #DDDDDD;
   box-shadow: none;
 }
-#example .masthead.segment h1 {
-  margin-bottom: 0em;
+
+/* Language Dropdown */
+#example .language.dropdown.button {
+  margin-top: 0.3em;
 }
+#example .language.dropdown > .menu {
+  transform: translate3d(0, 0, 0);
+}
+#example .language.dropdown > .menu .description {
+  display: none;
+}
+
+/* H1 header */
+#example .masthead.segment h1 {
+  margin: 0em;
+}
+
+/* Tab */
 #example .tab.masthead.segment {
   display: block;
   padding-bottom: 0em;
@@ -173,6 +188,7 @@ p:last-child {
   background-color: #F7F7F7;
 }
 
+/* Download Popup */
 #example .masthead.segment .download.popup {
   width: 400px;
 }
@@ -211,9 +227,6 @@ p:last-child {
   margin-bottom: 3rem;
 }
 
-#example .main.menu {
-  display: none;
-}
 #example .main.menu iframe.github {
   margin: 1px 0px 0px 0px;
 }
@@ -430,10 +443,6 @@ p:last-child {
   ;
 }
 
-
-#example .language.dropdown > .menu {
-  min-width: 250px;
-}
 
 #example .fixed.launch.button .text {
   position: absolute;
@@ -1716,9 +1725,13 @@ body.progress.animated .ui.progress .bar {
 #example .main.container > .right.rail .sticky,
 #example .main.container > .tab > .examples > .right.rail .sticky,
 #example .main.container > .tab > .right.rail .sticky {
+  padding-bottom: 2em;
+}
+#example .main.container > .right.rail .fixed.sticky,
+#example .main.container > .tab > .examples > .right.rail .fixed.sticky,
+#example .main.container > .tab > .right.rail .fixed.sticky {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  padding-bottom: 2em;
 }
 #example .right.rail .accordion.menu .active.item {
   background-color: transparent;

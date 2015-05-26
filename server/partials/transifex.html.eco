@@ -1,4 +1,4 @@
-<% if ('development' in @getEnvironments()) or (@document.title? and @document.title is 'Page Not Found'): %>
+<% if ('developments' in @getEnvironments()) or (@document.title? and @document.title is 'Page Not Found'): %>
 <% else: %>
 <script type="text/javascript">
   window.liveSettings = {

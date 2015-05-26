@@ -20,23 +20,41 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
   <div class="ui container">
     <div class="introduction">
 
-      <div class="ui right floated language dropdown button" id="languages" data-content="Select Language">
-        <i class="world icon"></i>
-        Language
-        <div class="menu">
-          <%- @partial('languages') %>
-        </div>
-      </div>
+      <% if 'developments' in @getEnvironments(): %>
+      <% else: %>
+      <iframe class="github" src="http://ghbtns.com/github-btn.html?user=semantic-org&amp;repo=semantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
+      <% end %>
+
 
       <h1 class="ui header">
         <%=@document.title %>
         <% if @document.status?: %><span class="ui red label"><%= @document.status %></span><% end %>
+        <div class="sub header"><%=@document.description %></div>
       </h1>
 
-      <p><%=@document.description %></p>
       <% if @document.type is 'UI Element' or @document.type is 'UI View' or @document.type is 'UI Collection': %>
       <div class="ui divider"></div>
       <% end %>
+
+      <div class="ui right floated main menu">
+        <a class="music popup icon item" data-content="Play Music">
+          <i class="alternate music icon"></i>
+        </a>
+        <a class="github popup icon item" data-content="View project on GitHub" href="https://github.com/Semantic-Org/Semantic-UI">
+          <i class="alternate github icon"></i>
+        </a>
+        <div class="ui language dropdown icon item" id="languages" data-content="Select Language">
+          <i class="world icon"></i>
+          <div class="menu">
+            <div class="ui icon search input">
+              <i class="search icon"></i>
+              <input type="text" placeholder="Search languages...">
+            </div>
+            <%- @partial('languages') %>
+          </div>
+        </div>
+      </div>
+
       <% if @document.type is 'UI Module': %>
 <!--       <a href="/module.html" class="ui right floated basic right labeled icon button">
         Learn about Modules

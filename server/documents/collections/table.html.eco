@@ -1413,6 +1413,24 @@ themes      : ['Default', 'Basic', 'Classic']
         </tr>
       </tbody>
     </table>
+    <table class="ui inverted olive table">
+      <thead>
+        <th>Food</th>
+        <th>Calories</th>
+        <th>Protein</th>
+      <tbody>
+        <tr>
+          <td>Apples</td>
+          <td>200</td>
+          <td>0g</td>
+        </tr>
+        <tr>
+          <td>Orange</td>
+          <td>310</td>
+          <td>0g</td>
+        </tr>
+      </tbody>
+    </table>
     <table class="ui inverted green table">
       <thead>
         <th>Food</th>

@@ -71,7 +71,8 @@ themes      : ['Default']
   <div class="example">
     <h4 class="ui header">Avatar</h4>
     <p>An image may be formatted to appear inline with text as an avatar</p>
-    <img class="ui avatar image" src="/images/wireframe/square-image.png"> Username
+    <img class="ui avatar image" src="/images/wireframe/square-image.png">
+    <span>Username</span>
   </div>
 
   <div class="example">

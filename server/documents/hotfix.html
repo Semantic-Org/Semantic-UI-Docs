@@ -10,18 +10,6 @@ type       : 'Library'
 <script type="text/javascript">
 $(document).ready(function() {
 
-    $('.ui.menu .item')
-        .on('click', function() {
-            $('.ui.menu .item').removeClass('active');
-            $(this).addClass('active');
-        })
-    ;
-    $('.ui.menu .item .item')
-        .on('click', function() {
-            $('.ui.menu .item').removeClass('active');
-            $(this).addClass('active');
-        })
-    ;
 
 });
 </script>
@@ -31,72 +19,14 @@ $(document).ready(function() {
 </style>
 
 <div class="ui container" style="padding-top:300px;">
-    <h2 class="ui header">
-  Columns
-</h2>
-
-<div class="ui segment">
-  <div class="ui five column stackable padded grid">
-    <div class="red column">Red</div>
-    <div class="orange column">Orange</div>
-    <div class="yellow column">Yellow</div>
-    <div class="olive column">Olive</div>
-    <div class="green column">Green</div>
-    <div class="teal column">Teal</div>
-    <div class="blue column">Blue</div>
-    <div class="violet column">Violet</div>
-    <div class="purple column">Purple</div>
-    <div class="pink column">Pink</div>
-    <div class="brown column">Brown</div>
-    <div class="black column">Black</div>
-    <div class="grey column">Grey</div>
-    <div class="white column">White</div>
-    <div class="column">Default</div>
-  </div>
+    <div class="ui loading search">
+    <div class="ui left icon action input">
+        <input class="prompt">
+        <i class="search icon"></i>
+        <button type="button" class="ui icon button blue">
+            <i class="icon add"></i>
+        </button>
+    </div>
+    <div class="results"></div>
 </div>
-
-<h2 class="ui header">
-  Buttons
-</h2>
-
-<div class="ui segment">
-  <button class="ui red button">Red</button>
-  <button class="ui orange button">Orange</button>
-  <button class="ui yellow button">Yellow</button>
-  <button class="ui olive button">Olive</button>
-  <button class="ui green button">Green</button>
-  <button class="ui teal button">Teal</button>
-  <button class="ui blue button">Blue</button>
-  <button class="ui violet button">Violet</button>
-  <button class="ui purple button">Purple</button>
-  <button class="ui pink button">Pink</button>
-  <button class="ui brown button">Brown</button>
-  <button class="ui black button">Black</button>
-  <button class="ui grey button">Grey</button>
-  <button class="ui white button">White</button>
-  <button class="ui button">Default</button>
-</div>
-
-<h2 class="ui header">
-  Inverted Segments
-</h2>
-
-<div class="ui segment">
-  <div class="ui inverted red segment">Red</div>
-  <div class="ui inverted orange segment">Orange</div>
-  <div class="ui inverted yellow segment">Yellow</div>
-  <div class="ui inverted olive segment">Olive</div>
-  <div class="ui inverted green segment">Green</div>
-  <div class="ui inverted teal segment">Teal</div>
-  <div class="ui inverted blue segment">Blue</div>
-  <div class="ui inverted violet segment">Violet</div>
-  <div class="ui inverted purple segment">Purple</div>
-  <div class="ui inverted pink segment">Pink</div>
-  <div class="ui inverted brown segment">Brown</div>
-  <div class="ui inverted black segment">Black</div>
-  <div class="ui inverted grey segment">Grey</div>
-  <div class="ui inverted white segment">White</div>
-  <div class="ui inverted segment">Default</div>
-</div>
-
 </div>

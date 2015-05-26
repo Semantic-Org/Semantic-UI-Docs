@@ -154,6 +154,15 @@ p:last-child {
   box-shadow: none;
 }
 
+#example .masthead iframe.github {
+  float: right;
+}
+
+#example .masthead .main.menu > .item {
+  padding-top: 0.785714em;
+  padding-bottom: 0.785714em;
+}
+
 /* Language Dropdown */
 #example .language.dropdown.button {
   margin-top: 0.3em;
@@ -227,9 +236,6 @@ p:last-child {
   margin-bottom: 3rem;
 }
 
-#example .main.menu iframe.github {
-  margin: 1px 0px 0px 0px;
-}
 
 /* lists */
 #example .features {

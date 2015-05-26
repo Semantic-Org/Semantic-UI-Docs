@@ -1022,6 +1022,7 @@ themes      : ['Default']
         <div class="red column">Red</div>
         <div class="orange column">Orange</div>
         <div class="yellow column">Yellow</div>
+        <div class="olive column">Olive</div>
         <div class="green column">Green</div>
         <div class="teal column">Teal</div>
         <div class="blue column">Blue</div>
@@ -1043,6 +1044,9 @@ themes      : ['Default']
         </div>
         <div class="yellow row">
           <div class="column">Yellow</div>
+        </div>
+        <div class="olive row">
+          <div class="column">Olive</div>
         </div>
         <div class="green row">
           <div class="column">Green</div>

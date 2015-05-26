@@ -1322,6 +1322,7 @@ themes      : ['Default']
       <i class="red users icon"></i>
       <i class="orange users icon"></i>
       <i class="yellow users icon"></i>
+      <i class="olive users icon"></i>
       <i class="green users icon"></i>
       <i class="teal users icon"></i>
       <i class="blue users icon"></i>
@@ -1340,6 +1341,7 @@ themes      : ['Default']
         <i class="inverted red users icon"></i>
         <i class="inverted orange users icon"></i>
         <i class="inverted yellow users icon"></i>
+        <i class="inverted olive users icon"></i>
         <i class="inverted green users icon"></i>
         <i class="inverted teal users icon"></i>
         <i class="inverted blue users icon"></i>

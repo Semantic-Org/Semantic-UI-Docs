@@ -325,6 +325,7 @@ themes      : ['Default']
     <a class="ui red circular label">2</a>
     <a class="ui orange circular label">2</a>
     <a class="ui yellow circular label">2</a>
+    <a class="ui olive circular label">2</a>
     <a class="ui green circular label">2</a>
     <a class="ui teal circular label">2</a>
     <a class="ui blue circular label">2</a>
@@ -339,6 +340,7 @@ themes      : ['Default']
     <a class="ui red empty circular label"></a>
     <a class="ui orange empty circular label"></a>
     <a class="ui yellow empty circular label"></a>
+    <a class="ui olive empty circular label"></a>
     <a class="ui green empty circular label"></a>
     <a class="ui teal empty circular label"></a>
     <a class="ui blue empty circular label"></a>
@@ -372,6 +374,7 @@ themes      : ['Default']
     <a class="ui red label">Red</a>
     <a class="ui orange label">Orange</a>
     <a class="ui yellow label">Yellow</a>
+    <a class="ui olive label">Green</a>
     <a class="ui green label">Green</a>
     <a class="ui teal label">Teal</a>
     <a class="ui blue label">Blue</a>

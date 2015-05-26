@@ -204,6 +204,14 @@ themes      : ['Default']
           Yellow
         </div>
       </div>
+      <div class="olive statistic">
+        <div class="value">
+          14
+        </div>
+        <div class="label">
+          Green
+        </div>
+      </div>
       <div class="green statistic">
         <div class="value">
           14

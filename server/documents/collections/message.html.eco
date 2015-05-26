@@ -255,6 +255,7 @@ themes      : ['Default', 'GitHub', 'Gmail']
     <div class="ui red message">Red</div>
     <div class="ui orange message">Orange</div>
     <div class="ui yellow message">Yellow</div>
+    <div class="ui olive message">Olive</div>
     <div class="ui green message">Green</div>
     <div class="ui teal message">Teal</div>
     <div class="ui blue message">Blue</div>

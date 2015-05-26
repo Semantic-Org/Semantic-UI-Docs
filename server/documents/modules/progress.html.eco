@@ -273,6 +273,9 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
       <div class="ui yellow progress">
         <div class="bar"></div>
       </div>
+      <div class="ui olive progress">
+        <div class="bar"></div>
+      </div>
       <div class="ui green progress">
         <div class="bar"></div>
       </div>
@@ -322,6 +325,11 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
           </div>
         </div>
         <div class="ui yellow inverted progress">
+          <div class="bar">
+            <div class="progress"></div>
+          </div>
+        </div>
+        <div class="ui olive inverted progress">
           <div class="bar">
             <div class="progress"></div>
           </div>

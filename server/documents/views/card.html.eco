@@ -578,6 +578,11 @@ themes      : ['Default', 'Basic', 'Classic']
           <img class="ui wireframe image" src="/images/wireframe/white-image.png">
         </div>
       </a>
+      <a class="olive card">
+        <div class="image">
+          <img class="ui wireframe image" src="/images/wireframe/white-image.png">
+        </div>
+      </a>
       <a class="green card">
         <div class="image">
           <img class="ui wireframe image" src="/images/wireframe/white-image.png">

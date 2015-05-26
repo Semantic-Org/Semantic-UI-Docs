@@ -786,6 +786,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
       <a class="ui active red item">Red</a>
       <a class="ui orange item">Orange</a>
       <a class="ui yellow item">Yellow</a>
+      <a class="ui olive item">Olive</a>
       <a class="ui green item">Green</a>
       <a class="ui teal item">Teal</a>
       <a class="ui blue item">Blue</a>
@@ -819,6 +820,17 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
       </a>
     </div>
     <div class="ui yellow three item menu">
+      <a class="active item">
+        Home
+      </a>
+      <a class="item">
+        Messages
+      </a>
+      <a class="item">
+        Friends
+      </a>
+    </div>
+    <div class="ui olive three item menu">
       <a class="active item">
         Home
       </a>
@@ -932,6 +944,17 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
       </a>
     </div>
     <div class="ui yellow three item inverted menu">
+      <a class="active item">
+        Home
+      </a>
+      <a class="item">
+        Messages
+      </a>
+      <a class="item">
+        Friends
+      </a>
+    </div>
+    <div class="ui olive three item inverted menu">
       <a class="active item">
         Home
       </a>

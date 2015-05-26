@@ -201,6 +201,7 @@ themes      : ['default', 'GitHub']
     <div class="ui red segment">Red</div>
     <div class="ui orange segment">Orange</div>
     <div class="ui yellow segment">Yellow</div>
+    <div class="ui olive segment">Olive</div>
     <div class="ui green segment">Green</div>
     <div class="ui teal segment">Teal</div>
     <div class="ui blue segment">Blue</div>
@@ -215,6 +216,7 @@ themes      : ['default', 'GitHub']
     <div class="ui red inverted segment">Red</div>
     <div class="ui orange inverted segment">Orange</div>
     <div class="ui yellow inverted segment">Yellow</div>
+    <div class="ui olive inverted segment">Olive</div>
     <div class="ui green inverted segment">Green</div>
     <div class="ui teal inverted segment">Teal</div>
     <div class="ui blue inverted segment">Blue</div>

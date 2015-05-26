@@ -1128,7 +1128,7 @@ themes      : ['Default']
 
     <div class="dropdown example">
       <h4 class="ui header">Description</h4>
-      <p>A dropdown menu can contain a <a href="/elements/icon.html">description</a>.</p>
+      <p>A dropdown menu can contain a description.</p>
       <div class="ui floating labeled icon dropdown button">
         <i class="filter icon"></i>
         <span class="text">Filter</span>
@@ -1155,7 +1155,7 @@ themes      : ['Default']
 
     <div class="dropdown example">
       <h4 class="ui header">Label</h4>
-      <p>A dropdown menu can contain a <a href="/elements/input.html">label</a>.</p>
+      <p>A dropdown menu can contain a <a href="/elements/label.html">label</a>.</p>
       <div class="ui floating labeled icon dropdown button">
         <i class="filter icon"></i>
         <span class="text">Filter</span>
@@ -1262,7 +1262,7 @@ themes      : ['Default']
 
     <div class="dropdown example">
       <h4 class="ui header">Image</h4>
-      <p>A dropdown menu can contain an <a href="/elements/input.html">image</a></p>
+      <p>A dropdown menu can contain an <a href="/elements/image.html">image</a></p>
       <div class="ui floating labeled icon dropdown button">
         <i class="add user icon"></i>
         <span class="text">Add User</span>

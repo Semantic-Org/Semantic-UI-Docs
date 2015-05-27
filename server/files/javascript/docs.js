@@ -1204,7 +1204,6 @@ semantic.ready = function() {
   });
 */
   handler.createIcon();
-/*
   $popupExample
     .each(function() {
       $(this)
@@ -1226,7 +1225,6 @@ semantic.ready = function() {
     .find('i.code')
       .on('click', handler.createCode)
   ;
-*/
   $shownExample
     .each(handler.createCode)
   ;

@@ -1018,7 +1018,7 @@ themes      : ['Default']
     <div class="example">
       <h4 class="ui header">Colored</h4>
       <p>A grid row or column can be colored</p>
-      <div class="ui four column padded grid">
+      <div class="ui five column padded grid">
         <div class="red column">Red</div>
         <div class="orange column">Orange</div>
         <div class="yellow column">Yellow</div>

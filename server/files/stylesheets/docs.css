@@ -1993,7 +1993,7 @@ body.progress.animated .ui.progress .bar {
     left: 100%;
     padding-left: 0em;
     position: absolute;
-    bottom: 0em;
+    top: 0em;
     vertical-align: top;
   }
 

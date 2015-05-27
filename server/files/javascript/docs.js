@@ -938,7 +938,7 @@ semantic.ready = function() {
 
       // evaluate if specified
       if(evaluatedCode) {
-        eval(code);
+        window.eval(code);
       }
 
       // should trim whitespace

@@ -1003,7 +1003,7 @@ themes      : ['Default', 'Basic', 'Classic']
   <div class="example">
     <h4 class="ui header">Column Width</h4>
     <p>A table can specify the width of individual columns independently.</p>
-    <div class="ui ignored info message">Tables use a 16 column grid. This should be the total width of all elements in a column</div>
+    <div class="ui ignored info message">Tables use a 16 column grid similar to <a href="/collections/grid.html">ui grid</a></div>
     <table class="ui table">
       <thead>
         <th class="ten wide">Name</th>

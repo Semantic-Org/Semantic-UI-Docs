@@ -1,3 +1,4 @@
+
 <% @tabs = {  definition: 'Definition', examples: 'Examples', usage: 'Usage', settings: 'Settings' } if @tabs == 'module' %>
 <% @tabs = {  overview: 'Overview', usage: 'Usage', examples: 'Examples', settings: 'Settings' } if @tabs == 'behavior' %>
 <div class="ui masthead vertical<% if @tabs?: %> tab<% end %> segment">
@@ -8,7 +9,7 @@
         <%=@document.title %>
         <% if @document.status?: %><span class="ui red label"><%= @document.status %></span><% end %>
         <div class="sub header">
-          <% if 'development' in @getEnvironments(): %>
+          <% if 'developments' in @getEnvironments(): %>
           <% else: %>
           <iframe class="github" src="http://ghbtns.com/github-btn.html?user=semantic-org&amp;repo=semantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
           <% end %>
@@ -19,15 +20,26 @@
       <div class="ui hidden divider"></div>
 
       <div class="ui right floated main menu">
-        <a class="music popup icon item" data-content="Play Music">
-          <i class="alternate music icon"></i>
+        <% if @document.type is 'UI Element' or @document.type is 'UI View' or @document.type is 'UI Collection' or @document.type is 'UI Module': %>
+        <a class="bug popup icon item" data-content="Edit This Page" href="https://github.com/Semantic-Org/Semantic-UI-Docs/edit/master/server/documents/<%= @document.elementType %>s/<%= @document.element %>.html.eco">
+          <i class="edit icon"></i>
         </a>
+        <a class="bug popup icon item" data-content="Submit Bug Report" href="https://github.com/Semantic-Org/Semantic-UI/issues/new?title=[<%= @document.title %>] - Bug Name">
+          <i class="bug icon"></i>
+        </a>
+        <% end %>
         <a class="github popup icon item" data-content="View project on GitHub" href="https://github.com/Semantic-Org/Semantic-UI">
           <i class="alternate github icon"></i>
+        </a>
+      </div>
+      <div class="ui right floated main menu">
+        <a class="music popup icon item" data-content="Play Music">
+          <i class="music icon"></i>
         </a>
         <div class="ui language dropdown right floating icon item" id="languages" data-content="Select Language">
           <i class="world icon"></i>
           <div class="menu">
+            <div class="header">Select Language</div>
             <div class="ui icon search input">
               <i class="search icon"></i>
               <input type="text" placeholder="Search languages...">
@@ -44,7 +56,7 @@
       </a> -->
       <% end %>
       <% if @document.themes? && @document.themes.length > 1: %>
-      <div class="ui floating scrolling dropdown theme basic button" data-element="<%= @document.element %>" data-type="<%= @document.elementType %>">
+      <div class="ui floating <% if @document.themes.length > 4: %>scrolling <% end %>dropdown theme basic button" data-element="<%= @document.element %>" data-type="<%= @document.elementType %>">
         <span class="text"><%= @document.themes.length %> Themes</span>
         <div class="menu transition hidden">
           <% for id, name of @document.themes: %>
@@ -136,7 +148,7 @@
       <% end %>
     </div>
     <div class="advertisement">
-      <% unless 'development' in @getEnvironments(): %>
+      <% unless 'developments' in @getEnvironments(): %>
       <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=semanticuicom" id="_carbonads_js"></script>
       <% end %>
     </div>

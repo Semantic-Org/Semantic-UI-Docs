@@ -1,0 +1,155 @@
+---
+layout     : 'blank'
+css        : 'hotfix'
+standalone : true
+
+title      : 'Layout Page'
+type       : 'Library'
+---
+<!-- TEST JS HERE !-->
+<!DOCTYPE html>
+<html>
+<head>
+  <%- @partial('meta') %>
+  <%- @partial('javascript') %>
+  <%- @partial('css') %>
+  <%- @partial('tracking') %>
+  <%- @partial('transifex') %>
+</head>
+<body id="example" class="<%= @document.css %>" ontouchstart="">
+  <% if @document.element is 'sidebar': %>
+  <%- @partial('demo-sidebar') %>
+  <% end %>
+  <%- @partial('sidebar') %>
+  <%- @partial('fixed-menu') %>
+  <div class="pusher">
+    <div class="full height">
+      <div class="toc">
+        <%- @partial('inner-menu') %>
+      </div>
+      <div class="article">
+        <div class="main ui container">
+
+          <h2 class="ui dividing header">Types</h2>
+
+          <div class="follow example">
+            <h4 class="ui header">Button</h4>
+            <p>A standard button</p>
+            <button class="ui button">
+              Follow
+            </button>
+          </div>
+          <div class="another example">
+            <div class="ui ignored warning message">
+              Although any tag can be used for a button, it will only be <a href="http://webaim.org/techniques/keyboard/tabindex">keyboard focusable</a> if you use a <code>&#x3C;button&#x3E;</code> tag or you add the property <code>tabindex="0"</code>.
+            </div>
+            <button class="ui button">
+              Button
+            </button>
+            <div class="ui button" tabindex="0">
+              Focusable
+            </div>
+          </div>
+
+          <div class="example">
+            <h4 class="ui header">Ordinality</h4>
+            <p>A button can be formatted to show different levels of emphasis</p>
+            <div class="ui ignored info message">Setting your brand colors to primary and secondary color variables in <code>site.variables</code> will allow you to use your color theming for UI elements</div>
+            <button class="ui primary button">
+              Save
+            </button>
+            <button class="ui button">
+              Discard
+            </button>
+          </div>
+          <div class="another example">
+            <button class="ui secondary button">
+              Okay
+            </button>
+            <button class="ui button">
+              Cancel
+            </button>
+          </div>
+
+          <div class="example">
+            <h4 class="ui header">Animated</h4>
+            <p>A button can animate to show hidden content</p>
+            <div class="ui ignored message">The button will be automatically sized according to the visible content size. Make sure there is enough room for the hidden content to show</div>
+            <div class="ui animated button" tabindex="0">
+              <div class="visible content">Next</div>
+              <div class="hidden content">
+                <i class="right arrow icon"></i>
+              </div>
+            </div>
+            <div class="ui vertical animated button" tabindex="0">
+              <div class="hidden content">Shop</div>
+              <div class="visible content">
+                <i class="shop icon"></i>
+              </div>
+            </div>
+            <div class="ui animated fade button" tabindex="0">
+              <div class="visible content">Sign-up for a Pro account</div>
+              <div class="hidden content">
+                $12.99 a month
+              </div>
+            </div>
+
+          </div>
+
+
+          <div class="example">
+            <h4 class="ui header">Icon</h4>
+            <p>A button can have only an icon</p>
+            <button class="ui icon button">
+              <i class="cloud icon"></i>
+            </button>
+          </div>
+
+          <div class="example">
+            <h4 class="ui header">Labeled Icon</h4>
+            <p>A button can have an icon and a label</p>
+            <button class="ui labeled icon button">
+              <i class="pause icon"></i>
+              Pause
+            </button>
+            <button class="ui right labeled icon button">
+              <i class="right arrow icon"></i>
+              Next
+            </button>
+          </div>
+
+          <div class="example">
+            <h4 class="ui header">Basic</h4>
+            <p>A basic button is less pronounced</p>
+            <button class="ui basic button">
+              <i class="icon user"></i>
+              Add Friend
+            </button>
+          </div>
+          <div class="another spaced example">
+            <button class="ui red basic button">Red</button>
+            <button class="ui orange basic button">Orange</button>
+            <button class="ui yellow basic button">Yellow</button>
+            <button class="ui olive basic button">Olive</button>
+            <button class="ui green basic button">Green</button>
+            <button class="ui teal basic button">Teal</button>
+            <button class="ui blue basic button">Blue</button>
+            <button class="ui violet basic button">Violet</button>
+            <button class="ui purple basic button">Purple</button>
+            <button class="ui pink basic button">Pink</button>
+            <button class="ui brown basic button">Brown</button>
+            <button class="ui grey basic button">Grey</button>
+            <button class="ui black basic button">Black</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%- @partial('footer') %>
+  </div>
+
+  <%- @partial('language-modal') %>
+  <%- @partial('dimmer-demo') %>
+  <%- @partial('less') %>
+</body>
+
+</html>

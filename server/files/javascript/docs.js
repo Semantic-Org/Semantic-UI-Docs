@@ -897,6 +897,7 @@ semantic.ready = function() {
         contentType  = $code.data('type')     || 'html',
         title        = $code.data('title')    || false,
         demo         = $code.data('demo')     || false,
+        eval         = $code.data('eval')     || false,
         preview      = $code.data('preview')  || false,
         label        = $code.data('label')    || false,
         preserve     = $code.data('preserve') || false,
@@ -1000,7 +1001,12 @@ semantic.ready = function() {
           .addClass('ui black pointing below ignored label')
           .html('Run Code')
           .on('click', function() {
-            eval(code);
+            if(eval) {
+              window.eval(eval);
+            }
+            else {
+              window.eval(code);
+            }
           })
           .insertBefore ( $code.closest('.segment') )
         ;
@@ -1198,7 +1204,7 @@ semantic.ready = function() {
   });
 */
   handler.createIcon();
-
+/*
   $popupExample
     .each(function() {
       $(this)
@@ -1220,7 +1226,7 @@ semantic.ready = function() {
     .find('i.code')
       .on('click', handler.createCode)
   ;
-
+*/
   $shownExample
     .each(handler.createCode)
   ;
@@ -1235,6 +1241,7 @@ semantic.ready = function() {
       duration   : 350,
       position   : 'bottom center',
       on         : 'click',
+      variation  : 'basic',
       onHidden   : handler.resetDownloads
     })
   ;
@@ -1280,10 +1287,11 @@ semantic.ready = function() {
   ;
 
   $menuPopup
+    .add($languageDropdown)
     .popup({
       position  : 'bottom center',
       delay: {
-        show: 500,
+        show: 100,
         hide: 50
       }
     })
@@ -1302,13 +1310,6 @@ semantic.ready = function() {
   ;
 
   $languageDropdown
-    .popup({
-      position : 'bottom center',
-      delay    : {
-        show: 500,
-        hide: 50
-      }
-    })
     .dropdown({
       allowTab       : false,
       on             : 'click',

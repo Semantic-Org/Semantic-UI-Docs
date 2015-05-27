@@ -177,6 +177,22 @@ themes      : ['Default']
       <li>Warranty</li>
     </ul>
   </div>
+  <div class="another example">
+    <div class="ui horizontal bulleted list">
+      <div class="item">
+        <a class="header">Semantic-Org/Semantic-UI</a>
+        <div class="description">Updated 10 mins ago</div>
+      </div>
+      <div class="item">
+        <a class="header">Semantic-Org/Semantic-UI-Docs</a>
+        <div class="description">Updated 22 mins ago</div>
+      </div>
+      <div class="item">
+        <a class="header">Semantic-Org/Semantic-UI-Meteor</a>
+        <div class="description">Updated 34 mins ago</div>
+      </div>
+    </div>
+  </div>
 
   <div class="example">
     <h4 class="ui header">Ordered</h4>

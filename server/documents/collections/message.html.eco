@@ -13,6 +13,8 @@ type        : 'UI Collection'
 themes      : ['Default', 'GitHub', 'Gmail']
 ---
 <link rel="stylesheet/less" type="text/css" href="/src/definitions/collections/message.less" />
+<script src="/javascript/message.js"></script>
+
 <%- @partial('header') %>
 
 <div class="main ui container">
@@ -72,7 +74,7 @@ themes      : ['Default', 'GitHub', 'Gmail']
     </div>
   </div>
 
-  <div class="example">
+  <div class="dismissable example">
     <h4 class="ui header">Dismissable Block</h4>
     <p>A message that the user can choose to hide</p>
     <div class="ui message">
@@ -82,12 +84,17 @@ themes      : ['Default', 'GitHub', 'Gmail']
       </div>
       <p>This is a special notification which you can dismiss if you're bored with it.</p>
     </div>
-    <div class="warning ui message">
+    <div class="warning ui ignored message">
       <p>Dismissable blocks do not automatically close when using the close icon, this behavior must be defined using javascript, for example:</p>
       <div class="code">
-      $('.message .close').on('click', function() {
-        $(this).closest('.message').fadeOut();
-      });
+      $('.message .close')
+        .on('click', function() {
+          $(this)
+            .closest('.message')
+            .transition('fade')
+          ;
+        })
+      ;
       </div>
     </div>
   </div>

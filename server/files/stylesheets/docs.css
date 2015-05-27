@@ -502,8 +502,7 @@ p:last-child {
 
 #example.basic .fixed.menu > .container,
 #example.basic .main.container,
-#example.basic .masthead > .container,
-#example.basic .footer > .container {
+#example.basic .masthead > .container {
   position: relative;
   width: 700px !important;
   left: 0px;
@@ -593,8 +592,11 @@ p:last-child {
 #example > .pusher > .footer {
   margin: 0em;
   border-radius: 0em;
-  background-color: #262626 !important;
-  padding: 4em 350px 5em 250px;
+  padding: 4em 0em 4em 0em;
+}
+#example > .pusher > .container {
+  max-width: 960px !important;
+  margin-left: 250px !important;
 }
 
 /*----------------
@@ -1902,7 +1904,6 @@ body.progress.animated .ui.progress .bar {
   /* Resize Containers */
   #example .main.container,
   #example .masthead > .container,
-  #example .footer > .container,
   #example .fixed.menu > .container {
     width: 100% !important;
     margin-left: 0em !important;
@@ -2022,8 +2023,7 @@ body.progress.animated .ui.progress .bar {
 @media only screen and (min-width : 999px) and (max-width: 1300px) {
   #example .masthead > .container,
   #example .main.container,
-  #example .fixed.menu > .container,
-  #example .footer > .container {
+  #example .fixed.menu > .container {
     margin-left: 3em !important;
     margin-right: 3em !important;
     width: auto !important;
@@ -2039,8 +2039,7 @@ body.progress.animated .ui.progress .bar {
 @media only screen and (min-width: 1301px) {
   #example .masthead > .container,
   #example .main.container,
-  #example .fixed.menu > .container,
-  #example .footer > .container {
+  #example .fixed.menu > .container {
     margin-left: 4em !important;
     margin-right: 4em !important;
     width: auto !important;

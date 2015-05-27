@@ -10,6 +10,27 @@ type       : 'Library'
 <script type="text/javascript">
 $(document).ready(function() {
 
+    $('.ui.dropdown').dropdown();
+
+    $('#bt1').on('click', function () {
+        $('.ui.dropdown').dropdown('set selected', 'normal');
+    });
+    $('#bt2').on('click', function () {
+        $('.ui.dropdown').dropdown('set selected', 'true');
+    });
+    $('#bt3').on('click', function () {
+        $('.ui.dropdown').dropdown('set selected', 1);
+    });
+    $('#bt4').on('click', function () {
+        $('.ui.dropdown').dropdown('clear');
+    });
+    $('#bt5').on('click', function () {
+        $('.ui.dropdown').dropdown('restore defaults');
+    });
+    $('#bt6').on('click', function () {
+        $('.ui.dropdown').dropdown('set text', 'Arbitrary Text');
+    });
+
 
 });
 </script>
@@ -19,14 +40,35 @@ $(document).ready(function() {
 </style>
 
 <div class="ui container" style="padding-top:300px;">
-    <div class="ui loading search">
-    <div class="ui left icon action input">
-        <input class="prompt">
-        <i class="search icon"></i>
-        <button type="button" class="ui icon button blue">
-            <i class="icon add"></i>
-        </button>
+<div class="ui selection dropdown">
+    <input type="hidden" name="test">
+    <div class="default text">Select</div> <i class="dropdown icon"></i>
+
+    <div class="menu">
+        <div class="item" data-value="normal">String value</div>
+        <div class="item" data-value="two">String value</div>
+        <div class="item" data-value="1">1</div>
+        <div class="item" data-value="three">String value</div>
+        <div class="item" data-value="true">Boolean value</div>
     </div>
-    <div class="results"></div>
 </div>
+<div class="ui multiple search selection dropdown">
+    <input type="hidden" name="test">
+    <div class="default text">Select</div> <i class="dropdown icon"></i>
+
+    <div class="menu">
+        <div class="item" data-value="normal">String value</div>
+        <div class="item" data-value="two">String value</div>
+        <div class="item" data-value="1">1</div>
+        <div class="item" data-value="three">String value</div>
+        <div class="item" data-value="true">Boolean value</div>
+    </div>
+</div>
+<div class="ui divider"></div>
+  <div class="ui button" id="bt1">Set to string value</div>
+  <div class="ui button" id="bt2">Set to boolean value</div>
+  <div class="ui button" id="bt3">Set to numeric value</div>
+  <div class="ui button" id="bt4">Clear</div>
+  <div class="ui button" id="bt5">Restore Defaults</div>
+  <div class="ui button" id="bt6">Set Text</div>
 </div>

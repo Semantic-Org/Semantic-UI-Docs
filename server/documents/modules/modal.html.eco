@@ -81,7 +81,6 @@ themes      : ['Default', 'Material']
   </div>
 
   <div class="ui small test modal">
-    <i class="close icon"></i>
     <div class="header">
       Delete Your Account
     </div>
@@ -126,7 +125,6 @@ themes      : ['Default', 'Material']
   </div>
 
   <div class="ui large test modal">
-    <i class="close icon"></i>
     <div class="header">
       Changing Your Thing
     </div>
@@ -145,7 +143,6 @@ themes      : ['Default', 'Material']
   </div>
 
   <div class="ui long test modal">
-    <i class="close icon"></i>
     <div class="header">
       Profile Picture
     </div>
@@ -182,7 +179,6 @@ themes      : ['Default', 'Material']
   </div>
 
   <div class="ui standard test modal">
-    <i class="close icon"></i>
     <div class="header">
       Profile Picture
     </div>
@@ -214,8 +210,8 @@ themes      : ['Default', 'Material']
     <div class="example">
       <h4 class="ui header">Standard</h4>
       <p>A standard modal</p>
-      <div class="code" data-demo="true">
-      $('.standard.test.modal')
+      <div class="code" data-demo="true" data-eval="$('.standard.test.modal').modal('show');">
+      $('.ui.modal')
         .modal('show')
       ;
       </div>
@@ -251,8 +247,8 @@ themes      : ['Default', 'Material']
     <div class="example">
       <h4 class="ui header">Basic</h4>
       <p>A modal can reduce its complexity</p>
-      <div class="code" data-demo="true">
-      $('.basic.test.modal')
+      <div class="code" data-demo="true" data-eval="$('.basic.test.modal').modal('show');">
+      $('.ui.basic.modal')
         .modal('show')
       ;
       </div>
@@ -385,13 +381,13 @@ themes      : ['Default', 'Material']
     <div class="no example">
       <h4 class="ui header">Size</h4>
       <p>A modal can vary in size</p>
-      <div class="code" data-demo="true">
-      $('.small.test.modal')
+      <div class="code" data-demo="true" data-eval="$('.small.test.modal').not('.basic').modal('show')">
+      $('.small.modal')
         .modal('show')
       ;
       </div>
-      <div class="code" data-demo="true">
-      $('.large.test.modal')
+      <div class="code" data-demo="true" data-eval="$('.large.test.modal').modal('show')">
+      $('.large.modal')
         .modal('show')
       ;
       </div>
@@ -416,7 +412,7 @@ themes      : ['Default', 'Material']
       <h4 class="ui header">Scrolling Modal</h4>
       <p>When your modal content exceeds the height of the browser the scrollable area will automatically expand to include just enough space for scrolling, without scrolling the page below.</p>
       <div class="code" data-demo="true">
-      $('.long.test.modal')
+      $('.long.modal')
         .modal('show')
       ;
       </div>
@@ -476,7 +472,7 @@ themes      : ['Default', 'Material']
         If <code>onDeny</code> or <code>onApprove</code> returns false it will prevent the modal from closing
       </div>
       <div class="code" data-demo="true">
-      $('.basic.test.modal')
+      $('.ui.basic.test.modal')
         .modal({
           closable  : false,
           onDeny    : function(){
@@ -512,7 +508,7 @@ themes      : ['Default', 'Material']
       $('.selection.dropdown')
         .dropdown({
           onChange: function(value) {
-            $('.standard.test.modal')
+            $('.test.modal')
               .modal('setting', 'transition', value)
               .modal('show')
             ;
@@ -526,7 +522,7 @@ themes      : ['Default', 'Material']
       <h4 class="ui header">Attach events</h4>
       <p>A modal can attach events to another element</p>
       <div class="code" data-demo="true">
-      $('.standard.test.modal')
+      $('.test.modal')
         .modal('attach events', '.test.button', 'show')
       ;
       </div>

@@ -29,7 +29,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
         <a href="/modules/checkbox.html">checkboxes</a>, and <a href="/collections/message.html">message blocks</a>.
     </p>
     <div class="ui ignored warning message">
-      <p>If you are looking for validation you should check out the <a href="/behaviors/form.html">form module</a>.</p>
+      <p>If you are looking for validation you should check out <a href="/behaviors/form.html">form behaviors</a>.</p>
     </div>
     <div class="ui ignored hidden divider"></div>
     <form class="ui form">
@@ -568,6 +568,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
       <div class="field">
         <label>Country</label>
         <select class="ui search dropdown">
+          <option value="">Select Country</option>
           <option value="AF">Afghanistan</option>
           <option value="AX">Åland Islands</option>
           <option value="AL">Albania</option>
@@ -825,6 +826,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
         <div class="field">
           <label>Country</label>
           <select class="ui search dropdown">
+            <option value="">Select Country</option>
             <option value="AF">Afghanistan</option>
             <option value="AX">Åland Islands</option>
             <option value="AL">Albania</option>
@@ -1087,6 +1089,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
       <div class="field">
         <label>Country</label>
         <select multiple class="ui dropdown">
+          <option value="">Select Country</option>
           <option value="AF">Afghanistan</option>
           <option value="AX">Åland Islands</option>
           <option value="AL">Albania</option>
@@ -1344,6 +1347,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
         <div class="field">
           <label>Country</label>
           <select multiple class="ui dropdown">
+            <option value="">Select Country</option>
             <option value="AF">Afghanistan</option>
             <option value="AX">Åland Islands</option>
             <option value="AL">Albania</option>

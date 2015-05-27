@@ -56,7 +56,7 @@ semantic.validateForm.ready = function() {
       rules: [
         {
           type   : 'empty',
-          prompt : 'Please enter you name'
+          prompt : 'Please enter your name'
         }
       ]
     },
@@ -84,6 +84,10 @@ semantic.validateForm.ready = function() {
         {
           type   : 'empty',
           prompt : 'Please enter a username'
+        },
+        {
+          type   : 'length[5]',
+          prompt : 'Your username must be at least 5 characters'
         }
       ]
     },

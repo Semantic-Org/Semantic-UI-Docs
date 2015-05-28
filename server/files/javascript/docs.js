@@ -71,6 +71,7 @@ semantic.ready = function() {
     $example             = $('.example'),
     $popupExample        = $example.not('.no'),
     $shownExample        = $example.filter('.shown'),
+    $prerenderedExample  = $example.has('.ui.dropdown, .ui.rating, .ui.embed'),
 
     $overview            = $('.masthead.segment .overview'),
     //$developer         = $('.header .developer.item'),
@@ -1144,6 +1145,13 @@ semantic.ready = function() {
     ]
   });
 
+  $shownExample
+    .each(handler.createCode)
+  ;
+  $prerenderedExample
+    .each(handler.generateCode)
+  ;
+
 
   // main sidebar
   $menu
@@ -1224,9 +1232,6 @@ semantic.ready = function() {
     })
     .find('i.code')
       .on('click', handler.createCode)
-  ;
-  $shownExample
-    .each(handler.createCode)
   ;
 
   $menuMusic

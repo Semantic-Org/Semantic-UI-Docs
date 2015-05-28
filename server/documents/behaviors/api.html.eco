@@ -31,6 +31,7 @@ type        : 'UI Behavior'
 
     <div class="ui header"><i class="green check icon"></i>Server Traces For Humans</div>
     <p>View your API request as it occurs in your web console, get errors if required url variables are missing, and useful performance metrics.</p>
+
   </div>
 
   <div class="ui intro tab" data-tab="usage">

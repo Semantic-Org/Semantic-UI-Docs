@@ -94,13 +94,6 @@ themes      : ['Default', 'Material']
         <option value="1">Male</option>
         <option value="0">Female</option>
       </select>
-      <div class="existing code">
-        <select class="ui dropdown">
-          <option value="">Gender</option>
-          <option value="1">Male</option>
-          <option value="0">Female</option>
-        </select>
-      </div>
     </div>
     <div class="another dropdown example">
       <div class="ui fluid selection dropdown">
@@ -145,24 +138,11 @@ themes      : ['Default', 'Material']
         <div class="default text">Select Country</div>
         <%- @partial('examples/single/flag-menu') %>
       </div>
-      <div class="existing code">
-        <div class="ui fluid search selection dropdown">
-          <input type="hidden" name="country">
-          <i class="dropdown icon"></i>
-          <div class="default text">Select Country</div>
-          <%- @partial('examples/single/flag-menu') %>
-        </div>
-      </div>
     </div>
     <div class="another dropdown example">
       <select class="ui search dropdown">
         <%- @partial('examples/single/state-options') %>
       </select>
-      <div class="existing code">
-      <select class="ui search dropdown">
-        <%- @partial('examples/single/state-options') %>
-      </select>
-      </div>
     </div>
     <div class="dropdown example">
       <h4 class="ui header">Multiple Selection</h4>
@@ -170,11 +150,6 @@ themes      : ['Default', 'Material']
       <select name="skills" multiple class="ui fluid dropdown">
         <%- @partial('examples/single/skill-menu') %>
       </select>
-      <div class="existing code">
-        <select name="skills" multiple class="ui fluid dropdown">
-          <%- @partial('examples/single/skill-menu') %>
-        </select>
-      </div>
     </div>
     <div class="dropdown example">
       <h4 class="ui header">Multiple Search Selection</h4>
@@ -182,11 +157,6 @@ themes      : ['Default', 'Material']
       <select class="ui fluid search dropdown" multiple>
         <%- @partial('examples/single/state-options') %>
       </select>
-      <div class="existing code">
-        <select class="ui search dropdown" multiple>
-          <%- @partial('examples/single/state-options') %>
-        </select>
-      </div>
     </div>
     <div class="another dropdown example">
       <div class="ui ignored info message">
@@ -198,14 +168,6 @@ themes      : ['Default', 'Material']
         <div class="default text">Select Country</div>
         <%- @partial('examples/single/flag-menu') %>
 
-      </div>
-      <div class="existing code">
-        <div class="ui fluid multiple search selection dropdown">
-          <input type="hidden" name="country">
-          <i class="dropdown icon"></i>
-          <div class="default text">Select Country</div>
-          <%- @partial('examples/single/flag-menu') %>
-        </div>
       </div>
     </div>
 
@@ -1047,7 +1009,7 @@ themes      : ['Default', 'Material']
     <div class="dropdown example">
       <h4 class="ui header">Scrolling</h4>
       <p>A dropdown can have its menu scroll</p>
-      <div class="ui ignored info message">
+      <div class="ui ignored warning message">
         Scroling dropdowns are incompatible with the usage of <code>sub menu</code>.
       </div>
       <div class="ui scrolling dropdown">
@@ -1128,49 +1090,6 @@ themes      : ['Default', 'Material']
         </div>
       </div>
 
-    </div>
-
-    <div class="dropdown example">
-      <h4 class="ui header">Upward</h4>
-      <p>A dropdown can have its menus open upward.</p>
-
-      <div class="ui upward selection dropdown">
-        <input type="hidden" name="gender">
-        <i class="dropdown icon"></i>
-        <div class="default text">Gender</div>
-        <div class="menu">
-          <div class="item" data-value="male" data-text="Male">
-            <i class="male icon"></i>
-            Male
-          </div>
-          <div class="item" data-value="female" data-text="Female">
-            <i class="female icon"></i>
-            Female
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="another dropdown example">
-      <div class="ui top attached segment">
-        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-      </div>
-      <div class="ui bottom attached menu">
-        <div class="ui upward dropdown item">
-          <i class="settings icon"></i>
-          <div class="menu">
-            <div class="item">
-              <i class="dropdown icon"></i>
-              <span class="text">New</span>
-              <div class="menu">
-                <div class="item">Document</div>
-                <div class="item">Image</div>
-              </div>
-            </div>
-            <div class="item">Save As...</div>
-            <div class="item">Edit</div>
-          </div>
-        </div>
-      </div>
     </div>
 
     <div class="dropdown example">
@@ -1286,8 +1205,8 @@ themes      : ['Default', 'Material']
       <h4 class="ui header">Remote Content</h4>
       <p>Search selection dropdowns can specify <a href="/behaviors/api.html">API settings</a> for retrieving values remotely, this can use either a named API <code>action</code> or <code>url</code>.</p>
       <p class="ignored">Using API can allow users to select choices from large datasets that would be too large to include directly in page markups.</p>
-      <div class="ui ignored info message">When a user refreshes the page, selection labels are automatically recreated by using <code>sessionStorage</code> to store the corresponding names for selected values. You can disable this feature by setting <code>saveRemoteData: false</code></div>
-      <div class="ui info ignored message">If your backend is not designed to return the correct markup you can use API's <code>onResponse</code> callback to adjust the format of an API response after it is received from the server.</div>
+      <div class="ui ignored positive message">When a user refreshes the page, selection labels are automatically recreated by using <code>sessionStorage</code> to store the corresponding names for selected values. You can disable this feature by setting <code>saveRemoteData: false</code></div>
+      <div class="ui warning ignored message">If your backend is not designed to return the correct markup you can use API's <code><a href="/behaviors/api.html#adjusting-server-responses">onResponse</a></code> callback to adjust the format of an API response after it is received from the server.</div>
 
       <div class="ui form">
         <div class="two fields">
@@ -1496,6 +1415,38 @@ themes      : ['Default', 'Material']
       </div>
     </div>
 
+
+    <div class="upward example">
+      <h4 class="ui header">Upward</h4>
+      <p>A dropdown menu will automatically change which direction it opens if it cant fit on screen. If you need a dropdown to open in a specific direction you can specify it when initializing a dropdown.</p>
+      <div class="code" data-demo="true">
+        $('.upward.example .dropdown')
+          .dropdown({
+            direction: 'upward'
+          })
+        ;
+      </div>
+      <div class="ui top attached segment">
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+      </div>
+      <div class="ui bottom attached menu">
+        <div class="ui upward dropdown item">
+          <i class="settings icon"></i>
+          <div class="menu">
+            <div class="item">
+              <i class="dropdown icon"></i>
+              <span class="text">New</span>
+              <div class="menu">
+                <div class="item">Document</div>
+                <div class="item">Image</div>
+              </div>
+            </div>
+            <div class="item">Save As...</div>
+            <div class="item">Edit</div>
+          </div>
+        </div>
+      </div>
+    </div>
     <h2 class="ui header">Menus</h2>
 
     <div class="transition example">
@@ -2299,9 +2250,9 @@ themes      : ['Default', 'Material']
           </div>
         </tr>
         <tr>
-          <td>keepOnScreen</td>
-          <td>true</td>
-          <td>Whether menu should adjust position to appear on screen before showing</td>
+          <td>direction</td>
+          <td>'auto'</td>
+          <td>When set to <code>auto</code> determines direction based on whether dropdown can fit on screen. Set to <code>upward</code> or <code>downward</code> to always force a direction.</td>
         </tr>
         <tr>
           <td>match</td>

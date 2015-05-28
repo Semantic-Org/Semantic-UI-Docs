@@ -40,35 +40,17 @@ $(document).ready(function() {
 </style>
 
 <div class="ui container" style="padding-top:300px;">
-<div class="ui selection dropdown">
-    <input type="hidden" name="test">
-    <div class="default text">Select</div> <i class="dropdown icon"></i>
-
-    <div class="menu">
-        <div class="item" data-value="normal">String value</div>
-        <div class="item" data-value="two">String value</div>
-        <div class="item" data-value="1">1</div>
-        <div class="item" data-value="three">String value</div>
-        <div class="item" data-value="true">Boolean value</div>
+<div class="ui two column middle aligned very relaxed fitted stackable grid">
+    <div class="column">
+        <a class="ui green button">Upload a document</a>
+        <input type="file" name="documents" multiple="multiple" class="ui input hidden"/>
+    </div>
+    <div class="ui vertical divider">
+        Or
+    </div>
+    <div class="center aligned column">
+        <a class="ui green button">Enter your text</a>
+        <textarea class="ui input hidden"></textarea>
     </div>
 </div>
-<div class="ui multiple search selection dropdown">
-    <input type="hidden" name="test">
-    <div class="default text">Select</div> <i class="dropdown icon"></i>
-
-    <div class="menu">
-        <div class="item" data-value="normal">String value</div>
-        <div class="item" data-value="two">String value</div>
-        <div class="item" data-value="1">1</div>
-        <div class="item" data-value="three">String value</div>
-        <div class="item" data-value="true">Boolean value</div>
-    </div>
-</div>
-<div class="ui divider"></div>
-  <div class="ui button" id="bt1">Set to string value</div>
-  <div class="ui button" id="bt2">Set to boolean value</div>
-  <div class="ui button" id="bt3">Set to numeric value</div>
-  <div class="ui button" id="bt4">Clear</div>
-  <div class="ui button" id="bt5">Restore Defaults</div>
-  <div class="ui button" id="bt6">Set Text</div>
 </div>

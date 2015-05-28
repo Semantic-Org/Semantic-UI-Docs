@@ -648,7 +648,7 @@ type        : 'UI Behavior'
                   };
                 },
                 onSuccess: function() {
-                  // this will always fire
+                  // success is ensured from onResponse
                 }
               })
             ;
@@ -866,6 +866,27 @@ type        : 'UI Behavior'
           <td>serializeForm</td>
           <td>false</td>
           <td>Whether to serialize closest form and include in request</td>
+        </tr>
+        <tr>
+          <td>throttle</td>
+          <td>
+            0
+          </td>
+          <td>How long to wait when a request is made before triggering request, useful for rate limiting <code>oninput</code></td>
+        </tr>
+        <tr>
+          <td>throttleFirstRequest</td>
+          <td>
+            true
+          </td>
+          <td>When set to false will not delay the first request made, when no others are queued</td>
+        </tr>
+        <tr>
+          <td>interruptRequests</td>
+          <td>
+            false
+          </td>
+          <td>Whether an API request can occur while another request is still pending</td>
         </tr>
         <tr>
           <td>loadingDuration</td>

@@ -282,12 +282,12 @@ themes      : ['Default']
     </div>
 
 
-    <h2 class="ui dividing header">Responsive Page Grids</h2>
+    <h2 class="ui dividing header">Responsive Grids</h2>
 
     <div class="highlighted example">
-      <h4 class="ui header">Adding Page Gutters</h4>
-      <p>A page grid is a type of grid designed to provide a responsive container for wrapping the entire contents of your page.</p>
-      <div class="ui page grid">
+      <h4 class="ui header">Using Containers</h4>
+      <p>a <a href="/elements/container.html">container</a> can be used alongside a grid to provide a responsive, fixed width container for wrapping the entire contents of your page.</p>
+      <div class="ui grid container">
         <div class="four wide column"></div>
         <div class="four wide column"></div>
         <div class="four wide column"></div>
@@ -300,8 +300,8 @@ themes      : ['Default']
     </div>
 
     <div class="no example">
-      <h4 class="ui header">Page Grid Breakpoints</h4>
-      <p>Semantic's page grid, by default, uses percentage values for page gutters. This means your page container will <b>constantly adjust</b> as the browser width changes, giving you the largest possible space for each breakpoint.</p>
+      <h4 class="ui header">Container Breakpoints</h4>
+      <p>Containers . This means your page container will <b>constantly adjust</b> as the browser width changes, giving you the largest possible space for each breakpoint.</p>
       <p>Grids, rows, and columns can receive responsive classes to make them appear only on a particular device.</p>
       <table class="ui celled definition table">
         <thead>

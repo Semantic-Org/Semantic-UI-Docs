@@ -785,8 +785,7 @@ semantic.ready = function() {
                 code += $this.get(0).outerHTML + "\n";
               }
               else {
-                code += $this.removeAttr('tabindex').removeAttr('style').get(0).outerHTML + "\n";
-                code = code.replace(/tabindex=".*"/, '');
+                code += $this.removeAttr('style').get(0).outerHTML + "\n";
               }
             }
           })
@@ -1244,7 +1243,6 @@ semantic.ready = function() {
       duration   : 350,
       position   : 'bottom center',
       on         : 'click',
-      variation  : 'basic',
       onHidden   : handler.resetDownloads
     })
   ;

@@ -227,7 +227,7 @@ type        : 'UI Module'
             "title": "Result Title",
             "url": "/optional/url/on/click",
             "image": "optional-image.jpg",
-            "price": "Optional Price"
+            "price": "Optional Price",
             "description": "Optional Description"
           },
           {
@@ -237,7 +237,7 @@ type        : 'UI Module'
         ],
         // optional action below results
         "action": {
-          "url": '/path/to/results'
+          "url": '/path/to/results',
           "text": "View all 202 results"
         }
       }
@@ -255,14 +255,14 @@ type        : 'UI Module'
                 "title": "Result Title",
                 "url": "/optional/url/on/click",
                 "image": "optional-image.jpg",
-                "price": "Optional Price"
+                "price": "Optional Price",
                 "description": "Optional Description"
               },
               {
                 "title": "Result Title",
                 "url": "/optional/url/on/click",
                 "image": "optional-image.jpg",
-                "price": "Optional Price"
+                "price": "Optional Price",
                 "description": "Optional Description"
               }
             ]
@@ -274,7 +274,7 @@ type        : 'UI Module'
                 "title": "Result Title",
                 "url": "/optional/url/on/click",
                 "image": "optional-image.jpg",
-                "price": "Optional Price"
+                "price": "Optional Price",
                 "description": "Optional Description"
               }
             ]
@@ -282,7 +282,7 @@ type        : 'UI Module'
         }
         // optional action below results
         "action": {
-          "url": '/path/to/results'
+          "url": '/path/to/results',
           "text": "View all 202 results"
         }
       }

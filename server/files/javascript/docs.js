@@ -759,7 +759,7 @@ semantic.ready = function() {
 
       if($html.size() === 0) {
         $html = $('<div class="html">').insertBefore($annotation);
-        $label = $('<div class="ui top attached label">').html('Example');
+        $label = $('<div class="ui top attached label">').html('<a class="copy">Copy</a>Example');
         $label.prependTo($html);
         $demo
           .detach()

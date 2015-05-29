@@ -25,7 +25,9 @@ themes      : ['Default']
     <h2 class="ui dividing header">Types</h2>
 
     <div class="example">
-      <h4 class="ui header">Rating</h4>
+      <h4 class="ui header">Rating
+        <span class="ui teal label">Flexbox</span>
+      </h4>
       <p>A basic rating </p>
       <div class="ui rating" data-max-rating="1"></div>
     </div>

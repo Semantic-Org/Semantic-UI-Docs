@@ -121,7 +121,7 @@ themes      : ['Default', 'Basic', 'Classic']
     </table>
   </div>
   <div class="another example">
-    <table class="ui very basic celled center aligned table">
+    <table class="ui very basic celled table">
       <thead>
         <th>Name</th>
         <th>Correct Guesses</th>

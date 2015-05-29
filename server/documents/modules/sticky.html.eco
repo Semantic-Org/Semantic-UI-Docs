@@ -22,8 +22,8 @@ type        : 'UI Module'
     <div class="introduction">
       <h2 class="ui dividing header">Introduction</h2>
 
-      <p>Sticky content stays fixed to the browser viewport while another column of content is visible on the page</p>
-      <p>Although sticky content can be used inside any container, sticky pairs well with <code>ui rail</code> because often "stuck" content is used to occupy additional canvas space outside of the main content of a website, making sure follow up links, ads, and other ancillary content remains on screen while engaging the sites main content</p>
+      <p>Sticky content stays fixed to the browser viewport while another column of content is visible on the page.</p>
+      <p>Although sticky content can be used inside any container, sticky pairs well with <code>ui rail</code> because often "stuck" content is used to occupy additional canvas space outside of the main content of a website, making sure follow up links, ads, and other ancillary content remains on screen while engaging the sites main content.</p>
 
       <div class="ui ignored warning message">
         The following examples may be hidden on small screen sizes. For the best experience, view these examples on a large resolution display.

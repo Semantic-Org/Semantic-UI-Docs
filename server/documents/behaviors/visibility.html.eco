@@ -24,7 +24,7 @@ type        : 'UI Behavior'
 
       <p>Visibility provides a set of callbacks that can be attached to any element and trigger when a specific visibility event occurs.</p>
 
-      <p>There are a variety of uses for attaching event's to visibility, here are some of the more common ones.</p>
+      <p>There are a variety of uses for attaching events to visibility. Here are some of the more common ones.</p>
 
       <div class="ui large divided very relaxed list">
         <div class="item">

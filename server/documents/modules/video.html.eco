@@ -32,7 +32,7 @@ status      : 'Undocumented'
     <div class="no example">
       <h4 class="ui header">Many Networks One API</h4>
       <p>Semantic's video component provides a wrapper around APIs for two popular sites for hosting multimedia content, Youtube and Vimeo, allowing you to use a single embed and unified set of javascript parameters, to control javascript callbacks, HD and UI display settings, autoplay etc.</p>
-      <p>Semantics video allows you to display videos based on a network's content ID, and can grab a content ID from an existing url, so you dont have to use full URLs to youtube content if you're storing external resources in your database.</p>
+      <p>Semantics video allows you to display videos based on a network's content ID, and can grab a content ID from an existing URL, so you dont have to use full URLs to youtube content if you're storing external resources in your database.</p>
     </div>
     <div class="no example">
       <h4 class="ui header">Responsive Embeds</h4>
@@ -40,7 +40,7 @@ status      : 'Undocumented'
     </div>
     <div class="no example">
       <h4 class="ui header">Unified API</h4>
-      <p>Ever try to learn Vimeo's froogaloop video API? How about Youtube's Javascript APIs? Semantic provides unified callbacks for <code>onPlay</code>, <code>onPause</code>, and other common API endpoints for tying an external video embed into your sites UI</p>
+      <p>Ever try to learn Vimeo's froogaloop video API? How about Youtube's Javascript APIs? Semantic provides unified callbacks for <code>onPlay</code>, <code>onPause</code>, and other common API endpoints for tying an external video embed into your site's UI.</p>
     </div>
     <div class="no example">
       <h4 class="ui header">Custom Image Placeholders</h4>

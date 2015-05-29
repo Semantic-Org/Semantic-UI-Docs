@@ -226,14 +226,14 @@ themes      : ['Default']
       </div>
 
       <div class="ui right aligned grid">
-        <div class="right floated left aligned six wide column">
-          <div class="ui segment">
-            Right floated left aligned column
-          </div>
-        </div>
         <div class="left floated right aligned six wide column">
           <div class="ui segment">
             Left floated right aligned column
+          </div>
+        </div>
+        <div class="right floated left aligned six wide column">
+          <div class="ui segment">
+            Right floated left aligned column
           </div>
         </div>
         <div class="center aligned two column row">
@@ -268,10 +268,10 @@ themes      : ['Default']
         </div>
       </div>
       <div class="ui grid">
-        <div class="twelve wide column"></div>
+        <div class="eight wide column"></div>
         <div class="four column row">
-          <div class="right floated column"></div>
           <div class="left floated column"></div>
+          <div class="right floated column"></div>
         </div>
         <div class="row">
           <div class="three wide column"></div>
@@ -287,6 +287,8 @@ themes      : ['Default']
     <div class="highlighted example">
       <h4 class="ui header">Using Containers</h4>
       <p>a <a href="/elements/container.html">container</a> can be used alongside a grid to provide a responsive, fixed width container for wrapping the entire contents of your page.</p>
+      <div class="ui ignored info message"><code>page grid</code>, which used percentage based gutters have been deprecated to allow for a single, simple fixed size container for ui.
+      </div>
       <div class="ui grid container">
         <div class="four wide column"></div>
         <div class="four wide column"></div>
@@ -301,14 +303,14 @@ themes      : ['Default']
 
     <div class="no example">
       <h4 class="ui header">Container Breakpoints</h4>
-      <p>Containers . This means your page container will <b>constantly adjust</b> as the browser width changes, giving you the largest possible space for each breakpoint.</p>
+      <p>Containers are fixed widths for each breakpoint.</p>
       <p>Grids, rows, and columns can receive responsive classes to make them appear only on a particular device.</p>
       <table class="ui celled definition table">
         <thead>
           <tr>
             <th>Name</th>
             <th>Breakpoint</th>
-            <th>Page Gutter</th>
+            <th>Container Width</th>
             <th>Responsive Class</th>
             <th>Variable</th>
           </tr>
@@ -317,7 +319,7 @@ themes      : ['Default']
           <tr>
             <td>Mobile</td>
             <td>Below 768px</td>
-            <td>1rem</td>
+            <td>100% + <code>1rem</code> gutters</td>
             <td>mobile only, (x) wide mobile</td>
             <td>$mobileBreakpoint</td>
           </tr>

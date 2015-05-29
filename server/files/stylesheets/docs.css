@@ -933,6 +933,9 @@ p:last-child {
 #example .example > .html.segment > .attached.label {
   display: block;
 }
+#example .example > .html.segment > .attached.label .copy {
+  float: right;
+}
 #example .example > .html.segment {
   padding: 3.5em 1em 1em;
 }

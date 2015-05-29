@@ -9,28 +9,23 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script type="text/javascript">
 $(document).ready(function() {
-
-    $('.ui.dropdown').dropdown();
-
-    $('#bt1').on('click', function () {
-        $('.ui.dropdown').dropdown('set selected', 'normal');
-    });
-    $('#bt2').on('click', function () {
-        $('.ui.dropdown').dropdown('set selected', 'true');
-    });
-    $('#bt3').on('click', function () {
-        $('.ui.dropdown').dropdown('set selected', 1);
-    });
-    $('#bt4').on('click', function () {
-        $('.ui.dropdown').dropdown('clear');
-    });
-    $('#bt5').on('click', function () {
-        $('.ui.dropdown').dropdown('restore defaults');
-    });
-    $('#bt6').on('click', function () {
-        $('.ui.dropdown').dropdown('set text', 'Arbitrary Text');
-    });
-
+    $('.trigger')
+        .popup({
+            onHide: function() {
+                return false;
+            }
+        })
+    ;
+    $('.ui.button')
+        .state({
+            onActivate: function() {
+                $('.trigger').attr('data-html', 'Zoo Zoo');
+            },
+            onDeactivate: function() {
+                $('.trigger').attr('data-html', 'Woo Woo');
+            }
+        })
+    ;
 
 });
 </script>
@@ -40,17 +35,8 @@ $(document).ready(function() {
 </style>
 
 <div class="ui container" style="padding-top:300px;">
-<div class="ui two column middle aligned very relaxed fitted stackable grid">
-    <div class="column">
-        <a class="ui green button">Upload a document</a>
-        <input type="file" name="documents" multiple="multiple" class="ui input hidden"/>
+    <div class="trigger ui label" data-html="Woo Woo">Hover me</div>
+    <div class="ui button">
+        Change
     </div>
-    <div class="ui vertical divider">
-        Or
-    </div>
-    <div class="center aligned column">
-        <a class="ui green button">Enter your text</a>
-        <textarea class="ui input hidden"></textarea>
-    </div>
-</div>
 </div>

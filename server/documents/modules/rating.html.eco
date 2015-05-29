@@ -50,17 +50,17 @@ themes      : ['Default']
       <h4 class="ui header">Size</h4>
       <p>A rating can vary in size</p>
       <div class="ui mini star rating"></div>
-      <div class="ignored hidden ui divider"></div>
+      <br><br>
       <div class="ui tiny star rating"></div>
-      <div class="ignored hidden ui divider"></div>
+      <br><br>
       <div class="ui small star rating"></div>
-      <div class="ignored hidden ui divider"></div>
+      <br><br>
       <div class="ui star rating"></div>
-      <div class="ignored hidden ui divider"></div>
+      <br><br>
       <div class="ui large star rating"></div>
-      <div class="ignored hidden ui divider"></div>
+      <br><br>
       <div class="ui huge star rating"></div>
-      <div class="ignored hidden ui divider"></div>
+      <br><br>
       <div class="ui massive star rating"></div>
     </div>
   </div>

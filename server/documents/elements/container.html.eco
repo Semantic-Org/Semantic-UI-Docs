@@ -236,7 +236,7 @@ themes      : ['Default']
       <h4 class="ui header">Text Container</h4>
       <p>A container can reduce its maximum width to more naturally accomodate a single column of text</p>
       <div class="ui info message">
-        A text container is a simpler markup alternative to using a grid with a single column.
+        A text container is a simpler markup alternative to using a grid with a single column, and is designed specifically
       </div>
     </div>
 
@@ -291,10 +291,9 @@ themes      : ['Default']
 
     <h2 class="ui dividing header">Variations</h2>
 
-    <h4 class="ui header">Text Alignment</h4>
-    <p>A container can specify its text alignment</p>
-
-    <div class="ui ignored code">
+    <div class="example">
+      <h4 class="ui header">Text Alignment</h4>
+      <p>A container can specify its text alignment</p>
       <div class="ui left aligned container">
         Left Aligned
       </div>
@@ -306,19 +305,24 @@ themes      : ['Default']
       </div>
     </div>
 
-    <h4 class="ui header">Fluid</h4>
-    <p>A fluid container has no maximum width</p>
+    <div class="example">
+      <h4 class="ui header">Fluid</h4>
+      <p>A fluid container has no maximum width</p>
+      <div class="ui info message">Fluid containers are useful for setting text alignment, or other variations on unstyled content</div>
 
-    <div class="ui ignored code">
-      <div class="ui fluid container">
-        Fluid
+      <div class="ui ignored code">
+        <div class="ui fluid container">
+          Fluid
+        </div>
       </div>
     </div>
 
   </div>
 
   <div class="ui fluid container">
-    Fluid
+    <h2 class="ui header">Dogs Roles with Humans</h2>
+    <p>Domestic dogs inherited complex behaviors, such as bite inhibition, from their wolf ancestors, which would have been pack hunters with complex body language. These sophisticated forms of social cognition and communication may account for their trainability, playfulness, and ability to fit into human households and social situations, and these attributes have given dogs a relationship with humans that has enabled them to become one of the most successful species on the planet today.</p>
+    <p>The dogs' value to early human hunter-gatherers led to them quickly becoming ubiquitous across world cultures. Dogs perform many roles for people, such as hunting, herding, pulling loads, protection, assisting police and military, companionship, and, more recently, aiding handicapped individuals. This impact on human society has given them the nickname "man's best friend" in the Western world. In some cultures, however, dogs are also a source of meat.</p>
   </div>
 
   <div class="ui main container"></div>
@@ -487,10 +491,8 @@ themes      : ['Default']
               <a class="item"><i class="settings icon"></i> Account Settings</a>
             </div>
           </div>
-          <div class="right menu">
-            <div class="item">
-              <div class="ui input"><input type="text" placeholder="Search..."></div>
-            </div>
+          <div class="item">
+            <div class="ui input"><input type="text" placeholder="Search..."></div>
           </div>
         </div>
       </div>

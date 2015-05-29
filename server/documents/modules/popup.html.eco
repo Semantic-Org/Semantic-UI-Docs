@@ -708,7 +708,7 @@ themes      : ['Default']
           <td>onShow</td>
           <td>$module</td>
           <td>$popup</td>
-          <td>Callback before popup is shown</td>
+          <td>Callback before popup is shown. Returning <code>false</code> from this callback will cancel the popup from showing.</td>
         </tr>
         <tr>
           <td>onVisible</td>
@@ -720,7 +720,7 @@ themes      : ['Default']
           <td>onHide</td>
           <td>$module</td>
           <td>$popup</td>
-          <td>Callback before popup is hidden</td>
+          <td>Callback before popup is hidden. Returning <code>false</code> from this callback will cancel the popup from hiding.</td>
         </tr>
         <tr>
           <td>onHidden</td>

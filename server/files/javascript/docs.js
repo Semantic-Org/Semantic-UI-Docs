@@ -73,9 +73,6 @@ semantic.ready = function() {
     $shownExample        = $example.filter('.shown'),
     $prerenderedExample  = $example.has('.ui.dropdown, .ui.rating, .ui.embed'),
 
-    $overview            = $('.masthead.segment .overview'),
-    //$developer         = $('.header .developer.item'),
-    //$designer          = $('.header .designer.item'),
 
     $sidebarButton       = $('.fixed.launch.button'),
     $code                = $('div.code').not('.existing'),
@@ -636,71 +633,6 @@ semantic.ready = function() {
         return $element;
       }
     },
-    changeMode: function(value) {
-      if(value == 'overview') {
-        handler.showOverview();
-      }
-      else {
-        handler.hideOverview();
-        if(value == 'design') {
-          handler.designerMode();
-        }
-        if(value == 'code') {
-          handler.developerMode();
-        }
-      }
-      $sectionHeaders.visibility('refresh');
-      $sectionExample.visibility('refresh');
-      $footer.visibility('refresh');
-    },
-    showOverview: function() {
-      var
-        $body    = $('body'),
-        $example = $('.example')
-      ;
-      $body.addClass('overview');
-      $example.each(function() {
-        $(this).children().not('.ui.header:eq(0), .example p:eq(0)').hide();
-      });
-      $example.filter('.another').css('display', 'none');
-      $('.sticky').sticky('refresh');
-    },
-    hideOverview:  function() {
-      var
-        $body    = $('body'),
-        $example = $('.example')
-      ;
-      $body.removeClass('overview');
-      $example.each(function() {
-        $(this).children().not('.ui.header:eq(0), .example p:eq(0)').css('display', '');
-      });
-      $example.filter('.another').removeAttr('style');
-      $('.sticky').sticky('refresh');
-    },
-    developerMode: function() {
-      var
-        $body    = $('body'),
-        $example = $('.example').not('.no')
-      ;
-      $example
-        .each(function() {
-          $.proxy(handler.createCode, $(this))('developer');
-        })
-      ;
-      $('.sticky').sticky('refresh');
-    },
-    designerMode: function() {
-      var
-        $body    = $('body'),
-        $example = $('.example').not('.no')
-      ;
-      $example
-        .each(function() {
-          $.proxy(handler.createCode, $(this))('designer');
-        })
-      ;
-      $('.sticky').sticky('refresh');
-    },
 
     openMusic: function() {
       var
@@ -725,7 +657,10 @@ semantic.ready = function() {
         indent
       ;
       if(!leadingSpaces) {
-        return 4;
+        return ($pageTabs.length > 0)
+          ? 6
+          : 4
+        ;
       }
       if(leadingSpaces !== 0) {
         indent = leadingSpaces;
@@ -748,9 +683,9 @@ semantic.ready = function() {
         $example    = $(this).closest('.example'),
         $annotation = $example.find('.annotation'),
         $code       = $annotation.find('.code'),
-        $header     = $example.not('.another').children('.ui.header:first-of-type').eq(0).add('p:first-of-type'),
+        $intro      = $example.children().not('.ignored, h4:first-child').filter('.ui').eq(0).prevAll(),
         $ignored    = $('i.code:last-child, .wireframe, .anchor, .code, .existing, .instructive, .language.label, .annotation, br, .ignore, .ignored'),
-        $demo       = $example.children().not($header).not($ignored),
+        $demo       = $example.children().not($intro).not($ignored),
         code        = ''
       ;
       if( $code.size() === 0) {
@@ -797,12 +732,12 @@ semantic.ready = function() {
     createCode: function(type) {
       var
         $example        = $(this).closest('.example'),
-        $header         = $example.not('.another').children('.ui.header:first-of-type').eq(0).add('p:first-of-type'),
+        $intro          = $example.children().not('.ignored, h4:first-child').filter('.ui').eq(0).prevAll(),
         $annotation     = $example.find('.annotation'),
         $code           = $annotation.find('.code'),
         $html           = $example.children('.html'),
-        $ignoredContent = $('.ui.popup, i.code:last-child, .anchor, .code, .existing.segment, .instructive, .language.label, .annotation, br, .ignore, style, script, .ignored'),
-        $demo           = $example.children().not($header).not($ignoredContent),
+        $ignoredContent = $('.ui.popup, i.code:last-child, .anchor, .code, .existing.segment, .instructive, .language.label, .annotation, .ignore, style, script, .ignored'),
+        $demo           = $example.children().not($intro).not($ignoredContent),
         code            = $example.data('code') || $.proxy(handler.generateCode, this)(),
         $label
       ;
@@ -846,18 +781,20 @@ semantic.ready = function() {
       if( ($annotation.eq(0).is(':visible') || type == 'designer') && type != 'developer' ) {
         $annotation.transition('hide');
         $html.removeClass('ui top attached segment');
+        handler.refreshSticky();
       }
       else {
         $html.addClass('ui top attached segment');
-        $header.css('display', '');
-        $annotation.transition('fade');
+        $intro.css('display', '');
+        $annotation.transition('fade', handler.refreshSticky);
       }
-      // content position changed
-      if(type === undefined) {
-        $sectionHeaders.visibility('refresh');
-        $sectionExample.visibility('refresh');
-        $footer.visibility('refresh');
-      }
+    },
+
+    refreshSticky: function() {
+      $sectionHeaders.visibility('refresh');
+      $sectionExample.visibility('refresh');
+      $sticky.sticky('refresh');
+      $footer.visibility('refresh');
     },
 
     createAnnotation: function() {
@@ -1280,12 +1217,6 @@ semantic.ready = function() {
     .on('click', handler.swapStyle)
   ;
 
-  $overview
-    .dropdown({
-      action: 'select',
-      onChange: handler.changeMode
-    })
-  ;
 
   $menuPopup
     .add($languageDropdown)

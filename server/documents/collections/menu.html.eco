@@ -794,6 +794,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
       <a class="ui purple item">Purple</a>
       <a class="ui pink item">Pink</a>
       <a class="ui brown item">Brown</a>
+      <a class="ui grey item">Grey</a>
     </div>
   </div>
   <div class="another example">
@@ -918,6 +919,17 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
         Friends
       </a>
     </div>
+    <div class="ui grey three item menu">
+      <a class="active item">
+        Home
+      </a>
+      <a class="item">
+        Messages
+      </a>
+      <a class="item">
+        Friends
+      </a>
+    </div>
   </div>
   <div class="another example">
     <p>These colors can also be inverted</p>
@@ -1032,6 +1044,17 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
       </a>
     </div>
     <div class="ui brown three item inverted menu">
+      <a class="active item">
+        Home
+      </a>
+      <a class="item">
+        Messages
+      </a>
+      <a class="item">
+        Friends
+      </a>
+    </div>
+    <div class="ui grey three item inverted menu">
       <a class="active item">
         Home
       </a>

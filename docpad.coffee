@@ -31,6 +31,8 @@ docpadConfig = {
 
 			version: "2.0.0",
 
+			branch: "next",
+
 			# The default title of our website
 			title: "Semantic UI"
 
@@ -54,6 +56,9 @@ docpadConfig = {
 
 		getVersion: ->
 			@site.version
+
+		getBranch: ->
+			@site.branch
 
 		getZip: ->
 			if @site.version

@@ -274,7 +274,7 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
   <div class="example">
     <h4 class="ui header">Floating</h4>
     <p>A header can sit to the left or right of other content</p>
-    <div class="ui segment">
+    <div class="ui clearing segment">
       <h3 class="ui right floated header">
         Go Forward
       </h3>

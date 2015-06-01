@@ -9,23 +9,6 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script type="text/javascript">
 $(document).ready(function() {
-    $('.trigger')
-        .popup({
-            onHide: function() {
-                return false;
-            }
-        })
-    ;
-    $('.ui.button')
-        .state({
-            onActivate: function() {
-                $('.trigger').attr('data-html', 'Zoo Zoo');
-            },
-            onDeactivate: function() {
-                $('.trigger').attr('data-html', 'Woo Woo');
-            }
-        })
-    ;
 
 });
 </script>
@@ -35,8 +18,27 @@ $(document).ready(function() {
 </style>
 
 <div class="ui container" style="padding-top:300px;">
-    <div class="trigger ui label" data-html="Woo Woo">Hover me</div>
-    <div class="ui button">
-        Change
+    <div class="ui two top attached buttons">
+        <div class="ui button">One</div>
+        <div class="ui button">Two</div>
+    </div>
+    <div class="ui attached segment">
+
+    </div>
+    <div class="ui two bottom attached buttons">
+        <div class="ui button">One</div>
+        <div class="ui button">Two</div>
+    </div>
+
+    <div class="ui divider"></div>
+
+    <div class="ui three item top attached menu">
+        <a class="item">1</a>
+        <a class="item">2</a>
+        <a class="item">3</a>
+    </div>
+    <div class="ui two bottom attached buttons">
+        <div class="ui button">One</div>
+        <div class="ui button">Two</div>
     </div>
 </div>

@@ -411,8 +411,24 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
     <h4 class="ui header">Vertically Attached</h4>
     <p>A button can be attached to the top or bottom of other content</p>
     <div class="ui top attached button" tabindex="0">Top</div>
-    <div class="ui attached segment"></div>
+    <div class="ui attached segment">
+      <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+    </div>
     <div class="ui bottom attached button" tabindex="0">Bottom</div>
+  </div>
+
+  <div class="another example">
+    <div class="ui two top attached buttons">
+        <div class="ui button">One</div>
+        <div class="ui button">Two</div>
+    </div>
+    <div class="ui attached segment">
+      <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+    </div>
+    <div class="ui two bottom attached buttons">
+        <div class="ui button">One</div>
+        <div class="ui button">Two</div>
+    </div>
   </div>
 
   <div class="example">

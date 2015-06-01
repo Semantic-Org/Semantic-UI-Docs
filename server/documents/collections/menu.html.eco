@@ -291,7 +291,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
   <div class="example">
     <h4 class="ui header">Vertical Menu</h4>
     <p>A vertical menu displays elements vertically..</p>
-    <div class="ui ignore warning message"><i class="icon heart"></i> A vertical menu's width defaults to an arbitrary size. To have it fit your content more precisely use the fluid variation in conjunction with <a href="grid.html">ui grid</a>.</div>
+    <div class="ui ignore warning message">A vertical menu's width defaults to an arbitrary size. To have it fit your content more precisely use the fluid variation in conjunction with <a href="grid.html">ui grid</a>.</div>
 
     <div class="ui vertical menu">
       <a class="active teal item">
@@ -707,7 +707,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
       <a class="item">Sign-in</a>
     </div>
   </div>
-  <h3 class="ui header">Menu</h3>
+
   <div class="example">
     <h4 class="ui header">Inverted</h4>
     <p>A menu may have its colors inverted to show greater contrast</p>
@@ -794,6 +794,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
       <a class="ui purple item">Purple</a>
       <a class="ui pink item">Pink</a>
       <a class="ui brown item">Brown</a>
+      <a class="ui grey item">Grey</a>
     </div>
   </div>
   <div class="another example">
@@ -908,6 +909,17 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
       </a>
     </div>
     <div class="ui brown three item menu">
+      <a class="active item">
+        Home
+      </a>
+      <a class="item">
+        Messages
+      </a>
+      <a class="item">
+        Friends
+      </a>
+    </div>
+    <div class="ui grey three item menu">
       <a class="active item">
         Home
       </a>
@@ -1042,6 +1054,17 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
         Friends
       </a>
     </div>
+    <div class="ui grey three item inverted menu">
+      <a class="active item">
+        Home
+      </a>
+      <a class="item">
+        Messages
+      </a>
+      <a class="item">
+        Friends
+      </a>
+    </div>
   </div>
 
 
@@ -1117,6 +1140,42 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
       <a class="item">Bike</a>
     </div>
   </div>
+
+  <div class="example">
+    <h4 class="ui header">Compact</h4>
+    <p>A menu can take up only the space necessary to fit its content</p>
+    <div class="ui compact menu">
+      <a class="item">
+        <i class="gamepad icon"></i>
+        Games
+      </a>
+      <a class="item">
+        <i class="video camera icon"></i>
+        Channels
+      </a>
+      <a class="item">
+        <i class="video play icon"></i>
+        Videos
+      </a>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui compact vertical labeled icon menu">
+      <a class="item">
+        <i class="gamepad icon"></i>
+        Games
+      </a>
+      <a class="item">
+        <i class="video camera icon"></i>
+        Channels
+      </a>
+      <a class="item">
+        <i class="video play icon"></i>
+        Videos
+      </a>
+    </div>
+  </div>
+
 
   <div class="example">
     <h4 class="ui header">Evenly sized items</h4>

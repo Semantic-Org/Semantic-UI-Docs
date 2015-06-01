@@ -905,17 +905,6 @@ standalone : true
             </div>
           </div>
       </div>
-        <div class="no example">
-          <h4 class="ui header">
-            <a href="/modules/progress.html">Progress</a>
-          </h4>
-          <div data-total="20" data-value="6" class="ui teal file demo progress active">
-            <div class="bar" style="width: 25%;">
-              <div class="progress"></div>
-            </div>
-            <div class="label">Adding 5 of 20 photos</div>
-          </div>
-        </div>
         <div class="no segment example">
           <h4 class="ui header">
             <a href="/elements/segment.html">Segment</a>

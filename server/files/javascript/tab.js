@@ -3,33 +3,18 @@ semantic.dropdown = {};
 // ready event
 semantic.dropdown.ready = function() {
 
-  // sinon
-  var
-    headers = {
-      'Content-Type': 'text/html'
-    },
-    method       = 'GET',
-    responseCode = 200,
-    body         = {
+
+  $.fn.api.settings.mockResponseAsync = function(settings, callback) {
+    var response = {
       first  : '<h3 class="ui header">AJAX Tab One</h3><img class="ui wireframe image" src="/images/wireframe/paragraph.png"><img class="ui wireframe image" src="/images/wireframe/paragraph.png"><img class="ui wireframe image" src="/images/wireframe/paragraph.png">',
       second : '<h3 class="ui header">AJAX Tab Two</h3><img class="ui wireframe image" src="/images/wireframe/paragraph.png"><img class="ui wireframe image" src="/images/wireframe/paragraph.png"><img class="ui wireframe image" src="/images/wireframe/paragraph.png">',
       third  : '<h3 class="ui header">AJAX Tab Three</h3><img class="ui wireframe image" src="/images/wireframe/paragraph.png"><img class="ui wireframe image" src="/images/wireframe/paragraph.png"><img class="ui wireframe image" src="/images/wireframe/paragraph.png">'
-    },
-    server = sinon.fakeServer.create()
-  ;
-
-  server.autoRespond = true;
-  server.autoRespondAfter = 600;
-
-  server
-    .respondWith(/\/first(.*)/, [responseCode, headers, body.first])
-  ;
-  server
-    .respondWith(/\/second(.*)/, [responseCode, headers, body.second])
-  ;
-  server
-    .respondWith(/\/third(.*)/, [responseCode, headers, body.third])
-  ;
+    };
+    // do any asynchronous task here
+    setTimeout(function() {
+      callback( response[settings.urlData.tab] );
+    }, 200);
+  };
 
   $('.first.example .menu .item')
     .tab({
@@ -55,7 +40,7 @@ semantic.dropdown.ready = function() {
     .tab({
       context : '.dynamic.example',
       auto    : true,
-      histor  : false,
+      history  : false,
       path    : '/'
     })
   ;

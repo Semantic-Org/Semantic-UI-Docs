@@ -108,8 +108,8 @@ themes      : ['Default']
     <div class="dynamic no example">
       <h4 class="header">Retreiving Remote Tab Content</h4>
       <p>Using <code>auto: true</code> will load the tab's path from your server with additional headers to specify an in-page request. Additional requests will automatically be loaded from cache without a server request.</p>
-      <div class="ui bottom attached message">
-        API requests for the following example have been faked using <a href="http://sinonjs.org/">SinonJS</a> to avoid network overhead.
+      <div class="ui ignored warning message">
+        API requests for the following example have been faked using <a href="/behaviors/api.html#using-custom-backends">mockResponseAsync</a> API setting to avoid network overhead.
       </div>
       <div class="code">
       $('.dynamic.example .menu .item')
@@ -141,7 +141,7 @@ themes      : ['Default']
     <div class="context example">
       <h4 class="ui header">Multiple Tabs on Same Page</h4>
       <p>There are a several of ways to include independent tab groups on the same page, even with history. One of the easiest ways is provide a specific parent context for each tab group.</p>
-      <div class="ui info message">
+      <div class="ui ignored info message">
         If you are using tab contexts inside of tabs, you can also specify <code>childrenOnly: true</code> which will only look for tabs as the immediate children of the given context, or <code>context: 'parent'</code> a special keyword which avoids having to create unique selectors for each group.
       </div>
       <div id="context1">
@@ -608,16 +608,28 @@ themes      : ['Default']
       </thead>
       <tbody>
         <tr>
-          <td>onTabInit</td>
+          <td>onFirstLoad</td>
           <td>tabPath, parameterArray, historyEvent</td>
           <td>Tab</td>
           <td>Callback only the first time a tab is loaded</td>
         </tr>
         <tr>
-          <td>onTabLoad</td>
+          <td>onLoad</td>
           <td>tabPath, parameterArray, historyEvent</td>
           <td>Tab</td>
           <td>Callback every time a tab is loaded</td>
+        </tr>
+        <tr>
+          <td>onRequest</td>
+          <td>tabPath</td>
+          <td>Tab</td>
+          <td>Called when a tab begins loading remote content</td>
+        </tr>
+        <tr>
+          <td>onVisible</td>
+          <td>tabPath</td>
+          <td>Tab</td>
+          <td>Called after a tab becomes visible</td>
         </tr>
       </tbody>
     </table>

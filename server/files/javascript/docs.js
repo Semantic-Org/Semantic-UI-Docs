@@ -1031,7 +1031,7 @@ semantic.ready = function() {
         context      : '.main.container',
         childrenOnly : true,
         history      : true,
-        onTabInit    : function() {
+        onFirstLoad  : function() {
           handler.makeCode();
 
           $container = ($('.fixed.column').size() > 0 )
@@ -1053,7 +1053,7 @@ semantic.ready = function() {
             handler.tryCreateMenu();
           });
         },
-        onTabLoad : function() {
+        onLoad : function() {
           $tocSticky
             .sticky('refresh')
           ;

@@ -548,7 +548,7 @@ themes      : ['Default']
         <tr>
           <td>parseScripts</td>
           <td>once</td>
-          <td>Whether inline scripts in tab html should be parsed on tab change. Defaults to once, parsing only on initial load. Can also be set to <code>true</code> or <code>false</code></td>
+          <td>Whether inline scripts in tab html should be parsed on tab load. Defaults to <code>once</code>, parsing only on first load. Can also be set to <code>true</code> or <code>false</code> to always parse or never parse inline scripts.</td>
         </tr>
         <tr>
           <td>alwaysRefresh</td>

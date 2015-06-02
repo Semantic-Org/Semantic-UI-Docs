@@ -1033,7 +1033,9 @@ semantic.ready = function() {
 
   // create sidebar sticky
   $tocSticky
-    .sticky()
+    .sticky({
+      context: $container
+    })
   ;
 
   // load page tabs

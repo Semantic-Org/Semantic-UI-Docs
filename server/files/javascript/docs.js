@@ -1152,7 +1152,7 @@ semantic.ready = function() {
 
   handler.createIcon();
   $popupExample
-    .each(function() {
+/*    .each(function() {
       $(this)
         .popup({
           preserve: false,
@@ -1168,7 +1168,7 @@ semantic.ready = function() {
           target   : $(this).find('i.code')
         })
       ;
-    })
+    })*/
     .find('i.code')
       .on('click', handler.createCode)
   ;

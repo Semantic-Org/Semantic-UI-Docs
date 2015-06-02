@@ -1708,6 +1708,10 @@ body.progress.animated .ui.progress .bar {
 #example .advertisement .carbon-img {
   width: 130px;
   margin-right: 0.75em;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
 }
 #example .advertisement .carbon-img img {
   display: block;
@@ -1969,6 +1973,10 @@ body.progress.animated .ui.progress .bar {
   #example .fixed.menu > .container > .right.menu > .item:last-child,
   #example .fixed.menu > .container > .icon.item {
     display: none;
+  }
+
+  #example .masthead .download.button {
+    margin-top: 1em;
   }
 
 }

@@ -160,14 +160,7 @@
       <% for id, name of @tabs: %>
         <% tabCount++ %>
       <% end %>
-      <div class="<%= numbers[tabCount] %> ui menu">
-        <% for id, name of @tabs: %>
-          <a class="<%= if index == 0 then 'active ' %>item" data-tab="<%= id %>"><%= name %></a>
-          <% index++ %>
-        <% end %>
-      </div>
-      <% index = 0 %>
-      <div class="fluid vertical ui menu">
+      <div class="ui <%= numbers[tabCount] %> stackable menu">
         <% for id, name of @tabs: %>
           <a class="<%= if index == 0 then 'active ' %>item" data-tab="<%= id %>"><%= name %></a>
           <% index++ %>

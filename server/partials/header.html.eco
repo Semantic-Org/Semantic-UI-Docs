@@ -20,7 +20,7 @@
       <div class="ui hidden divider"></div>
 
       <div class="ui right floated main menu">
-        <% if @document.type is 'UI Element' or @document.type is 'UI View' or @document.type is 'UI Collection' or @document.type is 'UI Module': %>
+        <% if @document.type is 'UI Global' or @document.type is 'UI Element' or @document.type is 'UI Collection' or @document.type is 'UI View' or @document.type is 'UI Module' or @document.type is 'UI Behavior': %>
         <a class="bug popup icon item" data-content="Edit This Page" href="https://github.com/Semantic-Org/Semantic-UI-Docs/edit/<%= @getBranch() %>/server/documents/<%= @document.elementType %>s/<%= @document.element %>.html.eco">
           <i class="edit icon"></i>
         </a>

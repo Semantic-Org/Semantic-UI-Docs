@@ -249,92 +249,6 @@ p:last-child {
   font-weight: bold;
 }
 
-/*--------------
-  Advertisement
----------------*/
-
-#example .advertisement {
-  float: right;
-  margin-left: 2em;
-}
-#example .index.advertisement {
-  display: block;
-  position: absolute;
-}
-#example .advertisement {
-  float: none;
-  display: table-cell;
-  vertical-align: top;
-  padding-left: 2em;
-}
-#example #carbonads-container {
-  float: right;
-}
-#example .advertisement #carbonads {
-  display: block;
-  width: 300px;
-  height: 118px;
-  background-color: #F7F7F7;
-  padding: 8px;
-  font-size: 12px;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  overflow: hidden;
-  float: right;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  border: 1px solid #CCCCCC;
-}
-#example .advertisement .carbon-img {
-  float: left;
-  margin-right: 10px;
-  width: 130px;
-}
-#example .advertisement .carbon-text {
-  width: 140px;
-  float: left;
-  height: auto;
-  color: #000000;
-  line-height: 1.3;
-}
-#example .advertisement .carbon-text:hover {
-  color: #666666;
-}
-#example .carbon-poweredby {
-  text-align: left;
-  color: #BBB;
-  float: left;
-  font-size: 11px;
-  margin-top: 9px;
-  text-align: left;
-  width: 140px;
-}
-
-/* Inverted Ad */
-#example .inverted.advertisement #carbonads {
-  background-color: rgba(0, 0, 0, 0.25);
-  border: none;
-  overflow: hidden;
-  height: auto;
-  padding: 6px 0px 13px;
-}
-#example .inverted.advertisement .carbon-text {
-  color: rgba(255, 255, 255, 0.6);
-}
-#example .inverted.advertisement .carbon-text:hover {
-  color: rgba(255, 255, 255, 1);
-}
-#example .inverted.advertisement .carbon-poweredby {
-  margin-top: 10px;
-  color: rgba(255, 255, 255, 0.4);
-}
-#example .inverted.advertisement .carbon-poweredby a {
-  color: rgba(255, 255, 255, 0.8);
-}
-#example .inverted.advertisement .carbon-poweredby a:hover {
-  color: #FFFFFF;
-}
-
 
 #example .main.container a.anchor {
   height: 1px;
@@ -384,9 +298,14 @@ p:last-child {
   z-index: 2;
 }
 #example .masthead .introduction {
-  display: table-cell;
-  vertical-align: top;
-  width: 100%;
+  display: block;
+}
+#example .masthead .introduction:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
 }
 #example .masthead .introduction .theme.buttons {
   margin: -0.1em 0em 0em 0.5em;
@@ -420,7 +339,7 @@ p:last-child {
 #example .fixed.launch.button {
   display: none;
   position: fixed;
-  top: 63px;
+  top: 2.5em;
   left: 0px;
 
   width: 55px;
@@ -1727,12 +1646,6 @@ body.progress.animated .ui.progress .bar {
   max-width: 1140px;
 }
 
-#example .main.container > .right.rail,
-#example .main.container > .tab > .examples > .right.rail,
-#example .main.container > .tab > .right.rail {
-  padding-top: 2em;
-  width: 250px;
-}
 #example .main.container > .right.rail .sticky,
 #example .main.container > .tab > .examples > .right.rail .sticky,
 #example .main.container > .tab > .right.rail .sticky {
@@ -1759,6 +1672,82 @@ body.progress.animated .ui.progress .bar {
   padding: 0.5rem 0.25rem;
 }
 
+/*******************************
+           Advert
+*******************************/
+
+/*----------------
+  Style Overrides
+-----------------*/
+
+#example .advertisement #carbonads {
+  position: relative;
+  display: block;
+  width: auto;
+  margin: 0 auto;
+  background-color: #F5F8F9;
+  border: 1px solid #9ECAD3;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  padding: 1em;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  overflow: hidden;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+#example .advertisement #carbonads:hover {
+  background-color: #F0F8F9;
+  border: 1px solid #87C7D0;
+}
+#example .advertisement .carbon-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+#example .advertisement .carbon-img {
+  width: 130px;
+  margin-right: 0.75em;
+}
+#example .advertisement .carbon-img img {
+  display: block;
+  border: 1px solid #DDDDDD;
+}
+#example .advertisement .carbon-text {
+  font-size: 13px;
+  line-height: 16px;
+  padding-bottom: 1.5em;
+  height: auto;
+  min-width: 145px;
+  color: rgba(20, 50, 50, 0.8);
+}
+#example .advertisement .carbon-text:hover {
+  color: rgba(0, 30, 30, 0.8);
+}
+#example .carbon-poweredby {
+  position: absolute;
+  left: 130px;
+  margin-left: 2em;
+  bottom: 1em;
+  color: #bbb;
+  font-size: 11px;
+  color: rgba(0, 0, 0, 0.3);
+  text-align: left;
+}
+
+
+/* Rail Ad */
+#example .rail .advertisement {
+  display: block;
+  float: none;
+  margin: 1em 0;
+  padding-left: 0;
+}
+#example .rail .advertisement #carbonads {
+  display: block;
+  margin: 0 -1.5em;
+  width: auto;
+}
 
 
 /*******************************
@@ -1766,301 +1755,220 @@ body.progress.animated .ui.progress .bar {
 *******************************/
 
 /* Defaults */
-
-#example .masthead .mobile.buttons {
-  display: none;
+#example .masthead > .container,
+#example .main.container,
+#example .fixed.menu > .container {
+  margin-left: 3em !important;
+  margin-right: 3em !important;
+  width: auto !important;
+  max-width: 960px !important;
+}
+#example .masthead > .container {
+  margin-right: 387px !important;
+}
+#example .main.container {
+  margin-right: 387px !important;
 }
 
-@media only screen and (max-width : 400px) {
-  #example .advertisement {
-    max-width: 260px;
-  }
+/* Rail Default */
+#example .main.container > .right.rail,
+#example .main.container > .tab > .examples > .right.rail,
+#example .main.container > .tab > .right.rail {
+  margin-left: 3em;
+  padding-top: 2em;
+  width: 277px;
 }
 
-@media only screen and (max-width : 450px) {
-  #example .main.menu .icon.item {
-    display: none;
-  }
-  #example .main.menu .github.item {
-    display: inline-block;
-  }
-  #example .main.menu .github.item:before {
-    display: none;
-  }
-  #example #carbonads {
-    height: 135px;
-  }
-  #example #carbonads .carbon-text {
-    width: 90px;
-  }
+#example .masthead .advertisement {
+  margin-left: 3em;
+  padding: 0em 1.25em;
+  width: 342px;
 }
 
-@media only screen and (max-width : 470px) {
-  #example .masthead .tag.label {
-    display: none;
-  }
-  #example .masthead .inverted.buttons {
-    display: none;
-  }
-  #example .masthead .mobile.buttons {
-    display: block;
-  }
-  #example.button-page .ui.buttons,
-  #example.button-page :not(.buttons) .ui.button {
-    margin-bottom: 0.5em;
-  }
-  #example .masthead:before {
-    -webkit-animation-name: none;
-    -moz-animation-name: none;
-    -o-animation-name: none;
-    animation-name: none;
-  }
+/* Absolute Ad */
+#example .masthead .introduction {
+  display: block;
+}
+#example .masthead .advertisement {
+  position: absolute;
+  left: 100%;
+  bottom: -2px;
+}
+
+#example .fixed.main.menu .launch.item {
+  display: block;
+}
+#example .fixed.main.menu .search .icon {
+  opacity: 0.9;
 }
 
 
-@media only screen and (max-width : 600px) {
-  #example > .pusher > .footer {
-    padding: 1em 0em;
+/* Table Ad */
+@media only screen and (max-width: 1272px) {
+
+  #example .masthead > .container {
+    margin-right: 0em !important;
+    max-width: none !important;
   }
+  #example .masthead .introduction {
+    display: table-cell;
+    vertical-align: top;
+    width: 100%;
+  }
+  #example .masthead .advertisement {
+    position: static;
+    float: none;
+    display: table-cell;
+    padding-left: 3em;
+  }
+}
+
+/* Squish Content (Just For Small Computers) */
+@media only screen and (max-width: 1272px) {
+
+  /* Resize Main Container */
+  #example .main.container {
+    margin-right: 307px !important;
+  }
+
+  /* Resize TOC  */
+  #example .full.height > .toc {
+    width: 200px;
+  }
+
+  /* Resize Rail */
+  #example .main.container > .right.rail,
+  #example .main.container > .tab > .examples > .right.rail,
+  #example .main.container > .tab > .right.rail {
+    padding-left: 1.5em;
+    width: 225px;
+  }
+
+}
+
+/* Hide Top Bar */
+@media only screen and (min-width: 1145px) {
+  #example .fixed.main.menu {
+    display: none;
+  }
+}
+
+/* Remove Fixed Sidebar /  Show Top Bar */
+@media only screen and (max-width: 1144px) {
+
+  /* Hide Fixed Sidebar */
+  #example .full.height > .toc {
+    display: none;
+  }
+
+  /* Additional Padding for Fixed Menu */
   #example .masthead.segment {
-    padding-top: 60px;
-    padding-bottom: 20px;
+    padding-top: 5em;
   }
-  #example .example i.code {
-    opacity: 0.3;
-  }
-  #example .example i.code:hover {
-    opacity: 1;
-  }
-  #example .main.menu .borderless.item {
-    display: none;
-  }
-  #example .fixed .developer,
-  #example .fixed .designer,
-  #example .fixed .previous,
-  #example .fixed .next {
-    display: none;
-  }
-  #example .tab.masthead.segment .tabular.menu {
+
+  /* Hide GitHub Stars in Intro */
+  #example .masthead iframe.github {
     display: none;
   }
 
-  #example .tab.masthead.segment .vertical.menu {
-    display: block;
-  }
-}
-
-@media only screen and (max-width : 640px) {
-  #example .masthead.segment .download.button {
-    display: none;
-  }
-  #example.transition .fixed.column {
-    display: none;
-  }
-  #example.transition .examples {
-    width: 100%;
-  }
-  #example.transition .examples .pointing.below.label {
-    display: none;
-  }
-}
-
-@media only screen and (max-width : 980px) {
-  pre.console {
-    height: 150px;
-  }
-
-  #example .fixed.menu .music.item {
-    display: none;
-  }
-
-  /* Sidebar Nav Hide Link */
-  #example #toc .hide.item {
-    display: block;
-  }
-  #example #toc .item > .icon {
-    font-size: 1em !important;
-  }
-
-  /* Introduction Button Float */
-  #example:not(.index) .introduction .button {
-    float: none;
-    margin: 0 0.5em 0.5em 0;
-  }
-
-  /* Advertisement */
-  #example .introduction {
-    display: block;
-  }
-  #example .advertisement {
-    display: block;
-    margin: 1em auto;
-    padding: 0em;
-  }
-  #example .advertisement #carbonads {
-    float: none;
-    width: 100%;
-  }
-  #example .fixed.menu .launch {
-    padding-left: 1.142em;
-  }
-  /* Resize Containers */
-  #example .main.container,
+  /* Less Left Padding */
   #example .masthead > .container,
+  #example .main.container,
   #example .fixed.menu > .container {
-    width: 100% !important;
+    margin-left: 2em !important;
+  }
+
+  /* Padding Above Rail */
+  #example .main.container > .right.rail .sticky,
+  #example .main.container > .tab > .examples > .right.rail .sticky,
+  #example .main.container > .tab > .right.rail .sticky {
+    padding-top: 2em;
+  }
+
+  /* 100% Menu Width */
+  #example .fixed.menu > .container {
     margin-left: 0em !important;
     margin-right: 0em !important;
-    padding-left: 2em !important;
-    padding-right: 2em !important;
-    border-left: none !important;
-    border-right: none !important;
-    box-shadow: none !important;
+    width: 100% !important;
+    max-width: none !important;
   }
+
+  /* Remove Bug Reports */
+  #example .main.menu .bug.item {
+    display: none;
+  }
+
+  /* Hide Music */
+  #example .main.menu .music.item {
+    display: none;
+  }
+
+}
+
+/* Remove Rail */
+@media only screen and (max-width: 992px) {
+
+  /* Remove Rail */
+  #example .main.container > .right.rail,
+  #example .main.container > .tab > .examples > .right.rail,
+  #example .main.container > .tab > .right.rail {
+    display: none;
+  }
+
+  /* Fluid Containers */
+  #example .masthead > .container,
+  #example .main.container,
   #example .fixed.menu > .container {
-    padding-left: 0em !important;
+    margin-left: 2em !important;
+    margin-right: 2em !important;
+    max-width: none !important;
+  }
+
+  /* Still 100% Fixed Menu */
+  #example .fixed.menu > .container {
+    margin-left: 0em !important;
+    margin-right: 0em !important;
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  /* Remove Padding on Ad */
+  #example .masthead .advertisement {
     padding-right: 0em !important;
   }
 
-  /* Resize Sticky */
-  #example .container .right.rail,
-  #example .main.container > .right.rail .sticky,
-  #example .main.container > .tab > .right.rail .sticky {
-    display: none;
-  }
-  /* Resize Sticky */
-  #example .container .right.rail {
-    width: 200px;
-    padding-left: 0em;
-  }
 
-
-  /* Advert in Rail */
-  #example .introduction {
-    display: block;
-    padding-right: 115px;
-  }
-  #example .advertisement {
-    left: 100%;
-    margin-left: -115px;
-    position: absolute;
-    top: 0em;
-    vertical-align: top;
-  }
-
-  /* Remove Sticky Footer */
-  #example > .pusher {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-  #example > .pusher > .full.height {
-    display: block;
-    height: auto;
-  }
 }
 
-@media only screen and (max-width : 998px) {
-  /* Nav Bar Items */
-  #example .fixed.menu .section,
-  #example .fixed.menu .title b {
-    display: none;
-  }
-  #example .fixed.menu .launch {
-    cursor: pointer;
-    display: inline-block;
-  }
 
-  /* Hide Fixed Launch Button */
-  #example .fixed.launch.button {
-    display: none;
-  }
+@media only screen and (max-width: 820px) {
 
-  /* What is this? */
-  #example .header .button {
-    margin-bottom: 0.5em;
-  }
-  #example .examples {
-    margin-right: 330px;
-    padding: 1px;
-  }
-}
-
-@media only screen and (min-width : 999px) {
-
-  /* Advert in Rail */
+  /* Ad Takes Full Width */
   #example .masthead .introduction {
     display: block;
   }
   #example .masthead .advertisement {
-    left: 100%;
+    display: block;
+    float: none;
+    margin: 2em 0em 0em;
     padding-left: 0em;
-    position: absolute;
-    top: 0em;
-    vertical-align: top;
+    width: auto;
+  }
+  #example .masthead .advertisement #carbonads > span {
+    position: relative;
+    display: block;
+    max-width: 300px;
   }
 
-  #example .examples {
-    margin-right: 280px;
-    padding: 1px;
-  }
-  #example .fixed.column,
-  #example .fixed.column .fixed {
-    width: 250px;
-  }
-
-  /* Sticky Footers */
-  #example > .pusher {
-    display: flex;
-    overflow: visible;
-    min-height: 100vh;
-    flex-direction: column;
-  }
-  #example > .pusher > .full.height {
-    flex: 1;
-  }
 }
 
+@media only screen and (max-width: 768px) {
 
-/* Adjust Gutters */
-@media only screen and (min-width : 999px) and (max-width: 1300px) {
-  #example .masthead > .container,
-  #example .main.container,
-  #example .fixed.menu > .container {
-    margin-left: 3em !important;
-    margin-right: 3em !important;
-    width: auto !important;
+  /* Hide Some Fixed Menu Content (Pagination, Search) */
+  #example .fixed.menu > .container > .section.item,
+  #example .fixed.menu > .container > .right.menu > .item:last-child,
+  #example .fixed.menu > .container > .icon.item {
+    display: none;
   }
-  #example .masthead > .container,
-  #example .main.container {
-    margin-right: 350px !important;
-  }
-  #example .masthead > .container .advertisement {
-    padding-left: 33px;
-  }
-}
-@media only screen and (min-width: 1301px) {
-  #example .masthead > .container,
-  #example .main.container,
-  #example .fixed.menu > .container {
-    margin-left: 4em !important;
-    margin-right: 4em !important;
-    width: auto !important;
-    max-width: 960px !important;
-  }
-  #example .masthead > .container,
-  #example .main.container {
-    margin-right: 380px !important;
-  }
-  #example .masthead > .container .advertisement {
-    padding-left: 26px;
-  }
-}
 
-@media only screen and (min-width: 1600px) {
-}
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  #example > .pusher > .full.height {
-    flex: none;
-  }
 }

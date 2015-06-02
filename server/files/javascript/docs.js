@@ -445,11 +445,18 @@ semantic.ready = function() {
         .addClass('ui vertical following fluid accordion text menu')
         .html(html)
       ;
+      /* Advert
+      var $advertisement = $('<div />')
+        .addClass('advertisement')
+        .html('<script type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=semanticuicom" id="_carbonads_js"></script>')
+      ;
+      */
       $sticky = $('<div />')
         .addClass('ui sticky')
         .html($followMenu)
+        //.prepend($advertisement)
+        .prepend('<h4 class="ui header">Definition</h4>')
       ;
-      $sticky.prepend('<h4 class="ui header">Definition</h4>');
       $rail = $('<div />')
         .addClass('ui dividing right rail')
         .html($sticky)
@@ -1024,6 +1031,11 @@ semantic.ready = function() {
   // register less files
   window.less.registerStylesheets();
 
+  // create sidebar sticky
+  $tocSticky
+    .sticky()
+  ;
+
   // load page tabs
   if( $pageTabs.size() > 0 ) {
     $pageTabs
@@ -1088,30 +1100,18 @@ semantic.ready = function() {
     .each(handler.generateCode)
   ;
 
-
   // main sidebar
   $menu
     .sidebar({
-      dimPage          : false,
+      dimPage          : true,
       transition       : 'overlay',
       mobileTransition : 'uncover'
     })
   ;
-/*
-  // inner sticky menu (mozilla only)
-  $('.full.height > .toc > .sticky')
-    .sticky({
-      offset: 1,
-      context: $('.full.height > .article')
-    })
-  ;
-*/
+
   // launch buttons
-  $('.launch.button, .view-ui, .launch.item')
-    .on('click', function(event) {
-      $menu.sidebar('toggle');
-      event.preventDefault();
-    })
+  $menu
+    .sidebar('attach events', '.launch.button, .view-ui, .launch.item')
   ;
 
   $search
@@ -1141,12 +1141,13 @@ semantic.ready = function() {
       action      : handler.shortcut.modal
     }
   ];
-/*  $.each(shortcuts, function(index, shortcut) {
-    $document
-      .on('keydown', shortcut.key, shortcut.action)
-    ;
-  });
-*/
+  /*  $.each(shortcuts, function(index, shortcut) {
+      $document
+        .on('keydown', shortcut.key, shortcut.action)
+      ;
+    });
+  */
+
   handler.createIcon();
   $popupExample
     .each(function() {
@@ -1235,10 +1236,6 @@ semantic.ready = function() {
       action   : 'nothing',
       allowTab : false
     })
-  ;
-
-  $tocSticky
-    .sticky()
   ;
 
   $languageDropdown

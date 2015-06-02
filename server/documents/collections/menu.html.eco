@@ -789,6 +789,8 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
       <a class="ui olive item">Olive</a>
       <a class="ui green item">Green</a>
       <a class="ui teal item">Teal</a>
+    </div>
+    <div class="ui menu">
       <a class="ui blue item">Blue</a>
       <a class="ui violet item">Violet</a>
       <a class="ui purple item">Purple</a>

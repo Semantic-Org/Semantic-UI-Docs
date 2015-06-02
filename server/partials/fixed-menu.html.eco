@@ -3,6 +3,53 @@
 <% pageNumber        = @getPage(currentCollection, @document.id) %>
 <% pageCollection    = @getPageCollection(currentCollection, @document.id) %>
 
-<!-- <div class="fixed bar">
-  <img class="ui small logo image" src="/images/logo.png">
-</div> -->
+<div class="ui fixed inverted main menu">
+  <div class="ui container">
+    <a class="launch item">
+      <i class="content icon"></i>
+      Menu
+    </a>
+    <% if @document.title: %>
+      <div class="item">
+        <%= @document.title %>
+      </div>
+      <% if pageNumber > 1 and currentCollection[pageNumber - 2]?: %>
+      <a class="icon item" href="<%= currentCollection[pageNumber - 2].url %>"><i class="left chevron icon"></i></a>
+      <% else: %>
+      <div class="disabled icon item"><i class="left chevron icon"></i></div>
+      <% end %>
+      <div class="section ui scrolling dropdown link item">
+        <span class="count"><%= "#{pageNumber} of #{pageCount}" %></span>
+        <div class="menu">
+          <% for element, index in currentCollection: %>
+            <a class="<%= if element.id is @document.id then 'active ' %>item" href="<%= element.url %>">
+              <%= element.title %>
+            </a>
+          <% end %>
+        </div>
+      </div>
+      <% if pageNumber isnt pageCount and currentCollection[pageNumber]?: %>
+      <a class="icon item" href="<%= currentCollection[pageNumber].url %>"><i class="right chevron icon"></i></a>
+      <% else: %>
+      <div class="disabled icon item"><i class="right chevron icon"></i></div>
+      <% end %>
+    <% end %>
+    <div class="right menu">
+      <% unless 'development' in @getEnvironments(): %>
+      <% else: %>
+      <div class="vertically fitted borderless item">
+        <iframe class="github" src="http://ghbtns.com/github-btn.html?user=semantic-org&amp;repo=semantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
+      </div>
+      <% end %>
+      <div class="item">
+        <div class="ui hidden right aligned search input" id="search">
+          <div class="ui transparent icon input">
+            <input class="prompt" type="text" placeholder="Search...">
+            <i class="inverted search link icon" data-content="Search UI"></i>
+          </div>
+          <div class="results"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

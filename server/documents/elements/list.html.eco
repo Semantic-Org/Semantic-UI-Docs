@@ -179,18 +179,15 @@ themes      : ['Default']
   </div>
   <div class="another example">
     <div class="ui horizontal bulleted list">
-      <div class="item">
-        <a class="header">Semantic-Org/Semantic-UI</a>
-        <div class="description">Updated 10 mins ago</div>
-      </div>
-      <div class="item">
-        <a class="header">Semantic-Org/Semantic-UI-Docs</a>
-        <div class="description">Updated 22 mins ago</div>
-      </div>
-      <div class="item">
-        <a class="header">Semantic-Org/Semantic-UI-Meteor</a>
-        <div class="description">Updated 34 mins ago</div>
-      </div>
+      <a class="item">
+        About Us
+      </a>
+      <a class="item">
+        Sitemap
+      </a>
+      <a class="item">
+        Contact
+      </a>
     </div>
   </div>
 
@@ -498,7 +495,7 @@ themes      : ['Default']
   <div class="example">
     <h4 class="ui header">Selection</h4>
     <p>A selection list formats list items as possible choices</p>
-    <div class="ui selection list">
+    <div class="ui middle aligned selection list">
       <div class="item">
         <img class="ui avatar image" src="/images/avatar/small/helen.jpg">
         <div class="content">
@@ -525,7 +522,7 @@ themes      : ['Default']
     <div class="ui ignored info message">
       Be sure content can fit on one line when using the animated variation, otherwise the content will create a new line break as the animated content adjusts to its new size.
     </div>
-    <div class="ui animated list">
+    <div class="ui middle aligned animated list">
       <div class="item">
         <img class="ui avatar image" src="/images/avatar/small/helen.jpg">
         <div class="content">
@@ -553,14 +550,20 @@ themes      : ['Default']
     <div class="ui horizontal list">
       <div class="item">
         <img class="ui avatar image" src="/images/wireframe/square-image.png">
-        <div class="content top aligned">
+        <div class="top aligned content">
           Top Aligned
         </div>
       </div>
       <div class="item">
         <img class="ui avatar image" src="/images/wireframe/square-image.png">
-        <div class="content aligned">
+        <div class="middle aligned content">
           Middle
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="/images/wireframe/square-image.png">
+        <div class="bottom aligned content">
+          Bottom
         </div>
       </div>
     </div>

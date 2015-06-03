@@ -551,6 +551,8 @@ p:last-child {
   margin: 0em;
   padding: 0em;
   max-height: 610px;
+  min-width: 500px;
+  -webkit-overflow-scrolling: touch;
   font-weight: normal;
   font-family:  'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
 }
@@ -1984,6 +1986,18 @@ body.progress.animated .ui.progress .bar {
   /* Let Buttons Vertically Stack */
   #example .masthead .button {
     margin-bottom: 0.75em;
+  }
+
+  #example .main.menu {
+    display: none;
+  }
+  #example .main.menu + .main.menu {
+    display: block;
+  }
+
+  /* No Download Button */
+  #example .masthead .download.button {
+    display: none;
   }
 
   /* Hide Sitemap */

@@ -1988,10 +1988,10 @@ body.progress.animated .ui.progress .bar {
     margin-bottom: 0.75em;
   }
 
-  #example .main.menu {
+  #example .masthead .main.menu {
     display: none;
   }
-  #example .main.menu + .main.menu {
+  #example .masthead .main.menu + .main.menu {
     display: block;
   }
 

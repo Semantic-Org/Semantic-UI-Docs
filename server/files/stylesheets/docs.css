@@ -158,6 +158,10 @@ p:last-child {
   float: right;
 }
 
+/* Align with buttons */
+#example .masthead .main.menu {
+  margin-top: -2px;
+}
 #example .masthead .main.menu > .item {
   padding-top: 0.785714em;
   padding-bottom: 0.785714em;
@@ -1811,7 +1815,7 @@ body.progress.animated .ui.progress .bar {
 @media only screen and (max-width: 1272px) {
 
   #example .masthead > .container {
-    margin-right: 0em !important;
+    margin-right: 2em !important;
     max-width: none !important;
   }
   #example .masthead .introduction {
@@ -1823,7 +1827,9 @@ body.progress.animated .ui.progress .bar {
     position: static;
     float: none;
     display: table-cell;
+    vertical-align: bottom;
     padding-left: 3em;
+    padding-right: 0em;
   }
 }
 
@@ -1832,7 +1838,7 @@ body.progress.animated .ui.progress .bar {
 
   /* Resize Main Container */
   #example .main.container {
-    margin-right: 307px !important;
+    margin-right: 318px !important;
   }
 
   /* Resize TOC  */
@@ -1975,8 +1981,14 @@ body.progress.animated .ui.progress .bar {
     display: none;
   }
 
-  #example .masthead .download.button {
-    margin-top: 1em;
+  /* Let Buttons Vertically Stack */
+  #example .masthead .button {
+    margin-bottom: 0.75em;
+  }
+
+  /* Hide Sitemap */
+  #example .pusher > .footer .grid .three.column {
+    display: none !important;
   }
 
 }

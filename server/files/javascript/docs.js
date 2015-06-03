@@ -42,6 +42,7 @@ semantic.ready = function() {
     $sortTable           = $('.sortable.table'),
     $demo                = $('.demo'),
 
+    $fullHeightContainer = $('.pusher > .full.height'),
     $container           = $('.main.container'),
     $allHeaders          = $('.main.container > h2, .main.container > .tab > h2, .main.container > .tab > .examples h2'),
     $sectionHeaders      = $container.children('h2'),
@@ -1034,7 +1035,7 @@ semantic.ready = function() {
   // create sidebar sticky
   $tocSticky
     .sticky({
-      context: $container
+      context: $fullHeightContainer
     })
   ;
 

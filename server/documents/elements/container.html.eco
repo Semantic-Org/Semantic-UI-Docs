@@ -472,7 +472,7 @@ themes      : ['Default']
 
     <div class="ui ignored code">
       <div class="ui attached menu">
-        <div class="ui text container">
+        <div class="ui container">
           <a class="item">
             <i class="home icon"></i> Home
           </a>
@@ -491,7 +491,7 @@ themes      : ['Default']
               <a class="item"><i class="settings icon"></i> Account Settings</a>
             </div>
           </div>
-          <div class="item">
+          <div class="right item">
             <div class="ui input"><input type="text" placeholder="Search..."></div>
           </div>
         </div>
@@ -500,7 +500,7 @@ themes      : ['Default']
   </div>
 
   <div class="ui attached menu">
-    <div class="ui text container">
+    <div class="ui container">
       <a class="item">
         <i class="home icon"></i> Home
       </a>
@@ -519,10 +519,8 @@ themes      : ['Default']
           <a class="item"><i class="settings icon"></i> Account Settings</a>
         </div>
       </div>
-      <div class="right menu">
-        <div class="item">
-          <div class="ui input"><input type="text" placeholder="Search..."></div>
-        </div>
+      <div class="right item">
+        <div class="ui input"><input type="text" placeholder="Search..."></div>
       </div>
     </div>
   </div>

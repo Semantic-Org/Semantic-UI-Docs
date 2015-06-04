@@ -2518,7 +2518,7 @@ themes      : ['Default', 'Material']
         </tr>
         <tr>
           <td>message</td>
-          <td>
+          <td colspan="2">
             <div class="code">
             message: {
               addResult     : 'Add <b>{term}</b>',
@@ -2528,12 +2528,11 @@ themes      : ['Default', 'Material']
             }
             </div>
           </td>
-          <td>Templated strings used to diplay messages to a user.</td>
         </tr>
         <tr>
           <td>selector</td>
           <td colspan="2">
-            <div class="code">
+            <div class="code" data-type="html">
             selector : {
               addition     : '.addition',
               dropdown     : '.ui.dropdown',

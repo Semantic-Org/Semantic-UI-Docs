@@ -3,10 +3,44 @@
              Global
 *******************************/
 
-body > .content  {
-  background: #FCFCFC;
+
+/*--------------
+     Page
+---------------*/
+
+ul.list {
+  list-style-type: disc;
+}
+ul.list li {
+  list-style-position: outside;
 }
 
+p {
+  margin: 1em 0em;
+}
+p:first-child {
+  margin-top: 0em;
+}
+p:last-child {
+  margin-bottom: 0em;
+}
+
+
+/*----------------
+      Footer
+-----------------*/
+
+#example > .pusher > .footer {
+  margin: 0em;
+  border-radius: 0em;
+  padding: 4em 0em 4em 0em;
+}
+
+/*--------------
+     Code
+---------------*/
+
+/* Inline Code */
 pre {
   white-space: pre-wrap;
   white-space: -moz-pre-wrap;
@@ -17,14 +51,6 @@ pre {
 pre {
   background-color: #FFFFFF;
   text-align: left;
-}
-
-
-ul.list {
-  list-style-type: disc;
-}
-ul.list li {
-  list-style-position: outside;
 }
 
 
@@ -52,26 +78,14 @@ pre code {
   padding: 0px;
   font-size: 1em;
 }
-/* Code block */
+
+/* Code Inside Message */
 .ui.message > p > code,
 .ui.message > code {
   background-color: rgba(255, 255, 255, 0.6);
   box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1) inset;
 }
 
-p {
-  margin: 1em 0em;
-}
-p:first-child {
-  margin-top: 0em;
-}
-p:last-child {
-  margin-bottom: 0em;
-}
-
-.less-error-message {
-  /*display: none !important;*/
-}
 
 /*--------------
     Docs Icon
@@ -95,24 +109,20 @@ p:last-child {
 }
 
 
-
 /*--------------
      Sidebar
 ---------------*/
 
-#example #toc > :last-child {
-  padding-bottom: 2em;
-}
 #example #toc .logo.image {
   width: 35px;
   margin-right: 1em;
 }
-#example #toc .item {
-  position: relative;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
+
+#example #toc > :last-child {
+  padding-bottom: 2em;
 }
+
+/* Incomplete Label */
 #example #toc .item .circular.label {
   position: absolute;
   top: 0.75rem;
@@ -125,6 +135,12 @@ p:last-child {
   opacity: 0.8;
 }
 
+/* Hidden Items */
+#example #toc .hide.item {
+  display: none;
+}
+
+/* Sidebar Header */
 #example #toc .inverted.header {
   font-size: 1em;
   font-weight: normal;
@@ -135,14 +151,14 @@ p:last-child {
 #example #toc a.inverted.header:hover {
   color: rgba(255, 255, 255, 1);
 }
-#example #toc .hide.item {
-  display: none;
-}
 #example #toc .menu .active.item {
   color: #6DFFFF !important;
 }
 
-/* segment headers */
+/*--------------
+   Page Headers
+---------------*/
+
 #example .masthead.segment {
   position: relative;
   z-index: 1;
@@ -154,6 +170,21 @@ p:last-child {
   box-shadow: none;
 }
 
+#example .masthead .introduction {
+  display: block;
+}
+#example .masthead .introduction:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+#example .masthead.segment h1 {
+  margin: 0em;
+}
+
 #example .masthead iframe.github {
   float: right;
 }
@@ -161,13 +192,17 @@ p:last-child {
 /* Align with buttons */
 #example .masthead .main.menu {
   margin-top: -2px;
+  min-height: 0em;
 }
 #example .masthead .main.menu > .item {
   padding-top: 0.785714em;
   padding-bottom: 0.785714em;
 }
 
-/* Language Dropdown */
+/*--------------
+    Languages
+---------------*/
+
 #example .language.dropdown.button {
   margin-top: 0.3em;
 }
@@ -178,12 +213,10 @@ p:last-child {
   display: none;
 }
 
-/* H1 header */
-#example .masthead.segment h1 {
-  margin: 0em;
-}
+/*--------------
+    Page Tabs
+---------------*/
 
-/* Tab */
 #example .tab.masthead.segment {
   display: block;
   padding-bottom: 0em;
@@ -201,6 +234,10 @@ p:last-child {
   background-color: #F7F7F7;
 }
 
+/*--------------
+    Download
+---------------*/
+
 /* Download Popup */
 #example .masthead.segment .download.popup {
   width: 400px;
@@ -213,31 +250,6 @@ p:last-child {
 #example .masthead.segment .download.popup .integration.grid,
 #example .masthead.segment .download.popup .link.grid {
   display: none;
-}
-
-#example.legacy .main.menu,
-#example.legacy .launch.button {
-  left: auto !important;
-}
-#example.scale.down.pushed .masthead.segment {
-  padding-top: 30px;
-}
-
-#example.divider .ui.grid {
-  position: relative;
-}
-#example.dim .segment .wireframe.image {
-  margin-bottom: 0em;
-}
-
-#example .main.menu .title.item b {
-  margin-right: 0.5em;
-}
-
-
-#example .download.menu {
-  margin-top: 0em;
-  margin-bottom: 3rem;
 }
 
 
@@ -292,54 +304,25 @@ p:last-child {
   transform: translate3d(0, 0, 0);
 }
 
-
 /*--------------
-    Masthead
+   Fixed Menu
 ---------------*/
 
-#example .masthead .grid {
-  position: relative;
-  z-index: 2;
+#example .main.menu .title.item b {
+  margin-right: 0.5em;
 }
-#example .masthead .introduction {
+#example .fixed.main.menu .launch.item {
   display: block;
 }
-#example .masthead .introduction:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
-#example .masthead .introduction .theme.buttons {
-  margin: -0.1em 0em 0em 0.5em;
-  vertical-align: middle;
-}
-/*--------------
-     Footer
----------------*/
-
-#example .footer.link.list {
-  display: block;
-  text-align: center;
-  margin-bottom: 1.5rem;
+#example .fixed.main.menu .search .icon {
+  opacity: 0.9;
 }
 
 
 /*--------------
-  Transparent
+  Sidebar Button
 ---------------*/
 
-.ui.transparent.menu {
-  opacity: 0.95;
-}
-
-#example.pushable.left.overlay .fixed.launch.button {
-  transform: translate3d(0, 0, 0);
-}
-#example.pushable.overlay.left.pushed .fixed.launch.button {
-  transform: translate3d(260px, 0, 0);
-}
 #example .fixed.launch.button {
   display: none;
   position: fixed;
@@ -370,6 +353,9 @@ p:last-child {
     0.3s width ease,
     0.5s transform ease
   ;
+}
+#example .launch.button .icon {
+  margin-left: 0px;
 }
 
 
@@ -402,19 +388,22 @@ p:last-child {
   opacity: 1;
 }
 
+/* Position Change */
+#example.pushable.left.overlay .fixed.launch.button {
+  transform: translate3d(0, 0, 0);
+}
+#example.pushable.overlay.left.pushed .fixed.launch.button {
+  transform: translate3d(260px, 0, 0);
+}
 
-#example .shortcuts {
-  float: right;
-  clear: both;
-}
-#example .launch.button .icon {
-  margin-left: 0px;
-}
+
+/*******************************
+        Alternate Layouts
+*******************************/
 
 /*----------------
-   Basic Display
+   Basic Layout
 -----------------*/
-
 
 #example.basic .main.container {
   background: transparent !important;
@@ -452,6 +441,10 @@ p:last-child {
   max-width: 100%;
 }
 
+/*----------------
+   Minimal Layout
+-----------------*/
+
 
 /* Always Hidden Sidebar */
 #example.minimal.basic > .launch.button {
@@ -476,61 +469,11 @@ p:last-child {
 }
 
 
-/*----------------
-   Overview Mode
------------------*/
-
-#example .right.floated.overview.button {
-  margin-bottom: 0.5em;
-}
-
-#example.overview h2.ui.header {
-  margin-bottom: 0.5em;
-}
-#example.overview .example {
-  display: table-row;
-  min-height: 0px !important;
-  overflow: hidden;
-}
-#example.overview .example .ui.header,
-#example.overview .example p {
-  display: table-cell;
-  font-size: 1em;
-  min-width: 170px;
-  font-weight: bold;
-  padding: 0.5em 0em;
-}
-#example.overview .example p {
-  font-size: 1rem;
-  font-weight: normal;
-  padding: 0em 0em 0em 0.5em;
-  width: auto;
-  line-height: 1.4;
-}
-
-/*----------------
-      Footer
------------------*/
-
-#example > .pusher > .footer {
-  margin: 0em;
-  border-radius: 0em;
-  padding: 4em 0em 4em 0em;
-}
-#example > .pusher > .container {
-  max-width: 960px !important;
-  margin-left: 250px !important;
-}
 
 /*----------------
   Settings Table
 -----------------*/
-/*
-#example .main.container .ui.celled.definition.table thead:not(.full-width) th:first-child {
-  background-color: #f7f7f7;
-  box-shadow: 0 -1px 0 1px #f7f7f7;
-}
-*/
+
 #example .settings.table {
   margin-bottom: 20px;
 }
@@ -541,6 +484,9 @@ p:last-child {
   width: 100px;
 }
 
+/*----------------
+   Code Samples
+-----------------*/
 
 #example .segment pre {
   background-color: transparent;
@@ -551,8 +497,6 @@ p:last-child {
   margin: 0em;
   padding: 0em;
   max-height: 610px;
-  min-width: 500px;
-  -webkit-overflow-scrolling: touch;
   font-weight: normal;
   font-family:  'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
 }
@@ -584,10 +528,8 @@ p:last-child {
   margin-top: 1.5em;
 }
 
-
-
 /*----------------
-    Examples
+     Examples
 -----------------*/
 
 #example .example {
@@ -829,13 +771,20 @@ p:last-child {
 #example .pointing.label + .existing.segment {
   margin-top: 0em;
 }
-
 #example .existing.code {
   display: none;
 }
+
+/* Code Annotation */
 #example .example .annotation {
   margin: 0em;
 }
+#example .annotation pre code {
+  min-width: 500px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 
 #example .transition.example .ui.button {
   margin-bottom: 0.5em;
@@ -1805,13 +1754,6 @@ body.progress.animated .ui.progress .bar {
   bottom: -2px;
 }
 
-#example .fixed.main.menu .launch.item {
-  display: block;
-}
-#example .fixed.main.menu .search .icon {
-  opacity: 0.9;
-}
-
 
 /* Table Ad */
 @media only screen and (max-width: 1272px) {
@@ -1873,6 +1815,11 @@ body.progress.animated .ui.progress .bar {
     display: none;
   }
 
+  /* Hide Fixed Launch Button */
+  #example .fixed.launch.button {
+    display: none !important;
+  }
+
   /* Additional Padding for Fixed Menu */
   #example .masthead.segment {
     padding-top: 5em;
@@ -1894,7 +1841,7 @@ body.progress.animated .ui.progress .bar {
   #example .main.container > .right.rail .sticky,
   #example .main.container > .tab > .examples > .right.rail .sticky,
   #example .main.container > .tab > .right.rail .sticky {
-    padding-top: 2em;
+    padding-top: 2.5em;
   }
 
   /* 100% Menu Width */
@@ -1983,6 +1930,8 @@ body.progress.animated .ui.progress .bar {
     display: none;
   }
 
+  /* Remove Menu Text */
+
   /* Let Buttons Vertically Stack */
   #example .masthead .button {
     margin-bottom: 0.75em;
@@ -2003,6 +1952,23 @@ body.progress.animated .ui.progress .bar {
   /* Hide Sitemap */
   #example .pusher > .footer .grid .three.column {
     display: none !important;
+  }
+}
+
+/* Small Phone */
+@media only screen and (max-width: 500px) {
+
+  /* Stack Advert */
+  #example .masthead .advertisement #carbonads > span {
+    max-width: none;
+  }
+  #example .advertisement .carbon-wrap {
+    flex-direction: column-reverse;
+    text-align: center;
+    align-items: center;
+  }
+  #example .carbon-poweredby {
+    display: none;
   }
 
 }

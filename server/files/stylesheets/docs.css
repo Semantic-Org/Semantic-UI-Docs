@@ -1735,7 +1735,7 @@ body.progress.animated .ui.progress .bar {
 #example .main.container > .tab > .right.rail {
   margin-left: 3em;
   padding-top: 2em;
-  width: 277px;
+  width: 319px;
 }
 
 #example .masthead .advertisement {
@@ -1795,7 +1795,7 @@ body.progress.animated .ui.progress .bar {
   #example .main.container > .tab > .examples > .right.rail,
   #example .main.container > .tab > .right.rail {
     padding-left: 1.5em;
-    width: 225px;
+    width: 267px;
   }
 
 }
@@ -1929,7 +1929,14 @@ body.progress.animated .ui.progress .bar {
     display: none;
   }
 
-  /* Remove Menu Text */
+  /* Add Sticky Footers */
+  body.pushable > .pusher {
+    display: flex;
+    flex-direction: column;
+  }
+  body.pushable > .pusher > .full.height {
+    flex: 1 0 auto;
+  }
 
   /* Let Buttons Vertically Stack */
   #example .masthead .button {

@@ -244,6 +244,12 @@
   -webkit-animation: blink 0.7s infinite;
   -moz-animation: blink 0.7s infinite;
   animation: blink 0.7s infinite;
+  -webkit-transition: opacity 0.7s ease;
+  -moz-transition: opacity 0.7s ease;
+  transition: opacity 0.7s ease;
+}
+#example.index .masthead.segment .typed-cursor.stop {
+  opacity: 0;
 }
 @keyframes blink {
   0% { opacity:1; }

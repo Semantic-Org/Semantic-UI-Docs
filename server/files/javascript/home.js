@@ -10,6 +10,7 @@ semantic.home.ready = function() {
     $phrase        = $header.find('h1 span'),
     $download      = $header.find('.download'),
     $library       = $header.find('.library'),
+    $cursor        = $header.find('.typed-cursor'),
     $version       = $header.find('.version'),
     $themeButton   = $('.theming .source.button'),
     $themeGrid     = $('.theming .source.grid'),
@@ -44,6 +45,9 @@ semantic.home.ready = function() {
       setTimeout(function() {
         $library.transition('scale in', 1000);
       }, 3750);
+      setTimeout(function() {
+        $cursor.addClass('stop');
+      }, 4250);
       setTimeout(function() {
         $version.transition('fade', 1000);
       }, 4250);
@@ -227,10 +231,10 @@ semantic.home.ready = function() {
   if($(window).width() > 600) {
     $('body')
       .visibility({
-        offset: -10,
-        observeChanges: false,
-        once: false,
-        continuous: false,
+        offset         : -10,
+        observeChanges : false,
+        once           : false,
+        continuous     : false,
         onTopPassed: function() {
           requestAnimationFrame(function() {
             $('.following.bar')

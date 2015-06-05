@@ -79,7 +79,9 @@ semantic.ready = function() {
     $code                = $('div.code').not('.existing'),
     $existingCode        = $('.existing.code'),
 
-    expertiseLevel       = $.cookie('expertiseLevel') || 0,
+    expertiseLevel       = ($.cookie !== undefined)
+      ? $.cookie('expertiseLevel') || 0
+      : 0,
     languageDropdownUsed = false,
 
 

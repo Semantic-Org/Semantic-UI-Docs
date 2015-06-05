@@ -14,7 +14,6 @@ status      : 'Undocumented'
 
 <%- @partial('header') %>
 
-<script src="/javascript/library/cookie.js"></script>
 <div class="main container">
 
   <div class="ui active tab" data-tab="overview">

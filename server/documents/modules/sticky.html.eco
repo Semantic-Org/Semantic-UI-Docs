@@ -387,6 +387,11 @@ type        : 'UI Module'
           <td>Whether element should be "pushed" by the viewport, attachig to the bottom of the screen when scrolling up</td>
         </tr>
         <tr>
+          <td>jitter</td>
+          <td>5</td>
+          <td>Sticky container height will only be set if the difference between heights of container and context is larger than this jitter value.</td>
+        </tr>
+        <tr>
           <td>observeChanges</td>
           <td>false</td>
           <td>Whether any change in <code>context</code> dom should automatically refresh cached sticky positions</td>

@@ -695,7 +695,8 @@ type        : 'UI Behavior'
       <div class="ui ignored warning message">This example also uses a different validation event. Each element will be validated on input blur instead of the default form submit.</div>
       <div class="code" data-type="javascript">
         $('.ui.form')
-          .form(validationRules, {
+          .form({
+            fields : validationRules,
             inline : true,
             on     : 'blur'
           })

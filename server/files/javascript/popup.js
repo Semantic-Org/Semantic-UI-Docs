@@ -35,6 +35,9 @@ semantic.popup.ready = function() {
       }
     })
   ;
+  $('.example:not(.no')
+    .popup('destroy')
+  ;
 
   $('.existing.example .rating')
     .rating()

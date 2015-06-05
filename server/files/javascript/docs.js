@@ -79,6 +79,7 @@ semantic.ready = function() {
     $code                = $('div.code').not('.existing'),
     $existingCode        = $('.existing.code'),
 
+    expertiseLevel       = $.cookie('expertiseLevel') || 0,
     languageDropdownUsed = false,
 
 
@@ -107,6 +108,10 @@ semantic.ready = function() {
           $('<i/>')
             .addClass('icon code')
             .insertBefore( $insertPoint )
+            .on('click', function() {
+              $.cookie('expertiseLevel', 2);
+              handler.createCode.call(this);
+            })
           ;
         })
       ;
@@ -1152,27 +1157,28 @@ semantic.ready = function() {
   */
 
   handler.createIcon();
-  $popupExample
-/*    .each(function() {
-      $(this)
-        .popup({
-          preserve: false,
-          on       : 'hover',
-          variation: 'inverted',
-          delay: {
-            show: 500,
-            hide: 100
-          },
-          position : 'top right',
-          offset   : 5,
-          content  : 'View Source',
-          target   : $(this).find('i.code')
-        })
-      ;
-    })*/
-    .find('i.code')
-      .on('click', handler.createCode)
-  ;
+
+  if(expertiseLevel < 2) {
+    $popupExample
+      .each(function() {
+        $(this)
+          .popup({
+            preserve: false,
+            on       : 'hover',
+            variation: 'inverted',
+            delay: {
+              show: 500,
+              hide: 100
+            },
+            position : 'top left',
+            offset   : -5,
+            content  : 'View Source',
+            target   : $(this).find('i.code')
+          })
+        ;
+      })
+    ;
+  }
 
   $menuMusic
     .on('click', handler.openMusic)

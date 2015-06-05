@@ -4,7 +4,7 @@ css         : 'custom'
 standalone  : true
 
 title       : 'All UI'
-type        : 'Semantic'
+type        : 'UI Examples'
 description : 'Examples of all user interface elements'
 ---
 

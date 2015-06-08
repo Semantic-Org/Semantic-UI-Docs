@@ -1095,6 +1095,14 @@ body.progress.animated .ui.progress .bar {
 }
 
 /*--------------
+    Divider
+---------------*/
+
+#example.divider .ui.grid {
+  position: relative;
+}
+
+/*--------------
       Header
 ---------------*/
 
@@ -1830,6 +1838,11 @@ body.progress.animated .ui.progress .bar {
     width: 260px;
   }
 
+  #example .fixed.column {
+    width: 250px;
+    margin-left: 2.5em;
+  }
+
 }
 
 /* Hide Top Bar */
@@ -1894,11 +1907,7 @@ body.progress.animated .ui.progress .bar {
     display: none;
   }
 
-  /* Move Examples */
-  #example .fixed.column {
-    width: 250px;
-    margin-left: 3em;
-  }
+  /* Space For Header Over Examples */
   #example .fixed.column .sticky {
     padding-top: 2em;
   }

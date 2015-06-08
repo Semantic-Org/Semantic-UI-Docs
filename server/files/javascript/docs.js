@@ -112,6 +112,8 @@ semantic.ready = function() {
             .insertBefore( $insertPoint )
           ;
         })
+        .find('i.code')
+          .on('click', handler.createCode)
       ;
     },
 
@@ -1126,7 +1128,6 @@ semantic.ready = function() {
           .find('i.code')
             .on('click', function() {
               $.cookie('expertiseLevel', 2);
-              handler.createCode.call(this);
             })
         ;
       })

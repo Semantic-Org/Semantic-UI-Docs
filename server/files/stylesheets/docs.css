@@ -1548,8 +1548,13 @@ body.progress.animated .ui.progress .bar {
 *******************************/
 
 #example > .pusher > .full.height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 #example:not(.site) > .pusher > .full.height {
   background-color: #FFFFFF;
@@ -1561,7 +1566,10 @@ body.progress.animated .ui.progress .bar {
   z-index: 1;
   background-color: #1b1c1d;
   width: 250px;
-  flex: 0 0 auto;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
 }
 #example .full.height > .toc .ui.menu {
   border-radius: 0;
@@ -1573,7 +1581,10 @@ body.progress.animated .ui.progress .bar {
   will-change: transform;
 }
 #example .article {
-  flex: 1 1 auto;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   min-width: 0px;
 }
 
@@ -1931,11 +1942,19 @@ body.progress.animated .ui.progress .bar {
 
   /* Add Sticky Footers */
   body.pushable > .pusher {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   }
   body.pushable > .pusher > .full.height {
-    flex: 1 0 auto;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
   }
 
   /* Let Buttons Vertically Stack */
@@ -1969,7 +1988,10 @@ body.progress.animated .ui.progress .bar {
     max-width: none;
   }
   #example .advertisement .carbon-wrap {
-    flex-direction: column-reverse;
+  -webkit-flex-direction: column-reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+
     text-align: center;
     align-items: center;
   }

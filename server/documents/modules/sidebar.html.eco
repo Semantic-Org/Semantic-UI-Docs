@@ -1,6 +1,6 @@
 ---
 layout      : 'default'
-css         : 'basic minimal'
+css         : 'minimal'
 standalone  : true
 
 element     : 'sidebar'
@@ -273,19 +273,18 @@ themes      : ['Default']
 
     <div class="no example">
       <h4 class="ui header">iOS Sidebars</h4>
-      <p>Sidebars use a special fix for iOS</p>
+      <p>Sidebars use a special fix for iOS that are added using <code>userAgent</code> detection.</p>
       <div class="code" data-type="css">
-      @media only screen and (max-width: @computerBreakpoint) {
-        html.ios {
-          overflow-x: hidden;
-          -webkit-overflow-scrolling: touch;
-        }
+      html.ios {
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+      }
+      html.ios,
+      html.ios body {
+        height: initial !important;
       }
       </div>
-      <p>Adding an overflow to <code>html</code> is necessary to make sure elements translated off-screen with 3d transformations do not cause iOS to trigger native canvas resizing.</p>
-      <div class="ui ignored info message">
-        To get scroll position in iOS check scrolltop on body <code>document.body.scrollTop</code>
-      </div>
+      <p>In <code>2.0</code>, unlike previous versions, this should have no affect on your code. <code>document</code> scroll values will still report correctly in Safari iOS, even though <code>overflow</code> is added to <code>html</code> to prevent the canvas from resizing by the browser when a sidebar displays.</p>
     </div>
 
     <h2 class="ui dividing header">Behavior</h2>

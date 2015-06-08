@@ -283,8 +283,11 @@ pre code {
   position: absolute;
   right: -0.5em;
   top: 0px;
-  width: 300px;
+  width: 250px;
   padding-top: 2em;
+}
+#example .fixed.column + .examples {
+  margin-right: 280px;
 }
 
 #example .tab.masthead .item.menu {
@@ -1765,6 +1768,24 @@ body.progress.animated .ui.progress .bar {
   bottom: -2px;
 }
 
+/* Remove Overview from pages with Examples */
+@media only screen and (max-width: 1500px) {
+
+  #example .fixed.column {
+    right: auto;
+    left: 100%;
+    margin-left: 4.5em;
+    width: 300px;
+  }
+  #example .fixed.column + .examples {
+    margin-right: 0px;
+  }
+  #example .fixed.column + .examples .right.rail {
+    display: none;
+  }
+
+}
+
 
 /* Table Ad */
 @media only screen and (max-width: 1272px) {
@@ -1871,6 +1892,15 @@ body.progress.animated .ui.progress .bar {
   /* Hide Music */
   #example .main.menu .music.item {
     display: none;
+  }
+
+  /* Move Examples */
+  #example .fixed.column {
+    width: 250px;
+    margin-left: 3em;
+  }
+  #example .fixed.column .sticky {
+    padding-top: 2em;
   }
 
 }

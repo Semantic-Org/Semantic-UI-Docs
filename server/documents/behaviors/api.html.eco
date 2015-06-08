@@ -116,11 +116,11 @@ type        : 'UI Behavior'
       <h2 class="ui dividing header">Querying API Actions</h2>
 
       <div class="no example">
-        <div class="ui top attached info message">
-          <div class="ui header">Open Your Web Console</div>
+        <div class="ui info message">
+          <div class="header">Open Your Web Console</div>
           <p>The following examples work best while viewing logs in your web console.  This experienced is optimized for Firebug, but will also appear in webkit browsers <a href="https://code.google.com/p/chromium/issues/detail?id=306120" target="_blank">with minor issues.</a></p>
         </div>
-        <div class="ui bottom attached message">
+        <div class="ui message">
           API requests for the following demos have been faked using API's <code>mockResponse</code> to avoid rate throttling from public APIs. No actual data is returned.
         </div>
         <h4 class="ui header">Attaching API Events</h4>

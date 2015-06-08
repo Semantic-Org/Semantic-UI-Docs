@@ -110,32 +110,12 @@ semantic.ready = function() {
           $('<i/>')
             .addClass('icon code')
             .insertBefore( $insertPoint )
-            .on('click', function() {
-              $.cookie('expertiseLevel', 2);
-              handler.createCode.call(this);
-            })
           ;
         })
       ;
     },
 
-    search: {
-      focus: function() {
-        $(this).val('');
-        $(this).closest('.search').removeClass('hidden');
-        $(this).closest('.menu').addClass('searching');
-        handler.loadSearch();
-      },
-      blur: function() {
-        $(this).closest('.search').addClass('hidden');
-        $(this).closest('.menu').removeClass('searching');
-      }
-    },
-
     shortcut: {
-      search: function() {
-        $('#search').find('input').focus();
-      },
       modal: function() {
         var
           $modal = $('#shortcuts'),
@@ -774,7 +754,7 @@ semantic.ready = function() {
 
       if($html.size() === 0) {
         $html = $('<div class="html">').insertBefore($annotation);
-        $label = $('<div class="ui top attached label">').html('<a class="copy">Copy</a>Example');
+        $label = $('<div class="ui top attached label">').html('Example');
         $label.prependTo($html);
         $demo
           .detach()
@@ -1124,40 +1104,6 @@ semantic.ready = function() {
     .sidebar('attach events', '.launch.button, .view-ui, .launch.item')
   ;
 
-  $search
-    .children('.icon')
-      .on('click', handler.shortcut.search)
-      .end()
-    // Load search data the first time user focuses the search input.
-    .find('input')
-      .on('focus', handler.search.focus)
-      .on('blur', handler.search.blur)
-  ;
-
-  // setup keyboard shortcuts
-  var shortcuts = [
-    {
-      name        : 'Search',
-      key         : 's',
-      aka         : 's',
-      description : 'Focus search bar',
-      action      : handler.shortcut.search
-    },
-    {
-      name        : 'Help',
-      key         : 'z',
-      aka         : '?',
-      description : 'Show keyboard shortcuts',
-      action      : handler.shortcut.modal
-    }
-  ];
-  /*  $.each(shortcuts, function(index, shortcut) {
-      $document
-        .on('keydown', shortcut.key, shortcut.action)
-      ;
-    });
-  */
-
   handler.createIcon();
 
   if(expertiseLevel < 2) {
@@ -1177,6 +1123,11 @@ semantic.ready = function() {
             content  : 'View Source',
             target   : $(this).find('i.code')
           })
+          .find('i.code')
+            .on('click', function() {
+              $.cookie('expertiseLevel', 2);
+              handler.createCode.call(this);
+            })
         ;
       })
     ;

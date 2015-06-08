@@ -20,14 +20,12 @@
       <div class="ui hidden divider"></div>
 
       <div class="ui right floated main menu">
-        <% if @document.type is 'UI Global' or @document.type is 'UI Element' or @document.type is 'UI Collection' or @document.type is 'UI View' or @document.type is 'UI Module' or @document.type is 'UI Behavior': %>
         <a class="bug popup icon item" data-content="Edit This Page" href="https://github.com/Semantic-Org/Semantic-UI-Docs/edit/<%= @getBranch() %>/server/documents/<%= @document.elementType %>s/<%= @document.element %>.html.eco">
           <i class="edit icon"></i>
         </a>
         <a class="bug popup icon item" data-content="Submit Bug Report" href="https://github.com/Semantic-Org/Semantic-UI/issues/new?title=[<%= @document.title %>] - Your Bug Name&body=**Steps to Reproduce**%0A1. Do something%0A2. Do something else.%0A3. Do one last thing.%0A%0A**Expected**%0AThe button should do this%0A%0A**Result**%0AThe button does not do this%0A%0A**Testcase**%0A(fork this to get started)%0Ahttp://jsfiddle.net/rduvhn8u/1/">
           <i class="bug icon"></i>
         </a>
-        <% end %>
         <a class="github popup icon item" data-content="View project on GitHub" href="https://github.com/Semantic-Org/Semantic-UI">
           <i class="alternate github icon"></i>
         </a>

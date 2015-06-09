@@ -64,13 +64,13 @@ pre.console {
   direction:ltr;
 }
 code {
-  background-color: rgba(0, 0, 0, 0.03);
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.08);
+  border-radius: 3px;
   display: inline-block;
   font-family: "Monaco","Menlo","Ubuntu Mono","Consolas","source-code-pro",monospace;
   font-size: 0.85714em;
   font-weight: bold;
-  padding: 2px 4px;
+  padding: 3px 5px;
   vertical-align: baseline;
 }
 pre code {
@@ -408,13 +408,6 @@ pre code {
    Basic Layout
 -----------------*/
 
-#example.basic .main.container {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 4em 0em !important;
-}
-
 #example.basic .fixed.menu > .container,
 #example.basic .main.container,
 #example.basic .masthead > .container {
@@ -424,9 +417,6 @@ pre code {
   margin-right: 4em !important;
 }
 
-#example.basic > .pusher > .full.height {
-  background-color: #FFFFFF !important;
-}
 #example.basic .main.container > .rail,
 #example.basic .main.container > .tab > .rail {
   display: none !important;
@@ -461,7 +451,7 @@ pre code {
 #example.minimal.basic .masthead > .container,
 #example.minimal.basic .footer > .container {
   position: relative;
-  width: 800px !important;
+  width: 700px !important;
   left: 0px;
   margin-left: auto !important;
   margin-right: auto !important;
@@ -469,6 +459,18 @@ pre code {
 #example.minimal > .pusher > .footer {
   padding-left: 0 !important;
   padding-right: 0 !important;
+}
+
+@media only screen and (max-width: 820px) {
+
+  #example.minimal.basic .fixed.menu > .container,
+  #example.minimal.basic .main.container,
+  #example.minimal.basic .masthead > .container,
+  #example.minimal.basic .footer > .container {
+    width: auto !important;
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+  }
 }
 
 
@@ -623,15 +625,13 @@ pre code {
   min-width: 100px;
 }
 
-
-#example .intro .example > h4 {
-  font-size: 1.2em;
+/* Intro Tab */
+#example .intro h3.ui.header {
+  margin-top: 4em;
 }
-#example .intro .example > h4 ~ p,
-#example .intro .example > h4 ~ .ignored {
-  margin: 1em 0em !important;
+#example .intro .example .anchor + p {
+  margin-top: 0.5em;
 }
-
 #example .intro .example > p {
   color: rgba(0, 0, 0, 0.8);
 }
@@ -901,6 +901,11 @@ pre code {
 #example.animated .negative.example > .grid {
   margin: -1rem !important;
   background-color: #FFEEEE;
+}
+
+#example .colored.example .column {
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 
 /* Animation */
@@ -1902,7 +1907,7 @@ body.progress.animated .ui.progress .bar {
     display: none;
   }
 
-  /* Hide Music */
+  /* Hide Music *]/
   #example .main.menu .music.item {
     display: none;
   }
@@ -1928,8 +1933,8 @@ body.progress.animated .ui.progress .bar {
   #example .masthead > .container,
   #example .main.container,
   #example .fixed.menu > .container {
-    margin-left: 2em !important;
-    margin-right: 2em !important;
+    margin-left: 1em !important;
+    margin-right: 1em !important;
     max-width: none !important;
   }
 
@@ -2005,7 +2010,10 @@ body.progress.animated .ui.progress .bar {
     display: none;
   }
   #example .masthead .main.menu + .main.menu {
-    display: block;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
   }
 
   /* No Download Button */

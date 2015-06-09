@@ -57,7 +57,7 @@
   animation: none;
   -webkit-animation: none;
 }
-#example .masthead .grid {
+#example .masthead .container {
   padding: 15rem 0em;
 }
 #example.index .following.bar iframe.github {
@@ -693,14 +693,14 @@
     vertical-align: top;
     margin-top: 0em;
   }
-  #example .masthead .grid {
+  #example .masthead .container {
     padding: 6rem 0rem;
   }
   #example.index .masthead.segment h1 {
     font-size: 2.25em;
   }
   #example.index .email.stripe .input {
-    width: auto;
+    width: 100%;
   }
   #example.index .following .secondary.menu {
     display: none;

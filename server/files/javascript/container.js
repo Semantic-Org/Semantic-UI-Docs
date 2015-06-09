@@ -4,16 +4,22 @@ semantic.container = {};
 semantic.container.ready = function() {
 
   var
+    $helpIcon = $('.main.container .help.icon'),
     $pageTabs = $('.masthead.tab.segment .menu .item')
   ;
 
   $pageTabs
     .tab({
-      history   : true,
-      onTabInit : function() {
+      history     : true,
+      onFirstLoad : function() {
         semantic.handler.makeCode();
       }
     })
+  ;
+  semantic.handler.makeCode();
+
+  $helpIcon
+    .popup()
   ;
 
 };

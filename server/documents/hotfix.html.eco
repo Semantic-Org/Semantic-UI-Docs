@@ -1,0 +1,65 @@
+---
+layout     : 'blank'
+css        : 'hotfix'
+standalone : true
+
+title      : 'Test Page'
+type       : 'Library'
+---
+<!-- TEST JS HERE !-->
+<style>
+  .container {
+    padding: 2em;
+  }
+</style>
+<script type="text/javascript">
+$(document).ready(function() {
+  $('.ui.dropdown').dropdown({
+    allowAdditions: true
+  });
+
+  $('form')
+    .on('submit', function(event){
+      event.preventDefault();
+    })
+  ;
+
+  $('.button.one')
+    .on('click', function() {
+      console.log('removing selected');
+      $('.ui.dropdown').dropdown('remove selected', 'custom skill');
+    })
+  ;
+  $('.button.two')
+    .on('click', function() {
+      console.log('set selected');
+      $('.ui.dropdown').dropdown('set selected', 'custom skill2');
+    })
+  ;
+  $('.button.three')
+    .on('click', function() {
+      console.log('remove selected');
+      $('.ui.dropdown').dropdown('remove selected');
+    })
+  ;
+
+});
+</script>
+
+<style>
+
+</style>
+<form class="ui container">
+
+    <div class="ui fluid multiple search selection dropdown">
+      <input name="tags" type="hidden" />
+      <i class="dropdown icon"></i>
+      <div class="default text">Skills</div>
+      <div class="menu">
+        <%- @partial('examples/single/preset-menu') %>
+      </div>
+    </div>
+    <div class="ui button one">Button One</div>
+    <div class="ui button two">Button Two</div>
+    <div class="ui button three">Button Three</div>
+</form>

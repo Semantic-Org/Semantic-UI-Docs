@@ -4,52 +4,50 @@ css        : 'index'
 standalone : true
 ---
 <div class="following bar">
-  <div class="ui grid container">
-    <div class="column">
-      <div class="ui large inverted secondary network menu">
-        <div class="item">
-          <div class="ui logo shape">
-            <div class="sides">
-              <div class="active ui side">
-                <img class="ui image" src="/images/logo.png">
-              </div>
-              <div class="learn side">
-                <img class="ui image" src="/images/learn-logo.png">
-              </div>
+  <div class="ui container">
+    <div class="ui large inverted secondary network menu">
+      <div class="item">
+        <div class="ui logo shape">
+          <div class="sides">
+            <div class="active ui side">
+              <img class="ui image" src="/images/logo.png">
+            </div>
+            <div class="learn side">
+              <img class="ui image" src="/images/learn-logo.png">
             </div>
           </div>
         </div>
-        <a class="view-ui item">
-          <i class="sidebar icon"></i> Menu
-        </a>
-        <a href="http://www.learnsemantic.com" data-site="learn" class="transition hidden additional item">Learn</a>
-        <div class="right menu">
-          <div class="item">
-            <a class="twitter-share-button twitter"
-              href="http://twitter.com/share"
-              data-text="Semantic UI is a next-gen UI library"
-              data-url="http://semantic-ui.com"
-              data-via="semanticui">
-            </a>
-            <% if 'development' in @getEnvironments(): %>
-            <% else: %>
-            <script type="text/javascript">
-            window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
-            </script>
-            <iframe class="github" src="http://ghbtns.com/github-btn.html?user=semantic-org&amp;repo=semantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
-            <% end %>
-          </div>
-          <div class="ui language floating dropdown link item" id="languages">
-            <i class="world icon"></i>
-            <div class="text">English</div>
-            <div class="menu">
-              <div class="header">Search Languages</div>
-              <div class="ui icon search input">
-                <i class="search icon"></i>
-                <input type="text" placeholder="Search languages...">
-              </div>
-              <%- @partial('languages') %>
+      </div>
+      <a class="view-ui item">
+        <i class="sidebar icon"></i> Menu
+      </a>
+      <a href="http://www.learnsemantic.com" data-site="learn" class="transition hidden additional item">Learn</a>
+      <div class="right menu">
+        <div class="item">
+          <a class="twitter-share-button twitter"
+            href="http://twitter.com/share"
+            data-text="Semantic UI is a next-gen UI library"
+            data-url="http://semantic-ui.com"
+            data-via="semanticui">
+          </a>
+          <% if 'development' in @getEnvironments(): %>
+          <% else: %>
+          <script type="text/javascript">
+          window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
+          </script>
+          <iframe class="github" src="http://ghbtns.com/github-btn.html?user=semantic-org&amp;repo=semantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
+          <% end %>
+        </div>
+        <div class="ui language floating dropdown link item" id="languages">
+          <i class="world icon"></i>
+          <div class="text">English</div>
+          <div class="menu">
+            <div class="header">Search Languages</div>
+            <div class="ui icon search input">
+              <i class="search icon"></i>
+              <input type="text" placeholder="Search languages...">
             </div>
+            <%- @partial('languages') %>
           </div>
         </div>
       </div>
@@ -57,40 +55,38 @@ standalone : true
   </div>
 </div>
 <div class="zoomed masthead segment">
-  <div class="ui grid container">
-    <div class="column">
-      <div class="introduction">
-        <a class="ui black version label" href="https://github.com/Semantic-Org/Semantic-UI/blob/master/RELEASE-NOTES.md">
-          <%= @getVersion() %>
-        </a>
-        <h1 class="ui inverted header">
-          <span class="library">
-            Semantic UI
-          </span>
-          <b data-text="User Interface">HTML</b>
-          <span class="typed-cursor">|</span>
-          <span class="text">is the language of the web.</span>
-        </h1>
-        <div class="ui hidden divider"></div>
+  <div class="ui container">
+    <div class="introduction">
+      <a class="ui black version label" href="https://github.com/Semantic-Org/Semantic-UI/blob/master/RELEASE-NOTES.md">
+        <%= @getVersion() %>
+      </a>
+      <h1 class="ui inverted header">
+        <span class="library">
+          Semantic UI
+        </span>
+        <b data-text="User Interface">HTML</b>
+        <span class="typed-cursor">|</span>
+        <span class="text">is the language of the web.</span>
+      </h1>
+      <div class="ui hidden divider"></div>
 
-        <a href="https://github.com/Semantic-Org/Semantic-UI/archive/next.zip" class="ui huge basic inverted teal download button">
-          Download Now
-        </a>
-        <!--
-        <a href="<%= @getZip() %>" class="ui huge basic inverted teal download button">
-          Download Now
-        </a> -->
-      </div>
-      <div class="inverted advertisement">
-        <% unless 'development' in @getEnvironments(): %>
-        <div id="carbonads-container">
-          <div class="carbonad">
-            <div id="azcarbon"></div>
-            <script type="text/javascript">var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = "http://engine.carbonads.com/z/51619/azcarbon_2_1_0_VERTDARK"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script>
-          </div>
+      <a href="https://github.com/Semantic-Org/Semantic-UI/archive/next.zip" class="ui huge basic inverted teal download button">
+        Download Now
+      </a>
+      <!--
+      <a href="<%= @getZip() %>" class="ui huge basic inverted teal download button">
+        Download Now
+      </a> -->
+    </div>
+    <div class="inverted advertisement">
+      <% unless 'development' in @getEnvironments(): %>
+      <div id="carbonads-container">
+        <div class="carbonad">
+          <div id="azcarbon"></div>
+          <script type="text/javascript">var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = "http://engine.carbonads.com/z/51619/azcarbon_2_1_0_VERTDARK"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script>
         </div>
-        <% end %>
       </div>
+      <% end %>
     </div>
   </div>
 </div>

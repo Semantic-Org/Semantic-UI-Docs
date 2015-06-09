@@ -789,6 +789,10 @@ type        : 'UI Behavior'
         <td>Submits selected form</td>
       </tr>
       <tr>
+        <td>is valid</td>
+        <td>Returns true/false whether a form passes its validation rules</td>
+      </tr>
+      <tr>
         <td>validate form</td>
         <td>Validates form and calls onSuccess or onFailure</td>
       </tr>

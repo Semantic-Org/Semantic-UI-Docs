@@ -17,7 +17,7 @@ themes      : ['Default']
 
 <%- @partial('header', { tabs: {  introduction: 'Introduction', definition: 'Definition', examples: 'Examples' } }) %>
 
-<div class="ui active tab" data-tab="introduction">
+<div class="ui active intro tab" data-tab="introduction">
 
   <div class="ui main container">
 
@@ -27,163 +27,85 @@ themes      : ['Default']
 
       <h3 class="ui header">When To Use</h3>
 
-      <p>A container is a simpler alternative to a <a href="/collections/grid.html#page-grid">page grid</a> for holding site content. Containers provide a content wrapper that ensures content does not flow too widely on pages.</p>
+      <p>A container is an element designed exclusively for one purpose: to contain page elements to a reasonable maximum width. This is useful to couple with other UI elements like <a href="/collections/grid.html">grid</a> or <a href="/collections/menu.html">menu</a> to restrict their width so that they can be scanned easily by a user.</p>
 
-      <p>Unlike a <code>page grid</code>, which continues to grow as a percentage of total screen width, containers maintain a single size, making responsive styling simpler.</p>
+      <p>Containers are designed to responsively adjust their maximum width based on the size of the screen they are appearing.</p>
 
-      <p>Containers are designed to be compatible with grids. The default theme uses a maximum container width of <code>1200px</code> which gives each grid column exactly <code>75px</code> when nested inside a container element.</p>
+      <h3 class="ui header">Container Sizes</h3>
 
-      <h3 class="ui header">Feature Comparison</h3>
+      <p>Containers remain a fixed pixel width at each device size. For exact specifications check the table below</p>
 
-      <table class="ui padded definition table">
+      <table class="ui celled definition table">
         <thead>
-          <th></th>
-          <th class="six wide">Container</th>
-          <th class="six wide">Page Grid</th>
+          <th class="collapsing"></th>
+            <th>Mobile</th>
+            <th>Tablet</th>
+            <th class="single line">Small Monitor</th>
+            <th class="single line">Large Monitor</th>
         </thead>
         <tbody>
           <tr>
-            <td>Best Used With</td>
+            <td>Dimensions</td>
+            <td>100%</td>
             <td>
-              <ul class="ui list">
-                <li>Layouts designed to include a centered segment with a border or shadow that would look incorrect if the aspect ratio changes</li>
-                <li>Pages using off-canvas content like <a href="/elements/rail.html">rails</a></li>
-                <li>Text heavy pages that cannot accomodate fluid width resizes.</li>
-                <li>Pages with a column that requires fixed dimension</li>
-              </ul>
+              723px
+              <i class="help link icon" data-html="Maximum device width with two <code>1em</code> gutters and a <code>17px</code> scrollbar width. <div class='ui divider'></div> <code>768 - (14 * (1 * 2)) - 17</code>">
             </td>
             <td>
-              <ul class="ui list">
-                <li>Layouts that use full width backgrounds, and prefer white space to segmented content</li>
-                <li>Scalable, graphic-heavy content like homepages, or product list pages.</li>
-                <li>Web application with several columns using fluid components</li>
-              </ul>
+              933px
+              <i class="help link icon" data-html="Maximum device width with two <code>1.5em</code> gutters and a <code>17px</code> scrollbar width. <div class='ui divider'></div> <code>992 - (14 * (1.5 * 2)) - 17</code>">
+            </td>
+            <td>
+              1127px
+              <i class="help link icon" data-html="Maximum device width with two <code>2em</code> gutters and a <code>17px</code> scrollbar width. <div class='ui divider'></div> <code>1200 - (14 * (2 * 2)) - 17</code>">
             </td>
           </tr>
           <tr>
-            <td>Benefits</td>
-            <td>
-              <ul class="ui list">
-                <li>Requires content resizes only once per device (3 possible exact sizes)</li>
-                <li>Simpler to achieve layouts with a styled centered container</li>
-                <li>Less markup, no need for column and row markers, or to nest segments</li>
-                <li>Works well with custom css and precise content dimensions</li>
-              </ul>
-            </td>
-            <td>
-              <ul class="ui list">
-                <li>More spacious layouts that continue to adapt with wide screens</li>
-                <li>Easier for layouts with full width color "stripes" like homepages</li>
-                <li>More comfortably fills page on very large monitors like cinema displays</li>
-                <li>Grid columns provide rules on content spacing that force you to harmonize negative space</li>
-              </ul>
-            </td>
+            <td>Gutter Size</td>
+            <td>1em</td>
+            <td>Fluid</td>
+            <td>Fluid</td>
+            <td>Fluid</td>
+          </tr>
+      <!--     <tr>
+            <td>Variable</td>
+            <td><code>$largestMobileScreen</code></td>
+            <td><code>$mobileBreakpoint</code></td>
+            <td><code>$smallMonitorBreakpoint</code></td>
+            <td><code>$largeMonitorBreakpoint</code></td>
+          </tr> -->
+          <tr>
+            <td>Grid Variation</td>
+            <td><code>mobile only</code></td>
+            <td><code>tablet only</code></td>
+            <td><code>small monitor only</code></td>
+            <td><code>large monitor only</code></td>
           </tr>
           <tr>
-            <td>Drawbacks</td>
-            <td>
-              <ul class="ui list">
-                <li>Maximum width may seem not wide enough to showcase content on large screens</li>
-                <li>Containers use pixel values which make responsive styling using <code>em</code> more difficult.</li>
-              </ul>
-            </td>
-            <td>
-              <ul class="ui list">
-                <li>Page gutters are optimized for specific breakpoints like 1080p and 1440p, which means at "in-between" resolutions they may not take up as much space</li>
-                <li>Content columns may flow too wide on large devices</li>
-                <li>Percentage layouts can have longer browser reflow times</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td>Mobile</td>
-            <td><code>100%</code> width, <code>1em</code> fixed gutter</td>
-            <td><code>100%</code> width, <code>1em</code> fixed gutter</td>
-          </tr>
-          <tr>
-            <td>Tablet</td>
-            <td><code>752px</code> Centered</td>
-            <td><code>100%</code> width, <code>2em</code> fixed gutter</td>
-          </tr>
-          <tr>
-            <td>Computer</td>
-            <td>
-              <code>1040px</code> centered below <code>1228px</code>
-              <div class="ui divider"></div>
-              <code>1200px</code> above <code>1228px</code>
-            </td>
-            <td>
-              8% gutters below <code>1400px</code>
-              <div class="ui divider"></div>
-              15% gutters below <code>1920px</code>
-              <div class="ui divider"></div>
-              23% gutters above <code>1920px</code>
-            </td>
-          </tr>
-          <tr>
-            <td>Width</td>
-            <td>Fixed Width</td>
-            <td>Fluid Width</td>
-          </tr>
-          <tr>
-            <td>Segments</td>
-            <td>Can be used together on the same element with <code>ui segment</code></td>
-            <td><code>ui segment</code> must be nested inside columns</td>
-          </tr>
-          <tr>
-            <td>Backgrounds</td>
-            <td>Yes, and will appear same size as container</td>
-            <td>Full width only. Must be set on rows and columns because grids use negative margins to offset columns.</td>
-          </tr>
-          <tr>
-            <td>Centering</td>
-            <td>Normal Centering using margin</td>
-            <td>Centers using horizontal padding</td>
-          </tr>
-          <tr>
-            <td>Responsive</td>
-            <td>Gutters on tablet and mobile</td>
-            <td>Visibility classes, responsive patterns for column width</td>
+            <td>Device Width</td>
+            <td>below 768px</td>
+            <td>768px - 991px</td>
+            <td>992px - 1200px</td>
+            <td>above 1200px</td>
           </tr>
         </tbody>
       </table>
 
-      <h3 class="ui header">Default Theme Sizes</h3>
+      <h3 class="ui header">Determining Maximum Widths</h3>
 
-      <table class="ui celled padded definition table">
-        <thead>
-          <th></th>
-          <th class="six wide">Container</th>
-          <th class="six wide">Page Grid</th>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Mobile</td>
-            <td><code>100%</code> width, <code>1em</code> fixed gutter</td>
-            <td><code>100%</code> width, <code>1em</code> fixed gutter</td>
-          </tr>
-          <tr>
-            <td>Tablet</td>
-            <td><code>752px</code> Centered</td>
-            <td><code>100%</code> width, <code>2em</code> fixed gutter</td>
-          </tr>
-          <tr>
-            <td>Computer</td>
-            <td>
-              <code>1040px</code> centered below <code>1228px</code>
-              <div class="ui divider"></div>
-              <code>1200px</code> above <code>1228px</code>
-            </td>
-            <td>
-              8% gutters below <code>1400px</code>
-              <div class="ui divider"></div>
-              15% gutters below <code>1920px</code>
-              <div class="ui divider"></div>
-              23% gutters above <code>1920px</code>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <p>Containers appear at the same width at each device size. This size is calculated programmatically by determining the maximum device width available within a device breakpoint, given a desired minimum gutter size.</p>
+
+      <p>For example to determine tablet container size the following formula is used:</p>
+
+      <div class="code" data-type="less">
+      @tabletMinimumGutter: (@emSize  * 1); /* 1em gutter */
+      @tabletWidth: @tabletBreakpoint - (@tabletMinimumGutter * 2) - @scrollbarWidth;
+      </div>
+
+      <p>This is the same as <code>768px - (14px * 2) - 17px</code> or <code>723px</code></p>
+
+      <p>Adjusting site breakpoints in <code>site.variables</code> to use custom container sizes will automatically update container widths to match.</p>
+
 
     </div>
   </div>
@@ -303,6 +225,46 @@ themes      : ['Default']
       <div class="ui right aligned container">
         Right Aligned
       </div>
+      <div class="ui justified container">
+        <b>Justified</b>
+        <div class="ui divider"></div>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing
+        elit. Aenean commodo ligula eget dolor. Aenean massa
+        <strong>strong</strong>. Cum sociis natoque penatibus
+        et magnis dis parturient montes, nascetur ridiculus
+        mus. Donec quam felis, ultricies nec, pellentesque
+        eu, pretium quis, sem. Nulla consequat massa quis
+        enim. Donec pede justo, fringilla vel, aliquet nec,
+        vulputate eget, arcu. In enim justo, rhoncus ut,
+        imperdiet a, venenatis vitae, justo. Nullam dictum
+        felis eu pede <a href="#">link</a>
+        mollis pretium. Integer tincidunt. Cras dapibus.
+        Vivamus elementum semper nisi. Aenean vulputate
+        eleifend tellus. Aenean leo ligula, porttitor eu,
+        consequat vitae, eleifend ac, enim. Aliquam lorem ante,
+        dapibus in, viverra quis, feugiat a, tellus. Phasellus
+        viverra nulla ut metus varius laoreet. Quisque rutrum.
+        Aenean imperdiet. Etiam ultricies nisi vel augue.
+        Curabitur ullamcorper ultricies nisi.</p>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing
+        elit. Aenean commodo ligula eget dolor. Aenean massa
+        <strong>strong</strong>. Cum sociis natoque penatibus
+        et magnis dis parturient montes, nascetur ridiculus
+        mus. Donec quam felis, ultricies nec, pellentesque
+        eu, pretium quis, sem. Nulla consequat massa quis
+        enim. Donec pede justo, fringilla vel, aliquet nec,
+        vulputate eget, arcu. In enim justo, rhoncus ut,
+        imperdiet a, venenatis vitae, justo. Nullam dictum
+        felis eu pede <a href="#">link</a>
+        mollis pretium. Integer tincidunt. Cras dapibus.
+        Vivamus elementum semper nisi. Aenean vulputate
+        eleifend tellus. Aenean leo ligula, porttitor eu,
+        consequat vitae, eleifend ac, enim. Aliquam lorem ante,
+        dapibus in, viverra quis, feugiat a, tellus. Phasellus
+        viverra nulla ut metus varius laoreet. Quisque rutrum.
+        Aenean imperdiet. Etiam ultricies nisi vel augue.
+        Curabitur ullamcorper ultricies nisi.</p>
+      </div>
     </div>
 
     <div class="example">
@@ -337,78 +299,8 @@ themes      : ['Default']
     <h2 class="ui dividing header">Examples</h2>
 
     <div class="no example">
-      <h4 class="ui header">Comparing Page Grids to Grid Containers</h4>
-      <p>The following shows a side-by-side comparison of using both containers and page grids to create a page layout. Containers will remain a fixed size, while page grids will adapt their width constantly with browser changes.</p>
-      <p>These grids use the <code>equal width</code> variation which splits all undeclared column widths evenly in size.</p>
-    </div>
-
-    <div class="ui ignored code">
-      <div class="ui equal width grid container">
-        <div class="column">
-          <img>
-        </div>
-        <div class="seven wide column">
-          <p></p>
-          <p></p>
-          <p></p>
-        </div>
-        <div class="column">
-          <img>
-        </div>
-      </div>
-    </div>
-    <div class="ui ignored code">
-      <div class="ui equal width page grid">
-        <div class="column">
-          <img>
-        </div>
-        <div class="seven wide column">
-          <p></p>
-          <p></p>
-          <p></p>
-        </div>
-        <div class="column">
-          <img>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <h3 class="ui center aligned header">Container</h3>
-  <div class="ui equal width grid container">
-    <div class="column">
-      <img src="/images/wireframe/white-image.png" class="ui bordered wireframe image">
-    </div>
-    <div class="seven wide column">
-      <h2 class="ui header">Dogs Roles with Humans</h2>
-      <p>Domestic dogs inherited complex behaviors, such as bite inhibition, from their wolf ancestors, which would have been pack hunters with complex body language. These sophisticated forms of social cognition and communication may account for their trainability, playfulness, and ability to fit into human households and social situations, and these attributes have given dogs a relationship with humans that has enabled them to become one of the most successful species on the planet today.</p>
-      <p>The dogs' value to early human hunter-gatherers led to them quickly becoming ubiquitous across world cultures. Dogs perform many roles for people, such as hunting, herding, pulling loads, protection, assisting police and military, companionship, and, more recently, aiding handicapped individuals. This impact on human society has given them the nickname "man's best friend" in the Western world. In some cultures, however, dogs are also a source of meat.</p>
-    </div>
-    <div class="column">
-      <img src="/images/wireframe/white-image.png" class="ui bordered wireframe image">
-    </div>
-  </div>
-
-  <h3 class="ui center aligned header">Page Grid</h3>
-  <div class="ui equal width page grid">
-    <div class="column">
-      <img src="/images/wireframe/white-image.png" class="ui bordered wireframe image">
-    </div>
-    <div class="seven wide column">
-      <h2 class="ui header">Dogs Roles with Humans</h2>
-      <p>Domestic dogs inherited complex behaviors, such as bite inhibition, from their wolf ancestors, which would have been pack hunters with complex body language. These sophisticated forms of social cognition and communication may account for their trainability, playfulness, and ability to fit into human households and social situations, and these attributes have given dogs a relationship with humans that has enabled them to become one of the most successful species on the planet today.</p>
-      <p>The dogs' value to early human hunter-gatherers led to them quickly becoming ubiquitous across world cultures. Dogs perform many roles for people, such as hunting, herding, pulling loads, protection, assisting police and military, companionship, and, more recently, aiding handicapped individuals. This impact on human society has given them the nickname "man's best friend" in the Western world. In some cultures, however, dogs are also a source of meat.</p>
-    </div>
-    <div class="column">
-      <img src="/images/wireframe/white-image.png" class="ui bordered wireframe image">
-    </div>
-  </div>
-
-  <div class="ui main container">
-
-    <div class="no example">
       <h4 class="ui header">Containers Using Grids</h4>
-      <p>A container can be combined with a grid allowing you to use all of the layout and alignment available for <a href="/collections/grid.html">grids</a> including responsive patterns.</p>
+      <p>A container can be combined with a grid allowing you to use all of the layout and alignment available for <a href="/collections/grid.html#doubling">grids</a> including responsive patterns.</p>
     </div>
 
     <div class="ui ignored code">
@@ -467,11 +359,11 @@ themes      : ['Default']
   <div class="ui main container">
     <div class="no example">
       <h4 class="ui header">Centered Menu</h4>
-      <p>A container can be used inside of a menu to make sure menu items appear inline with page contents</p>
+      <p>A container can be used inside of a menu to make sure menu items appear inline with page contents. Using responsive variations like <a href="/collections/menu.html#stackable">stackable</a> menu can help make contents adjust to different device sizes.</p>
     </div>
 
     <div class="ui ignored code">
-      <div class="ui attached menu">
+      <div class="ui attached stackable menu">
         <div class="ui container">
           <a class="item">
             <i class="home icon"></i> Home
@@ -499,7 +391,7 @@ themes      : ['Default']
     </div>
   </div>
 
-  <div class="ui attached menu">
+  <div class="ui attached stackable menu">
     <div class="ui container">
       <a class="item">
         <i class="home icon"></i> Home

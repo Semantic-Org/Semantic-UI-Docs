@@ -1,3 +1,4 @@
+<% introduction      = @getCollection("documents").findAll({type: $in: ['Introduction']},[{title: 1}]).toJSON() %>
 <% uiGlobals         = @getCollection("documents").findAll({type: $in: ['UI Global']},[{title: 1}]).toJSON() %>
 <% uiElements        = @getCollection("documents").findAll({type: $in: ['UI Element']},[{title: 1}]).toJSON() %>
 <% uiCollections     = @getCollection("documents").findAll({type: $in: ['UI Collection']},[{title: 1}]).toJSON() %>
@@ -13,11 +14,19 @@
     <a href="/"><b>UI Docs</b></a>
   </div>
   <a class="item" href="<%= @getZip() %>">
-    <i class="download icon"></i> <b>Download</b>
+    <i class="angle right icon"></i>
+    <b>Getting Started</b>
   </a>
-  <a class="item" href="/kitchen-sink.html">
-    <i class="cubes icon"></i> <b>All UI</b>
-  </a>
+  <div class="item">
+    <div class="<%= if @document.elementType is 'introduction' then 'active ' %>header">Introduction</div>
+    <div class="menu">
+      <% for element in introduction: %>
+        <a class="<%= if element.id is @document.id then 'active ' %>item" href="<%= element.url %>">
+          <%= element.title %>
+        </a>
+      <% end %>
+    </div>
+  </div>
   <div class="item">
     <div class="<%= if @document.elementType is 'global' then 'active ' %>header">Globals</div>
     <div class="menu">

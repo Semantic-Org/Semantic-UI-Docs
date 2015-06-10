@@ -27,13 +27,12 @@ themes      : ['Default']
 
       <h3 class="ui header">When To Use</h3>
 
-      <p>A container is an element designed exclusively for one purpose: to contain page elements to a reasonable maximum width. This is useful to couple with other UI elements like <a href="/collections/grid.html">grid</a> or <a href="/collections/menu.html">menu</a> to restrict their width so that they can be scanned easily by a user.</p>
+      <p>A container is an element designed to contain page elements to a reasonable maximum width based on the size of a user's screen. This is useful to couple with other UI elements like <a href="/collections/grid.html">grid</a> or <a href="/collections/menu.html">menu</a> to restrict their width to a reasonable size for display.</p>
 
-      <p>Containers are designed to responsively adjust their maximum width based on the size of the screen they are appearing.</p>
 
       <h3 class="ui header">Container Sizes</h3>
 
-      <p>Containers remain a fixed pixel width at each device size. For exact specifications check the table below</p>
+      <p>Containers are designed to responsively adjust their maximum width based on the size of the screen they are appearing.</p>
 
       <table class="ui celled definition table">
         <thead>
@@ -49,15 +48,15 @@ themes      : ['Default']
             <td>100%</td>
             <td>
               723px
-              <i class="help link icon" data-html="Maximum device width with two <code>1em</code> gutters and a <code>17px</code> scrollbar width. <div class='ui divider'></div> <code>768 - (14 * (1 * 2)) - 17</code>">
+              <i class="circle help link icon" data-html="Maximum device width with two <code>1em</code> gutters and a <code>17px</code> scrollbar width. <div class='ui divider'></div> <code>768 - (14 * (1 * 2)) - 17</code>">
             </td>
             <td>
               933px
-              <i class="help link icon" data-html="Maximum device width with two <code>1.5em</code> gutters and a <code>17px</code> scrollbar width. <div class='ui divider'></div> <code>992 - (14 * (1.5 * 2)) - 17</code>">
+              <i class="circle help link icon" data-html="Maximum device width with two <code>1.5em</code> gutters and a <code>17px</code> scrollbar width. <div class='ui divider'></div> <code>992 - (14 * (1.5 * 2)) - 17</code>">
             </td>
             <td>
               1127px
-              <i class="help link icon" data-html="Maximum device width with two <code>2em</code> gutters and a <code>17px</code> scrollbar width. <div class='ui divider'></div> <code>1200 - (14 * (2 * 2)) - 17</code>">
+              <i class="circle help link icon" data-html="Maximum device width with two <code>2em</code> gutters and a <code>17px</code> scrollbar width. <div class='ui divider'></div> <code>1200 - (14 * (2 * 2)) - 17</code>">
             </td>
           </tr>
           <tr>
@@ -98,6 +97,10 @@ themes      : ['Default']
       <p>For example to determine tablet container size the following formula is used:</p>
 
       <div class="code" data-type="less">
+      /* In site.variables */
+      @tabletBreakpoint            : 768px;
+
+      /* In container.variables */
       @tabletMinimumGutter: (@emSize  * 1); /* 1em gutter */
       @tabletWidth: @tabletBreakpoint - (@tabletMinimumGutter * 2) - @scrollbarWidth;
       </div>

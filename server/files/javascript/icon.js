@@ -10,39 +10,6 @@ semantic.icon.ready = function() {
     handler
   ;
 
-  // event handlers
-  handler = {
-    createTable: function() {
-      var
-        $grid = $(this),
-        columnCount = 5
-      ;
-      $grid
-        .find('.column:nth-child('+columnCount+'n+1)')
-          .each(function() {
-            var
-              $group = $(this)
-                .nextAll(':lt('+ (columnCount - 1) +')')
-                .andSelf()
-              ;
-              $group.wrapAll('<div class="row"></div>');
-              $group.filter('[data-content]').popup({
-                position: 'top center',
-                variation: 'large inverted',
-                transition: 'fade up',
-                delay: {
-                  show: 200,
-                  hide: 0
-                }
-              });
-          })
-          .end()
-        .addClass('middle aligned relaxed')
-      ;
-    }
-  };
-
-  $grid.each(handler.createTable);
 
 };
 

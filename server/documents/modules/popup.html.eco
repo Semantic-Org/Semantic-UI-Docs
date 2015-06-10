@@ -326,12 +326,10 @@ themes      : ['Default']
 
     <div class="example">
       <h4 class="ui header">Wide Popup Menu</h4>
-      <div class="ignored">
-        <p>An easier way to display complex content, like a wide popup menu is to have the popup content as a pre-  existing part of your page's html.</p>
-        <p>Using the setting <code>inline: true</code> will let Semantic know to display the next sibling <code>ui  popup</code> element after the activator.</p>
+      <p>An easier way to display complex content, like a wide popup menu is to have the popup content as a pre-  existing part of your page's html.</p>
+      <p>Using the setting <code>inline: true</code> will let Semantic know to display the next sibling <code>ui  popup</code> element after the activator.</p>
 
-        <p>Tweaking settings like the delay for show, and hide, and making the menu hoverable will help it function   more like a dropdown menu</p>
-      </div>
+      <p>Tweaking settings like the delay for show, and hide, and making the menu hoverable will help it function   more like a dropdown menu</p>
 
       <div class="evaluated code">
       $('.example .menu .browse')

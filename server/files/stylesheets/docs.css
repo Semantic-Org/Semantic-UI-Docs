@@ -70,7 +70,7 @@ code {
   font-family: "Monaco","Menlo","Ubuntu Mono","Consolas","source-code-pro",monospace;
   font-size: 0.85714em;
   font-weight: bold;
-  padding: 3px 5px;
+  padding: 0px 5px;
   vertical-align: baseline;
 }
 pre code {
@@ -693,11 +693,6 @@ pre code {
 #example .main.container > .tab > h2:first-child {
   margin-top: 0em;
 }
-#example .main.container .examples > h2 + p,
-#example .main.container > h2 + p,
-#example .main.container > .tab > h2 + p {
-  margin: -2rem 0 2em;
-}
 
 /* After Section Header */
 #example .example:first-child,
@@ -929,6 +924,10 @@ pre code {
   -moz-animation: none;
   -ms-animation: none;
   animation: none;
+}
+
+#example .ui.table .help.icon {
+  float: right;
 }
 
 #example.site .colors.example .column {
@@ -1638,9 +1637,6 @@ body.progress.animated .ui.progress .bar {
 #example .main.container > .tab > .right.rail .fixed.sticky {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-}
-#example .right.rail .accordion.menu .active.item {
-  background-color: transparent;
 }
 
 #example .following.menu .menu .active.item {

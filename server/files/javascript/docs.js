@@ -72,7 +72,7 @@ semantic.ready = function() {
     $example             = $('.example'),
     $popupExample        = $example.not('.no'),
     $shownExample        = $example.filter('.shown'),
-    $prerenderedExample  = $example.has('.ui.dropdown, .ui.rating, .ui.embed'),
+    $prerenderedExample  = $example.has('.ui.dropdown, .ui.search, .ui.rating, .ui.dimmer, .ui.embed'),
 
 
     $sidebarButton       = $('.fixed.launch.button'),

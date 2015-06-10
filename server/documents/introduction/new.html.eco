@@ -1,0 +1,454 @@
+---
+layout      : 'default'
+css         : 'divider'
+standalone  : true
+
+title       : 'New In 2.0'
+description : 'An introduction to new features in 2.0'
+type        : 'Introduction'
+---
+
+<%- @partial('header') %>
+<script src="/javascript/intro.js"></script>
+
+<div class="main ui intro container">
+
+  <h2 class="ui dividing header">Introduction</h2>
+
+  <p>2.0 brings a whopping <b>98</b> enhancements, <b>105</b> bug fixes, <b>2</b> new components, complete rewrites of several important components like <code>menu</code>, and <code>input</code>, and much more newness.</p>
+
+  <p>There's just too much to cover in one page, but we've tried our best to give you examples of some of the new features available in 2.0</p>
+
+  <p>To see the full list of what's changed in 2.0 check out the project's release notes.</p>
+
+  <a href="https://github.com/Semantic-Org/Semantic-UI/blob/master/RELEASE-NOTES.md" target="_blank" class="ui button">View Release Notes</a>
+
+
+  <h2 class="ui dividing header">Grids</h2>
+
+  <div class="example">
+    <h4 class="ui header">Flexbox</h4>
+    <p>Grids in 2.0 now use <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes" target="_blank"><code>flexbox</code></a> and are equal height across rows by default.</p>
+    <div class="ui three column divided grid">
+      <div class="row">
+        <div class="column">
+          <div class="ui segment">
+            1
+          </div>
+        </div>
+        <div class="column">
+          <div class="ui segment">
+            1
+          </div>
+          <div class="ui segment">
+            2
+          </div>
+        </div>
+        <div class="column">
+          <div class="ui segment">
+            1
+          </div>
+          <div class="ui segment">
+            2
+          </div>
+          <div class="ui segment">
+            3
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="highlighted example">
+    <h4 class="ui header">Evenly Divided</h4>
+    <p>The new <a href="#equal-width"><code>equal width</code></a> grid variation adjusts column widths automatically to split their container evenly without having to specify a column count.</p>
+    <div class="ui equal width grid">
+      <div class="column"></div>
+      <div class="column"></div>
+      <div class="column"></div>
+      <div class="column"></div>
+    </div>
+  </div>
+
+  <div class="highlighted example">
+    <h4 class="ui header">Containers</h4>
+    <p><a href="/elements/container.html">Containers</a> have been added as a simple way to limit content width.</p>
+    <div class="ui container">
+      <div class="ui three column grid">
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Stretched rows</h4>
+    <p>The new <a href="#stretched"><code>stretched</code></a> variation adjusts each column's contents to grow to the full height of the column.</p>
+    <div class="ui three column stretched grid">
+      <div class="row">
+        <div class="column">
+          <div class="ui segment">
+            1
+          </div>
+        </div>
+        <div class="column">
+          <div class="ui segment">
+            1
+          </div>
+          <div class="ui segment">
+            2
+          </div>
+        </div>
+        <div class="column">
+          <div class="ui segment">
+            1
+          </div>
+          <div class="ui segment">
+            2
+          </div>
+          <div class="ui segment">
+            3
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="ui dividing header">Dropdowns</h2>
+
+  <div class="dropdown example">
+    <h4 class="ui header">Multiple Selection</h4>
+    <p>Multiple select dropdowns are now available, and can generate automatically from standard html selects.  </p>
+    <p>Dropdowns all now support advanced keyboard shortcuts like <code>pagedown</code>, <code>delete</code>, <code>shift+left</code> <code>ctrl+click</code>, and selection using first letter of item.</p>
+    <select class="ui fluid dropdown" multiple>
+      <%- @partial('examples/single/state-options') %>
+    </select>
+  </div>
+
+  <div class="user example">
+    <h4 class="ui header">User Tagging</h4>
+    <p>All dropdowns, single and multiple now support user tagging. Values can be automatically tokenized in a hidden input, or using a select</p>
+    <div class="ignored code" data-type="javascript">
+    $('.ui.dropdown')
+      .dropdown({
+        allowAdditions: true
+      })
+    ;
+    </div>
+    <div class="ui fluid search selection dropdown">
+      <input name="tags" type="hidden" />
+      <i class="dropdown icon"></i>
+      <div class="default text">Skills</div>
+      <div class="menu">
+        <%- @partial('examples/single/preset-menu') %>
+      </div>
+    </div>
+  </div>
+
+  <div class="remote example">
+    <h4 class="ui header">Remote Data</h4>
+    <p>All dropdowns now support loading remote data. Selected name value pairs retrieved remotely are stored in <code>sessionStorage</code> to make sure they appear just as retrieved on page refresh.</p>
+    <div class="ignored code" data-type="javascript">
+      // somewhere in app
+      $.api.settings.api = {
+        queryTags: '//api.semantic-ui.com/tags/{query}'
+      };
+      $('.ui.dropdown')
+        .dropdown({
+          apiSettings: {
+            action: 'queryTags'
+          }
+        })
+      ;
+    </div>
+    <div class="ui form">
+      <div class="two fields">
+        <div class="field">
+          <label>Favorite Animal</label>
+          <div class="ui search selection dropdown">
+            <input type="hidden">
+            <i class="dropdown icon"></i>
+            <input type="text" class="search">
+            <div class="default text">Select one...</div>
+          </div>
+        </div>
+        <div class="field">
+          <label>Favorite Animals</label>
+          <div class="ui multiple search selection dropdown">
+            <input type="hidden">
+            <i class="dropdown icon"></i>
+            <input type="text" class="search">
+            <div class="default text">Select...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="dropdown example">
+    <h4 class="ui header">Nested Menus</h4>
+    <p>Nested scrolling menus are now supported. These menus support all the same keyboard shortcuts and filtering as regular menus.</p>
+    <div class="ui floating dropdown labeled icon button">
+      <i class="filter icon"></i>
+      <span class="text">Filter Posts</span>
+      <div class="menu">
+        <div class="ui icon search input">
+          <i class="search icon"></i>
+          <input type="text" placeholder="Search tags...">
+        </div>
+        <div class="divider"></div>
+        <div class="header">
+          <i class="tags icon"></i>
+          Tag Label
+        </div>
+        <div class="scrolling menu">
+          <div class="item">
+            <div class="ui red empty circular label"></div>
+            Important
+          </div>
+          <div class="item">
+            <div class="ui blue empty circular label"></div>
+            Announcement
+          </div>
+          <div class="item">
+            <div class="ui black empty circular label"></div>
+            Cannot Fix
+          </div>
+          <div class="item">
+            <div class="ui purple empty circular label"></div>
+            News
+          </div>
+          <div class="item">
+            <div class="ui orange empty circular label"></div>
+            Enhancement
+          </div>
+          <div class="item">
+            <div class="ui yellow empty circular label"></div>
+            Off Topic
+          </div>
+          <div class="item">
+            <div class="ui pink empty circular label"></div>
+            Interesting
+          </div>
+          <div class="item">
+            <div class="ui green empty circular label"></div>
+            Discussion
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="no example">
+    <h4 class="ui header">Much More</h4>
+    <p>Dropdowns support many, many new features, including:</p>
+    <ul class="ui large bulleted list">
+      <li>Maximum selection count is supported for multiple selects</li>
+      <li>Dropdowns will now automatically change direction to open upward if no space is left on the screen</li>
+      <li>Mutation observers will now watch for changes in menus or the elements they are generated from and will update choices automatically</li>
+      <li>Elements in all dropdowns can now be "jumped to" by pressing the first letter of the choice</li>
+      <li>Keyboard shortcuts now include power user shortcuts, <code>shift+select</code> for multiple <code>shift+right</code>, <code>page down</code> and <code>page up</code> and many more.</li>
+      <li>Custom error messages are now supported with search selects</li>
+    </ul>
+  </div>
+
+
+  <h2 class="ui dividing header">Menus</h2>
+
+  <div class="example">
+    <h4 class="ui header">Flexible Menus</h4>
+    <p>Menus have been completely rewritten to use flexbox. Items inside a menu will automatically adjust to align with other menu items regardless of size.</p>
+    <div class="ui top attached menu">
+      <div class="item">
+        <img src="/images/logo.png">
+      </div>
+      <a class="active item">
+        Bio
+      </a>
+      <a class="item">
+        Photos
+      </a>
+    </div>
+    <div class="ui bottom attached segment">
+      <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+    </div>
+  </div>
+  <div class="example">
+    <h4 class="ui header">Vertical Tabs</h4>
+    <p>Menus now include a new <code>vertical tabular</code> menu type.</p>
+    <div class="ui grid">
+      <div class="four wide column">
+        <div class="ui vertical fluid tabular menu">
+          <a class="item active">
+            Bio
+          </a>
+          <a class="item">
+            Pics
+          </a>
+          <a class="item">
+            Companies
+          </a>
+          <a class="item">
+            Links
+          </a>
+        </div>
+      </div>
+      <div class="twelve wide stretched column">
+        <div class="ui segment">
+          This is an stretched grid column. This segment will always match the tab height
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="example">
+    <h4 class="ui header">Better Coupling</h4>
+    <p>Menus now have better coupling with other components like dropdown, search, button, and input.</p>
+
+    <div class="ignored code" data-type="javascript">
+      $('.ui.menu .browse.item')
+        .popup({
+          popup     : '.classes.popup',
+          hoverable : true,
+          position  : 'bottom left',
+          delay     : {
+            show: 300,
+            hide: 800
+          }
+        })
+      ;
+    </div>
+    <div class="ignored code" data-type="javascript">
+      $('.ui.search')
+        .search({
+          type: 'category',
+          apiSettings: {
+            action: 'categorySearch'
+          }
+        })
+      ;
+    </div>
+    <div class="ui menu">
+      <div class="browse link item">Browse</div>
+      <div class="ui right aligned category search item">
+        <div class="ui transparent icon input">
+          <input class="prompt" type="text" placeholder="Search things...">
+          <i class="search link icon"></i>
+        </div>
+        <div class="results"></div>
+      </div>
+    </div>
+    <div class="ui flowing classes popup">
+      <div class="ui equal width divided grid">
+        <div class="column">
+          <h4 class="ui header">Business</h4>
+          <div class="ui link list">
+            <a class="item">Design & Urban Ecologies</a>
+            <a class="item">Fashion Design</a>
+            <a class="item">Fine Art</a>
+            <a class="item">Strategic Design</a>
+          </div>
+        </div>
+        <div class="column">
+          <h4 class="ui header">Liberal Arts</h4>
+          <div class="ui link list">
+            <a class="item">Anthropology</a>
+            <a class="item">Economics</a>
+            <a class="item">Media Studies</a>
+            <a class="item">Philosophy</a>
+          </div>
+        </div>
+        <div class="column">
+          <h4 class="ui header">Social Sciences</h4>
+          <div class="ui link list">
+            <a class="item">Food Studies</a>
+            <a class="item">Journalism</a>
+            <a class="item">Non Profit Management</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="ui dividing header">API</h2>
+
+  <div class="mock example">
+    <h4 class="ui header">Mocked Responses</h4>
+    <p>API now supports mocked responses, letting you specify how responses are returned in advance.</p>
+    <div class="code" data-type="javascript">
+      $('.toggle.button')
+        .api({
+          // lets just pretend this button always returns this JSON
+          mockResponse: {
+            success: true
+          }
+        })
+        .state({
+          text: {
+            inactive   : 'Off',
+            active     : 'On'
+          }
+        })
+      ;
+    </div>
+    <div class="ui toggle button">
+      Off
+    </div>
+  </div>
+  <div class="async example">
+    <h4 class="ui header">Custom Backends</h4>
+    <p>API can now use custom asynchronous callbacks for resolving API requests, this can let you use other custom XHR backends, or local data to resolve requests.</p>
+    <div class="code" data-type="javascript">
+    $('.toggle.button')
+      .api({
+        // lets just pretend this button mostly doesnt work
+        mockResponseAsync: function(settings, callback) {
+          var
+            unlikelySuccess = (Math.random() < 0.3),
+            response = (unlikelySuccess)
+              ? true
+              : false
+          ;
+          setTimeout(function() {
+            callback(response);
+          }, 500);
+        }
+      })
+      .state({
+        text: {
+          inactive : 'Off',
+          active   : 'On'
+        }
+      })
+    ;
+    </div>
+    <div class="ui toggle button">
+      Off
+    </div>
+
+  </div>
+  <div class="remote example">
+    <h4 class="ui header">Local Caching</h4>
+    <p>API now supports <code>sessionStorage</code> caching. Using this setting will instantly return results for the same url across a user's session.</p>
+    <p>Try refreshing the page and searching the same letter, results will appear instantly without a server roundtrip.</p>
+    <div class="code" data-type="javascript">
+    $('.ui.dropdown')
+      .dropdown({
+        apiSettings: {
+          cache : 'local',
+          url: '//api.semantic-ui.com/tags/{query}'
+        }
+      })
+    ;
+    </div>
+    <div class="ui form">
+      <div class="field">
+        <label>Favorite Animal</label>
+        <div class="ui search selection dropdown">
+          <input type="hidden">
+          <i class="dropdown icon"></i>
+          <input type="text" class="search">
+          <div class="default text">Select one...</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

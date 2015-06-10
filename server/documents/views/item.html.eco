@@ -76,8 +76,30 @@ themes      : ['Default']
   <h2 class="ui dividing header">Content</h2>
 
   <div class="example">
-    <h4 class="ui header">Image and Content</h4>
-    <p>A item can contain an image and a content group</p>
+    <h4 class="ui header">Image</h4>
+    <p>A item can contain an image</p>
+    <div class="ui divided items">
+      <div class="item">
+        <div class="image">
+          <img src="/images/wireframe/image.png">
+        </div>
+      </div>
+      <div class="item">
+        <div class="image">
+          <img src="/images/wireframe/image.png">
+        </div>
+      </div>
+      <div class="item">
+        <div class="image">
+          <img src="/images/wireframe/image.png">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Content</h4>
+    <p>A item can contain content</p>
     <div class="ui divided items">
       <div class="item">
         <div class="ui tiny image">

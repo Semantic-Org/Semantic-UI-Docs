@@ -21,96 +21,6 @@ themes      : ['Default']
 
   <div class="ui active intro tab" data-tab="overview">
 
-    <h2 class="ui dividing header">New in 2.0</h2>
-
-    <div class="example">
-      <h4 class="ui header">Flexbox</h4>
-      <p>Grids in 2.0 now use <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes" target="_blank"><code>flexbox</code></a> and are equal height across rows by default.</p>
-      <div class="ui three column divided grid">
-        <div class="row">
-          <div class="column">
-            <div class="ui segment">
-              1
-            </div>
-          </div>
-          <div class="column">
-            <div class="ui segment">
-              1
-            </div>
-            <div class="ui segment">
-              2
-            </div>
-          </div>
-          <div class="column">
-            <div class="ui segment">
-              1
-            </div>
-            <div class="ui segment">
-              2
-            </div>
-            <div class="ui segment">
-              3
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="highlighted example">
-      <h4 class="ui header">Evenly Divided</h4>
-      <p>The new <a href="#equal-width"><code>equal width</code></a> grid variation adjusts column widths automatically to split their container evenly without having to specify a column count.</p>
-      <div class="ui equal width grid">
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
-        <div class="column"></div>
-      </div>
-    </div>
-    <div class="highlighted example">
-      <h4 class="ui header">Containers</h4>
-      <p><a href="/elements/container.html">Containers</a> have been added as a simpler way to place site content inside grids. Containers are fixed width which make responsive styling simpler.</p>
-      <div class="ui container">
-        <div class="ui three column grid">
-          <div class="column"></div>
-          <div class="column"></div>
-          <div class="column"></div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="example">
-      <h4 class="ui header">Stretched rows</h4>
-      <p>The new <a href="#stretched"><code>stretched</code></a> variation adjusts each column's contents to grow to the full height of the column.</p>
-      <div class="ui three column stretched grid">
-        <div class="row">
-          <div class="column">
-            <div class="ui segment">
-              1
-            </div>
-          </div>
-          <div class="column">
-            <div class="ui segment">
-              1
-            </div>
-            <div class="ui segment">
-              2
-            </div>
-          </div>
-          <div class="column">
-            <div class="ui segment">
-              1
-            </div>
-            <div class="ui segment">
-              2
-            </div>
-            <div class="ui segment">
-              3
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <h2 class="ui dividing header">Introduction</h2>
 
     <div class="highlighted example">
@@ -132,12 +42,22 @@ themes      : ['Default']
 
     <div class="highlighted example">
       <h4 class="ui header">Columns</h4>
-      <p>Grids use columns as an indivisible unit for specifying content width. All grid systems use an arbitrary column count per row. Semantic's default theme assumes <b>16 columns</b>.</p>
+      <p>Grids divide horizontal space into indivisible units called columns. All content in a grid must specify their width in terms of the grid's column count. Grid systems use an arbitrary column count per row. Semantic's default theme uses <b>16 columns</b>.</p>
 
       <p>The following example specifies each column as <code>four wide</code>, meaning four columns of four, <code>16 / 4 = 4</code> will fit in each grid row.</p>
 
-      <p>The default column count, and many more grid features can be customized by adjusting theming variables.</p>
+      <p>The default column count, and other arbitrary features of grids can be changed by adjusting Semantic UI's underlying theming variables.</p>
 
+      <div class="ui grid">
+        <div class="four wide column"></div>
+        <div class="four wide column"></div>
+        <div class="four wide column"></div>
+        <div class="four wide column"></div>
+      </div>
+    </div>
+    <div class="highlighted example">
+      <h4 class="ui header">Rows</h4>
+      <p>Rows are groups of columns which are aligned horizontally. After each group of columns vertical spacing is added to separate each group of columns, creating vertical rhythm.
       <div class="ui grid">
         <div class="four wide column"></div>
         <div class="four wide column"></div>
@@ -152,9 +72,9 @@ themes      : ['Default']
 
     <div class="highlighted negative example">
       <h4 class="ui header">Gutters</h4>
-      <p>Grid columns use negative space called "gutters" between columns and rows. Gutters are fixed width spacers which, unlike columns, do not adjust in size as a grid changes.</p>
-      <p>Since all grid columns receive the same gutters, grids use <a href="http://csswizardry.com/2011/08/building-better-grid-systems/">negative margins</a> to make sure that grids sit flush with outside content.</p>
-      <p>To have all contents in a grid spaced, including first and last rows, or columns use a <a href="#padded"><code>padded grid</code></a> variation.</p>
+      <p>Grid columns and rows are separated by negative space called "gutters". Gutters are fixed width spacers which, unlike columns, do not adjust in size as a grid changes.</p>
+      <p>Since all grid columns in css receive the same gutters, grids use <a href="http://csswizardry.com/2011/08/building-better-grid-systems/">negative margins</a> to make sure that the first and last columns sit flush with content outside the grid.</p>
+      <p>To have first and last rows or columns include padding, use a <a href="#padded"><code>padded grid</code></a> variation.</p>
        <div class="ui top attached button">Button before grid</div>
        <div class="ui grid">
         <div class="sixteen wide column"></div>
@@ -170,9 +90,9 @@ themes      : ['Default']
 
     <div class="highlighted negative example">
       <h4 class="ui header">Content Width</h4>
-      <p>Grids do not have a maximum width, and will automatically flow to contain the entire width of the element they are placed inside..</p>
-      <p><a href="/elements/container.html">Containers</a> are elements designed with a single purpose, to contain content to a reasonable maximum width for display.</p>
-      <p>Using a <code>grid container</code> is the best way to ensure elements fit appropriately within pages on all devices.</p>
+      <p>Grids do not have a maximum width, and will automatically flow to contain the entire width of the element they are placed inside.</p>
+      <p><a href="/elements/container.html">Containers</a> are elements designed to contain content to a reasonable maximum width for display based on the size of the user's screen.</p>
+      <p>Using grid and container together is the best way to display page contents in a grid.</p>
       <div class="ui warning message">
         <p>In version <code>1.x</code> of Semantic UI <code>page grid</code> were used to to contain the maximum width of grids holding page content. Page grid have been deprecated in favor for the simpler <code>container</code> element.</p>
       </div>

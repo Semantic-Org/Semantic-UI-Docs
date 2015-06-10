@@ -50,16 +50,8 @@ $(document).ready(function() {
 
 </style>
 <form class="ui container">
-
-    <div class="ui fluid multiple search selection dropdown">
-      <input name="tags" type="hidden" />
-      <i class="dropdown icon"></i>
-      <div class="default text">Skills</div>
-      <div class="menu">
-        <%- @partial('examples/single/preset-menu') %>
-      </div>
-    </div>
-    <div class="ui button one">Button One</div>
-    <div class="ui button two">Button Two</div>
-    <div class="ui button three">Button Three</div>
+  <div class="ui form">
+    <textarea></textarea>
+    <textarea rows="3"></textarea>
+  </div>
 </form>

@@ -649,11 +649,7 @@ type        : 'UI Behavior'
         transition: all 0.5s ease;
         background: transparent;
       }
-      .visibility.example .fixed.overlay + .placeholder {
-        display: none;
-      }
-
-      /* fixed */
+      /* change style */
       .visibility.example .fixed.overlay {
         position: fixed;
         padding: 1em;
@@ -670,28 +666,17 @@ type        : 'UI Behavior'
           <a class="item">Option 3</a>
         </div>
       </div>
-      <div class="placeholder"></div>
       <div class="ui clearing divider"></div>
       <img src="/images/wireframe/centered-paragraph.png" class="ui wireframe image">
-      <div class="ui divider"></div>
       <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-      <div class="ui divider"></div>
       <img src="/images/wireframe/media-paragraph.png" class="ui wireframe image">
-      <div class="ui divider"></div>
       <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
-      <div class="ui divider"></div>
       <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-      <div class="ui divider"></div>
       <img src="/images/wireframe/centered-paragraph.png" class="ui wireframe image">
-      <div class="ui divider"></div>
       <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-      <div class="ui divider"></div>
       <img src="/images/wireframe/media-paragraph.png" class="ui wireframe image">
-      <div class="ui divider"></div>
       <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
-      <div class="ui divider"></div>
       <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-      <div class="ui divider"></div>
     </div>
   </div>
 

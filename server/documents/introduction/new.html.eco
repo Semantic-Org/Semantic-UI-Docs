@@ -59,8 +59,8 @@ type        : 'Introduction'
     </div>
   </div>
   <div class="highlighted example">
-    <h4 class="ui header">Evenly Divided</h4>
-    <p>The new <a href="#equal-width"><code>equal width</code></a> grid variation adjusts column widths automatically to split their container evenly without having to specify a column count.</p>
+    <h4 class="ui header">Automatic Columns</h4>
+    <p>The new <a href="#equal-width"><code>equal width</code></a> grid variation adjusts column widths automatically to split their container evenly without having to manually specify a column count.</p>
     <div class="ui equal width grid">
       <div class="column"></div>
       <div class="column"></div>
@@ -119,7 +119,8 @@ type        : 'Introduction'
   <div class="dropdown example">
     <h4 class="ui header">Multiple Selection</h4>
     <p>Multiple select dropdowns are now available, and can generate automatically from standard html selects.  </p>
-    <p>Dropdowns all now support advanced keyboard shortcuts like <code>pagedown</code>, <code>delete</code>, <code>shift+left</code> <code>ctrl+click</code>, and selection using first letter of item.</p>
+    <p>Dropdowns now all support advanced keyboard shortcuts like <code>pagedown</code>, <code>delete</code>, <code>shift+left</code> <code>ctrl+click</code>, and selection using first letter of item.</p>
+    <p>Additionally dropdowns will now automatically open <code>upward</code> if there is not enough space available in the viewport below a dropdown.</p>
     <select class="ui fluid dropdown" multiple>
       <%- @partial('examples/single/state-options') %>
     </select>
@@ -127,7 +128,7 @@ type        : 'Introduction'
 
   <div class="user example">
     <h4 class="ui header">User Tagging</h4>
-    <p>All dropdowns, single and multiple now support user tagging. Values can be automatically tokenized in a hidden input, or using a select</p>
+    <p>All dropdowns, single and multiple now support user tagging. Values can be automatically separated by a delimiter and placed in a hidden input, or extend an existing select element.</p>
     <div class="ignored code" data-type="javascript">
     $('.ui.dropdown')
       .dropdown({
@@ -147,7 +148,7 @@ type        : 'Introduction'
 
   <div class="remote example">
     <h4 class="ui header">Remote Data</h4>
-    <p>All dropdowns now support loading remote data. Selected name value pairs retrieved remotely are stored in <code>sessionStorage</code> to make sure they appear just as retrieved on page refresh.</p>
+    <p>All dropdowns now support loading remote data. Selected name value pairs retrieved remotely are stored in <code>sessionStorage</code> so that selected values are repopulated correctly even after a page refresh.</p>
     <div class="ignored code" data-type="javascript">
       // somewhere in app
       $.api.settings.api = {
@@ -184,6 +185,7 @@ type        : 'Introduction'
       </div>
     </div>
   </div>
+
   <div class="dropdown example">
     <h4 class="ui header">Nested Menus</h4>
     <p>Nested scrolling menus are now supported. These menus support all the same keyboard shortcuts and filtering as regular menus.</p>
@@ -243,10 +245,15 @@ type        : 'Introduction'
     <p>Dropdowns support many, many new features, including:</p>
     <ul class="ui large bulleted list">
       <li>Maximum selection count is supported for multiple selects</li>
-      <li>Dropdowns will now automatically change direction to open upward if no space is left on the screen</li>
       <li>Mutation observers will now watch for changes in menus or the elements they are generated from and will update choices automatically</li>
       <li>Elements in all dropdowns can now be "jumped to" by pressing the first letter of the choice</li>
-      <li>Keyboard shortcuts now include power user shortcuts, <code>shift+select</code> for multiple <code>shift+right</code>, <code>page down</code> and <code>page up</code> and many more.</li>
+      <li>Keyboard shortcuts now include power user shortcuts
+        <ul>
+          <li><code>ctrl+click</code> will add a single additional selected label</li>
+          <li><code>shift+right</code> will extend selection</li>
+          <li><code>page down</code> and <code>page up</code> will select first element in next page</li>
+          <li><code>a-z</code> will select value matching first letter</li>
+        </ul>
       <li>Custom error messages are now supported with search selects</li>
     </ul>
   </div>
@@ -370,6 +377,88 @@ type        : 'Introduction'
 
   <h2 class="ui dividing header">API</h2>
 
+
+  <div class="remote example">
+    <h4 class="ui header">Local Caching</h4>
+    <p>API now supports <code>sessionStorage</code> caching. Using this setting will instantly return results for the same url across a user's session.</p>
+    <p>Try refreshing the page and searching the same letter, results will appear instantly without a server roundtrip.</p>
+    <div class="code" data-type="javascript">
+    $('.ui.dropdown')
+      .dropdown({
+        apiSettings: {
+          cache : 'local',
+          url: '//api.semantic-ui.com/tags/{query}'
+        }
+      })
+    ;
+    </div>
+    <div class="ui form">
+      <div class="field">
+        <label>Favorite Animal</label>
+        <div class="ui search selection dropdown">
+          <input type="hidden">
+          <i class="dropdown icon"></i>
+          <input type="text" class="search">
+          <div class="default text">Select one...</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="external example">
+    <h4 class="ui header">Translates Any API</h4>
+    <p>API now lets you adjust a server's JSON response using a new callback, <code>onResponse</code>. This can let you restructure third party APIs to match your local data requirements.</p>
+    <div class="ignored code" data-type="javascript">
+    $('.ui.search')
+      .search({
+        type          : 'category',
+        minCharacters : 3,
+        apiSettings   : {
+          onResponse: function(githubResponse) {
+            var
+              response = {
+                results : {}
+              }
+            ;
+            // translate github api response to work with search
+            $.each(githubResponse.items, function(index, item) {
+              var
+                language   = item.language || 'Unknown',
+                maxResults = 8
+              ;
+              if(index >= maxResults) {
+                return false;
+              }
+              // Create new language category
+              if(response.results[language] === undefined) {
+                response.results[language] = {
+                  name    : language,
+                  results : []
+                };
+              }
+              // Add result to category
+              response.results[language].results.push({
+                title       : item.name,
+                description : item.description,
+                url         : item.html_url
+              });
+            });
+            return response;
+          },
+          url: '//api.github.com/search/repositories?q={query}'
+        }
+      })
+    </div>
+
+    <div class="ui search">
+      <div class="ui left icon input">
+        <input class="prompt" type="text" placeholder="Search GitHub">
+        <i class="github icon"></i>
+      </div>
+    </div>
+  </div>
+
   <div class="mock example">
     <h4 class="ui header">Mocked Responses</h4>
     <p>API now supports mocked responses, letting you specify how responses are returned in advance.</p>
@@ -425,30 +514,58 @@ type        : 'Introduction'
     </div>
 
   </div>
-  <div class="remote example">
-    <h4 class="ui header">Local Caching</h4>
-    <p>API now supports <code>sessionStorage</code> caching. Using this setting will instantly return results for the same url across a user's session.</p>
-    <p>Try refreshing the page and searching the same letter, results will appear instantly without a server roundtrip.</p>
-    <div class="code" data-type="javascript">
-    $('.ui.dropdown')
-      .dropdown({
-        apiSettings: {
-          cache : 'local',
-          url: '//api.semantic-ui.com/tags/{query}'
-        }
-      })
-    ;
+
+  <h2 class="ui dividing header">Visibility</h2>
+
+  <div class="visibility example">
+
+    <h4 class="ui header">Simple Sticky</h4>
+
+    <p><a href="/behaviors/visibility.html">Visibility API</a>s now include useful shortcuts for sticky content. A placeholder will automatically be added when an element is passed making sure other content does not adjust position.</p>
+
+    <p>Additionally <a href="/behaviors/visibility.html">visibility</a> and <a href="/modules/sticky.html">sticky</a> have been rewritten to use a pub/sub pattern which is much more performant than <code>1.0</code></p>
+
+    <div class="ignored code" data-type="javascript">
+      $('.overlay')
+        .visibility({
+          type   : 'fixed',
+          offset : 15 // give some space from top of screen
+        })
+      ;
     </div>
-    <div class="ui form">
-      <div class="field">
-        <label>Favorite Animal</label>
-        <div class="ui search selection dropdown">
-          <input type="hidden">
-          <i class="dropdown icon"></i>
-          <input type="text" class="search">
-          <div class="default text">Select one...</div>
+    <div class="ignored code" data-type="css">
+    .overlay {
+      background-color: #FFFFFF;
+      padding: 0.5em;
+      box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+      transition: all 0.5s ease;
+      background: transparent;
+    }
+    /* change style */
+    .fixed.overlay {
+      position: fixed;
+      padding: 1em;
+      box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+    }
+    </div>
+    <div class="ui segment">
+      <div class="overlay">
+        <div class="ui secondary menu">
+          <a class="item">
+            <i class="sidebar icon"></i> Menu
+          </a>
+          <a class="item">Option 1</a>
+          <a class="item">Option 2</a>
+          <a class="item">Option 3</a>
         </div>
       </div>
+      <div class="ui clearing divider"></div>
+      <img src="/images/wireframe/centered-paragraph.png" class="ui wireframe image">
+      <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+      <img src="/images/wireframe/media-paragraph.png" class="ui wireframe image">
+      <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+      <img src="/images/wireframe/media-paragraph.png" class="ui wireframe image">
+      <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
     </div>
   </div>
 </div>

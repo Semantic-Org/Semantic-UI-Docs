@@ -36,11 +36,11 @@ themes      : ['Default']
   </div>
 
   <div class="another example">
-    <div class="ui breadcrumb segment">
+    <div class="ui breadcrumb">
       <a class="section">Home</a>
-      <i class="right triangle icon divider"></i>
+      <i class="right angle icon divider"></i>
       <a class="section">Store</a>
-      <i class="right triangle icon divider"></i>
+      <i class="right angle icon divider"></i>
       <div class="active section">T-Shirt</div>
     </div>
   </div>

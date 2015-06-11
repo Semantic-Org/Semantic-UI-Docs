@@ -24,7 +24,7 @@ semantic.sticky.ready = function() {
       $sticky
         .sticky({
           context: $context,
-          offset: 50,
+          offset: 15,
           pushing: true
         })
       ;
@@ -41,7 +41,7 @@ semantic.sticky.ready = function() {
         $inlineSticky
           .sticky({
             context: $context,
-            offset: 39
+            offset: 15
           })
         ;
       }
@@ -57,7 +57,7 @@ semantic.sticky.ready = function() {
       $sticky
         .sticky({
           context: $context,
-          offset: 75
+          offset: 15
         })
       ;
     })

@@ -68,9 +68,10 @@ code {
   border-radius: 3px;
   display: inline-block;
   font-family: "Monaco","Menlo","Ubuntu Mono","Consolas","source-code-pro",monospace;
-  font-size: 0.85714em;
+  font-size: 0.875em;
   font-weight: bold;
-  padding: 0px 5px;
+  margin-top: -3px;
+  padding: 3px 6px;
   vertical-align: baseline;
 }
 pre code {
@@ -428,6 +429,63 @@ pre code {
   font-size: 16px;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.8);
+}
+
+/* Link Styles */
+#example .main.container > p a,
+#example .main.container > .tab > p a,
+#example .main.container .example > .ignored a,
+#example .main.container .example > p a  {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  vertical-align: top;
+  z-index: 2;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+#example .main.container > p a > code,
+#example .main.container > .tab > p a > code,
+#example .main.container .example > .ignored a > code,
+#example .main.container .example > p a > code {
+  background-color: rgba(0, 50, 100, 0.08);
+}
+#example .main.container > p a:before,
+#example .main.container > .tab > p a:before,
+#example .main.container .example > .ignored a:before,
+#example .main.container .example > p a:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: #4183C4;
+  content: '';
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-transform: translateY(95%) scaleX(0);
+  transform: translateY(95%) scaleX(0);
+}
+
+/* Hover */
+#example .main.container > p a:hover > code,
+#example .main.container > .tab > p a:hover > code,
+#example .main.container .example > .ignored a:hover > code,
+#example .main.container .example > p a:hover > code {
+  background-color: rgba(0, 50, 100, 0.12);
+}
+#example .main.container > p a:hover:before,
+#example .main.container > p a:focus:before,
+#example .main.container > .tab > p a:hover:before,
+#example .main.container > .tab > p a:focus:before,
+#example .main.container .example > .ignored a:hover:before,
+#example .main.container .example > .ignored a:focus:before,
+#example .main.container .example > p a:hover:before,
+#example .main.container .example > p a:focus:before {
+  background-color: #2C76BF;
+  -webkit-transform: translateY(95%) scaleX(1);
+  transform: translateY(95%) scaleX(1);
 }
 
 #example .ui.ad {

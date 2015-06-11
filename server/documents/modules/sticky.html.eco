@@ -126,10 +126,75 @@ type        : 'UI Module'
       </div>
       <div class="ui segment" id="example3">
         <div class="left ui rail">
-          <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
           <div class="ui sticky">
             <h3 class="ui header">Long Stuck Content</h3>
             <div class="ui divided items">
+              <div class="item">
+                <div class="ui tiny image">
+                  <img src="/images/wireframe/image.png">
+                </div>
+                <div class="middle aligned content">
+                  <a class="header">Followup Article</a>
+                  <div class="meta">
+                    <span class="author">By <a>Author</a></span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="ui tiny image">
+                  <img src="/images/wireframe/image.png">
+                </div>
+                <div class="middle aligned content">
+                  <a class="header">Followup Article</a>
+                  <div class="meta">
+                    <span class="author">By <a>Author</a></span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="ui tiny image">
+                  <img src="/images/wireframe/image.png">
+                </div>
+                <div class="middle aligned content">
+                  <a class="header">Followup Article</a>
+                  <div class="meta">
+                    <span class="author">By <a>Author</a></span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="ui tiny image">
+                  <img src="/images/wireframe/image.png">
+                </div>
+                <div class="middle aligned content">
+                  <a class="header">Followup Article</a>
+                  <div class="meta">
+                    <span class="author">By <a>Author</a></span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="ui tiny image">
+                  <img src="/images/wireframe/image.png">
+                </div>
+                <div class="middle aligned content">
+                  <a class="header">Followup Article</a>
+                  <div class="meta">
+                    <span class="author">By <a>Author</a></span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="ui tiny image">
+                  <img src="/images/wireframe/image.png">
+                </div>
+                <div class="middle aligned content">
+                  <a class="header">Followup Article</a>
+                  <div class="meta">
+                    <span class="author">By <a>Author</a></span>
+                  </div>
+                </div>
+              </div>
               <div class="item">
                 <div class="ui tiny image">
                   <img src="/images/wireframe/image.png">

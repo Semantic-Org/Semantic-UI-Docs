@@ -440,9 +440,10 @@ pre code {
   position: relative;
   overflow: hidden;
   vertical-align: top;
-  z-index: 2;
+  z-index: 0;
   -webkit-transition: color 0.2s;
   transition: color 0.2s;
+  outline: none;
 }
 #example .main.container > p a > code,
 #example .main.container > .tab > p a > code,
@@ -463,7 +464,9 @@ pre code {
   background-color: #4183C4;
   content: '';
   -webkit-transition: all 0.2s;
+  -webkit-backface-visibility: hidden;
   transition: all 0.2s;
+  backface-visibility: hidden;
   -webkit-transform: translateY(95%) scaleX(0);
   transform: translateY(95%) scaleX(0);
 }

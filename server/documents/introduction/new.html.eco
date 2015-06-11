@@ -409,6 +409,12 @@ type        : 'Introduction'
   <div class="external example">
     <h4 class="ui header">Translates Any API</h4>
     <p>API now lets you adjust a server's JSON response using a new callback, <code>onResponse</code>. This can let you restructure third party APIs to match your local data requirements.</p>
+    <div class="ui search">
+      <div class="ui left icon input">
+        <input class="prompt" type="text" placeholder="Search GitHub">
+        <i class="github icon"></i>
+      </div>
+    </div>
     <div class="ignored code" data-type="javascript">
     $('.ui.search')
       .search({
@@ -449,13 +455,6 @@ type        : 'Introduction'
           url: '//api.github.com/search/repositories?q={query}'
         }
       })
-    </div>
-
-    <div class="ui search">
-      <div class="ui left icon input">
-        <input class="prompt" type="text" placeholder="Search GitHub">
-        <i class="github icon"></i>
-      </div>
     </div>
   </div>
 

@@ -929,13 +929,13 @@ type        : 'UI Behavior'
           <td>false</td>
           <td>Variables to use for replacement</td>
           <td></td>
-        </tr>
+        </tr><!--
         <tr>
           <td>encodeUrlData</td>
           <td>true</td>
           <td>Where url data should be encoded with <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent"><code>encodeURIComponent</code></a> before being added to URL.</td>
           <td></td>
-        </tr>
+        </tr> -->
         <tr>
           <td>mockResponse</td>
           <td>false</td>

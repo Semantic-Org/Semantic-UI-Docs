@@ -1127,7 +1127,9 @@ semantic.ready = function() {
           })
           .find('i.code')
             .on('click', function() {
-              $.cookie('expertiseLevel', 2);
+              $.cookie('expertiseLevel', 2, {
+                expires: 90
+              });
             })
         ;
       })

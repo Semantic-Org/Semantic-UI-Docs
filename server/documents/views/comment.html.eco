@@ -288,15 +288,15 @@ themes      : ['Default', 'Chubby']
         <div class="collapsed comments">
           <div class="comment">
             <a class="avatar">
-              <img src="/images/demo/avatar2.jpg">
+              <img src="/images/avatar/small/elliot.jpg">
             </a>
             <div class="content">
-              <a class="author">Pawfin Dog</a>
+              <a class="author">Elliot Fu</a>
               <div class="metadata">
                 <span class="date">1 day ago</span>
               </div>
               <div class="text">
-                I think this is a great idea and i am voting on it
+                No, it wont
               </div>
               <div class="actions">
                 <a class="reply">Reply</a>
@@ -305,15 +305,15 @@ themes      : ['Default', 'Chubby']
             <div class="comments">
               <div class="comment">
                 <a class="avatar">
-                  <img src="/images/demo/avatar.jpg">
+                  <img src="/images/avatar/small/jenny.jpg">
                 </a>
                 <div class="content">
-                  <a class="author">Dog Doggington</a>
+                  <a class="author">Jenny Hess</a>
                   <div class="metadata">
                     <span class="date">20 minutes ago</span>
                   </div>
                   <div class="text">
-                    I think this is a great idea and i am voting on it
+                    Maybe it would.
                   </div>
                   <div class="actions">
                     <a class="reply">Reply</a>

@@ -213,6 +213,8 @@ type        : 'UI Module'
         };
       </div>
     </div>
+  </div>
+  <div class="ui tab" data-tab="behaviors">
 
     <h2>Behaviors</h2>
     <p>All the following behaviors can be called using the syntax:</p>

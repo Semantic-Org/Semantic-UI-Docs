@@ -15,7 +15,7 @@ type        : 'Introduction'
 
   <h2 class="ui dividing header">Introduction</h2>
 
-  <p>2.0 brings a whopping <b>98</b> enhancements, <b>105</b> bug fixes, <b>2</b> new components, complete rewrites of several important components like <code>menu</code>, and <code>input</code>, and much more newness.</p>
+  <p>2.0 brings a whopping <b>98</b> enhancements, <b>105</b> bug fixes, <b>2</b> new components, complete rewrites of several important components like <a href="/collections/menu.html"><code>menu</code></a>, and <a href="/elements/input.html"><code>input</code></a>, and much more newness.</p>
 
   <p>There's just too much to cover in one page, but we've tried our best to give you examples of some of the new features available in 2.0</p>
 

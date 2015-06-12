@@ -734,6 +734,10 @@ pre code {
 #example .example-group {
   position: relative;
 }
+#example .main.container > .tab {
+  position: relative;
+}
+
 #example .main.container .examples > h2,
 #example .main.container > h2,
 #example .main.container > .tab > h2{

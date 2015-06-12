@@ -43,7 +43,7 @@ semantic.home.ready = function() {
         backDelay       : 500
       });
       setTimeout(function() {
-        $library.transition('scale in', 1000);
+        $library.transition('drop in', 1500);
       }, 3750);
       setTimeout(function() {
         $cursor.addClass('stop');

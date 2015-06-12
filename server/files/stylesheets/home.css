@@ -35,16 +35,15 @@
   margin-bottom: 0px;
   border-bottom: none;
 
-  background-color: #009189;
-  background-image: radial-gradient(farthest-corner, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+  background-color: #00796F;
   background-position: 50% 50%;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 
-  -ms-transition: background-color 3s ease-in-out 1s;
-  -moz-transition: background-color 3s ease-in-out 1s;
-  -webkit-transition: background-color 3s ease-in-out 1s;
-  transition: background-color 3s ease-in-out 1s;
+  -ms-transition: background-color 3s ease 1s;
+  -moz-transition: background-color 3s ease 1s;
+  -webkit-transition: background-color 3s ease 1s;
+  transition: background-color 3s ease 1s;
 }
 
 #example.index .masthead .container {
@@ -250,6 +249,9 @@
 }
 #example.index .masthead.segment .typed-cursor.stop {
   opacity: 0;
+  -moz-animation-duration: 0s;
+  -webkit-animation-duration: 0s;
+  animation-duration: 0s;
 }
 @keyframes blink {
   0% { opacity:1; }

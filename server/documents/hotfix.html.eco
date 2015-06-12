@@ -8,50 +8,48 @@ type       : 'Library'
 ---
 <!-- TEST JS HERE !-->
 <style>
+  .ui.grid {
+      background-color: red;
+      min-height: 200vh;
+  }
   .container {
     padding: 2em;
+  }
+  .menu {
+    margin: 0em;
   }
 </style>
 <script type="text/javascript">
 $(document).ready(function() {
-  $('.ui.dropdown').dropdown({
-    allowAdditions: true
-  });
-
-  $('form')
-    .on('submit', function(event){
-      event.preventDefault();
+  $('.ui.dropdown')
+    .dropdown({
+      onChange: function(value) {
+        alert(value);
+      }
     })
   ;
 
-  $('.button.one')
+  $('.ui.first.button')
     .on('click', function() {
-      console.log('removing selected');
-      $('.ui.dropdown').dropdown('remove selected', 'custom skill');
+      $('.selection.dropdown .item').first().data('value', 'ham');
     })
   ;
-  $('.button.two')
+  $('.ui.second.button')
     .on('click', function() {
-      console.log('set selected');
-      $('.ui.dropdown').dropdown('set selected', 'custom skill2');
+      $('.selection.dropdown .item').first().replaceWith('<div class="item" data-value="waffles">Waffles</div>');
     })
   ;
-  $('.button.three')
-    .on('click', function() {
-      console.log('remove selected');
-      $('.ui.dropdown').dropdown('remove selected');
-    })
-  ;
-
 });
 </script>
 
-<style>
 
-</style>
-<form class="ui container">
-  <div class="ui form">
-    <textarea></textarea>
-    <textarea rows="3"></textarea>
-  </div>
-</form>
+<div class="ui container">
+  <select class="ui dropdown">
+    <option value="">Select</option>
+    <option value="original">Changed Choice</option>
+    <option value="0">Some Other Choice</option>
+  </select>
+  <div class="ui divider"></div>
+  <div class="ui first button">Make it Ham</div>
+  <div class="ui second button">Make it Waffles</div>
+</div>

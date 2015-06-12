@@ -66,7 +66,7 @@ type        : 'UI Module'
     </div>
   </div>
 
-  <div class="ui active tab" data-tab="definition">
+  <div class="ui tab" data-tab="behaviors">
 
     <h2 class="ui dividing header">Types</h2>
 
@@ -198,7 +198,7 @@ type        : 'UI Module'
             type   : 'video',
             icon   : 'video play',
             domain : 'vimeo.com',
-            url    : '//www.youtube.com/embed/{id}',
+            url    : '//vimeo.com/{id}',
             parameters: function(settings) {
               return {
                 api      : settings.api,

@@ -14,7 +14,7 @@ type        : 'UI Module'
 
 <script src="/javascript/embed.js"></script>
 
-<%- @partial('header',  { tabs: { overview: 'Overview', usage: 'Usage',  behaviors: 'Behaviors',  settings: 'Settings' } }) %>
+<%- @partial('header',  { tabs: { overview: 'Overview', definition: 'Definition', usage: 'Usage', settings: 'Settings' } }) %>
 
 <div class="main ui container">
   <div class="ui active tab" data-tab="overview">
@@ -66,7 +66,7 @@ type        : 'UI Module'
     </div>
   </div>
 
-  <div class="ui tab" data-tab="behaviors">
+  <div class="ui active tab" data-tab="definition">
 
     <h2 class="ui dividing header">Types</h2>
 
@@ -198,7 +198,7 @@ type        : 'UI Module'
             type   : 'video',
             icon   : 'video play',
             domain : 'vimeo.com',
-            url    : '//vimeo.com/{id}',
+            url    : '//www.youtube.com/embed/{id}',
             parameters: function(settings) {
               return {
                 api      : settings.api,
@@ -213,8 +213,6 @@ type        : 'UI Module'
         };
       </div>
     </div>
-  </div>
-  <div class="ui tab" data-tab="behaviors">
 
     <h2>Behaviors</h2>
     <p>All the following behaviors can be called using the syntax:</p>

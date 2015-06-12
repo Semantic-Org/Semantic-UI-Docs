@@ -11,7 +11,6 @@ description : 'An embed displays content from other websites like YouTube videos
 type        : 'UI Module'
 
 ---
-
 <script src="/javascript/embed.js"></script>
 
 <%- @partial('header',  { tabs: { overview: 'Overview', definition: 'Definition', usage: 'Usage', settings: 'Settings' } }) %>
@@ -66,7 +65,7 @@ type        : 'UI Module'
     </div>
   </div>
 
-  <div class="ui active tab" data-tab="definition">
+  <div class="ui tab" data-tab="definition">
 
     <h2 class="ui dividing header">Types</h2>
 

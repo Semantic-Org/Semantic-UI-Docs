@@ -70,7 +70,7 @@ standalone : true
       </h1>
       <div class="ui hidden divider"></div>
 
-      <a href="https://github.com/Semantic-Org/Semantic-UI/archive/next.zip" class="ui huge basic inverted teal download button">
+      <a href="https://github.com/Semantic-Org/Semantic-UI/archive/next.zip" class="ui huge inverted download button">
         Download Now
       </a>
       <!--

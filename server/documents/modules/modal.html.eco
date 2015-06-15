@@ -428,7 +428,7 @@ themes      : ['Default', 'Material']
           allowMultiple: true
         })
       ;
-      // open second modal on button click
+      // open second modal on first modal buttons
       $('.second.modal')
         .modal('attach events', '.first.modal .button')
       ;

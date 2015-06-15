@@ -471,6 +471,11 @@ pre code {
   transform: translateY(95%) scaleX(0);
 }
 
+/* Not on UI */
+#example .main.container .example > .ignored a.ui:before {
+  display: none;
+}
+
 /* Hover */
 #example .main.container > p a:hover > code,
 #example .main.container > .tab > p a:hover > code,
@@ -931,6 +936,7 @@ pre code {
 }
 #example .highlighted.example .grid .column:not(.row):not(.grid):after {
   background-color: rgba(86, 61, 124, .1);
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(86, 61, 124, 0.2) inset;
   box-shadow: 0px 0px 0px 1px rgba(86, 61, 124, 0.2) inset;
   content: "";
   display: block;
@@ -954,10 +960,20 @@ pre code {
   z-index: 100;
   margin: 0px 1px;
 }
-#example .highlighted.special.example .page.grid > .column:first-child:after,
-#example .highlighted.special.example .page.grid > .column:last-child:after {
+
+/* Nested Grid Example */
+#example .highlighted.special.example .ui.grid > .column:first-child:after,
+#example .highlighted.special.example .ui.grid > .column:last-child:after {
   display: none;
 }
+#example .highlighted.special.example .ui.grid .grid .column:not(.row):not(.grid):after {
+  display: block;
+  background-color: rgba(186, 61, 84, 0.1);
+  -webkit-box-shadow: 0 0 0 1px rgba(186, 61, 84, 0.2) inset;
+  box-shadow: 0 0 0 1px rgba(186, 61, 84, 0.2) inset;
+}
+
+
 #example.animated .negative.example > .grid {
   margin: -1rem !important;
   background-color: #FFEEEE;
@@ -1257,7 +1273,7 @@ body.progress.animated .ui.progress .bar {
 #example .icon.example .grid .code {
   position: static;
 }
-#example .icon.example .grid > .row > .column {
+#example .icon.example .grid > .column {
   opacity: 0.8;
   text-align: center;
   color: transparent;
@@ -1319,14 +1335,14 @@ body.progress.animated .ui.progress .bar {
     transform 0.2s ease
   ;
 }
-#example .icon.example .grid:hover > .row > .column {
+#example .icon.example .grid:hover .column {
   color: #777777;
 }
-#example .icon.example .grid:hover > .row > .column .icon {
+#example .icon.example .grid:hover .column .icon {
   color: #333333;
 }
 
-#example .icon.example .grid > .row > .column:hover .icon {
+#example .icon.example .grid .column:hover .icon {
   color: #000000;
   -webkit-transform: scale(1.5);
   -moz-transform: scale(1.5);
@@ -1334,7 +1350,7 @@ body.progress.animated .ui.progress .bar {
   -ms-transform: scale(1.5);
   transform: scale(1.5);
 }
-#example .icon.example .grid > .row > .column:hover {
+#example .icon.example .grid .column:hover {
   opacity: 1;
   color: #444444;
 }

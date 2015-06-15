@@ -5,7 +5,7 @@ semantic.visiblity.ready = function() {
 
   // selector cache
   var
-    $pageTabs           = $('.masthead.tab.segment .menu .item'),
+    $pageTabs           = $('.masthead.tab.segment .stackable.menu .item'),
     $firstColumn        = $('.first.example .main.column'),
     $firstSegment       = $('.first.example .demo.segment'),
     $firstSticky        = $('.first.example .grid .sticky'),
@@ -51,12 +51,13 @@ semantic.visiblity.ready = function() {
     }
   };
 
-  $pageTabs.tab('setting', 'onTabLoad', function() {
+  $pageTabs.tab('setting', 'onLoad', function() {
+    console.log($('.ui.sticky'));
+    $('.ui.sticky')
+      .sticky('refresh')
+    ;
     $(this).find('.visibility.example .overlay, .visibility.example .demo.segment, .visibility.example .items img')
       .visibility('refresh')
-    ;
-    $(this).find('.ui.sticky')
-      .sticky('refresh')
     ;
   });
 
@@ -173,6 +174,9 @@ window.loadFakeContent = function() {
       $loader
         .removeClass('active')
         .before($content)
+      ;
+      $('.ui.sticky')
+        .sticky('refresh')
       ;
       $('.visibility.example > .overlay, .visibility.example > .demo.segment, .visibility.example .items img')
         .visibility('refresh')

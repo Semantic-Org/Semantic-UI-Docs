@@ -489,6 +489,57 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
   </div>
 
   <div class="example">
+    <h4 class="ui header">Field Groups</h4>
+    <p>Fields can exist together in a group to share properties</p>
+    <div class="ui ignored positive message">
+      Field groups automatically receive responsive styling, swapping to one field per row on mobile devices.
+    </div>
+    <div class="ui form">
+      <div class="fields">
+        <div class="field">
+          <label>First name</label>
+          <input type="text" placeholder="First Name">
+        </div>
+        <div class="field">
+          <label>Middle name</label>
+          <input type="text" placeholder="Middle Name">
+        </div>
+        <div class="field">
+          <label>Last name</label>
+          <input type="text" placeholder="Last Name">
+        </div>
+      </div>
+      <div class="grouped fields">
+        <label for="fruit">Select your favorite fruit:</label>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="fruit" checked />
+            <label>Apples</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="fruit" />
+            <label>Oranges</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="fruit" />
+            <label>Pears</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="fruit" />
+            <label>Grapefruit</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="example">
     <h4 class="ui header">Text Area</h4>
     <p>A textarea uses the default form element</p>
     <div class="ui form">
@@ -501,7 +552,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
 
   <div class="example">
     <h4 class="ui header">Checkbox</h4>
-    <p><a href="/modules/checkbox.html">UI Checkboxes</a> are styled forms of standard form checkboxes.</p>
+    <p><a href="/modules/checkbox.html">Checkboxes</a> are special, styled versions of standard html checkboxes.</p>
     <div class="evaluated code" data-type="javascript" data-label="true">
     $('.ui.checkbox')
       .checkbox()
@@ -1169,48 +1220,30 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
 
   <h2 class="ui dividing header">States</h2>
 
-  <h3 class="ui header">Form</h3>
-
   <div class="example">
     <h4 class="ui header">Loading</h4>
-    <p>If a form is in loading state, it will automatically show a loading indicator:</p>
+    <p>If a form is in loading state, it will automatically show a loading indicator.</p>
 
-    <div class="ui loading form segment">
-      <div class="two fields">
-        <div class="field">
-          <label>First Name</label>
-          <input placeholder="First Name" type="text">
-        </div>
-        <div class="field">
-          <label>Last Name</label>
-          <input placeholder="Last Name" type="text">
-        </div>
-      </div>
+    <div class="ui loading form">
       <div class="field">
-        <label>Gender</label>
-        <div class="ui selection dropdown" tab-index="2">
-          <div class="default text">Select</div>
-          <i class="dropdown icon"></i>
-          <input type="hidden" name="gender">
-          <div class="menu">
-            <div class="item" data-value="male">Male</div>
-            <div class="item" data-value="female">Female</div>
-          </div>
-        </div>
+        <label>E-mail</label>
+        <input type="email" placeholder="joe@schmoe.com">
       </div>
+      <div class="ui submit button">Submit</div>
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Success</h4>
+    <p>If a form is in an success state, it will automatically show any success message blocks.</p>
+    <div class="ui form success">
       <div class="field">
-        <label>Username</label>
-        <input placeholder="Username" type="text">
+        <label>E-mail</label>
+        <input type="email" placeholder="joe@schmoe.com">
       </div>
-      <div class="field">
-        <label>Password</label>
-        <input type="password">
-      </div>
-      <div class="inline field">
-        <div class="ui checkbox">
-          <input type="checkbox" />
-          <label>I agree to the terms and conditions</label>
-        </div>
+      <div class="ui success message">
+        <div class="header">Form Completed</div>
+        <p>You're all signed up for the newsletter.</p>
       </div>
       <div class="ui submit button">Submit</div>
     </div>
@@ -1218,47 +1251,15 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
 
   <div class="example">
     <h4 class="ui header">Error</h4>
-    <p>If a form is in an error state, it will automatically show any error message blocks:</p>
+    <p>If a form is in an error state, it will automatically show any error message blocks.</p>
     <div class="ui form error">
+      <div class="field">
+        <label>E-mail</label>
+        <input type="email" placeholder="joe@schmoe.com">
+      </div>
       <div class="ui error message">
         <div class="header">Action Forbidden</div>
         <p>You can only sign up for an account once with a given e-mail address.</p>
-      </div>
-      <div class="two fields">
-        <div class="field">
-          <label>First Name</label>
-          <input placeholder="First Name" type="text">
-        </div>
-        <div class="field">
-          <label>Last Name</label>
-          <input placeholder="Last Name" type="text">
-        </div>
-      </div>
-      <div class="field">
-        <label>Gender</label>
-        <div class="ui selection dropdown">
-          <div class="default text">Select Gender</div>
-          <i class="dropdown icon"></i>
-          <input type="hidden" name="gender">
-          <div class="menu">
-            <div class="item" data-value="male">Male</div>
-            <div class="item" data-value="female">Female</div>
-          </div>
-        </div>
-      </div>
-      <div class="field">
-        <label>Username</label>
-        <input placeholder="Username" type="text">
-      </div>
-      <div class="field">
-        <label>Password</label>
-        <input type="password">
-      </div>
-      <div class="inline field">
-        <div class="ui checkbox">
-          <input type="checkbox" />
-          <label>I agree to the Terms and Conditions</label>
-        </div>
       </div>
       <div class="ui submit button">Submit</div>
     </div>
@@ -1266,48 +1267,26 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
 
   <div class="example">
     <h4 class="ui header">Warning</h4>
-    <p>If a form is in warning state, it will automatically show any warning message block:</p>
+    <p>If a form is in warning state, it will automatically show any warning message block.</p>
 
-    <div class="ui warning form segment">
+    <div class="ui form warning">
+      <div class="field">
+        <label>E-mail</label>
+        <input type="email" placeholder="joe@schmoe.com">
+      </div>
       <div class="ui warning message">
         <div class="header">Could you check something!</div>
         <ul class="list">
-          <li>You forgot your <b>first name</b></li>
-          <li>And also your <b>last name</b></li>
+          <li>That e-mail has been subscribed, but you have not yet clicked the verification link in your e-mail.</li>
         </ul>
-      </div>
-      <div class="two fields">
-        <div class="field">
-          <label>First Name</label>
-          <input placeholder="First Name" type="text">
-        </div>
-        <div class="field">
-          <label>Last Name</label>
-          <input placeholder="Last Name" type="text">
-        </div>
-      </div>
-      <div class="field">
-        <label>Username</label>
-        <input placeholder="Username" type="text">
-      </div>
-      <div class="field">
-        <label>Password</label>
-        <input type="password">
-      </div>
-      <div class="inline field">
-        <div class="ui checkbox">
-          <input type="checkbox" />
-          <label>I agree to the Terms and Conditions</label>
-        </div>
       </div>
       <div class="ui submit button">Submit</div>
     </div>
   </div>
 
-  <h3 class="ui header">Form Fields</h3>
 
   <div class="example">
-    <h4 class="ui header">Error</h4>
+    <h4 class="ui header">Field Error</h4>
     <p>Individual fields may display an error state</p>
 
     <div class="ui form">
@@ -1343,18 +1322,35 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
   </div>
 
   <div class="example">
-    <h4 class="ui header">Disabled</h4>
-    <p>Individual fields may be disabled or read only</p>
+    <h4 class="ui header">Disabled Field</h4>
+    <p>Individual fields may be disabled</p>
+
+    <div class="ui form">
+      <div class="two fields">
+        <div class="disabled field">
+          <label>First Name</label>
+          <input placeholder="Read Only" disabled type="text">
+        </div>
+        <div class="disabled field">
+          <label>Last Name</label>
+          <input placeholder="Disabled" disabled type="text">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="example">
+    <h4 class="ui header">Read-Only Field</h4>
+    <p>Individual fields may be read only</p>
 
     <div class="ui form">
       <div class="two fields">
         <div class="field">
           <label>First Name</label>
-          <input placeholder="Read Only" readonly="readonly" type="text">
+          <input placeholder="Read Only" readonly type="text">
         </div>
-        <div class="disabled field">
+        <div class="field">
           <label>Last Name</label>
-          <input placeholder="Disabled" disabled="disabled" type="text">
+          <input placeholder="Read Only" readonly type="text">
         </div>
       </div>
     </div>
@@ -1362,12 +1358,8 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
 
   <h2 class="ui dividing header">Variations</h2>
 
-
-
-  <h3 class="ui header">Fields</h3>
-
   <div class="example">
-    <h4 class="ui header">Inline</h4>
+    <h4 class="ui header">Inline Field</h4>
     <p>A field can have its label next to instead of above it.</p>
     <div class="ui form">
         <div class="inline field">
@@ -1421,7 +1413,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
   </div>
 
   <div class="example">
-    <h4 class="ui header">Required</h4>
+    <h4 class="ui header">Required Field</h4>
     <p>A field can format itself to show that an input is mandatory</p>
     <div class="ui form">
         <div class="required field">
@@ -1437,12 +1429,10 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
     </div>
   </div>
 
-  <h3 class="ui header">Forms</h3>
-
   <div class="example">
     <h4 class="ui header">Fluid</h4>
     <p>A form can take the width of its container</p>
-    <div class="ui fluid form segment">
+    <div class="ui fluid form">
       <div class="two fields">
         <div class="field">
           <label>First Name</label>
@@ -1460,7 +1450,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
   <div class="example">
     <h4 class="ui header">Size</h4>
     <p>A form can also be small or large</p>
-    <div class="ui small form segment">
+    <div class="ui small form">
       <div class="two fields">
         <div class="field">
           <label>First Name</label>
@@ -1474,7 +1464,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
       <div class="ui submit button">Submit</div>
     </div>
     <br><br>
-    <div class="ui large form segment">
+    <div class="ui large form">
       <div class="two fields">
         <div class="field">
           <label>First Name</label>
@@ -1495,13 +1485,6 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
 
     <div style="background-color: #000; padding: 15px;">
       <div class="ui inverted form">
-        <div class="ui info message">
-          <div class="header">We had some issues</div>
-          <ul class="list">
-            <li>Please enter your first name</li>
-            <li>Please enter your last name</li>
-          </ul>
-        </div>
         <div class="two fields">
           <div class="field">
             <label>First Name</label>
@@ -1526,35 +1509,8 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
   <h2 class="ui dividing header">Groups</h2>
 
   <div class="example">
-    <h4 class="ui header">Fields</h4>
-    <p>Fields can exist together in a group</p>
-    <div class="ui form">
-      <div class="fields">
-        <div class="field">
-          <label>First name</label>
-          <input type="text" placeholder="First Name">
-        </div>
-        <div class="field">
-          <label>Middle name</label>
-          <input type="text" placeholder="Middle Name">
-        </div>
-        <div class="field">
-          <label>Last name</label>
-          <input type="text" placeholder="Last Name">
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="example">
     <h4 class="ui header">Evenly Divided</h4>
     <p>Groups can have their widths divided evenly</p>
-    <div class="ui ignored positive icon message">
-      <i class="mobile icon"></i>
-      <div class="content">
-        <h3 class="header">Responsive Element</h3>
-        <p>Split Width Fields automatically receive responsive styling, swapping to one field per row for mobile.</p>
-      </div>
-    </div>
     <div class="ui form">
       <div class="three fields">
         <div class="field">

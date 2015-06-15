@@ -220,11 +220,12 @@ themes      : ['Default']
 
     <div class="highlighted special example">
       <h4 class="ui header">Nesting Grids</h4>
-      <p>Grids can be nested inside of other grids sub-dividing columns even further</p>
+      <p>Grids can be nested inside of other grids sub-dividing columns into grids</p>
 
       <div class="ui two column grid">
         <div class="column">
-          <div class="ui two column grid">
+          <div class="ui three column grid">
+            <div class="column"></div>
             <div class="column"></div>
             <div class="column"></div>
           </div>
@@ -233,8 +234,8 @@ themes      : ['Default']
         <div class="column"></div>
         <div class="column">
           <div class="ui grid">
-            <div class="eight wide column"></div>
-            <div class="eight wide column"></div>
+            <div class="ten wide column"></div>
+            <div class="six wide column"></div>
           </div>
         </div>
       </div>
@@ -242,7 +243,7 @@ themes      : ['Default']
 
     <div class="colored example">
       <h4 class="ui header">Using Colors</h4>
-      <p>Grids can use named <b>color variation</b> to apply background colors, but only with <code>padded grid</code> that do not include negative margins.</p>
+      <p>Grids can use named <b>color variation</b> to apply background colors, but only with <a href="#padded"><code>padded grid</code></a> that do not include negative margins.</p>
       <p>To include a color that is not available in the default palette its perfectly fine to use css</p>
       <div class="ui equal width center aligned padded grid">
         <div class="row">
@@ -297,7 +298,7 @@ themes      : ['Default']
     <div class="example">
       <h4 class="ui header">Significant Word Order</h4>
       <p>Grids include many variations for adjusting things like vertical or horizontal alignment, text alignment, or default gutter sizes.</p>
-      <p>Some variations, like <code>left floated</code> or <code>right aligned</code> are word-order dependent and require you to use adjacent class names.</p>
+      <p>Some multi-word variations, like <a href="#floated"><code>left floated</code></a> or <a href="#text-alignment"><code>right aligned</code></a> are word-order dependent and require you to use adjacent class names.</p>
 
       <div class="ui right aligned grid">
         <div class="left floated right aligned six wide column">
@@ -360,7 +361,7 @@ themes      : ['Default']
 
     <div class="highlighted example">
       <h4 class="ui header">Doubling</h4>
-      <p>A <code>doubling</code> grid will double column widths for each device jump.</p>
+      <p>A <a href="#doubling"><code>doubling</code></a> grid will double column widths for each device jump.</p>
       <div class="ui grid">
         <div class="doubling eight column row">
           <div class="column"></div>
@@ -390,7 +391,7 @@ themes      : ['Default']
     </div>
     <div class="highlighted example">
       <h4 class="ui header">Manual Tweaks</h4>
-      <p>Although patterns like <code>doubling</code> or <code>stackable</code> are useful at simplifying rsponsive design in most cases, you can also specify column width, or visibility by device as well using <a href="#device-width"><code>(x) wide device</code></a> or <a href="#device-visibility"><code>device only</code></a> variations.
+      <p>Although patterns like <a href="#doubling"><code>doubling</code></a> or <a href="#stackable"><code>stackable</code></a> are useful at simplifying rsponsive design in most cases, you can also specify column width, or visibility by device as well using <a href="#device-width"><code>(x) wide device</code></a> or <a href="#device-visibility"><code>device only</code></a> variations.
       <div class="ui centered grid">
         <div class="six wide tablet eight wide computer column"></div>
         <div class="six wide tablet eight wide computer column"></div>
@@ -1015,8 +1016,8 @@ themes      : ['Default']
       </div>
     </div>
     <div class="another example">
-      <div class="ui center aligned three column grid">
-        <div class="row">
+      <div class="ui center aligned grid">
+        <div class="three column row">
           <div class="column">
             <div class="ui vertical fluid menu">
               <div class="header item">
@@ -1045,10 +1046,10 @@ themes      : ['Default']
             </div>
           </div>
         </div>
-      </div>
-      <div class="justified row">
-        <div class="column">
-          <p>Justified content fits exactly inside the grid column, taking up the entire width from one side to the other. Justified content fits exactly inside the grid column, taking up the entire width from one side to the other. Justified content fits exactly inside the grid column, taking up the entire width from one side to the other. Justified content fits exactly inside the grid column, taking up the entire width from one side to the other. Justified content fits exactly inside the grid column, taking up the entire width from one side to the other.</p>
+        <div class="justified row">
+          <div class="column">
+            <p>Justified content fits exactly inside the grid column, taking up the entire width from one side to the other. Justified content fits exactly inside the grid column, taking up the entire width from one side to the other. Justified content fits exactly inside the grid column, taking up the entire width from one side to the other. Justified content fits exactly inside the grid column, taking up the entire width from one side to the other. Justified content fits exactly inside the grid column, taking up the entire width from one side to the other.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -1153,7 +1154,7 @@ themes      : ['Default']
       <h4 class="ui header">Doubling</h4>
       <p>A grid can double its column width on tablet and mobile sizes</p>
       <div class="ui text message info ignore">
-        A grid will round its columns to the closest reasonable value when doubling, for example a <code>five column grid</code> will use <code>2 mobile, 3 tablet, 5 desktop</code>. To force 1 column on mobile you can add <code>stackable</code>
+        A grid will round its columns to the closest reasonable value when doubling, for example a <code>five column grid</code> will use <code>2 mobile, 3 tablet, 5 desktop</code>. To force 1 column on mobile you can add <a href="#stackable"><code>stackable</code></a>
       </div>
       <div class="five column doubling ui grid">
         <div class="column">
@@ -1283,7 +1284,7 @@ themes      : ['Default']
       <h4 class="ui header">Responsive Width</h4>
       <p>A column can specify a width for a specific device</p>
       <div class="ui ignored info message">
-        <p>It's recommended to use a responsive pattern like <code>doubling</code> or <code>stackable</code> to reduce complexity when designing responsively, however in some circumstances specifying exact widths for screen sizes may be necessary.</p>
+        <p>It's recommended to use a responsive pattern like <a href="#doubling"><code>doubling</code></a> or <a href="#stackable"><code>stackable</code></a> to reduce complexity when designing responsively, however in some circumstances specifying exact widths for screen sizes may be necessary.</p>
       </div>
       <div class="ui grid">
         <div class="sixteen wide mobile eight wide tablet four wide computer column">

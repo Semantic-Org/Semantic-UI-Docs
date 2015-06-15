@@ -136,12 +136,30 @@ type        : 'Introduction'
       })
     ;
     </div>
-    <div class="ui fluid search selection dropdown">
-      <input name="tags" type="hidden" />
-      <i class="dropdown icon"></i>
-      <div class="default text">Skills</div>
-      <div class="menu">
-        <%- @partial('examples/single/preset-menu') %>
+    <div class="ui form">
+      <div class="two fields">
+        <div class="field">
+          <label>Primary Skill</label>
+          <div class="ui search selection dropdown">
+            <input name="primary-skill" type="hidden" />
+            <i class="dropdown icon"></i>
+            <div class="default text">Skills</div>
+            <div class="menu">
+              <%- @partial('examples/single/preset-menu') %>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <label>Skills</label>
+          <div class="ui multiple search selection dropdown">
+            <input name="all-skills" type="hidden" />
+            <i class="dropdown icon"></i>
+            <div class="default text">Skills</div>
+            <div class="menu">
+              <%- @partial('examples/single/preset-menu') %>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -436,14 +454,14 @@ type        : 'Introduction'
               if(index >= maxResults) {
                 return false;
               }
-              // Create new language category
+              // create new language category
               if(response.results[language] === undefined) {
                 response.results[language] = {
                   name    : language,
                   results : []
                 };
               }
-              // Add result to category
+              // add result to category
               response.results[language].results.push({
                 title       : item.name,
                 description : item.description,

@@ -521,8 +521,6 @@ semantic.ready = function() {
       changeTheme: function(theme) {
         var
           $themeDropdown = $(this),
-          variableURL = '/src/themes/{$theme}/{$type}s/{$element}.variables',
-          overrideURL = '/src/themes/{$theme}/{$type}s/{$element}.overrides',
           urlData     = {
             theme   : typeof(theme === 'string')
               ? theme.toLowerCase()
@@ -534,8 +532,9 @@ semantic.ready = function() {
         $themeDropdown
           .api({
             on       : 'now',
+            cache    : 'local',
             debug    : true,
-            url      : variableURL,
+            action   : 'getVariables',
             dataType : 'text',
             urlData  : urlData,
             onSuccess: function(content) {
@@ -543,7 +542,8 @@ semantic.ready = function() {
               $themeDropdown
                 .api({
                   on       : 'now',
-                  url      : overrideURL,
+                  cache    : 'local',
+                  action   : 'getOverrides',
                   dataType : 'text',
                   urlData  : urlData,
                   onSuccess: function(content) {
@@ -1218,6 +1218,8 @@ semantic.ready = function() {
   //$.fn.api.settings.base = '//api.semantic-ui.com';
   $.extend($.fn.api.settings.api, {
     categorySearch : '//api.semantic-ui.com/search/category/{query}',
+    getOverrides   : '/src/themes/{$theme}/{$type}s/{$element}.overrides',
+    getVariables   : '/src/themes/{$theme}/{$type}s/{$element}.variables',
     search         : '//api.semantic-ui.com/search/{query}'
   });
 

@@ -692,7 +692,7 @@ pre code {
 }
 
 /* Intro Tab */
-#example .intro h3.ui.header {
+#example .intro > h3.ui.header {
   margin-top: 4em;
 }
 #example .intro .example .anchor + p {
@@ -900,6 +900,25 @@ pre code {
 /*******************************
            UI Pages
 *******************************/
+
+/*--------------
+     Layouts
+---------------*/
+
+#example.layouts .main.container .right.rail .sticky {
+  display: none;
+}
+
+/*----------------
+     Theming
+-----------------*/
+
+#example.theming .variable.grid .segment {
+  display: block;
+  width: 100%;
+  height: 500px;
+  overflow: auto;
+}
 
 /*--------------
       Grid

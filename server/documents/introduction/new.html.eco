@@ -1,6 +1,6 @@
 ---
 layout      : 'default'
-css         : 'divider'
+css         : 'new'
 standalone  : true
 
 title       : 'New In 2.0'
@@ -9,7 +9,7 @@ type        : 'Introduction'
 ---
 
 <%- @partial('header') %>
-<script src="/javascript/intro.js"></script>
+<script src="/javascript/new.js"></script>
 
 <div class="main ui intro container">
 

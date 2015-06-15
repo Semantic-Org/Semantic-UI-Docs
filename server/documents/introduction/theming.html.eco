@@ -1,0 +1,112 @@
+---
+layout      : 'default'
+css         : 'theming'
+standalone  : true
+
+title       : 'Theming'
+description : 'An introduction to theming'
+type        : 'Draft'
+---
+
+<%- @partial('header') %>
+
+<script src="/javascript/theming.js"></script>
+
+<link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/button.less" />
+
+<div class="main ui intro container">
+
+  <h2 class="ui dividing header">
+    Theming
+  </h2>
+
+  <p>Components in Semantic UI are built with <a href="#">css variables</a>. These variables allow developers to specify how a component design should be altered to fit the aesthetic of their website or brand.</p>
+
+  <p>Unlike other UI libraries, theming in Semantic UI is done <b>per component</b>, meaning developers can choose different themes for each component they include in their project.</p>
+
+  <h3 class="ui header">Theming Examples</h3>
+
+  <p>Theme variables adjust all physical aspects of a component. Variables can use css values, reference other component variables, or use site-wide default variables: things like <code>@red</code>, <code>@borderColor</code> or <code>@medium</code>, which are used across component definitions.</p>
+
+  <p>To help visualize how this works, try loading different themes below. You can edit or add variables on the right hand side, then click "Apply theme" to see how the component is adjusted</p>
+  <div data-type="element" data-element="button" class="ui large floating dropdown load button">
+    <input type="hidden" name="load-theme" value="default">
+    <span class="text">Default</span>
+    <i class="dropdown icon"></i>
+    <div class="menu">
+      <div data-value="default" class="item">Semantic UI</div>
+      <div data-value="amazon" class="item">Amazon</div>
+      <div data-value="material" class="item">Google Material</div>
+      <div data-value="gitHub" class="item">GitHub</div>
+      <div data-value="bootstrap3" class="item">Bootstrap</div>
+      <div data-value="twitter" class="item">Twitter</div>
+      <div data-value="raised" class="item">Raised</div>
+      <div data-value="chubby" class="item">Chubby</div>
+      <div data-value="classic" class="item">Classic</div>
+    </div>
+  </div>
+
+  <div class="ui two column variable grid">
+    <div class="column">
+      <h3 class="ui large sub header">Default Variables</h3>
+      <div class="code">
+      </div>
+    </div>
+    <div class="column">
+      <h3 class="ui large sub header">Custom Variables</h3>
+      <textarea class="ui segment">
+      </textarea>
+    </div>
+  </div>
+
+  <br>
+  <div class="ui fluid button">Apply Theme</div>
+  <div class="ui horizontal divider">Preview</div>
+
+  <div class="ui button">
+    View
+  </div>
+  <div class="ui primary button">
+    <i class="shop icon"></i> Add to Cart
+  </div>
+  <div class="ui secondary button">
+    <i class="save icon"></i> Save for Later
+  </div>
+  <div class="ui labeled icon button">
+    <i class="star icon"></i>
+    Rate
+  </div>
+
+  <h3 class="ui header">Creating a Theme</h3>
+
+  <p>Themes are made up of two files a <code>.variables</code> file and a <code>.overrides</code> file.
+
+  <p>A <code>.variables</code> file specifies variables which should be adjusted for a theme.</p>
+
+
+  <p>An <code>.overrides</code> file specifies additional css rules which should be applied for a theme. These css rules can also access css variables.</p>
+
+
+  <h3 class="ui header">Theme Inheritance</h3>
+
+  <div class="example">
+    <div data-type="element" data-element="button" class="ui large floating dropdown theme button">
+      <span class="text">Select Theme</span>
+      <i class="dropdown icon"></i>
+      <div class="menu ui transition hidden" tabindex="-1">
+        <div data-value="Default" class="item">Semantic UI</div>
+        <div data-value="Amazon" class="item">Amazon</div>
+        <div data-value="Material" class="item">Google Material</div>
+        <div data-value="GitHub" class="item">GitHub</div>
+        <div data-value="Bootstrap3" class="item">Bootstrap</div>
+        <div data-value="Twitter" class="item">Twitter</div>
+        <div class="divider"></div>
+        <div data-value="Raised" class="item">Raised</div>
+        <div data-value="Chubby" class="item">Chubby</div>
+        <div data-value="Classic" class="item">Classic</div>
+      </div>
+    </div>
+    <div class="ui button">Button</div>
+  </div>
+
+</div>

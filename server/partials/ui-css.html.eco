@@ -1,4 +1,4 @@
-<% if 'developments' in @getEnvironments(): %>
+<% if 'development' in @getEnvironments(): %>
 
 <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/icon.css">
 <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/reset.css">

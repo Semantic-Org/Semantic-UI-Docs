@@ -70,8 +70,7 @@ code {
   font-family: "Monaco","Menlo","Ubuntu Mono","Consolas","source-code-pro",monospace;
   font-size: 0.875em;
   font-weight: bold;
-  margin-top: -3px;
-  padding: 3px 6px;
+  padding: 1px 6px;
   vertical-align: baseline;
 }
 pre code {
@@ -936,6 +935,10 @@ pre code {
   width: calc(100% - 2rem);
   height: calc(100% - 2rem);
   box-shadow: 0px 0px 0px 1px #DDDDDD inset;
+}
+#example .highlighted.example .relaxed.grid:before {
+  width: calc(100% - 3rem);
+  left: 1.5em;
 }
 /* Consecutive */
 #example .highlighted.example > .grid + .grid {

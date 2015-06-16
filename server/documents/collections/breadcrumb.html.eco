@@ -46,7 +46,7 @@ themes      : ['Default']
   </div>
 
 
-  <h2 class="ui dividing header">Elements</h2>
+  <h2 class="ui dividing header">Contents</h2>
 
   <div class="example">
     <h4 class="ui header">Divider</h4>

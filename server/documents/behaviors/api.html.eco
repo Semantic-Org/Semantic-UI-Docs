@@ -14,23 +14,63 @@ type        : 'UI Behavior'
 <%- @partial('header',  { tabs: { overview: 'Overview', usage: 'Usage',  behaviors: 'Behaviors',  settings: 'Settings' } }) %>
 
 <div class="main ui container">
-  <div class="ui active introduction tab" data-tab="overview">
+  <div class="ui active intro tab" data-tab="overview">
 
-    <div class="ui header"><i class="green check icon"></i>Integrates Seamlessly with UI</div>
-    <p>Attach an API event to a <a href="/elements/input.html">input</a>, by default, it will occur <code>oninput</code>. Attach an API event to a <a href="/elements/button.html">button</a>, it will occur <code>onclick</code>. API also ties API state to UI state: rate throttling, class adjustments for active, loading, disabled, syncing between multiple elements, and more.</p>
+    <div class="test example">
+      <h4 class="ui header">Integrates Seamlessly with UI</h4>
+      <p>API is designed to make the process of integrating data sources to UI components seamless, <a href="#api-state-management">tying API request state</a> to UI states automatically.</p>
+      <p>For example adding an API behavior to an <a href="/elements/input.html"><code>input</code></a> will occur <code>oninput</code>, while a <a href="/elements/button.html"><code>button</code></a>, will query the server <code>onclick</code>.</p>
+      <div class="ui icon input">
+        <i class="search icon"></i>
+        <input type="text" placeholder="Type here...">
+      </div>
+      <div class="ui hidden divider"></div>
+      <div class="ui primary button">Click Me</div>
+      <div class="ui disabled button">Disabled</div>
+    </div>
 
-    <div class="ui header"><i class="green check icon"></i>Templated URLs</div>
-    <p>Use API actions like 'follow user' and not server urls in your code. Centrally manage your entire API making sure you aren't caught modifying urls across your codebase. Define your endpoints using an intuitive templating system that automatically passes data found in your UI.</p>
+    <div class="no example">
+      <h4 class="ui header">Preserve Templated URLs</h4>
+      <p>API helps you decouple URLs from your code. Use named API actions like <code>get followers</code> instead of URLs like <code>http://foo.com/get/1.0/followers.json</code> in your code.</p>
+      <div class="ignored code" data-type="javascript">
+      $('.button')
+        .api({
+          action: 'get followers'
+        })
+      ;
+      </div>
+      <p>Centrally manage your entire API making sure you aren't caught modifying urls across your codebase. Define your endpoints using an <a href="#working-with-named-urls">intuitive templating system</a> that <a href="#url-variables">automatically passes data</a> found in your UI.</p>
+      <div class="ignored code" data-type="javascript">
+        var api = {
+          'get followers' : '/followers/{id}?results={count}',
+          'create user'   : '/create',
+          'add user'      : '/add/{id}',
+          'search'        : '/query/{query}/{/sort}'
+        };
+      </div>
+    </div>
 
-    <div class="ui header"><i class="green check icon"></i>Locally Cached Responses</div>
-    <p>When local caching is enabled repeated requests for the same endpoint will automatically return locally cached responses, avoiding a server roundtrip.</p>
+    <div class="no example">
+      <h4 class="ui header">HTTP 200 is Not Success</h4>
+      <p>Parse your JSON for <code>success</code> conditions before callbacks fire, making sure server errors caught correctly, still trigger error conditions in your front end code.</p>
+      <div class="ignored code">
+        // Responses without this status will trigger error conditions
+        $.fn.api.settings.successTest = function(response) {
+          return response.status == 'OK';
+        }
+      </div>
+    </div>
 
-    <div class="ui header"><i class="green check icon"></i>Text State Management</div>
-    <p>API helps your UI keep track of server events, and is designed to work with Semantic's state naming conventions to track loading, disabled, and active states.</p>
-    <p>This allows you to do things like set maximum and minimum UI load times, toggle between text states, and sync UI states between multiple elements with the same API actions.</p>
+    <div class="no example">
+      <h4 class="ui header">Translate APIs on the Fly</h4>
+      <p>Using a third party API that uses some unruly code? Not a problem! API lets you <a href="/introduction/new.html#translates-any-api">modify an APIs raw JSON response</a> before it is consumed by your code.</p>
+    </div>
 
-    <div class="ui header"><i class="green check icon"></i>Server Traces For Humans</div>
-    <p>View your API request as it occurs in your web console, get errors if required url variables are missing, and useful performance metrics.</p>
+    <div class="no example">
+      <h4 class="ui header">Tools for Mocking</h4>
+      <p>New powerful callbacks like <a href="#mocking-responses"><code>mockResponse</code></a> and <a href="##using-custom-backends"><code>mockResponseAsync</code></a> let you asynchronously mock responses and trigger the same callbacks as your API.</p>
+    </div>
+
 
   </div>
 
@@ -805,7 +845,7 @@ type        : 'UI Behavior'
         </tr>
         <tr>
           <td>create cache</td>
-          <td>Creates new server resposne cache, removing all locally cached URLs</td>
+          <td>Creates new cache, removing all locally cached URLs</td>
         </tr>
         <tr>
           <td>destroy</td>

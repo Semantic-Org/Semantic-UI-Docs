@@ -21,6 +21,15 @@ semantic.api.ready = function() {
     }, 500);
   };
 
+  $('.test.example .ui.button')
+    .api()
+  ;
+  $('.test.example .ui.input input')
+    .api({
+      stateContext: '.test.example .ui.input'
+    })
+  ;
+
   $('form .ui.dropdown')
     .dropdown()
   ;

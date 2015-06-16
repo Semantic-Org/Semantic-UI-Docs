@@ -33,6 +33,75 @@ themes      : ['Default', 'Colored']
     </div>
 
     <div class="example">
+      <h4 class="ui header">Radio Box</h4>
+      <p>A checkbox can be formatted as a radio element. This means it is an exclusive option.</p>
+      <div class="ui form">
+        <div class="inline fields">
+          <div class="field">
+            <div class="ui radio checkbox">
+              <input type="radio" name="frequency" checked="checked" />
+              <label>Once a week</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui radio checkbox">
+              <input type="radio" name="frequency" />
+              <label>2-3 times a week</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui radio checkbox">
+              <input type="radio" name="frequency" />
+              <label>Once a day</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui radio checkbox">
+              <input type="radio" name="frequency" />
+              <label>Twice a day</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="another example">
+      <div class="ui form">
+        <div class="field">
+          <div class="ui checkbox">
+            <input type="checkbox" name="fun" />
+            <label>Make my profile visible</label>
+          </div>
+        </div>
+        <div class="grouped fields">
+          <div class="field">
+            <div class="ui radio checkbox">
+              <input type="radio" name="frequency" checked="checked" />
+              <label>Once a week</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui radio checkbox">
+              <input type="radio" name="frequency" />
+              <label>2-3 times a week</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui radio checkbox">
+              <input type="radio" name="frequency" />
+              <label>Once a day</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui radio checkbox">
+              <input type="radio" name="frequency" />
+              <label>Twice a day</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="example">
       <h4 class="ui header">Slider</h4>
       <p>A checkbox can be formatted to emphasize the current selection state</p>
       <div class="ui slider checkbox">
@@ -79,41 +148,6 @@ themes      : ['Default', 'Colored']
       <div class="ui toggle checkbox">
         <input type="checkbox" name="public" />
         <label>Subscribe to weekly newsletter</label>
-      </div>
-    </div>
-
-
-
-    <div class="example">
-      <h4 class="ui header">Radio Box</h4>
-      <p>A checkbox can be formatted as a radio element. This means it is an exclusive option.</p>
-      <div class="ui form">
-        <div class="grouped inline fields">
-          <div class="field">
-            <div class="ui radio checkbox">
-              <input type="radio" name="frequency" checked="checked" />
-              <label>Once a week</label>
-            </div>
-          </div>
-          <div class="field">
-            <div class="ui radio checkbox">
-              <input type="radio" name="frequency" />
-              <label>2-3 times a week</label>
-            </div>
-          </div>
-          <div class="field">
-            <div class="ui radio checkbox">
-              <input type="radio" name="frequency" />
-              <label>Once a day</label>
-            </div>
-          </div>
-          <div class="field">
-            <div class="ui radio checkbox">
-              <input type="radio" name="frequency" />
-              <label>Twice a day</label>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
 

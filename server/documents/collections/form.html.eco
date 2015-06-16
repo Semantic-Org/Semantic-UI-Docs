@@ -126,7 +126,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
               </select>
             </div>
             <div class="field">
-              <input name="expire-year" maxlength="4" placeholder="Year">
+              <input type="text" name="expire-year" maxlength="4" placeholder="Year">
             </div>
           </div>
         </div>

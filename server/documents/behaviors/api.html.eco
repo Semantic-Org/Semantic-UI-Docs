@@ -1131,7 +1131,8 @@ type        : 'UI Behavior'
           <td>
             <div class="code">
             metadata: {
-              action  : 'action'
+              action  : 'action',
+              url     : 'url'
             }
             </div>
           </td>

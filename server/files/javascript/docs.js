@@ -494,7 +494,7 @@ semantic.ready = function() {
       parseFile: function(content) {
         var
           variables = {},
-          lines = content.match(/^(@[\s|\S]+?;)/gm),
+          lines = content.match(/^\W*(@[\s|\S]+?;)/gm),
           name,
           value
         ;
@@ -830,6 +830,7 @@ semantic.ready = function() {
         evaluatedCode = $code.hasClass('evaluated'),
         contentType  = $code.data('type')     || 'html',
         title        = $code.data('title')    || false,
+        less         = $code.data('less')     || false,
         demo         = $code.data('demo')     || false,
         eval         = $code.data('eval')     || false,
         preview      = $code.data('preview')  || false,
@@ -929,6 +930,17 @@ semantic.ready = function() {
           .insertBefore ( $code.closest('.segment') )
         ;
       }
+      // add apply less button
+      if(less) {
+        $('<a>')
+          .addClass('ui black pointing below ignored label')
+          .html('Apply Theme')
+          .on('click', function() {
+            window.less.modifyVars( handler.less.parseFile( code ) );
+          })
+          .insertBefore ( $code.closest('.segment') )
+        ;
+      }
       // add run code button
       if(demo) {
         $('<a>')
@@ -1015,6 +1027,17 @@ semantic.ready = function() {
 
   semantic.handler = handler;
 
+  // code highlighting languages
+  window.hljs.configure({
+    languages: [
+      'xml',
+      'bash',
+      'css',
+      'less',
+      'javascript'
+    ]
+  });
+
   // add anchors to docs headers
   handler.createAnchors();
 
@@ -1075,15 +1098,6 @@ semantic.ready = function() {
       handler.tryCreateMenu();
     });
   }
-
-  // code highlighting languages
-  window.hljs.configure({
-    languages: [
-      'xml',
-      'css',
-      'javascript'
-    ]
-  });
 
   $shownExample
     .each(handler.createCode)

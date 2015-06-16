@@ -12,7 +12,6 @@ semantic.theming.ready = function() {
 
   };
 
-  console.log($.fn.api.settings.api);
   $('.load.button')
     .dropdown({
       fireOnInit: true,
@@ -22,6 +21,9 @@ semantic.theming.ready = function() {
             on        : 'now',
             dataType  : 'text',
             action    : 'getVariables',
+            urlData   : {
+              theme: theme
+            },
             onSuccess : function(response) {
               if(theme == 'default') {
                 $defaultTheme

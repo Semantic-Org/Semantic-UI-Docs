@@ -79,6 +79,22 @@ pre code {
   font-size: 1em;
 }
 
+blockquote {
+  border-left: 4px solid #777777;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 0em 2em;
+  margin: 1em 0em 2em;
+}
+blockquote p {
+  line-height: inherit;
+}
+blockquote .author {
+  display: block;
+  margin: 1em 0em 0em;
+  font-weight: bold;
+}
+
 /* Code Inside Message */
 .ui.message > p > code,
 .ui.message > code {
@@ -912,6 +928,9 @@ pre code {
      Theming
 -----------------*/
 
+#example.theming .main.container .button {
+  margin-bottom: 0.4em;
+}
 #example.theming .variable.grid .segment {
   display: block;
   width: 100%;
@@ -1592,6 +1611,31 @@ body.progress.animated .ui.progress .bar {
 .code:hover .ruby .hljs-constant {
   color: #333333;
 }
+
+/* LESS */
+.less .hljs-number,
+.less .hljs-hexcolor,
+.less .ruby .hljs-constant {
+  color: #005FAA;
+}
+.less:hover .hljs-number,
+.less:hover .hljs-hexcolor,
+.less:hover .ruby .hljs-constant {
+  color: #005FAA;
+}
+/* LESS Variable */
+.less .hljs-attribute,
+.less .hljs-variable,
+.less .lisp .hljs-body {
+  color: #333333;
+  transition: color 0.3s;
+}
+.less:hover .hljs-attribute,
+.less:hover .hljs-variable,
+.less:hover .lisp .hljs-body {
+  color: #333333;
+}
+
 
 
 

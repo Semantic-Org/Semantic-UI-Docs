@@ -27,39 +27,22 @@ themes      : ['default', 'GitHub']
   </div>
 
   <div class="example">
-    <h4 class="ui header">Vertical Segment</h4>
-    <p>A vertical segment formats content to be aligned as part of a vertical group</p>
-    <div class="ui segment">
-      <div class="ui vertical segment">
-        <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-      </div>
-      <div class="ui vertical segment">
-        <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-      </div>
-      <div class="ui vertical segment">
-        <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-      </div>
+    <h4 class="ui header">Raised</h4>
+    <p>A segment may be formatted to raise above the page.</p>
+    <div class="ui raised segment">
+      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
     </div>
   </div>
-
-  <div class="example">
-    <h4 class="ui header">Horizontal Segment</h4>
-    <p>A horizontal segment formats its content to be aligned as part of a horizontal group</p>
-    <div class="ui three column grid">
-      <div class="column">
-        <div class="ui horizontal segment">
-          <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-        </div>
+  <div class="another example">
+    <div class="ui raised segments">
+      <div class="ui segment">
+        <p>Top</p>
       </div>
-      <div class="column">
-        <div class="ui horizontal segment">
-          <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-        </div>
+      <div class="ui segment">
+        <p>Middle</p>
       </div>
-      <div class="column">
-        <div class="ui horizontal segment">
-          <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-        </div>
+      <div class="ui segment">
+        <p>Bottom</p>
       </div>
     </div>
   </div>
@@ -93,6 +76,138 @@ themes      : ['default', 'GitHub']
     </div>
   </div>
 
+  <div class="example">
+    <h4 class="ui header">Vertical Segment</h4>
+    <p>A vertical segment formats content to be aligned as part of a vertical group</p>
+    <div class="ui vertical segment">
+      <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+    </div>
+    <div class="ui vertical segment">
+      <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+    </div>
+    <div class="ui vertical segment">
+      <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+    </div>
+  </div>
+
+  <h2 class="ui dividing header">Groups</h2>
+
+  <div class="example">
+    <h4 class="ui header">Segment Group</h4>
+    <p>A group of segments can be formatted to appear together</p>
+
+    <div class="ui segments">
+      <div class="ui segment">
+        <p>Top</p>
+      </div>
+      <div class="ui segment">
+        <p>Middle</p>
+      </div>
+      <div class="ui segment">
+        <p>Middle</p>
+      </div>
+      <div class="ui segment">
+        <p>Middle</p>
+      </div>
+      <div class="ui segment">
+        <p>Bottom</p>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui segments">
+      <div class="ui segment">
+        <p>Top</p>
+      </div>
+      <div class="ui red segment">
+        <p>Middle</p>
+      </div>
+      <div class="ui blue segment">
+        <p>Middle</p>
+      </div>
+      <div class="ui green segment">
+        <p>Middle</p>
+      </div>
+      <div class="ui yellow segment">
+        <p>Bottom</p>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui segments">
+      <div class="ui segment">
+        <p>Top</p>
+      </div>
+      <div class="ui secondary segment">
+        <p>Secondary Content</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Horizontal Group</h4>
+    <p>A segment group can appear horizontally</p>
+    <div class="ui horizontal segments">
+      <div class="ui segment">
+        <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+      </div>
+      <div class="ui segment">
+        <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+      </div>
+      <div class="ui segment">
+        <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+      </div>
+    </div>
+  </div>
+
+
+  <div class="example">
+    <h4 class="ui header">Raised Group</h4>
+    <p>A group of segments can be raised</p>
+    <div class="ui raised segments">
+      <div class="ui segment">
+        <p>Top</p>
+      </div>
+      <div class="ui segment">
+        <p>Middle</p>
+      </div>
+      <div class="ui segment">
+        <p>Bottom</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Stacked Group</h4>
+    <p>A group of segments can be stacked</p>
+    <div class="ui stacked segments">
+      <div class="ui segment">
+        <p>Top</p>
+      </div>
+      <div class="ui segment">
+        <p>Middle</p>
+      </div>
+      <div class="ui segment">
+        <p>Bottom</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Piled Group</h4>
+    <p>A group of segments can be raised</p>
+    <div class="ui raised segments">
+      <div class="ui segment">
+        <p>Top</p>
+      </div>
+      <div class="ui segment">
+        <p>Middle</p>
+      </div>
+      <div class="ui segment">
+        <p>Bottom</p>
+      </div>
+    </div>
+  </div>
 
   <h2 class="ui dividing header">States</h2>
 
@@ -182,14 +297,6 @@ themes      : ['default', 'GitHub']
     <p>A segment may take up only as much space as is necessary</p>
     <div class="ui compact segment">
       <p>Pellentesque habitant morbi</p>
-    </div>
-  </div>
-
-  <div class="example">
-    <h4 class="ui header">Raised</h4>
-    <p>A segment may be formatted to raise above the page.</p>
-    <div class="ui raised segment">
-      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
     </div>
   </div>
 
@@ -326,39 +433,5 @@ themes      : ['default', 'GitHub']
     </div>
   </div>
 
-  <h2 class="ui dividing header">Groups</h2>
 
-
-  <div class="example">
-    <h4 class="ui header">Segment Group</h4>
-    <p>A group of segments can be formatted to appear together</p>
-
-    <div class="ui segments">
-      <div class="ui segment">
-        <p>Top</p>
-      </div>
-      <div class="ui segment">
-        <p>Middle</p>
-      </div>
-      <div class="ui segment">
-        <p>Middle</p>
-      </div>
-      <div class="ui segment">
-        <p>Middle</p>
-      </div>
-      <div class="ui segment">
-        <p>Bottom</p>
-      </div>
-    </div>
-  </div>
-  <div class="another example">
-    <div class="ui segments">
-      <div class="ui segment">
-        <p>Top</p>
-      </div>
-      <div class="ui secondary segment">
-        <p>Secondary Content</p>
-      </div>
-    </div>
-  </div>
 </div>

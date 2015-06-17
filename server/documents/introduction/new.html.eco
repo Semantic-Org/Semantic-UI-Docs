@@ -276,6 +276,87 @@ type        : 'Introduction'
     </ul>
   </div>
 
+  <h2 class="ui dividing header">Segment</h2>
+
+  <div class="example">
+    <h4 class="ui header">Horizontal Groups</h4>
+    <p>Horizontal groups are now available.</p>
+    <div class="ui horizontal segments">
+      <div class="ui segment">
+        <p>Top</p>
+      </div>
+      <div class="ui segment">
+        <p>Middle</p>
+      </div>
+      <div class="ui segment">
+        <p>Bottom</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Complex Layouts</h4>
+    <p>Groups now use <code>flexbox</code> and fully support nesting.</p>
+    <div class="ui segments">
+      <div class="ui segment">
+        <p>Top</p>
+      </div>
+      <div class="ui segments">
+        <div class="ui segment">
+          <p>Nested Top</p>
+        </div>
+        <div class="ui segment">
+          <p>Nested Middle</p>
+        </div>
+        <div class="ui segment">
+          <p>Nested Bottom</p>
+        </div>
+      </div>
+      <div class="ui segment">
+        <p>Middle</p>
+      </div>
+      <div class="ui horizontal segments">
+        <div class="ui segment">
+          <p>Top</p>
+        </div>
+        <div class="ui segment">
+          <p>Middle</p>
+        </div>
+        <div class="ui segment">
+          <p>Bottom</p>
+        </div>
+      </div>
+      <div class="ui segment">
+        <p>Bottom</p>
+      </div>
+    </div>
+  </div>
+  <div class="example">
+    <h4 class="ui header">Typed Groups</h4>
+  <p>Groups now support types like <a href="/elements/segment.html#raised"><code>raised</code></a>, <a href="/elements/segment.html#stacked"><code>stacked</code></a>, or <a href="/elements/segment.html#piled"><code>piled</code></a></p>
+    <div class="ui raised segments">
+      <div class="ui secondary segment">
+        <p>Top</p>
+      </div>
+      <div class="ui tall stacked horizontal segments">
+        <div class="ui segment">
+          <p>Top</p>
+        </div>
+        <div class="ui segment">
+          <p>Middle</p>
+        </div>
+        <div class="ui segment">
+          <p>Bottom</p>
+        </div>
+        <div class="ui segment">
+          <p>Top</p>
+        </div>
+      </div>
+      <div class="ui secondary segment">
+        <p>Bottom</p>
+      </div>
+    </div>
+  </div>
 
   <h2 class="ui dividing header">Menus</h2>
 

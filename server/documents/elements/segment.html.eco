@@ -143,6 +143,43 @@ themes      : ['default', 'GitHub']
       </div>
     </div>
   </div>
+  <div class="example">
+    <h4 class="ui header">Nested Group</h4>
+    <p>A group of segments can be nested in another group</p>
+    <div class="ui segments">
+      <div class="ui segment">
+        <p>Top</p>
+      </div>
+      <div class="ui segments">
+        <div class="ui segment">
+          <p>Nested Top</p>
+        </div>
+        <div class="ui segment">
+          <p>Nested Middle</p>
+        </div>
+        <div class="ui segment">
+          <p>Nested Bottom</p>
+        </div>
+      </div>
+      <div class="ui segment">
+        <p>Middle</p>
+      </div>
+      <div class="ui horizontal segments">
+        <div class="ui segment">
+          <p>Top</p>
+        </div>
+        <div class="ui segment">
+          <p>Middle</p>
+        </div>
+        <div class="ui segment">
+          <p>Bottom</p>
+        </div>
+      </div>
+      <div class="ui segment">
+        <p>Bottom</p>
+      </div>
+    </div>
+  </div>
 
   <div class="example">
     <h4 class="ui header">Horizontal Group</h4>
@@ -193,10 +230,10 @@ themes      : ['default', 'GitHub']
     </div>
   </div>
 
-  <div class="example">
+  <div class="piled example">
     <h4 class="ui header">Piled Group</h4>
     <p>A group of segments can be raised</p>
-    <div class="ui raised segments">
+    <div class="ui piled segments">
       <div class="ui segment">
         <p>Top</p>
       </div>

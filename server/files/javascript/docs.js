@@ -74,6 +74,8 @@ semantic.ready = function() {
     $shownExample        = $example.filter('.shown'),
     $prerenderedExample  = $example.has('.ui.dropdown, .ui.search, .ui.rating, .ui.dimmer, .ui.embed'),
 
+    $visibilityExample   = $example.filter('.visiblity').find('.overlay, .demo.segment, .items img'),
+
 
     $sidebarButton       = $('.fixed.launch.button'),
     $code                = $('div.code').not('.existing'),
@@ -792,6 +794,7 @@ semantic.ready = function() {
       $sectionExample.visibility('refresh');
       $sticky.sticky('refresh');
       $footer.visibility('refresh');
+      $visibilityExample.visibility('refresh');
     },
 
     createAnnotation: function() {

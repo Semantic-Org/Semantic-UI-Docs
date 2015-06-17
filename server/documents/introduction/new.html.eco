@@ -23,11 +23,17 @@ type        : 'Introduction'
 
   <a href="https://github.com/Semantic-Org/Semantic-UI/blob/master/RELEASE-NOTES.md" target="_blank" class="ui button">View Release Notes</a>
 
+  <h2 class="ui dividing header">Project</h2>
+  <div class="example">
+    <h4 class="ui header">Built with Flexbox</h4>
+    <p>13 components: <a href="/collections/form.html">Form</a>, <a href="/collections/zzzz/">Grid</a>, <a href="/collections/zzzz/">Menu</a>, <a href="/elements/message.html">Message</a>, <a href="/elements/button.html">Button</a>, <a href="/elements/segment.html">Segment</a>, <a href="/elements/step.html">Step</a>, <a href="/modules/dropdown.html">Dropdown</a>, <a href="/modules/modal.html">Modal</a>, <a href="/views/feed.html">Feed</a>, <a href="/views/statistics.html">Statistic</a>, <a href="/views/card.html">Card</a>, <a href="/views/item.html">Item</a> now use <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes" target="_blank"><code>flexbox</code></a> for positioning. This allows for elements to automatically match heights, and resize content</p>
+
+  </div>
 
   <h2 class="ui dividing header">Grids</h2>
 
   <div class="example">
-    <h4 class="ui header">Flexbox</h4>
+    <h4 class="ui header">Equal Height by Default</h4>
     <p>Grids in 2.0 now use <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes" target="_blank"><code>flexbox</code></a> and are equal height across rows by default.</p>
     <div class="ui three column divided grid">
       <div class="row">
@@ -205,8 +211,9 @@ type        : 'Introduction'
   </div>
 
   <div class="dropdown example">
-    <h4 class="ui header">Nested Menus</h4>
-    <p>Nested scrolling menus are now supported. These menus support all the same keyboard shortcuts and filtering as regular menus.</p>
+    <h4 class="ui header">Scrolling and Nested Menus</h4>
+    <p><a href="modules/dropdown.html#scrolling">Scrolling menu</a> and nested menus are now supported.</p>
+    <p>Listing choices in a nested menu will still give all the same keyboard shortcuts and filtering as regular menus.</p>
     <div class="ui floating dropdown labeled icon button">
       <i class="filter icon"></i>
       <span class="text">Filter Posts</span>
@@ -270,7 +277,6 @@ type        : 'Introduction'
           <li><code>ctrl+click</code> will add a single additional selected label</li>
           <li><code>shift+right</code> will extend selection</li>
           <li><code>page down</code> and <code>page up</code> will select first element in next page</li>
-          <li><code>a-z</code> will select value matching first letter</li>
         </ul>
       <li>Custom error messages are now supported with search selects</li>
     </ul>
@@ -280,7 +286,7 @@ type        : 'Introduction'
 
   <div class="example">
     <h4 class="ui header">Horizontal Groups</h4>
-    <p>Horizontal groups are now available.</p>
+    <p>Horizontal groups are now available for <a href="/elements/segment.html">segment</a>.</p>
     <div class="ui horizontal segments">
       <div class="ui segment">
         <p>Top</p>
@@ -362,7 +368,7 @@ type        : 'Introduction'
 
   <div class="example">
     <h4 class="ui header">Flexible Menus</h4>
-    <p>Menus have been completely rewritten to use flexbox. Items inside a menu will automatically adjust to align with other menu items regardless of size.</p>
+    <p><a href="/collections/menu.html">Menus</a> have been completely rewritten to use <code>flexbox</code>. Items inside a menu will automatically adjust to align with other menu items regardless of size.</p>
     <div class="ui top attached menu">
       <div class="item">
         <img src="/images/logo.png">
@@ -380,7 +386,7 @@ type        : 'Introduction'
   </div>
   <div class="example">
     <h4 class="ui header">Vertical Tabs</h4>
-    <p>Menus now include a new <code>vertical tabular</code> menu type.</p>
+    <p>Menus now include a new <a href="/collections/menu.html#tabular"><code>vertical tabular</code></a> menu type.</p>
     <div class="ui grid">
       <div class="four wide column">
         <div class="ui vertical fluid tabular menu">
@@ -507,7 +513,7 @@ type        : 'Introduction'
 
   <div class="external example">
     <h4 class="ui header">Translates Any API</h4>
-    <p>API now lets you adjust a server's JSON response using a new callback, <code>onResponse</code>. This can let you restructure third party APIs to match your local data requirements.</p>
+    <p><a href="/behaviors/api.html">API</a> now lets you adjust a server's JSON response using a new callback, <a href="/behaviors/api.html#response-callbacks"><code>onResponse</code></a>. This can let you restructure third party APIs to match your local data requirements.</p>
     <div class="ui search">
       <div class="ui left icon input">
         <input class="prompt" type="text" placeholder="Search GitHub">
@@ -559,7 +565,7 @@ type        : 'Introduction'
 
   <div class="mock example">
     <h4 class="ui header">Mocked Responses</h4>
-    <p>API now supports mocked responses, letting you specify how responses are returned in advance.</p>
+    <p><a href="/behaviors/api.html">API</a> now supports mocked responses, letting you specify how responses are returned in advance.</p>
     <div class="code" data-type="javascript">
       $('.toggle.button')
         .api({
@@ -582,11 +588,11 @@ type        : 'Introduction'
   </div>
   <div class="async example">
     <h4 class="ui header">Custom Backends</h4>
-    <p>API can now use custom asynchronous callbacks for resolving API requests, this can let you use other custom XHR backends, or local data to resolve requests.</p>
+    <p><a href="/behaviors/api.html">API</a> can now use <a href="/behaviors/api.html#using-custom-backends">custom asynchronous callbacks</a> for resolving API requests, this can let you use other custom XHR backends, or local data to resolve requests.</p>
     <div class="code" data-type="javascript">
     $('.toggle.button')
       .api({
-        // lets just pretend this button mostly doesnt work
+        // lets wait a half second then try your luck
         mockResponseAsync: function(settings, callback) {
           var
             unlikelySuccess = (Math.random() < 0.3),

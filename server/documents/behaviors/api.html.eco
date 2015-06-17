@@ -501,10 +501,11 @@ type        : 'UI Behavior'
         $('.follow.button')
           .api({
             onResponse: function(response) {
-              // do some adjustments to response
+              // make some adjustments to response
               return response;
             },
             successTest: function(response) {
+              // test whether a json response is valid
               return response.success || false;
             }
             onSuccess: function(response) {

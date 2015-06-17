@@ -1,0 +1,289 @@
+---
+layout      : 'default'
+css         : 'started'
+standalone  : true
+
+title       : 'Getting Started'
+description : 'Getting started with Semantic UI'
+type        : 'Introduction'
+---
+<script src="/javascript/new.js"></script>
+
+<%- @partial('header') %>
+
+<div class="main ui intro container">
+
+  <h2 class="ui dividing header">Installing</h2>
+
+  <div class="ui four item pointing menu">
+    <a data-tab="npm" class="active item">NPM</a>
+    <a data-tab="meteor" class="item">Atmosphere</a>
+    <a data-tab="npm" class="item">Bower</a>
+    <a data-tab="git" class="item">Git</a>
+  </div>
+
+  <div class="ui active tab" data-tab="npm">
+
+    <div class="no example">
+      <div class="ui accordion">
+        <div class="title">
+          <h4 class="ui header">Install NodeJS</h4>
+          <p>To use our build tools you will need Node</p>
+          <i class="dropdown icon"></i>
+        </div>
+        <div class="content">
+
+          <div class="ui top attached tabular menu">
+            <a data-tab="mac" class="active item">Mac</a>
+            <a data-tab="linux" class="item">Linux</a>
+            <a data-tab="win" class="item">Windows</a>
+          </div>
+          <div class="ui bottom attached active padded tab segment" data-tab="mac">
+            <h4>Option 1: Homebrew</h4>
+            <p>After installing <a href="http://brew.sh/" target="_blank">homebrew</a></p>
+            <div class="ignored code" data-type="bash">
+              brew install node
+            </div>
+            <h4>Option 2: Git</h4>
+            <div class="ignored code" data-type="bash">
+            git clone git://github.com/ry/node.git
+            cd node
+            ./configure
+            make
+            sudo make install
+            </div>
+          </div>
+          <div class="ui tab" data-tab="linux">
+            <p>This is a popular install method that will avoid requiring sudo.</p>
+            <div class="ignored code" data-type="bash" data-title="Install without sudo">
+              mkdir ~/local
+              echo 'export PATH=$HOME/local/bin:$PATH' >> ~/.bashrc
+              . ~/.bashrc
+              git clone git://github.com/joyent/node.git
+              cd node
+              ./configure --prefix=~/local
+              make install
+              git clone git://github.com/isaacs/npm.git
+              cd npm
+              make install
+            </div>
+          </div>
+          <div class="ui tab" data-tab="win">
+            <p>Download the <a href="http://nodejs.org/download/">NodeJS executable</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="no example">
+      <h4>Add Semantic UI to Your Project</h4>
+      <p>Semantic UI is released as a package on NPM.</p>
+      <div class="ignored code" data-type="bash">
+        # navigate to your project directory
+        npm install semantic-ui --save
+      </div>
+    </div>
+
+    <div class="no example">
+      <h4>Run Setup</h4>
+      <p>Hey this is the fun part</p>
+      <img src="/images/setup/install.gif" class="ui image">
+    </div>
+
+
+    <div class="no example">
+      <h4>Include Semantic UI in Your Project</h4>
+      <div class="ignored code" data-type="html">
+        <link rel="stylesheet" type="text/css" href="/semantic/dist/semantic.min.css">
+        <script src="semantic/dist/semantic.min.js"></script>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="ui dividing header">Build Tools</h2>
+
+  <div class="no example">
+    <h4>Using Build Tools</h4>
+    <div class="ignored code" data-type="bash">
+      cd semantic/ # or your install directory
+      gulp
+    </div>
+  </div>
+
+  <div class="no example">
+    <h4>Available Commands</h4>
+    <table class="ui definition table">
+      <thead>
+        <th>Command</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>install</td>
+          <td>Asks install questions will automatically run if not setup.</td>
+        </tr>
+        <tr>
+          <td>watch (default)</td>
+          <td>Watches for changes in source files, and builds file on change</td>
+        </tr>
+        <tr>
+          <td>build</td>
+          <td>Build all files</td>
+        </tr>
+        <tr>
+          <td>clean</td>
+          <td>Cleans <code>dist/</code> folder</td>
+        </tr>
+        <tr>
+          <td>version</td>
+          <td>Outputs current version</td>
+        </tr>
+        <tr>
+          <td>build-javascript</td>
+          <td>Build js files</td>
+        </tr>
+        <tr>
+          <td>build-css</td>
+          <td>Build css files</td>
+        </tr>
+        <tr>
+          <td>build-assets</td>
+          <td>Build assets files</td>
+        </tr>
+        <tr>
+          <td>serve-docs</td>
+          <td>Serves files to local docs instance</td>
+        </tr>
+        <tr>
+          <td>build-docs</td>
+          <td>Builds files to docs folder</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="no example">
+    <h4>Configuring Paths</h4>
+    <p>Build tool settings are stored in a special file called <code>semantic.json</code> It can be included in any folder that is in a parent folder of the semantic install folder. </p>
+    <p>If you used the npm or meteor, a semantic.json file is automatically generated for you in the root of your project. If you used a different install, you can run <code>gulp install</code> or manually rename <code>semantic.json.example</code>.</p>
+    <div class="ignored code">
+    {
+      // base path added to all other paths specified in "paths"
+      "base": "",
+
+      "paths": {
+
+        "source": {
+
+          // source theme.config
+          "config"      : "src/theme.config",
+
+          // source definition folder
+          "definitions" : "src/definitions/",
+
+          // source site theme
+          "site"        : "src/site/",
+
+          // source themes folder
+          "themes"      : "src/themes/"
+        },
+
+        "output": {
+          // packaged source (both compressed/uncompressed)
+          "packaged"     : "dist/",
+
+          // uncompressed source
+          "uncompressed" : "dist/components/",
+
+          // compressed source
+          "compressed"   : "dist/components/",
+
+          // output directory for theme assets
+          "themes"       : "dist/themes/"
+        },
+
+        // directory for gulp clean task
+        "clean"        : "dist/"
+      },
+
+      // when set to an integer permission, will set dist files with this file permission
+      "permission" : false,
+
+      // whether gulp watch/build should run RTLCSS
+      "rtl": false
+
+      // will only include components with these names
+      components: [
+        'reset',
+        'site',
+        'button',
+        'container',
+        'divider',
+        'flag',
+        'header',
+        'icon',
+        'image',
+        'input',
+        'label',
+        'list',
+        'loader',
+        'rail',
+        'reveal',
+        'segment',
+        'step',
+        'breadcrumb',
+        'form',
+        'grid',
+        'menu',
+        'message',
+        'table',
+        'ad',
+        'card',
+        'comment',
+        'feed',
+        'item',
+        'statistic',
+        'accordion',
+        'checkbox',
+        'dimmer',
+        'dropdown',
+        'embed',
+        'modal',
+        'nag',
+        'popup',
+        'progress',
+        'rating',
+        'search',
+        'shape',
+        'sidebar',
+        'sticky',
+        'tab',
+        'transition',
+        'api',
+        'form',
+        'state',
+        'visibility'
+      ],
+
+      // whether to include special project maintainer tasks
+      admin: false
+    }
+
+    </div>
+  </div>
+
+  <h2 class="ui dividing header">Recipes</h2>
+
+  <div class="no example">
+    <h4>Import Gulp Tasks</h4>
+    <p>You don't have to use our gulp pipeline, just import the task into your own</p>
+    <div class="ignored code">
+    var
+      watch = require('semantic/tasks/watch'),
+      build = require('semantic/tasks/build')
+    ;
+    gulp.task('watch ui', 'Watch Semantic UI', watch));
+    gulp.task('build ui', 'Watch Semantic UI', build));
+    </div>
+  </div>
+
+</div>

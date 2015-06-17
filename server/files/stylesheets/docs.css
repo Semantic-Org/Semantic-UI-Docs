@@ -925,6 +925,19 @@ blockquote .author {
 }
 
 /*----------------
+  Getting Started
+-----------------*/
+
+#example.started .tab.segment > .example:first-child {
+  margin-top: 0em;
+  padding-top: 0em;
+}
+#example.started .tab.segment > .example:last-child {
+  margin-bottom: 0em;
+  padding-bottom: 0em;
+}
+
+/*----------------
      Theming
 -----------------*/
 

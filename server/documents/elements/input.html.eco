@@ -70,6 +70,9 @@ themes      : ['Default']
   <div class="example">
     <h4 class="ui header">Icon</h4>
     <p>An input can be formatted with an icon</p>
+    <div class="ui ignored message">
+      Input icons do not receive <code>pointer-events</code> unless a <code>link icon</code> is used.
+    </div>
     <div class="ui icon input">
       <input type="text" placeholder="Search...">
       <i class="search icon"></i>
@@ -84,13 +87,13 @@ themes      : ['Default']
   <div class="another example">
     <div class="ui icon input">
       <input type="text" placeholder="Search...">
-      <i class="circular search icon"></i>
+      <i class="circular search link icon"></i>
     </div>
   </div>
   <div class="another example">
     <div class="ui icon input">
       <input type="text" placeholder="Search...">
-      <i class="inverted circular search icon"></i>
+      <i class="inverted circular search link icon"></i>
     </div>
   </div>
 

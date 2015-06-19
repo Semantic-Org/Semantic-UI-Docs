@@ -22,7 +22,7 @@ themes      : ['default']
   <div class="example">
     <h4 class="ui header">Divider</h4>
     <p>A standard divider</p>
-    <div class="ignored ui warning message">If you are looking to add a divider in between grid rows, you can use the <code>ui divided grid</code> variation. For more information check out <a href="/collections/grid.html">the grid definition</a></div>
+    <div class="ignored ui warning message">To add a divider between parts of a grid use a <a href="/collections/grid.html#divided"><code>divided grid</code></a> variation.</div>
     <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
     <div class="ui divider"></div>
     <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
@@ -32,12 +32,12 @@ themes      : ['default']
     <h4 class="ui header">Vertical Divider</h4>
     <p>A divider can segment content vertically</p>
     <div class="ui ignored message">
-      Vertical and horizontal dividers require you to add <code>position: relative</code> to the element that you would like to contain the divider
+      Vertical dividers requires <code>position: relative</code> on the element that you would like to contain the divider
     </div>
     <div class="ui info ignored message">
-      A vertical divider will automatically adjust to a horizontal divider at mobile resolutions when used inside a <a href="/collections/grid.html#stackable-grid">stackable grid</a>
+      A vertical divider will automatically swap to a horizontal divider at mobile resolutions when used inside a <a href="/collections/grid.html#stackable-grid"><code>stackable grid</code></a>
     </div>
-    <div class="ui two column middle aligned very relaxed fitted stackable grid">
+    <div class="ui two column middle aligned very relaxed stackable grid">
       <div class="column">
         <div class="ui form">
           <div class="field">
@@ -91,12 +91,12 @@ themes      : ['default']
     </div>
   </div>
   <div class="another example">
-    <h4 class="ui horizontal header divider">
+    <h4 class="ui horizontal divider header">
       <i class="tag icon"></i>
       Description
     </h4>
     <p>Doggie treats are good for all times of the year. Proven to be eaten by 99.9% of all dogs worldwide.</p>
-    <h4 class="ui horizontal header divider">
+    <h4 class="ui horizontal divider header">
       <i class="bar chart icon"></i>
       Specifications
     </h4>

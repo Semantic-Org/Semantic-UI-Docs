@@ -245,7 +245,7 @@ themes      : ['Default', 'Timeline']
 
   <h2 class="ui dividing header">Variations</h2>
   <div class="example">
-    <h4 class="ui header">Sizes</h4>
+    <h4 class="ui header">Size</h4>
     <p>A feed can have different sizes</p>
 
     <div class="ui small feed">

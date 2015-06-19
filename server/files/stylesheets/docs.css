@@ -584,6 +584,7 @@ blockquote .author {
   padding: 0em;
   max-height: 610px;
   font-weight: normal;
+  transform: rotateZ(0deg);
   font-family:  'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
 }
 
@@ -883,6 +884,9 @@ blockquote .author {
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
 }
 #example .example > .html > .top.attached.label {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
   display: none;
   background-color: #F8F8F8;
   box-shadow: 0px 0px 0px 1px #DDDDDD;
@@ -916,13 +920,6 @@ blockquote .author {
            UI Pages
 *******************************/
 
-/*--------------
-     Layouts
----------------*/
-
-#example.layouts .main.container .right.rail .sticky {
-  display: none;
-}
 
 /*----------------
   Getting Started
@@ -1502,7 +1499,7 @@ body.progress.animated .ui.progress .bar {
 *******************************/
 
 
-.hljs {
+code.code {
   display: block;
   overflow-x: auto;
   padding: 0em;
@@ -1512,141 +1509,166 @@ body.progress.animated .ui.progress .bar {
 }
 
 /*--------------
-    Hover Only
+   Hover Only
 ---------------*/
 
-.hljs,
-.hljs span {
+code.code,
+code.code span {
   -moz-transition: 0.5s color ease;
   -webkit-transition: 0.5s color ease;
   -ms-transition: 0.5s color ease;
   transition: 0.5s color ease;
 }
-.hljs {
+code.code {
   color: #333333;
 }
 
-.hljs.xml {
+code.code.xml {
   color: #555555;
 }
-.hljs.xml:hover {
+code.code.xml:hover {
   color: #333333;
 }
 
 /* Class Name */
-.hljs-string,
-.hljs-tag .hljs-value,
-.hljs-phpdoc,
-.hljs-dartdoc,
-.tex .hljs-formula {
+code .string,
+code .tag .value,
+code .phpdoc,
+code .dartdoc,
+code .tex .formula {
   color: #008C79;
 }
-.code:hover .hljs-string,
-.code:hover .hljs-tag .hljs-value,
-.code:hover .hljs-phpdoc,
-.code:hover .hljs-dartdoc,
-.code:hover .tex .hljs-formula {
+code:hover .string,
+code:hover .tag .value,
+code:hover .phpdoc,
+code:hover .dartdoc,
+code:hover .tex .formula {
   color: #007b6b;
 }
 
 /* Comment */
-.hljs-comment,
-.hljs-template_comment,
-.diff .hljs-header,
-.hljs-javadoc {
+code .comment,
+code .template_comment,
+code .diff .header,
+code .javadoc {
   color: #AAAAAA;
   font-style: italic;
 }
 
 
 /* Properties */
-.hljs-tag,
-.hljs-rules .hljs-property,
-.django .hljs-tag .hljs-keyword {
-  color: #D1D1D1;
+code .tag,
+code .rules .property,
+code .django .tag .keyword {
+  color: #858188;
   font-weight: normal;
 }
 
-.code:hover .hljs-tag,
-.code:hover .hljs-rules .hljs-property,
-.code:hover .django .hljs-tag .hljs-keyword {
+code:hover .tag,
+code:hover .rules .property,
+code:hover .django .tag .keyword {
   color: #892A6F;
   font-weight: normal;
 }
 
 /* HTML Tag */
-.hljs-tag .hljs-title {
-  color: #D1CDD4;
+code .tag .title {
+  color: #858188;
   font-weight: normal;
 }
-.code:hover .hljs-tag .hljs-title {
+code:hover .tag .title {
   color: #892A6F;
 }
 
 /* Attribute */
-.hljs-attribute,
-.hljs-variable,
-.lisp .hljs-body {
-  color: #D1CECE;
+code .attribute,
+code .variable,
+code .lisp .body {
+  color: #8D8A8A;
   transition: color 0.3s;
 }
-.code:hover .hljs-attribute,
-.code:hover .hljs-variable,
-.code:hover .lisp .hljs-body {
+code:hover .attribute,
+code:hover .variable,
+code:hover .lisp .body {
   color: #934E4E;
 }
 
 /* CSS ID */
-.hljs-title,
-.hljs-id,
-.scss .hljs-preprocessor {
-  color: #009FDA;
+code .title,
+code .id,
+code .scss .preprocessor {
+  color: #9C989F;
   font-weight: bold;
 }
 
 /* CSS Attribute */
-.hljs-rule .hljs-attribute {
+code .rule .attribute {
   color: #892A6F;
 }
-.code:hover .hljs-rule .hljs-attribute {
+code:hover .rule .attribute {
   color: #892A6F;
 }
 
 /* CSS Value */
-.hljs-number,
-.hljs-hexcolor,
-.ruby .hljs-constant {
+code .number,
+code .hexcolor,
+code .ruby .constant {
   color: #666666;
 }
 
-.code:hover .hljs-number,
-.code:hover .hljs-hexcolor,
-.code:hover .ruby .hljs-constant {
+code:hover .number,
+code:hover .hexcolor,
+code:hover .ruby .constant {
   color: #333333;
 }
 
 /* LESS */
-.less .hljs-number,
-.less .hljs-hexcolor,
-.less .ruby .hljs-constant {
+code.less .number,
+code.less .hexcolor,
+code.less .ruby .constant {
   color: #005FAA;
 }
-.less:hover .hljs-number,
-.less:hover .hljs-hexcolor,
-.less:hover .ruby .hljs-constant {
+code.less:hover .number,
+code.less:hover .hexcolor,
+code.less:hover .ruby .constant {
   color: #005FAA;
 }
 /* LESS Variable */
-.less .hljs-attribute,
-.less .hljs-variable,
-.less .lisp .hljs-body {
+code.less .attribute,
+code.less .variable,
+code.less .lisp .body {
   color: #333333;
   transition: color 0.3s;
 }
-.less:hover .hljs-attribute,
-.less:hover .hljs-variable,
-.less:hover .lisp .hljs-body {
+code.less:hover .attribute,
+code.less:hover .variable,
+code.less:hover .lisp .body {
   color: #333333;
+}
+
+/* Emphasized Value */
+code.code .class.string b,
+code.code .class.value b {
+  padding: 0px;
+  font-weight: normal;
+  background-color: rgba(90, 90, 90, 0);
+  border-radius: 5px;
+  line-height: 1;
+  vertical-align: baseline;
+  display: inline-block;
+  transform: rotateZ(0deg);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+code.code:hover .class.value {
+  /*color: #668C79;*/
+}
+code.code:hover .class.string b,
+code.code:hover .class.value b {
+  background-color: rgba(98, 190, 169, 0.25);
+  color: #008078;
+  margin: 0px -2px;
+  padding: 2px 2px;
 }
 
 
@@ -1656,64 +1678,64 @@ body.progress.animated .ui.progress .bar {
       Normal
 ---------------*/
 
-.hljs-keyword,
-.css .rule .hljs-keyword,
-.hljs-winutils,
-.javascript .hljs-title,
-.nginx .hljs-title,
-.hljs-subst,
-.hljs-request,
-.hljs-status {
+code .keyword,
+code .css .rule .keyword,
+code .winutils,
+code .javascript .title,
+code .nginx .title,
+code .subst,
+code .request,
+code .status {
   color: #333;
   font-weight: bold;
 }
 
-.javascript .hljs-title,
-.hljs-list .hljs-keyword,
-.hljs-subst {
+code .javascript .title,
+code .list .keyword,
+code .subst {
   font-weight: normal;
 }
 
-.hljs-class .hljs-title,
-.hljs-type,
-.vhdl .hljs-literal,
-.tex .hljs-command {
+code .class .title,
+code .type,
+code .vhdl .literal,
+code .tex .command {
   color: #458;
   font-weight: bold;
 }
 
 
-.hljs-regexp {
+code .regexp {
   color: #009926;
 }
 
-.hljs-built_in {
+code .built_in {
   color: #0086b3;
 }
 
-.hljs-preprocessor,
-.hljs-pragma,
-.hljs-pi,
-.hljs-doctype,
-.hljs-shebang,
-.hljs-cdata {
+code .preprocessor,
+code .pragma,
+code .pi,
+code .doctype,
+code .shebang,
+code .cdata {
   color: #999;
   font-weight: bold;
 }
 
-.hljs-deletion {
+code .deletion {
   background: #fdd;
 }
 
-.hljs-addition {
+code .addition {
   background: #dfd;
 }
 
-.diff .hljs-change {
+code .diff .change {
   background: #0086b3;
 }
 
-.hljs-chunk {
+code .chunk {
   color: #aaa;
 }
 

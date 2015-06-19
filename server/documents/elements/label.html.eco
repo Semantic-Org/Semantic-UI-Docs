@@ -369,7 +369,7 @@ themes      : ['Default']
 
   <h2 class="ui dividing header">Variations</h2>
   <div class="example">
-    <h4 class="ui header">Colors</h4>
+    <h4 class="ui header">Colored</h4>
     <p>A label can have different colors</p>
     <a class="ui red label">Red</a>
     <a class="ui orange label">Orange</a>

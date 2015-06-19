@@ -762,7 +762,7 @@ themes      : ['Default']
   </div>
 
   <div class="example">
-    <h4 class="ui header">Sizes</h4>
+    <h4 class="ui header">Size</h4>
     <p>A list can vary in size</p>
     <div class="ui mini horizontal divided list">
       <div class="item">

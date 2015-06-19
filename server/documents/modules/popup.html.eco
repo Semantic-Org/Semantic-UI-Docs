@@ -361,7 +361,7 @@ themes      : ['Default']
               </div>
             </div>
             <div class="column">
-              <h4 class="ui header">Sizes</h4>
+              <h4 class="ui header">Size</h4>
               <div class="ui link list">
                 <a class="item">Small</a>
                 <a class="item">Medium</a>

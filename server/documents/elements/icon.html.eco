@@ -1260,17 +1260,17 @@ themes      : ['Default']
     <div class="example">
       <h4 class="ui header">Size</h4>
       <p>An icon can vary in size</p>
-      <i class="small home icon"></i> Small
+      <i class="small home icon"></i>
       <br>
-      <i class="home icon"></i> Medium
+      <i class="home icon"></i>
       <br>
-      <i class="large home icon"></i> Large
+      <i class="large home icon"></i>
       <br>
-      <i class="big home icon"></i> Big
+      <i class="big home icon"></i>
       <br>
-      <i class="huge home icon"></i> Huge
+      <i class="huge home icon"></i>
       <br>
-      <i class="massive home icon"></i> Massive
+      <i class="massive home icon"></i>
     </div>
 
     <div class="example">
@@ -1317,7 +1317,7 @@ themes      : ['Default']
     </div>
 
     <div class="example">
-      <h4 class="ui header">Colors</h4>
+      <h4 class="ui header">Colored</h4>
       <p>An icon can be formatted with different colors</p>
       <i class="red users icon"></i>
       <i class="orange users icon"></i>
@@ -1356,7 +1356,7 @@ themes      : ['Default']
     <h2 class="ui dividing header">Groups</h2>
 
     <div class="example">
-      <h4 class="ui header">Icon Group</h4>
+      <h4 class="ui header">Icons</h4>
       <p>Several icons can be used together as a group</p>
       <i class="huge icons">
         <i class="big thin circle icon"></i>
@@ -1373,7 +1373,7 @@ themes      : ['Default']
         <i class="user icon"></i>
       </i>
     </div>
-    <div class="example">
+    <div class="example" data-class="corner">
       <h4 class="ui header">Corner Icon</h4>
       <p>A group of icons can display a smaller corner icon</p>
       <i class="huge icons">

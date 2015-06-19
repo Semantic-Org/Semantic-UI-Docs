@@ -622,7 +622,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
   </div>
 
   <div class="example">
-    <h4 class="ui header">Colors</h4>
+    <h4 class="ui header">Colored</h4>
     <p>A card can specify a color</p>
     <div class="ui four cards">
       <a class="red card">

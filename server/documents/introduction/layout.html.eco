@@ -11,7 +11,8 @@ type        : 'Introduction'
 <%- @partial('header') %>
 <div class="ui main intro container">
   <h2 class="ui dividing header">Starter</h2>
-  <div class="ui three doubling cards">
+  <p>Examples to introduce components and their function</p>
+  <div class="ui three stackable doubling cards">
     <a class="ui card" href="/examples/theming.html">
       <div class="image">
         <img src="/images/examples/theming.png">
@@ -48,6 +49,7 @@ type        : 'Introduction'
   </div>
 
   <h2 class="ui dividing header">Pages</h2>
+  <p>Starter page templates</p>
   <div class="ui three doubling cards">
     <a class="ui card" href="/examples/homepage.html">
       <div class="image">

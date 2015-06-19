@@ -18,11 +18,12 @@ themes      : ['Default']
 <div class="main ui container">
 
   <h2 class="ui dividing header">Types</h2>
-  <div class="example">
+
+  <div class="example" data-class="image">
     <h4 class="ui header">Image</h4>
     <p>An image</p>
     <div class="ui ignored message">
-       Unless a size if specified, images will use the original dimensions of the image, with a maximum width of its container size <code>max-width: 100%</code>.
+       Unless a size if specified, images will use the original dimensions of the image up to the size of its container.</code>.
     </div>
     <div class="ui ignored info message">
       You can specify an <code>img</code> or <code>svg</code> as a <code>ui image</code> or use a child element.</code>
@@ -144,7 +145,7 @@ themes      : ['Default']
   </div>
 
   <div class="clearing example">
-    <h4 class="ui header">Sizes</h4>
+    <h4 class="ui header">Size</h4>
     <p>An image may appear at different sizes</p>
     <div class="ui ignored info message">
       Semantic uses arbitrary default values for image sizes from mini to massive. It is recommended to update these with values used in your project in <code>image.variables</code>.
@@ -217,7 +218,7 @@ themes      : ['Default']
   <h2 class="ui dividing header">Groups</h2>
 
   <div class="example">
-    <h4 class="ui header">Sizes</h4>
+    <h4 class="ui header">Size</h4>
     <p>A group of images can be formatted to have the same size.</p>
     <div class="ui tiny images">
       <img class="ui image" src="/images/wireframe/image.png">

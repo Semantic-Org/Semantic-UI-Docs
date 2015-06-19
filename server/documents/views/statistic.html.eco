@@ -463,7 +463,7 @@ themes      : ['Default']
   </div>
 
   <div class="example">
-    <h4 class="ui header">Sizes</h4>
+    <h4 class="ui header">Size</h4>
     <p>A statistic can vary in size</p>
     <div class="ui mini statistic">
       <div class="value">

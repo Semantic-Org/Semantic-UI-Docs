@@ -682,7 +682,7 @@ semantic.ready = function() {
         $example    = $(this).closest('.example'),
         $annotation = $example.find('.annotation'),
         $code       = $annotation.find('.code'),
-        $intro      = $example.children().not('.ignored, h4:first-child').filter('.ui').eq(0).prevAll(),
+        $intro      = $example.children().not('.ignored, h4:first-child').filter('.ui, i:not(.code)').eq(0).prevAll(),
         $ignored    = $('i.code:last-child, .wireframe, .anchor, .code, .existing, .instructive, .language.label, .annotation, br, .ignore, .ignored'),
         $demo       = $example.children().not($intro).not($ignored),
         code        = ''
@@ -691,14 +691,14 @@ semantic.ready = function() {
         $demo
           .each(function() {
             var
-              $this = $(this).clone(false),
+              $this      = $(this).clone(false),
               $wireframe = $this.find('.wireframe').add($this.filter('.wireframe'))
             ;
             $wireframe
               .each(function() {
                 var
-                  src = $(this).attr('src'),
-                  image = (src.search('image') !== -1),
+                  src       = $(this).attr('src'),
+                  image     = (src.search('image') !== -1),
                   paragraph = (src.search('paragraph') !== -1)
                 ;
                 if(paragraph) {
@@ -728,10 +728,10 @@ semantic.ready = function() {
       $example.data('code', code);
       return code;
     },
-    createCode: function(type) {
+    createCode: function() {
       var
         $example        = $(this).closest('.example'),
-        $intro          = $example.children().not('.ignored, h4:first-child').filter('.ui').eq(0).prevAll(),
+        $intro          = $example.children().not('.ignored, h4:first-child').filter('.ui, i:not(.code)').eq(0).prevAll(),
         $annotation     = $example.find('.annotation'),
         $code           = $annotation.find('.code'),
         $html           = $example.children('.html'),
@@ -777,16 +777,18 @@ semantic.ready = function() {
         ;
         $.proxy(handler.initializeCode, $code)(true);
       }
-      if( ($annotation.eq(0).is(':visible') || type == 'designer') && type != 'developer' ) {
+      if( $annotation.hasClass('visible') ) {
         $annotation.transition('hide');
         $html.removeClass('ui top attached segment');
-        handler.refreshSticky();
       }
       else {
         $html.addClass('ui top attached segment');
         $intro.css('display', '');
-        $annotation.transition('fade', handler.refreshSticky);
+        $annotation.transition('show');
       }
+      setTimeout(function() {
+        handler.refreshSticky();
+      }, 1000);
     },
 
     refreshSticky: function() {
@@ -823,23 +825,98 @@ semantic.ready = function() {
       }
     },
 
+    highlightClasses: function($code) {
+      var
+        $closestExample = $code.closest('.example'),
+        $example        = ($closestExample.length === 0)
+          ? $code.closest('.segment').prevAll('.example').not('.another').eq(0)
+          : ($closestExample.hasClass('another'))
+            ? $closestExample.prevAll('.example').not('.another').eq(0)
+            : $closestExample,
+        $header     = $example.find('h4').eq(0),
+        $attributes = $code.find('.attribute, .class'),
+        pageName    = $.trim($('h1').eq(0).contents().filter(function() { return this.nodeType == 3; }).text().toLowerCase()),
+        name        = handler.getText($header).toLowerCase(),
+        classes     = $example.data('class') || ''
+      ;
+      // Add title
+      if(name) {
+        if(name == pageName) {
+          name = 'ui ' + name;
+        }
+        classes = (classes === '')
+          ? name
+          : classes + ',' + name
+        ;
+      }
+      // Add common variations
+      classes = classes.replace('text alignment', "left aligned, right aligned, justified, center aligned");
+      classes = classes.replace('floating', "right floated,left floated,floated");
+      classes = classes.replace('vertically attached', "attached");
+      classes = classes.replace('horizontally attached', "attached");
+      classes = classes.replace('attached', "left attached,right attached,top attached,bottom attached,attached");
+      classes = classes.replace('size', "mini,tiny,small,medium,large,big,huge,massive");
+      classes = classes.replace('colored', "red,orange,yellow,olive,green,teal,blue,violet,purple,pink,brown,grey,black");
+      classes = (classes !== '')
+        ? classes.split(',')
+        : []
+      ;
+      // check each class value
+      $attributes.each(function() {
+        var
+          $attribute    = $(this),
+          attributeHTML = $attribute.html(),
+          $value,
+          html,
+          newHTML
+        ;
+        // only parse classes
+        if(attributeHTML.search('class') === -1) {
+          return true;
+        }
+        $value     = $attribute.next('.value, .string').eq(0);
+        html       = $value.html();
+        // check against each value
+        $.each(classes, function(index, className) {
+          className = $.trim(className);
+          if(className === '') {
+            return true;
+          }
+          if(pageName !== 'icon' && className == 'icon' && $value.prevAll('.title').html() == 'i') {
+            return true;
+          }
+          if(html.search(className) !== -1) {
+            newHTML = html.replace(className, '<b>' + className + '</b>');
+            return false;
+          }
+        });
+        if(newHTML) {
+          $value
+            .addClass('class')
+            .html(newHTML)
+          ;
+        }
+      });
+
+    },
+
     initializeCode: function(codeSample) {
       var
-        $code        = $(this).show(),
-        $codeTag     = $('<code></code>'),
-        codeSample   = codeSample || false,
-        code         = $code.html(),
-        existingCode = $code.hasClass('existing'),
+        $code         = $(this).show(),
+        $codeTag      = $('<code />'),
+        codeSample    = codeSample || false,
+        code          = $code.html(),
+        existingCode  = $code.hasClass('existing'),
         evaluatedCode = $code.hasClass('evaluated'),
-        contentType  = $code.data('type')     || 'html',
-        title        = $code.data('title')    || false,
-        less         = $code.data('less')     || false,
-        demo         = $code.data('demo')     || false,
-        eval         = $code.data('eval')     || false,
-        preview      = $code.data('preview')  || false,
-        label        = $code.data('label')    || false,
-        preserve     = $code.data('preserve') || false,
-        displayType  = {
+        contentType   = $code.data('type')     || 'html',
+        title         = $code.data('title')    || false,
+        less          = $code.data('less')     || false,
+        demo          = $code.data('demo')     || false,
+        eval          = $code.data('eval')     || false,
+        preview       = $code.data('preview')  || false,
+        label         = $code.data('label')    || false,
+        preserve      = $code.data('preserve') || false,
+        displayType   = {
           html       : 'HTML',
           javascript : 'Javascript',
           css        : 'CSS',
@@ -854,6 +931,7 @@ semantic.ready = function() {
         whiteSpace,
         indent,
         styledCode,
+        $example,
         $label,
         codeHeight
       ;
@@ -865,7 +943,6 @@ semantic.ready = function() {
         "'": '&#39;',
         "/": '&#x2F;'
       };
-
       contentType = contentType.toLowerCase();
 
       function escapeHTML(string) {
@@ -889,34 +966,32 @@ semantic.ready = function() {
         formattedCode = $.trim(code).replace(whiteSpace, '\n');
       }
 
+      // escape html entities
       if(contentType != 'javascript' && contentType != 'less') {
-        formattedCode = escapeHTML(formattedCode);
+        //formattedCode = escapeHTML(formattedCode);
       }
 
-      // replace with <code>
+      // color code
+      formattedCode = window.hljs.highlightAuto(formattedCode);
+
+      // create <code> tag
       $codeTag
         .addClass($code.attr('class'))
-        .html(formattedCode)
+        .addClass(formattedCode.language)
+        .html(formattedCode.value)
       ;
-
-      $code
-        .replaceWith($codeTag)
-      ;
+      // replace <div> with <code>
+      $code.replaceWith($codeTag);
       $code = $codeTag;
-
       $code
-        .html(formattedCode)
-      ;
-
-      // wrap
-      $code = $code
         .wrap('<div class="ui ' + name + ' segment"></div>')
         .wrap('<pre></pre>')
       ;
 
-      // color code
-      window.hljs.highlightBlock($code[0]);
-
+      if(contentType == 'html') {
+        // add class emphasis to used classes
+        handler.highlightClasses($code);
+      }
 
       // add label
       if(title) {
@@ -1032,7 +1107,8 @@ semantic.ready = function() {
 
   // code highlighting languages
   window.hljs.configure({
-    languages: [
+    classPrefix : '',
+    languages   : [
       'xml',
       'bash',
       'css',

@@ -290,7 +290,7 @@ themes      : ['Default']
     </div>
 
     <div class="colored example">
-      <h4 class="ui header">Colors</h4>
+      <h4 class="ui header">Colored</h4>
       <p>Grids can use named <a href="#colored"><b>colors</b> variations</a> to add background colors, but only with <a href="#padded"><code>padded grid</code></a> that do not include negative margins.</p>
       <p>To include a color that is not available in the default palette its perfectly fine to use CSS</p>
       <div class="ui equal width center aligned padded grid">

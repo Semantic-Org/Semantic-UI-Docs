@@ -275,7 +275,7 @@ themes      : ['Default', 'GitHub', 'Gmail']
 
 
   <div class="example">
-    <h4 class="ui header">Sizes</h4>
+    <h4 class="ui header">Size</h4>
     <p>A message can have different sizes</p>
     <div class="ui small message">
       This is a very small message.

@@ -562,7 +562,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
           </div>
         </div>
         <div class="column">
-          <h4 class="ui header">Sizes</h4>
+          <h4 class="ui header">Size</h4>
           <div class="ui link list">
             <a class="item">Small</a>
             <a class="item">Medium</a>
@@ -571,7 +571,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
           </div>
         </div>
         <div class="column">
-          <h4 class="ui header">Colors</h4>
+          <h4 class="ui header">Colored</h4>
           <div class="ui link list">
             <a class="item">Neutrals</a>
             <a class="item">Brights</a>
@@ -829,7 +829,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
     </div>
   </div>
   <div class="example">
-    <h4 class="ui header">Colors</h4>
+    <h4 class="ui header">Colored</h4>
     <p>Additional colors can be specified.</p>
     <div class="ui menu">
       <a class="ui active red item">Red</a>

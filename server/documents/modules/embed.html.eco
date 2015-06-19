@@ -83,7 +83,7 @@ type        : 'UI Module'
 
     <div class="embed example">
       <h4 class="ui header">Vimeo</h4>
-      <p>An embed can be used to display <a href="http://www.vimeo.com" target="_blank">Vimeo Content</a></p>
+      <p>An embed can be used to display <a href="http://www.vimeo.com" target="_blank">Vimeo</a> content.</p>
 
       <div class="ui embed"
         data-source="vimeo"
@@ -139,11 +139,11 @@ type        : 'UI Module'
       </div>
     </div>
 
-    <div class="no metadata example">
+    <div class="no content example">
       <h4 class="ui header">Using Content IDs</h4>
       <p>Embed is designed to automatically generate urls from content ids. This way your site's backend can store meaningful content metadata and not worry about generating urls.</p>
       <div class="code" data-type="javascript" data-demo="true">
-        $('.metadata.example .ui.embed').embed();
+        $('.content.example .ui.embed').embed();
       </div>
       <div class="code" data-type="html" data-preview="true">
         <div class="ui embed"

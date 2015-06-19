@@ -5,7 +5,7 @@ standalone  : true
 
 title       : 'Getting Started'
 description : 'Getting started with Semantic UI'
-type        : 'Introduction'
+type        : 'Draft'
 ---
 <script src="/javascript/new.js"></script>
 

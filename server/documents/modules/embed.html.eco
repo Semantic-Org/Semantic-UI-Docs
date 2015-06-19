@@ -71,7 +71,7 @@ type        : 'UI Module'
 
     <div class="embed example">
       <h4 class="ui header">YouTube</h4>
-      <p>An embed can be used to display YouTube Content</p>
+      <p>An embed can be used to display <a href="http://www.youtube.com" target="_blank">YouTube</a> Content</p>
 
       <div class="ui embed"
         data-source="youtube"
@@ -83,7 +83,7 @@ type        : 'UI Module'
 
     <div class="embed example">
       <h4 class="ui header">Vimeo</h4>
-      <p>An embed can be used to display Vimeo Content</p>
+      <p>An embed can be used to display <a href="http://www.vimeo.com" target="_blank">Vimeo Content</a></p>
 
       <div class="ui embed"
         data-source="vimeo"
@@ -99,7 +99,9 @@ type        : 'UI Module'
       <div class="ui info ignored message">Embeds use an intrinsic aspect ratios to embed content responsively. Content will preserve their intrinsic aspect ratio for all browser sizes responsively</div>
       <div class="ui embed"
         data-url="http://www.myfav.es/jack"
-        data-placeholder="/images/image-16by9.png">
+        data-placeholder="/images/image-16by9.png"
+        data-icon="right circle arrow"
+      >
       </div>
     </div>
 
@@ -138,8 +140,8 @@ type        : 'UI Module'
     </div>
 
     <div class="no metadata example">
-      <h4 class="ui header">Specifying Metadata</h4>
-      <p>Embed paths can be specified in metadata for each embed allowing you to initialize all your embeds with a single line.</p>
+      <h4 class="ui header">Using Content IDs</h4>
+      <p>Embed is designed to automatically generate urls from content ids. This way your site's backend can store meaningful content metadata and not worry about generating urls.</p>
       <div class="code" data-type="javascript" data-demo="true">
         $('.metadata.example .ui.embed').embed();
       </div>
@@ -147,6 +149,21 @@ type        : 'UI Module'
         <div class="ui embed"
           data-source="youtube"
           data-id="pfdu_gTry8E"
+        ></div>
+      </div>
+    </div>
+
+    <div class="no metadata example">
+      <h4 class="ui header">Specifying Metadata</h4>
+      <p>Other settings like icons and placeholder images can be specified in metadata overriding presets for a site.</p>
+      <div class="code" data-type="javascript" data-demo="true">
+        $('.metadata.example .ui.embed').embed();
+      </div>
+      <div class="code" data-type="html" data-preview="true">
+        <div class="ui embed"
+          data-source="youtube"
+          data-id="pfdu_gTry8E"
+          data-icon="video"
           data-placeholder="/images/bear-waving.jpg"
         ></div>
       </div>
@@ -169,8 +186,8 @@ type        : 'UI Module'
     </div>
 
     <div class="no example">
-      <h4 class="ui header">Specifying Custom Sources</h4>
-      <p>Embed comes with several predefined embed sources, but can be extended with custom sources. Each source specifies default parameters and their mappings to settings, a templated url, and what icon should be used for overlays</p>
+      <h4 class="ui header">Specifying New Sources</h4>
+      <p>Embed comes with two predefined embed sources, but can be extended with custom sources. Each source specifies default parameters and their mappings to settings, a templated url, and what icon should be used for overlays</p>
       <p>Extending <code>$.fn.embed.settings.sources</code> allows you to use other proprietary embeds.</p>
       <div class="code" data-type="javascript">
         // built in

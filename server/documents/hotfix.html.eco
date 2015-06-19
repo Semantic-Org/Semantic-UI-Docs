@@ -12,17 +12,51 @@ type       : 'Library'
 </style>
 <script type="text/javascript">
 $(document).ready(function() {
-    $('.ui.form').form();
+  $.fn.api.settings.api = {
+    'search test': '/somewhere/here/?itema={query}&itemb={query}',
+};
+
+$('.ui.category.search').search({
+    apiSettings: {
+        action: 'search test',
+        data: 'itema=' + encodeURIComponent(1)
+            + '&itemb=' + encodeURIComponent(2),
+        dataType: 'json',
+        mockResponse: {
+            "results": [
+                        {
+                            "title": "100000-10000",
+                            "description": "Mathematics Version 1"
+                        },
+                        {
+                            "title": "200000-20000",
+                            "description": "TEMP:Mathematics Reserve"
+                        },
+                        {
+                            "title": "300000-30000",
+                            "description": "Mathematics Version 2"
+                        }
+                    ]
+        }
+    },
+    type: 'category',
+    minCharacters: 2,
+    maxResults: 7,
+    cache: true,
+    onSelect: function(result, response) {
+        console.log(result, response);
+    },
+});
 });
 </script>
 
 
 <div class="ui container">
- <form class="ui form">
-    <div class="field">
-        <div class="ui input">
-            <input type="text"/>
-        </div>
+<div class="ui category search">
+    <div class="ui icon input">
+        <input id="sample" name="sample" autocomplete="off" class="prompt" placeholder="sample" type="text" maxlength="16" value="" />
+        <i class="search icon"></i>
     </div>
-</form>
+    <div class="results"></div>
+</div>
 </div>

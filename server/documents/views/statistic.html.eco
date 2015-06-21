@@ -46,7 +46,7 @@ themes      : ['Default']
   </div>
 
   <div class="example">
-    <h4 class="ui header">Statistic</h4>
+    <h4 class="ui header">Statistic Group</h4>
     <p>A group of statistics</p>
     <div class="ui statistics">
       <div class="statistic">

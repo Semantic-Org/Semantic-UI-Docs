@@ -98,8 +98,9 @@ blockquote .author {
 /* Code Inside Message */
 .ui.message > p > code,
 .ui.message > code {
-  background-color: rgba(255, 255, 255, 0.6);
-  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1) inset;
+  background-color: rgba(0, 0, 0, 0.06);
+  line-height: 1;
+  padding: 3px 4px;
 }
 
 
@@ -419,6 +420,14 @@ blockquote .author {
 /*******************************
         Alternate Layouts
 *******************************/
+
+/*----------------
+   Wide Layout
+-----------------*/
+
+#example.wide .main.container {
+  max-width: 1200px !important;
+}
 
 /*----------------
    Basic Layout

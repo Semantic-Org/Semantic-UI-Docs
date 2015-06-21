@@ -27,15 +27,15 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
     <p>A single card.</p>
     <div class="ui card">
       <div class="image">
-        <img src="/images/avatar/large/stevie.jpg">
+        <img src="/images/avatar2/large/kristy.png">
       </div>
       <div class="content">
-        <a class="header">Stevie Feliciano</a>
+        <a class="header">Kristy</a>
         <div class="meta">
-          <span class="date">Joined in 2014</span>
+          <span class="date">Joined in 2013</span>
         </div>
         <div class="description">
-          Stevie Feliciano is a library scientist living in New York City. She likes to spend her time reading, running, and writing.
+          Kristy is an art director living in New York.
         </div>
       </div>
       <div class="extra content">
@@ -72,48 +72,11 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
     </div>
   </div>
 
-  <div class="another example">
-    <div class="ui card">
-      <div class="content">
-        <div class="header">Project #2</div>
-      </div>
-      <div class="content">
-        <h4 class="ui sub header">Activity</h4>
-        <div class="ui small feed">
-          <div class="event">
-            <div class="content">
-              <div class="summary">
-                 <a>Elliot Fu</a> added <a>Jenny Hess</a> to the project
-              </div>
-            </div>
-          </div>
-          <div class="event">
-            <div class="content">
-              <div class="summary">
-                 <a>Stevie Feliciano</a> was added as an <a>Administrator</a>
-              </div>
-            </div>
-          </div>
-          <div class="event">
-            <div class="content">
-              <div class="summary">
-                 <a>Helen Troy</a> added two pictures
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="extra content">
-        <button class="ui button">Join Project</button>
-      </div>
-    </div>
-  </div>
-
   <div class="example">
     <h4 class="ui header">Cards</h4>
     <p>A group of cards. </p>
     <div class="ui ignored info message">
-      Cards use <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes" target="_blank">flex-box</a> to make sure rows of content stretch to be equal height.
+      Cards use <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes" target="_blank">flexbox</a> to make sure rows of content stretch to be equal height.
     </div>
     <div class="ui ignored message">
       <p>Cards are designed to be flexible to your content. <code>content</code> blocks can include any custom elements related to your content.</p>
@@ -165,15 +128,15 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
     <div class="ui link cards">
       <div class="card">
         <div class="image">
-          <img src="/images/avatar/large/veronika.jpg">
+          <img src="/images/avatar2/large/matthew.png">
         </div>
         <div class="content">
-          <div class="header">Veronika Ossi</div>
+          <div class="header">Matt Giampietro</div>
           <div class="meta">
             <a>Friends</a>
           </div>
           <div class="description">
-            Veronika Ossi is a set designer living in New York who enjoys kittens, music, and partying.
+            Matthew is an interior designer living in New York.
           </div>
         </div>
         <div class="extra content">
@@ -188,15 +151,15 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
       </div>
       <div class="card">
         <div class="image">
-          <img src="/images/avatar/large/stevie.jpg">
+          <img src="/images/avatar2/large/molly.png">
         </div>
         <div class="content">
-          <div class="header">Stevie Feliciano</div>
+          <div class="header">Molly</div>
           <div class="meta">
-            <span class="date">Joined in 2014</span>
+            <span class="date">Coworker</span>
           </div>
           <div class="description">
-            Stevie Feliciano is a library scientist living in New York City.
+            Molly is a personal assistant living in Paris.
           </div>
         </div>
         <div class="extra content">
@@ -211,15 +174,15 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
       </div>
       <div class="card">
         <div class="image">
-          <img src="/images/avatar/large/steve.jpg">
+          <img src="/images/avatar2/large/elyse.png">
         </div>
         <div class="content">
-          <div class="header">Steve Jobes</div>
+          <div class="header">Elyse</div>
           <div class="meta">
-            <a>Acquaintances</a>
+            <a>Coworker</a>
           </div>
           <div class="description">
-            Steve Jobes is a fictional character designed to resemble someone familiar to readers.
+            Elyse is a copywriter working in New York.
           </div>
         </div>
         <div class="extra content">
@@ -235,8 +198,46 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
     </div>
   </div>
 
-  <h2 class="ui dividing header">Content</h2>
+  <h2 class="ui dividing header">Contents</h2>
 
+  <div class="example">
+    <h4 class="ui header">Image</h4>
+    <p>A card can contain blocks of content</p>
+    <div class="ui card">
+      <div class="content">
+        <div class="header">Project Timeline</div>
+      </div>
+      <div class="content">
+        <h4 class="ui sub header">Activity</h4>
+        <div class="ui small feed">
+          <div class="event">
+            <div class="content">
+              <div class="summary">
+                 <a>Elliot Fu</a> added <a>Jenny Hess</a> to the project
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="content">
+              <div class="summary">
+                 <a>Stevie Feliciano</a> was added as an <a>Administrator</a>
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="content">
+              <div class="summary">
+                 <a>Helen Troy</a> added two pictures
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="extra content">
+        <button class="ui button">Join Project</button>
+      </div>
+    </div>
+  </div>
   <div class="example">
     <h4 class="ui header">Image</h4>
     <p>A card can contain an image</p>

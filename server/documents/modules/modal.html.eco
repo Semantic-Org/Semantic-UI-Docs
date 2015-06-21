@@ -180,15 +180,15 @@ themes      : ['Default', 'Material']
 
   <div class="ui standard test modal">
     <div class="header">
-      Profile Picture
+      Select a Photo
     </div>
     <div class="image content">
       <div class="ui medium image">
-        <img src="/images/avatar/large/chris.jpg">
+        <img src="/images/avatar2/large/rachel.png">
       </div>
       <div class="description">
-        <div class="ui header">We've auto-chosen a profile image for you.</div>
-        <p>We've grabbed the following image from the <a href="https://www.gravatar.com" target="_blank">gravatar</a> image associated with your registered e-mail address.</p>
+        <div class="ui header">Default Profile Image</div>
+        <p>We've found the following <a href="https://www.gravatar.com" target="_blank">gravatar</a> image associated with your e-mail address.</p>
         <p>Is it okay to use this photo?</p>
       </div>
     </div>

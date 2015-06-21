@@ -364,6 +364,9 @@ semantic.ready = function() {
 
     },
 
+    getPageTitle: function() {
+      return $.trim($('h1').eq(0).contents().filter(function() { return this.nodeType == 3; }).text().toLowerCase());
+    },
     getSafeName: function(text) {
       return text.replace(/\s+/g, '-').replace(/[^-,'A-Za-z0-9]+/g, '').toLowerCase();
     },
@@ -387,7 +390,9 @@ semantic.ready = function() {
     createMenu: function() {
       // grab each h3
       var
-        html = '',
+        html      = '',
+        pageTitle = handler.getPageTitle(),
+        title     = pageTitle.charAt(0).toUpperCase() + pageTitle.slice(1),
         $sticky,
         $rail
       ;
@@ -447,7 +452,7 @@ semantic.ready = function() {
         .addClass('ui sticky')
         .html($followMenu)
         //.prepend($advertisement)
-        .prepend('<h4 class="ui header">Definition</h4>')
+        .prepend('<h4 class="ui header">' + title + '</h4>')
       ;
       $rail = $('<div />')
         .addClass('ui dividing right rail')
@@ -835,7 +840,7 @@ semantic.ready = function() {
             : $closestExample,
         $header     = $example.find('h4').eq(0),
         $attributes = $code.find('.attribute, .class'),
-        pageName    = $.trim($('h1').eq(0).contents().filter(function() { return this.nodeType == 3; }).text().toLowerCase()),
+        pageName    = handler.getPageTitle(),
         name        = handler.getText($header).toLowerCase(),
         classes     = $example.data('class') || ''
       ;

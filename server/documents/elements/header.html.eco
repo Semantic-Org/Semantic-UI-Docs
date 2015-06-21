@@ -89,25 +89,25 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
   </div>
 
   <div class="another example">
-    <div class="ui horizontal divided relaxed list">
+    <div class="ui horizontal list">
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/daniel.jpg">
+        <img class="ui mini circular image" src="/images/avatar2/small/molly.png">
         <div class="content">
-          <div class="ui sub header">Role</div>
+          <div class="ui sub header">Molly</div>
           Coordinator
         </div>
       </div>
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/veronika.jpg">
+        <img class="ui mini circular image" src="/images/avatar2/small/elyse.png">
         <div class="content">
-          <div class="ui sub header">Role</div>
+          <div class="ui sub header">Elyse</div>
           Developer
         </div>
       </div>
       <div class="item">
-        <img src="/images/avatar/small/tom.jpg" class="ui avatar image">
+        <img src="/images/avatar2/small/eve.png" class="ui mini circular image">
         <div class="content">
-          <div class="ui sub header">Role</div>
+          <div class="ui sub header">Eve</div>
           Project Manager
         </div>
       </div>
@@ -130,8 +130,8 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
   </div>
   <div class="another example">
     <h2 class="ui header">
-      <img src="/images/avatar/large/chris.jpg" class="ui circular image">
-      Chris
+      <img src="/images/avatar2/large/patrick.png" class="ui circular image">
+      Patrick
     </h2>
     <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
   </div>

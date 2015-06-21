@@ -7,71 +7,67 @@ title       : 'Getting Started'
 description : 'Getting started with Semantic UI'
 type        : 'Draft'
 ---
-<script src="/javascript/new.js"></script>
+<script src="/javascript/started.js"></script>
 
-<%- @partial('header') %>
+<%- @partial('header', { tabs: {  install: 'Install', integrations: 'Integrations' } }) %>
 
 <div class="main ui intro container">
 
   <h2 class="ui dividing header">Installing</h2>
 
-  <div class="ui four item pointing menu">
-    <a data-tab="npm" class="active item">NPM</a>
-    <a data-tab="meteor" class="item">Atmosphere</a>
-    <a data-tab="npm" class="item">Bower</a>
-    <a data-tab="git" class="item">Git</a>
+  <div class="ui four item secondary menu">
+    <a data-tab="standard" class="active item">Standard Install</a>
+    <a data-tab="integrations" class="item">Integrations</a>
+    <a data-tab="custom" class="item">Custom Tooling</a>
+    <a data-tab="dist" class="item">CDN &amp; Other</a>
   </div>
 
   <div class="ui active tab" data-tab="npm">
 
     <div class="no example">
-      <div class="ui accordion">
-        <div class="title">
-          <h4 class="ui header">Install NodeJS</h4>
-          <p>To use our build tools you will need Node</p>
-          <i class="dropdown icon"></i>
-        </div>
-        <div class="content">
+      <h4 class="ui header">Install NodeJS</h4>
+      <p>Semantic UI packages gulp build tools that are useful for compiling custom versions of Semantic UI.</p>
+      <p>If you are unfamiliar with setting up NodeJS you can follow the optional steps below</p>
 
-          <div class="ui top attached tabular menu">
-            <a data-tab="mac" class="active item">Mac</a>
-            <a data-tab="linux" class="item">Linux</a>
-            <a data-tab="win" class="item">Windows</a>
-          </div>
-          <div class="ui bottom attached active padded tab segment" data-tab="mac">
-            <h4>Option 1: Homebrew</h4>
-            <p>After installing <a href="http://brew.sh/" target="_blank">homebrew</a></p>
-            <div class="ignored code" data-type="bash">
-              brew install node
-            </div>
-            <h4>Option 2: Git</h4>
-            <div class="ignored code" data-type="bash">
-            git clone git://github.com/ry/node.git
-            cd node
-            ./configure
-            make
-            sudo make install
-            </div>
-          </div>
-          <div class="ui tab" data-tab="linux">
-            <p>This is a popular install method that will avoid requiring sudo.</p>
-            <div class="ignored code" data-type="bash" data-title="Install without sudo">
-              mkdir ~/local
-              echo 'export PATH=$HOME/local/bin:$PATH' >> ~/.bashrc
-              . ~/.bashrc
-              git clone git://github.com/joyent/node.git
-              cd node
-              ./configure --prefix=~/local
-              make install
-              git clone git://github.com/isaacs/npm.git
-              cd npm
-              make install
-            </div>
-          </div>
-          <div class="ui tab" data-tab="win">
-            <p>Download the <a href="http://nodejs.org/download/">NodeJS executable</a>.</p>
-          </div>
+      <div class="ui top attached tabular menu">
+        <a data-tab="mac" class="active item">Mac</a>
+        <a data-tab="linux" class="item">Linux</a>
+        <a data-tab="win" class="item">Windows</a>
+      </div>
+      <div class="ui bottom attached active padded tab segment" data-tab="mac">
+        <h4>Option 1: Homebrew</h4>
+        <p>After installing <a href="http://brew.sh/" target="_blank">homebrew</a></p>
+        <div class="ignored code" data-type="bash">
+          brew install node
         </div>
+        <h4>Option 2: Git</h4>
+        <div class="ignored code" data-type="bash">
+        git clone git://github.com/ry/node.git
+        cd node
+        ./configure
+        make
+        sudo make install
+        </div>
+      </div>
+      <div class="ui tab bottom attached segment" data-tab="linux">
+        <h4>Install without sudo</h4>
+        <p>You can use
+        <div class="ignored code" data-type="bash">
+          mkdir ~/local
+          echo 'export PATH=$HOME/local/bin:$PATH' >> ~/.bashrc
+          . ~/.bashrc
+          git clone git://github.com/joyent/node.git
+          cd node
+          ./configure --prefix=~/local
+          make install
+          git clone git://github.com/isaacs/npm.git
+          cd npm
+          make install
+        </div>
+      </div>
+      <div class="ui tab bottom attached segment" data-tab="win">
+        <h4>Install the exe</h4>
+        <p>Download the <a href="http://nodejs.org/download/">NodeJS executable</a>.</p>
       </div>
     </div>
     <div class="no example">

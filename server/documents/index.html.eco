@@ -133,23 +133,34 @@ standalone : true
       </div>
       <div class="nine wide column">
         <div class="hidden code" data-demo="true" data-type="javascript">
-          $('.gender.dropdown')
-            .dropdown({
-              transition: 'vertical flip'
+          $('.ui.dropdown')
+            .dropdown('set selected', ['meteor', 'ember'])
+            .popup({
+              content: 'Add your computer skills'
             })
-            .dropdown('set selected', 'female')
-            .popup('setting', 'content', 'Select your gender')
           ;
         </div>
         <div class="hidden code" data-type="html">
-          <select class="ui gender dropdown">
-            <option value="male">Male</option>
-            <option value="female">Female</option>
+          <select name="skills" multiple class="ui fluid dropdown">
+            <option value="">Skills</option>
+            <option value="angular">Angular</option>
+            <option value="css">CSS</option>
+            <option value="ember">Ember</option>
+            <option value="html">HTML</option>
+            <option value="javascript">Javascript</option>
+            <option value="meteor">Meteor</option>
+            <option value="node">NodeJS</option>
           </select>
         </div>
-        <select class="ui gender dropdown" style="display:block;">
-          <option value="male">Male</option>
-          <option value="female">Female</option>
+        <select multiple class="ui fluid dropdown">
+          <option value="">Skills</option>
+          <option value="angular">Angular</option>
+          <option value="css">CSS</option>
+          <option value="ember">Ember</option>
+          <option value="html">HTML</option>
+          <option value="javascript">Javascript</option>
+          <option value="meteor">Meteor</option>
+          <option value="node">NodeJS</option>
         </select>
       </div>
     </div>
@@ -173,9 +184,9 @@ standalone : true
         ;
         </div>
         <div class="ui small sequenced images">
-          <img src="/images/avatar/large/daniel.jpg" class="ui circular image">
-          <img src="/images/avatar/large/stevie.jpg" class="ui circular image">
-          <img src="/images/avatar/large/veronika.jpg" class="ui circular image">
+          <img src="/images/avatar2/large/elyse.png" class="ui circular image">
+          <img src="/images/avatar2/large/matthew.png" class="ui circular image">
+          <img src="/images/avatar2/large/kristy.png" class="ui circular image">
         </div>
       </div>
     </div>
@@ -492,15 +503,15 @@ standalone : true
                   </div>
                 </div>
               </div>
-              <img src="/images/home-avatar.png">
+              <img src="/images/avatar2/large/rachel.png">
             </div>
             <div class="content">
-              <div class="header">Steve Jobes</div>
+              <div class="header">Rachel Maddow</div>
               <div class="meta">
                 <a class="group">Acquaintances</a>
               </div>
               <div class="description">
-                Steve Jobes is a fictional character designed to resemble someone familiar to readers.
+
               </div>
             </div>
             <div class="extra content">

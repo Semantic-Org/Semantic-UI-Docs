@@ -44,7 +44,7 @@ themes      : ['Default']
         </thead>
         <tbody>
           <tr>
-            <td>Dimensions</td>
+            <td>Width</td>
             <td>100%</td>
             <td>
               723px
@@ -60,7 +60,7 @@ themes      : ['Default']
             </td>
           </tr>
           <tr>
-            <td>Gutter Size</td>
+            <td class="single line">Gutter Size</td>
             <td>1em</td>
             <td>Fluid</td>
             <td>Fluid</td>
@@ -74,7 +74,7 @@ themes      : ['Default']
             <td><code>$largeMonitorBreakpoint</code></td>
           </tr> -->
           <tr>
-            <td>Grid Variation</td>
+            <td class="single line">Responsive Visibility</td>
             <td><code>mobile only</code></td>
             <td><code>tablet only</code></td>
             <td><code>small monitor only</code></td>
@@ -98,16 +98,17 @@ themes      : ['Default']
 
       <div class="code" data-type="less">
       /* In site.variables */
-      @tabletBreakpoint            : 768px;
+      @tabletBreakpoint : 768px;
+      @scrollbarWidth : 17px; /* This is a constant */
 
       /* In container.variables */
-      @tabletMinimumGutter: (@emSize  * 1); /* 1em gutter */
-      @tabletWidth: @tabletBreakpoint - (@tabletMinimumGutter * 2) - @scrollbarWidth;
+      @tabletMinimumGutter : (@emSize  * 1); /* require 1em gutter */
+      @tabletWidth : @tabletBreakpoint - (@tabletMinimumGutter * 2) - @scrollbarWidth;
       </div>
 
       <p>This is the same as <code>768px - (14px * 2) - 17px</code> or <code>723px</code></p>
 
-      <p>Adjusting site breakpoints in <code>site.variables</code> to use custom container sizes will automatically update container widths to match.</p>
+      <p>Adjusting site breakpoints in <code>site.variables</code> to use custom values will automatically adjust container widths.</p>
 
 
     </div>

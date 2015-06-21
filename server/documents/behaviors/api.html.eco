@@ -80,13 +80,11 @@ type        : 'UI Behavior'
         <h4 class="ui sub header">API Example</h4>
         <div class="ui fluid card">
           <div class="image">
-            <img src="/images/avatar/large/stevie.jpg">
+            <img src="/images/avatar2/large/patrick.png">
           </div>
           <div class="content">
-            <a class="header">Stevie Feliciano</a>
-            <div class="meta">
-              <span class="date">Joined in Sep 2014</span>
-            </div>
+            <a class="header">Patrick Russel</a>
+            <div class="description">Patrick lives in San Francisco, and studies french literature.</div>
           </div>
           <div class="ui bottom attached follow button" data-id="22">Follow</div>
         </div>

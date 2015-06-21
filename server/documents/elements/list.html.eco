@@ -56,23 +56,23 @@ themes      : ['Default']
     </div>
   </div>
   <div class="another example">
-    <div class="ui relaxed celled list">
+    <div class="ui relaxed divided list">
       <div class="item">
-        <i class="github icon"></i>
+        <i class="large github middle aligned icon"></i>
         <div class="content">
           <a class="header">Semantic-Org/Semantic-UI</a>
           <div class="description">Updated 10 mins ago</div>
         </div>
       </div>
       <div class="item">
-        <i class="github icon"></i>
+        <i class="large github middle aligned icon"></i>
         <div class="content">
           <a class="header">Semantic-Org/Semantic-UI-Docs</a>
           <div class="description">Updated 22 mins ago</div>
         </div>
       </div>
       <div class="item">
-        <i class="github icon"></i>
+        <i class="large github middle aligned icon"></i>
         <div class="content">
           <a class="header">Semantic-Org/Semantic-UI-Meteor</a>
           <div class="description">Updated 34 mins ago</div>
@@ -83,9 +83,9 @@ themes      : ['Default']
   <div class="another example">
     <div class="ui list">
       <div class="item">
-        <img class="ui top aligned avatar image" src="/images/avatar/small/daniel.jpg">
+        <img class="ui mini circular image" src="/images/avatar2/small/elyse.png">
         <div class="content">
-          <div class="header">Daniel Louise</div>
+          <div class="header">Elyse</div>
           Friends since 1992
           <div class="list">
             <div class="item">
@@ -113,9 +113,9 @@ themes      : ['Default']
         </div>
       </div>
       <div class="item">
-        <img class="ui top aligned avatar image" src="/images/avatar/small/steve.jpg">
+        <img class="ui mini circular image" src="/images/avatar2/small/eve.png">
         <div class="content">
-          <div class="header">Steve Jobes</div>
+          <div class="header">Eve</div>
           Work acquaintance from Apple
           <div class="list">
             <div class="item">
@@ -267,23 +267,23 @@ themes      : ['Default']
     <p>A list item can contain an image</p>
     <div class="ui list">
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/daniel.jpg">
+        <img class="ui avatar image" src="/images/avatar2/small/rachel.png">
         <div class="content">
-          <a class="header">Daniel Louise</a>
+          <a class="header">Racel</a>
           <div class="description">Last seen watching <a><b>Arrested Development</b></a> just now.</div>
         </div>
       </div>
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/stevie.jpg">
+        <img class="ui avatar image" src="/images/avatar2/small/lindsay.png">
         <div class="content">
-          <a class="header">Stevie Feliciano</a>
+          <a class="header">Lindsay</a>
           <div class="description">Last seen watching <a><b>Bob's Burgers</b></a> 10 hours ago.</div>
         </div>
       </div>
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/elliot.jpg">
+        <img class="ui avatar image" src="/images/avatar2/small/matthew.png">
         <div class="content">
-          <a class="header">Elliot Fu</a>
+          <a class="header">Matthew</a>
           <div class="description">Last seen watching <a><b>The Godfather Part 2</b></a> yesterday.</div>
         </div>
       </div>

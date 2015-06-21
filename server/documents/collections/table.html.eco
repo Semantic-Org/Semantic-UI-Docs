@@ -25,12 +25,8 @@ themes      : ['Default', 'Basic', 'Classic']
   <div class="example">
     <h4 class="ui header">Table</h4>
     <p>A standard table</p>
-    <div class="ui ignored positive icon message">
-      <i class="mobile icon"></i>
-      <div class="content">
-        <h3 class="header">Responsive Element</h3>
-        <p>Tables will automatically stack their layouts for mobile devices. To disable this behavior, use the <code>unstackable</code> variation or <code>tablet stackable</code> to allow responsive adjustments for tablet as well.</p>
-      </div>
+    <div class="ui ignored positive message">
+      Tables will automatically stack their layouts for mobile devices. To disable this behavior, use the <code>unstackable</code> variation or <code>tablet stackable</code> to allow responsive adjustments for tablet.
     </div>
     <table class="ui celled table">
       <thead>
@@ -121,19 +117,19 @@ themes      : ['Default', 'Basic', 'Classic']
     </table>
   </div>
   <div class="another example">
-    <table class="ui very basic celled table">
+    <table class="ui very basic collapsing celled table">
       <thead>
-        <th>Name</th>
+        <th>Employee</th>
         <th>Correct Guesses</th>
       </thead>
       <tbody>
         <tr>
           <td>
             <h4 class="ui image header">
-              <img src="/images/avatar/small/ade.jpg" class="ui avatar image">
+              <img src="/images/avatar2/small/lena.png" class="ui mini rounded image">
               <div class="content">
-                Ade
-                <div class="sub header">Accounting
+                Lena
+                <div class="sub header">Human Resources
               </div>
             </div>
           </td>
@@ -144,9 +140,9 @@ themes      : ['Default', 'Basic', 'Classic']
         <tr>
           <td>
             <h4 class="ui image header">
-              <img src="/images/avatar/small/veronika.jpg" class="ui avatar image">
+              <img src="/images/avatar2/small/matthew.png" class="ui mini rounded image">
               <div class="content">
-                Veronika
+                Matthew
                 <div class="sub header">Fabric Design
               </div>
             </div>
@@ -158,9 +154,23 @@ themes      : ['Default', 'Basic', 'Classic']
         <tr>
           <td>
             <h4 class="ui image header">
-              <img src="/images/avatar/small/justen.jpg" class="ui avatar image">
+              <img src="/images/avatar2/small/lindsay.png" class="ui mini rounded image">
               <div class="content">
-                Justen
+                Lindsay
+                <div class="sub header">Entertainment
+              </div>
+            </div>
+          </td>
+          <td>
+            12
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h4 class="ui image header">
+              <img src="/images/avatar2/small/mark.png" class="ui mini rounded image">
+              <div class="content">
+                Mark
                 <div class="sub header">Executive
               </div>
             </div>

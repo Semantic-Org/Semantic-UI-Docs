@@ -15,19 +15,34 @@ type        : 'Introduction'
 
   <h2 class="ui dividing header">Introduction</h2>
 
-  <p>2.0 brings a whopping <b>98</b> enhancements, <b>105</b> bug fixes, <b>2</b> new components, complete rewrites of several important components like <a href="/collections/menu.html"><code>menu</code></a>, and <a href="/elements/input.html"><code>input</code></a>, and much more newness.</p>
+  <div class="no example">
 
-  <p>There's just too much to cover in one page, but we've tried our best to give you examples of some of the new features available in 2.0</p>
+    <h4 class="ui header">Fix All The Bugs</h4>
+    <p style="margin-bottom:0em;padding-bottom:0em;">2.0 brings a whopping set of changes to the project:
+    <div class="ui large bulleted list">
+      <div class="item"><b>98</b> enhancements</div>
+      <div class="item"><b>105</b> bug fixes</div>
+      <div class="item"><b>2</b> new components</div>
+      <div class="item">Rewrites of several important components like <a href="/collections/menu.html"><code>menu</code></a>, and <a href="/elements/input.html"><code>input</code></a></div>
+    </div>
 
-  <p>To see the full list of what's changed in 2.0 check out the project's release notes.</p>
+    <p>There's just too much to cover in one page, but we've tried our best to give you examples of some of the new features available in 2.0</p>
 
-  <a href="https://github.com/Semantic-Org/Semantic-UI/blob/master/RELEASE-NOTES.md" target="_blank" class="ui button">View Release Notes</a>
+    <p>To see the full list of what's changed check out the project's release notes.</p>
 
-  <h2 class="ui dividing header">Project</h2>
-  <div class="example">
-    <h4 class="ui header">Built with Flexbox</h4>
-    <p>13 components: <a href="/collections/form.html">Form</a>, <a href="/collections/zzzz/">Grid</a>, <a href="/collections/zzzz/">Menu</a>, <a href="/elements/message.html">Message</a>, <a href="/elements/button.html">Button</a>, <a href="/elements/segment.html">Segment</a>, <a href="/elements/step.html">Step</a>, <a href="/modules/dropdown.html">Dropdown</a>, <a href="/modules/modal.html">Modal</a>, <a href="/views/feed.html">Feed</a>, <a href="/views/statistics.html">Statistic</a>, <a href="/views/card.html">Card</a>, <a href="/views/item.html">Item</a> now use <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes" target="_blank"><code>flexbox</code></a> for positioning. This allows for elements to automatically match heights, and resize content</p>
+    <a href="https://github.com/Semantic-Org/Semantic-UI/blob/master/RELEASE-NOTES.md" target="_blank" class="ui compact button">View Release Notes</a>
+  </div>
 
+  <div class="no example">
+    <h4 class="ui header">Flexbox All The Things</h4>
+    <p><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes" target="_blank">Flexbox</a> allows for elements to intuitively resize to fill available space, making many complex layouts much simpler.</p>
+    <p>13 components: <a href="/collections/form.html">Form</a>, <a href="/collections/grid.html">Grid</a>, <a href="/collections/menu.html">Menu</a>, <a href="/elements/message.html">Message</a>, <a href="/elements/button.html">Button</a>, <a href="/elements/segment.html">Segment</a>, <a href="/elements/step.html">Step</a>, <a href="/modules/dropdown.html">Dropdown</a>, <a href="/modules/modal.html">Modal</a>, <a href="/views/feed.html">Feed</a>, <a href="/views/statistics.html">Statistic</a>, <a href="/views/card.html">Card</a>, <a href="/views/item.html">Item</a> now use <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes" target="_blank"><code>flex</code></a> for positioning.</p>
+
+  </div>
+
+  <div class="no example">
+    <h4 class="ui header">Color All The Things</h4>
+    <p>2.0
   </div>
 
   <h2 class="ui dividing header">Grids</h2>
@@ -289,13 +304,13 @@ type        : 'Introduction'
     <p>Horizontal groups are now available for <a href="/elements/segment.html">segment</a>.</p>
     <div class="ui horizontal segments">
       <div class="ui segment">
-        <p>Top</p>
+        <p>Left</p>
       </div>
       <div class="ui segment">
-        <p>Middle</p>
+        <p>Center</p>
       </div>
       <div class="ui segment">
-        <p>Bottom</p>
+        <p>Right</p>
       </div>
     </div>
   </div>
@@ -323,13 +338,13 @@ type        : 'Introduction'
       </div>
       <div class="ui horizontal segments">
         <div class="ui segment">
-          <p>Top</p>
+          <p>Left</p>
         </div>
         <div class="ui segment">
-          <p>Middle</p>
+          <p>Center</p>
         </div>
         <div class="ui segment">
-          <p>Bottom</p>
+          <p>Right</p>
         </div>
       </div>
       <div class="ui segment">
@@ -346,16 +361,19 @@ type        : 'Introduction'
       </div>
       <div class="ui tall stacked horizontal segments">
         <div class="ui segment">
-          <p>Top</p>
+          <p>Left</p>
         </div>
         <div class="ui segment">
-          <p>Middle</p>
+          <p>Center</p>
         </div>
         <div class="ui segment">
-          <p>Bottom</p>
+          <p>Center</p>
         </div>
         <div class="ui segment">
-          <p>Top</p>
+          <p>Center</p>
+        </div>
+        <div class="ui segment">
+          <p>Right</p>
         </div>
       </div>
       <div class="ui secondary segment">

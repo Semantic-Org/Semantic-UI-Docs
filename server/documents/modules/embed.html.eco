@@ -33,7 +33,7 @@ type        : 'UI Module'
       <table class="ui celled two column table">
         <thead>
           <th>Network</th>
-          <th>Iframe File Size</th>
+          <th>Embed Size</th>
         </thead>
         <tbody>
           <tr>

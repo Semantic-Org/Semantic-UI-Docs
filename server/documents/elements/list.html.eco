@@ -145,21 +145,96 @@ themes      : ['Default']
     </div>
   </div>
 
+  <div class="another example">
+
+    <div class="ui list">
+      <div class="item">
+        <i class="folder icon"></i>
+        <div class="content">
+          <div class="header">src</div>
+          <div class="description">Source files for project</div>
+          <div class="list">
+            <div class="item">
+              <i class="folder icon"></i>
+              <div class="content">
+                <div class="header">site</div>
+                <div class="description">Your site's theme</div>
+              </div>
+            </div>
+            <div class="item">
+              <i class="folder icon"></i>
+              <div class="content">
+                <div class="header">themes</div>
+                <div class="description">Packaged theme files</div>
+                <div class="list">
+                  <div class="item">
+                    <i class="folder icon"></i>
+                    <div class="content">
+                      <div class="header">default</div>
+                      <div class="description">Default packaged theme</div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <i class="folder icon"></i>
+                    <div class="content">
+                      <div class="header">my_theme</div>
+                      <div class="description">Packaged themes are also available in this folder</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <i class="file icon"></i>
+              <div class="content">
+                <div class="header">theme.config</div>
+                <div class="description">Config file for setting packaged themes</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <i class="folder icon"></i>
+        <div class="content">
+          <div class="header">dist</div>
+          <div class="description">Compiled css and js files</div>
+          <div class="list">
+            <div class="item">
+              <i class="folder icon"></i>
+              <div class="content">
+                <div class="header">components</div>
+                <div class="description">Individual component css and js</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <i class="file icon"></i>
+        <div class="content">
+          <div class="header">semantic.json</div>
+          <div class="description">Contains build settings for gulp</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="example">
     <h4 class="ui header">Bulleted</h4>
     <p>A list can mark items with a bullet</p>
     <div class="ui bulleted list">
-      <a class="item">Gaining Access</a>
-      <a class="item">Inviting Friends</a>
+      <div class="item">Gaining Access</div>
+      <div class="item">Inviting Friends</div>
       <div class="item">
-        <a>Benefits</a>
+        <div>Benefits</div>
         <div class="list">
-          <a class="item">Use Anywhere</a>
-          <a class="item">Rebates</a>
-          <a class="item">Discounts</a>
+          <div class="item">Use Anywhere</div>
+          <div class="item">Rebates</div>
+          <div class="item">Discounts</div>
         </div>
       </div>
-      <a class="item">Warranty</a>
+      <div class="item">Warranty</div>
     </div>
   </div>
   <div class="another example">
@@ -226,7 +301,7 @@ themes      : ['Default']
 
   <div class="example">
     <h4 class="ui header">Link</h4>
-    <p>A link list is specially formatted for page links</p>
+    <p>A list can be specially formatted for navigation links</p>
     <div class="ui link list">
       <div class="active item">Home</div>
       <a class="item">About</a>
@@ -269,7 +344,7 @@ themes      : ['Default']
       <div class="item">
         <img class="ui avatar image" src="/images/avatar2/small/rachel.png">
         <div class="content">
-          <a class="header">Racel</a>
+          <a class="header">Rachel</a>
           <div class="description">Last seen watching <a><b>Arrested Development</b></a> just now.</div>
         </div>
       </div>

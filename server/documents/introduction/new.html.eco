@@ -2,10 +2,11 @@
 layout      : 'default'
 css         : 'new'
 standalone  : true
+order       : 1
 
 title       : 'New in 2.0'
 description : 'An introduction to new features found in the latest release'
-type        : 'Introduction'
+type        : 'Usage'
 ---
 
 <%- @partial('header') %>
@@ -30,7 +31,7 @@ type        : 'Introduction'
 
     <p>To see the full list of what's changed check out the project's release notes.</p>
 
-    <a href="https://github.com/Semantic-Org/Semantic-UI/blob/master/RELEASE-NOTES.md" target="_blank" class="ui button">View Release Notes</a>
+    <a href="https://github.com/Semantic-Org/Semantic-UI/blob/<%= @getBranch() %>/RELEASE-NOTES.md" target="_blank" class="ui button">View Release Notes</a>
   </div>
 
 
@@ -46,6 +47,7 @@ type        : 'Introduction'
   <div class="colored example">
     <h4 class="ui header">New Colors</h4>
     <p><code>2.0</code> includes additional named colors olive, violet, brown and grey which help provide more expressiveness with color variations.</p>
+    <a class="ui grey label">Grey</a>
     <a class="ui red pointing label">Red</a>
     <a class="ui orange tag label">Orange</a>
     <a class="ui yellow bottom pointing label">Yellow</a>
@@ -67,7 +69,7 @@ type        : 'Introduction'
     </a>
     <a class="ui purple label">
       Purple
-      <i class="close icon"></i>
+      <i class="delete icon"></i>
     </a>
     <div class="ui horizontal segments">
       <div class="ui segment">

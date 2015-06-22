@@ -57,7 +57,7 @@ standalone : true
 <div class="zoomed masthead segment">
   <div class="ui container">
     <div class="introduction">
-      <a class="ui black version label" href="https://github.com/Semantic-Org/Semantic-UI/blob/master/RELEASE-NOTES.md">
+      <a class="ui black version label" href="https://github.com/Semantic-Org/Semantic-UI/blob/<%= @getBranch() %>/RELEASE-NOTES.md">
         <%= @getVersion() %>
       </a>
       <h1 class="ui inverted header">

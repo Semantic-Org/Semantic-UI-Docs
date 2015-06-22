@@ -1,0 +1,72 @@
+---
+layout      : 'default'
+css         : 'started'
+standalone  : true
+order       : 4
+
+title       : 'Advanced Usage'
+description : 'Recipes for Advanced Usage'
+type        : 'Introduction'
+---
+<%- @partial('header') %>
+
+<div class="main ui intro container">
+
+  <h2 class="ui dividing header">Custom Gulp Pipelines</h2>
+  <div class="no example">
+    <h4>Importing Gulp Tasks</h4>
+    <p>You don't have to use <a href="/introduction/build-tools.html">our gulp pipeline</a>, just import the task into your own <code>gulpfile</code></p>
+    <div class="ignored code" data-type="JS" data-title="Custom gulpfile.js">
+    var
+      watch = require('semantic/tasks/watch'),
+      build = require('semantic/tasks/build')
+    ;
+    gulp.task('watch ui', 'Watch Semantic UI', watch));
+    gulp.task('build ui', 'Watch Semantic UI', build));
+    </div>
+  </div>
+
+  <h2 class="ui dividing header">Component Releases</h2>
+  <div class="no example">
+    <h4>Single Component Repos</h4>
+    <p>Component repos are automatically updated with each release. You can browse all available component repos by <a href="https://github.com/Semantic-Org?utf8=%E2%9C%93&query=ui-">browsing Semantic Org</a> on GitHub</p>
+    <p>Each component's release notes will automatically update with the relevant notes automatically parsed from the main repository</p>
+  </div>
+  <div class="no example">
+    <h4>Browserify and NPM</h4>
+    <p>Individual components repos include an <code>index.js</code> file that is compatible with nodeJS' <a href="http://www.sitepoint.com/understanding-module-exports-exports-node-js/" target="_blank"><code>module.export</code></a> allowing Semantic UI to be used server-side or with <a href="http://browserify.org/" target="_blank">Browserify</a>.</p>
+    <div class="ignored code">
+     npm install semantic-ui-dropdown
+    </div>
+    <div class="ignored code">
+      var
+        dropdown = require('semantic-ui-dropdown')
+      ;
+      foo.dropdown();
+    </div>
+  </div>
+
+  <h2 class="ui dividing header">Importing LESS</h2>
+  <div class="no example">
+    <h4>All Components</h4>
+    <div class="ui ignored warning message">LESS source files are not prefixed, and will need to be run through <a href="https://github.com/postcss/autoprefixer">autoprefixer</a> before being used</div>
+    <p>A special repo, <a href="https://github.com/Semantic-Org/Semantic-UI-LESS">Semantic-UI-LESS</a> is available for projects that use custom integrations and do not require our build tools.</p>
+    <p><code>semantic.less</code> is included as an entry point for importing multiple components.</p>
+    <p>Before LESS files will work correctly you will to manually rename <code>theme.config.example</code>.
+    <p>To begin using a site theme you will also need to rename <code>_site/</code> to <code>site/</code>.</p>
+    <div class="ignored code"  data-type="LESS" data-title="Importing LESSS">
+      /* Import all components */
+      @import 'src/semantic';
+    </div>
+  </div>
+  <div class="no example">
+    <h4>Single Components</h4>
+    <p>If you need to import individual components, you will need to scope each import to avoid variable collisions</p>
+    <div class="ignored code" data-type="LESS" data-title="Importing LESS Components">
+      /* Import specific components */
+      & { @import 'src/definitions/elements/button'; }
+      & { @import 'src/definitions/elements/list'; }
+    </div>
+  </div>
+
+</div>

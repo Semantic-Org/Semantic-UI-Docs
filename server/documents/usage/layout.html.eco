@@ -2,10 +2,11 @@
 layout      : 'default'
 css         : 'layouts'
 standalone  : true
+order       : 3
 
 title       : 'Layouts'
 description : 'Examples of using Semantic UI'
-type        : 'Introduction'
+type        : 'Usage'
 ---
 
 <%- @partial('header') %>

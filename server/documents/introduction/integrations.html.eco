@@ -1,0 +1,21 @@
+---
+layout      : 'default'
+css         : 'started'
+standalone  : true
+order       : 2
+
+title       : 'Integrations'
+description : 'Using Semantic UI with Other Libraries'
+type        : 'Introduction'
+---
+<%- @partial('header') %>
+
+<div class="main ui intro container">
+
+  <h2 class="ui dividing header">
+    Coming Soon
+  </h2>
+
+  <p>This section will be filled in later this week...</p>
+
+</div>

@@ -8,12 +8,7 @@ semantic.started.ready = function() {
 
   };
 
-  console.log('zzz');
-
-  $('.main .ui.accordion')
-    .accordion()
-  ;
-  $('.main .tabular .item')
+  $('.main .secondary.menu .item')
     .tab({
       context: 'parent',
       onFirstLoad: function() {

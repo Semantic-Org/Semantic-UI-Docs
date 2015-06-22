@@ -976,6 +976,7 @@ semantic.ready = function() {
       if(contentType != 'javascript' && contentType != 'less') {
         //formattedCode = escapeHTML(formattedCode);
       }
+      formattedCode = formattedCode.replace(/&amp;/g, '&'); // saving me some frustration
 
       // color code
       formattedCode = window.hljs.highlightAuto(formattedCode);

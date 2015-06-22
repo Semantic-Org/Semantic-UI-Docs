@@ -10,7 +10,7 @@ type        : 'Introduction'
 ---
 <script src="/javascript/started.js"></script>
 
-<%- @partial('header', { tabs: {  install: 'Install', bundles: 'Other Packages' } }) %>
+<%- @partial('header', { tabs: {  install: 'Install', packages: 'Other Packages' } }) %>
 
 <div class="main ui intro container">
 
@@ -103,20 +103,27 @@ type        : 'Introduction'
         <script src="semantic/dist/semantic.min.js"></script>
       </div>
     </div>
+
+    <h2 class="ui dividing header">Next Steps</h2>
+
+    <div class="no example">
+      <h4>All Set!</h4>
+      <p>Well done! Semantic UI is now ready to be used.</p>
+
+      <p>Here are some things to check out next</p>
+      <div class="ui large bulleted list">
+        <div class="item">Learn about the project <a href="/usage/themes.html">folder structure</a></div>
+        <div class="item">See what <a href="/introduction/build-tools.html">gulp commands</a> are available</div>
+        <div class="item">Learn about <a href="/usage/themes.html">changing themes</a> and using site themes</div>
+      </div>
+    </div>
+
   </div>
 
-  <h2 class="ui dividing header">Next Steps</h2>
+  <div class="ui tab" data-tab="packages">
 
-  <div class="no example">
-    <h4>All Set!</h4>
-    <p>Well done! Semantic UI is now ready to be used.</p>
-
-    <p>Here are some things to check out next</p>
-    <div class="ui large bulleted list">
-      <div class="item">Learn about the project <a href="/usage/themes.html">folder structure</a></div>
-      <div class="item">See what <a href="/introduction/build-tools.html">gulp commands</a> are available</div>
-      <div class="item">Learn about <a href="/usage/themes.html">changing themes</a> and using site themes</div>
-    </div>
+    <h2 class="ui dividing header">Other Distributions</h2>
+    <p>This section will be coming later this week...</p>
   </div>
 
 

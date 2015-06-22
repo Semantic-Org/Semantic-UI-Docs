@@ -958,6 +958,23 @@ blockquote .author {
 }
 
 /*--------------
+    Colored
+---------------*/
+
+#example .colored.example .label,
+#example .colored.example .button,
+#example .colored.example .menu {
+  margin-bottom: 0.5em;
+}
+#example .colored.example .menu {
+  margin-right: 0.5em;
+}
+#example .colored.example .attached.label {
+  margin-bottom: 0em;
+}
+
+
+/*--------------
       Grid
 ---------------*/
 

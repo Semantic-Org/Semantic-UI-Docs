@@ -50,7 +50,7 @@ type        : 'Introduction'
 
   <h2 class="ui dividing header">Pages</h2>
   <p>Starter page templates</p>
-  <div class="ui three doubling cards">
+  <div class="ui three doubling stackable cards">
     <a class="ui card" href="/examples/homepage.html">
       <div class="image">
         <img src="/images/examples/homepage.png">

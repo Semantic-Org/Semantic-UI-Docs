@@ -2214,8 +2214,10 @@ themes      : ['Default', 'Material']
       Dropdown
     </h2>
 
+    <div class="no example">
+
     <h4 class="ui header">
-      Dropdown Settings
+      Frequently Used Settings
     </h4>
     <table class="ui celled sortable definition table segment">
       <thead>
@@ -2232,9 +2234,15 @@ themes      : ['Default', 'Material']
           <td>Event used to trigger dropdown (Hover, Click, Custom Event)</td>
         </tr>
         <tr>
+          <td>allowAdditions</td>
+          <td>false</td>
+          <td>Whether search selection should allow users to add their own selections, works for single or multiselect.</td>
+        </tr>
+        <tr>
           <td>action</td>
           <td>auto</td>
-          <td>Sets a default action to occur. (See usage guide)
+          <td>
+          <p>Sets a default action to occur. (See usage guide)</p>
           <div class="ui vertical divided list">
             <div class="item">
               <div class="header">activate (default)</div>
@@ -2263,11 +2271,6 @@ themes      : ['Default', 'Material']
           </div>
         </tr>
         <tr>
-          <td>direction</td>
-          <td>'auto'</td>
-          <td>When set to <code>auto</code> determines direction based on whether dropdown can fit on screen. Set to <code>upward</code> or <code>downward</code> to always force a direction.</td>
-        </tr>
-        <tr>
           <td>match</td>
           <td>both</td>
           <td>When using <code>search selection</code> specifies how to match values.
@@ -2287,9 +2290,14 @@ themes      : ['Default', 'Material']
           </div>
         </tr>
         <tr>
-          <td>fullTextSearch</td>
+          <td>forceSelection</td>
+          <td>true</td>
+          <td>Whether search selection will force currently selected choice when element is blurred.</td>
+        </tr>
+        <tr>
+          <td>allowCategorySelection</td>
           <td>false</td>
-          <td>Whether search selections should look for string match anywhere in string</td>
+          <td>Whether menu items with sub-menus (categories) should be selectable</td>
         </tr>
         <tr>
           <td>placeholder</td>
@@ -2298,7 +2306,7 @@ themes      : ['Default', 'Material']
             <div class="ui vertical divided list">
               <div class="item">
                 <div class="header">auto</div>
-                <div class="description">Convert blank string option "" to placeholder text</div>
+                <div class="description">Convert option with "" (blank string) value to placeholder text</div>
               </div>
               <div class="item">
                 <div class="header">value</div>
@@ -2311,12 +2319,25 @@ themes      : ['Default', 'Material']
             </div>
           </td>
         </tr>
+      </tbody>
+    </table>
+    </div>
 
+    <div class="no example">
+
+    <h4 class="ui header">
+      Remote Settings
+    </h4>
+
+    <table class="ui celled sortable definition table segment">
+      <thead>
         <tr>
-          <td>preserveHTML</td>
-          <td>true</td>
-          <td>Whether html included in dropdown values should be preserved. (Allows icons to show up in selected value)</td>
+        <th>Setting</th>
+        <th class="four wide">Default</th>
+        <th>Description</th>
         </tr>
+      </thead>
+      <tbody>
         <tr>
           <td>apiSettings</td>
           <td>false</td>
@@ -2327,66 +2348,11 @@ themes      : ['Default', 'Material']
           <td>true</td>
           <td>When enabled will automatically store selected name/value pairs in <code>sessionStorage</code> to preserve user selection on page refresh. Disabling will clear remote dropdown values on refresh.</td>
         </tr>
-        <tr>
-          <td>sortSelect</td>
-          <td>false</td>
-          <td>Whether to sort values when creating a dropdown automatically from a select element.</td>
-        </tr>
-        <tr>
-          <td>forceSelection</td>
-          <td>true</td>
-          <td>Whether search selection will force currently selected choice when element is blurred.</td>
-        </tr>
-        <tr>
-          <td>allowAdditions</td>
-          <td>false</td>
-          <td>Whether search selection should allow users to add their own selections, works for single or multiselect.</td>
-        </tr>
-        <tr>
-          <td>showOnFocus</td>
-          <td>true</td>
-          <td>Whether to show dropdown menu automatically on element focus.</td>
-        </tr>
-        <tr>
-          <td>allowTab</td>
-          <td>true</td>
-          <td>Whether to allow a <code>tabindex</code> to be created for this element </td>
-        </tr>
-        <tr>
-          <td>allowCategorySelection</td>
-          <td>false</td>
-          <td>Whether menu items with sub-menus (categories) should be selectable</td>
-        </tr>
-        <tr>
-          <td>transition</td>
-          <td>
-            auto (slide down / slide up)
-          </td>
-          <td>Named transition to use when animating menu in and out. Defaults to <code>slide down</code> or <code>slide up</code> depending on dropdown direction. Fade and slide down are available without including <a href="/modules/transition.html">ui transitions</a></td>
-        </tr>
-        <tr>
-          <td>duration</td>
-          <td>
-            200
-          </td>
-          <td>Duration of animation events</td>
-        </tr>
-        <tr>
-          <td>delay</td>
-          <td>
-          <div class="code">
-          delay : {
-            hide   : 300,
-            show   : 200,
-            search : 50,
-            touch  : 50
-          }
-          </div>
-          </td>
-          <td>Time in milliseconds to debounce show or hide behavior when <code>on: hover</code> is used, or when touch is used.</td>
-        </tr>
       </tbody>
     </table>
+    </div>
+
+    <div class="no example">
 
     <h4 class="ui header">
       Multiple Select Settings
@@ -2437,6 +2403,93 @@ themes      : ['Default', 'Material']
         </tr>
       </tbody>
     </table>
+    </div>
+
+    <div class="no example">
+    <h4 class="ui header">
+      Additional Settings
+    </h4>
+    <table class="ui celled sortable definition table segment">
+      <thead>
+        <tr>
+        <th>Setting</th>
+        <th class="four wide">Default</th>
+        <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>direction</td>
+          <td>'auto'</td>
+          <td>When set to <code>auto</code> determines direction based on whether dropdown can fit on screen. Set to <code>upward</code> or <code>downward</code> to always force a direction.</td>
+        </tr>
+        <tr>
+          <td>keepOnScreen</td>
+          <td>true</td>
+          <td>Whether dropdown should try to keep itself on screen by checking whether menus display position in its <code>context</code> (Default context is page).</td>
+        </tr>
+        <tr>
+          <td>context</td>
+          <td>window</td>
+          <td>Element context to use when checking whether can show when <code>keepOnScreen: true</code></td>
+        </tr>
+        <tr>
+          <td>fullTextSearch</td>
+          <td>false</td>
+          <td>Whether search selections should look for string match anywhere in string</td>
+        </tr>
+        <tr>
+          <td>preserveHTML</td>
+          <td>true</td>
+          <td>Whether html included in dropdown values should be preserved. (Allows icons to show up in selected value)</td>
+        </tr>
+        <tr>
+          <td>sortSelect</td>
+          <td>false</td>
+          <td>Whether to sort values when creating a dropdown automatically from a select element.</td>
+        </tr>
+        <tr>
+          <td>showOnFocus</td>
+          <td>true</td>
+          <td>Whether to show dropdown menu automatically on element focus.</td>
+        </tr>
+        <tr>
+          <td>allowTab</td>
+          <td>true</td>
+          <td>Whether to allow the element to be navigable by keyboard, by automatically creating a <code>tabindex</code></td>
+        </tr>
+        <tr>
+          <td>transition</td>
+          <td>
+            auto (slide down / slide up)
+          </td>
+          <td>Named transition to use when animating menu in and out. Defaults to <code>slide down</code> or <code>slide up</code> depending on dropdown direction. Fade and slide down are available without including <a href="/modules/transition.html">ui transitions</a></td>
+        </tr>
+        <tr>
+          <td>duration</td>
+          <td>
+            200
+          </td>
+          <td>Duration of animation events</td>
+        </tr>
+        <tr>
+          <td>delay</td>
+          <td>
+          <div class="code">
+          delay : {
+            hide   : 300,
+            show   : 200,
+            search : 50,
+            touch  : 50
+          }
+          </div>
+          </td>
+          <td>Time in milliseconds to debounce show or hide behavior when <code>on: hover</code> is used, or when touch is used.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    </div>
 
     <h4 class="ui header">
       Callbacks
@@ -2445,7 +2498,7 @@ themes      : ['Default', 'Material']
     <table class="ui celled sortable definition table segment">
       <thead>
         <tr>
-          <th class="four wide"></th>
+          <th class="six wide"></th>
           <th>Context</th>
           <th>Description</th>
         </tr>

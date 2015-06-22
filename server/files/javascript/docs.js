@@ -730,6 +730,7 @@ semantic.ready = function() {
           })
         ;
       }
+      console.log(code);
       $example.data('code', code);
       return code;
     },

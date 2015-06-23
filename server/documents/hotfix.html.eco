@@ -12,51 +12,23 @@ type       : 'Library'
 </style>
 <script type="text/javascript">
 $(document).ready(function() {
-  $.fn.api.settings.api = {
-    'search test': '/somewhere/here/?itema={query}&itemb={query}',
-};
-
-$('.ui.category.search').search({
-    apiSettings: {
-        action: 'search test',
-        data: 'itema=' + encodeURIComponent(1)
-            + '&itemb=' + encodeURIComponent(2),
-        dataType: 'json',
-        mockResponse: {
-            "results": [
-                        {
-                            "title": "100000-10000",
-                            "description": "Mathematics Version 1"
-                        },
-                        {
-                            "title": "200000-20000",
-                            "description": "TEMP:Mathematics Reserve"
-                        },
-                        {
-                            "title": "300000-30000",
-                            "description": "Mathematics Version 2"
-                        }
-                    ]
-        }
-    },
-    type: 'category',
-    minCharacters: 2,
-    maxResults: 7,
-    cache: true,
-    onSelect: function(result, response) {
-        console.log(result, response);
-    },
+    $('.ui.dropdown').dropdown({
+    onChange: function (a, b, c) {
+        console.log("changed to " + a);
+    }
 });
 });
 </script>
 
 
 <div class="ui container">
-<div class="ui category search">
-    <div class="ui icon input">
-        <input id="sample" name="sample" autocomplete="off" class="prompt" placeholder="sample" type="text" maxlength="16" value="" />
-        <i class="search icon"></i>
-    </div>
-    <div class="results"></div>
+<div class="ui form">
+    <select class="ui dropdown">
+        <option value="">Any</option>
+        <option value="1">One</option>
+        <option value="0">Zero</option>
+        <option value="pickle">Pickle</option>
+    </select>
 </div>
+
 </div>

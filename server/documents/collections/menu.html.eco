@@ -401,7 +401,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
     </div>
   </div>
 
-  <h2 class="ui dividing header">Contents</h2>
+  <h2 class="ui dividing header">Content</h2>
 
   <div class="example">
     <h4 class="ui header">Header</h4>

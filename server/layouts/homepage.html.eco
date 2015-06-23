@@ -53,7 +53,6 @@
 
   <%- @partial('transifex') %>
   <script src="/javascript/library/highlight.min.js"></script>
-  <script src="/javascript/library/highlight.languages.min.js"></script>
   <script src="/javascript/library/easing.min.js"></script>
   <script src="/javascript/library/typing.min.js"></script>
   <%- @partial('ui-javascript') %>

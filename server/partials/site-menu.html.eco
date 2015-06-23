@@ -7,10 +7,13 @@
 <% uiModules         = @getCollection("documents").findAll({type: $in: ['UI Module']},[{title: 1}]).toJSON() %>
 <% uiBehavior        = @getCollection("documents").findAll({type: $in: ['UI Behavior']},[{title: 1}]).toJSON() %>
 
-<a class="item" href="<%= @getZip() %>">
-  <i class="angle right icon"></i>
-  <b>Getting Started</b>
-</a>
+<div class="item">
+  <a class="ui logo icon image" href="/">
+    <img src="/images/logo.png">
+  </a>
+  <a href="/"><b>UI Docs</b></a>
+</div>
+
 <div class="item">
   <div class="<%= if @document.elementType is 'introduction' then 'active ' %>header">Introduction</div>
   <div class="menu">

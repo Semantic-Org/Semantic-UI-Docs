@@ -54,8 +54,7 @@ semantic.ready = function() {
     $menuMusic           = $('.ui.main.menu .music.item'),
     $menuPopup           = $('.ui.main.menu .popup.item'),
     $pageDropdown        = $('.ui.main.menu .page.dropdown'),
-    $pageTabMenu         = $('.masthead.tab.segment .tabular.menu'),
-    $pageTabs            = $('.masthead.tab.segment .menu .item'),
+    $pageTabs            = $('.masthead.tab.segment .tabs.menu .item'),
 
     $languageDropdown    = $('.language.dropdown'),
     $chineseModal        = $('.chinese.modal'),
@@ -730,7 +729,6 @@ semantic.ready = function() {
           })
         ;
       }
-      console.log(code);
       $example.data('code', code);
       return code;
     },

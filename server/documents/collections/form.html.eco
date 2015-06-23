@@ -181,7 +181,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
     </div>
   </form>
 
-  <h2 class="ui dividing header">Contents</h2>
+  <h2 class="ui dividing header">Content</h2>
 
   <div class="example">
     <h4 class="ui header">Field</h4>

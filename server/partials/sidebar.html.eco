@@ -1,10 +1,4 @@
 <div class="ui vertical inverted sidebar menu" id="toc">
-  <div class="item">
-    <a class="ui logo icon image" href="/">
-      <img src="/images/logo.png">
-    </a>
-    <a href="/"><b>UI Docs</b></a>
-  </div>
   <%- @partial('site-menu') %>
 </div>
 

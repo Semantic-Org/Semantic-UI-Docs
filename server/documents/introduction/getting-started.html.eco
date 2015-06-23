@@ -15,18 +15,22 @@ type        : 'Introduction'
 <div class="main ui intro container">
 
   <div class="ui active tab" data-tab="install">
-    <h2 class="ui dividing header">Installing</h2>
+
+    <h2 class="ui dividing header">Intro</h2>
 
     <div class="no example">
 
       <h4 class="ui header">Overview</h4>
 
-      <p>Semantic UI is designed from the ground up to support <a href="/usage/theming.html">user theming</a>. To fully take advantage of custom themes however you will need to compile LESS files with your custom variables.</p>
-      <p>Semantic's NPM package comes prepackaged with a Gulp pipeline designed to help manage custom themes. Additionally, the package comes with special <code>post-install</code> which help simplify setup, and make updating versions a breeze.</p>
+      <p>Semantic UI is designed from the ground up to support <a href="/usage/theming.html">user theming</a>. To fully take advantage of custom themes however you will need to compile LESS files with your custom theming variables.</p>
+      <p>Semantic's NPM package comes prepackaged with a Gulp pipeline designed to help manage custom themes and special install scripts to simplify setup and updates.</p>
 
       <p>For installing with specific integrations like, Ember, React, or Meteor, see our <a href="/introduction/integrations.html">integration guide</a></p>
 
     </div>
+
+    <h2 class="ui dividing header">Installing</h2>
+
 
     <div class="no example">
       <h4 class="ui header">Install NodeJS</h4>
@@ -53,7 +57,7 @@ type        : 'Introduction'
         </div>
       </div>
       <div class="ui basic tab vertical segment" data-tab="linux">
-        <h4>Install without sudo</h4>
+        <h4>Install from Git without Sudo</h4>
         <div class="ignored code" data-type="bash">
           mkdir ~/local
           echo 'export PATH=$HOME/local/bin:$PATH' >> ~/.bashrc
@@ -74,7 +78,8 @@ type        : 'Introduction'
     </div>
 
     <div class="no example">
-      <h4>Install Semantic UI on NPM</h4>
+      <h4>Install Semantic UI</h4>
+      <p>Semantic UI is available in an eponymous package on NPM</p>
       <div class="ui secondary menu">
         <a class="active item" data-tab="video">
           Video
@@ -96,7 +101,7 @@ type        : 'Introduction'
     </div>
 
     <div class="no example">
-      <h4>Include Semantic UI in Your HTML</h4>
+      <h4>Include in Your HTML</h4>
       <p>Running the gulp build tools will compile css and javascript for use in your project. Just link to these files in your html.</p>
       <div class="ignored code" data-type="html">
         <link rel="stylesheet" type="text/css" href="/semantic/dist/semantic.min.css">

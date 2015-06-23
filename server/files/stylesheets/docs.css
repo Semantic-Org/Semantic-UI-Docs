@@ -130,7 +130,8 @@ blockquote .author {
      Sidebar
 ---------------*/
 
-#example #toc .logo.image {
+#example .sidebar.menu .logo.image,
+#example .sticky.menu .logo.image {
   width: 35px;
   margin-right: 1em;
 }
@@ -1683,7 +1684,6 @@ code.code .class.value b {
   line-height: 1;
   vertical-align: baseline;
   display: inline-block;
-  transform: rotateZ(0deg);
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }

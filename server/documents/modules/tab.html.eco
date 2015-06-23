@@ -108,13 +108,16 @@ themes      : ['Default']
     <div class="dynamic no example">
       <h4 class="header">Retreiving Remote Tab Content</h4>
       <p>Using <code>auto: true</code> will load the tab's path from your server with additional headers to specify an in-page request. Additional requests will automatically be loaded from cache without a server request.</p>
+      <div class="ui ignored info message">
+        Tab contents defaults to automatically caching in <code>sessionStorage</code> using API's <code>cache: 'local'</code> setting. You can disable this behavior by setting <code>cache: false</code> in <code>apiSettings</code>.
+      </div>
       <div class="ui ignored warning message">
         API requests for the following example have been faked using <a href="/behaviors/api.html#using-custom-backends">mockResponseAsync</a> API setting to avoid network overhead.
       </div>
       <div class="code">
       $('.dynamic.example .menu .item')
         .tab({
-          context : '.dynamic.example',
+          context : 'parent',
           auto    : true,
           path    : '/'
         })
@@ -226,7 +229,8 @@ themes      : ['Default']
           ;
           $('#context2 .menu .item')
             .tab({
-              context: $('#context2')
+              // special keyword works same as above
+              context: 'parent'
             })
           ;
         </div>

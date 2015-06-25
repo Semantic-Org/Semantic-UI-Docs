@@ -323,6 +323,16 @@ themes      : ['default', 'GitHub']
       <p>Pellentesque habitant morbi</p>
     </div>
   </div>
+  <div class="another example">
+    <div class="ui compact segments">
+      <div class="ui segment">
+        <p>Pellentesque habitant morbi</p>
+      </div>
+      <div class="ui segment">
+        <p>Pellentesque habitant morbi</p>
+      </div>
+    </div>
+  </div>
 
   <div class="example">
     <h4 class="ui header">Colored</h4>

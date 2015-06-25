@@ -977,6 +977,14 @@ blockquote .author {
 
 
 /*--------------
+    Fitted
+---------------*/
+
+#example .fitted.example .segment {
+  line-height: 1;
+}
+
+/*--------------
       Grid
 ---------------*/
 
@@ -1683,15 +1691,15 @@ code.code .class.value b {
   border-radius: 5px;
   line-height: 1;
   vertical-align: baseline;
-  display: inline-block;
+  display: inline-block;/*
   -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease;*/
 }
-code.code:hover .class.value {
+code.code .class.value {
   /*color: #668C79;*/
 }
-code.code:hover .class.string b,
-code.code:hover .class.value b {
+code.code .class.string b,
+code.code .class.value b {
   background-color: rgba(98, 190, 169, 0.25);
   color: #008078;
   margin: 0px -2px;

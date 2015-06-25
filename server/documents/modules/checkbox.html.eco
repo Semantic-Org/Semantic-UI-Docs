@@ -27,16 +27,24 @@ themes      : ['Default', 'Colored']
       <h4 class="ui header">Checkbox</h4>
       <p>A standard checkbox</p>
       <div class="ui checkbox">
-        <input type="checkbox" name="fun" />
+        <input type="checkbox" name="example" />
         <label>Make my profile visible</label>
       </div>
     </div>
 
     <div class="example">
-      <h4 class="ui header">Radio Box</h4>
+      <h4 class="ui header">Radio</h4>
       <p>A checkbox can be formatted as a radio element. This means it is an exclusive option.</p>
+
+      <div class="ui radio checkbox">
+        <input type="radio" name="radio" checked="checked" />
+        <label>Radio choice</label>
+      </div>
+    </div>
+    <div class="another example">
       <div class="ui form">
         <div class="inline fields">
+          <label>How often do you use checkboxes?</label>
           <div class="field">
             <div class="ui radio checkbox">
               <input type="radio" name="frequency" checked="checked" />
@@ -66,34 +74,29 @@ themes      : ['Default', 'Colored']
     </div>
     <div class="another example">
       <div class="ui form">
-        <div class="field">
-          <div class="ui checkbox">
-            <input type="checkbox" name="fun" />
-            <label>Make my profile visible</label>
-          </div>
-        </div>
         <div class="grouped fields">
+          <label>How often do you use checkboxes?</label>
           <div class="field">
             <div class="ui radio checkbox">
-              <input type="radio" name="frequency" checked="checked" />
+              <input type="radio" name="example2" checked="checked" />
               <label>Once a week</label>
             </div>
           </div>
           <div class="field">
             <div class="ui radio checkbox">
-              <input type="radio" name="frequency" />
+              <input type="radio" name="example2" />
               <label>2-3 times a week</label>
             </div>
           </div>
           <div class="field">
             <div class="ui radio checkbox">
-              <input type="radio" name="frequency" />
+              <input type="radio" name="example2" />
               <label>Once a day</label>
             </div>
           </div>
           <div class="field">
             <div class="ui radio checkbox">
-              <input type="radio" name="frequency" />
+              <input type="radio" name="example2" />
               <label>Twice a day</label>
             </div>
           </div>
@@ -113,8 +116,8 @@ themes      : ['Default', 'Colored']
     <div class="another example">
       <div class="ui form">
         <div class="grouped fields">
-          <div class="field">
           <label>Outbound Throughput</label>
+          <div class="field">
             <div class="ui slider checkbox">
               <input type="radio" name="throughput" checked="checked">
               <label>20 mbps max</label>
@@ -163,6 +166,27 @@ themes      : ['Default', 'Colored']
     </div>
 
     <div class="example">
+      <h4 class="ui header">Checked</h4>
+      <p>A checkbox can be checked</p>
+      <div class="ui checked checkbox">
+        <input type="checkbox" checked />
+        <label>Active</label>
+      </div>
+    </div>
+
+    <div class="indeterminate example">
+      <h4 class="ui header">Indeterminate</h4>
+      <p>A checkbox can be indeterminate</p>
+      <div class="ui ignored info message">
+        An indeterminate state can only be set in javascript, see examples section
+      </div>
+      <div class="ui checkbox">
+        <input type="checkbox" />
+        <label>Indeterminate</label>
+      </div>
+    </div>
+
+    <div class="example">
       <h4 class="ui header">Disabled</h4>
       <p>A checkbox can be read-only and unable to change states</p>
       <div class="ui ignored info message">
@@ -182,22 +206,22 @@ themes      : ['Default', 'Colored']
 
     <h2 class="ui dividing header">Variations</h2>
 
-    <div class="example">
+    <div class="fitted example">
       <h4 class="ui header">Fitted</h4>
       <p>A fitted checkbox does not leave padding for a label</p>
-      <div class="ui left floated segment">
+      <div class="ui left floated compact segment">
         <div class="ui fitted checkbox">
           <input type="checkbox"/>
           <label></label>
         </div>
       </div>
-      <div class="ui left floated segment">
+      <div class="ui left floated compact segment">
         <div class="ui fitted slider checkbox">
           <input type="checkbox"/>
           <label></label>
         </div>
       </div>
-      <div class="ui left floated segment">
+      <div class="ui left floated compact segment">
         <div class="ui fitted toggle checkbox">
           <input type="checkbox"/>
           <label></label>
@@ -211,6 +235,126 @@ themes      : ['Default', 'Colored']
   <div class="ui tab" data-tab="examples">
 
     <h2>Examples</h2>
+    <div class="grouped example">
+      <h4 class="ui header">Grouped Checkboxes</h4>
+      <p>The <code>indeterminate</code> state can be used to represent a value that is neither checked or unchecked.</p>
+
+      <div class="ui celled relaxed list">
+        <div class="item">
+          <div class="ui master checkbox">
+            <input type="checkbox" name="fruits" />
+            <label>Fruits</label>
+          </div>
+          <div class="list">
+            <div class="item">
+              <div class="ui child checkbox">
+                <input type="checkbox" name="apple" />
+                <label>Apple</label>
+              </div>
+            </div>
+            <div class="item">
+              <div class="ui child checkbox">
+                <input type="checkbox" name="orange" />
+                <label>Orange</label>
+              </div>
+            </div>
+            <div class="item">
+              <div class="ui child checkbox">
+                <input type="checkbox" name="pear" />
+                <label>Pear</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="ui master checkbox">
+            <input type="checkbox" name="vegetables" />
+            <label>Vegetables</label>
+          </div>
+          <div class="list">
+            <div class="item">
+              <div class="ui child checkbox">
+                <input type="checkbox" name="lettuce" />
+                <label>Lettuce</label>
+              </div>
+            </div>
+            <div class="item">
+              <div class="ui child checkbox">
+                <input type="checkbox" name="carrot" />
+                <label>Carrot</label>
+              </div>
+            </div>
+            <div class="item">
+              <div class="ui child checkbox">
+                <input type="checkbox" name="spinach" />
+                <label>Spinach</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="evaluated code">
+        // master checkbox
+        $('.list .master.checkbox')
+          .checkbox({
+            onChange   : function () {
+              var
+                $parentCheckbox = $(this),
+                $childCheckbox  = $(this).closest('.checkbox').siblings('.list').find('.checkbox')
+              ;
+              // change state of child checkbox
+              if( $parentCheckbox.checkbox('is indeterminate') ) {
+                return;
+              }
+              else if( $parentCheckbox.checkbox('is checked') ) {
+                $childCheckbox.checkbox('check');
+              }
+              else {
+                $childCheckbox.checkbox('uncheck')
+              }
+            }
+          })
+        ;
+      </div>
+      <div class="evaluated code">
+        // child list checkbox
+        $('.list .child.checkbox')
+          .checkbox({
+            fireOnInit : true,
+            onChange   : function() {
+              var
+                $parentCheckbox = $(this).closest('.list').closest('.item').children('.checkbox'),
+                $checkbox       = $(this).closest('.list').not('.ui').find('.checkbox'),
+                allChecked      = true,
+                allUnchecked    = true
+              ;
+              // check to see if all other siblings are checked or unchecked
+              $checkbox.each(function() {
+                if( $(this).checkbox('is checked') ) {
+                  allUnchecked = false;
+                }
+                else {
+                  allChecked = false;
+                }
+              });
+              // set parent checkbox to match
+              if(allChecked) {
+                console.log('checking parent');
+                $parentCheckbox.checkbox('set input checked');
+              }
+              else if(allUnchecked) {
+                console.log('unchecking parent');
+                $parentCheckbox.checkbox('set input unchecked');
+              }
+              else {
+                console.log('indeterminate parent');
+                $parentCheckbox.checkbox('set input indeterminate');
+              }
+            }
+          })
+        ;
+      </div>
+    </div>
     <div class="example">
       <h4 class="ui header">Uncheckable Checkboxes</h4>
       <p class="ignored">To make a user able to check a box, but unable to uncheck it, use the <code>uncheckable</code> setting.</p>
@@ -425,6 +569,16 @@ themes      : ['Default', 'Colored']
           <td>onChecked</td>
           <td>HTML input element</td>
           <td>Callback after a checkbox is checked.</td>
+        </tr>
+        <tr>
+          <td>onUndeterminate</td>
+          <td>HTML input element</td>
+          <td>Callback after a checkbox is set to undeterminate.</td>
+        </tr>
+        <tr>
+          <td>onDeterminate</td>
+          <td>HTML input element</td>
+          <td>Callback after a checkbox is set to determinate.</td>
         </tr>
         <tr>
           <td>onUnchecked</td>

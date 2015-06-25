@@ -5,6 +5,7 @@ semantic.dropdown.ready = function() {
 
   // selector cache
   var
+    $indeterminate = $('.indeterminate.example').find('.ui.checkbox'),
     $checkbox = $('.example').not('.static').find('.ui.checkbox'),
     // alias
     handler
@@ -18,6 +19,12 @@ semantic.dropdown.ready = function() {
   $checkbox
     .checkbox()
   ;
+
+  $indeterminate
+    .checkbox('indeterminate')
+  ;
+
+
 
 };
 

@@ -12,23 +12,80 @@ type       : 'Library'
 </style>
 <script type="text/javascript">
 $(document).ready(function() {
-    $('.ui.dropdown').dropdown({
-    onChange: function (a, b, c) {
-        console.log("changed to " + a);
-    }
-});
+  $('.toggle.checkbox').checkbox()
 });
 </script>
 
 
 <div class="ui container">
-<div class="ui form">
-    <select class="ui dropdown">
-        <option value="">Any</option>
-        <option value="1">One</option>
-        <option value="0">Zero</option>
-        <option value="pickle">Pickle</option>
-    </select>
-</div>
+ <div class="ui  vertical fluid accordion menu ">
+        <div class="item">
+            <a class="active title">
+                <i class="dropdown icon"></i>
+                Electronics
+            </a>
+            <div class="active content">
+                <div class="accordion menu">
+
+                    <div class="active title">
+                        <i class="dropdown icon"></i>
+                        Mobile Phones
+                    </div>
+                    <div class="active content">
+
+                        <div class="ui form">
+                            <div class="grouped fields">
+                                <div class="field">
+                                    <div class="ui checkbox ">
+                                        <input type="checkbox" name="a" value="small" checked>
+                                        <label>All Mobiles</label>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="ui checkbox">
+                                        <input type="checkbox" name="b" value="a">
+                                        <label>Apple</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="accordion">
+                    <div class=" title">
+                        <i class="dropdown icon"></i>
+                        Tablets
+                    </div>
+                    <div class="content">
+
+                        <div class="ui form">
+                            <div class="grouped fields">
+                                <div class="field">
+                                    <div class="ui checkbox ">
+                                        <input type="checkbox" name="a" value="small" checked>
+                                        <label>All Mobiles</label>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="ui checkbox">
+                                        <input type="checkbox" name="b" value="a">
+                                        <label>Apple</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
 
 </div>

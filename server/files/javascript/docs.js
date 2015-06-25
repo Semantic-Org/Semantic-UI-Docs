@@ -71,7 +71,7 @@ semantic.ready = function() {
     $example             = $('.example'),
     $popupExample        = $example.not('.no'),
     $shownExample        = $example.filter('.shown'),
-    $prerenderedExample  = $example.has('.ui.dropdown, .ui.search, .ui.rating, .ui.dimmer, .ui.embed'),
+    $prerenderedExample  = $example.has('.ui.checkbox, .ui.dropdown, .ui.search, .ui.rating, .ui.dimmer, .ui.embed'),
 
     $visibilityExample   = $example.filter('.visiblity').find('.overlay, .demo.segment, .items img'),
 
@@ -538,7 +538,6 @@ semantic.ready = function() {
         $themeDropdown
           .api({
             on       : 'now',
-            cache    : 'local',
             debug    : true,
             action   : 'getVariables',
             dataType : 'text',
@@ -548,7 +547,6 @@ semantic.ready = function() {
               $themeDropdown
                 .api({
                   on       : 'now',
-                  cache    : 'local',
                   action   : 'getOverrides',
                   dataType : 'text',
                   urlData  : urlData,

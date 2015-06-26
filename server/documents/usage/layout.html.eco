@@ -25,6 +25,17 @@ type        : 'Usage'
         </div>
       </div>
     </a>
+    <a class="ui card" href="/examples/responsive.html">
+      <div class="image">
+        <img src="/images/examples/responsive.png">
+      </div>
+      <div class="content">
+        <div class="header">Responsive</div>
+        <div class="description">
+          Patterns for adjusting display for different devices.
+        </div>
+      </div>
+    </a>
     <a class="ui card" href="/examples/grid.html">
       <div class="image">
         <img src="/images/examples/grid.png">

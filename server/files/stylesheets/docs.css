@@ -718,6 +718,14 @@ blockquote .author {
   min-width: 100px;
 }
 
+/* Examples Tab */
+#example .examples.tab .example > p {
+  margin: 1em 0em;
+}
+#example .examples.tab .example .anchor + p {
+  padding: 0em;
+}
+
 /* Intro Tab */
 #example .intro > h3.ui.header {
   margin-top: 4em;
@@ -975,6 +983,14 @@ blockquote .author {
   margin-bottom: 0em;
 }
 
+/*--------------
+    Callback
+---------------*/
+
+#example .callback.example .console {
+  height: 350px;
+  overflow: auto;
+}
 
 /*--------------
     Fitted

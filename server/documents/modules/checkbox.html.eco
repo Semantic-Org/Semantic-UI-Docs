@@ -232,12 +232,98 @@ themes      : ['Default', 'Colored']
 
   </div>
 
-  <div class="ui tab" data-tab="examples">
+  <div class="ui examples tab" data-tab="examples">
 
     <h2>Examples</h2>
+    <div class="callback example">
+      <h4 class="ui header">Avoiding Callback Hell</h4>
+      <p>Checkbox has two versions of each state change behavior to let you determine whether the call should trigger checkbox callbacks.</p>
+      <p>Calling a standard behavior like <code>check</code> will trigger callbacks, however using <code>set checked</code> will adjust the checkbox state <em>without triggering callbacks</em></p>
+      <p>This can help distinguish between  user invoked state changes, and those triggered programmaticaly, and can help avoid recursion in grouped relationships</p>
+      <div class="ui equal width stretched grid">
+        <div class="column">
+          <div class="ui segment">
+            <div class="ui checkbox">
+              <input type="checkbox" />
+              <label>Checkbox</label>
+            </div>
+            <div class="ui divider"></div>
+            <div class="ui radio checkbox">
+              <input type="radio" />
+              <label>Radio</label>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="ui console segment">
+            <div class="ui top right attached label">
+              Console
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="ui vertical buttons">
+            <div class="ui button" data-method="toggle">Toggle</div>
+            <div class="ui button" data-method="check">Check</div>
+            <div class="ui button" data-method="uncheck">Uncheck</div>
+            <div class="ui button" data-method="indeterminate">Indeterminate</div>
+            <div class="ui button" data-method="determinate">Determinate</div>
+            <div class="ui button" data-method="enable">Enable</div>
+            <div class="ui button" data-method="disable">Disable</div>
+          </div>
+          <div class="ui divider"></div>
+          <div class="ui vertical buttons">
+            <div class="ui button" data-method="set checked">Set Checked</div>
+            <div class="ui button" data-method="set unchecked">Set Unchecked</div>
+            <div class="ui button" data-method="set indeterminate">Set Indeterminate</div>
+            <div class="ui button" data-method="set determinate">Set Determinate</div>
+            <div class="ui button" data-method="set enabled">Set Enabled</div>
+            <div class="ui button" data-method="set disabled">Set Disabled</div>
+          </div>
+        </div>
+      </div>
+      <div class="evaluated code">
+        var
+          $console = $('.callback .console')
+        ;
+        $('.callback.example .checkbox')
+          .checkbox()
+          .first().checkbox({
+            onChecked: function() {
+              $console.append('onChecked called<br>');
+            },
+            onUnchecked: function() {
+              $console.append('onUnchecked called<br>');
+            },
+            onEnable: function() {
+              $console.append('onEnable called<br>');
+            },
+            onDisable: function() {
+              $console.append('onDisable called<br>');
+            },
+            onDeterminate: function() {
+              $console.append('onDeterminate called<br>');
+            },
+            onIndeterminate: function() {
+              $console.append('onIndeterminate called<br>');
+            },
+            onChange: function() {
+              $console.append('onChange called<br>');
+            }
+          })
+        ;
+        // bind events to buttons
+        $('.callback.example .button')
+          .on('click', function() {
+            $('.callback .checkbox').checkbox( $(this).data('method') );
+          })
+        ;
+      </div>
+    </div>
     <div class="grouped example">
       <h4 class="ui header">Grouped Checkboxes</h4>
-      <p>The <code>indeterminate</code> state can be used to represent a value that is neither checked or unchecked.</p>
+      <p>The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/%3Aindeterminate" target="_blank"><code>indeterminate</code></a> state can be used to represent a value that is neither checked or unchecked.</p>
+      <p>This can be useful with groups where a "master" checkbox, should display the selections of several other checkboxes</p>
 
       <div class="ui celled relaxed list">
         <div class="item">
@@ -293,38 +379,37 @@ themes      : ['Default', 'Colored']
           </div>
         </div>
       </div>
-      <div class="evaluated code">
-        // master checkbox
+      <div class="evaluated code" data-title="Master Checkboxes">
         $('.list .master.checkbox')
           .checkbox({
-            onChange   : function () {
+            // check all children
+            onChecked: function() {
               var
-                $parentCheckbox = $(this),
                 $childCheckbox  = $(this).closest('.checkbox').siblings('.list').find('.checkbox')
               ;
-              // change state of child checkbox
-              if( $parentCheckbox.checkbox('is indeterminate') ) {
-                return;
-              }
-              else if( $parentCheckbox.checkbox('is checked') ) {
-                $childCheckbox.checkbox('check');
-              }
-              else {
-                $childCheckbox.checkbox('uncheck')
-              }
+              $childCheckbox.checkbox('check');
+            },
+            // uncheck all children
+            onUnchecked: function() {
+              var
+                $childCheckbox  = $(this).closest('.checkbox').siblings('.list').find('.checkbox')
+              ;
+              $childCheckbox.checkbox('uncheck');
             }
           })
         ;
       </div>
-      <div class="evaluated code">
-        // child list checkbox
+      <div class="evaluated code" data-title="Child Checkboxes">
         $('.list .child.checkbox')
           .checkbox({
+            // Fire on load to set parent value
             fireOnInit : true,
+            // Change parent state on each child checkbox change
             onChange   : function() {
               var
-                $parentCheckbox = $(this).closest('.list').closest('.item').children('.checkbox'),
-                $checkbox       = $(this).closest('.list').not('.ui').find('.checkbox'),
+                $listGroup      = $(this).closest('.list'),
+                $parentCheckbox = $listGroup.closest('.item').children('.checkbox'),
+                $checkbox       = $listGroup.find('.checkbox'),
                 allChecked      = true,
                 allUnchecked    = true
               ;
@@ -337,31 +422,29 @@ themes      : ['Default', 'Colored']
                   allChecked = false;
                 }
               });
-              // set parent checkbox to match
+              // set parent checkbox state, but dont trigger its onChange callback
               if(allChecked) {
-                console.log('checking parent');
-                $parentCheckbox.checkbox('set input checked');
+                $parentCheckbox.checkbox('set checked');
               }
               else if(allUnchecked) {
-                console.log('unchecking parent');
-                $parentCheckbox.checkbox('set input unchecked');
+                $parentCheckbox.checkbox('set unchecked');
               }
               else {
-                console.log('indeterminate parent');
-                $parentCheckbox.checkbox('set input indeterminate');
+                $parentCheckbox.checkbox('set indeterminate');
               }
             }
           })
         ;
       </div>
     </div>
-    <div class="example">
-      <h4 class="ui header">Uncheckable Checkboxes</h4>
+    <div class="state example">
+      <h4 class="ui header">One Way Checkboxes</h4>
       <p class="ignored">To make a user able to check a box, but unable to uncheck it, use the <code>uncheckable</code> setting.</p>
       <p class="ignored">To always disable a checkbox, add the property <code>disabled</code> to your input.</p>
-      <p class="ignored">To make a checkbox read-only do not initialize it, or include the <code>read-only</code> class which will not allow toggle events.</p>
+      <p class="ignored">To make a checkbox read-only do not initialize it, or include the <code>read-only</code> class which will not allow events.</p>
       <div class="evaluated code" data-type="javascript">
-        $('#demo3')
+        $('.state.example .checkbox')
+          .last()
           .checkbox({
             uncheckable: false
           })
@@ -371,19 +454,19 @@ themes      : ['Default', 'Colored']
         <div class="field">
           <div class="ui checkbox" id="demo1">
             <input type="checkbox" disabled="disabled" checked="checked" />
-            <label> Disabled</label>
+            <label>Disabled</label>
           </div>
         </div>
         <div class="field">
           <div class="ui read-only checkbox" id="demo2">
             <input type="checkbox" checked="checked" />
-            <label> Read Only</label>
+            <label>Read-only</label>
           </div>
         </div>
         <div class="field">
           <div class="ui checkbox" id="demo3">
             <input type="checkbox" />
-            <label> Cannot Be Unchecked</label>
+            <label>Uncheckable</label>
           </div>
         </div>
       </div>

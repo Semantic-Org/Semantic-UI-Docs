@@ -1273,11 +1273,35 @@ themes      : ['Default']
 
     <div class="example">
       <h4 class="ui header">Device Visibility</h4>
-      <p>A columns or row can appear only for a specific device</p>
+      <p>A columns or row can appear only for a specific device, or screen sizes</p>
       <div class="ui text message info ignore">
-        Breakpoints are 768px and below for mobile, 768-992px for tablet and 992px+ for computer</i>
+        See <a href="/elements/container.html">container documentation</a> for information on breakpoint calculations
       </div>
       <div class="ui grid">
+        <div class="two column large screen only row">
+          <div class="column">
+            <div class="ui segment">
+              Large Screen
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui segment">
+              Large Screen
+            </div>
+          </div>
+        </div>
+        <div class="two column large screen only row">
+          <div class="column">
+            <div class="ui segment">
+              Widescreen
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui segment">
+              Widescreen
+            </div>
+          </div>
+        </div>
         <div class="two column mobile only row">
           <div class="column">
             <div class="ui segment">

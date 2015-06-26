@@ -938,19 +938,17 @@ semantic.ready = function() {
         codeHeight
       ;
       var entityMap = {
-        "&": "&amp;",
-        "<": "&lt;",
-        ">": "&gt;",
-        '"': '&quot;',
-        "'": '&#39;',
-        "/": '&#x2F;'
+        "&amp;"  : "&",
+        "&lt;"   : "<",
+        "&gt;"   : ">",
+        '&quot;' : '"',
+        '&#39;'  : "'",
+        '&#x2F;' : "/"
       };
       contentType = contentType.toLowerCase();
 
       function escapeHTML(string) {
-        return String(string).replace(/[&<>"'\/]/g, function (s) {
-          return entityMap[s];
-        });
+        return $('<div>').html(string).text();
       }
 
       // evaluate if specified
@@ -969,10 +967,9 @@ semantic.ready = function() {
       }
 
       // escape html entities
-      if(contentType != 'javascript' && contentType != 'less') {
-        //formattedCode = escapeHTML(formattedCode);
+      if(contentType != 'html') {
+        formattedCode = escapeHTML(formattedCode);
       }
-      formattedCode = formattedCode.replace(/&amp;/g, '&'); // saving me some frustration
 
       // color code
       formattedCode = window.hljs.highlightAuto(formattedCode);

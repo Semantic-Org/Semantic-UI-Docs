@@ -52,7 +52,6 @@ semantic.visiblity.ready = function() {
   };
 
   $pageTabs.tab('setting', 'onLoad', function() {
-    console.log($('.ui.sticky'));
     $('.ui.sticky')
       .sticky('refresh')
     ;

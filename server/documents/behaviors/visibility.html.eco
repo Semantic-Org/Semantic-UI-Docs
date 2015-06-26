@@ -432,6 +432,89 @@ type        : 'UI Behavior'
         </tbody>
       </table>
     </div>
+
+    <h2 class="ui header">Behaviors</h2>
+
+    <div class="no example">
+
+      <p>Visibility includes several useful behaviors for interacting with the component</p>
+      <table class="ui celled definition table">
+        <thead>
+          <tr>
+            <th class="three wide">Behavior</th>
+            <th class="six wide">Usage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              disable callbacks
+            </td>
+            <td>
+              Disable callbacks temporarily. This is useful if you need to adjust scroll position and do not want to trigger callbacks during the position change.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              enable callbacks
+            </td>
+            <td>
+              Re-enable callbacks
+            </td>
+          </tr>
+          <tr>
+            <td>
+              is on screen
+            </td>
+            <td>
+              Returns whether element is on screen
+            </td>
+          </tr>
+          <tr>
+            <td>
+              is off screen
+            </td>
+            <td>
+              Returns whether element is off screen
+            </td>
+          </tr>
+          <tr>
+            <td>
+              get pixels passed
+            </td>
+            <td>
+              Returns number of pixels passed in current element from top of element
+            </td>
+          </tr>
+          <tr>
+            <td>
+              get element calculations
+            </td>
+            <td>
+              Returns element calculations as object
+            </td>
+          </tr>
+          <tr>
+            <td>
+              get screen calculations
+            </td>
+            <td>
+              Returns screen calculations as object
+            </td>
+          </tr>
+          <tr>
+            <td>
+              get screen size
+            </td>
+            <td>
+              Returns screen size as object
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
   </div>
 
   <div class="ui tab" data-tab="examples">
@@ -725,6 +808,11 @@ type        : 'UI Behavior'
           <td>initialCheck</td>
           <td>true</td>
           <td>Whether visibility conditions should be checked immediately on init</td>
+        </tr>
+        <tr>
+          <td>checkOnResize</td>
+          <td>true</td>
+          <td>Whether visibility conditions should be checked on <code>visibility('refresh')</code> and window <code>resize</code>. Useful when content resizes causes continuous changes in position</td>
         </tr>
         <tr>
           <td>offset</td>

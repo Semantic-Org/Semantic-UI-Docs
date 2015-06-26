@@ -21,8 +21,9 @@ type        : 'Introduction'
       watch = require('semantic/tasks/watch'),
       build = require('semantic/tasks/build')
     ;
+    // import task with a custom task name
     gulp.task('watch ui', 'Watch Semantic UI', watch));
-    gulp.task('build ui', 'Watch Semantic UI', build));
+    gulp.task('build ui', 'Build Semantic UI', build));
     </div>
   </div>
 
@@ -31,6 +32,9 @@ type        : 'Introduction'
     <h4>Single Component Repos</h4>
     <p>Component repos are automatically updated with each release. You can browse all available component repos by <a href="https://github.com/Semantic-Org?utf8=%E2%9C%93&query=ui-">browsing Semantic Org</a> on GitHub</p>
     <p>Each component's release notes will automatically update with the relevant notes automatically parsed from the main repository</p>
+    <div class="ignored code">
+     npm install semantic-ui-component
+    </div>
   </div>
   <div class="no example">
     <h4>Browserify and NPM</h4>
@@ -63,7 +67,7 @@ type        : 'Introduction'
     <h4>Single Components</h4>
     <p>If you need to import individual components, you will need to scope each import to avoid variable collisions</p>
     <div class="ignored code" data-type="LESS" data-title="Importing LESS Components">
-      /* Import specific components */
+      /* Import specific components with scope */
       & { @import 'src/definitions/elements/button'; }
       & { @import 'src/definitions/elements/list'; }
     </div>

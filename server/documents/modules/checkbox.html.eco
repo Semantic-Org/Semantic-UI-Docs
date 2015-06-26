@@ -243,6 +243,9 @@ themes      : ['Default', 'Colored']
       <div class="ui equal width stretched grid">
         <div class="column">
           <div class="ui segment">
+            <div class="ui top right attached label">
+              Example
+            </div>
             <div class="ui checkbox">
               <input type="checkbox" />
               <label>Checkbox</label>
@@ -576,16 +579,44 @@ themes      : ['Default', 'Colored']
         <td>Set a checkbox state to unchecked</td>
       </tr>
       <tr>
-        <td>attach events(selector, behavior)</td>
-        <td>Attach checkbox events to another element</td>
+        <td>indeterminate</td>
+        <td>Set as indeterminate checkbox</td>
+      </tr>
+      <tr>
+        <td>determinate</td>
+        <td>Set as determinate checkbox</td>
       </tr>
       <tr>
         <td>enable</td>
         <td>Enable interaction with a checkbox</td>
       </tr>
       <tr>
-        <td>disable</td>
-        <td>Disable interaction with a checkbox</td>
+        <td>set checked</td>
+        <td>Set a checkbox state to checked without callbacks</td>
+      </tr>
+      <tr>
+        <td>set unchecked</td>
+        <td>Set a checkbox state to unchecked without callbacks</td>
+      </tr>
+      <tr>
+        <td>set indeterminate</td>
+        <td>Set as indeterminate checkbox without callbacks</td>
+      </tr>
+      <tr>
+        <td>set determinate</td>
+        <td>Set as determinate checkbox without callbacks</td>
+      </tr>
+      <tr>
+        <td>set enabled</td>
+        <td>Enable interaction with a checkbox without callbacks</td>
+      </tr>
+      <tr>
+        <td>set disabled</td>
+        <td>Disable interaction with a checkbox without callbacks</td>
+      </tr>
+      <tr>
+        <td>attach events(selector, behavior)</td>
+        <td>Attach checkbox events to another element</td>
       </tr>
       <tr>
         <td>is radio</td>

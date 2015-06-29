@@ -13,7 +13,9 @@
   </a>
   <a href="/"><b>UI Docs</b></a>
 </div>
-
+<a class="item" href="introduction/new.html">
+  New in 2.0
+</a>
 <div class="item">
   <div class="<%= if @document.elementType is 'introduction' then 'active ' %>header">Introduction</div>
   <div class="menu">

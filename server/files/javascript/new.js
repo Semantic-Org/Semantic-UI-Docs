@@ -20,9 +20,72 @@ semantic.new.ready = function() {
 
   };
 
+  // dimmer
+  $('.blurring.example .card .dimmer')
+    .dimmer({
+      on: 'hover'
+    })
+    .find('.button')
+      .state({
+        text: {
+          active : 'Sent!'
+        }
+      })
+  ;
+
+  // checkbox
+  $('.indeterminate.example .master.checkbox')
+    .checkbox({
+      onChecked: function() {
+        var
+          $childCheckbox  = $(this).closest('.checkbox').siblings('.list').find('.checkbox')
+        ;
+        $childCheckbox.checkbox('check');
+      },
+      onUnchecked: function() {
+        var
+          $childCheckbox  = $(this).closest('.checkbox').siblings('.list').find('.checkbox')
+        ;
+        $childCheckbox.checkbox('uncheck');
+      }
+    })
+  ;
+  $('.indeterminate.example .child.checkbox')
+    .checkbox({
+      fireOnInit : true,
+      onChange   : function() {
+        var
+          $listGroup      = $(this).closest('.list'),
+          $parentCheckbox = $listGroup.closest('.item').children('.checkbox'),
+          $checkbox       = $listGroup.find('.checkbox'),
+          allChecked      = true,
+          allUnchecked    = true
+        ;
+        $checkbox.each(function() {
+          if( $(this).checkbox('is checked') ) {
+            allUnchecked = false;
+          }
+          else {
+            allChecked = false;
+          }
+        });
+        if(allChecked) {
+          $parentCheckbox.checkbox('set checked');
+        }
+        else if(allUnchecked) {
+          $parentCheckbox.checkbox('set unchecked');
+        }
+        else {
+          $parentCheckbox.checkbox('set indeterminate');
+        }
+      }
+    })
+  ;
+
   // api
   $('.mock.example .button')
     .api({
+      loadingDuration: 500,
       // lets just pretend this always works
       mockResponse: {
         success: true
@@ -35,19 +98,26 @@ semantic.new.ready = function() {
       }
     })
   ;
+
   $('.async.example .button')
     .api({
-      // lets just pretend this mostly doesnt work
+      // lets wait a half second then try your luck
       mockResponseAsync: function(settings, callback) {
         var
-          randomSuccess = (Math.random() < 0.3),
-          response = (randomSuccess)
+          luckyPerson = (Math.random() < 0.5),
+          response    = (luckyPerson)
             ? { success: true }
-            : false
+            : { success: false, message: 'You are not lucky' }
         ;
         setTimeout(function() {
           callback(response);
         }, 500);
+      },
+      successTest: function(response) {
+        return response && response.success;
+      },
+      onFailure: function (response) {
+        alert(response.message);
       }
     })
     .state({
@@ -57,6 +127,8 @@ semantic.new.ready = function() {
       }
     })
   ;
+
+
   $('.external.example .ui.search')
     .search({
       type          : 'category',

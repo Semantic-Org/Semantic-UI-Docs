@@ -6,7 +6,7 @@ order       : 1
 
 title       : 'New in 2.0'
 description : 'An introduction to new features found in the latest release'
-type        : 'Usage'
+type        : 'Main'
 ---
 
 <%- @partial('header') %>
@@ -24,7 +24,7 @@ type        : 'Usage'
       <div class="item"><b>98</b> enhancements</div>
       <div class="item"><b>105</b> bug fixes</div>
       <div class="item"><b>2</b> new components</div>
-      <div class="item">Rewrites of several important components like <a href="/collections/menu.html"><code>menu</code></a>, and <a href="/elements/input.html"><code>input</code></a></div>
+      <div class="item">Rewrites of many components including <a href="/collections/menu.html"><code>menu</code></a>, and <a href="/elements/input.html"><code>input</code></a></div>
     </div>
 
     <p>There's just too much to cover in one page, but we've tried our best to give you examples of some of the new features available in 2.0</p>
@@ -87,7 +87,7 @@ type        : 'Usage'
 
   <div class="example">
     <h4 class="ui header">Flexbox Grid</h4>
-    <p>Grids in 2.0 now use <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes" target="_blank"><code>flexbox</code></a> and are equal height across rows by default.</p>
+    <p>Grids in 2.0 now use <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes" target="_blank"><code>flexbox</code></a> so columns are always equal height across rows.</p>
     <div class="ui three column divided grid">
       <div class="row">
         <div class="column">
@@ -118,16 +118,21 @@ type        : 'Usage'
     </div>
   </div>
   <div class="highlighted example">
-    <h4 class="ui header">Automatic Columns</h4>
-    <p>The new <a href="/collections/grid.html#equal-width"><code>equal width</code></a> grid variation adjusts column widths automatically to evenly split their container without having to manually specify a column count.</p>
+    <h4 class="ui header">Grids Create Themselves</h4>
+    <p>The new <a href="/collections/grid.html#equal-width"><code>equal width</code></a> variation adjusts column widths automatically splitting available width between columns.</p>
     <div class="ui equal width grid">
       <div class="column"></div>
       <div class="column"></div>
       <div class="column"></div>
       <div class="column"></div>
     </div>
+    <p class="ignored">If a column has a specified width, other columns will adapt to take available space around it.</p>
+    <div class="ui equal width grid">
+      <div class="column"></div>
+      <div class="eight wide column"></div>
+      <div class="column"></div>
+    </div>
   </div>
-
   <div class="highlighted example">
     <h4 class="ui header">Containers</h4>
     <p><a href="/elements/container.html">Containers</a> have been added as a simple way to limit content width.</p>
@@ -142,32 +147,27 @@ type        : 'Usage'
 
   <div class="example">
     <h4 class="ui header">Stretched rows</h4>
-    <p>The new <a href="/collections/grid.html#stretched"><code>stretched</code></a> variation adjusts each column's contents to grow to the full height of the column.</p>
+    <p>The new <a href="/collections/grid.html#stretched"><code>stretched</code></a> variation makes vertically aligning layouts much simpler. Columns will not only match heights, but stretch their contents to match heights.</p>
     <div class="ui three column stretched grid">
-      <div class="row">
-        <div class="column">
-          <div class="ui segment">
-            1
-          </div>
+      <div class="column">
+        <div class="ui segment">
+          1
         </div>
-        <div class="column">
-          <div class="ui segment">
-            1
-          </div>
-          <div class="ui segment">
-            2
-          </div>
+        <div class="ui segment">
+          2
         </div>
-        <div class="column">
-          <div class="ui segment">
-            1
-          </div>
-          <div class="ui segment">
-            2
-          </div>
-          <div class="ui segment">
-            3
-          </div>
+      </div>
+      <div class="column">
+        <div class="ui segment">
+          <img class="ui image" src="/images/wireframe/image.png">
+        </div>
+      </div>
+      <div class="column">
+        <div class="ui segment">
+          1
+        </div>
+        <div class="ui segment">
+          2
         </div>
       </div>
     </div>
@@ -225,7 +225,7 @@ type        : 'Usage'
 
   <div class="remote example">
     <h4 class="ui header">Remote Data</h4>
-    <p>All dropdowns now support loading remote data. Selected name value pairs retrieved remotely are stored in <code>sessionStorage</code> so that selected values are repopulated correctly even after a page refresh.</p>
+    <p>All dropdowns now support loading remote data. Selected name value pairs retrieved remotely are stored in <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage"><code>sessionStorage</code></a> so that selected values are repopulated correctly even after a page refresh.</p>
     <div class="ignored code" data-type="javascript">
       // somewhere in app
       $.api.settings.api = {
@@ -317,6 +317,11 @@ type        : 'Usage'
       </div>
     </div>
   </div>
+  <div class="no example">
+    <h4 class="ui header">Advanced Shortcuts</h4>
+    <p>Dropdowns now support advanced shortcuts like <code>page down</code> and <code>page up</code>, scrolling to selection on first letter press, i.e. "N" for New York, <code>shift+left/right</code> for group selection, and <code>ctrl+click</code> for modifying groups.</p>
+    <img class="ui image" src="/images/gif/multi-shortcuts.gif">
+  </div>
 
   <div class="no example">
     <h4 class="ui header">Much More</h4>
@@ -324,16 +329,304 @@ type        : 'Usage'
     <ul class="ui large bulleted list">
       <li>Maximum selection count is supported for multiple selects</li>
       <li>Mutation observers will now watch for changes in menus or the elements they are generated from and will update choices automatically</li>
-      <li>Elements in all dropdowns can now be "jumped to" by pressing the first letter of the choice</li>
-      <li>Keyboard shortcuts now include power user shortcuts
-        <ul>
-          <li><code>ctrl+click</code> will add a single additional selected label</li>
-          <li><code>shift+right</code> will extend selection</li>
-          <li><code>page down</code> and <code>page up</code> will select first element in next page</li>
-        </ul>
-      <li>Custom error messages are now supported with search selects</li>
+      <li>Custom templated error messages are now supported with dropdowns</li>
     </ul>
   </div>
+
+  <h2 class="ui dividing header">API</h2>
+
+
+  <div class="remote example">
+    <h4 class="ui header">Local Caching</h4>
+    <p>API now supports <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage"><code>sessionStorage</code></a> caching. This setting makes repeated requests to a URL return results instantly across a user's session, drastically improving performance for components like <a href="/modules/search.html">search</a>.</p>
+    <p>Try refreshing the page and searching the same letter, results will appear instantly without a server roundtrip.</p>
+    <div class="code" data-type="javascript">
+    $('.ui.dropdown')
+      .dropdown({
+        apiSettings: {
+          cache : 'local',
+          url: '//api.semantic-ui.com/tags/{query}'
+        }
+      })
+    ;
+    </div>
+    <div class="ui form">
+      <div class="field">
+        <label>Favorite Animal</label>
+        <div class="ui search selection dropdown">
+          <input type="hidden">
+          <i class="dropdown icon"></i>
+          <input type="text" class="search">
+          <div class="default text">Select one...</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="external example">
+    <h4 class="ui header">Translates Any API</h4>
+    <p><a href="/behaviors/api.html">API</a> now lets you adjust a server's JSON response using a new callback, <a href="/behaviors/api.html#response-callbacks"><code>onResponse</code></a>. This can let you restructure third party APIs to match your local data requirements.</p>
+    <div class="ui search">
+      <div class="ui left icon input">
+        <input class="prompt" type="text" placeholder="Search GitHub">
+        <i class="github icon"></i>
+      </div>
+    </div>
+    <div class="ignored code" data-type="javascript">
+    $('.ui.search')
+      .search({
+        type          : 'category',
+        minCharacters : 3,
+        apiSettings   : {
+          onResponse: function(githubResponse) {
+            var
+              response = {
+                results : {}
+              }
+            ;
+            // translate github api response to work with search
+            $.each(githubResponse.items, function(index, item) {
+              var
+                language   = item.language || 'Unknown',
+                maxResults = 8
+              ;
+              if(index >= maxResults) {
+                return false;
+              }
+              // create new language category
+              if(response.results[language] === undefined) {
+                response.results[language] = {
+                  name    : language,
+                  results : []
+                };
+              }
+              // add result to category
+              response.results[language].results.push({
+                title       : item.name,
+                description : item.description,
+                url         : item.html_url
+              });
+            });
+            return response;
+          },
+          url: '//api.github.com/search/repositories?q={query}'
+        }
+      })
+    </div>
+  </div>
+
+  <div class="mock example">
+    <h4 class="ui header">Mocked Responses</h4>
+    <p><a href="/behaviors/api.html">API</a> now supports mocked responses, letting you specify how responses are returned in advance.</p>
+    <div class="code" data-type="javascript">
+      $('.toggle.button')
+        .api({
+
+          // lets pretend this took a while
+          loadingDuration: 500,
+
+          // lets treat this button as requesting this JSON
+          mockResponse: {
+            success: true
+          }
+        })
+        // successful responses will trigger a text state change
+        .state({
+          text: {
+            inactive   : 'Off',
+            active     : 'On'
+          }
+        })
+      ;
+    </div>
+    <div class="ui toggle button">
+      Off
+    </div>
+  </div>
+  <div class="async example">
+    <h4 class="ui header">Custom Backends</h4>
+    <p><a href="/behaviors/api.html">API</a> can now use <a href="/behaviors/api.html#using-custom-backends">custom asynchronous callbacks</a> for resolving API requests, this can let you use other custom XHR backends, or local data to resolve requests.</p>
+    <div class="code" data-type="javascript">
+    $('.toggle.button')
+      .api({
+        // lets wait a half second then try your luck
+        mockResponseAsync: function(settings, callback) {
+          var
+            luckyPerson = (Math.random() < 0.5),
+            response    = (luckyPerson)
+              ? { success: true }
+              : { success: false, message: 'You are not lucky' }
+          ;
+          // simulate this is an async task
+          setTimeout(function() {
+            callback(response);
+          }, 500);
+        },
+        successTest: function(response) {
+          return response && response.success;
+        },
+        onFailure: function (response) {
+          alert(response.message);
+        }
+      })
+      .state({
+        text: {
+          inactive : 'Off',
+          active   : 'On'
+        }
+      })
+    ;
+    </div>
+    <div class="ui toggle button">
+      Off
+    </div>
+
+  </div>
+
+
+  <h2 class="ui dividing header">Dimmer</h2>
+
+  <div class="blurring example">
+    <h4 class="ui header">Blurring Dimmers</h4>
+    <p><a href="/modules/dimmer.html">Dimmers</a> now include <code>blurring</code> dimmer variations.</p>
+    <p>Other component can use blurring dimmers to add overlay content, <a href="/modules/modal.html">modal</a> also includes a blurring setting that affects its generated dimmer.</p>
+
+    <div class="ui cards">
+      <div class="card">
+        <div class="blurring dimmable image">
+          <div class="ui dimmer">
+            <div class="content">
+              <div class="center">
+                <div class="ui inverted button">Send Memo</div>
+              </div>
+            </div>
+          </div>
+          <img src="/images/avatar2/large/matthew.png">
+        </div>
+        <div class="content">
+          <a class="header">Matthew</a>
+        </div>
+        <div class="extra content">
+          <a class="right floated">
+            Hired Jan 2014
+          </a>
+          <a>
+            Human Resources
+          </a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="blurring dimmable image">
+          <div class="ui inverted dimmer">
+            <div class="content">
+              <div class="center">
+                <div class="ui primary button">Send Memo</div>
+              </div>
+            </div>
+          </div>
+          <img src="/images/avatar2/large/rachel.png">
+        </div>
+        <div class="content">
+          <a class="header">Rachel</a>
+        </div>
+        <div class="extra content">
+          <a class="right floated">
+            Hired Feb 2015
+          </a>
+          <a>
+            Accounting
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <h2 class="ui dividing header">Checkbox</h2>
+
+  <div class="indeterminate example">
+    <h4 class="ui header">Progresssively Enhanced</h4>
+    <p><a href="/modules/checkbox.html">Checkboxes</a> now can work without javascript, although additional features are available with javascript use.</p>
+
+    <div class="ui checkbox">
+      <input type="checkbox" />
+      <label>No Javascript</label>
+    </div>
+
+    <div class="ui divider"></div>
+    <div class="ui slider checkbox">
+      <input type="checkbox" />
+      <label>No Javascript</label>
+    </div>
+
+    <div class="ui divider"></div>
+    <div class="ui toggle checkbox">
+      <input type="checkbox" />
+      <label>No Javascript</label>
+    </div>
+  </div>
+
+  <div class="indeterminate example">
+    <h4 class="ui header">Indeterminate Checkbox</h4>
+
+    <p><a href="/modules/checkbox.html">Checkboxes</a> now support an indeterminate state. This is useful when a collection of checkboxes may be partially selected.</p>
+    <div class="ui relaxed list">
+      <div class="item">
+        <div class="ui master checkbox">
+          <input type="checkbox" name="fruits" />
+          <label>Fruits</label>
+        </div>
+        <div class="list">
+          <div class="item">
+            <div class="ui child checkbox">
+              <input type="checkbox" name="apple" />
+              <label>Apple</label>
+            </div>
+          </div>
+          <div class="item">
+            <div class="ui child checkbox">
+              <input type="checkbox" name="orange" />
+              <label>Orange</label>
+            </div>
+          </div>
+          <div class="item">
+            <div class="ui child checkbox">
+              <input type="checkbox" name="pear" />
+              <label>Pear</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="ui master checkbox">
+          <input type="checkbox" name="vegetables" />
+          <label>Vegetables</label>
+        </div>
+        <div class="list">
+          <div class="item">
+            <div class="ui child checkbox">
+              <input type="checkbox" name="lettuce" />
+              <label>Lettuce</label>
+            </div>
+          </div>
+          <div class="item">
+            <div class="ui child checkbox">
+              <input type="checkbox" name="carrot" />
+              <label>Carrot</label>
+            </div>
+          </div>
+          <div class="item">
+            <div class="ui child checkbox">
+              <input type="checkbox" name="spinach" />
+              <label>Spinach</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <h2 class="ui dividing header">Segment</h2>
 
@@ -534,145 +827,6 @@ type        : 'Usage'
         </div>
       </div>
     </div>
-  </div>
-
-  <h2 class="ui dividing header">API</h2>
-
-
-  <div class="remote example">
-    <h4 class="ui header">Local Caching</h4>
-    <p>API now supports <code>sessionStorage</code> caching. Using this setting will instantly return results for the same url across a user's session.</p>
-    <p>Try refreshing the page and searching the same letter, results will appear instantly without a server roundtrip.</p>
-    <div class="code" data-type="javascript">
-    $('.ui.dropdown')
-      .dropdown({
-        apiSettings: {
-          cache : 'local',
-          url: '//api.semantic-ui.com/tags/{query}'
-        }
-      })
-    ;
-    </div>
-    <div class="ui form">
-      <div class="field">
-        <label>Favorite Animal</label>
-        <div class="ui search selection dropdown">
-          <input type="hidden">
-          <i class="dropdown icon"></i>
-          <input type="text" class="search">
-          <div class="default text">Select one...</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="external example">
-    <h4 class="ui header">Translates Any API</h4>
-    <p><a href="/behaviors/api.html">API</a> now lets you adjust a server's JSON response using a new callback, <a href="/behaviors/api.html#response-callbacks"><code>onResponse</code></a>. This can let you restructure third party APIs to match your local data requirements.</p>
-    <div class="ui search">
-      <div class="ui left icon input">
-        <input class="prompt" type="text" placeholder="Search GitHub">
-        <i class="github icon"></i>
-      </div>
-    </div>
-    <div class="ignored code" data-type="javascript">
-    $('.ui.search')
-      .search({
-        type          : 'category',
-        minCharacters : 3,
-        apiSettings   : {
-          onResponse: function(githubResponse) {
-            var
-              response = {
-                results : {}
-              }
-            ;
-            // translate github api response to work with search
-            $.each(githubResponse.items, function(index, item) {
-              var
-                language   = item.language || 'Unknown',
-                maxResults = 8
-              ;
-              if(index >= maxResults) {
-                return false;
-              }
-              // create new language category
-              if(response.results[language] === undefined) {
-                response.results[language] = {
-                  name    : language,
-                  results : []
-                };
-              }
-              // add result to category
-              response.results[language].results.push({
-                title       : item.name,
-                description : item.description,
-                url         : item.html_url
-              });
-            });
-            return response;
-          },
-          url: '//api.github.com/search/repositories?q={query}'
-        }
-      })
-    </div>
-  </div>
-
-  <div class="mock example">
-    <h4 class="ui header">Mocked Responses</h4>
-    <p><a href="/behaviors/api.html">API</a> now supports mocked responses, letting you specify how responses are returned in advance.</p>
-    <div class="code" data-type="javascript">
-      $('.toggle.button')
-        .api({
-          // lets just pretend this button always returns this JSON
-          mockResponse: {
-            success: true
-          }
-        })
-        .state({
-          text: {
-            inactive   : 'Off',
-            active     : 'On'
-          }
-        })
-      ;
-    </div>
-    <div class="ui toggle button">
-      Off
-    </div>
-  </div>
-  <div class="async example">
-    <h4 class="ui header">Custom Backends</h4>
-    <p><a href="/behaviors/api.html">API</a> can now use <a href="/behaviors/api.html#using-custom-backends">custom asynchronous callbacks</a> for resolving API requests, this can let you use other custom XHR backends, or local data to resolve requests.</p>
-    <div class="code" data-type="javascript">
-    $('.toggle.button')
-      .api({
-        // lets wait a half second then try your luck
-        mockResponseAsync: function(settings, callback) {
-          var
-            unlikelySuccess = (Math.random() < 0.3),
-            response = (unlikelySuccess)
-              ? true
-              : false
-          ;
-          setTimeout(function() {
-            callback(response);
-          }, 500);
-        }
-      })
-      .state({
-        text: {
-          inactive : 'Off',
-          active   : 'On'
-        }
-      })
-    ;
-    </div>
-    <div class="ui toggle button">
-      Off
-    </div>
-
   </div>
 
   <h2 class="ui dividing header">Visibility</h2>

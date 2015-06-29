@@ -951,6 +951,11 @@ semantic.ready = function() {
         return $('<div>').html(string).text();
       }
 
+      // escape html entities
+      if(contentType != 'html') {
+        code = escapeHTML(code);
+      }
+
       // evaluate if specified
       if(evaluatedCode) {
         window.eval(code);
@@ -966,10 +971,6 @@ semantic.ready = function() {
         formattedCode = $.trim(code).replace(whiteSpace, '\n');
       }
 
-      // escape html entities
-      if(contentType != 'html') {
-        formattedCode = escapeHTML(formattedCode);
-      }
 
       // color code
       formattedCode = window.hljs.highlightAuto(formattedCode);

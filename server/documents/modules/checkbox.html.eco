@@ -236,10 +236,10 @@ themes      : ['Default', 'Colored']
 
     <h2>Examples</h2>
     <div class="callback example">
-      <h4 class="ui header">Avoiding Callback Hell</h4>
+      <h4 class="ui header">Using Callbacks</h4>
       <p>Checkbox has two versions of each state change behavior to let you determine whether the call should trigger checkbox callbacks.</p>
-      <p>Calling a standard behavior like <code>check</code> will trigger callbacks, however using <code>set checked</code> will adjust the checkbox state <em>without triggering callbacks</em></p>
-      <p>This can help distinguish between  user invoked state changes, and those triggered programmaticaly, and can help avoid recursion in grouped relationships</p>
+      <p>Calling a behavior like <code>check</code> will trigger an elements callbacks, however using <code>set checked</code> will adjust the checkbox state <em>without triggering callbacks</em></p>
+      <p>This differentiation is important to differentiate between programmatic changes, and user-invoked changes to state.</p>
       <div class="ui equal width stretched grid">
         <div class="column">
           <div class="ui segment">
@@ -441,7 +441,7 @@ themes      : ['Default', 'Colored']
       </div>
     </div>
     <div class="state example">
-      <h4 class="ui header">One Way Checkboxes</h4>
+      <h4 class="ui header">One-Way Choices</h4>
       <p class="ignored">To make a user able to check a box, but unable to uncheck it, use the <code>uncheckable</code> setting.</p>
       <p class="ignored">To always disable a checkbox, add the property <code>disabled</code> to your input.</p>
       <p class="ignored">To make a checkbox read-only do not initialize it, or include the <code>read-only</code> class which will not allow events.</p>
@@ -530,30 +530,48 @@ themes      : ['Default', 'Colored']
   <div class="ui tab" data-tab="usage">
     <h2 class="ui dividing header">Initializing</h2>
 
-    <div class="no example">
+    <div class="simple example">
       <h4 class="ui header">Checkbox</h4>
-      <p>A checkbox requires initialization with javascript. This makes sure events are triggered when a label is clicked.</p>
-
-      <div class="code">
-      $('.ui.checkbox')
-        .checkbox()
-      ;
+      <p>A checkbox does not require javascript to function.</p>
+      <div class="ui checkbox">
+        <input type="checkbox">
+        <label>Label</label>
       </div>
       <div class="code" data-type="html">
         <div class="ui checkbox">
           <input type="checkbox">
-          <label>Poodle</label>
+          <label>Label</label>
         </div>
       </div>
     </div>
 
-    <div class="no example">
-      <h4 class="ui header">Non-JS Checkbox</h4>
-      <p>A checkbox can also be used without using javascript by matching the <code>id</code> attribute of the input field to the <code>for</code> attribute of the accompanying label</p>
+    <div class="example">
+      <h4 class="ui header">Full Featured Checkboxes</h4>
+      <p>Using javascript with checkboxes will automatically make the checkbox's label trigger a change in the input and provide callback functions. Additionally, some states like <code>indeterminate</code> can only be triggered with javascript.</p>
+      <div class="ui checkbox">
+        <input type="checkbox">
+        <label>Label</label>
+      </div>
       <div class="code" data-type="html">
         <div class="ui checkbox">
-          <input type="checkbox" id="unique-id" />
-          <label for="unique-id">Poodle</label>
+          <input type="checkbox">
+          <label>Label</label>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="simple example">
+      <h4 class="ui header">Linked Labels</h4>
+      <p>If you just need labels to link without any other features of javascript checkboxes, you can match the <code>for</code> attribute of the label to an input's id.</p>
+      <div class="ui checkbox">
+        <input id="example-id" type="checkbox">
+        <label for="example-id">Label</label>
+      </div>
+      <div class="code" data-type="html">
+        <div class="ui checkbox">
+          <input id="example-id" type="checkbox">
+          <label for="example-id">Label</label>
         </div>
       </div>
     </div>

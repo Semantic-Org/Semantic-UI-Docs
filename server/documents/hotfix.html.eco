@@ -1,8 +1,67 @@
 ---
-layout     : 'blank'
-css        : 'hotfix'
-standalone : true
+layout : 'blank'
+css    : 'hotfix'
 
-title      : 'Test Page'
-type       : 'Library'
+title  : 'Test Page'
+type   : 'Library'
 ---
+
+<!-- TEST JS HERE !-->
+<script>
+$(document).ready(function() {
+
+  $('.test.checkbox').checkbox();
+
+});
+</script>
+
+<!-- TEST CSS HERE !-->
+<style type="text/css">
+</style>
+
+<div class="ui container" style="margin-top:5em;">
+
+  <div class="ui test checkbox">
+    <input type="checkbox" name="example" />
+    <label>Initialized</label>
+  </div>
+
+  <div class="ui divider"></div>
+
+  <div class="ui checkbox">
+    <input type="checkbox" />
+    <label>No JS</label>
+  </div>
+
+  <div class="ui divider"></div>
+
+  <div class="ui toggle checkbox">
+    <input type="checkbox" />
+    <label>No JS</label>
+  </div>
+
+  <div class="ui divider"></div>
+
+  <div class="ui slider checkbox">
+    <input type="checkbox" />
+    <label>No JS</label>
+  </div>
+
+
+
+  <div class="ui divider"></div>
+
+  <div class="ui checkbox">
+    <input type="checkbox" />
+    <label>No JS</label>
+  </div>
+
+
+  <div class="ui divider"></div>
+  <div class="ui checkbox">
+    <input type="checkbox" id="labeled" name="labeled" />
+    <label for="labeled">Labeled</label>
+  </div>
+</div>
+
+</body>

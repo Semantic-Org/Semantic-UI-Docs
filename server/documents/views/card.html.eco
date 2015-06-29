@@ -532,6 +532,20 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
     </div>
   </div>
   <div class="example">
+    <h4 class="ui header">Centered Card</h4>
+    <p>A card can center itself inside its container</p>
+
+    <div class="ui centered card">
+      <div class="image">
+        <img src="/images/avatar2/large/elyse.png">
+      </div>
+      <div class="content">
+        <a class="header">Elyse</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="example">
     <h4 class="ui header">Link Card</h4>
     <p>A card can be formatted so that the entire contents link to another page</p>
     <a class="ui card" href="http://www.dog.com">

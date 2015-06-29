@@ -16,16 +16,17 @@ type        : 'Introduction'
 
   <div class="ui active tab" data-tab="install">
 
-    <h2 class="ui dividing header">Intro</h2>
+    <h2 class="ui dividing header">Preface</h2>
 
     <div class="no example">
 
-      <h4 class="ui header">Overview</h4>
+      <h4 class="ui header">Using Build Tools</h4>
 
-      <p>Semantic UI is designed from the ground up to support <a href="/usage/theming.html">user theming</a>. To fully take advantage of custom themes however you will need to compile LESS files with your custom theming variables.</p>
-      <p>Semantic's NPM package comes prepackaged with a Gulp pipeline designed to help manage custom themes and special install scripts to simplify setup and updates.</p>
+      <p>Semantic UI uses css variables to let users manage <a href="/usage/theming.html">user themed</a> versions of components. Build tools are included in Semantic UI to help compile themed files for your project.</p>
+      <p>The easiest way to install Semantic UI is our NPM package which contains special install scripts to make setup and updates seamless.</p>
 
       <p>For installing with specific integrations like, Ember, React, or Meteor, see our <a href="/introduction/integrations.html">integration guide</a></p>
+      <p>For integrating Semantic UI tasks into your own build tools see our <a href="/introduction/advanced-usage.html">advanced usage</a> section.</p>
 
     </div>
 

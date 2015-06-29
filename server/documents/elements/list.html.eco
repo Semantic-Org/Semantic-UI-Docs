@@ -80,70 +80,6 @@ themes      : ['Default']
       </div>
     </div>
   </div>
-  <div class="another example">
-    <div class="ui list">
-      <div class="item">
-        <img class="ui mini circular image" src="/images/avatar2/small/elyse.png">
-        <div class="content">
-          <div class="header">Elyse</div>
-          Friends since 1992
-          <div class="list">
-            <div class="item">
-              <i class="right triangle icon"></i>
-              <div class="content">
-                <a class="header">Hey man</a>
-                <div class="description">Hey man so I forgot to send you an invite to my party, but it's this saturday...</div>
-              </div>
-            </div>
-            <div class="item">
-              <i class="right triangle icon"></i>
-              <div class="content">
-                <a class="header">What a day</a>
-                <div class="description">Man i am so tired that walk today really was too far...</div>
-              </div>
-            </div>
-            <div class="item">
-              <i class="right triangle icon"></i>
-              <div class="content">
-                <a class="header">How does polar bear</a>
-                <div class="description">Have you ever wondered? How polar bear know what apple is...</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <img class="ui mini circular image" src="/images/avatar2/small/eve.png">
-        <div class="content">
-          <div class="header">Eve</div>
-          Work acquaintance from Apple
-          <div class="list">
-            <div class="item">
-              <i class="right triangle icon"></i>
-              <div class="content">
-                <a class="header">Inspirational!</a>
-                <div class="description">Check out this amazing TED video that I did a couple months ago...</div>
-              </div>
-            </div>
-            <div class="item">
-              <i class="right triangle icon"></i>
-              <div class="content">
-                <a class="header">Ruff Ruff</a>
-                <div class="description">Have you ever tried animal meditation? Today I spent 30 minutes as a dog...</div>
-              </div>
-            </div>
-            <div class="item">
-              <i class="right triangle icon"></i>
-              <div class="content">
-                <a class="header">Reaching Out</a>
-                <div class="description">Hey there's a new role at Apple you might be great for...</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <div class="another example">
 
@@ -310,6 +246,7 @@ themes      : ['Default']
     </div>
   </div>
 
+
   <h2 class="ui dividing header">Content</h2>
 
   <div class="example">
@@ -324,53 +261,66 @@ themes      : ['Default']
         </div>
       </a>
       <a class="item">
-        <i class="top aligned right triangle icon"></i>
+        <i class="right triangle icon"></i>
         <div class="content">
           <div class="header">Icon Alignment</div>
-          <div class="description">Floated icons are, by default, middle aligned. To have an icon top aligned try this example.</div>
+          <div class="description">Floated icons are by default top aligned. To have an icon top aligned try this example.</div>
         </div>
       </a>
-      <a class="item">
+      <div class="item">
         <i class="help icon"></i>
-        An icon immediately inside an item sits inline this content will sit under the icon if there is a line break
-      </a>
+        Inline Text
+      </div>
     </div>
   </div>
 
   <div class="example">
     <h4 class="ui header">Image</h4>
     <p>A list item can contain an image</p>
+    <div class="ui ignored warning message">
+      Due to issues with <a href="https://github.com/philipwalton/flexbugs#5-column-flex-items-dont-always-preserve-intrinsic-aspect-ratios" target="_blank">intrinsic aspect ratio in flexbox</a> <code>img</code> should use a container element.
+    </div>
     <div class="ui list">
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar2/small/rachel.png">
+        <div class="ui avatar image">
+          <img src="/images/avatar2/small/rachel.png">
+        </div>
         <div class="content">
           <a class="header">Rachel</a>
           <div class="description">Last seen watching <a><b>Arrested Development</b></a> just now.</div>
         </div>
       </div>
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar2/small/lindsay.png">
+        <div class="ui avatar image">
+          <img src="/images/avatar2/small/lindsay.png">
+        </div>
         <div class="content">
           <a class="header">Lindsay</a>
           <div class="description">Last seen watching <a><b>Bob's Burgers</b></a> 10 hours ago.</div>
         </div>
       </div>
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar2/small/matthew.png">
+        <div class="ui avatar image">
+          <img src="/images/avatar2/small/matthew.png">
+        </div>
         <div class="content">
           <a class="header">Matthew</a>
           <div class="description">Last seen watching <a><b>The Godfather Part 2</b></a> yesterday.</div>
         </div>
       </div>
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/jenny.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/jenny.jpg">
+        </div>
         <div class="content">
           <a class="header">Jenny Hess</a>
           <div class="description">Last seen watching <a><b>Twin Peaks</b></a> 3 days ago.</div>
         </div>
       </div>
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/veronika.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/veronika.jpg">
+        </div>
         <div class="content">
           <a class="header">Veronika Ossi</a>
           <div class="description">Has not watched anything recently</div>
@@ -384,6 +334,18 @@ themes      : ['Default']
     <p>A list can contain links</p>
     <div class="ui list">
       <a class="item">What is a FAQ?</a>
+      <a class="item">Who is our user?</a>
+      <a class="item">Where is our office located?</a>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui list">
+      <div class="item">
+        <a class="header">Header</a>
+        <div class="description">
+          Click a link in our <a>description</a>.
+        </div>
+      </div>
       <div class="item">
         <a class="header">Learn More</a>
         <div class="description">
@@ -452,47 +414,85 @@ themes      : ['Default']
   </div>
 
   <div class="example">
-    <h4 class="ui header">Floated Content</h4>
+    <h4 class="ui header">Floated</h4>
     <p>Any element inside a list can be floated left or right</p>
-    <div class="ui divided list">
+    <div class="ui middle aligned divided list">
       <div class="item">
-        <div class="right floated compact ui button">Add</div>
-        <img class="ui avatar image" src="/images/avatar/small/justen.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar2/small/lena.png">
+        </div>
         <div class="content">
-          <div class="header">Justen Kitsune</div>
+          Lena
+        </div>
+        <div class="right floated content">
+          <div class="ui button">Add</div>
         </div>
       </div>
       <div class="item">
-        <div class="right floated compact ui button">Add</div>
-        <img class="ui avatar image" src="/images/avatar/small/joe.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar2/small/lindsay.png">
+        </div>
         <div class="content">
-          <div class="header">Joe Henderson</div>
+          Lindsay
+        </div>
+        <div class="right floated content">
+          <div class="ui button">Add</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="ui avatar image">
+          <img src="/images/avatar2/small/mark.png">
+        </div>
+        <div class="content">
+          Mark
+        </div>
+        <div class="right floated content">
+          <div class="ui button">Add</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="ui avatar image">
+          <img src="/images/avatar2/small/molly.png">
+        </div>
+        <div class="content">
+          Molly
+        </div>
+        <div class="right floated content">
+          <div class="ui button">Add</div>
         </div>
       </div>
     </div>
   </div>
 
   <h2 class="ui dividing header">Variations</h2>
+
+
   <div class="example">
-    <h4 class="ui header">Horizontal List</h4>
-    <p>A list can be formatted horizontally</p>
+    <h4 class="ui header">Horizontal</h4>
+    <p>A list can be formatted to have items appear horizontally</p>
     <div class="ui horizontal list">
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/tom.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/tom.jpg">
+        </div>
         <div class="content">
           <div class="header">Tom</div>
           Top Contributor
         </div>
       </div>
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/christian.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/christian.jpg">
+        </div>
         <div class="content">
           <div class="header">Christian Rocha</div>
           Admin
         </div>
       </div>
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/matt.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/matt.jpg">
+        </div>
         <div class="content">
           <div class="header">Matt</div>
           Top Rated User
@@ -572,46 +572,59 @@ themes      : ['Default']
     <p>A selection list formats list items as possible choices</p>
     <div class="ui middle aligned selection list">
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/helen.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/helen.jpg">
+        </div>
         <div class="content">
           <div class="header">Helen</div>
         </div>
       </div>
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/christian.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/christian.jpg">
+        </div>
         <div class="content">
           <div class="header">Christian</div>
         </div>
       </div>
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/daniel.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/daniel.jpg">
+        </div>
         <div class="content">
           <div class="header">Daniel</div>
         </div>
       </div>
     </div>
   </div>
+
   <div class="example">
     <h4 class="ui header">Animated</h4>
     <p>A list can animate to set the current item apart from the list</p>
     <div class="ui ignored info message">
-      Be sure content can fit on one line when using the animated variation, otherwise the content will create a new line break as the animated content adjusts to its new size.
+      Be sure content can fit on one line when using the animated variation, otherwise text content will reflow when hovered.
     </div>
     <div class="ui middle aligned animated list">
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/helen.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/helen.jpg">
+        </div>
         <div class="content">
           <div class="header">Helen</div>
         </div>
       </div>
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/christian.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/christian.jpg">
+        </div>
         <div class="content">
           <div class="header">Christian</div>
         </div>
       </div>
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/daniel.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/daniel.jpg">
+        </div>
         <div class="content">
           <div class="header">Daniel</div>
         </div>
@@ -624,19 +637,25 @@ themes      : ['Default']
     <p>A list can specify vertical alignment for content or images</p>
     <div class="ui horizontal list">
       <div class="item">
-        <img class="ui avatar image" src="/images/wireframe/square-image.png">
+        <div class="ui avatar image">
+          <img src="/images/wireframe/square-image.png">
+        </div>
         <div class="top aligned content">
           Top Aligned
         </div>
       </div>
       <div class="item">
-        <img class="ui avatar image" src="/images/wireframe/square-image.png">
+        <div class="ui avatar image">
+          <img src="/images/wireframe/square-image.png">
+        </div>
         <div class="middle aligned content">
           Middle
         </div>
       </div>
       <div class="item">
-        <img class="ui avatar image" src="/images/wireframe/square-image.png">
+        <div class="ui avatar image">
+          <img src="/images/wireframe/square-image.png">
+        </div>
         <div class="bottom aligned content">
           Bottom
         </div>
@@ -650,21 +669,27 @@ themes      : ['Default']
 
     <div class="ui relaxed list">
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/daniel.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/daniel.jpg">
+        </div>
         <div class="content">
           <a class="header">Daniel Louise</a>
           <div class="description">Last seen watching <a><b>Arrested Development</b></a> just now.</div>
         </div>
       </div>
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/stevie.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/stevie.jpg">
+        </div>
         <div class="content">
           <a class="header">Stevie Feliciano</a>
           <div class="description">Last seen watching <a><b>Bob's Burgers</b></a> 10 hours ago.</div>
         </div>
       </div>
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/elliot.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/elliot.jpg">
+        </div>
         <div class="content">
           <a class="header">Elliot Fu</a>
           <div class="description">Last seen watching <a><b>The Godfather Part 2</b></a> yesterday.</div>
@@ -675,19 +700,25 @@ themes      : ['Default']
   <div class="another example">
     <div class="ui relaxed horizontal list">
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/daniel.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/daniel.jpg">
+        </div>
         <div class="content">
           <a class="header">Daniel Louise</a>
         </div>
       </div>
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/stevie.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/stevie.jpg">
+        </div>
         <div class="content">
           <a class="header">Stevie Feliciano</a>
         </div>
       </div>
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/elliot.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/elliot.jpg">
+        </div>
         <div class="content">
           <a class="header">Elliot Fu</a>
         </div>
@@ -697,21 +728,27 @@ themes      : ['Default']
   <div class="another example">
     <div class="ui very relaxed list">
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/daniel.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/daniel.jpg">
+        </div>
         <div class="content">
           <a class="header">Daniel Louise</a>
           <div class="description">Last seen watching <a><b>Arrested Development</b></a> just now.</div>
         </div>
       </div>
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/stevie.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/stevie.jpg">
+        </div>
         <div class="content">
           <a class="header">Stevie Feliciano</a>
           <div class="description">Last seen watching <a><b>Bob's Burgers</b></a> 10 hours ago.</div>
         </div>
       </div>
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/elliot.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/elliot.jpg">
+        </div>
         <div class="content">
           <a class="header">Elliot Fu</a>
           <div class="description">Last seen watching <a><b>The Godfather Part 2</b></a> yesterday.</div>
@@ -722,19 +759,25 @@ themes      : ['Default']
   <div class="another example">
     <div class="ui very relaxed horizontal list">
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/daniel.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/daniel.jpg">
+        </div>
         <div class="content">
           <a class="header">Daniel Louise</a>
         </div>
       </div>
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/stevie.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/stevie.jpg">
+        </div>
         <div class="content">
           <a class="header">Stevie Feliciano</a>
         </div>
       </div>
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/elliot.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/elliot.jpg">
+        </div>
         <div class="content">
           <a class="header">Elliot Fu</a>
         </div>
@@ -745,46 +788,31 @@ themes      : ['Default']
   <div class="example">
     <h4 class="ui header">Divided</h4>
     <p>A list can show divisions between content</p>
-    <div class="ui divided list">
+    <div class="ui middle aligned divided list">
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/daniel.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/daniel.jpg">
+        </div>
         <div class="content">
           <a class="header">Daniel Louise</a>
         </div>
       </div>
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/stevie.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/stevie.jpg">
+        </div>
         <div class="content">
           <a class="header">Stevie Feliciano</a>
         </div>
       </div>
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/elliot.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/elliot.jpg">
+        </div>
         <div class="content">
           <a class="header">Elliot Fu</a>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="another example">
-    <div class="ui divided ordered list">
-      <div class="item">Cats</div>
-      <div class="item">Horses</div>
-      <div class="item">Dogs
-        <div class="list">
-          <div class="item">Labradoodles</div>
-          <div class="item">Shiba Inu</div>
-          <div class="item">Mastiff</div>
-        </div>
-      </div>
-      <div class="item">Horses Again</div>
-    </div>
-  </div>
-  <div class="another example">
-    <div class="ui divided horizontal list">
-      <div class="item">About Us</div>
-      <div class="item">Contact</div>
-      <div class="item">Support</div>
     </div>
   </div>
 
@@ -793,21 +821,27 @@ themes      : ['Default']
     <p>A list can divide its items into cells</p>
     <div class="ui celled list">
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/helen.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/helen.jpg">
+        </div>
         <div class="content">
           <div class="header">Snickerdoodle</div>
           An excellent companion
         </div>
       </div>
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/daniel.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/daniel.jpg">
+        </div>
         <div class="content">
           <div class="header">Poodle</div>
           A poodle, its pretty basic
         </div>
       </div>
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/daniel.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/daniel.jpg">
+        </div>
         <div class="content">
           <div class="header">Paulo</div>
           He's also a dog
@@ -841,19 +875,25 @@ themes      : ['Default']
     <p>A list can vary in size</p>
     <div class="ui mini horizontal divided list">
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/helen.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/helen.jpg">
+        </div>
         <div class="content">
           <a class="header">Helen</a>
         </div>
       </div>
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/christian.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/christian.jpg">
+        </div>
         <div class="content">
           <a class="header">Christian</a>
         </div>
       </div>
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/daniel.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/daniel.jpg">
+        </div>
         <div class="content">
           <a class="header">Daniel</a>
         </div>
@@ -863,19 +903,25 @@ themes      : ['Default']
   <div class="another example">
     <div class="ui tiny horizontal list">
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/helen.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/helen.jpg">
+        </div>
         <div class="content">
           <a class="header">Helen</a>
         </div>
       </div>
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/christian.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/christian.jpg">
+        </div>
         <div class="content">
           <a class="header">Christian</a>
         </div>
       </div>
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/daniel.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/daniel.jpg">
+        </div>
         <div class="content">
           <a class="header">Daniel</a>
         </div>
@@ -885,19 +931,25 @@ themes      : ['Default']
   <div class="another example">
     <div class="ui small horizontal list">
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/helen.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/helen.jpg">
+        </div>
         <div class="content">
           <a class="header">Helen</a>
         </div>
       </div>
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/christian.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/christian.jpg">
+        </div>
         <div class="content">
           <a class="header">Christian</a>
         </div>
       </div>
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/daniel.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/daniel.jpg">
+        </div>
         <div class="content">
           <a class="header">Daniel</a>
         </div>
@@ -907,19 +959,25 @@ themes      : ['Default']
   <div class="another example">
     <div class="ui large horizontal divided list">
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/helen.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/helen.jpg">
+        </div>
         <div class="content">
           <a class="header">Helen</a>
         </div>
       </div>
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/christian.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/christian.jpg">
+        </div>
         <div class="content">
           <a class="header">Christian</a>
         </div>
       </div>
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/daniel.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/daniel.jpg">
+        </div>
         <div class="content">
           <a class="header">Daniel</a>
         </div>
@@ -929,19 +987,25 @@ themes      : ['Default']
   <div class="another example">
     <div class="ui big horizontal divided list">
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/helen.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/helen.jpg">
+        </div>
         <div class="content">
           <a class="header">Helen</a>
         </div>
       </div>
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/christian.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/christian.jpg">
+        </div>
         <div class="content">
           <a class="header">Christian</a>
         </div>
       </div>
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/daniel.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/daniel.jpg">
+        </div>
         <div class="content">
           <a class="header">Daniel</a>
         </div>
@@ -951,19 +1015,25 @@ themes      : ['Default']
   <div class="another example">
     <div class="ui huge horizontal divided list">
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/helen.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/helen.jpg">
+        </div>
         <div class="content">
           <a class="header">Helen</a>
         </div>
       </div>
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/christian.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/christian.jpg">
+        </div>
         <div class="content">
           <a class="header">Christian</a>
         </div>
       </div>
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/daniel.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/daniel.jpg">
+        </div>
         <div class="content">
           <a class="header">Daniel</a>
         </div>
@@ -973,19 +1043,25 @@ themes      : ['Default']
   <div class="another example">
     <div class="ui massive horizontal divided list">
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/helen.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/helen.jpg">
+        </div>
         <div class="content">
           <a class="header">Helen</a>
         </div>
       </div>
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/christian.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/christian.jpg">
+        </div>
         <div class="content">
           <a class="header">Christian</a>
         </div>
       </div>
       <div class="item">
-        <img class="ui avatar image" src="/images/avatar/small/daniel.jpg">
+        <div class="ui avatar image">
+          <img src="/images/avatar/small/daniel.jpg">
+        </div>
         <div class="content">
           <a class="header">Daniel</a>
         </div>

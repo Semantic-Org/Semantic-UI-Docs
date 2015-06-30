@@ -33,7 +33,7 @@ type        : 'Introduction'
     <p>Semantic UI uses Gulp for several reasons:</p>
     <div class="ui large bulleted list">
       <div class="item">Process LESS files with <a href="/usage/theming.html">theming variables</a></div>
-      <div class="item">Add vendor prefixes for supported browsers with <a href="https://github.com/postcss/autoprefixer" target="_blank">autoprefixer</a></div>
+      <div class="item">Add vendor prefixes for <a href="https://github.com/Semantic-Org/Semantic-UI/blob/master/tasks/config/project/tasks.js#L96">supported browsers</a> with <a href="https://github.com/postcss/autoprefixer" target="_blank">autoprefixer</a></div>
       <div class="item">Watch file changes and rebuild the necessary files when adjusting themes</div>
       <div class="item">Automatically process asset paths, so that minified and concatenated releases can exist in different directories</div>
       <div class="item">Allow custom builds with only the required components for your site</div>
@@ -42,18 +42,17 @@ type        : 'Introduction'
   </div>
   <div class="no example">
     <h3 class="ui header">Folder Structure</h3>
-    <p>A Semantic UI project includes the following folder structure</p>
+    <p>A Semantic UI project includes the following folder structure.</p>
     <div class="ui list">
       <div class="item">
         <i class="folder icon"></i>
         <div class="content">
           <div class="header">src</div>
-          <div class="description">Source files for project</div>
           <div class="list">
             <div class="item">
               <i class="folder icon"></i>
               <div class="content">
-                <div class="header">site</div>
+                <a href="/usage/theming.html#site-theme" class="header">site</a>
                 <div class="description">Your site's theme</div>
               </div>
             </div>
@@ -61,19 +60,18 @@ type        : 'Introduction'
               <i class="folder icon"></i>
               <div class="content">
                 <div class="header">themes</div>
-                <div class="description">Named theme packages</div>
                 <div class="list">
                   <div class="item">
                     <i class="folder icon"></i>
                     <div class="content">
-                      <div class="header">default</div>
+                      <a href="/usage/theming.html#default-theme" class="header">default</a>
                       <div class="description">Default theme</div>
                     </div>
                   </div>
                   <div class="item">
                     <i class="folder icon"></i>
                     <div class="content">
-                      <div class="header">my_theme</div>
+                      <a href="/usage/theming.html#packaged-theme" class="header">packaged-theme</a>
                       <div class="description">Additional themes</div>
                     </div>
                   </div>
@@ -101,6 +99,20 @@ type        : 'Introduction'
               <div class="content">
                 <div class="header">components</div>
                 <div class="description">Individual component css and js</div>
+              </div>
+            </div>
+            <div class="item">
+              <i class="file icon"></i>
+              <div class="content">
+                <div class="header">semantic.css</div>
+                <div class="description">concatenated release</div>
+              </div>
+            </div>
+            <div class="item">
+              <i class="file icon"></i>
+              <div class="content">
+                <div class="header">semantic.js</div>
+                <div class="description">concatenated release</div>
               </div>
             </div>
           </div>

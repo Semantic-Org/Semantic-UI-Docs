@@ -45,8 +45,8 @@ type        : 'Main'
   </div>
 
   <div class="colored example">
-    <h4 class="ui header">New Colors</h4>
-    <p><code>2.0</code> includes additional named colors olive, violet, brown and grey which help provide more expressiveness with color variations.</p>
+    <h4 class="ui header">Complete Spectrum</h4>
+    <p>Semantic now includes twelve named colors, enough for most languages to <a href="https://en.wikipedia.org/wiki/Linguistic_relativity_and_the_color_naming_debate#Berlin_and_Kay" target="_blank">distinguish between colors</a>. New in 2.0 are: olive, violet, brown and grey.</p>
     <a class="ui grey label">Grey</a>
     <a class="ui red pointing label">Red</a>
     <a class="ui orange tag label">Orange</a>
@@ -82,6 +82,15 @@ type        : 'Main'
       </div>
     </div>
   </div>
+  <div class="example">
+    <h4 class="ui header">New Default Theme</h4>
+    <p>All components have received a face-lift for 2.0. Styles give slightly more negative space and a few idiosyncratic design touches have been removed.</p>
+  </div>
+  <div class="example">
+    <h4 class="ui header">More Precise EM Values</h4>
+    <p>EM sizing has been improved in 2.0, with all values rounding to exact pixel values. This helps common relative sizing pitfalls like rounding errors in vertical alignment.</p>
+  </div>
+
 
   <h2 class="ui dividing header">Grids</h2>
 
@@ -264,7 +273,7 @@ type        : 'Main'
   </div>
 
   <div class="dropdown example">
-    <h4 class="ui header">Scrolling and Nested Menus</h4>
+    <h4 class="ui header">Scrolling Menus</h4>
     <p><a href="modules/dropdown.html#scrolling">Scrolling menu</a> and nested menus are now supported.</p>
     <p>Listing choices in a nested menu will still give all the same keyboard shortcuts and filtering as regular menus.</p>
     <div class="ui floating dropdown labeled icon button">
@@ -489,6 +498,44 @@ type        : 'Main'
     <div class="ui toggle button">
       Off
     </div>
+
+  </div>
+
+  <h2 class="ui dividing header">Form</h2>
+
+  <div class="form example">
+    <h4 class="ui header">Autocomplete</h4>
+    <p>Form now include custom styling for browser <a href="https://developers.google.com/web/fundamentals/input/form/label-and-name-inputs?hl=en">autocompleted form fields</a>. Autocompleted fields can also specify focused autocomplete, and errored autocomplete styles.</p>
+
+    <form class="ui form" method="post" action="#autocomplete">
+      <h4 class="ui dividing header">Shipping Information</h4>
+      <div class="field">
+        <label>Name</label>
+        <div class="two fields">
+          <div class="field">
+            <input type="text" name="shipping[first-name]" placeholder="First Name" autocomplete="given-name">
+          </div>
+          <div class="field">
+            <input type="text" name="shipping[last-name]" placeholder="Last Name"  autocomplete="family-name">
+          </div>
+        </div>
+      </div>
+      <div class="field">
+        <label>Address</label>
+        <div class="fields">
+          <div class="eight wide field">
+            <input type="text" name="shipping[address]" placeholder="Street Address" autocomplete="address-line1">
+          </div>
+          <div class="four wide field">
+            <input type="text" name="shipping[address-2]" placeholder="Apt #" autocomplete="address-line2">
+          </div>
+          <div class="four wide field">
+            <input type="text" name="shipping[zip]" placeholder="Zipcode" autocomplete="postal-code">
+          </div>
+        </div>
+      </div>
+      <div class="ui submit button">Submit</div>
+    </form>
 
   </div>
 

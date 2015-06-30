@@ -12,6 +12,10 @@ semantic.theming.ready = function() {
 
   };
 
+  $('.main .ui.checkbox')
+    .checkbox()
+  ;
+
   $('.load.button')
     .dropdown({
       fireOnInit: true,

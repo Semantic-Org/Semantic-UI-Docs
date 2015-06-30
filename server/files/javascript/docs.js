@@ -762,10 +762,15 @@ semantic.ready = function() {
         $html = $('<div class="html">').insertBefore($annotation);
         $label = $('<div class="ui top attached label">').html('Example');
         $label.prependTo($html);
-        $demo
-          .detach()
-          .prependTo($html)
-        ;
+        if($demo.length === 0) {
+          $html.addClass('empty');
+        }
+        else {
+          $demo
+            .detach()
+            .prependTo($html)
+          ;
+        }
       }
 
       // create code inside annotation wrapper
@@ -970,7 +975,6 @@ semantic.ready = function() {
         whiteSpace    = new RegExp('\\n\\s{' + indent + '}', 'g');
         formattedCode = $.trim(code).replace(whiteSpace, '\n');
       }
-
 
       // color code
       formattedCode = window.hljs.highlightAuto(formattedCode);

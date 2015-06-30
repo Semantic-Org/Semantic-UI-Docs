@@ -10,7 +10,7 @@ type        : 'Introduction'
 ---
 <script src="/javascript/started.js"></script>
 
-<%- @partial('header', { tabs: {  install: 'Install', packages: 'Other Packages' } }) %>
+<%- @partial('header') %>
 
 <div class="main ui intro container">
 
@@ -22,8 +22,8 @@ type        : 'Introduction'
 
       <h4 class="ui header">Using Build Tools</h4>
 
-      <p>Semantic UI uses css variables to let users manage <a href="/usage/theming.html">user themed</a> versions of components. Build tools are included in Semantic UI to help compile themed files for your project.</p>
-      <p>The easiest way to install Semantic UI is our NPM package which contains special install scripts to make setup and updates seamless.</p>
+      <p>Semantic UI packaged Gulp build tools so your project can preserve its <a href="/usage/theming.html">own theme changes</a>.</p>
+      <p>The easiest way to install Semantic UI is our NPM package which contains special install scripts to make setup interactive and updates seamless.</p>
 
       <p>For installing with specific integrations like, Ember, React, or Meteor, see our <a href="/introduction/integrations.html">integration guide</a></p>
       <p>For integrating Semantic UI tasks into your own build tools see our <a href="/introduction/advanced-usage.html">advanced usage</a> section.</p>

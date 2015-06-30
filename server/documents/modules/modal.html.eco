@@ -208,7 +208,7 @@ themes      : ['Default', 'Material']
     <h2 class="ui dividing header">Types</h2>
 
     <div class="example">
-      <h4 class="ui header">Standard</h4>
+      <h4 class="ui header">Modal</h4>
       <p>A standard modal</p>
       <div class="code" data-demo="true" data-eval="$('.standard.test.modal').modal('show');">
       $('.ui.modal')
@@ -407,6 +407,27 @@ themes      : ['Default', 'Material']
   <div class="ui tab" data-tab="examples">
 
     <h2 class="ui dividing header">Examples</h2>
+
+    <div class="no example">
+      <h4 class="ui header">Dimmer Variations</h4>
+      <p>Modals can specify additional variations like <code>blurring</code> or <code>inverted</code> which adjust how the dimmer displays.</p>
+      <div class="code" data-demo="true">
+      $('.small.modal')
+        .modal({
+          inverted: true
+        })
+        .modal('show')
+      ;
+      </div>
+      <div class="code" data-demo="true">
+      $('.small.modal')
+        .modal({
+          blurring: true
+        })
+        .modal('show')
+      ;
+      </div>
+    </div>
 
     <div class="no example">
       <h4 class="ui header">Scrolling Modal</h4>

@@ -20,6 +20,28 @@ semantic.new.ready = function() {
 
   };
 
+  // form
+  $('.form.example .ui.dropdown')
+    .dropdown()
+  ;
+  // form
+  $('.form.example')
+    .form({
+      inline: true,
+      fields: {
+        firstName: {
+          identifier : 'shipping[first-name]',
+          rules: [
+            {
+              type   : 'isExactly[Suzy]',
+              prompt : 'Your name must be "Suzy"'
+            }
+          ]
+        }
+      }
+    })
+  ;
+
   // dimmer
   $('.blurring.example .card .dimmer')
     .dimmer({

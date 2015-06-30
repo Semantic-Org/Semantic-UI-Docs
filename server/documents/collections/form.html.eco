@@ -38,10 +38,10 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
         <label>Name</label>
         <div class="two fields">
           <div class="field">
-            <input type="text" name="first-name" placeholder="First Name">
+            <input type="text" name="shipping[first-name]" placeholder="First Name">
           </div>
           <div class="field">
-            <input type="text" name="last-name" placeholder="Last Name">
+            <input type="text" name="shipping[last-name]" placeholder="Last Name">
           </div>
         </div>
       </div>
@@ -49,10 +49,10 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
         <label>Billing Address</label>
         <div class="fields">
           <div class="twelve wide field">
-            <input type="text" name="first-name" placeholder="Street Address">
+            <input type="text" name="shipping[address]" placeholder="Street Address">
           </div>
           <div class="four wide field">
-            <input type="text" name="last-name" placeholder="Apt #">
+            <input type="text" name="shipping[address-2]" placeholder="Apt #">
           </div>
         </div>
       </div>
@@ -77,7 +77,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
       <div class="field">
         <label>Card Type</label>
         <div class="ui selection dropdown">
-          <input type="hidden" name="gender">
+          <input type="hidden" name="card[type]">
           <div class="default text">Type</div>
           <i class="dropdown icon"></i>
           <div class="menu">
@@ -99,17 +99,17 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
       <div class="fields">
         <div class="seven wide field">
           <label>Card Number</label>
-          <input type="text" name="card-number" maxlength="16" placeholder="Card #">
+          <input type="text" name="card[number]" maxlength="16" placeholder="Card #">
         </div>
         <div class="three wide field">
           <label>CVC</label>
-          <input type="text" name="cvc" maxlength="3" placeholder="CVC">
+          <input type="text" name="card[cvc]" maxlength="3" placeholder="CVC">
         </div>
         <div class="six wide field">
           <label>Expiration</label>
           <div class="two fields">
             <div class="field">
-              <select class="ui fluid search dropdown" name="expire-month">
+              <select class="ui fluid search dropdown" name="card[expire-month]">
                 <option value="">Month</option>
                 <option value="1">January</option>
                 <option value="2">February</option>
@@ -126,7 +126,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
               </select>
             </div>
             <div class="field">
-              <input type="text" name="expire-year" maxlength="4" placeholder="Year">
+              <input type="text" name="card[expire-year]" maxlength="4" placeholder="Year">
             </div>
           </div>
         </div>
@@ -137,7 +137,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
       <div class="field">
         <label>Send Receipt To:</label>
         <div class="ui fluid multiple search selection dropdown">
-          <input type="hidden" name="user">
+          <input type="hidden" name="receipt">
           <i class="dropdown icon"></i>
           <div class="default text">Saved Contacts</div>
           <div class="menu">

@@ -15,6 +15,7 @@ type        : 'Usage'
 
 <link rel="stylesheet/less" type="text/css" href="/src/definitions/globals/site.less" />
 <link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/button.less" />
+<link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/checkbox.less" />
 
 <div class="main ui intro container">
 
@@ -35,23 +36,124 @@ type        : 'Usage'
     <p>Instead of having to create components from a blank canvas, developers using Semantic UI only need to specify how their components should differ from the default theme using <a href="http://lesscss.org/features/#variables-feature" target="_blank">CSS variables</a>.</p>
   </div>
 
+
   <h2 class="ui dividing header">
-    Themes
+    Examples
   </h2>
   <div class="no example">
-    <h3 class="ui header">Parts of a Theme</h3>
+    <h4>Global Inheritance</h4>
 
-    <p>Themes are made up of two files a <code>.variables</code> file and a <code>.overrides</code> file.</p>
+    <p>Semantic UI includes twelve named colors. Components with color variations inherit these global variables when defining how colors should appear.</p>
 
-    <p>A <b>.variables</b> file specifies variables which should be adjusted for a theme.</p>
+    <p>Each level of inheritance can includes a global file <code>site.variables</code> which can define theme-wide defaults that each component can extend.</p>
 
-    <p>An <b>.overrides</b> file adds additional css rules from the baseline definition which should be included with an element. This file also has access to all inherited variables for a component.</p>
+    <div class="ui ignored code" data-type="less" data-less="true" data-title="site/globals/site.variables">
+    @primaryColor: @pink;
+    @secondaryColor: @grey;
+
+    @red    : #B03060;
+    @orange : #FE9A76;
+    @yellow : #FFD700;
+    @olive  : #32CD32;
+    @green  : #016936;
+    @teal   : #008080;
+    @blue   : #0E6EB8;
+    @violet : #EE82EE;
+    @purple : #B413EC;
+    @pink   : #FF1493;
+    @brown  : #A52A2A;
+    @grey   : #A0A0A0;
+    @black  : #000000;
+    </div>
+
+    <button class="ui primary button">
+      Primary Button
+    </button>
+    <button class="ui secondary button">
+      Secondary Button
+    </button>
+    <div class="ui horizontal divider">All Colors</div>
+    <button class="ui red button">Red</button>
+    <button class="ui orange button">Orange</button>
+    <button class="ui yellow button">Yellow</button>
+    <button class="ui olive button">Olive</button>
+    <button class="ui green button">Green</button>
+    <button class="ui teal button">Teal</button>
+    <button class="ui blue button">Blue</button>
+    <button class="ui violet button">Violet</button>
+    <button class="ui purple button">Purple</button>
+    <button class="ui pink button">Pink</button>
+    <button class="ui brown button">Brown</button>
+    <button class="ui grey button">Grey</button>
+    <button class="ui black button">Black</button>
+  </div>
+  <div class="no example">
+    <h4>Component Inheritance</h4>
+    <p>Components inherit default values from <code>site.variables</code> which they may redefine specifically for their component</p>
+    <p>For example, you could decide that instead of the boring default grey checkboxes, you want yours to include your site's branded colors</p>
+    <div class="ui ignored code" data-type="less" data-less="true" data-title="site/modules/checkbox.variables">
+      /* Checkbox */
+      @checkboxActiveBackground: @primaryColor;
+      @checkboxActiveBorderColor: @primaryColor;
+      @checkboxActiveCheckColor: @white;
+      @checkboxTransition: none;
+
+      /* Slider */
+      @sliderOnLineColor: @primaryColor;
+
+      /* Radio */
+      @radioActiveBackground: @primaryColor;
+    </div>
+    <div class="ui checkbox">
+      <input type="checkbox" name="checkbox" checked >
+      <label>Checkbox</label>
+    </div>
+
+    <div class="ui hidden divider"></div>
+    <div class="ui form">
+      <div class="inline fields">
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="radio" checked />
+            <label>A</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="radio" />
+            <label>B</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="radio" />
+            <label>C</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="radio" />
+            <label>D</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ui hidden divider"></div>
+    <div class="ui slider checkbox">
+      <input type="checkbox" name="slider" checked>
+      <label>Slider</label>
+    </div>
   </div>
 
+  <h2 class="ui dividing header">
+    Anatomy of a Component
+  </h2>
+
   <div class="no example">
-    <h4 class="ui header">Inheritance</h4>
-    <p>Theming variables contain three separate levels of inheritance.</p>
-    <p>Each step represents a different level of permanence for a variable.</p>
+    <h4 class="ui header">Themes</h4>
+    <p>Themes contain three separate levels of variable inheritance.</p>
+    <p>Each of these let developers store a different level level of permanence for a variable.</p>
     <div class="ui fluid steps">
       <div class="step">
         <i class="lock icon"></i>
@@ -64,19 +166,204 @@ type        : 'Usage'
         <i class="download icon"></i>
         <div class="content">
           <div class="title">Packaged Theme</div>
-          <div class="description">Packagable Component</div>
+          <div class="description">Distributable Packages</div>
         </div>
       </div>
-      <div class="step">
+    <div class="step">
         <i class="user icon"></i>
         <div class="content">
           <div class="title">Site Theme</div>
-          <div class="description">Per-Site Changes</div>
+          <div class="description">Site Specific Changes</div>
         </div>
       </div>
     </div>
   </div>
 
+  <div class="no example">
+    <h4 class="ui header">Default Theme</h4>
+    <p><code>src/themes/default/{type}/{element}</code></p>
+    <div class="ui list">
+      <div class="item">
+        <i class="folder icon"></i>
+        <div class="content">
+          <div class="header">src</div>
+          <div class="list">
+            <div class="item">
+              <i class="folder icon"></i>
+              <div class="content">
+                <div class="header">themes</div>
+                <div class="description"></div>
+                <div class="list">
+                  <div class="item">
+                    <i class="folder icon"></i>
+                    <div class="content">
+                      <div class="header">default</div>
+                      <div class="description">Default theme</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p>The default theme provides baseline variables for a component.</p>
+    <p>The best way to understand what variables are available to be used with a component is to examine a components default variables file.</p>
+  </div>
+
+  <div class="no example">
+    <h4 class="ui header">Packaged Theme</h4>
+    <p><code>src/themes/theme-name/{type}/{element}.variables</code></p>
+    <p><code>src/themes/theme-name/{type}/{element}.overrides</code></p>
+    <div class="ui list">
+      <div class="item">
+        <i class="folder icon"></i>
+        <div class="content">
+          <div class="header">src</div>
+          <div class="list">
+            <div class="item">
+              <i class="folder icon"></i>
+              <div class="content">
+                <div class="header">themes</div>
+                <div class="description"></div>
+                <div class="list">
+                  <div class="item">
+                    <i class="folder icon"></i>
+                    <div class="content">
+                      <div class="header">theme_name</div>
+                      <div class="description">Theme called "theme-name"</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p>Packaged themes are themes bundled together in a folder for distribution. These can be downloaded from the internet, or passed between projects.</p>
+    <p>Packaged themes are specified by name in your <a href="#theme-config">theme.config</a> file.</p>
+  </div>
+
+  <div class="no example">
+    <h4 class="ui header">Site Theme</h4>
+    <p><code>src/site/{type}/{element}</code></p>
+    <div class="ui list">
+      <div class="item">
+        <i class="folder icon"></i>
+        <div class="content">
+          <div class="header">src</div>
+          <div class="list">
+            <div class="item">
+              <i class="folder icon"></i>
+              <div class="content">
+                <div class="header">themes</div>
+                <div class="description"></div>
+                <div class="list">
+                  <div class="item">
+                    <i class="folder icon"></i>
+                    <div class="content">
+                      <div class="header">github</div>
+                      <div class="description">Theme called "github"</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p>A site theme, not to be mistaken with <code>site.variables</code> a file located in every theme, is a special user theme that can be loaded on top of all other themes.</p>
+    <p>This is the best location to store changes that will be used on a single site. A site theme can be thought of as similar to a <a href="https://codex.wordpress.org/Child_Themes" target="_blank">child theme</a> in Wordpress.</p>
+    <p>Theme files <b>are optional includes</b> and can be safely removed if you do not need to add additional changes to a component your project</p>
+  </div>
+
+
+  <div class="no example">
+    <h4 class="ui header">Definition File</h4>
+    <p>Each component includes a source css and javascript file which declares how a components variables should affect its display on screen.</p>
+    <p>Navigating definition files are a great way for developers who are comfortable with css to get an idea of how themes affect a components display</p>
+
+    <p>Here's an abridged version of <a href="/elements/button.html">button</a> with an explanation of each section of the file.</p>
+
+    <div class="code" data-type="less" data-title="src/definitions/elements/button.less">
+
+/*******************************
+                Theme
+*******************************/
+
+/* Define type and element to help locate theme files */
+@type    : 'element';
+@element : 'button';
+
+/* Processes Variable Inheritance */
+@import (multiple) '../../theme.config';
+
+/* Create scope */
+& {
+
+/*******************************
+               Button
+*******************************/
+
+/* Define Component */
+.ui.button {
+  cursor: pointer;
+  display: inline-block;
+
+  min-height: 1em;
+
+  outline: none;
+  border: none;
+  vertical-align: @verticalAlign;
+  background: @background;
+  color: @textColor;
+
+  font-family: @fontFamily;
+
+  margin: 0em @horizontalMargin @verticalMargin 0em;
+  padding: @verticalPadding @horizontalPadding (@verticalPadding + @shadowOffset);
+
+  text-transform: @textTransform;
+  text-shadow: @textShadow;
+  font-weight: @fontWeight;
+  line-height: @lineHeight;
+  font-style: normal;
+  text-align: center;
+  text-decoration: none;
+
+  border-radius: @borderRadius;
+  box-shadow: @boxShadow;
+
+  user-select: none;
+  transition: @transition;
+  will-change: @willChange;
+
+  -webkit-tap-highlight-color: @tapColor;
+}
+
+/* Additional css removed for brevity */
+
+/* Load CSS Overrides and Inline */
+.loadUIOverrides();
+
+}
+
+    </div>
+  </div>
+
+  <div class="no example">
+    <h3 class="ui header">Theme Files</h3>
+    <p>Themes are made up of two files a <code>.variables</code> file and a <code>.overrides</code> file. A theme can include both variables and overrides, or just either one alone.</p>
+
+    <p>A <b>.variables</b> file specifies variables which should be adjusted for a theme.</p>
+
+    <p>An <b>.overrides</b> file adds additional css rules from the baseline definition which should be included with an element. This file also has access to all inherited variables for a component.</p>
+
+    <p>Theme files correspond to the name of the component, for example button's site theme would be located at <code>src/site/elements/button.variables</code></p>
+  </div>
 
   <div class="no example">
     <h4 class="ui header">File Locations</h4>
@@ -127,57 +414,6 @@ type        : 'Usage'
         </div>
       </div>
     </div>
-  </div>
-
-
-  <h2 class="ui dividing header">
-    Examples
-  </h2>
-  <div class="no example">
-    <h4>A Simple Example</h4>
-
-    <p>Semantic UI includes thirteen named colors. Components with <code>color variations</code> inherit these global variables when defining how colors should appear.</p>
-
-    <p>Most websites will use a different definition of how these colors should appear. Each theme includes a global file <code>site.variables</code> which can be used to define global variables that each component can use or extend.</p>
-
-    <div class="ui ignored code" data-type="less" data-less="true" data-title="site/globals/site.variables">
-    @primaryColor: @pink;
-    @secondaryColor: @grey;
-    @red    : #B03060;
-    @orange : #FE9A76;
-    @yellow : #FFD700;
-    @olive  : #32CD32;
-    @green  : #016936;
-    @teal   : #008080;
-    @blue   : #0E6EB8;
-    @violet : #EE82EE;
-    @purple : #B413EC;
-    @pink   : #FF1493;
-    @brown  : #A52A2A;
-    @grey   : #A0A0A0;
-    @black  : #000000;
-    </div>
-
-    <button class="ui primary button">
-      Primary Button
-    </button>
-    <button class="ui secondary button">
-      Secondary Button
-    </button>
-    <div class="ui horizontal divider">All Colors</div>
-    <button class="ui red button">Red</button>
-    <button class="ui orange button">Orange</button>
-    <button class="ui yellow button">Yellow</button>
-    <button class="ui olive button">Olive</button>
-    <button class="ui green button">Green</button>
-    <button class="ui teal button">Teal</button>
-    <button class="ui blue button">Blue</button>
-    <button class="ui violet button">Violet</button>
-    <button class="ui purple button">Purple</button>
-    <button class="ui pink button">Pink</button>
-    <button class="ui brown button">Brown</button>
-    <button class="ui grey button">Grey</button>
-    <button class="ui black button">Black</button>
   </div>
 
 </div>

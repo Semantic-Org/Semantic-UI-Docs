@@ -13,9 +13,114 @@ type        : 'Introduction'
 <div class="main ui intro container">
 
   <h2 class="ui dividing header">
-    Coming Soon
+    React
   </h2>
 
-  <p>This section will be filled in later this week...</p>
+  <div class="example">
+    <h4>Managing Lifecycle</h4>
+    <p>Semantic UI components are designed to be compatible with libraries that tightly manage UI lifecycle like <a href="https://facebook.github.io/react/docs/getting-started.html" target="_blank">React</a>. No special bindings are needed.</p>
+    <p>Most components use <a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver" target="_blank">mutation observers</a> to watch for changes in internal state, and all components are built with <code>initialize</code>, <code>refresh</code> and <code>destroy</code> methods which will regenerate, refresh cached values, and teardown components.</p>
+  </div>
+  <iframe width="100%" height="500" src="//jsfiddle.net/jerm3fcg/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
+
+
+  <h2 class="ui dividing header">
+    Meteor
+  </h2>
+
+  <div class="no example">
+    <h4 class="ui header">Install via Atmosphere</h4>
+    <p>Install the <a href="https://atmospherejs.com/semantic/ui">Semantic UI package</a> from atmosphere. You will need a special package less-autoprefixer, to add vendor prefixes to your LESS pipeline.</p>
+    <div class="ui ignored info message">
+      Since <code>flemay:less-autoprefixer</code> compiles LESS files you don't need any other less package.
+    </div>
+    <div class="code" data-type="bash">
+      meteor add semantic:ui flemay:less-autoprefixer
+    </div>
+  </div>
+  <div class="no example">
+    <h4 class="ui header">Create a custom.semantic.json file</h4>
+    <p><code>custom.semantic.json</code> is a special file used to determine which themes and components to include in your project's build.</p>
+    <p>To remove a component from the pipeline, simply set the boolean value to <code>false</code></p>
+    <div class="code" data-type="json">
+      {
+      "definitions": {
+        "accordion" : true,
+        "ad"        : true,
+        "api"       : true,
+        /* etc */
+      },
+      "themes": {
+        "amazon"     : false,
+        "basic"      : false,
+        "bookish"    : false,
+        "bootstrap3" : false,
+        "chubby"     : false,
+        "classic"    : false,
+        "default"    : true,
+        /* etc */
+      }
+    </div>
+  </div>
+  <div class="no example">
+    <h4>Start Meteor / Generate</h4>
+
+    <p>Every time Meteor starts or refreshes it calls the package semantic:ui to generate Semantic UI.</p>
+
+    <p>The package has a uses the diff between <code>custom.semantic.json</code> and <code>.custom.semantic.json</code> to avoid regenerating files unnecesssarily.</p>
+
+    <p>If the file <code>.custom.semantic.json</code> does not exist or it is different than custom.semantic.json then it will generate Semantic UI.</p>
+  </div>
+  <div class="no example">
+    <h4>Customize Site Variables</h4>
+    <p>Semantic UI meteor includes a site theme, <code>site/</code> which can be used to customize less variables for your site. These files are optional, and can safely be removed if customization is not necessary.</p>
+    <p>Visit our <a href="/usage/theming.html">theming guide</a> to learn more about theming.</p>
+  </div>
+  <div class="no example">
+    <h4>Issues & Debugging</h4>
+    <p>For help with Semantic UI Meteor, and for the latest updates, please visit the repository home on GitHub</p>
+    <a href="https://github.com/Semantic-Org/Semantic-UI-Meteor" target="_blank" class="ui button"><i class="github icon"></i> Visit Meteor Repo</a>
+  </div>
+
+  <h2 class="ui header">
+    Ember
+  </h2>
+
+
+  <div class="example">
+    <h4 class="ui header">Installing via CLI</h4>
+    <p>Include the library as an NPM dependency, from within an ember-cli app.</p>
+
+    <p>If you are using Ember CLI <code>0.1.5-0.2.3</code>
+    <div class="code">
+      ember install:addon semantic-ui-ember
+    </div>
+    <p>If you are using an older version <code>< 0.1.5</code>
+    <div class="code">
+    npm install --save-dev Semantic-Org/Semantic-UI-Ember
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Run the Library's Blueprint</h4>
+    <div class="code">
+      ember generate semantic-ui-ember
+    </div>
+  </div>
+  <div class="example">
+    <h4 class="ui header">Get Coding</h4>
+    <p>For example of individual components check out the GitHub repository</p>
+    <a href="https://github.com/Semantic-Org/Semantic-UI-Ember" target="_blank" class="ui button"><i class="github icon"></i> Visit Ember Repo</a>
+  </div>
+
+  <h2 class="ui dividing header">
+    Angular
+  </h2>
+
+  <div class="example">
+    <h4>Contribute to Angular Development</h4>
+    <p>Semantic UI angular bindings are still in development, but are available for some components</p>
+    <a href="https://github.com/Semantic-Org/Semantic-UI-Angular" target="_blank" class="ui button"><i class="github icon"></i>Visit Angular Repo</a>
+  </div>
 </div>

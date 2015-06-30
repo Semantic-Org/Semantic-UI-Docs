@@ -12,21 +12,17 @@ standalone : true
             <div class="active ui side">
               <img class="ui image" src="/images/logo.png">
             </div>
-            <div class="learn side">
-              <img class="ui image" src="/images/learn-logo.png">
-            </div>
           </div>
         </div>
       </div>
       <a class="view-ui item">
         <i class="sidebar icon"></i> Menu
       </a>
-      <a href="http://www.learnsemantic.com" data-site="learn" class="transition hidden additional item">Learn</a>
       <div class="right menu">
         <div class="item">
           <a class="twitter-share-button twitter"
             href="http://twitter.com/share"
-            data-text="Semantic UI is a next-gen UI library"
+            data-text="Semantic UI 2.0 is out!"
             data-url="http://semantic-ui.com"
             data-via="semanticui">
           </a>
@@ -64,19 +60,16 @@ standalone : true
         <span class="library">
           Semantic UI
         </span>
-        <b data-text="User Interface">HTML</b>
+        <b data-text="User Interface">User Interface</b>
         <span class="typed-cursor">|</span>
         <span class="text">is the language of the web.</span>
       </h1>
       <div class="ui hidden divider"></div>
 
-      <a href="https://github.com/Semantic-Org/Semantic-UI/archive/next.zip" class="ui huge inverted download button">
-        Download Now
+      <a href="/introduction/getting-started.html" class="ui huge inverted download button">
+        Get Started
       </a>
-      <!--
-      <a href="<%= @getZip() %>" class="ui huge basic inverted teal download button">
-        Download Now
-      </a> -->
+      <a href="/introduction/new.html" class="ui huge inverted basic button">What's New in 2.0</a>
     </div>
     <div class="inverted advertisement">
       <% unless 'development' in @getEnvironments(): %>
@@ -133,11 +126,8 @@ standalone : true
       </div>
       <div class="nine wide column">
         <div class="hidden code" data-demo="true" data-type="javascript">
-          $('.ui.dropdown')
+          $('select.dropdown')
             .dropdown('set selected', ['meteor', 'ember'])
-            .popup({
-              content: 'Add your computer skills'
-            })
           ;
         </div>
         <div class="hidden code" data-type="html">
@@ -284,7 +274,7 @@ standalone : true
           3000+ Theming Variables
         </h2>
         <p>The only dogma from this framework: <em>everything arbitrary is mutable</em>.</p>
-        <a class="ui large button" href="http://learnsemantic.com/developing/customizing.html">Integration Guide</a>
+        <a class="ui large button" href="/usage/theming.html">Integration Guide</a>
       </div>
       <div class="column">
         <h2 class="ui icon header">
@@ -297,7 +287,7 @@ standalone : true
       <div class="column">
         <h2 class="ui icon header">
           <img class="ui icon image" src="/images/icons/lab.png">
-          3,800+ Commits
+          5000+ Commits
         </h2>
         <p>
           Semantic UI is a <b>free open source</b> project already used in multiple <a href="http://www.quirky.com" target="_blank">large</a> scale <a href="http://www.newrepublic.com" target="_blank">production</a> environments.
@@ -506,12 +496,9 @@ standalone : true
               <img src="/images/avatar2/large/rachel.png">
             </div>
             <div class="content">
-              <div class="header">Rachel Maddow</div>
+              <div class="header">Rachel Maddaw</div>
               <div class="meta">
-                <a class="group">Acquaintances</a>
-              </div>
-              <div class="description">
-
+                <a class="group">Pundit</a>
               </div>
             </div>
             <div class="extra content">
@@ -532,30 +519,30 @@ standalone : true
           <div class="ui feed">
             <div class="event">
               <div class="label">
-                <img src="/images/avatar/small/elliot.jpg">
+                <img src="/images/avatar2/small/mark.png">
               </div>
               <div class="content">
                 <div class="summary">
                   <a class="user">
-                    Elliot Fu
+                    Mark
                   </a> added you as a friend
                 </div>
               </div>
             </div>
             <div class="event">
               <div class="label">
-                <img src="/images/avatar/small/jenny.jpg">
+                <img src="/images/avatar2/small/lena.png">
               </div>
               <div class="content">
-                You added Jenny Hess to the group <a>Close Friends</a>
+                You added Lena to the group <a>Close Friends</a>
               </div>
             </div>
             <div class="event">
               <div class="label">
-                <img src="/images/avatar/small/zoe.jpg">
+                <img src="/images/avatar2/small/eve.png">
               </div>
               <div class="content">
-                Zoe just <a>posted on your page</a>
+                Eve just <a>posted on your page</a>
               </div>
             </div>
           </div>
@@ -565,8 +552,8 @@ standalone : true
             <a href="/elements/label.html">Label</a>
           </h4>
           <div class="ui image label">
-            <img src="/images/avatar/small/justen.jpg">
-            jkitsune@newrepublic.com
+            <img src="/images/avatar2/small/molly.png">
+            molly@thebears.com
             <i class="delete icon"></i>
           </div>
           <a class="ui teal label">
@@ -1015,7 +1002,7 @@ standalone : true
         <div class="eight wide column">
           <h3 class="ui header">Enterprise Ready</h3>
           <p>Build tools, performance logging, support for custom definitions, multiple-levels of theme inheritance—a developer's dream.</p>
-          <a class="ui large right labeled primary icon button" href="http://www.learnsemantic.com/guide/expert.html">
+          <a class="ui large right labeled primary icon button" href="/introduction/getting-started.html">
             <i class="right chevron icon"></i>
             Getting Started Guide
           </a>

@@ -10,10 +10,7 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script>
 $(document).ready(function() {
-
-
-  $('#aa').dropdown();
-  $('#theform').form();
+$('.ui.rating').rating();
 
 });
 </script>
@@ -23,31 +20,11 @@ $(document).ready(function() {
 </style>
 
 <div class="ui container" style="margin-top:5em;">
-
- <main class="ui grid container">
-    <div class="row">
-        <div class="column">
-            <form class="ui form segment" id="theform">
-                <div class="field">
-                    <label>label</label>
-
-                    <div class="ui dropdown search button" id="aa"> <span class="default text">Placeholder...</span>
-                        <input type="hidden" name="field">
-                        <div class="menu">
-                            <div class="item" data-value="a"> <i class="blue cube icon"></i>a</div>
-                            <div class="item" data-value="b"> <i class="blue cube icon"></i>b</div>
-                            <div class="item" data-value="c"> <i class="blue cube icon"></i>c</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="ui button reset">Reset</div>
-                <div class="ui button clear">Clear</div>
-                <div class="ui button blue">Show</div>
-            </form>
-        </div>
-    </div>
-</main>
-
+<div class="ui basic segment">
+    <span class="ui rating" data-rating="2"></span> <span>
+    <i class="star icon"></i>
+    Hello</span>
+</div>
 </div>
 
 </body>

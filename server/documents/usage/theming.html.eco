@@ -31,9 +31,9 @@ type        : 'Usage'
       <span class="author">Frederick Brooks - <a href="http://www.amazon.com/The-Design-Essays-Computer-Scientist/dp/0201362988" target="_blank">The Design of Design</a><span>
     </blockquote>
     <p>Components in Semantic UI are designed to help developers adhere to <a href="https://books.google.com/books?id=0qG4TQi-e-4C&pg=PT234&lpg=PT234&dq=%22progressive+truthfulness%22+frederick+brooks&source=bl&ots=yrjNc6wnz8&sig=PJoYODuRku2A1kBoFOPfn4iGYnc&hl=en&sa=X&ved=0CCIQ6AEwAGoVChMImdSMpIOVxgIVCx-sCh3EQgBu#v=onepage&q=%22progressive%20truthfulness%22%20frederick%20brooks&f=false" target="_blank">progressive truthfulness</a> in their development.</p>
-    <p>The default theme uses greyscale colors, and a legible, open source sans-serif font <a href="http://www.latofonts.com"><code>Lato</code></a>, to help give developers a neutral jumping off point to begin defining their own style.</p>
-
     <p>Instead of having to create components from a blank canvas, developers using Semantic UI only need to specify how their components should differ from the default theme using <a href="http://lesscss.org/features/#variables-feature" target="_blank">CSS variables</a>.</p>
+    <p>For developers who don't have time to hone a specific look and feel the default theme is elegant and neutral designed with greyscale colors, and a legible, open source sans-serif font <a href="http://www.latofonts.com"><code>Lato</code></a>.</p>
+
   </div>
 
 
@@ -41,29 +41,32 @@ type        : 'Usage'
     Lead By Example
   </h2>
   <div class="no example">
-    <h4>Global Inheritance</h4>
+    <h4>Sitewide Defaults</h4>
 
     <p>Semantic UI includes twelve named colors. Components with color variations inherit these global variables when defining how colors should appear.</p>
 
-    <p>Each level of inheritance can includes a global file <code>site.variables</code> which can define theme-wide defaults that each component can extend.</p>
+    <p>Each <a href="#theme-inheritance">level of inheritance</a> includes a special file <code>site.variables</code> which defines theme-wide defaults that each component can extend.</p>
+
+    <p>Global variables use higher level abstractions, to avoid tedium in having to modify multiple properties to change the appearance of an element.</p>
+    <p>Other button shades like those used in <code>hover</code>, <code>active</code> and <code>focus</code> states are created by modifying the saturation and lightness of color variabless, these derived variables will automatically adjust to your new color palette.</a>
 
     <div class="ui ignored code" data-type="less" data-less="true" data-title="site/globals/site.variables">
-    @primaryColor: @pink;
-    @secondaryColor: @grey;
+    @primaryColor   : @pink;
+    @secondaryColor : @grey;
 
-    @red    : #B03060;
-    @orange : #FE9A76;
-    @yellow : #FFD700;
-    @olive  : #32CD32;
-    @green  : #016936;
-    @teal   : #008080;
-    @blue   : #0E6EB8;
-    @violet : #EE82EE;
-    @purple : #B413EC;
-    @pink   : #FF1493;
-    @brown  : #A52A2A;
-    @grey   : #A0A0A0;
-    @black  : #000000;
+    @red            : #B03060;
+    @orange         : #FE9A76;
+    @yellow         : #FFD700;
+    @olive          : #32CD32;
+    @green          : #016936;
+    @teal           : #008080;
+    @blue           : #0E6EB8;
+    @violet         : #EE82EE;
+    @purple         : #B413EC;
+    @pink           : #FF1493;
+    @brown          : #A52A2A;
+    @grey           : #A0A0A0;
+    @black          : #000000;
     </div>
 
     <button class="ui primary button">
@@ -88,9 +91,9 @@ type        : 'Usage'
     <button class="ui black button">Black</button>
   </div>
   <div class="no example">
-    <h4>Component Inheritance</h4>
+    <h4>Component Defaults</h4>
     <p>Components inherit default values from <code>site.variables</code> which they may redefine specifically for their component</p>
-    <p>For example, you could decide that instead of the boring default grey checkboxes, you want yours to include your site's branded colors</p>
+    <p>For example, you could decide that instead of the boring default grey checkboxes, you want yours to include your site's branded colors. This can be accomplished in just a half-dozen variables.</p>
     <div class="ui ignored code" data-type="less" data-less="true" data-title="site/modules/checkbox.variables">
       /* Checkbox */
       @checkboxActiveBackground: @primaryColor;
@@ -145,7 +148,80 @@ type        : 'Usage'
       <label>Slider</label>
     </div>
   </div>
+  <div class="no example">
+    <h4>Using Packaged Themes</h4>
+    <p>When you download Semantic UI all components will be set up to use the default theme. Semantic uses a special file <code>theme.config</code> for controlling your project's packaged theming configuration.</p>
+    <p>Packaged themes are applied per component, and not globally. This means you can specify individual themes for each component, mixing and matching from available themes.</p>
+    <p>The default <code>theme.config</code> will have all component values set to default. To choose a theme, simply change a component to match the theme name.</p>
 
+    <p>For example: </p>
+    <div class="code" data-title="src/theme.config">
+    /*******************************
+            Theme Selection
+    *******************************/
+
+    /* Global */
+    @site       : 'material';  /* Loads material site defaults */
+    @reset      : 'default';
+
+    /* Elements */
+    @button     : 'github'; /* But uses them with GitHub Buttons */
+    @container  : 'default';
+    @divider    : 'default';
+    @flag       : 'default';
+    @header     : 'default';
+    @icon       : 'default';
+    @image      : 'default';
+    @input      : 'default';
+    @label      : 'default';
+    @list       : 'default';
+    @loader     : 'default';
+    @rail       : 'default';
+    @reveal     : 'default';
+    @segment    : 'default';
+    @step       : 'default';
+
+    /* Collections */
+    @breadcrumb : 'default';
+    @form       : 'default';
+    @grid       : 'default';
+    @menu       : 'chubby'; /* Other UI can use different themes as well */
+    @message    : 'default';
+    @table      : 'default';
+
+    /* Modules */
+    @accordion  : 'default';
+    @checkbox   : 'default';
+    @dimmer     : 'default';
+    @dropdown   : 'default';
+    @embed      : 'default';
+    @modal      : 'default';
+    @nag        : 'default';
+    @popup      : 'default';
+    @progress   : 'default';
+    @rating     : 'default';
+    @search     : 'default';
+    @shape      : 'default';
+    @sidebar    : 'default';
+    @sticky     : 'default';
+    @tab        : 'default';
+    @transition : 'default';
+
+    /* Views */
+    @ad         : 'default';
+    @card       : 'default';
+    @comment    : 'default';
+    @feed       : 'default';
+    @item       : 'default';
+    @statistic  : 'default';
+    </div>
+  </div>
+
+  <div class="no example">
+    <h4>Browsing for Themes</h4>
+    <p>Each UI definitions include a dropdown at the top of the page to preview themes included with the project.</p>
+    <p>Themes are <b>per component</b>, so although, for example, material themes are available for <a href="/collections/menu.html">menu</a>, <a href="/elements/button.html">button</a>, and <a href="/globals/site.html">site</a>, changing all values to "material" will produce an error for components which do not include that theme.</p>
+  </div>
 
   <h2 class="ui dividing header">
     Composing a Component
@@ -154,8 +230,8 @@ type        : 'Usage'
 
   <div class="no example">
     <h4 class="ui header">Definition File</h4>
-    <p>Each component includes a source css and javascript file which declares how a components variables should affect its display on screen.</p>
-    <p>Navigating definition files are a great way for developers who are comfortable with css to get an idea of how themes affect a components display</p>
+    <p>Each component includes a source css and javascript file which declares how a components variables should affect its display on screen. Definition files are updated with each new release of Semantic UI, which may also include new variables.</p>
+    <p>Navigating definition files are a great way for developers who are comfortable with css to get an idea of how themes affect a components display.</p>
 
     <p>Here's an abridged version of <a href="/elements/button.html">button</a> with an explanation of each section of the file.</p>
 
@@ -228,12 +304,15 @@ type        : 'Usage'
   <div class="no example">
     <h4 class="ui header">Theme Files</h4>
     <p>Themes are made up of two files a <code>.variables</code> file and a <code>.overrides</code> file. A theme can include both variables and overrides, or just either one alone.</p>
-
-    <p>A <b>.variables</b> file specifies variables which should be adjusted for a theme.</p>
-
-    <p>An <b>.overrides</b> file adds additional css rules from the baseline definition which should be included with an element. This file also has access to all inherited variables for a component.</p>
-
-    <p>Theme files correspond to the name of the component, for example button's site theme would be located at <code>src/site/elements/button.variables</code></p>
+  </div>
+  <div class="no example">
+    <h4 class="ui header">Variables Files</h4>
+    <p>A .variables file specifies variables which should be adjusted for a theme.</p>
+    <p>A theme's variable file only need to include variables which are different for a theme.</p>
+  </div>
+  <div class="no example">
+    <h4 class="ui header">Override Files</h4>
+    <p>An .overrides file specifies additional css rules to be added to a definition for a theme. This file also has access to all inherited variables for a component.</p>
   </div>
 
   <h2 class="ui dividing header">
@@ -241,7 +320,7 @@ type        : 'Usage'
   </h2>
 
   <div class="no example">
-    <h4 class="ui header">Themes</h4>
+    <h4 class="ui header">Theme Inheritance</h4>
     <p>Themes contain three separate levels of variable inheritance.</p>
     <p>Each level of inheritance corresponds to a different level of permanence for a variable.</p>
     <div class="ui fluid steps">
@@ -271,30 +350,20 @@ type        : 'Usage'
 
   <div class="no example">
     <h4 class="ui header">Default Theme</h4>
-    <div class="ui list">
-      <div class="item">
-        <i class="folder icon"></i>
-        <div class="content">
-          <div class="header">src</div>
-          <div class="list">
-            <div class="item">
-              <i class="folder icon"></i>
-              <div class="content">
-                <div class="header">themes</div>
-                <div class="description"></div>
-                <div class="list">
-                  <div class="item">
-                    <i class="folder icon"></i>
-                    <div class="content">
-                      <div class="header">default</div>
-                      <div class="description">Default theme</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="ui breadcrumb">
+      <div class="section">
+        <i class="disabled folder icon"></i>
+        src
+      </div>
+      <i class="right chevron icon divider"></i>
+      <div class="section">
+        <i class="disabled folder icon"></i>
+        themes
+      </div>
+      <i class="right chevron icon divider"></i>
+      <div class="active section">
+        <i class="inverted circular teal folder icon"></i>
+        default
       </div>
     </div>
     <p>The default theme provides baseline variables for a component.</p>
@@ -303,30 +372,20 @@ type        : 'Usage'
 
   <div class="no example">
     <h4 class="ui header">Packaged Theme</h4>
-    <div class="ui list">
-      <div class="item">
-        <i class="folder icon"></i>
-        <div class="content">
-          <div class="header">src</div>
-          <div class="list">
-            <div class="item">
-              <i class="folder icon"></i>
-              <div class="content">
-                <div class="header">themes</div>
-                <div class="description"></div>
-                <div class="list">
-                  <div class="item">
-                    <i class="folder icon"></i>
-                    <div class="content">
-                      <div class="header">theme_name</div>
-                      <div class="description">Theme called "theme-name"</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="ui breadcrumb">
+      <div class="section">
+        <i class="disabled folder icon"></i>
+        src
+      </div>
+      <i class="right chevron icon divider"></i>
+      <div class="section">
+        <i class="disabled folder icon"></i>
+        themes
+      </div>
+      <i class="right chevron icon divider"></i>
+      <div class="active section">
+        <i class="inverted circular teal folder icon"></i>
+        theme-name
       </div>
     </div>
     <p>Packaged themes are themes bundled together in a folder for distribution. These can be downloaded from the internet, or carried between projects.</p>
@@ -335,34 +394,19 @@ type        : 'Usage'
 
   <div class="no example">
     <h4 class="ui header">Site Theme</h4>
-    <div class="ui list">
-      <div class="item">
-        <i class="folder icon"></i>
-        <div class="content">
-          <div class="header">src</div>
-          <div class="list">
-            <div class="item">
-              <i class="folder icon"></i>
-              <div class="content">
-                <div class="header">themes</div>
-                <div class="description"></div>
-                <div class="list">
-                  <div class="item">
-                    <i class="folder icon"></i>
-                    <div class="content">
-                      <div class="header">github</div>
-                      <div class="description">Theme called "github"</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="ui breadcrumb">
+      <div class="section">
+        <i class="disabled folder icon"></i>
+        src
+      </div>
+      <i class="right chevron icon divider"></i>
+      <div class="active section">
+        <i class="inverted circular teal folder icon"></i>
+        site
       </div>
     </div>
     <p>A site theme, not to be mistaken with <code>site.variables</code> a file located in every theme, is a special user theme that can be loaded on top of all other themes.</p>
     <p>This is the best location to store changes that will be used on a single site. A site theme can be thought of as similar to a <a href="https://codex.wordpress.org/Child_Themes" target="_blank">child theme</a> in Wordpress.</p>
-    <p>Theme files <b>are optional includes</b> and can be safely removed if you do not need to add additional changes to a component your project</p>
+    <p>Site theme files <b>are optional includes</b> and can be safely removed if you do not need to add additional changes to a component your project</p>
   </div>
 </div>

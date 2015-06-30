@@ -201,7 +201,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
   <h2 class="ui dividing header">Content</h2>
 
   <div class="example">
-    <h4 class="ui header">Image</h4>
+    <h4 class="ui header">Content Block</h4>
     <p>A card can contain blocks of content</p>
     <div class="ui card">
       <div class="content">

@@ -26,31 +26,9 @@ semantic.home.ready = function() {
     },
     introduction: function() {
       // zoom out
-      setTimeout(function() {
-        $header
-          .removeClass('zoomed')
-        ;
-      }, 500);
-
-      $ui.typed({
-        replaceBaseText : true,
-        strings         : [
-          $ui.data('text')
-        ],
-        showCursor      : false,
-        typeSpeed       : 120,
-        backSpeed       : 120,
-        backDelay       : 500
-      });
-      setTimeout(function() {
-        $library.transition('drop in', 1500);
-      }, 3750);
-      setTimeout(function() {
-        $cursor.addClass('stop');
-      }, 4250);
-      setTimeout(function() {
-        $version.transition('fade', 1000);
-      }, 4250);
+      $header
+        .removeClass('zoomed')
+      ;
     },
     changeLogo: function() {
       var
@@ -270,12 +248,12 @@ semantic.home.ready = function() {
       position: 'bottom center'
     })
   ;
-
+/*
   $('.following.bar .network')
     .find('.item')
       .on('mouseenter', handler.changeLogo)
       .on('mouseleave', handler.returnLogo)
-  ;
+  ;*/
 
   $('.email.stripe form')
     .form({

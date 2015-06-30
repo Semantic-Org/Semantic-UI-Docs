@@ -49,6 +49,7 @@ themes      : ['Default']
         <div class="column"><i class="comments outline icon"></i>Comments Outline</div>
         <div class="column"><i class="copyright icon"></i>Copyright</div>
         <div class="column"><i class="dashboard icon"></i>Dashboard</div>
+        <div class="column"><i class="dropdown icon"></i>Dropdown</div>
         <div class="column"><i class="external square icon"></i>External Square</div>
         <div class="column"><i class="external icon"></i>External</div>
         <div class="column"><i class="eyedropper icon"></i>Eyedropper</div>
@@ -75,6 +76,7 @@ themes      : ['Default']
         <div class="column"><i class="setting icon"></i>Setting</div>
         <div class="column"><i class="settings icon"></i>Settings</div>
         <div class="column"><i class="shop icon"></i>Shop</div>
+        <div class="column"><i class="sidebar icon"></i>Sidebar</div>
         <div class="column"><i class="signal icon"></i>Signal</div>
         <div class="column"><i class="sitemap icon"></i>Sitemap</div>
         <div class="column"><i class="tag icon"></i>Tag</div>
@@ -104,6 +106,7 @@ themes      : ['Default']
         <i class="comments outline icon"></i>
         <i class="copyright icon"></i>
         <i class="dashboard icon"></i>
+        <i class="dropdown icon"></i>
         <i class="external icon"></i>
         <i class="f square icon"></i>
         <i class="eyedropper icon"></i>
@@ -129,6 +132,7 @@ themes      : ['Default']
         <i class="search icon"></i>
         <i class="setting icon"></i>
         <i class="settings icon"></i>
+        <i class="sidebar icon"></i>
         <i class="shop icon"></i>
         <i class="signal icon"></i>
         <i class="sitemap icon"></i>
@@ -956,7 +960,6 @@ themes      : ['Default']
         <i class="align right icon"></i>
         <i class="attach icon"></i>
         <i class="bold icon"></i>
-        <i class="content icon"></i>
         <i class="copy icon"></i>
         <i class="cut icon"></i>
         <i class="font icon"></i>

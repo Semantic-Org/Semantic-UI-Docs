@@ -35,7 +35,7 @@
   margin-bottom: 0px;
   border-bottom: none;
 
-  background-color: #00796F;
+  background-color: #2C3432;
   background-position: 50% 50%;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
@@ -53,26 +53,20 @@
   width: 100%;
   height: 100%;
   content: '';
-  background: url("/images/backgrounds/16.jpg");
+  background: url("/images/backgrounds/2.jpg");
   background-size: cover;
 
-  opacity: 0.7;
+  opacity: 0.5;
 
-  -ms-transition: opacity 12s ease 1.5s;
-  -moz-transition: opacity 12s ease 1.5s;
-  -webkit-transition: opacity 12s ease 1.5s;
-  transition: opacity 12s ease 1.5s;
+  -ms-transition: opacity 3s ease 0s;
+  -moz-transition: opacity 3s ease 0s;
+  -webkit-transition: opacity 3s ease 0s;
+  transition: opacity 3s ease 0s;
 }
 
 #example.index .masthead .container {
   margin-left: auto !important;
   margin-right: auto !important;
-}
-
-#example.index .masthead.zoomed {
-  background-color: #2A2A2A;
-  animation: none;
-  -webkit-animation: none;
 }
 #example.index .masthead.zoomed:after {
   opacity: 0;
@@ -260,6 +254,7 @@
   position: relative;
   top: -0.05em;
   left: -0.25em;
+  visibility: hidden;
   opacity: 1;
   -webkit-animation: blink 0.7s infinite;
   -moz-animation: blink 0.7s infinite;
@@ -311,7 +306,6 @@
   transform-style: preserve-3d;
 }
 #example.index .masthead.segment h1 > .library {
-  visibility: hidden;
   display: block;
   font-size: 1.75em;
   color: #FFFFFF;
@@ -477,6 +471,9 @@
 #example.index .following.bar .network.menu .item {
   font-weight: bold;
 }
+#example.index .following.bar .item iframe {
+  margin-left: 10px;
+}
 #example.index .following.bar .network.menu .view-ui {
   margin-right: 1em;
 }
@@ -501,9 +498,6 @@
   margin: 0.25em 0px 0px 1em;
 }
 
-#example.index .introduction .version.label {
-  visibility: hidden;
-}
 
 /*--------------
      Stripes

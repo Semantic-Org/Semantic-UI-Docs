@@ -299,7 +299,7 @@ type        : 'Introduction'
   <div class="no example">
     <h4>theme.config</h4>
     <p>LESS uses a special configuration file <code>theme.less</code> which lets you specify what theme each component should use. If you have not generated this file yet, you will receive an error message when running build tools</p>
-    <p>You can learn more about <code>theme.config</code> by checking out the <a href="/usage/theming.html">theming guide</a></p>
+    <p>You can learn more about <code>theme.config</code> by checking out the <a href="/usage/theming.html#using-packaged-themes">theming guide</a></p>
   </div>
 
 </div>

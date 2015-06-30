@@ -54,7 +54,6 @@
   <%- @partial('transifex') %>
   <script src="/javascript/library/highlight.min.js"></script>
   <script src="/javascript/library/easing.min.js"></script>
-  <script src="/javascript/library/typing.min.js"></script>
   <%- @partial('ui-javascript') %>
   <script src="/javascript/docs.js"></script>
   <script src="/javascript/home.js"></script>

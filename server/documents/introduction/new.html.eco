@@ -21,9 +21,9 @@ type        : 'Main'
     <h4 class="ui header">The Devil is in the Details</h4>
     <p style="margin-bottom:0em;padding-bottom:0em;">2.0 brings a whopping set of changes to the project:
     <div class="ui large bulleted list">
-      <div class="item"><b>98</b> enhancements</div>
-      <div class="item"><b>105</b> bug fixes</div>
-      <div class="item"><b>2</b> new components</div>
+      <div class="item"><b>129</b> enhancements</div>
+      <div class="item"><b>118</b> bug fixes</div>
+      <div class="item"><b>3</b> new components</div>
       <div class="item">Rewrites of many components including <a href="/collections/menu.html"><code>menu</code></a>, and <a href="/elements/input.html"><code>input</code></a></div>
     </div>
 
@@ -89,6 +89,7 @@ type        : 'Main'
   <div class="example">
     <h4 class="ui header">More Precise EM Values</h4>
     <p>EM sizing has been improved in 2.0, with all values rounding to exact pixel values. This helps common relative sizing pitfalls like rounding errors in vertical alignment.</p>
+    <p>Em variables now use new globally calculated em ratios, like <code>@relative4px</code>, to express pixel values in terms of root em size. This makes sure components don't include confusing decimal or fractional values when dealing with sizing.</p>
   </div>
 
 
@@ -890,7 +891,7 @@ type        : 'Main'
 
     <h4 class="ui header">Simple Sticky</h4>
 
-    <p><a href="/behaviors/visibility.html">Visibility API</a>s now include useful shortcuts for sticky content. A placeholder will automatically be added when an element is passed making sure other content does not adjust position.</p>
+    <p><a href="/behaviors/visibility.html">Visibility API</a>s now include useful shortcuts for sticky content. A placeholder will automatically be added when an element is passed making sure other content does not shift position.</p>
 
     <p>Additionally <a href="/behaviors/visibility.html">visibility</a> and <a href="/modules/sticky.html">sticky</a> have been rewritten to use a pub/sub pattern which is much more performant than <code>1.0</code></p>
 

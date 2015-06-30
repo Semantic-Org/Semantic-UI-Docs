@@ -544,7 +544,7 @@ semantic.ready = function() {
             urlData  : urlData,
             onSuccess: function(content) {
               window.less.modifyVars( handler.less.parseFile(content) );
-              $themeDropdown
+              /*$themeDropdown
                 .api({
                   on       : 'now',
                   action   : 'getOverrides',
@@ -562,7 +562,7 @@ semantic.ready = function() {
                     $sticky.sticky('refresh');
                   }
                 })
-              ;
+              ;*/
             }
           })
         ;

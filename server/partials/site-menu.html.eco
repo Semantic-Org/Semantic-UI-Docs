@@ -13,6 +13,9 @@
   </a>
   <a href="/"><b>UI Docs</b></a>
 </div>
+<a class="item" href="/introduction/getting-started.html">
+  <b>Getting Started</b>
+</a>
 <a class="item" href="/introduction/new.html">
   <b>New in 2.0</b>
 </a>

@@ -6,7 +6,7 @@ order       : 1
 
 title       : 'Getting Started'
 description : 'Getting up and running with Semantic UI'
-type        : 'Introduction'
+type        : 'Main'
 ---
 <script src="/javascript/started.js"></script>
 
@@ -26,7 +26,7 @@ type        : 'Introduction'
       <p>The easiest way to install Semantic UI is our NPM package which contains special install scripts to make setup interactive and updates seamless.</p>
 
       <p>For installing with specific integrations like, Ember, React, or Meteor, see our <a href="/introduction/integrations.html">integration guide</a></p>
-      <p>For integrating Semantic UI tasks into your own build tools see our <a href="/introduction/advanced-usage.html">advanced usage</a> section.</p>
+      <p>For integrating Semantic UI tasks into your own build tools, or using a CDN see our <a href="/introduction/advanced-usage.html">recipes</a> section.</p>
 
     </div>
 
@@ -109,6 +109,15 @@ type        : 'Introduction'
         <script src="semantic/dist/semantic.min.js"></script>
       </div>
     </div>
+    <h2 class="ui dividing header">Updating</h2>
+
+    <div class="no example">
+      <h4>Updating via NPM</h4>
+      <p>Semantic's NPM install script will automatically update Semantic UI to the latest version while preserving your site and packaged themes.</p>
+      <div class="ignored code" data-type="bash">
+        npm update
+      </div>
+    </div>
 
     <h2 class="ui dividing header">Next Steps</h2>
 
@@ -118,9 +127,9 @@ type        : 'Introduction'
 
       <p>Here are some things to check out next</p>
       <div class="ui large bulleted list">
-        <div class="item">Learn about the project <a href="/usage/themes.html">folder structure</a></div>
-        <div class="item">See what <a href="/introduction/build-tools.html">gulp commands</a> are available</div>
-        <div class="item">Learn about <a href="/usage/themes.html">changing themes</a> and using site themes</div>
+        <div class="item">See how to use <a href="/introduction/build-tools.html">gulp commands</a> and build tools</div>
+        <div class="item">Learn about <a href="/usage/theming.html">changing themes</a></div>
+        <div class="item">See <a href="/introduction/advanced-usage.html">recipes</a> for using Semantic UI in your project</div>
       </div>
     </div>
 

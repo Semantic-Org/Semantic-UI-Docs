@@ -389,7 +389,7 @@ type        : 'Usage'
       </div>
     </div>
     <p>Packaged themes are themes bundled together in a folder for distribution. These can be downloaded from the internet, or carried between projects.</p>
-    <p>Packaged themes can be used by modifying values in your <a href="#theme-config">theme.config</a> file.</p>
+    <p>Packaged themes can be used by modifying values in your <a href="#using-packaged-themes">theme.config</a> file.</p>
   </div>
 
   <div class="no example">

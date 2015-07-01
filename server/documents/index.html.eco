@@ -60,9 +60,9 @@ standalone : true
         <span class="library">
           Semantic UI
         </span>
-        <b data-text="User Interface">User Interface</b>
-        <span class="typed-cursor">|</span>
-        <span class="text">is the language of the web.</span>
+        <span class="tagline">
+          User Interface is the language of the web
+        </span>
       </h1>
       <div class="ui hidden divider"></div>
 
@@ -274,7 +274,7 @@ standalone : true
           3000+ Theming Variables
         </h2>
         <p>The only dogma from this framework: <em>everything arbitrary is mutable</em>.</p>
-        <a class="ui large button" href="/usage/theming.html">Integration Guide</a>
+        <a class="ui large button" href="/usage/theming.html">Theming Guide</a>
       </div>
       <div class="column">
         <h2 class="ui icon header">
@@ -972,13 +972,15 @@ standalone : true
           Responsively Designed
         </h2>
         <p>Semantic is <b>designed completely with em</b> making reponsive sizing a breeze. Design <em>variations</em> built into elements allow you to make the choice how content adjusts for tablet and mobile.</p>
+        <a class="ui large button" href="/usage/layout.html">Responsive Examples</a>
       </div>
       <div class="column">
         <h2 class="ui icon header">
           <img class="ui icon image" src="/images/icons/heart.png">
           Partners with Libraries You Love
         </h2>
-        <p>Semantic has integrations with <b>Angular, Meteor, Ember</b> and many other frameworks to help organize your UI layer alongside your application logic.</p>
+        <p>Semantic has integrations with <b>React, Angular, Meteor, Ember</b> and many other frameworks to help organize your UI layer alongside your application logic.</p>
+        <a class="ui large button" href="/introduction/integrations.html">See Integrations</a>
       </div>
     </div>
   </div>
@@ -991,20 +993,12 @@ standalone : true
         Liberate your Development
       </h1>
       <div class="ui stackable center aligned vertically padded grid">
-<!--         <div class="column">
-          <h3 class="ui header">Beginner Friendly</h3>
-          <p>Don't feel comfortable tweaking everything? Download free community designed themes and use our customizer to build a package fit for your needs.</p>
-          <a class="ui large disabled right labeled icon button">
-            <i class="right chevron icon"></i>
-            View Basic Guide
-          </a>
-        </div> -->
         <div class="eight wide column">
           <h3 class="ui header">Enterprise Ready</h3>
           <p>Build tools, performance logging, support for custom definitions, multiple-levels of theme inheritance—a developer's dream.</p>
           <a class="ui large right labeled primary icon button" href="/introduction/getting-started.html">
             <i class="right chevron icon"></i>
-            Getting Started Guide
+            Get Started Now
           </a>
         </div>
       </div>

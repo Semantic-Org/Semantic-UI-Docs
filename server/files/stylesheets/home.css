@@ -46,7 +46,7 @@
   margin-bottom: 0px;
   border-bottom: none;
 
-  background-color: #202020;
+  background-color: #000000;
   background-position: 50% 50%;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
@@ -61,7 +61,7 @@
   content: '';
   background-size: cover;
 
-  opacity: 0.5;
+  opacity: 0.45;
 }
 #example.index .masthead.bg1:after {
   background-image: url("/images/backgrounds/1.jpg");
@@ -226,6 +226,9 @@
   -moz-transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
+}
+#example.index .masthead.segment h1 .tagline {
+  font-size: 0.75em;
 }
 #example.index .masthead.segment h1 > .library {
   display: block;

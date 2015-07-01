@@ -19,14 +19,16 @@ semantic.home.ready = function() {
   ;
 
   handler = {
-    endAnimation: function() {
-      $header
-        .addClass('stopped')
-      ;
+    getRandomInt: function(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
     },
     introduction: function() {
+      var
+        background = 'bg' + handler.getRandomInt(1, 14)
+      ;
       // zoom out
       $header
+        .addClass(background)
         .removeClass('zoomed')
       ;
     },
@@ -200,11 +202,8 @@ semantic.home.ready = function() {
     }
   };
 
-  $('.logo.shape')
-    .shape({
-      duration: 400
-    })
-  ;
+  // intro
+  handler.introduction();
 
   if($(window).width() > 600) {
     $('body')
@@ -248,12 +247,6 @@ semantic.home.ready = function() {
       position: 'bottom center'
     })
   ;
-/*
-  $('.following.bar .network')
-    .find('.item')
-      .on('mouseenter', handler.changeLogo)
-      .on('mouseleave', handler.returnLogo)
-  ;*/
 
   $('.email.stripe form')
     .form({
@@ -276,7 +269,6 @@ semantic.home.ready = function() {
   ;
 
 
-  handler.introduction();
 
   $themeDropdown
     .dropdown('setting', 'transition', 'drop')

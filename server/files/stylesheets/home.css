@@ -26,6 +26,17 @@
     Masthead
 ---------------*/
 
+#example.index .masthead.segment.zoomed h1 {
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0);
+  color: rgba(255, 255, 255, 1);
+}
+#example.index .masthead.zoomed:after {
+  opacity: 0;
+}
+#example.index .masthead.zoomed {
+  background-color: #252D2F;
+}
+
 #example.index .masthead {
   position: relative;
   overflow: hidden;
@@ -35,15 +46,10 @@
   margin-bottom: 0px;
   border-bottom: none;
 
-  background-color: #2C3432;
+  background-color: #202020;
   background-position: 50% 50%;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-
-  -ms-transition: background-color 3s ease 1s;
-  -moz-transition: background-color 3s ease 1s;
-  -webkit-transition: background-color 3s ease 1s;
-  transition: background-color 3s ease 1s;
 }
 #example.index .masthead:after {
   position: absolute;
@@ -53,23 +59,91 @@
   width: 100%;
   height: 100%;
   content: '';
-  background: url("/images/backgrounds/2.jpg");
   background-size: cover;
 
-  opacity: 0.5;
-
-  -ms-transition: opacity 3s ease 0s;
-  -moz-transition: opacity 3s ease 0s;
-  -webkit-transition: opacity 3s ease 0s;
-  transition: opacity 3s ease 0s;
+  opacity: 0.3;
+}
+#example.index .masthead.bg1:after {
+  background-image: url("/images/backgrounds/1.jpg");
+}
+#example.index .masthead.bg2:after {
+  background-image: url("/images/backgrounds/2.jpg");
+}
+#example.index .masthead.bg3:after {
+  background-image: url("/images/backgrounds/3.jpg");
+}
+#example.index .masthead.bg4:after {
+  background-image: url("/images/backgrounds/4.jpg");
+}
+#example.index .masthead.bg5:after {
+  background-image: url("/images/backgrounds/5.jpg");
+}
+#example.index .masthead.bg6:after {
+  background-image: url("/images/backgrounds/6.jpg");
+}
+#example.index .masthead.bg7:after {
+  background-image: url("/images/backgrounds/7.jpg");
+}
+#example.index .masthead.bg8:after {
+  background-image: url("/images/backgrounds/8.jpg");
+}
+#example.index .masthead.bg9:after {
+  background-image: url("/images/backgrounds/9.jpg");
+}
+#example.index .masthead.bg10:after {
+  background-image: url("/images/backgrounds/10.jpg");
+}
+#example.index .masthead.bg11:after {
+  background-image: url("/images/backgrounds/11.jpg");
+}
+#example.index .masthead.bg12:after {
+  background-image: url("/images/backgrounds/12.jpg");
+}
+#example.index .masthead.bg13:after {
+  background-image: url("/images/backgrounds/13.jpg");
+}
+#example.index .masthead.bg14:after {
+  background-image: url("/images/backgrounds/14.jpg");
 }
 
+
+#example.index .masthead,
+#example.index .masthead:after {
+  -ms-transition:
+    background 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s,
+    opacity 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s
+  ;
+  -moz-transition:
+    background 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s,
+    opacity 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s
+  ;
+  -webkit-transition:
+    background 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s,
+    opacity 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s
+  ;
+  transition:
+    background 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s,
+    opacity 6s cubic-bezier(0.680, -0.550, 0.265, 1.4) 0s
+  ;
+}
 #example.index .masthead .container {
+  height: 65vh;
   margin-left: auto !important;
   margin-right: auto !important;
-}
-#example.index .masthead.zoomed:after {
-  opacity: 0;
+  min-height: 600px;
+
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 #example .masthead .container {
   padding: 15rem 0em;
@@ -91,158 +165,6 @@
   padding-left: 0em;
 }
 
-/* Animation */
-/*#example.index .masthead:before {
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  top: 0%;
-  left: 0px;
-  content: '';
-  background: url(/images/before.jpg);
-
-  -moz-transform-origin: 50% 50%;
-  -o-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-
-  -webkit-animation-name: masthead;
-  -moz-animation-name: masthead;
-  -o-animation-name: masthead;
-  animation-name: masthead;
-
-  -ms-transition: opacity 2.5s ease-in-out, transform 5s ease-in-out;
-  -webkit-transition: opacity 2.5s ease-in-out, transform 5s ease-in-out;
-  -moz-transition: opacity 2.5s ease-in-out, transform 5s ease-in-out;
-  transition: opacity 2.5s ease-in-out, transform 5s ease-in-out;
-
-  opacity: 0;
-
-  -webkit-animation-duration: 15s;
-  -moz-animation-duration: 15s;
-  -ms-animation-duration: 15s;
-  -o-animation-duration: 15s;
-  animation-duration: 15s;
-
-  -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -ms-animation-fill-mode: both;
-  -o-animation-fill-mode: both;
-  animation-fill-mode: both;
-
-  animation-timing-function: linear;
-  -webkit-animation-timing-function: linear;
-
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
-  -ms-animation-iteration-count: infinite;
-  -o-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-}
-#example.index .masthead:after {
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  top: 0%;
-  left: 0px;
-  content: '';
-  background: url(/images/ui.png);
-
-  -moz-transform-origin: 50% 50%;
-  -o-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-
-  -webkit-animation-name: masthead;
-  -moz-animation-name: masthead;
-  -o-animation-name: masthead;
-  animation-name: masthead;
-
-  -ms-transition: opacity 3s ease-in-out, transform 5s ease-in-out;
-  -webkit-transition: opacity 3s ease-in-out, transform 5s ease-in-out;
-  -moz-transition: opacity 3s ease-in-out, transform 5s ease-in-out;
-  transition: opacity 3s ease-in-out, transform 5s ease-in-out;
-
-  opacity: 0.06;
-
-  -webkit-animation-duration: 15s;
-  -moz-animation-duration: 15s;
-  -ms-animation-duration: 15s;
-  -o-animation-duration: 15s;
-  animation-duration: 15s;
-
-  -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -ms-animation-fill-mode: both;
-  -o-animation-fill-mode: both;
-  animation-fill-mode: both;
-
-  animation-timing-function: linear;
-  -webkit-animation-timing-function: linear;
-
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
-  -ms-animation-iteration-count: infinite;
-  -o-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-
-}
-#example .masthead.zoomed:before {
-  opacity: 0.05;
-  -webkit-transform: rotateX(0deg) rotateZ(0deg) rotateY(0deg) translateZ(0px);
-  -moz-transform: rotateX(0deg) rotateZ(0deg) rotateY(0deg) translateZ(0px);
-  transform: rotateX(0deg) rotateZ(0deg) rotateY(0deg) translateZ(0px);
-}
-#example.index .masthead.zoomed:after {
-  opacity: 0;
-  -webkit-transform: rotateX(0deg) rotateZ(0deg) rotateY(0deg) translateY(-6%) translateZ(0px);
-  -moz-transform: rotateX(0deg) rotateZ(0deg) rotateY(0deg) translateY(-6%) translateZ(0px);
-  transform: rotateX(0deg) rotateZ(0deg) rotateY(0deg) translateY(-6%) translateZ(0px);
-}
-@keyframes masthead {
- 0% {
-    background-position: 0% 0%;
- }
- 100% {
-    background-position: 0% -475px;
- }
-}
-@-moz-keyframes masthead {
- 0% {
-   background-position: 0% 0%;
- }
- 100% {
-   background-position: 0% -475px;
- }
-}
-@-webkit-keyframes masthead {
- 0% {
-   background-position: 0% 0%;
- }
- 100% {
-   background-position: 0% -475px;
- }
-}
-@-ms-keyframes masthead {
- 0% {
-   background-position: 0% 0%;
- }
- 100% {
-  background-position: 0% -475px;
- }
-}
-@-o-keyframes masthead {
- 0% {
-   background-position: 0% 0%;
- }
- 100% {
-   background-position: 0% -475px;
- }
-}
-
-*/
 #example.index .light.following.bar {
   padding: 1em 0em;
   background-color: #FFFFFF;
@@ -291,7 +213,7 @@
 
 #example.index .masthead.segment h1 {
   font-size: 3em;
-  color: #FFFFFF;
+  color: rgba(255, 255, 255, 1);
   line-height: 1.2;
   margin: 0px 0px 0px;
   padding-bottom: 0px;
@@ -308,18 +230,15 @@
 #example.index .masthead.segment h1 > .library {
   display: block;
   font-size: 1.75em;
-  color: #FFFFFF;
   font-weight: bold;
 }
 #example.index .masthead.segment h1 b {
   display: inline-block;
   font-weight: 500;
-  color: #FFFFFF;
 }
 #example.index .masthead.segment h1 .text {
   display: inline-block;
   font-weight: 300;
-  color: rgba(255, 255, 255, 0.8);
   margin-left: -0.4em;
 }
 #example.index .masthead h2 {
@@ -751,6 +670,7 @@
   #example.index .main.menu {
     display: none;
   }
+
   #example.index .fixed.launch.button {
     display: none;
   }
@@ -760,6 +680,9 @@
 
 /* Homepage */
 @media only screen and (max-width : 810px) {
+  #example.index .masthead.segment h1 > .library {
+    font-size: 1.75em;
+  }
   #example.index .feature.stripe p {
     height: auto;
     min-height: 0px;
@@ -771,12 +694,18 @@
   #example .solid, #example .stripe {
     padding: 6em 0em;
   }
+  #example.index .masthead .container {
+    margin-top: 50px;
+  }
   #example.index .following.bar span.additional.item {
     display: none;
     visibility: hidden !important;
   }
   #example.index .following.bar .network.menu .view-ui {
     margin-right: 0.75em;
+  }
+  #example.index .masthead .container {
+    min-height: 350px;
   }
 }
 

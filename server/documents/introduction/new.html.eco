@@ -19,7 +19,7 @@ type        : 'Main'
   <div class="no example">
 
     <h4 class="ui header">The Devil is in the Details</h4>
-    <p style="margin-bottom:0em;padding-bottom:0em;">2.0 brings a whopping set of changes to the project:
+    <p>2.0 brings a whopping set of changes to the project:
     <div class="ui large bulleted list">
       <div class="item"><b>129</b> enhancements</div>
       <div class="item"><b>118</b> bug fixes</div>
@@ -601,7 +601,7 @@ type        : 'Main'
 
   <h2 class="ui dividing header">Checkbox</h2>
 
-  <div class="indeterminate example">
+<!--   <div class="indeterminate example">
     <h4 class="ui header">Progresssively Enhanced</h4>
     <p><a href="/modules/checkbox.html">Checkboxes</a> now can work without javascript, although additional features are available with javascript use.</p>
 
@@ -621,7 +621,7 @@ type        : 'Main'
       <input type="checkbox" />
       <label>No Javascript</label>
     </div>
-  </div>
+  </div> -->
 
   <div class="indeterminate example">
     <h4 class="ui header">Indeterminate Checkbox</h4>

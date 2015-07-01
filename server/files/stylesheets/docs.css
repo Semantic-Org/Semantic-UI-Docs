@@ -203,7 +203,9 @@ blockquote .author {
   margin: 0em;
 }
 
-#example .masthead iframe.github {
+#example .masthead iframe {
+  margin-left: 5px;
+  width: 101px !important;
   float: right;
 }
 
@@ -2108,7 +2110,7 @@ code .chunk {
   }
 
   /* Hide GitHub Stars in Intro */
-  #example .masthead iframe.github {
+  #example .masthead iframe {
     display: none;
   }
 

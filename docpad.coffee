@@ -54,6 +54,9 @@ docpadConfig = {
 		# Often we would like to specify particular formatting to our page's title
 		# we can apply that formatting here
 
+		getDirPath: ->
+			@document.dirPath
+
 		getVersion: ->
 			@site.version
 

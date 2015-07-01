@@ -9,8 +9,17 @@
         <%=@document.title %>
         <% if @document.status?: %><span class="ui red label"><%= @document.status %></span><% end %>
         <div class="sub header">
-          <% if 'development' in @getEnvironments(): %>
+          <% if 'developments' in @getEnvironments(): %>
           <% else: %>
+          <a class="twitter-share-button twitter"
+            href="http://twitter.com/share"
+            data-text="Semantic UI is a next generation UI framework"
+            data-url="http://semantic-ui.com"
+            data-via="semanticui">
+          </a>
+          <script type="text/javascript">
+          window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
+          </script>
           <iframe class="github" src="http://ghbtns.com/github-btn.html?user=semantic-org&amp;repo=semantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
           <% end %>
           <%=@document.description %>
@@ -20,7 +29,7 @@
       <div class="ui hidden divider"></div>
 
       <div class="ui right floated main menu">
-        <a class="bug popup icon item" data-content="Edit This Page" href="https://github.com/Semantic-Org/Semantic-UI-Docs/edit/<%= @getBranch() %>/server/documents/<%= @document.elementType %>s/<%= @document.element %>.html.eco">
+        <a class="bug popup icon item" data-content="Edit This Page" href="https://github.com/Semantic-Org/Semantic-UI-Docs/edit/<%= @getBranch() %>/server/documents/<%= @document.relativePath %>">
           <i class="edit icon"></i>
         </a>
         <% if @document.type is 'UI Element' or @document.type is 'UI View' or @document.type is 'UI Collection' or @document.type is 'UI Module': %>

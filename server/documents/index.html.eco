@@ -20,14 +20,14 @@ standalone : true
       </a>
       <div class="right menu">
         <div class="item">
+          <% if 'development' in @getEnvironments(): %>
+          <% else: %>
           <a class="twitter-share-button twitter"
             href="http://twitter.com/share"
             data-text="Semantic UI 2.0 is out!"
             data-url="http://semantic-ui.com"
             data-via="semanticui">
           </a>
-          <% if 'development' in @getEnvironments(): %>
-          <% else: %>
           <script type="text/javascript">
           window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
           </script>

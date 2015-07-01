@@ -188,12 +188,14 @@ standalone : true
       <h3 class="ui header">
         Semantic is growing fast. Want to see just how much? Sign up and we'll let you know
       </h3>
-      <form class="ui form" method="post" action="//semantic-ui.us9.list-manage.com/subscribe/post?u=1bb099283b001a74133a94364&amp;id=1b77a619a7">
+      <form class="ui form" method="post" action="https://semantic-ui.clients.ubivox.com/handlers/post/">
+        <input type="hidden" name="action" value="subscribe" />
+        <input type="hidden" name="lists" value="29450" />
         <div class="field">
           <div class="ui huge input">
-            <input type="text" name="EMAIL" data-validate="email" placeholder="E-mail">
+            <input type="text" name="email_address" data-validate="email" placeholder="E-mail">
           </div>
-          <button type="submit" class="ui huge secondary submit button">
+          <button type="submit" value="Subscribe" class="ui huge secondary submit button">
             Sign-up
           </button>
         </div>

@@ -10,7 +10,7 @@ docpadConfig = {
 
 	plugins:
     ghpages:
-      deployRemote: 'beta'
+      deployRemote: 'origin'
       deployBranch: 'gh-pages'
 
 	# =================================
@@ -31,7 +31,7 @@ docpadConfig = {
 
 			version: "2.0.0",
 
-			branch: "next",
+			branch: "master",
 
 			# The default title of our website
 			title: "Semantic UI"

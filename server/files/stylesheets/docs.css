@@ -721,9 +721,11 @@ blockquote .author {
 }
 
 /* Examples Tab */
+#example .tab[data-tab*="examples"] .example > p,
 #example .examples.tab .example > p {
   margin: 1em 0em;
 }
+#example .tab[data-tab*="examples"] .example .anchor + p,
 #example .examples.tab .example .anchor + p {
   padding: 0em;
 }

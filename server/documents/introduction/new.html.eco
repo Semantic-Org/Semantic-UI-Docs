@@ -82,11 +82,11 @@ type        : 'Main'
       </div>
     </div>
   </div>
-  <div class="example">
+  <div class="no example">
     <h4 class="ui header">New Default Theme</h4>
     <p>All components have received a face-lift for 2.0. Styles give slightly more negative space and a few idiosyncratic design touches have been removed.</p>
   </div>
-  <div class="example">
+  <div class="no example">
     <h4 class="ui header">More Precise EM Values</h4>
     <p>EM sizing has been improved in 2.0, with all values rounding to exact pixel values. This helps common relative sizing pitfalls like rounding errors in vertical alignment.</p>
     <p>Em variables now use new globally calculated em ratios, like <code>@relative4px</code>, to express pixel values in terms of root em size. This makes sure components don't include confusing decimal or fractional values when dealing with sizing.</p>
@@ -275,7 +275,7 @@ type        : 'Main'
 
   <div class="dropdown example">
     <h4 class="ui header">Scrolling Menus</h4>
-    <p><a href="../modules/dropdown.html#scrolling">Scrolling menu</a> and nested menus are now supported.</p>
+    <p><a href="/modules/dropdown.html#scrolling">Scrolling menu</a> and nested menus are now supported.</p>
     <p>Listing choices in a nested menu will still give all the same keyboard shortcuts and filtering as regular menus.</p>
     <div class="ui floating dropdown labeled icon button">
       <i class="filter icon"></i>

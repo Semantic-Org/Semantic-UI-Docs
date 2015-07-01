@@ -420,7 +420,7 @@ themes      : ['Default']
   <div class="example">
     <h4 class="ui header">Group Size</h4>
     <p>Labels can share sizes together</p>
-    <div class="ui large labels">
+    <div class="ui huge labels">
       <div class="ui label">
         Fun
       </div>

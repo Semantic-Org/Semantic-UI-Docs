@@ -564,7 +564,7 @@ themes      : ['Default']
         </tr>
         <tr>
           <td>exclusive</td>
-          <td>true</td>
+          <td>false</td>
           <td>Whether all other popups should be hidden when this popup is opened</td>
         </tr>
         <tr>

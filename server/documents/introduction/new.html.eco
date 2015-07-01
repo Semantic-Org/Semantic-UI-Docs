@@ -275,7 +275,7 @@ type        : 'Main'
 
   <div class="dropdown example">
     <h4 class="ui header">Scrolling Menus</h4>
-    <p><a href="modules/dropdown.html#scrolling">Scrolling menu</a> and nested menus are now supported.</p>
+    <p><a href="../modules/dropdown.html#scrolling">Scrolling menu</a> and nested menus are now supported.</p>
     <p>Listing choices in a nested menu will still give all the same keyboard shortcuts and filtering as regular menus.</p>
     <div class="ui floating dropdown labeled icon button">
       <i class="filter icon"></i>

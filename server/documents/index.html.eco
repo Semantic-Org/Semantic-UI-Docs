@@ -305,8 +305,8 @@ standalone : true
         Unbelievable Breadth
       </h1>
       <p>Definitions aren't limited to just buttons on a page. Semantic's components allow several distinct types of definitions: elements, collections, views, modules and behaviors which cover the gamut of interface design.</p>
-      <a class="ui large primary button" href="/kitchen-sink.html">
-        See More Examples
+      <a class="ui large primary button" href="/usage/layout.html">
+        See Layout Examples
         <i class="right chevron icon"></i>
       </a>
     </div>

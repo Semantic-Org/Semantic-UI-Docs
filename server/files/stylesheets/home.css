@@ -34,7 +34,7 @@
   opacity: 0;
 }
 #example.index .masthead.zoomed {
-  background-color: #252D2F;
+  background-color: #25282A;
 }
 
 #example.index .masthead {
@@ -61,7 +61,7 @@
   content: '';
   background-size: cover;
 
-  opacity: 0.3;
+  opacity: 0.5;
 }
 #example.index .masthead.bg1:after {
   background-image: url("/images/backgrounds/1.jpg");
@@ -127,7 +127,7 @@
   ;
 }
 #example.index .masthead .container {
-  height: 65vh;
+  height: 55vh;
   margin-left: auto !important;
   margin-right: auto !important;
   min-height: 600px;
@@ -595,8 +595,8 @@
   #example.index .carbonad {
     width: 260px !important;
   }
-  #example.index .masthead.segment h1 > .library {
-    font-size: 1.5em;
+  #example.index .masthead.segment h1  {
+    font-size: 1.75em !important;
   }
   #example.index .feature.stripe {
     padding: 1em;
@@ -655,7 +655,7 @@
   }
 }
 
-@media only screen and (max-width : 600px) {
+@media only screen and (max-width : 650px) {
   #example.index .fixed.launch.button {
     display: none;
   }
@@ -663,7 +663,7 @@
     font-size: 32px;
   }
 }
-@media only screen and (min-width : 600px) {
+@media only screen and (min-width : 650px) {
   #example .theming .source.button {
     display: none;
   }
@@ -706,6 +706,7 @@
   }
   #example.index .masthead .container {
     min-height: 350px;
+    height: auto;
   }
 }
 

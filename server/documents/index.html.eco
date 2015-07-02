@@ -83,6 +83,17 @@ standalone : true
     </div>
   </div>
 </div>
+<div class="ui promo alternative stripe vertical segment">
+  <div class="ui center aligned grid container">
+    <div class="fourteen wide stackable column">
+      <h3 class="ui header">
+        <img class="ui small image" src="/images/icons/community.png">
+        <div class="content">We're throwing a launch party July 14th in NYC and you're invited!</div>
+      </h3>
+      <a class="ui big primary button" href="https://www.eventbrite.com/e/semantic-ui-20-launch-party-tickets-17620305809" target="_blank">RSVP to Attend</a>
+    </div>
+  </div>
+</div>
 <div class="ui vertical stripe intro segment">
   <div class="ui stackable very relaxed center aligned grid container">
     <div class="row">

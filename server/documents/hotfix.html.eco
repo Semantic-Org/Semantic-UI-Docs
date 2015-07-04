@@ -10,7 +10,7 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script>
 $(document).ready(function() {
-$('.ui.rating').rating();
+$('.ui.checkbox').checkbox({ debug: true });
 
 });
 </script>
@@ -20,11 +20,35 @@ $('.ui.rating').rating();
 </style>
 
 <div class="ui container" style="margin-top:5em;">
-<div class="ui basic segment">
-    <span class="ui rating" data-rating="2"></span> <span>
-    <i class="star icon"></i>
-    Hello</span>
-</div>
+
+                <div class="ui form">
+                  <div class="grouped fields">
+                    <div class="field">
+                      <div class="ui radio checkbox">
+                        <input type="radio" name="size" value="small">
+                        <label>Small</label>
+                      </div>
+                    </div>
+                    <div class="field">
+                      <div class="ui radio checkbox">
+                        <input type="radio" name="size" value="medium">
+                        <label>Medium</label>
+                      </div>
+                    </div>
+                    <div class="field">
+                      <div class="ui radio checkbox">
+                        <input type="radio" name="size" value="large">
+                        <label>Large</label>
+                      </div>
+                    </div>
+                    <div class="field">
+                      <div class="ui radio checkbox">
+                        <input type="radio" name="size" value="x-large">
+                        <label>X-Large</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 </div>
 
 </body>

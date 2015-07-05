@@ -10,7 +10,7 @@ docpadConfig = {
 
 	plugins:
     ghpages:
-      deployRemote: 'origin'
+      deployRemote: '1.0'
       deployBranch: 'gh-pages'
 
 	# =================================

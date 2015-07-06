@@ -756,6 +756,12 @@ blockquote .author {
   display: none;
 }
 
+#example .fixed.example iframe {
+  border: none;
+  width: 100%;
+  height: 350px;
+}
+
 /* Requires Clear */
 #example .clearing.example {
   overflow: hidden;
@@ -2215,8 +2221,7 @@ code .chunk {
 @media only screen and (max-width: 768px) {
 
   /* Hide Some Fixed Menu Content (Pagination, Search) */
-  #example .fixed.menu > .container > .section.item,
-  #example .fixed.menu > .container > .right.menu > .item:last-child {
+  #example .fixed.menu > .container > .section.item {
     display: none;
   }
 

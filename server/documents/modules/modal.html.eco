@@ -1,4 +1,4 @@
----
+F---
 layout      : 'default'
 css         : 'modal-page'
 standalone  : true
@@ -751,18 +751,11 @@ themes      : ['Default', 'Material']
           <td>You can specify custom settings to extend <a href="/modules/dimmer.html">UI dimmer</a></td>
         </tr>
         <tr>
-          <td>useCSS</td>
-          <td>
-            true
-          </td>
-          <td>Whether to use CSS animations instead of fallback javascript animations</td>
-        </tr>
-        <tr>
           <td>transition</td>
           <td>
             scale
           </td>
-          <td>Named transition to use when animating menu in and out. <code>Fade</code> is available without including <a href="/modules/transition.html">ui transitions</a></td>
+          <td>Named transition to use when animating menu in and out, full list can be found in <a href="/modules/transition.html">ui transitions</a> docs.</td>
         </tr>
         <tr>
           <td>duration</td>
@@ -777,13 +770,6 @@ themes      : ['Default', 'Material']
             false
           </td>
           <td>Whether additional animations should queue</td>
-        </tr>
-        <tr>
-          <td>easing</td>
-          <td>
-            easeOutExpo
-          </td>
-          <td>Animation easing is only used if javascript animations are used.</td>
         </tr>
       </tbody>
     </table>

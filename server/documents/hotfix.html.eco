@@ -10,7 +10,8 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script>
 $(document).ready(function() {
-$('.ui.checkbox').checkbox({ debug: true });
+
+$('.ui.dropdown').dropdown();
 
 });
 </script>
@@ -18,37 +19,19 @@ $('.ui.checkbox').checkbox({ debug: true });
 <!-- TEST CSS HERE !-->
 <style type="text/css">
 </style>
+<%= @getVersion() %>
 
 <div class="ui container" style="margin-top:5em;">
 
-                <div class="ui form">
-                  <div class="grouped fields">
-                    <div class="field">
-                      <div class="ui radio checkbox">
-                        <input type="radio" name="size" value="small">
-                        <label>Small</label>
-                      </div>
-                    </div>
-                    <div class="field">
-                      <div class="ui radio checkbox">
-                        <input type="radio" name="size" value="medium">
-                        <label>Medium</label>
-                      </div>
-                    </div>
-                    <div class="field">
-                      <div class="ui radio checkbox">
-                        <input type="radio" name="size" value="large">
-                        <label>Large</label>
-                      </div>
-                    </div>
-                    <div class="field">
-                      <div class="ui radio checkbox">
-                        <input type="radio" name="size" value="x-large">
-                        <label>X-Large</label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-</div>
 
+        <select multiple class="ui fluid dropdown">
+          <option value="">Skills</option>
+          <option value="angular">Angular</option>
+          <option value="css">CSS</option>
+          <option value="ember">Ember</option>
+          <option value="html">HTML</option>
+          <option value="javascript">Javascript</option>
+          <option value="meteor">Meteor</option>
+          <option value="node">NodeJS</option>
+        </select>
 </body>

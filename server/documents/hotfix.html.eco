@@ -10,8 +10,10 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script>
 $(document).ready(function() {
-
-$('.ui.dropdown').dropdown();
+$('input')
+  .popup({ namespace: 'popup1', on: 'focus'})
+  .popup({ namespace: 'popup2', on: 'hover'})
+;
 
 });
 </script>
@@ -22,16 +24,11 @@ $('.ui.dropdown').dropdown();
 <%= @getVersion() %>
 
 <div class="ui container" style="margin-top:5em;">
-
-
-        <select multiple class="ui fluid dropdown">
-          <option value="">Skills</option>
-          <option value="angular">Angular</option>
-          <option value="css">CSS</option>
-          <option value="ember">Ember</option>
-          <option value="html">HTML</option>
-          <option value="javascript">Javascript</option>
-          <option value="meteor">Meteor</option>
-          <option value="node">NodeJS</option>
-        </select>
+  <div class="ui input">
+    <input type="text" class="mything">
+    <div class="ui popup">
+      popup content
+    </div>
+  </div>
+</div>
 </body>

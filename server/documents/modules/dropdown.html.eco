@@ -783,7 +783,7 @@ themes      : ['Default', 'Material']
 
     <div class="dropdown example">
       <h4 class="ui header">Message</h4>
-      <p>A dropdown menu can contain a <a href="/elements/message.html">message</a>.</p>
+      <p>A dropdown menu can contain a <a href="/collections/message.html">message</a>.</p>
       <div class="ui floating labeled icon dropdown button">
         <i class="filter icon"></i>
         <span class="text">Login</span>

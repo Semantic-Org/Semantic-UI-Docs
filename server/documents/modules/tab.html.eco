@@ -609,7 +609,7 @@ themes      : ['Default']
           <td>Do not load content remotely on first tab load. Useful when open tab is rendered on server.</td>
         </tr>
         <tr>
-          <td>parseScripts</td>
+          <td>evaluateScripts</td>
           <td>once</td>
           <td>Whether inline scripts in tab html should be parsed on tab load. Defaults to <code>once</code>, parsing only on first load. Can also be set to <code>true</code> or <code>false</code> to always parse or never parse inline scripts.</td>
         </tr>

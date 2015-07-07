@@ -235,11 +235,11 @@ type        : 'UI Behavior'
           </tr>
           <tr>
             <td>regExp[expression]</td>
-            <td>Matches against a regular expression</td>
+            <td>Matches against a regular expression, expects RegExp to be enclosed in <code>/</code></td>
             <td>
               <code>regExp[/^[a-z0-9_-]{3,16}$/gi]]</code>
               <div class="ui horizontal divider">Or</div>
-              <code>regExp[^[a-z0-9_-]{3,16}$]]</code>
+              <code>regExp[/^[a-z0-9_-]{3,16}$/]]</code>
             </td>
           </tr>
           <tr>

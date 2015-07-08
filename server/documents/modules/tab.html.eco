@@ -76,7 +76,7 @@ themes      : ['Default']
 
   <div class="ui tab" data-tab="examples">
 
-    <h2 class="ui dividing header">Examples</h2>
+    <h2 class="ui dividing header">Basic Examples</h2>
 
     <div class="first example">
       <h4 class="ui header">Basic Tabs</h4>
@@ -105,44 +105,8 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="dynamic no example">
-      <h4 class="header">Retreiving Remote Tab Content</h4>
-      <p>Using <code>auto: true</code> will load the tab's path from your server with additional headers to specify an in-page request. Additional requests will automatically be loaded from cache without a server request.</p>
-      <div class="ui ignored info message">
-        Tab contents defaults to automatically caching in <code>sessionStorage</code> using API's <code>cache: 'local'</code> setting. You can disable this behavior by setting <code>cache: false</code> in <code>apiSettings</code>.
-      </div>
-      <div class="ui ignored warning message">
-        API requests for the following example have been faked using <a href="/behaviors/api.html#using-custom-backends">mockResponseAsync</a> API setting to avoid network overhead.
-      </div>
-      <div class="code">
-      $('.dynamic.example .menu .item')
-        .tab({
-          context : 'parent',
-          auto    : true,
-          path    : '/'
-        })
-      ;
-      </div>
-      <div class="ui pointing secondary menu">
-        <a class="active item" data-tab="first">First</a>
-        <a class="item" data-tab="second">Second</a>
-        <a class="item" data-tab="third">Third</a>
-      </div>
-      <div class="ui active tab segment" data-tab="first">
-        <h3 class="ui header">AJAX Tab One</h3>
-        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-      </div>
-      <div class="ui tab segment" data-tab="second">
-      </div>
-      <div class="ui tab segment" data-tab="third">
-      </div>
-    </div>
-
-
     <div class="context example">
-      <h4 class="ui header">Multiple Tabs on Same Page</h4>
+      <h4 class="ui header">Multiple Tab Groups</h4>
       <p>There are a several of ways to include independent tab groups on the same page, even with history. One of the easiest ways is provide a specific parent context for each tab group.</p>
       <div class="ui ignored info message">
         If you are using tab contexts inside of tabs, you can also specify <code>childrenOnly: true</code> which will only look for tabs as the immediate children of the given context, or <code>context: 'parent'</code> a special keyword which avoids having to create unique selectors for each group.
@@ -192,34 +156,13 @@ themes      : ['Default']
           <a class="item" data-tab="sixth">Sixth</a>
         </div>
         <div class="ui tab segment" data-tab="fourth">
-          <div class="ui top attached tabular menu">
-            <a class="active item" data-tab="fourth/a">4A</a>
-            <a class="item" data-tab="fourth/b">4B</a>
-            <a class="item" data-tab="fourth/c">4C</a>
-          </div>
-          <div class="ui bottom attached active tab segment" data-tab="fourth/a">4A</div>
-          <div class="ui bottom attached tab segment" data-tab="fourth/b">4B</div>
-          <div class="ui bottom attached tab segment" data-tab="fourth/c">4C</div>
+          4
         </div>
-        <div class="ui tab segment active" data-tab="fifth">
-          <div class="ui top attached tabular menu">
-            <a class="item" data-tab="fifth/a">5A</a>
-            <a class="item" data-tab="fifth/b">5B</a>
-            <a class="item active" data-tab="fifth/c">5C</a>
-          </div>
-          <div class="ui bottom attached tab segment" data-tab="fifth/a">5A</div>
-          <div class="ui bottom attached tab segment" data-tab="fifth/b">5B</div>
-          <div class="ui bottom attached tab segment active" data-tab="fifth/c">5C</div>
+        <div class="ui active tab segment" data-tab="fifth">
+          5
         </div>
         <div class="ui tab segment" data-tab="sixth">
-          <div class="ui top attached tabular menu">
-            <a class="item" data-tab="sixth/a">6A</a>
-            <a class="item" data-tab="sixth/b">6B</a>
-            <a class="item" data-tab="sixth/c">6C</a>
-          </div>
-          <div class="ui bottom attached tab segment" data-tab="sixth/a">6A</div>
-          <div class="ui bottom attached tab segment" data-tab="sixth/b">6B</div>
-          <div class="ui bottom attached tab segment" data-tab="sixth/c">6C</div>
+          6
         </div>
         <div class="evaluated code" data-type="javascript">
           $('#context1 .menu .item')
@@ -287,6 +230,87 @@ themes      : ['Default']
       </div>
     </div>
 
+    <h2 class="ui dividing header">Remote Examples</h2>
+
+
+    <div class="dynamic no example">
+      <h4 class="header">Retreiving Remote Content</h4>
+      <p>Using <code>auto: true</code> will load the tab's path from your server with additional headers to specify an in-page request. When <a href="#settings"><code>cache: true</code></a> is set, re-opening a tab will be loaded from cache without a server request.</p>
+      <div class="ui ignored warning message">
+        API requests for the following example have been faked using <a href="/behaviors/api.html#using-custom-backends">mockResponse</a> API setting to avoid network overhead.
+      </div>
+      <div class="code">
+      $('.dynamic.example .menu .item')
+        .tab({
+          cache: false,
+          // faking api request
+          apiSettings: {
+            loadingDuration : 300,
+            mockResponse    : function(settings) {
+              var response = {
+                first  : 'AJAX Tab One',
+                second : 'AJAX Tab Two',
+                third  : 'AJAX Tab Three'
+              };
+              return response[settings.urlData.tab];
+            }
+          },
+          context : 'parent',
+          auto    : true,
+          path    : '/'
+        })
+      ;
+      </div>
+      <div class="ui pointing secondary menu">
+        <a class="active item" data-tab="first">First</a>
+        <a class="item" data-tab="second">Second</a>
+        <a class="item" data-tab="third">Third</a>
+      </div>
+      <div class="ui active tab segment" data-tab="first">
+        <h3 class="ui header">AJAX Tab One</h3>
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+      </div>
+      <div class="ui tab segment" data-tab="second">
+      </div>
+      <div class="ui tab segment" data-tab="third">
+      </div>
+    </div>
+
+    <div class="eval no example">
+      <h4 class="header">Evaluating Scripts in HTML</h4>
+      <p>By default, <code>script</code> tags included in HTML will only be evaluated on first load. To change this behavior you can adjust the  <code>evaluateScripts</code> setting.</p>
+      <div class="code">
+      $('.eval.example .menu .item')
+        .tab({
+          evaluateScripts : 'once',
+          context         : 'parent',
+          auto            : true,
+          path            : '/'
+        })
+      ;
+      </div>
+      <div class="ui pointing secondary menu">
+        <a class="active item" data-tab="first">First</a>
+        <a class="item" data-tab="second">Second</a>
+        <a class="item" data-tab="third">Third</a>
+      </div>
+      <div class="ui active tab segment" data-tab="first">
+        <h3 class="ui header">AJAX Tab One</h3>
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+      </div>
+      <div class="ui tab segment" data-tab="second">
+      </div>
+      <div class="ui tab segment" data-tab="third">
+      </div>
+    </div>
+
+
+    <h2 class="ui dividing header">History Examples</h2>
+
     <div class="history example">
       <h4>Using Hash History</h4>
       <p>For static sites, or sites that only require simple history, in-page links can be used to trigger different local tab states</p>
@@ -333,6 +357,41 @@ themes      : ['Default']
         <div class="ui bottom attached tab segment" data-tab="third/a">3A</div>
         <div class="ui bottom attached tab segment" data-tab="third/b">3B</div>
         <div class="ui bottom attached tab segment" data-tab="third/c">3C</div>
+      </div>
+    </div>
+
+    <div class="state example">
+      <h4>Using HTML5 State</h4>
+      <p>For sites that are able to replicate change on the server, tab can automatically map changes in tab navigation to <a href="http://diveintohtml5.info/history.html" target="_blank">html5 state.</a>
+      </p>
+      <div class="ui ignored info message">
+        Since these docs are statically hosted on GitHub Pages, html state is not supported. The following example will cause a "not found" error on page refresh.
+      </div>
+      <div class="evaluated code" data-type="javascript">
+        $('.state.example .menu .item')
+          .tab({
+            context     : '.state.example',
+            history     : true,
+            historyType : 'state',
+            // base url for all other path changes
+            path        : '/modules/tab.html'
+          })
+        ;
+      </div>
+
+      <div class="ui pointing secondary menu">
+        <a class="active item" data-tab="olive">Olive</a>
+        <a class="item" data-tab="apple">Apple</a>
+        <a class="item" data-tab="cucumber">Cucumber</a>
+      </div>
+      <div class="ui active tab segment" data-tab="olive">
+        Olive tab
+      </div>
+      <div class="ui tab segment" data-tab="apple">
+        Apple tab
+      </div>
+      <div class="ui tab segment" data-tab="cucumber">
+        Cucumber tab
       </div>
     </div>
 
@@ -550,7 +609,7 @@ themes      : ['Default']
           <td>Do not load content remotely on first tab load. Useful when open tab is rendered on server.</td>
         </tr>
         <tr>
-          <td>parseScripts</td>
+          <td>evaluateScripts</td>
           <td>once</td>
           <td>Whether inline scripts in tab html should be parsed on tab load. Defaults to <code>once</code>, parsing only on first load. Can also be set to <code>true</code> or <code>false</code> to always parse or never parse inline scripts.</td>
         </tr>

@@ -31,7 +31,7 @@ type        : 'Main'
 
     <p>To see the full list of what's changed check out the project's release notes.</p>
 
-    <a href="https://github.com/Semantic-Org/Semantic-UI/blob/<%= @getBranch() %>/RELEASE-NOTES.md" target="_blank" class="ui button">View Release Notes</a>
+    <a href="https://github.com/Semantic-Org/Semantic-UI/blob/<%= @getBranch() %>/RELEASE-NOTES.md#version-200---june-30-2015" target="_blank" class="ui button">View Release Notes</a>
   </div>
 
 

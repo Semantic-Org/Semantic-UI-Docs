@@ -10,45 +10,58 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script>
 $(document).ready(function() {
-$('.ui.checkbox').checkbox({ debug: true });
+var firstTabContent = "<div id='testfirst'>One</div> \n" +
+                "<scr" + "ipt type='text/javascript'>\n" +
+                "   $(function() { $('#testfirst').append('<div>dynamically appended div <b>(will disappear if tab is clicked again!)</b></div>') });\n" +
+                "</scr" + "ipt>";
 
+$('.menu .item')
+.tab({
+    cache: true,
+    evaluateScripts: 'once',
+    onFirstLoad: function(tabPath, parameterArray, historyEvent) {
+        console.log('Initialized tab: ' + tabPath);
+    },
+    onLoad: function(tabPath, parameterArray, historyEvent) { //tab selected
+        console.log('Selected tab: ' + tabPath);
+    },
+    apiSettings: {
+        loadingDuration : 300,
+        mockResponse    : function(settings) {
+            var response = {
+                first  :  firstTabContent,
+
+              second : 'Two',
+
+              third  : 'Three'
+            };
+
+            return response[settings.urlData.tab];
+        }
+    }
+});
 });
 </script>
 
 <!-- TEST CSS HERE !-->
 <style type="text/css">
 </style>
+<%= @getVersion() %>
 
 <div class="ui container" style="margin-top:5em;">
-
-                <div class="ui form">
-                  <div class="grouped fields">
-                    <div class="field">
-                      <div class="ui radio checkbox">
-                        <input type="radio" name="size" value="small">
-                        <label>Small</label>
-                      </div>
-                    </div>
-                    <div class="field">
-                      <div class="ui radio checkbox">
-                        <input type="radio" name="size" value="medium">
-                        <label>Medium</label>
-                      </div>
-                    </div>
-                    <div class="field">
-                      <div class="ui radio checkbox">
-                        <input type="radio" name="size" value="large">
-                        <label>Large</label>
-                      </div>
-                    </div>
-                    <div class="field">
-                      <div class="ui radio checkbox">
-                        <input type="radio" name="size" value="x-large">
-                        <label>X-Large</label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+<div class="ui basic segment">
+    1. Click on "First" tab and see content load<br>
+    2. Click on "First" tab again to see dynamically inserted elements disappear
 </div>
 
+<div class="ui top attached tabular menu">
+  <a class="active item" data-tab="first">First</a>
+  <a class="item" data-tab="second">Second</a>
+</div>
+<div class="ui bottom attached active tab segment" data-tab="first">
+
+</div>
+<div class="ui bottom attached tab segment" data-tab="second">
+
+</div>
 </body>

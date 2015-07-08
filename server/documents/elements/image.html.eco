@@ -82,6 +82,13 @@ themes      : ['Default']
     <img class="ui medium bordered image" src="/images/wireframe/white-image.png">
   </div>
 
+
+  <div class="example">
+    <h4 class="ui header">Fluid</h4>
+    <p>An image can take up the width of its container</p>
+    <img class="ui fluid image" src="/images/wireframe/image.png">
+  </div>
+
   <div class="example">
     <h4 class="ui header">Rounded</h4>
     <p>An image may appear rounded</p>
@@ -160,7 +167,7 @@ themes      : ['Default']
       <tbody>
         <tr>
           <td>Mini</td>
-          <td>20px</td>
+          <td>35px</td>
         </tr>
         <tr>
           <td>Tiny</td>

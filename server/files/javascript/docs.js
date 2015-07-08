@@ -1206,7 +1206,7 @@ semantic.ready = function() {
 
   handler.createIcon();
 
-  if(expertiseLevel < 2) {
+  if(expertiseLevel < 2 && $(window).width() > 640) {
     $popupExample
       .each(function() {
         $(this)
@@ -1226,7 +1226,7 @@ semantic.ready = function() {
           .find('i.code')
             .on('click', function() {
               $.cookie('expertiseLevel', 2, {
-                expires: 90
+                expires: 365
               });
             })
         ;

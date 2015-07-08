@@ -235,11 +235,11 @@ type        : 'UI Behavior'
           </tr>
           <tr>
             <td>regExp[expression]</td>
-            <td>Matches against a regular expression</td>
+            <td>Matches against a regular expression, expects RegExp to be enclosed in <code>/</code></td>
             <td>
               <code>regExp[/^[a-z0-9_-]{3,16}$/gi]]</code>
               <div class="ui horizontal divider">Or</div>
-              <code>regExp[^[a-z0-9_-]{3,16}$]]</code>
+              <code>regExp[/^[a-z0-9_-]{3,16}$/]]</code>
             </td>
           </tr>
           <tr>
@@ -290,6 +290,9 @@ type        : 'UI Behavior'
         Calling <code>$('form').form('reset')</code>, or clicking any reset element will return all form values to their <em>default value</em>. This is the value the form fields were set to when the page loaded.
       </p>
       <p>Calling <code>$('form').form('clear')</code> will remove all values from form fields and reset dropdowns to placeholder text</p>
+      <div class="ui ignored warning message">
+        Form <code>reset</code> works by caching default values on page load. For this to work correctly any form that uses reset will need to initialize on page load.
+      </div>
       <div class="ui ignored info message">
         Reset and clear will modify all form fields, not just those which have validation rules
       </div>

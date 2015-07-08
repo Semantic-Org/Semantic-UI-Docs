@@ -433,6 +433,14 @@ blockquote .author {
 }
 
 /*----------------
+   Text Layout
+-----------------*/
+
+#example.text .main.container {
+  max-width: 750px !important;
+}
+
+/*----------------
    Basic Layout
 -----------------*/
 

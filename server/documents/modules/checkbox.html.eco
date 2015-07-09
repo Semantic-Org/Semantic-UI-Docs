@@ -703,7 +703,7 @@ themes      : ['Default', 'Colored']
           <td>Callback after a checkbox is checked.</td>
         </tr>
         <tr>
-          <td>onUndeterminate</td>
+          <td>onIndeterminate</td>
           <td>HTML input element</td>
           <td>Callback after a checkbox is set to undeterminate.</td>
         </tr>

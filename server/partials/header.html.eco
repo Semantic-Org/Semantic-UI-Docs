@@ -103,7 +103,7 @@
             <a class="ui primary button" href="https://github.com/Semantic-Org/Semantic-UI/archive/master.zip">
               Download ZIP
             </a>
-            <a class="ui button" href="http://learnsemantic.com/guide/expert.html">Getting Started</a>
+            <a class="ui button" href="/introduction/getting-started.html">Getting Started</a>
             <h4 class="ui header">Package Managers</h4>
             <div class="ui form">
               <div class="field">

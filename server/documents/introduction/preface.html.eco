@@ -1,0 +1,135 @@
+---
+layout      : 'default'
+css         : 'text'
+standalone  : true
+order       : 1
+
+title       : 'Preface'
+description : ''
+type        : 'Introduction'
+---
+<%- @partial('header') %>
+
+<div class="main ui intro container">
+
+  <h2 class='ui header'>
+    A Few Introductory Words
+  </h2>
+
+  <p>The goal of Semantic UI is to narrow the divide between how we create meaning personally, through language, and how we construct meaning for computers.</p>
+
+  <p>Many programming languages treat logical and mathematical purity as their primary objectives, often ignoring that most of their human counterparts will never reach a zen like <a target="_blank" href="http://learnyouahaskell.com/a-fistful-of-monads">purely computational</a> understanding of phenomenon in concordance with the machines they program.</p>
+  <p>Semantic UI is built around a very different premise, that the real bottleneck in computer programming are humans, and that the best way to advance the web isn't solely providing <a target="_blank" href="https://www.khanacademy.org/computing/computer-programming">better institutions</a> for learning programming, or even making <a target="_blank" href="http://facebook.github.io/react/">more refined tools</a> for existing programmers, but more importantly removing the technical barriers that separate programmatic meaning from human meaning.</p>
+
+  <div class="no example">
+    <h4 class='ui header'>
+      A Certain Scruple
+    </h4>
+
+    <p>Semantic UI is by no means a perfect library, many of the particulars are still being hammered out on a day-to-day basis, but it is my attempt to serve <a target="_blank" href="http://plato.stanford.edu/entries/montague-semantics/">some of</a> the <a target="_blank" href="http://edge.org/conversation/the-argumentative-theory">ideas</a> which I believe to be true.</p>
+
+    <blockquote>
+      <p>Tell him, Cebes, he replied, that I had no idea of rivalling him or his poems (Aesop); which is the truth, for I knew that I could not do that. But I wanted to see whether I could purge away a scruple which I felt about certain dreams. In the course of my life I have often had intimations in dreams “that I should make music.” The same dream came to me sometimes in one form, and sometimes in another, but always saying the same or nearly the same words: Make and cultivate music, said the dream. And hitherto I had imagined that this was only intended to exhort and encourage me in the study of philosophy, which has always been the pursuit of my life, and is the noblest and best of music. The dream was bidding me to do what I was already doing, in the same way that the competitor in a race is bidden by the spectators to run when he is already running. But I was not certain of this, as the dream might have meant music in the popular sense of the word, and being under sentence of death, and the festival giving me a respite, I thought that I should be safer if I satisfied the scruple, and, in obedience to the dream, composed a few verses before I departed.</p>
+      <p>~from <a target="_blank" href="http://classics.mit.edu/Plato/phaedo.html">Phaedo</a></p>
+    </blockquote>
+  </div>
+
+  <h2 class="ui header">Fabricating Language</h2>
+
+  <p>Language is difficult to discuss directly because it is such an essential part of our experience of reality. Words are the most primitive tool at our disposal to construct meaning. Using language is so essential to our interpretation of reality that even internally we cannot avoid the necessity of language. To ruminate on something, there is no escape but to listen to an internal narrator, an inner voice, trapped inside some <a href="https://en.wikipedia.org/wiki/Cartesian_theater" target="_blank">Cartesian Theatre</a>, forced to relay biological meaning through these same tools of language: sentences, words, tense, that we rely on externally.</p>
+
+  <p>Natural languages, or put more simply "languages", are the product of a course of evolution that pre-date recorded history. Language was the essential technology, with which ideas had the means to replicate and distribute between advanced "biological processing machines", allowing each person a set of uniform 'concepts' which could be used to communicate a novel interpretations of reality.</p>
+
+  <p>Humans are in many ways defined by similar types of limitations as computers. Although the exact biological processes by which consciousness, memory encoding, and other "features" of the brain may not be fully understood yet, the limitations of the physical processes are still quite clear.</p>
+
+  <p>Even though we enjoy the benefits of language's evolution as a method of effectively encoding meaning for biological information processing machines, we are still hesitant to accept its utility when constructing systems of codified meaning for computers, choosing instead to manufacture new formal systems for organizing information, based around current best practices in system and language design. These constructed systems of language, although quickly abandoned, are often followed with a near religious devotion to the prescribed axioms and standards of its creators.</p>
+
+  <div class="no example">
+    <h4 class="ui header">"Truth" or truth</h4>
+
+    <blockquote>"I lay claim in this novel", I heard him say, "to the essential qualities of all games: symmetry, arbitrary rules, tedium."
+      ~Borges' <a href="http://books.google.com/books?id=1FrJqcRILaoC&pg=PA75&lpg=PA75&dq=lay+claim+in+this+novel+game+tedium+borges&source=bl&ots=pUWUsG99R-&sig=zJqgEd7QE38_IWO8kVsY-0ODf0Y&hl=en&sa=X&ei=q15VVJyvIM3LsASDzYDIDw&ved=0CDIQ6AEwAg#v=onepage&q=lay%20claim%20in%20this%20novel%20game%20tedium%20borges&f=false">Ficciones</a>
+    </blockquote>
+  </div>
+
+  <h4 class="ui header">Tending to Tendencies</h4>
+
+  <p>Creating a formal system is no easy task. All decisions made by an individual, even <a href="http://www.oxforddictionaries.com/us/external/files/Garner_s_American_The_Ongoing_Struggles_of_Garlic-Hangers.pdf?version=2014-10-15-1630">those with the best intentions</a> towards impartiality, add some aspects of themselves as an imprint on their work.</a></p>
+
+  <p>Programming languages are a nascent technology. The first imperative programming languages appeared in the mid 1950s, making the field of programming roughly sixty years old. Unsuprisingly, many people have relatives who are older than our field's entire history.</p>
+
+  <p>A programming language has the special requirement of requiring a <b>compiler</b>, a special set of code that interprets and encodes the meaning of the language in lower-level machine code. This requirement creates conditions where many languages are mostly authored by the single individuals, most likely engineers, who are responsible for developing their machine implementation.</p>
+
+  <p>Even now what we know to be the entire breadth of programming syntax and concepts comes from small teams at academic institutions and corporations, who at their worst, have particular interests or business objectives attached to the success of their languages, and at their best, are biased to an expressed ideological agenda.  As many have noted, often what seem later to be the <a href="http://c2.com/cgi/wiki?IfSmalltalkIsSoGoodWhyDoesNobodyUseIt">better language</a> lose out.</p>
+
+  <table class="ui very basic celled table">
+    <thead>
+      <th class="eight wide">Linguistic Concept</th>
+      <th class="eight wide">Programming Concept</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Words</td>
+        <td>Instances</td>
+      </tr>
+      <tr>
+        <td>Ideals (Forms)</td>
+        <td>Classes</td>
+      </tr>
+      <tr>
+        <td>Modifiers</td>
+        <td>Properties, Settings</td>
+      </tr>
+      <tr>
+        <td>Verbs</td>
+        <td>Methods</td>
+      </tr>
+      <tr>
+        <td>Tense</td>
+        <td>State</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Predisposition towards Individual Rational Argument</h3>
+
+  <p>Many programmers not only solve complex abstract problems routinely, but spend their free time thinking about the meta-tendencies of solving problems. How can i write this quicker next time? How can I avoid repetitive tasks? How can I abstract this out to be re-used? There is a fundamental tendency for computer programmers who are innate problem solvers to look for intellectual solutions to problems, to see all problems as solvable using the same techniques which problems are solved inside the curly quotes of programming.</p>
+
+  <p>These predispositions are extremely useful traits for system design, but can lead to biases as a field to intellectualize issues, to search for a unifying set of axioms which should guide all future programming. For one, simple solutions may not always feel as gratifying as <a href="http://en.wikipedia.org/wiki/Brainfuck">complex ones</a>. The current version of programmatic truth is usually seen as the Truth, the current best practices, as the only practice for a good developer, whether next year they might be disavowed or forgotten for the new big thing. Though this mania drives innovation forward, many of these <em>new big thing</em>s become the <em>old standard</em>s soon enough, but they nonetheless encourage a shared, irrational obsession with novel rational appeal.</p>
+
+  <h3>Predisposition towards Prescription</h3>
+  <p>Classifying, creating rules, drawing boundaries are all essential parts of being a programmer. Much of what makes up the functionality of programming may not have common accepted language, so individuals are forced to construct language more than many other fields. Many of those 'named things' in programming, the guts of a program, will only be read by several people in their lifetime, sometimes even one, so the conventions can be determined by particular, singular conditions.
+  Programmers who are limited by the predetermined syntax of interpreted languages (the parts of code defined for machines), feel bound to use similar machine-like rules for naming the parts of code defined just for other human editors.</p>
+
+  <h3>Predisposition towards the Primacy of Computational Efficiency</h3>
+  <p>Many coding languages are still chosen under the belief that the most important features of a language is computational efficiency. For a long time this was true. Systems were just too slow, and compilers too inefficient to deal with code that didn't make <b>the needs of computers paramount</b>. This may have been painfully obvious in a period of time when <a href="http://www.mkomo.com/cost-per-gigabyte-update">most personal computers didn't have hard drives</a>.</p>
+
+  <p>But this period is drawing to a close. Not only are processors' transistors now only a few nanometers wide, but compiler improvements by browser-makers increase performance by <a href="http://blog.chromium.org/2010/12/new-crankshaft-for-v8.html">double digits</a> regularly.
+  The age when images, text, and video cannot be constructed, manipulated, and animated on a page at sixty frames-per-second are drawing to a close, yet many programming languages do not appear to acknowledge the need to adjust for this shift in focus.</p>
+
+
+  <h2 class="ui header">Twin Brothers</h2>
+
+  Even if <a href="http://en.wikipedia.org/wiki/Functionalism_(philosophy_of_mind)">pure functionalism</a> and the talk of humans as being peculiar types of machines makes you want to run and hide in a <a href="http://en.wikipedia.org/wiki/Chinese_room">far-away room</a>, the argument that natural languages are much better equipped than prescribed languages to create meaning doesn't necessarily have to be tackled philosophically.
+  Many features of natural languages are <a href="http://huh.ideophone.org/">convergent</a>, arising simultenously in different parts of the world with no contact. Natural languages even evolved under similar constraints as programming languages.
+
+  Bandwidth plays a critical role in natural languages, being even more restrictive than computer systems. Speaking requiring us to physically contort internal valves in our larynx to modulate the frequency of waves of air pressure at a rate of only <a href="http://en.wikipedia.org/wiki/Words_per_minute#Speech_and_listening">150 or so words</a> per minute—and that's not say anything of the <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1315292/">fascinating complexity</a> in our capacity to observe those same tiny modulations in air pressure.
+  Natural languages are also designed to limit not just the length of encoding to a collection of sounds, but also to optimally limit the conceptual scope of ideas into classes, <b>words</b>, and account for varying implementations of an idea effectively through qualifiers.
+  Often times the <b>connotations</b> (tech-speak: "implementation") may vary from person to person of an idea. <b>Love</b> may connote ideas of romantic love, or in others felings of agape, or specific memories with <a href="http://en.wikipedia.org/wiki/Qualia">a quality</a> you only can understand, yet four letters and one sylabble are enough to contain the concept for a species.
+  A single idea may also vary from instance to instance. A normal <b>horse</b> might have four legs, but if you encountered a three-legged horse you would find no difficulty considering it a horse. In fact, you may never encounter a three-legged horse, and still might store space for it conceptually based purely on your imagination of the possibility. Or the classic Wittgenstein example of  "<a href="http://en.wikipedia.org/wiki/Language-game_(philosophy)#Description">What is a game?</a>". Natural language can accomodate for these variations in implementation, tempered by a "development history" that started longer ago than we even had the means to record it
+
+  <h2 class="ui header">Narrowing the Focus</h2>
+
+  <h3 class="ui header">Creating a Vocabulary for Design</h3>
+
+  <p>Individual interface elements are the <b>nouns</b> (tech-speak: "classes") which provide a <b>context</b> ("scope") to <b>limit the broadness</b> ("encapsulate") of <b>modifiers</b> ("properties") and <b>behaviors</b> ("methods").</p>
+  <p>Natural languages are used today for describing interface design, although they aren't usually considered in the actual process of coding interfaces. Words like <b>popup</b>, <b>dropdown</b>, and <b>modal</b> didn't exist twenty years ago, yet now most people who visit websites understand these as essential elements of a design. They know what to expect from their behavior, how to use them, and can distinguish them in a design.</p>
+
+  <h3 class="ui header">Well What is "Everyone Else" Doing?</h3>
+
+  <p>The resolute success industry-wide of "flattening" design: removing gradients and reducing the use of shadows, recanting of skeumorphic design, defining relationships through negative spacing instead of borders, etc. shows there is a directionality to interface languages. We can convey meaning with less <a href="http://www.interaction-design.org/encyclopedia/affordances.html">affordances</a> than ever, not primarily because web developers' understanding of design has evolved, but because <b>users' understanding of design has evolved from years of usage</b>.</p>
+
+  <h2 class="ui header">Drawing Limits</h2>
+  <p>It's important to explain, that this argument only applies directly to <b>exchange languages like HTML</b> and not all programming languages. The meat and potatoes of most programming can be much more complex. Moods, sentiments, feelings — the internal "processing languages" of meaning in organic systems can difficult to comprehend, and utterly unaccountable by language.</p>
+
+</div>

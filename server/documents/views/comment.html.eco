@@ -1,13 +1,13 @@
 ---
 layout      : 'default'
 css         : 'comment'
+element     : 'comment'
+elementType : 'view'
+standalone  : true
 
 title       : 'Comment'
 description : 'A comment displays user feedback to site content'
 type        : 'UI View'
-
-element     : 'comment'
-elementType : 'view'
 
 themes      : ['Default', 'Chubby']
 ---

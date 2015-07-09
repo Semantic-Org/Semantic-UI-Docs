@@ -1712,29 +1712,51 @@ code.less:hover .lisp .body {
 }
 
 /* Emphasized Value */
-code.code .class.string b,
-code.code .class.value b {
-  padding: 0px;
+code.code .class {
+  color: #008C79;
+}
+code.code .class b {
   font-weight: normal;
   background-color: rgba(90, 90, 90, 0);
   border-radius: 5px;
   line-height: 1;
   vertical-align: baseline;
-  display: inline-block;/*
+  display: inline-block;
   -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;*/
-}
-code.code .class.value {
-  /*color: #668C79;*/
-}
-code.code .class.string b,
-code.code .class.value b {
-  background-color: rgba(98, 190, 169, 0.25);
-  color: #008078;
+  transition: all 0.3s ease;
   margin: 0px -2px;
   padding: 2px 2px;
 }
+code.code .class b {
+  background-color: rgba(218, 189, 40, 0.15);
+  color: #9E6C00;
+}
 
+/*
+code.code:hover .class.string b,
+code.code:hover .class.value b {
+  background-color: rgba(218, 189, 40, 0.1);
+  color: inherit;
+}
+*/
+
+
+/* Linked UI */
+code .string a,
+code .tag .value a {
+  border-radius: 5px;
+  line-height: 1;
+  margin: 0px -2px;
+  padding: 2px 4px;
+  background-color: rgba(150, 150, 150, 0.1);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+code .string a:hover,
+code .tag .value a:hover {
+  background-color: rgba(40, 150, 218, 0.2);
+  color: #00689E;
+}
 
 
 

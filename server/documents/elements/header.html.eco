@@ -21,8 +21,8 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
 
   <h2 class="ui dividing header">Types</h2>
 
-  <div class="example" data-content="ui header">
-    <h4 class="ui header">Page (H1-H6)</h4>
+  <div class="example" data-tag="h1,h2,h3,h4,h5">
+    <h4 class="ui header">Page Headers</h4>
     <p class="header">Headers may be oriented to give the hierarchy of a section in the context of the page</p>
     <div class="ignored info ui message">Page headings are sized using <a href="https://j.eremy.net/confused-about-rem-and-em/" target="_blank"><code>rem</code></a> and are not affected by surrounding content size.</div>
     <h1 class="ui header">First header</h1>
@@ -37,8 +37,8 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
     <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
   </div>
 
-  <div class="example" data-content="ui header">
-    <h4 class="ui header">Content</h4>
+  <div class="example" data-class="size">
+    <h4 class="ui header">Content Headers</h4>
     <p>Headers may be oriented to give the importance of a section in the context of the content that surrounds it</p>
     <div class="ignored info ui message">Content headings are sized with <a href="https://j.eremy.net/confused-about-rem-and-em/" target="_blank"><code>em</code></a> and are based on the font-size of their container.</div>
     <div class="ui ignored icon font buttons">
@@ -60,7 +60,7 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
   </div>
 
   <div class="example">
-    <h4 class="ui header">Icon</h4>
+    <h4 class="ui header">Icon Headers</h4>
     <p>A header can be formatted to emphasize an icon</p>
     <h2 class="ui icon header">
       <i class="settings icon"></i>
@@ -80,7 +80,7 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
   </div>
 
   <div class="example" data-class="sub">
-    <h4 class="ui header">Subheaders</h4>
+    <h4 class="ui header">Sub Headers</h4>
     <p>Headers may be formatted to label smaller or de-emphasized content.</p>
     <h2 class="ui sub header">
       Price
@@ -117,7 +117,7 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
   <h2 class="ui dividing header">Content</h2>
 
 
-  <div class="example">
+  <div class="example" data-use-content="true" data-class="image" data-tag="img">
     <h4 class="ui header">Image</h4>
     <p>A header may contain an <a href="/elements/image.html">image</a></p>
     <h2 class="ui header">
@@ -147,7 +147,7 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
   </div>
 
 
-  <div class="example">
+  <div class="example" data-use-content="true" data-class="icon">
     <h4 class="ui header">Icon</h4>
     <p>A header may contain an <a href="/elements/icon.html">icon</a></p>
     <h2 class="ui header">
@@ -169,7 +169,7 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
     <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
   </div>
 
-  <div class="example" data-class="sub">
+  <div class="example" data-use-content="true" data-class="sub">
     <h4 class="ui header">Subheader</h4>
     <p>Headers may contain subheaders</p>
     <h2 class="ui header">

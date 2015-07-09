@@ -3,7 +3,7 @@ layout      : 'default'
 css         : 'form'
 standalone  : true
 
-element     : 'form'
+element     : 'validation'
 elementType : 'behavior'
 
 title       : 'Form Validation'

@@ -85,6 +85,7 @@ semantic.ready = function() {
       : 0,
     languageDropdownUsed = false,
 
+    metadata,
 
     requestAnimationFrame = window.requestAnimationFrame
       || window.mozRequestAnimationFrame
@@ -99,6 +100,18 @@ semantic.ready = function() {
 
   // event handlers
   handler = {
+
+    getMetadata: function() {
+      $.api({
+        debug : false,
+        on    : 'now',
+        url   : '/metadata.json',
+        cache : 'local',
+        onSuccess: function(response) {
+          metadata = response;
+        }
+      });
+    },
 
     createIcon: function() {
       $example
@@ -290,34 +303,6 @@ semantic.ready = function() {
             })
           ;
         }
-      }
-    },
-
-    loadSearch: function() {
-      if( !$search.hasClass('loaded') ) {
-        $search.addClass('loading');
-        $.getJSON('/metadata.json')
-          .always(function() {
-            $search.removeClass('loading');
-          })
-          .fail(function(err) {
-            console.log('Failed to load search metadata');
-          })
-          .done(function(data) {
-            $search
-              .addClass('loaded')
-              .search({
-                transition     : 'slide down',
-                searchFullText : false,
-                source         : data,
-                searchFields   : [ 'title', 'category'],
-                onSelect       : function(results, response) {
-                  window.location = '/' + results.filename;
-                }
-              })
-            ;
-          })
-        ;
       }
     },
 
@@ -842,9 +827,12 @@ semantic.ready = function() {
             : $closestExample,
         $header     = $example.find('h4').eq(0),
         $attributes = $code.find('.attribute, .class'),
+        $tags       = $code.find('.title'),
         pageName    = handler.getPageTitle(),
         name        = handler.getText($header).toLowerCase(),
-        classes     = $example.data('class') || ''
+        classes     = $example.data('class') || '',
+        tags        = $example.data('tag')  || false,
+        useContent  = $example.data('use-content') || false
       ;
       // Add title
       if(name) {
@@ -859,6 +847,7 @@ semantic.ready = function() {
       // Add common variations
       classes = classes.replace('text alignment', "left aligned, right aligned, justified, center aligned");
       classes = classes.replace('floating', "right floated,left floated,floated");
+      classes = classes.replace('vertically aligned', "top aligned, middle aligned, bottom aligned");
       classes = classes.replace('vertically attached', "attached");
       classes = classes.replace('horizontally attached', "attached");
       classes = classes.replace('attached', "left attached,right attached,top attached,bottom attached,attached");
@@ -868,12 +857,42 @@ semantic.ready = function() {
         ? classes.split(',')
         : []
       ;
-      // check each class value
+      // highlight tags if asked
+      if(tags) {
+        tags = (tags !== '')
+          ? tags.split(',')
+          : []
+        ;
+        $tags.each(function() {
+          var
+            $tag    = $(this),
+            tagHTML = $tag.html(),
+            newHTML = false
+          ;
+          $.each(tags, function(index, tag) {
+            if(tagHTML == tag) {
+              newHTML = tagHTML.replace(tag, '<b>' + tag + '</b>');
+            }
+          });
+          if(newHTML) {
+            $tag
+              .addClass('class')
+              .html(newHTML)
+            ;
+          }
+        });
+      }
+      // highlight classes
       $attributes.each(function() {
         var
           $attribute    = $(this),
           attributeHTML = $attribute.html(),
           $value,
+          isUI,
+          isPageElement,
+          isOtherUI,
+          elementClasses,
+          classString,
           html,
           newHTML
         ;
@@ -881,22 +900,45 @@ semantic.ready = function() {
         if(attributeHTML.search('class') === -1) {
           return true;
         }
-        $value     = $attribute.next('.value, .string').eq(0);
-        html       = $value.html();
-        // check against each value
-        $.each(classes, function(index, className) {
-          className = $.trim(className);
+        $value        = $attribute.next('.value, .string').eq(0);
+        html          = $value.html();
+
+        isUI          = (html.search('ui') !== -1);
+        isPageElement = (html.search(pageName) > 0);
+        isOtherUI     = (!isPageElement && isUI);
+
+        // check if any class match
+        $.each(classes, function(index, string) {
+          var
+            className      = $.trim(string),
+            isClassMatch   = (html.search(className) !== -1)
+          ;
           if(className === '') {
             return true;
           }
-          if(pageName !== 'icon' && className == 'icon' && $value.prevAll('.title').html() == 'i') {
-            return true;
-          }
-          if(html.search(className) !== -1) {
-            newHTML = html.replace(className, '<b>' + className + '</b>');
+          // class match on current page element (or content if allowed)
+          if(isClassMatch && (isPageElement || useContent) ) {
+            newHTML = html.replace(className, '<b title="Required Class">' + className + '</b>');
             return false;
           }
         });
+
+        // generate links to other UI
+        if(isOtherUI) {
+          html           = newHTML || html;
+          classString    = html.replace(/\"/g, '');
+          elementClasses = classString.split(' ');
+          $.each(elementClasses, function(index, string){
+            var
+              className = string.replace('"', '')
+            ;
+            if(metadata && metadata[className] && metadata[className].url) {
+              // we found a match
+              newHTML = html.replace(classString, '<a href="' + metadata[className].url + '">' + classString + '</a>');
+            }
+          });
+        }
+
         if(newHTML) {
           $value
             .addClass('class')
@@ -1324,6 +1366,8 @@ semantic.ready = function() {
   if(window.Transifex !== undefined) {
     window.Transifex.live.onTranslatePage(handler.showLanguageModal);
   }
+
+  handler.getMetadata();
 
 };
 

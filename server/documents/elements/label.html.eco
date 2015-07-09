@@ -18,7 +18,7 @@ themes      : ['Default']
 
 <div class="main ui container">
 
-  <h2 class="ui dividing header">Content</h2>
+  <h2 class="ui dividing header">Types</h2>
 
   <div class="example">
     <h4 class="ui header">Label</h4>
@@ -27,53 +27,6 @@ themes      : ['Default']
       <i class="mail icon"></i> 23
     </div>
   </div>
-  <div class="example">
-    <h4 class="ui header">Detail</h4>
-    <p>A label can contain a detail</p>
-    <div class="ui label">
-      Dogs
-      <div class="detail">214</div>
-    </div>
-  </div>
-
-  <div class="example">
-    <h4 class="ui header">Image</h4>
-    <p>A label can include an image</p>
-    <a class="ui label">
-      <img class="ui right spaced image" src="/images/avatar/small/elliot.jpg">
-      Elliot
-    </a>
-    <a class="ui label">
-      <img class="ui right spaced circular image" src="/images/avatar/small/stevie.jpg">
-      Stevie
-    </a>
-  </div>
-
-  <div class="example">
-    <h4 class="ui header">Link</h4>
-    <p>A label can be a link or contain an item that links</p>
-    <a class="ui label">
-      <i class="mail icon"></i> 23
-    </a>
-  </div>
-  <div class="another example">
-    <div class="ui label">
-      <i class="mail icon"></i>
-      23
-      <a class="detail">View Mail</a>
-    </div>
-  </div>
-
-  <div class="example">
-    <h4 class="ui header">Delete Icon</h4>
-    <p>A label can contain an icon used to remove itself</p>
-    <div class="ui label">
-      Witty
-      <i class="delete icon"></i>
-    </div>
-  </div>
-
-  <h2 class="ui dividing header">Types</h2>
 
   <div class="example">
     <h4 class="ui header">Image</h4>
@@ -126,7 +79,7 @@ themes      : ['Default']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="pointing above, pointing below, pointing left, pointing right">
     <h4 class="ui header">Pointing</h4>
     <p>A label can point to content next to it</p>
     <form class="ui fluid form">
@@ -136,21 +89,21 @@ themes      : ['Default']
           Please enter a value
         </div>
       </div>
-      <div class="ui simple divider"></div>
+      <div class="ui divider"></div>
       <div class="field" placeholder="Last Name">
         <div class="ui pointing below label">
           Please enter a value
         </div>
         <input type="text">
       </div>
-      <div class="ui simple divider"></div>
+      <div class="ui divider"></div>
       <div class="inline field">
         <input type="text" placeholder="Username">
         <div class="ui pointing left label">
           That name is taken!
         </div>
       </div>
-      <div class="ui simple divider"></div>
+      <div class="ui divider"></div>
       <div class="inline field">
         <div class="ui pointing right label">
           Your password must be 6 characters or more
@@ -160,14 +113,14 @@ themes      : ['Default']
     </form>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="left corner, right corner, corner">
     <h4 class="ui header">Corner</h4>
     <p>A label can position itself in the corner of an element</p>
-    <div class="yellow ui message">A corner label must be positioned inside a container with <b>position: relative</b> to display properly. If a container is rounded you will need to add <code>overflow:hidden</code> to the container to produce a rounded label.</div>
+    <div class="ui ignored warning message">A corner label must be positioned inside a container with <b>position: relative</b> to display properly. If a container is rounded you will need to add <code>overflow:hidden</code> to the container to produce a rounded label.</div>
     <div class="ui two column grid">
       <div class="column">
         <div class="ui fluid image">
-          <a class="ui left red corner label">
+          <a class="ui red left corner label">
             <i class="heart icon"></i>
           </a>
           <img src="/images/wireframe/image.png">
@@ -175,7 +128,7 @@ themes      : ['Default']
       </div>
       <div class="column">
         <div class="ui fluid image">
-          <a class="ui black corner label">
+          <a class="ui black right corner label">
             <i class="save icon"></i>
           </a>
           <img src="/images/wireframe/image.png">
@@ -192,7 +145,7 @@ themes      : ['Default']
     <a class="ui teal tag label">Featured</a>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="left ribbon, right ribbon, ribbon">
     <h4 class="ui header">Ribbon</h4>
     <p>A label can appear as a ribbon attaching itself to an element.</p>
     <div class="ui two column grid">
@@ -319,7 +272,77 @@ themes      : ['Default']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="floating">
+    <h4 class="ui header">Floating</h4>
+    <p>A label can float above another element</p>
+    <div class="ui compact menu">
+      <a class="item">
+        <i class="icon mail"></i> Messages
+        <div class="floating ui red label">22</div>
+      </a>
+      <a class="item">
+        <i class="icon users"></i> Friends
+        <div class="floating ui teal label">22</div>
+      </a>
+    </div>
+  </div>
+
+  <h2 class="ui dividing header">Content</h2>
+
+  <div class="example" data-use-content="true">
+    <h4 class="ui header">Detail</h4>
+    <p>A label can contain a detail</p>
+    <div class="ui label">
+      Dogs
+      <div class="detail">214</div>
+    </div>
+  </div>
+
+  <div class="example" data-use-content="true" data-class="icon">
+    <h4 class="ui header">Icon</h4>
+    <p>A label can include an icon</p>
+    <a class="ui label">
+      <i class="mail icon"></i>
+      Mail
+    </a>
+    <a class="ui label">
+      Tag
+      <i class="delete icon"></i>
+    </a>
+  </div>
+
+  <div class="example" data-use-content="true" data-class="image" data-tag="img">
+    <h4 class="ui header">Image</h4>
+    <p>A label can include an image</p>
+    <a class="ui label">
+      <img class="ui right spaced avatar image" src="/images/avatar/small/elliot.jpg">
+      Elliot
+    </a>
+    <a class="ui label">
+      <img src="/images/avatar/small/stevie.jpg">
+      Stevie
+    </a>
+  </div>
+
+  <div class="example" data-use-content="true" data-tag="a">
+    <h4 class="ui header">Link</h4>
+    <p>A label can be a link or contain an item that links</p>
+    <a class="ui label">
+      <i class="mail icon"></i> 23
+    </a>
+  </div>
+  <div class="another example">
+    <div class="ui label">
+      <i class="mail icon"></i>
+      23
+      <a class="detail">View Mail</a>
+    </div>
+  </div>
+
+  <h2 class="ui dividing header">Variations</h2>
+
+
+  <div class="example" data-class="empty circular, circular">
     <h4 class="ui header">Circular</h4>
     <p>A label can be circular</p>
     <a class="ui red circular label">2</a>
@@ -352,22 +375,6 @@ themes      : ['Default']
     <a class="ui black empty circular label"></a>
   </div>
 
-  <div class="example">
-    <h4 class="ui header">Floating</h4>
-    <p>A label can float above another element</p>
-    <div class="ui compact menu">
-      <a class="item">
-        <i class="icon mail"></i> Messages
-        <div class="floating ui red label">22</div>
-      </a>
-      <a class="item">
-        <i class="icon users"></i> Friends
-        <div class="floating ui teal label">22</div>
-      </a>
-    </div>
-  </div>
-
-  <h2 class="ui dividing header">Variations</h2>
   <div class="example">
     <h4 class="ui header">Colored</h4>
     <p>A label can have different colors</p>
@@ -458,7 +465,7 @@ themes      : ['Default']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="tag">
     <h4 class="ui header">Tag Group</h4>
     <p>Labels can share tag formatting</p>
     <div class="ui tag labels">
@@ -480,7 +487,7 @@ themes      : ['Default']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="circular">
     <h4 class="ui header">Circular Group</h4>
     <p>Labels can share shapes</p>
     <div class="ui circular labels">

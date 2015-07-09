@@ -3,6 +3,9 @@ layout      : 'default'
 css         : 'api'
 standalone  : true
 
+element     : 'API'
+elementType : 'behavior'
+
 title       : 'API'
 description : 'API allows elements to trigger actions on a server'
 type        : 'UI Behavior'

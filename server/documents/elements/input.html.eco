@@ -97,16 +97,14 @@ themes      : ['Default']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="left labeled, left corner labeled, right corner labeled, right labeled, labeled">
     <h4 class="ui header">Labeled</h4>
     <p>An input can be formatted with a label</p>
-    <div class="another example">
-      <div class="ui labeled input">
-        <div class="ui label">
-          http://
-        </div>
-        <input type="text" placeholder="mysite.com">
+    <div class="ui labeled input">
+      <div class="ui label">
+        http://
       </div>
+      <input type="text" placeholder="mysite.com">
     </div>
   </div>
   <div class="another example">
@@ -149,7 +147,7 @@ themes      : ['Default']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="left action, right action, action">
     <h4 class="ui header">Action</h4>
     <p>An input can be formatted to alert the user to an action they may perform</p>
     <div class="ui action input">

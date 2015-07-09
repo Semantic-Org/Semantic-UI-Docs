@@ -28,10 +28,7 @@ themes      : ['Default', 'Material']
 
   <h3 class="ui header">Theming</h3>
 
-  <p>Customizing site variables is an important part of using Semantic UI, to learn more about global site  variables visit our customization guide on <a href="http://www.learnsemantic.com">Learn Semantic</a>.</p>
-  <a class="ui primary button" href="http://learnsemantic.com/developing/customizing.html#setting-global-variables">
-    Customization Guide <i class="right chevron icon"></i>
-  </a>
+  <p>Customizing site variables is an important part of using Semantic UI, to learn more about global site variables visit our <a href="/usage/theming.html">theming guide</a>.</p>
 
   <h2 class="ui dividing header">Content</h2>
 

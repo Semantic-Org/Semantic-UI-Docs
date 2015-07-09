@@ -24,7 +24,6 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
   <div class="example">
     <h4 class="ui header">
       Menu
-      <span class="ui teal label">Flexbox</span>
     </h4>
     <p>A menu</p>
     <div class="ui ignored message">

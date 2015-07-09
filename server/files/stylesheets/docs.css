@@ -1724,8 +1724,8 @@ code.code .class b {
   display: inline-block;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  margin: 0px -2px;
-  padding: 2px 2px;
+  margin: 0px -4px;
+  padding: 1px 4px;
 }
 code.code .class b {
   background-color: rgba(218, 189, 40, 0.15);
@@ -1742,20 +1742,25 @@ code.code:hover .class.value b {
 
 
 /* Linked UI */
-code .string a,
 code .tag .value a {
   border-radius: 5px;
   line-height: 1;
+  color: inherit;
   margin: 0px -2px;
-  padding: 2px 4px;
+  padding: 1px 4px;
   background-color: rgba(150, 150, 150, 0.1);
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-code .string a:hover,
+code .tag .value a b {
+  background-color: transparent;
+}
 code .tag .value a:hover {
   background-color: rgba(40, 150, 218, 0.2);
   color: #00689E;
+}
+code .tag .value a:hover b {
+  color: inherit;
 }
 
 

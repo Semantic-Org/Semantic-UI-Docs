@@ -891,7 +891,7 @@ semantic.ready = function() {
           isUI,
           isPageElement,
           isOtherUI,
-          elementClasses,
+          classNames,
           classString,
           html,
           newHTML
@@ -902,6 +902,7 @@ semantic.ready = function() {
         }
         $value        = $attribute.next('.value, .string').eq(0);
         html          = $value.html();
+        classNames    = html.replace(/\"/g, '').split(' ');
 
         isUI          = (html.search('ui') !== -1);
         isPageElement = (html.search(pageName) > 0);
@@ -926,15 +927,23 @@ semantic.ready = function() {
         // generate links to other UI
         if(isOtherUI) {
           html           = newHTML || html;
-          classString    = html.replace(/\"/g, '');
-          elementClasses = classString.split(' ');
-          $.each(elementClasses, function(index, string){
+          classString    = /^\"(.*)\"/g.exec(html);
+          if(!classString || classString.length < 2) {
+            return true;
+          }
+          classString = classString[1];
+          $.each(classNames, function(index, string){
             var
               className = string.replace('"', '')
             ;
+            if(className == 'icon' || className == 'item') {
+              return;
+            }
             if(metadata && metadata[className] && metadata[className].url) {
               // we found a match
+              console.log(newHTML);
               newHTML = html.replace(classString, '<a href="' + metadata[className].url + '">' + classString + '</a>');
+              console.log(classString, newHTML);
             }
           });
         }

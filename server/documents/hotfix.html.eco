@@ -10,36 +10,25 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script>
 $(document).ready(function() {
-var firstTabContent = "<div id='testfirst'>One</div> \n" +
-                "<scr" + "ipt type='text/javascript'>\n" +
-                "   $(function() { $('#testfirst').append('<div>dynamically appended div <b>(will disappear if tab is clicked again!)</b></div>') });\n" +
-                "</scr" + "ipt>";
-
-$('.menu .item')
-.tab({
-    cache: true,
-    evaluateScripts: 'once',
-    onFirstLoad: function(tabPath, parameterArray, historyEvent) {
-        console.log('Initialized tab: ' + tabPath);
-    },
-    onLoad: function(tabPath, parameterArray, historyEvent) { //tab selected
-        console.log('Selected tab: ' + tabPath);
-    },
-    apiSettings: {
-        loadingDuration : 300,
-        mockResponse    : function(settings) {
-            var response = {
-                first  :  firstTabContent,
-
-              second : 'Two',
-
-              third  : 'Three'
-            };
-
-            return response[settings.urlData.tab];
-        }
+$.fn.form.settings.defaults = {
+image: {
+        identifier : 'image',
+        optional: true,
+        rules: [
+            {
+                type   : 'url',
+                prompt : 'Zadejte platnou url'
+            }
+        ]
     }
-});
+};
+
+$('.ui.form')
+  .form({
+    inline : true,
+    on: 'blur'
+  })
+;
 });
 </script>
 
@@ -49,19 +38,22 @@ $('.menu .item')
 <%= @getVersion() %>
 
 <div class="ui container" style="margin-top:5em;">
-<div class="ui basic segment">
-    1. Click on "First" tab and see content load<br>
-    2. Click on "First" tab again to see dynamically inserted elements disappear
+<div class="ui form segment">
+    <h4 class="ui dividing header">Obrázek</h4>
+    <div class="twelve wide field">
+        <label for="frm-contactForm-image">Adresa k obrázku (url)</label>
+        <div class="ui labeled input">
+            <div class="ui label">
+                http://
+            </div>
+            <input type="text" name="image" id="frm-contactForm-image">
+            </div>
+        </div>
+        <div class="ui hidden divider"></div>
+        <div class="ui blue submit button">
+            <i class="white save icon"></i>
+            Vytvořit kontakt
+        </div>
 </div>
-
-<div class="ui top attached tabular menu">
-  <a class="active item" data-tab="first">First</a>
-  <a class="item" data-tab="second">Second</a>
-</div>
-<div class="ui bottom attached active tab segment" data-tab="first">
-
-</div>
-<div class="ui bottom attached tab segment" data-tab="second">
-
 </div>
 </body>

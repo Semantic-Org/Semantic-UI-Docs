@@ -23,15 +23,15 @@ themes      : ['Default']
 
     <h2 class="ui dividing header">Introduction</h2>
 
-    <div class="highlighted example">
+    <div class="highlighted example" data-class="grid">
       <h4 class="ui header">Grids</h4>
       <p>A grid is a structure with a <a href="http://99designs.com/designer-blog/2013/03/21/history-of-the-grid-part-1/" target="_blank">long history</a> used to align negative space in designs.</p>
       <p>Using a grid makes content appear to flow more naturally on your page.</p>
-      <div class="ui toggle animation checkbox">
+      <div class="ui ignored toggle animation checkbox">
         <input type="checkbox" name="animation" />
         <label>Toggle Animation</label>
       </div>
-      <div class="ui divider"></div>
+      <div class="ui ignored hidden divider"></div>
       <div class="ui grid">
         <div class="four wide column"></div>
         <div class="four wide column"></div>
@@ -40,7 +40,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="highlighted example">
+    <div class="highlighted example" data-use-content="true" data-class="column">
       <h4 class="ui header">Columns</h4>
       <p>Grids divide horizontal space into indivisible units called "columns". All columns in a grid must specify their width as proportion of the total available row width.</p>
       <p>All grid systems chooses an arbitrary column count to allow per row. Semantic's default theme uses <b>16 columns</b>.</p>
@@ -59,7 +59,7 @@ themes      : ['Default']
         <div class="six wide column"></div>
       </div>
     </div>
-    <div class="highlighted example">
+    <div class="highlighted example" data-use-content="true" data-class="row">
       <h4 class="ui header">Rows</h4>
       <p>Rows are groups of columns which are aligned horizontally.</p>
       <p>Rows can either be <em>explicit</em>, marked with an additional <code>row</code> element, or <em>implicit</em>, automatically occuring when no more space is left in a previous row.
@@ -78,7 +78,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="highlighted negative example">
+    <div class="highlighted negative example" data-use-content="true" data-class="relaxed">
       <h4 class="ui header">Gutters</h4>
       <p>Grid columns are separated by areas of white space referred to as "gutters". Gutters improve legibility by providing, <a href="https://en.wikipedia.org/wiki/Negative_space" target="_blank">negative space</a> between page elements.</p>
       <p>Gutters remain a constant size regardless of the width of the grid, or how many columns are in a row. To increase the size of gutters in a particular grid, you can use a <a href="#relaxed"><code>relaxed grid</code></a> variation.</p>
@@ -136,10 +136,10 @@ themes      : ['Default']
     </div>
 
 
-    <div class="highlighted negative example">
-      <h4 class="ui header">Content Width</h4>
+    <div class="no example">
+      <h4 class="ui header">Page Grids</h4>
       <p>Grids are fluid and will automatically flow in size to take the maximum available width.</p>
-      <p><a href="/elements/container.html">Containers</a> are elements designed to limit content to a reasonable maximum width for display based on the size of the user's screen.</p>
+      <p><a href="/elements/container.html">Containers</a> are elements designed to limit page content to a reasonable maximum width for display based on the size of the user's screen.</p>
       <p>Using a <a href="/elements/container.html#containers-using-grids"><code>ui grid container</code></a> is the best way to include top-level page content inside a grid.</p>
       <div class="ui warning message">
         <p>In version <code>1.x</code> of Semantic UI <code>page grid</code> were used to to contain the maximum width of grids holding page content. Page grid have been deprecated in favor for the simpler <code>container</code> element.</p>
@@ -186,7 +186,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="highlighted example">
+    <div class="highlighted example" data-use-content="true" data-class="wide">
       <h4 class="ui header">Column Widths</h4>
       <p>Column widths can be specified using <a href="#column-width"><code>(x) wide</code></a> class names. If a column cannot fit in a row it will automatically flow to the next row</p>
       <div class="ui grid">
@@ -217,7 +217,7 @@ themes      : ['Default']
         <div class="column"></div>
       </div>
     </div>
-    <div class="highlighted example">
+    <div class="highlighted example" data-use-content="true" data-class="floated">
       <h4 class="ui header">Clearing Content</h4>
       <p>Row wrappers will automatically clear previous columns, making them useful when using <a href="#floated"><code>floated</code></a> variations.</p>
       <div class="ui grid">
@@ -233,7 +233,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example">
+    <div class="example" data-class="internally celled">
       <h4 class="ui header">Special Grids</h4>
       <p>Additionally, some types of grids, like <a href="#divided"><code>divided</code></a> or <a href="#celled"><code>celled</code></a> require row wrappers to apply formatting correctly.</p>
 
@@ -266,7 +266,7 @@ themes      : ['Default']
     <h2 class="ui dividing header">Varying Grids</h2>
 
 
-    <div class="highlighted special example">
+    <div class="highlighted special example" data-use-content="true" data-class="grid">
       <h4 class="ui header">Nesting Grids</h4>
       <p>Grids can be placed inside of other grids, letting you sub-divide columns.</p>
 
@@ -289,7 +289,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="colored example">
+    <div class="colored example" data-use-content="true" data-class="colored, padded">
       <h4 class="ui header">Colored</h4>
       <p>Grids can use named <a href="#colored"><b>colors</b> variations</a> to add background colors, but only with <a href="#padded"><code>padded grid</code></a> that do not include negative margins.</p>
       <p>To include a color that is not available in the default palette its perfectly fine to use CSS</p>
@@ -317,7 +317,7 @@ themes      : ['Default']
     </div>
 
 
-    <div class="highlighted example">
+    <div class="highlighted example" data-class="equal width">
       <h4 class="ui header">Automatic Column Count</h4>
       <p>The <a href="#equal-width"><code>equal width</code></a> variation will automatically divide column width evenly. This is useful with dynamic content where you do not know the column count in advance.</p>
       <div class="ui equal width grid">
@@ -330,7 +330,7 @@ themes      : ['Default']
         </div>
       </div>
     </div>
-    <div class="highlighted example">
+    <div class="highlighted example" data-class="centered">
       <h4 class="ui header">Centering Content</h4>
       <p>If a row does not take up all sixteen grid columns, you can use a <a href="#centered"><code>centered</code></a> variation to center the column contents inside the grid.
       </p>
@@ -343,7 +343,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example">
+    <div class="example" data-use-content="true" data-class="left floated right aligned, right floated left aligned, center aligned, sixteen wide">
       <h4 class="ui header">Significant Word Order</h4>
       <p>Grids include many variations for adjusting things like vertical or horizontal alignment, text alignment, or default gutter sizes.</p>
       <p>Some multi-word variations, like <a href="#floated"><code>left floated</code></a> or <a href="#text-alignment"><code>right aligned</code></a> are word-order dependent and require you to use adjacent class names.</p>
@@ -381,7 +381,7 @@ themes      : ['Default']
 
     <h2 class="ui dividing header">Responsive Grids</h2>
 
-    <div class="highlighted example">
+    <div class="highlighted example" data-class="container">
       <h4 class="ui header">Containers</h4>
       <p>A <a href="/elements/container.html">container</a> can be used alongside a grid to provide a responsive, fixed width container for wrapping the contents of a page.</p>
       <div class="ui grid container">
@@ -396,7 +396,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="highlighted no example">
+    <div class="highlighted example">
       <h4 class="ui header">Stackable</h4>
       <p>A <a href="#stackable"><code>stackable grid</code></a> will automatically stack rows to a single columns on mobile devices</p>
       <div class="ui stackable four column grid">
@@ -437,7 +437,7 @@ themes      : ['Default']
         </div>
       </div>
     </div>
-    <div class="highlighted example">
+    <div class="highlighted example" data-class="computer only, six wide tablet eight wide computer" data-use-content="true">
       <h4 class="ui header">Manual Tweaks</h4>
       <p>Although design patterns like <a href="#doubling"><code>doubling</code></a> or <a href="#stackable"><code>stackable</code></a> are useful at simplifying responsive styling, you can also manually tweak device presentation by specifying <a href="#device-width"><code>(x) wide device</code></a> or <a href="#device-visibility"><code>device only</code></a> columns or rows.
       <div class="ui centered grid">
@@ -608,7 +608,7 @@ themes      : ['Default']
 
     <h2 class="ui dividing header">Content</h2>
 
-    <div class="example">
+    <div class="example" data-use-content="true" data-class="row">
       <h4 class="ui header">Rows</h4>
       <p>A row is a horizontal grouping of columns</p>
       <div class="ui three column grid">
@@ -633,20 +633,20 @@ themes      : ['Default']
         </div>
       </div>
     </div>
-    <div class="example">
+    <div class="example" data-use-content="true" data-class="column">
       <h4 class="ui header">Columns</h4>
       <p>Columns each contain gutters giving them equal spacing from other columns.</p>
-      <div class="ui three column grid">
-        <div class="column">
+      <div class="ui grid">
+        <div class="eight wide column">
           <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
         </div>
-        <div class="column">
+        <div class="eight wide column">
           <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
         </div>
-        <div class="column">
+        <div class="eight wide column">
           <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
         </div>
-        <div class="column">
+        <div class="eight wide column">
           <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
         </div>
       </div>
@@ -655,7 +655,7 @@ themes      : ['Default']
     <h2 class="ui dividing header">Variations</h2>
 
 
-    <div class="example">
+    <div class="example" data-use-content="true">
       <h4 class="ui header">Floated</h4>
       <p>A column can sit flush against the left or right edge of a row</p>
       <div class="ui grid">
@@ -668,7 +668,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example">
+    <div class="example" data-use-content="true" data-class="wide">
       <h4 class="ui header">Column Width</h4>
       <p>A column can vary in width taking up more than a single grid column.</p>
       <div class="ui grid">
@@ -684,7 +684,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example">
+    <div class="example" data-use-content="true" data-class="column count">
       <h4 class="ui header">Column Count</h4>
       <p>A grid can have a different number of columns per row</p>
       <div class="ui grid">
@@ -733,7 +733,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example">
+    <div class="example" data-use-content="true">
       <h4 class="ui header">
         Equal Width
       </h4>
@@ -794,7 +794,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example">
+    <div class="example" data-use-content="true">
       <h4 class="ui header">
         Stretched
       </h4>
@@ -880,7 +880,7 @@ themes      : ['Default']
     </div>
 
 
-    <div class="example">
+    <div class="example" data-class="vertically padded, horizontally padded, padded">
       <h4 class="ui header">Padded</h4>
       <p>A grid can preserve its vertical and horizontal gutters on first and last columns</p>
 
@@ -1054,7 +1054,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example">
+    <div class="example" data-use-content="true">
       <h4 class="ui header">Text Alignment</h4>
       <p>A grid, row, or column can specify its text alignment</p>
       <div class="ui center aligned three column grid">
@@ -1162,7 +1162,7 @@ themes      : ['Default']
     </div>
 
 
-    <div class="example">
+    <div class="example" data-use-content="true">
       <h4 class="ui header">Vertical Alignment</h4>
       <p>A grid, row, or column can specify its vertical alignment to have all its columns vertically centered.</p>
       <div class="ui middle aligned four column centered grid">
@@ -1271,7 +1271,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example">
+    <div class="example" data-use-content="true" data-class="large screen only, computer only, tablet only, mobile only">
       <h4 class="ui header">Device Visibility</h4>
       <p>A columns or row can appear only for a specific device, or screen sizes</p>
       <div class="ui text message info ignore">
@@ -1378,7 +1378,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example">
+    <div class="example" data-use-content="true">
       <h4 class="ui header">Responsive Width</h4>
       <p>A column can specify a width for a specific device</p>
       <div class="ui ignored info message">

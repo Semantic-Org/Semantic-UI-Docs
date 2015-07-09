@@ -70,7 +70,7 @@ type        : 'UI Element'
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="left dividing, right dividing, dividing">
     <h4 class="ui header">Dividing</h4>
     <p>A rail can create a division between itself and a container</p>
     <div class="ui segment">
@@ -91,7 +91,7 @@ type        : 'UI Element'
 
   <h2 class="ui dividing header">Variations</h2>
 
-  <div class="example">
+  <div class="example" data-class="left attached, right attached, internal right attached, internal left attached">
     <h4 class="ui header">Attached</h4>
     <p>A rail can appear attached to the main viewport</p>
     <div class="ui segment">
@@ -124,7 +124,7 @@ type        : 'UI Element'
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="close, very close">
     <h4 class="ui header">Close</h4>
     <p class="header">A rail can appear closer to the main viewport</p>
     <div class="ui segment">

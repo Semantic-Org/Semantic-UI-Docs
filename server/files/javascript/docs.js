@@ -780,13 +780,13 @@ semantic.ready = function() {
       }
       setTimeout(function() {
         handler.refreshSticky();
-      }, 1000);
+      }, 400);
     },
 
     refreshSticky: function() {
       $sectionHeaders.visibility('refresh');
       $sectionExample.visibility('refresh');
-      $sticky.sticky('refresh');
+      $('.ui.sticky').sticky('refresh');
       $footer.visibility('refresh');
       $visibilityExample.visibility('refresh');
     },
@@ -846,12 +846,21 @@ semantic.ready = function() {
       }
       // Add common variations
       classes = classes.replace('text alignment', "left aligned, right aligned, justified, center aligned");
+      classes = classes.replace('floated', "right floated,left floated,floated");
       classes = classes.replace('floating', "right floated,left floated,floated");
+      classes = classes.replace('horizontally aligned', "left aligned, center aligned, right aligned, justified");
       classes = classes.replace('vertically aligned', "top aligned, middle aligned, bottom aligned");
       classes = classes.replace('vertically attached', "attached");
       classes = classes.replace('horizontally attached', "attached");
+      classes = classes.replace('padded', "very padded, padded");
+      classes = classes.replace('relaxed', "very relaxed, relaxed");
       classes = classes.replace('attached', "left attached,right attached,top attached,bottom attached,attached");
+      classes = classes.replace('wide', "one wide,two wide,three wide,four wide,five wide,six wide,seven wide,eight wide,nine wide,ten wide,eleven wide,twelve wide,thirteen wide,fourteen wide,fifteen wide,sixteen wide");
+      classes = classes.replace('count', "one,two,three,four,five,six,seven,eight,nine,ten,eleven,twelve,thirteen,fourteen,fifteen,sixteen");
+      classes = classes.replace('column count', "one column,two column,three column,four column,five column,six column,seven column,eight column,nine column,ten column,eleven column,twelve column,thirteen column,fourteen column,fifteen column,sixteen column");
+      classes = classes.replace('evenly divided', "one,two,three,four,five,six,seven,eight,nine,ten,eleven,twelve,thirteen,fourteen,fifteen,sixteen");
       classes = classes.replace('size', "mini,tiny,small,medium,large,big,huge,massive");
+      classes = classes.replace('emphasis', "primary,secondary,tertiary");
       classes = classes.replace('colored', "red,orange,yellow,olive,green,teal,blue,violet,purple,pink,brown,grey,black");
       classes = (classes !== '')
         ? classes.split(',')
@@ -887,10 +896,13 @@ semantic.ready = function() {
         var
           $attribute    = $(this),
           attributeHTML = $attribute.html(),
+          $tag,
           $value,
+          tagHTML,
           isUI,
           isPageElement,
           isOtherUI,
+          isOtherIcon,
           classNames,
           classString,
           html,
@@ -901,13 +913,15 @@ semantic.ready = function() {
           return true;
         }
         $value        = $attribute.next('.value, .string').eq(0);
+        $tag          = $attribute.prev('.title').eq(0);
+        tagHTML       = $tag.html();
         html          = $value.html();
         classNames    = html.replace(/\"/g, '').split(' ');
 
         isUI          = (html.search('ui') !== -1);
         isPageElement = (html.search(pageName) > 0);
         isOtherUI     = (!isPageElement && isUI);
-
+        isOtherIcon   = (!isPageElement && tagHTML === 'i' && html.search('icon') !== -1);
         // check if any class match
         $.each(classes, function(index, string) {
           var
@@ -925,7 +939,7 @@ semantic.ready = function() {
         });
 
         // generate links to other UI
-        if(isOtherUI) {
+        if(isOtherUI || isOtherIcon) {
           html           = newHTML || html;
           classString    = /^\"(.*)\"/g.exec(html);
           if(!classString || classString.length < 2) {
@@ -936,14 +950,13 @@ semantic.ready = function() {
             var
               className = string.replace('"', '')
             ;
-            if(className == 'icon' || className == 'item') {
+            // yep..
+            if(className == 'item') {
               return;
             }
             if(metadata && metadata[className] && metadata[className].url) {
               // we found a match
-              console.log(newHTML);
               newHTML = html.replace(classString, '<a href="' + metadata[className].url + '">' + classString + '</a>');
-              console.log(classString, newHTML);
             }
           });
         }

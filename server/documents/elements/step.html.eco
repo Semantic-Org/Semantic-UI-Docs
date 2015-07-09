@@ -20,17 +20,28 @@ themes      : ['Default', 'Basic', 'GitHub']
 
   <h2 class="ui dividing header">Types</h2>
 
+  <div class="example" data-use-content="true">
+    <h4 class="ui header">Step</h4>
+    <p>A single step</p>
+    <div class="ui steps">
+      <div class="step">
+        Shipping
+      </div>
+    </div>
+  </div>
+
+  <h2 class="ui dividing header">Groups</h2>
+
   <div class="example">
     <h4 class="ui header">
       Steps
-      <span class="ui teal label">Flexbox</span>
     </h4>
-    <p>A set of step</p>
+    <p>A set of steps</p>
     <div class="ui ignored positive icon message">
       <i class="mobile icon"></i>
       <div class="content">
         <h3 class="header">Responsive Element</h3>
-        <p>Steps will automatically adjust their layout for mobile. To make steps automatically stack for tablet as well use the <code>tablet stackable</code> variation.</p>
+        <p>Steps will automatically stack on mobile. To make steps automatically stack for tablet use the <code>tablet stackable</code> variation.</p>
       </div>
     </div>
     <div class="ui steps">
@@ -112,18 +123,10 @@ themes      : ['Default', 'Basic', 'GitHub']
 
 
   <h2 class="ui dividing header">Content</h2>
-  <div class="example">
-    <h4 class="ui header">Step</h4>
-    <p>A step</p>
-    <div class="ui steps">
-      <div class="step">
-        Shipping
-      </div>
-    </div>
-  </div>
-  <div class="example">
-    <h4 class="ui header">Descriptive Step</h4>
-    <p>A step can optionally contain a title and description</p>
+
+  <div class="example" data-use-content="true">
+    <h4 class="ui header">Description</h4>
+    <p>A step can contain a description</p>
     <div class="ui steps">
       <div class="step">
         <div class="title">Shipping</div>
@@ -131,9 +134,9 @@ themes      : ['Default', 'Basic', 'GitHub']
       </div>
     </div>
   </div>
-  <div class="example">
-    <h4 class="ui header">Steps with Icons</h4>
-    <p>A step can optionally contain an icon</p>
+  <div class="example" data-use-content="true">
+    <h4 class="ui header">Icon</h4>
+    <p>A step can contain an icon</p>
     <div class="ui steps">
       <div class="step">
         <i class="truck icon"></i>
@@ -144,15 +147,21 @@ themes      : ['Default', 'Basic', 'GitHub']
       </div>
     </div>
   </div>
-  <div class="example">
-    <h4 class="ui header">Linkable Steps</h4>
-    <p>A step can be clickable</p>
+  <div class="example" data-use-content="true" data-tag="a">
+    <h4 class="ui header">Link</h4>
+    <p>A step can link</p>
     <div class="ui steps">
-      <a class="step">
+      <a class="active step">
         <i class="truck icon"></i>
         <div class="content">
           <div class="title">Shipping</div>
           <div class="description">Choose your shipping options</div>
+        </div>
+      </a>
+      <a class="step">
+        <div class="content">
+          <div class="title">Billing</div>
+          <div class="description">Enter billing information</div>
         </div>
       </a>
     </div>
@@ -164,6 +173,12 @@ themes      : ['Default', 'Basic', 'GitHub']
         <div class="content">
           <div class="title">Shipping</div>
           <div class="description">Choose your shipping options</div>
+        </div>
+      </div>
+      <div class="link step">
+        <div class="content">
+          <div class="title">Billing</div>
+          <div class="description">Enter billing information</div>
         </div>
       </div>
     </div>
@@ -278,7 +293,7 @@ themes      : ['Default', 'Basic', 'GitHub']
 
   <div class="example">
     <h4 class="ui header">
-      Attached <span class="ui teal label">New in 2.0</span>
+      Attached
     </h4>
     <p>Steps can be attached to other elements</p>
 
@@ -336,6 +351,48 @@ themes      : ['Default', 'Basic', 'GitHub']
 
 
   <div class="example">
+    <h4 class="ui header">Evenly Divided</h4>
+    <p>Steps can be divided evenly inside their parent</p>
+    <div class="ui three steps">
+      <div class="step">
+        <i class="truck icon"></i>
+        <div class="content">
+          <div class="title">Shipping</div>
+        </div>
+      </div>
+      <div class="active step">
+        <i class="payment icon"></i>
+        <div class="content">
+          <div class="title">Billing</div>
+        </div>
+      </div>
+      <div class="disabled step">
+        <i class="info icon"></i>
+        <div class="content">
+          <div class="title">Confirm Order</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="another example">
+    <div class="ui two steps">
+      <div class="active step">
+        <i class="payment icon"></i>
+        <div class="content">
+          <div class="title">Billing</div>
+        </div>
+      </div>
+      <div class="disabled step">
+        <i class="info icon"></i>
+        <div class="content">
+          <div class="title">Confirm Order</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="example">
     <h4 class="ui header">Size</h4>
     <p>Steps can have different sizes</p>
 
@@ -375,49 +432,6 @@ themes      : ['Default', 'Basic', 'GitHub']
         <i class="payment icon"></i>
         <div class="content">
           <div class="title">Billing</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="example">
-    <h4 class="ui header">Step</h4>
-    <p>Steps can be divided evenly inside their parent</p>
-    <div class="ui three steps">
-      <div class="step">
-        <i class="truck icon"></i>
-        <div class="content">
-          <div class="title">Shipping</div>
-        </div>
-      </div>
-      <div class="active step">
-        <i class="payment icon"></i>
-        <div class="content">
-          <div class="title">Billing</div>
-        </div>
-      </div>
-      <div class="disabled step">
-        <i class="info icon"></i>
-        <div class="content">
-          <div class="title">Confirm Order</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="another example">
-    <div class="ui two steps">
-      <div class="active step">
-        <i class="payment icon"></i>
-        <div class="content">
-          <div class="title">Billing</div>
-        </div>
-      </div>
-      <div class="disabled step">
-        <i class="info icon"></i>
-        <div class="content">
-          <div class="title">Confirm Order</div>
         </div>
       </div>
     </div>

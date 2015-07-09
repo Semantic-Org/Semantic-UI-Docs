@@ -34,7 +34,7 @@ themes      : ['default', 'GitHub']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="tall stacked, stacked">
     <h4 class="ui header">Stacked</h4>
     <p>A segment can be formatted to show it contains multiple pages</p>
     <div class="ui stacked segment">
@@ -79,8 +79,8 @@ themes      : ['default', 'GitHub']
 
   <h2 class="ui dividing header">Groups</h2>
 
-  <div class="example">
-    <h4 class="ui header">Segment Group</h4>
+  <div class="example" data-class="segments">
+    <h4 class="ui header">Segments</h4>
     <p>A group of segments can be formatted to appear together</p>
 
     <div class="ui segments">
@@ -130,9 +130,9 @@ themes      : ['default', 'GitHub']
       </div>
     </div>
   </div>
-  <div class="example">
-    <h4 class="ui header">Nested Group</h4>
-    <p>A group of segments can be nested in another group</p>
+  <div class="example" data-use-content="true" data-class="segments">
+    <h4 class="ui header">Nested Segments</h4>
+    <p>A group of segments can be nested in another group of segments</p>
     <div class="ui segments">
       <div class="ui segment">
         <p>Top</p>
@@ -169,7 +169,7 @@ themes      : ['default', 'GitHub']
   </div>
 
   <div class="example">
-    <h4 class="ui header">Horizontal Group</h4>
+    <h4 class="ui header">Horizontal Segments</h4>
     <p>A segment group can appear horizontally</p>
     <div class="ui horizontal segments">
       <div class="ui segment">
@@ -186,7 +186,7 @@ themes      : ['default', 'GitHub']
 
 
   <div class="example">
-    <h4 class="ui header">Raised Group</h4>
+    <h4 class="ui header">Raised Segments</h4>
     <p>A group of segments can be raised</p>
     <div class="ui raised segments">
       <div class="ui segment">
@@ -202,7 +202,7 @@ themes      : ['default', 'GitHub']
   </div>
 
   <div class="example">
-    <h4 class="ui header">Stacked Group</h4>
+    <h4 class="ui header">Stacked Segments</h4>
     <p>A group of segments can be stacked</p>
     <div class="ui stacked segments">
       <div class="ui segment">
@@ -218,7 +218,7 @@ themes      : ['default', 'GitHub']
   </div>
 
   <div class="piled example">
-    <h4 class="ui header">Piled Group</h4>
+    <h4 class="ui header">Piled Segments</h4>
     <p>A group of segments can be raised</p>
     <div class="ui piled segments">
       <div class="ui segment">
@@ -434,7 +434,7 @@ themes      : ['default', 'GitHub']
     </div>
   </div>
 
-  <div class="example">
+  <div class="clearing example">
     <h4 class="ui header">Floated</h4>
     <p>A segment can appear to the left or right of other content</p>
     <div class="ui right floated segment">

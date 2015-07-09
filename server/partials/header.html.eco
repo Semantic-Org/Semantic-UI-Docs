@@ -9,7 +9,7 @@
         <%=@document.title %>
         <% if @document.status?: %><span class="ui red label"><%= @document.status %></span><% end %>
         <div class="sub header">
-          <% if 'developments' in @getEnvironments(): %>
+          <% if 'development' in @getEnvironments(): %>
           <% else: %>
           <a class="twitter-share-button twitter"
             href="http://twitter.com/share"

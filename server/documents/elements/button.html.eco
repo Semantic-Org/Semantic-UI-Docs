@@ -42,7 +42,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
   <div class="example" data-class="primary, secondary">
     <h4 class="ui header">Emphasis</h4>
     <p>A button can be formatted to show different levels of emphasis</p>
-    <div class="ui ignored info message">Setting your brand colors to primary and secondary color variables in <code>site.variables</code> will allow you to use your color theming for UI elements</div>
+    <div class="ui ignored info message">Setting your brand colors to primary and secondary color variables in <a href="/usage/theming.html"><code>site.variables</code></a> will allow you to use your color theming for UI elements</div>
     <button class="ui primary button">
       Save
     </button>

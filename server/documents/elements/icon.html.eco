@@ -100,7 +100,6 @@ themes      : ['Default']
         <i class="calendar icon"></i>
         <i class="calendar outline icon"></i>
         <i class="cloud icon"></i>
-        <i class="code icon"></i>
         <i class="comment icon"></i>
         <i class="comments icon"></i>
         <i class="comment outline icon"></i>
@@ -293,8 +292,8 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="icon example" data-class="none">
-      <h4 class="ui header">Users</h4>
+    <div class="icon example">
+      <h4 class="ui header">User Types</h4>
       <p>Icons can represent types of people</p>
       <div class="ui doubling five column grid">
         <div class="column"><i class="child icon"></i>Child</div>

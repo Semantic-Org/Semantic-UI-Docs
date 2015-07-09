@@ -38,7 +38,7 @@ themes      : ['Default']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="move left, move right, move up, move down, move">
     <h4 class="ui header">Move</h4>
     <p>An element can move in a direction to reveal content</p>
     <div class="ui move reveal">
@@ -83,7 +83,7 @@ themes      : ['Default']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="rotate left, rotate">
     <h4 class="ui header">Rotate</h4>
     <p>An element can rotate to reveal content below</p>
     <div class="ui small circular rotate reveal image">
@@ -98,8 +98,30 @@ themes      : ['Default']
     </div>
   </div>
 
-  <h2 class="ui dividing header">States</h2>
+  <h2 class="ui dividing header">Content</h2>
 
+  <div class="clearing example" data-use-content="true">
+    <h4 class="ui header">Visible Content</h4>
+    <p>A reveal may contain content that is visible before interaction</p>
+    <div class="ui ignored info message">
+      Visible and hidden content should be the same aspect ratio
+    </div>
+    <div class="ui small fade reveal image">
+      <img class="visible content" src="/images/avatar/large/ade.jpg">
+      <img class="hidden content" src="/images/wireframe/square-image.png">
+    </div>
+  </div>
+
+  <div class="clearing example" data-use-content="true">
+    <h4 class="ui header">Hidden Content</h4>
+    <p>A reveal may contain content that is hidden before user interaction</p>
+    <div class="ui small fade reveal image">
+      <img class="visible content" src="/images/wireframe/square-image.png">
+      <img class="hidden content" src="/images/avatar/large/ade.jpg">
+    </div>
+  </div>
+
+  <h2 class="ui dividing header">States</h2>
 
   <div class="example">
     <h4 class="ui header">Active</h4>
@@ -123,7 +145,7 @@ themes      : ['Default']
   <div class="example">
     <h4 class="ui header">Instant</h4>
     <p>An element can show its content without delay</p>
-    <div class="ui instant masked move reveal">
+    <div class="ui instant move reveal">
       <img class="visible content" src="/images/wireframe/square-image.png">
       <img class="hidden content" src="/images/avatar/large/chris.jpg">
     </div>
@@ -135,7 +157,7 @@ themes      : ['Default']
   <div class="example">
     <h4 class="ui header">Disabled</h4>
     <p>A disabled reveal will not animate when hovered</p>
-    <div class="ui disabled masked move reveal">
+    <div class="ui disabled move reveal">
       <img class="visible content" src="/images/wireframe/square-image.png">
       <img class="hidden content" src="/images/avatar/large/chris.jpg">
     </div>

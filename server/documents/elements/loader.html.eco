@@ -22,7 +22,7 @@ themes      : ['Default', 'Duo', 'Pulsar']
   <div class="example">
     <h4 class="ui header">Loader</h4>
     <p>A loader</p>
-    <div class="ui ignored info message">Loaders are hidden unless <code>active</code> or inside an <code>active</code> dimmer.</div>
+    <div class="ui ignored info message">Loaders are hidden unless <code>active</code> or inside an <a href="/modules/dimmer.html"><code>active dimmer</code></a>.</div>
     <div class="ui segment">
       <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
       <div class="ui active dimmer">
@@ -139,8 +139,16 @@ themes      : ['Default', 'Duo', 'Pulsar']
   <div class="example">
     <h4 class="ui header">Inverted</h4>
     <p>Loaders can have their colors inverted.</p>
-    <div class="ui ignored info message">Loaders will automatically be inverted inside dimmers to maintain consistency</div>
-    <div class="ui inverted inline text loader"></div>
+    <div class="ui inverted segment">
+      <div class="ui active inverted loader"></div>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui ignored info message">Loaders will automatically be inverted inside <code>inverted dimmer</code></div>
     <div class="ui segment">
       <div class="ui active inverted dimmer">
         <div class="ui mini text loader">Loading</div>

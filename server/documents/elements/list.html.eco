@@ -156,7 +156,7 @@ themes      : ['Default']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-tag="ul">
     <h4 class="ui header">Bulleted</h4>
     <p>A list can mark items with a bullet</p>
     <div class="ui bulleted list">
@@ -202,7 +202,7 @@ themes      : ['Default']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-tag="ol">
     <h4 class="ui header">Ordered</h4>
     <p>A list can be ordered numerically</p>
     <div class="ui ordered list">
@@ -235,7 +235,7 @@ themes      : ['Default']
     </ol>
   </div>
 
-  <div class="example">
+  <div class="example" data-tag="a">
     <h4 class="ui header">Link</h4>
     <p>A list can be specially formatted for navigation links</p>
     <div class="ui link list">
@@ -249,7 +249,23 @@ themes      : ['Default']
 
   <h2 class="ui dividing header">Content</h2>
 
-  <div class="example">
+  <div class="example" data-use-content="true">
+    <h4 class="ui header">Item</h4>
+    <p>A list item can contain a set of items</p>
+    <div class="ui list">
+      <div class="item">
+        1
+      </div>
+      <div class="item">
+        2
+      </div>
+      <div class="item">
+        3
+      </div>
+    </div>
+  </div>
+
+  <div class="example" data-use-content="true">
     <h4 class="ui header">Icon</h4>
     <p>A list item can contain an icon</p>
     <div class="ui list">
@@ -274,12 +290,12 @@ themes      : ['Default']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-use-content="true" data-class="image">
     <h4 class="ui header">Image</h4>
     <p>A list item can contain an image</p>
-    <div class="ui ignored warning message">
+<!--     <div class="ui ignored warning message">
       Due to issues with <a href="https://github.com/philipwalton/flexbugs#5-column-flex-items-dont-always-preserve-intrinsic-aspect-ratios" target="_blank">intrinsic aspect ratio in flexbox</a> <code>img</code> should use a container element.
-    </div>
+    </div> -->
     <div class="ui list">
       <div class="item">
         <div class="ui avatar image">
@@ -329,7 +345,7 @@ themes      : ['Default']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-use-content="true" data-tag="a">
     <h4 class="ui header">Link</h4>
     <p>A list can contain links</p>
     <div class="ui list">
@@ -355,7 +371,7 @@ themes      : ['Default']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-use-content="true">
     <h4 class="ui header">Header</h4>
     <p>A list item can contain a header</p>
     <div class="ui list">
@@ -378,7 +394,7 @@ themes      : ['Default']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-use-content="true">
     <h4 class="ui header">Description</h4>
     <p>A list item can contain a description</p>
     <div class="ui list">
@@ -408,57 +424,6 @@ themes      : ['Default']
         <div class="content">
           <a class="header">Enid's</a>
           <div class="description">At night a bar, during the day a delicious brunch spot.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="example">
-    <h4 class="ui header">Floated</h4>
-    <p>Any element inside a list can be floated left or right</p>
-    <div class="ui middle aligned divided list">
-      <div class="item">
-        <div class="ui avatar image">
-          <img src="/images/avatar2/small/lena.png">
-        </div>
-        <div class="content">
-          Lena
-        </div>
-        <div class="right floated content">
-          <div class="ui button">Add</div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="ui avatar image">
-          <img src="/images/avatar2/small/lindsay.png">
-        </div>
-        <div class="content">
-          Lindsay
-        </div>
-        <div class="right floated content">
-          <div class="ui button">Add</div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="ui avatar image">
-          <img src="/images/avatar2/small/mark.png">
-        </div>
-        <div class="content">
-          Mark
-        </div>
-        <div class="right floated content">
-          <div class="ui button">Add</div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="ui avatar image">
-          <img src="/images/avatar2/small/molly.png">
-        </div>
-        <div class="content">
-          Molly
-        </div>
-        <div class="right floated content">
-          <div class="ui button">Add</div>
         </div>
       </div>
     </div>
@@ -627,37 +592,6 @@ themes      : ['Default']
         </div>
         <div class="content">
           <div class="header">Daniel</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="example">
-    <h4 class="ui header">Vertical Alignment</h4>
-    <p>A list can specify vertical alignment for content or images</p>
-    <div class="ui horizontal list">
-      <div class="item">
-        <div class="ui avatar image">
-          <img src="/images/wireframe/square-image.png">
-        </div>
-        <div class="top aligned content">
-          Top Aligned
-        </div>
-      </div>
-      <div class="item">
-        <div class="ui avatar image">
-          <img src="/images/wireframe/square-image.png">
-        </div>
-        <div class="middle aligned content">
-          Middle
-        </div>
-      </div>
-      <div class="item">
-        <div class="ui avatar image">
-          <img src="/images/wireframe/square-image.png">
-        </div>
-        <div class="bottom aligned content">
-          Bottom
         </div>
       </div>
     </div>
@@ -879,7 +813,7 @@ themes      : ['Default']
           <img src="/images/avatar/small/helen.jpg">
         </div>
         <div class="content">
-          <a class="header">Helen</a>
+          <div class="header">Helen</div>
         </div>
       </div>
       <div class="item">
@@ -887,7 +821,7 @@ themes      : ['Default']
           <img src="/images/avatar/small/christian.jpg">
         </div>
         <div class="content">
-          <a class="header">Christian</a>
+          <div class="header">Christian</div>
         </div>
       </div>
       <div class="item">
@@ -895,7 +829,7 @@ themes      : ['Default']
           <img src="/images/avatar/small/daniel.jpg">
         </div>
         <div class="content">
-          <a class="header">Daniel</a>
+          <div class="header">Daniel</div>
         </div>
       </div>
     </div>
@@ -907,7 +841,7 @@ themes      : ['Default']
           <img src="/images/avatar/small/helen.jpg">
         </div>
         <div class="content">
-          <a class="header">Helen</a>
+          <div class="header">Helen</div>
         </div>
       </div>
       <div class="item">
@@ -915,7 +849,7 @@ themes      : ['Default']
           <img src="/images/avatar/small/christian.jpg">
         </div>
         <div class="content">
-          <a class="header">Christian</a>
+          <div class="header">Christian</div>
         </div>
       </div>
       <div class="item">
@@ -923,7 +857,7 @@ themes      : ['Default']
           <img src="/images/avatar/small/daniel.jpg">
         </div>
         <div class="content">
-          <a class="header">Daniel</a>
+          <div class="header">Daniel</div>
         </div>
       </div>
     </div>
@@ -935,7 +869,7 @@ themes      : ['Default']
           <img src="/images/avatar/small/helen.jpg">
         </div>
         <div class="content">
-          <a class="header">Helen</a>
+          <div class="header">Helen</div>
         </div>
       </div>
       <div class="item">
@@ -943,7 +877,7 @@ themes      : ['Default']
           <img src="/images/avatar/small/christian.jpg">
         </div>
         <div class="content">
-          <a class="header">Christian</a>
+          <div class="header">Christian</div>
         </div>
       </div>
       <div class="item">
@@ -951,7 +885,7 @@ themes      : ['Default']
           <img src="/images/avatar/small/daniel.jpg">
         </div>
         <div class="content">
-          <a class="header">Daniel</a>
+          <div class="header">Daniel</div>
         </div>
       </div>
     </div>
@@ -963,7 +897,7 @@ themes      : ['Default']
           <img src="/images/avatar/small/helen.jpg">
         </div>
         <div class="content">
-          <a class="header">Helen</a>
+          <div class="header">Helen</div>
         </div>
       </div>
       <div class="item">
@@ -971,7 +905,7 @@ themes      : ['Default']
           <img src="/images/avatar/small/christian.jpg">
         </div>
         <div class="content">
-          <a class="header">Christian</a>
+          <div class="header">Christian</div>
         </div>
       </div>
       <div class="item">
@@ -979,7 +913,7 @@ themes      : ['Default']
           <img src="/images/avatar/small/daniel.jpg">
         </div>
         <div class="content">
-          <a class="header">Daniel</a>
+          <div class="header">Daniel</div>
         </div>
       </div>
     </div>
@@ -991,7 +925,7 @@ themes      : ['Default']
           <img src="/images/avatar/small/helen.jpg">
         </div>
         <div class="content">
-          <a class="header">Helen</a>
+          <div class="header">Helen</div>
         </div>
       </div>
       <div class="item">
@@ -999,7 +933,7 @@ themes      : ['Default']
           <img src="/images/avatar/small/christian.jpg">
         </div>
         <div class="content">
-          <a class="header">Christian</a>
+          <div class="header">Christian</div>
         </div>
       </div>
       <div class="item">
@@ -1007,7 +941,7 @@ themes      : ['Default']
           <img src="/images/avatar/small/daniel.jpg">
         </div>
         <div class="content">
-          <a class="header">Daniel</a>
+          <div class="header">Daniel</div>
         </div>
       </div>
     </div>
@@ -1019,7 +953,7 @@ themes      : ['Default']
           <img src="/images/avatar/small/helen.jpg">
         </div>
         <div class="content">
-          <a class="header">Helen</a>
+          <div class="header">Helen</div>
         </div>
       </div>
       <div class="item">
@@ -1027,7 +961,7 @@ themes      : ['Default']
           <img src="/images/avatar/small/christian.jpg">
         </div>
         <div class="content">
-          <a class="header">Christian</a>
+          <div class="header">Christian</div>
         </div>
       </div>
       <div class="item">
@@ -1035,7 +969,7 @@ themes      : ['Default']
           <img src="/images/avatar/small/daniel.jpg">
         </div>
         <div class="content">
-          <a class="header">Daniel</a>
+          <div class="header">Daniel</div>
         </div>
       </div>
     </div>
@@ -1047,7 +981,7 @@ themes      : ['Default']
           <img src="/images/avatar/small/helen.jpg">
         </div>
         <div class="content">
-          <a class="header">Helen</a>
+          <div class="header">Helen</div>
         </div>
       </div>
       <div class="item">
@@ -1055,7 +989,7 @@ themes      : ['Default']
           <img src="/images/avatar/small/christian.jpg">
         </div>
         <div class="content">
-          <a class="header">Christian</a>
+          <div class="header">Christian</div>
         </div>
       </div>
       <div class="item">
@@ -1063,11 +997,98 @@ themes      : ['Default']
           <img src="/images/avatar/small/daniel.jpg">
         </div>
         <div class="content">
-          <a class="header">Daniel</a>
+          <div class="header">Daniel</div>
         </div>
       </div>
     </div>
   </div>
+
+  <h2 class="ui dividing header">Content Variations</h2>
+
+
+  <div class="example" data-use-content="true">
+    <h4 class="ui header">Vertically Aligned</h4>
+    <p>An element inside a list can be vertically aligned</p>
+    <div class="ui horizontal list">
+      <div class="item">
+        <div class="ui avatar image">
+          <img src="/images/wireframe/square-image.png">
+        </div>
+        <div class="top aligned content">
+          Top Aligned
+        </div>
+      </div>
+      <div class="item">
+        <div class="ui avatar image">
+          <img src="/images/wireframe/square-image.png">
+        </div>
+        <div class="middle aligned content">
+          Middle
+        </div>
+      </div>
+      <div class="item">
+        <div class="ui avatar image">
+          <img src="/images/wireframe/square-image.png">
+        </div>
+        <div class="bottom aligned content">
+          Bottom
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="example" data-use-content="true">
+    <h4 class="ui header">Floated</h4>
+    <p>An element inside a list can be floated left or right</p>
+    <div class="ui middle aligned divided list">
+      <div class="item">
+        <div class="right floated content">
+          <div class="ui button">Add</div>
+        </div>
+        <div class="ui avatar image">
+          <img src="/images/avatar2/small/lena.png">
+        </div>
+        <div class="content">
+          Lena
+        </div>
+      </div>
+      <div class="item">
+        <div class="right floated content">
+          <div class="ui button">Add</div>
+        </div>
+        <div class="ui avatar image">
+          <img src="/images/avatar2/small/lindsay.png">
+        </div>
+        <div class="content">
+          Lindsay
+        </div>
+      </div>
+      <div class="item">
+        <div class="right floated content">
+          <div class="ui button">Add</div>
+        </div>
+        <div class="ui avatar image">
+          <img src="/images/avatar2/small/mark.png">
+        </div>
+        <div class="content">
+          Mark
+        </div>
+      </div>
+      <div class="item">
+        <div class="right floated content">
+          <div class="ui button">Add</div>
+        </div>
+        <div class="ui avatar image">
+          <img src="/images/avatar2/small/molly.png">
+        </div>
+        <div class="content">
+          Molly
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 

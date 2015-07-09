@@ -1230,7 +1230,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
 
 
   <div class="example">
-    <h4 class="ui header">Evenly sized items</h4>
+    <h4 class="ui header">Evenly Divided</h4>
     <p>A menu may divide its items evenly</p>
     <div class="ui fluid three item menu">
       <a class="item">Buy</a>

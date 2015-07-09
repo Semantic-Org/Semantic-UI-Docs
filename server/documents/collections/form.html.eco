@@ -23,14 +23,29 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
 
   <div class="example">
     <h4 class="ui header">Form</h4>
-    <p>
-      Forms always include fields, and fields always contain form elements. Fields themselves may also include:
-        <a href="/elements/input.html">inputs</a>, standard form fields, <a href="/elements/label.html">labels</a>, <a href="/modules/dropdown.html">selection dropdowns</a>, textareas, as well as:
-        <a href="/modules/checkbox.html">checkboxes</a>, and <a href="/collections/message.html">message blocks</a>.
-    </p>
+    <p>A form</p>
     <div class="ui ignored warning message">
       <p>If you are looking for validation you should check out <a href="/behaviors/form.html">form behaviors</a>.</p>
     </div>
+    <form class="ui form">
+      <div class="field">
+        <label>First Name</label>
+        <input type="text" name="first-name" placeholder="First Name">
+      </div>
+      <div class="field">
+        <label>Last Name</label>
+        <input type="text" name="last-name" placeholder="Last Name">
+      </div>
+      <div class="field">
+        <div class="ui checkbox">
+          <input type="checkbox" />
+          <label>I agree to the Terms and Conditions</label>
+        </div>
+      </div>
+      <button class="ui button" type="submit">Submit</button>
+    </form>
+  </div>
+  <div class="another example">
     <div class="ui ignored hidden divider"></div>
     <form class="ui form">
       <h4 class="ui dividing header">Shipping Information</h4>
@@ -183,7 +198,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
 
   <h2 class="ui dividing header">Content</h2>
 
-  <div class="example">
+  <div class="example" data-use-content="true">
     <h4 class="ui header">Field</h4>
     <p>A field is a form element containing a label and an input</p>
     <div class="ui form">
@@ -194,9 +209,9 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
     </div>
   </div>
 
-  <div class="example">
-    <h4 class="ui header">Field Groups</h4>
-    <p>Fields can be grouped</p>
+  <div class="example" data-use-content="true">
+    <h4 class="ui header">Fields</h4>
+    <p>A set of fields can appear grouped together</p>
     <div class="ui ignored positive message">
       Field groups automatically receive responsive styling, swapping to one field per row on mobile devices.
     </div>
@@ -252,7 +267,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
     </div>
   </div>
 
-  <div class="example">
+  <div data-use-content="true" class="example">
     <h4 class="ui header">Text Area</h4>
     <p>A textarea can be used to allow for extended user input.</p>
     <div class="ui ignored info message">
@@ -270,9 +285,12 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
     </div>
   </div>
 
-  <div class="example">
+  <div data-use-content="true" class="example">
     <h4 class="ui header">Checkbox</h4>
-    <p><a href="/modules/checkbox.html">Checkboxes</a> are special, styled versions of standard html checkboxes.</p>
+    <p>A form can contain a <a href="/modules/checkbox.html">checkbox</a></p>
+    <div class="ui ignored info message">
+      UI checkbox are special, styled versions of standard html checkboxes.
+    </div>
     <div class="evaluated code" data-type="javascript" data-label="true">
     $('.ui.checkbox')
       .checkbox()
@@ -301,9 +319,78 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
     </div>
   </div>
 
-  <div class="form example">
-    <h4 class="ui header">Selection Dropdown</h4>
-    <p>A selection dropdown is a type of <a href="/modules/dropdown.html">ui dropdown</a> designed for user selection. Dropdown will automatically convert <code>select</code> elements initialized as dropdowns.</p>
+  <div data-use-content="true" class="example">
+    <h4 class="ui header">Radio Checkbox</h4>
+    <p>A form can include a <a href="/modules/checkbox.html#radio">radio checkbox</a></p>
+    <div class="evaluated code" data-type="javascript" data-label="true">
+    $('.ui.radio.checkbox')
+      .checkbox()
+    ;
+    </div>
+    <div class="ui form">
+      <div class="inline fields">
+        <label for="fruit">Select your favorite fruit:</label>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="fruit" checked />
+            <label>Apples</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="fruit" />
+            <label>Oranges</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="fruit" />
+            <label>Pears</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="fruit" />
+            <label>Grapefruit</label>
+          </div>
+        </div>
+      </div>
+      <div class="grouped fields">
+        <label for="fruit">Select your second favorite fruit:</label>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="fruit" checked />
+            <label>Apples</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="fruit" />
+            <label>Oranges</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="fruit" />
+            <label>Pears</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="fruit" />
+            <label>Grapefruit</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form example" data-use-content="true">
+    <h4 class="ui header">Dropdown</h4>
+    <p>A form can contain a <a href="/modules/dropdown.html">dropdown</a></p>
+    <div class="ui ignored info message">
+      Dropdown will automatically convert <code>select</code> elements initialized as dropdowns. For more details check out <a href="/modules/dropdown.html#usage">the dropdown docs</a>
+    </div>
     <div class="code" data-type="javascript" data-label="true">
     $('select.dropdown')
       .dropdown()
@@ -320,9 +407,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
       </div>
     </div>
   </div>
-  <div class="form example">
-    <h4 class="ui header">Search Selection Dropdown</h4>
-    <p>A search selection is a special type of ui dropdown designed for selecting between many choices.</p>
+  <div class="another form example">
     <div class="ui form">
       <div class="field">
         <label>Country</label>
@@ -582,9 +667,9 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
     </div>
   </div>
 
-  <div class="form example">
+  <div class="form example" data-tag="select" data-use-content="true">
     <h4 class="ui header">Multiple Select</h4>
-    <p>A multiple select is used to include several choices with one form field.</p>
+    <p>A <a href="/modules/dropdown.html##multiple-selection">multiple select</a> is used to include several choices with one form field</p>
     <div class="ui form">
       <div class="field">
         <label>Country</label>
@@ -844,8 +929,8 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
     </div>
   </div>
 
-  <div class="form example">
-    <h4 class="ui header">Basic Select</h4>
+  <div class="form example" data-tag="select" data-use-content="true">
+    <h4 class="ui header">HTML Select</h4>
     <p>If javascript or <a href="/modules/dropdown.html">ui dropdown</a> are not a viable option, forms also can provide basic styling for select elements</p>
     <div class="ui form">
       <div class="field">
@@ -858,75 +943,12 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
     </div>
   </div>
 
-  <div class="example">
-    <h4 class="ui header">Radio Box</h4>
-    <p>Radio boxes are styled forms of standard form radio controls.</p>
-    <div class="evaluated code" data-type="javascript" data-label="true">
-    $('.ui.radio.checkbox')
-      .checkbox()
-    ;
-    </div>
-    <div class="ui form">
-      <div class="inline fields">
-        <label for="fruit">Select your favorite fruit:</label>
-        <div class="field">
-          <div class="ui radio checkbox">
-            <input type="radio" name="fruit" checked />
-            <label>Apples</label>
-          </div>
-        </div>
-        <div class="field">
-          <div class="ui radio checkbox">
-            <input type="radio" name="fruit" />
-            <label>Oranges</label>
-          </div>
-        </div>
-        <div class="field">
-          <div class="ui radio checkbox">
-            <input type="radio" name="fruit" />
-            <label>Pears</label>
-          </div>
-        </div>
-        <div class="field">
-          <div class="ui radio checkbox">
-            <input type="radio" name="fruit" />
-            <label>Grapefruit</label>
-          </div>
-        </div>
-      </div>
-      <div class="grouped fields">
-        <label for="fruit">Select your second favorite fruit:</label>
-        <div class="field">
-          <div class="ui radio checkbox">
-            <input type="radio" name="fruit" checked />
-            <label>Apples</label>
-          </div>
-        </div>
-        <div class="field">
-          <div class="ui radio checkbox">
-            <input type="radio" name="fruit" />
-            <label>Oranges</label>
-          </div>
-        </div>
-        <div class="field">
-          <div class="ui radio checkbox">
-            <input type="radio" name="fruit" />
-            <label>Pears</label>
-          </div>
-        </div>
-        <div class="field">
-          <div class="ui radio checkbox">
-            <input type="radio" name="fruit" />
-            <label>Grapefruit</label>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="example">
+  <div data-use-content="true" class="example" data-use-content="true">
     <h4 class="ui header">Message</h4>
-    <p><a href="/collections/message.html">Messages</a> have special meaning inside a form tag. Any info, error, or warning message blocks found inside a form are hidden by default.</p>
+    <p>A form can contain a <a href="/collections/message.html">message</a></p>
+    <div class="ui ignored info message">
+      Any <code>info</code>, <code>error</code>, <code>success</code>, or <code>warning</code> message blocks found inside a form are hidden by default.
+    </div>
     <div class="ui form">
       <div class="ui message">
         <div class="header">We had some issues</div>
@@ -940,7 +962,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
 
   <h2 class="ui dividing header">States</h2>
 
-  <div class="example">
+  <div data-use-content="true" class="example">
     <h4 class="ui header">Loading</h4>
     <p>If a form is in loading state, it will automatically show a loading indicator.</p>
 
@@ -953,7 +975,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
     </div>
   </div>
 
-  <div class="example">
+  <div data-use-content="true" class="example">
     <h4 class="ui header">Success</h4>
     <p>If a form is in an success state, it will automatically show any success message blocks.</p>
     <div class="ui form success">
@@ -969,7 +991,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
     </div>
   </div>
 
-  <div class="example">
+  <div data-use-content="true" class="example">
     <h4 class="ui header">Error</h4>
     <p>If a form is in an error state, it will automatically show any error message blocks.</p>
     <div class="ui form error">
@@ -985,7 +1007,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
     </div>
   </div>
 
-  <div class="example">
+  <div data-use-content="true" class="example">
     <h4 class="ui header">Warning</h4>
     <p>If a form is in warning state, it will automatically show any warning message block.</p>
 
@@ -1005,7 +1027,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
   </div>
 
 
-  <div class="example">
+  <div data-use-content="true" class="example">
     <h4 class="ui header">Field Error</h4>
     <p>Individual fields may display an error state</p>
 
@@ -1032,7 +1054,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
           </div>
         </div>
       </div>
-      <div class="inline error field">
+      <div class="inline field error">
         <div class="ui checkbox">
           <input type="checkbox" />
           <label>I agree to the Terms and Conditions</label>
@@ -1041,7 +1063,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
     </div>
   </div>
 
-  <div class="example">
+  <div data-use-content="true" class="example">
     <h4 class="ui header">Disabled Field</h4>
     <p>Individual fields may be disabled</p>
 
@@ -1058,7 +1080,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
       </div>
     </div>
   </div>
-  <div class="example">
+  <div data-use-content="true" class="example">
     <h4 class="ui header">Read-Only Field</h4>
     <p>Individual fields may be read only</p>
 
@@ -1076,22 +1098,103 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
     </div>
   </div>
 
-  <h2 class="ui dividing header">Variations</h2>
+  <h2 class="ui dividing header">Form Variations</h2>
 
   <div class="example">
-    <h4 class="ui header">Inline Field</h4>
-    <p>A field can have its label next to instead of above it.</p>
-    <div class="ui form">
-        <div class="inline field">
-          <label>Last name</label>
-          <input type="text" placeholder="Full Name">
+    <h4 class="ui header">Fluid</h4>
+    <p>A form can take the width of its container</p>
+    <div class="ui fluid form">
+      <div class="two fields">
+        <div class="field">
+          <label>First Name</label>
+          <input placeholder="First Name" type="text">
         </div>
+        <div class="field">
+          <label>Last Name</label>
+          <input placeholder="Last Name" type="text">
+        </div>
+      </div>
+      <div class="ui submit button">Submit</div>
     </div>
   </div>
 
   <div class="example">
-    <h4 class="ui header">Field Width</h4>
-    <p>Fields can specify their width in grid columns</p>
+    <h4 class="ui header">Size</h4>
+    <p>A form can also be small or large</p>
+    <div class="ui small form">
+      <div class="two fields">
+        <div class="field">
+          <label>First Name</label>
+          <input placeholder="First Name" type="text">
+        </div>
+        <div class="field">
+          <label>Last Name</label>
+          <input placeholder="Last Name" type="text">
+        </div>
+      </div>
+      <div class="ui submit button">Submit</div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui large form">
+      <div class="two fields">
+        <div class="field">
+          <label>First Name</label>
+          <input placeholder="First Name" type="text">
+        </div>
+        <div class="field">
+          <label>Last Name</label>
+          <input placeholder="Last Name" type="text">
+        </div>
+      </div>
+      <div class="ui submit button">Submit</div>
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Inverted</h4>
+    <p>A form on a dark background may have to invert its color scheme</p>
+
+    <div class="ui inverted segment">
+      <div class="ui inverted form">
+        <div class="two fields">
+          <div class="field">
+            <label>First Name</label>
+            <input placeholder="First Name" type="text">
+          </div>
+          <div class="field">
+            <label>Last Name</label>
+            <input placeholder="Last Name" type="text">
+          </div>
+        </div>
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" />
+            <label>I agree to the terms and conditions</label>
+          </div>
+        </div>
+        <div class="ui submit button">Submit</div>
+      </div>
+    </div>
+  </div>
+
+
+  <h2 class="ui dividing header">Field Variations</h2>
+
+  <div data-use-content="true" class="example">
+    <h4 class="ui header">Inline</h4>
+    <p>A field can have its label next to instead of above it.</p>
+    <div class="ui form">
+      <div class="inline field">
+        <label>Last name</label>
+        <input type="text" placeholder="Full Name">
+      </div>
+    </div>
+  </div>
+
+  <div data-use-content="true" class="example" data-class="wide">
+    <h4 class="ui header">Width</h4>
+    <p>A field can specify its width in <a href="/collections/grid.html">grid columns</a></p>
     <div class="ui form">
       <div class="fields">
         <div class="six wide field">
@@ -1132,9 +1235,9 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
     </div>
   </div>
 
-  <div class="example">
-    <h4 class="ui header">Required Field</h4>
-    <p>A field can format itself to show that an input is mandatory</p>
+  <div data-use-content="true" class="example">
+    <h4 class="ui header">Required</h4>
+    <p>A field can show that input is mandatory</p>
     <div class="ui form">
         <div class="required field">
           <label>Last name</label>
@@ -1149,88 +1252,11 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
     </div>
   </div>
 
-  <div class="example">
-    <h4 class="ui header">Fluid</h4>
-    <p>A form can take the width of its container</p>
-    <div class="ui fluid form">
-      <div class="two fields">
-        <div class="field">
-          <label>First Name</label>
-          <input placeholder="First Name" type="text">
-        </div>
-        <div class="field">
-          <label>Last Name</label>
-          <input placeholder="Last Name" type="text">
-        </div>
-      </div>
-      <div class="ui submit button">Submit</div>
-    </div>
-  </div>
-
-  <div class="example">
-    <h4 class="ui header">Size</h4>
-    <p>A form can also be small or large</p>
-    <div class="ui small form">
-      <div class="two fields">
-        <div class="field">
-          <label>First Name</label>
-          <input placeholder="First Name" type="text">
-        </div>
-        <div class="field">
-          <label>Last Name</label>
-          <input placeholder="Last Name" type="text">
-        </div>
-      </div>
-      <div class="ui submit button">Submit</div>
-    </div>
-    <br><br>
-    <div class="ui large form">
-      <div class="two fields">
-        <div class="field">
-          <label>First Name</label>
-          <input placeholder="First Name" type="text">
-        </div>
-        <div class="field">
-          <label>Last Name</label>
-          <input placeholder="Last Name" type="text">
-        </div>
-      </div>
-      <div class="ui submit button">Submit</div>
-    </div>
-  </div>
-
-  <div class="example">
-    <h4 class="ui header">Inverted</h4>
-    <p>A form on a dark background may have to invert its color scheme</p>
-
-    <div style="background-color: #000; padding: 15px;">
-      <div class="ui inverted form">
-        <div class="two fields">
-          <div class="field">
-            <label>First Name</label>
-            <input placeholder="First Name" type="text">
-          </div>
-          <div class="field">
-            <label>Last Name</label>
-            <input placeholder="Last Name" type="text">
-          </div>
-        </div>
-        <div class="inline field">
-          <div class="ui checkbox">
-            <input type="checkbox" />
-            <label>I agree to the terms and conditions</label>
-          </div>
-        </div>
-        <div class="ui submit button">Submit</div>
-      </div>
-    </div>
-  </div>
-
   <h2 class="ui dividing header">Group Variations</h2>
 
-  <div class="example">
+  <div class="example" data-use-content="true">
     <h4 class="ui header">Evenly Divided</h4>
-    <p>Groups can have their widths divided evenly</p>
+    <p>Fields can have their widths divided evenly</p>
     <div class="ui form">
       <div class="three fields">
         <div class="field">
@@ -1249,7 +1275,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-use-content="true">
     <h4 class="ui header">Grouped Fields</h4>
     <p>Fields can show related choices</p>
     <div class="ui form">
@@ -1282,7 +1308,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-use-content="true">
     <h4 class="ui header">Inline</h4>
     <p>Multiple fields may be inline in a row</p>
     <div class="ui form">
@@ -1300,5 +1326,38 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
       </div>
     </div>
   </div>
+
+  <div class="another example" data-use-content="true">
+    <div class="ui form">
+      <div class="inline fields">
+        <label>What's your favorite fruit?</label>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="fruit" />
+            <label>Apples</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="fruit" />
+            <label>Oranges</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="fruit" />
+            <label>Pears</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="fruit" />
+            <label>Grapefruit</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 </div>

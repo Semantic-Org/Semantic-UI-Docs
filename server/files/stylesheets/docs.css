@@ -481,21 +481,22 @@ blockquote .author {
 #example .main.container > p a:before,
 #example .main.container > .tab > p a:before,
 #example .main.container .example > .ignored a:before,
-#example .main.container .example > p a:before {
+#example .main.container .example > p a:before,
+#example .main.container .code .value a:before {
   position: absolute;
-  top: 0;
+  top: auto;
+  bottom: 1px;
   left: 0;
-  z-index: -1;
   width: 100%;
-  height: 100%;
+  height: 1px;
   background-color: #4183C4;
   content: '';
   -webkit-transition: all 0.2s;
   -webkit-backface-visibility: hidden;
   transition: all 0.2s;
   backface-visibility: hidden;
-  -webkit-transform: translateY(95%) scaleX(0);
-  transform: translateY(95%) scaleX(0);
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
 }
 
 /* Not on UI */
@@ -517,10 +518,11 @@ blockquote .author {
 #example .main.container .example > .ignored a:hover:before,
 #example .main.container .example > .ignored a:focus:before,
 #example .main.container .example > p a:hover:before,
-#example .main.container .example > p a:focus:before {
+#example .main.container .example > p a:focus:before,
+#example .main.container .code .value a:hover:before  {
   background-color: #2C76BF;
-  -webkit-transform: translateY(95%) scaleX(1);
-  transform: translateY(95%) scaleX(1);
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 #example .ui.ad {
@@ -922,6 +924,13 @@ blockquote .author {
 }
 #example .example > .empty.html.segment {
   padding: 1.15em 1em 1em;
+}
+#example .example > .html.segment:after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
 }
 #example .example > .html.segment > .attached.label {
   display: block;
@@ -1451,6 +1460,7 @@ body.progress.animated .ui.progress .bar {
     transform 0.2s ease
   ;
 }
+#example .icon.example .html.segment .grid .column,
 #example .icon.example .grid:hover .column {
   color: #777777;
 }
@@ -1743,6 +1753,7 @@ code.code:hover .class.value b {
 
 /* Linked UI */
 code .tag .value a {
+  position: relative;
   border-radius: 5px;
   line-height: 1;
   color: inherit;
@@ -1753,13 +1764,14 @@ code .tag .value a {
   transition: all 0.3s ease;
 }
 code .tag .value a b {
-  background-color: transparent;
+  border-radius: 0px;
 }
 code .tag .value a:hover {
   background-color: rgba(40, 150, 218, 0.2);
   color: #00689E;
 }
 code .tag .value a:hover b {
+  background-color: transparent;
   color: inherit;
 }
 

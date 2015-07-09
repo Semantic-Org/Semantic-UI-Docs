@@ -59,7 +59,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
     </button>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="animated fade, animated">
     <h4 class="ui header">Animated</h4>
     <p>A button can animate to show hidden content</p>
     <div class="ui ignored message">The button will be automatically sized according to the visible content size. Make sure there is enough room for the hidden content to show</div>

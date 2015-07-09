@@ -955,7 +955,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example">
+    <div class="example" data-use-content="true">
       <h4 class="ui header">Colored</h4>
       <p>A grid row or column can be colored</p>
       <div class="ui five column padded grid">

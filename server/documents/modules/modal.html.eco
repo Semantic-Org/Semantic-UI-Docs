@@ -433,28 +433,6 @@ themes      : ['Default', 'Material']
     <h2 class="ui dividing header">Examples</h2>
 
     <div class="no example">
-      <h4 class="ui header">Dimmer Variations</h4>
-      <p>Modals can specify additional variations like <code>blurring</code> or <code>inverted</code> which adjust how the dimmer displays.</p>
-      <div class="ui ignored info message">Full screen blurring modals are not performant for current-gen computers at widescreen resolutions with integrated graphics.</div>
-      <div class="code" data-demo="true" data-eval="$('.ui.inverted.modal').modal({inverted: true}).modal('show')">
-      $('.ui.modal')
-        .modal({
-          inverted: true
-        })
-        .modal('show')
-      ;
-      </div>
-      <div class="code" data-demo="true" data-eval="$('.ui.standard.modal').modal({inverted: false, blurring: true}).modal('show')">
-      $('.ui.modal')
-        .modal({
-          blurring: true
-        })
-        .modal('show')
-      ;
-      </div>
-    </div>
-
-    <div class="no example">
       <h4 class="ui header">Scrolling Modal</h4>
       <p>When your modal content exceeds the height of the browser the scrollable area will automatically expand to include just enough space for scrolling, without scrolling the page below.</p>
       <div class="code" data-demo="true">
@@ -535,6 +513,17 @@ themes      : ['Default', 'Material']
     </div>
 
     <div class="no example">
+      <h4 class="ui header">Attach events</h4>
+      <p>A modal can attach events to another element</p>
+      <div class="code" data-demo="true">
+      $('.test.modal')
+        .modal('attach events', '.test.button', 'show')
+      ;
+      </div>
+      <div class="ui primary test button">Launch modal</div>
+    </div>
+
+    <div class="no example">
       <h4 class="ui header">Transitions</h4>
       <p>A modal can use any named ui transition.</p>
       <div class="ui animation selection dropdown">
@@ -565,15 +554,27 @@ themes      : ['Default', 'Material']
     </div>
 
     <div class="no example">
-      <h4 class="ui header">Attach events</h4>
-      <p>A modal can attach events to another element</p>
-      <div class="code" data-demo="true">
-      $('.test.modal')
-        .modal('attach events', '.test.button', 'show')
+      <h4 class="ui header">Dimmer Variations</h4>
+      <p>Modals can specify additional variations like <code>blurring</code> or <code>inverted</code> which adjust how the dimmer displays.</p>
+      <div class="ui ignored info message">Full screen blurring modals are not performant for current-gen computers at widescreen resolutions with integrated graphics.</div>
+      <div class="code" data-demo="true" data-eval="$('.ui.inverted.modal').modal({inverted: true}).modal('show')">
+      $('.ui.modal')
+        .modal({
+          inverted: true
+        })
+        .modal('show')
       ;
       </div>
-      <div class="ui primary test button">Launch modal</div>
+      <div class="code" data-demo="true" data-eval="$('.ui.standard.modal').modal({inverted: false, blurring: true}).modal('show')">
+      $('.ui.modal')
+        .modal({
+          blurring: true
+        })
+        .modal('show')
+      ;
+      </div>
     </div>
+
   </div>
 
   <div class="ui tab" data-tab="usage">

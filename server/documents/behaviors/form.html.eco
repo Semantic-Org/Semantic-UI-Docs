@@ -544,7 +544,7 @@ type        : 'UI Behavior'
         })
       ;
       </div>
-      <form class="ui form">
+      <form class="ui form segment">
         <div class="two fields">
           <div class="field">
             <label>Name</label>
@@ -597,7 +597,7 @@ type        : 'UI Behavior'
         })
       ;
       </div>
-      <form class="ui form">
+      <form class="ui form segment">
         <p>Your tickets are all ready to print. Where would you like to send a receipt?</p>
         <div class="fields">
           <div class="ten wide field">
@@ -642,9 +642,9 @@ type        : 'UI Behavior'
         },
       };
       </div>
-      <form class="ui form">
+      <form class="ui form segment">
         <p>Your tickets are all ready to print. Where would you like to send a receipt?</p>
-        <div class="fields">
+        <div class="field">
           <div class="ten wide field">
             <label>E-mail</label>
             <input type="text" name="email">

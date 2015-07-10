@@ -656,8 +656,8 @@ themes      : ['Default']
         <tr>
           <td>hideOnScroll</td>
           <td>auto</td>
-          <td>Whether popup should hide on scroll or touchmove, <b>auto</b> only hides for popups without <code>on:click</code>.<br>
-          Set this to <b>false</b> to prevent mobile browsers from closing popups when your tap inside input fields.</td>
+          <td>Whether popup should hide on scroll or touchmove, <code>auto</code> only hides for popups without <code>on: 'click'</code>.<br>
+          Set this to <code>false</code> to prevent mobile browsers from closing popups when you tap inside input fields.</td>
         </tr>
         <tr>
           <td>target</td>

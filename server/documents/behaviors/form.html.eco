@@ -644,11 +644,9 @@ type        : 'UI Behavior'
       </div>
       <form class="ui form segment">
         <p>Your tickets are all ready to print. Where would you like to send a receipt?</p>
-        <div class="field">
-          <div class="ten wide field">
-            <label>E-mail</label>
-            <input type="text" name="email">
-          </div>
+        <div class="ten wide field">
+          <label>E-mail</label>
+          <input type="text" name="email">
         </div>
         <div class="ui blue submit button">Submit</div>
         <div class="ui error message"></div>

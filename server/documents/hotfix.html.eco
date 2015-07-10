@@ -10,25 +10,7 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script>
 $(document).ready(function() {
-$.fn.form.settings.defaults = {
-image: {
-        identifier : 'image',
-        optional: true,
-        rules: [
-            {
-                type   : 'url',
-                prompt : 'Zadejte platnou url'
-            }
-        ]
-    }
-};
-
-$('.ui.form')
-  .form({
-    inline : true,
-    on: 'blur'
-  })
-;
+$('.ui.dropdown').dropdown();
 });
 </script>
 
@@ -37,23 +19,58 @@ $('.ui.form')
 </style>
 <%= @getVersion() %>
 
+    <div class="ui inverted fixed menu">
+      <div class="item">
+        <img src="/images/new-school.jpg">
+      </div>
+      <a class="browse item">
+        Browse Courses
+      </a>
+      <a class="browse item">
+        Browse Courses
+      </a>
+      <div class="ui dropdown item">
+        Dropdown
+        <i class="dropdown icon"></i>
+        <div class="menu">
+          <div class="item">Applications</div>
+          <div class="item">International Students</div>
+          <div class="item">Scholarships</div>
+          <div class="item">Applications</div>
+          <div class="item">International Students</div>
+          <div class="item">Scholarships</div>
+          <div class="item">Applications</div>
+          <div class="item">International Students</div>
+          <div class="item">Scholarships</div>
+          <div class="item">Applications</div>
+          <div class="item">International Students</div>
+          <div class="item">Scholarships</div>
+          <div class="item">Applications</div>
+          <div class="item">International Students</div>
+          <div class="item">Scholarships</div>
+          <div class="item">Applications</div>
+          <div class="item">International Students</div>
+          <div class="item">Scholarships</div>
+          <div class="item">Applications</div>
+          <div class="item">International Students</div>
+          <div class="item">Scholarships</div>
+          <div class="item">Applications</div>
+          <div class="item">International Students</div>
+          <div class="item">Scholarships</div>
+        </div>
+      </div>
+    </div>
 <div class="ui container" style="margin-top:5em;">
-<div class="ui form segment">
-    <h4 class="ui dividing header">Obrázek</h4>
-    <div class="twelve wide field">
-        <label for="frm-contactForm-image">Adresa k obrázku (url)</label>
-        <div class="ui labeled input">
-            <div class="ui label">
-                http://
-            </div>
-            <input type="text" name="image" id="frm-contactForm-image">
-            </div>
-        </div>
-        <div class="ui hidden divider"></div>
-        <div class="ui blue submit button">
-            <i class="white save icon"></i>
-            Vytvořit kontakt
-        </div>
-</div>
+    <div class="ui vertical pointing menu">
+      <a class="active item">
+        Home
+      </a>
+      <a class="item">
+        Messages
+      </a>
+      <a class="item">
+        Friends
+      </a>
+    </div>
 </div>
 </body>

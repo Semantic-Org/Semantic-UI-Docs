@@ -78,13 +78,13 @@ themes      : ['Default', 'Basic', 'GitHub']
           <div class="description">Choose your shipping options</div>
         </div>
       </div>
-      <div class="active step">
+      <div class="completed step">
         <div class="content">
           <div class="title">Billing</div>
           <div class="description">Enter billing information</div>
         </div>
       </div>
-      <div class="disabled step">
+      <div class="active step">
         <div class="content">
           <div class="title">Confirm Order</div>
           <div class="description">Verify order details</div>
@@ -97,21 +97,21 @@ themes      : ['Default', 'Basic', 'GitHub']
     <h4 class="ui header">Vertical</h4>
     <p>A step can be displayed stacked vertically</p>
     <div class="ui vertical steps">
-      <div class="step">
+      <div class="completed step">
         <i class="truck icon"></i>
         <div class="content">
           <div class="title">Shipping</div>
           <div class="description">Choose your shipping options</div>
         </div>
       </div>
-      <div class="active step">
-        <i class="payment icon"></i>
+      <div class="completed step">
+        <i class="credit card icon"></i>
         <div class="content">
           <div class="title">Billing</div>
           <div class="description">Enter billing information</div>
         </div>
       </div>
-      <div class="disabled step">
+      <div class="active step">
         <i class="info icon"></i>
         <div class="content">
           <div class="title">Confirm Order</div>

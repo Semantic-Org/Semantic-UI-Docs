@@ -459,34 +459,38 @@ themes      : ['Default']
       <h4 class="ui header">Shapes</h4>
       <p>Icons can be used to create shapes</p>
       <div class="ui doubling five column grid">
-        <div class="column"><i class="crosshairs icon"></i>Crosshairs</div>
         <div class="column"><i class="asterisk icon"></i>Asterisk</div>
         <div class="column"><i class="certificate icon"></i>Certificate</div>
-        <div class="column"><i class="spinner icon"></i>Spinner</div>
         <div class="column"><i class="circle icon"></i>Circle</div>
-        <div class="column"><i class="quote left icon"></i>Quote Left</div>
-        <div class="column"><i class="quote right icon"></i>Quote Right</div>
-        <div class="column"><i class="ellipsis horizontal icon"></i>Ellipsis Horizontal</div>
-        <div class="column"><i class="ellipsis vertical icon"></i>Ellipsis Vertical</div>
-        <div class="column"><i class="cube icon"></i>Cube</div>
-        <div class="column"><i class="cubes icon"></i>Cubes</div>
         <div class="column"><i class="circle notched icon"></i>Circle Notched</div>
         <div class="column"><i class="circle thin icon"></i>Circle Thin</div>
+        <div class="column"><i class="crosshairs icon"></i>Crosshairs</div>
+        <div class="column"><i class="cube icon"></i>Cube</div>
+        <div class="column"><i class="cubes icon"></i>Cubes</div>
+        <div class="column"><i class="ellipsis horizontal icon"></i>Ellipsis Horizontal</div>
+        <div class="column"><i class="ellipsis vertical icon"></i>Ellipsis Vertical</div>
+        <div class="column"><i class="quote left icon"></i>Quote Left</div>
+        <div class="column"><i class="quote right icon"></i>Quote Right</div>
+        <div class="column"><i class="spinner icon"></i>Spinner</div>
+        <div class="column"><i class="square icon"></i>Square</div>
+        <div class="column"><i class="square outline icon"></i>Square Outline</div>
       </div>
       <div class="existing code">
-        <i class="crosshairs icon"></i>
         <i class="asterisk icon"></i>
         <i class="certificate icon"></i>
-        <i class="spinner icon"></i>
         <i class="circle icon"></i>
-        <i class="quote left icon"></i>
-        <i class="quote right icon"></i>
-        <i class="ellipsis horizontal icon"></i>
-        <i class="ellipsis vertical icon"></i>
-        <i class="cube icon"></i>
-        <i class="cubes icon"></i>
         <i class="circle notched icon"></i>
         <i class="circle thin icon"></i>
+        <i class="crosshairs icon"></i>
+        <i class="cube icon"></i>
+        <i class="cubes icon"></i>
+        <i class="ellipsis horizontal icon"></i>
+        <i class="ellipsis vertical icon"></i>
+        <i class="quote left icon"></i>
+        <i class="quote right icon"></i>
+        <i class="spinner icon"></i>
+        <i class="square icon"></i>
+        <i class="square outline icon"></i>
       </div>
     </div>
 
@@ -1333,6 +1337,7 @@ themes      : ['Default']
       <i class="pink users icon"></i>
       <i class="brown users icon"></i>
       <i class="grey users icon"></i>
+      <i class="black users icon"></i>
     </div>
 
     <div class="example">

@@ -385,7 +385,7 @@ themes      : ['Default', 'Material']
           <div class="actions">
             <div class="ui approve button">Approve</div>
             <div class="ui button">Neutral</div>
-            <div class="Ui cancel button">Cancel</div>
+            <div class="ui cancel button">Cancel</div>
           </div>
         </div>
       </div>

@@ -282,7 +282,7 @@ themes      : ['Default', 'Material']
           <div class="header">
             Archive Old Messages
           </div>
-          <div class="content">
+          <div class="image content">
             <div class="image">
               <i class="archive icon"></i>
             </div>

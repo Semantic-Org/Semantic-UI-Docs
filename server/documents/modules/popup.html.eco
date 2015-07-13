@@ -578,6 +578,11 @@ themes      : ['Default']
           <td>Selector or jquery object specifying where the popup should be created</td>
         </tr>
         <tr>
+          <td>jitter</td>
+          <td>2</td>
+          <td>Number of pixels that a popup is allowed to appear outside the boundaries of its context. This allows for permissible rounding errors when an element is against the edge of its <code>context</code>.</td>
+        </tr>
+        <tr>
           <td>position</td>
           <td>top left</td>
           <td>Position that the popup should appear</td>
@@ -600,7 +605,7 @@ themes      : ['Default']
         <tr>
           <td>lastResort</td>
           <td>false</td>
-          <td>When set to <code>false</code>, a popup will not appear and produce an error message if it cannot entirely fit on page. Setting this to a position like, <code>right center</code> forces the popup to use this position as a last resort even if it is partially offstage.</td>
+          <td>When set to <code>false</code>, a popup will not appear and produce an error message if it cannot entirely fit on page. Setting this to a position like, <code>right center</code> forces the popup to use this position as a last resort even if it is partially offstage. Setting this to <code>true</code> will use the last attempted position.</td>
         </tr>
         <tr>
           <td>on</td>

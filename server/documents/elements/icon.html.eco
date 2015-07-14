@@ -97,9 +97,10 @@ themes      : ['Default']
         <i class="at icon"></i>
         <i class="browser icon"></i>
         <i class="bug icon"></i>
-        <i class="calendar icon"></i>
         <i class="calendar outline icon"></i>
+        <i class="calendar icon"></i>
         <i class="cloud icon"></i>
+        <i class="code icon"></i>
         <i class="comment icon"></i>
         <i class="comments icon"></i>
         <i class="comment outline icon"></i>
@@ -107,8 +108,8 @@ themes      : ['Default']
         <i class="copyright icon"></i>
         <i class="dashboard icon"></i>
         <i class="dropdown icon"></i>
+        <i class="external square icon"></i>
         <i class="external icon"></i>
-        <i class="f square icon"></i>
         <i class="eyedropper icon"></i>
         <i class="feed icon"></i>
         <i class="find icon"></i>
@@ -118,9 +119,9 @@ themes      : ['Default']
         <i class="idea icon"></i>
         <i class="inbox icon"></i>
         <i class="lab icon"></i>
+        <i class="mail icon"></i>
         <i class="mail outline icon"></i>
         <i class="mail square icon"></i>
-        <i class="mail icon"></i>
         <i class="map icon"></i>
         <i class="options icon"></i>
         <i class="paint brush icon"></i>
@@ -132,8 +133,8 @@ themes      : ['Default']
         <i class="search icon"></i>
         <i class="setting icon"></i>
         <i class="settings icon"></i>
-        <i class="sidebar icon"></i>
         <i class="shop icon"></i>
+        <i class="sidebar icon"></i>
         <i class="signal icon"></i>
         <i class="sitemap icon"></i>
         <i class="tag icon"></i>
@@ -207,9 +208,9 @@ themes      : ['Default']
       <div class="column"><i class="write square icon"></i>Write Square</div>
       </div>
       <div class="existing code">
-        <i class="add to cart icon"></i>
         <i class="adjust icon"></i>
         <i class="add user icon"></i>
+        <i class="add to cart icon"></i>
         <i class="archive icon"></i>
         <i class="ban icon"></i>
         <i class="bookmark icon"></i>
@@ -251,7 +252,7 @@ themes      : ['Default']
         <i class="share square icon"></i>
         <i class="sign in icon"></i>
         <i class="sign out icon"></i>
-        <i class="tint icon"></i>
+        <i class="theme icon"></i>
         <i class="translate icon"></i>
         <i class="undo icon"></i>
         <i class="unhide icon"></i>
@@ -287,8 +288,8 @@ themes      : ['Default']
         <i class="info icon"></i>
         <i class="info circle icon"></i>
         <i class="warning icon"></i>
-        <i class="warning sign icon"></i>
         <i class="warning circle icon"></i>
+        <i class="warning sign icon"></i>
       </div>
     </div>
 
@@ -430,7 +431,6 @@ themes      : ['Default']
        <i class="fax icon"></i>
        <i class="fire extinguisher icon"></i>
        <i class="fire icon"></i>
-       <i class="flag outline icon"></i>
        <i class="gift icon"></i>
        <i class="leaf icon"></i>
        <i class="legal icon"></i>
@@ -541,8 +541,8 @@ themes      : ['Default']
         <i class="remove circle outline icon"></i>
         <i class="remove icon"></i>
         <i class="selected radio icon"></i>
-        <i class="toggle on icon"></i>
         <i class="toggle off icon"></i>
+        <i class="toggle on icon"></i>
       </div>
     </div>
     <div class="icon example">
@@ -730,7 +730,7 @@ themes      : ['Default']
         <i class="level up icon"></i>
         <i class="mobile icon"></i>
         <i class="power icon"></i>
-        <i class="power icon"></i>
+        <i class="plug icon"></i>
         <i class="tablet icon"></i>
         <i class="trash icon"></i>
         <i class="trash outline icon"></i>
@@ -1009,6 +1009,7 @@ themes      : ['Default']
         <i class="ruble icon"></i>
         <i class="rupee icon"></i>
         <i class="won icon"></i>
+        <i class="shekel icon"></i>
         <i class="yen icon"></i>
       </div>
     </div>

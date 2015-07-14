@@ -797,12 +797,7 @@ type        : 'UI Behavior'
         <tr>
           <td>type</td>
           <td>false</td>
-          <td>Set to <code>image</code> to load images when on scren. Set to <code>fixed</code> to add class name <code>fixed</code> when passed.</td>
-        </tr>
-        <tr>
-          <td>type</td>
-          <td>false</td>
-          <td>Set to <code>image</code> to load images when on scren. Set to <code>fixed</code> to add class name <code>fixed</code> when passed.</td>
+          <td>Set to <code>image</code> to load images when on screen. Set to <code>fixed</code> to add class name <code>fixed</code> when passed.</td>
         </tr>
         <tr>
           <td>initialCheck</td>

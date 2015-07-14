@@ -46,7 +46,7 @@ semantic.validateForm.ready = function() {
       identifier  : 'skills',
       rules: [
         {
-          type   : 'minCount[2]',
+          type   : 'minCount[1]',
           prompt : 'Please select at least two skills'
         }
       ]

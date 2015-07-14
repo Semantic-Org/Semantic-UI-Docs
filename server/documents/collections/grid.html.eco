@@ -794,7 +794,7 @@ themes      : ['Default']
       </div>
     </div>
 
-    <div class="example" data-use-content="true">
+    <div class="stretched example" data-use-content="true">
       <h4 class="ui header">
         Stretched
       </h4>

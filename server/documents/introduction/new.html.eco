@@ -155,7 +155,7 @@ type        : 'Main'
     </div>
   </div>
 
-  <div class="example">
+  <div class="stretched example">
     <h4 class="ui header">Stretched rows</h4>
     <p>The new <a href="/collections/grid.html#stretched"><code>stretched</code></a> variation makes vertically aligning layouts much simpler. Columns will not only match heights, but stretch their contents to match heights.</p>
     <div class="ui three column stretched grid">

@@ -599,6 +599,7 @@ blockquote .author {
   max-height: 610px;
   font-weight: normal;
   transform: rotateZ(0deg);
+  -ms-transform: none !important;
   font-family:  'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
 }
 
@@ -762,6 +763,12 @@ blockquote .author {
   border: none;
   width: 100%;
   height: 350px;
+}
+/* Stretched Example */
+
+#example .stretched.example .column img {
+  /* This is only necessary for IE which doesnt respect img intrinsic aspect ratios */
+  max-height: 225px;
 }
 
 /* Requires Clear */
@@ -1224,7 +1231,9 @@ blockquote .author {
 .visibility.example .overlay {
   padding: 0em;
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-  transition: all 0.5s ease;
+  transition:
+    padding 0.5s ease
+  ;
   background: transparent;
 }
 .visibility.example .overlay.fixed + .placeholder {

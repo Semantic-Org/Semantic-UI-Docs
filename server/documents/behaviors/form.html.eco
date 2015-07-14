@@ -159,8 +159,18 @@ type        : 'UI Behavior'
         </thead>
         <tbody>
           <tr>
+            <td>empty</td>
+            <td>A field is empty</td>
+            <td></td>
+          </tr>
+          <tr>
             <td>checked</td>
             <td>A checkbox field is checked</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>email</td>
+            <td>A field is a valid email address</td>
             <td></td>
           </tr>
           <tr>
@@ -170,18 +180,18 @@ type        : 'UI Behavior'
           </tr>
           <tr>
             <td>containsExactly</td>
-            <td>A field contains exactly text</td>
+            <td>A field contains text (case sensitive)</td>
             <td><code>containsExactly[foo]</code></td>
           </tr>
           <tr>
-            <td>email</td>
-            <td>A field is a valid email address</td>
-            <td></td>
+            <td>doesntContain</td>
+            <td>A field doesn't contain text (case insensitive)</td>
+            <td><code>doesntContaindoesntContain[foo]</code></td>
           </tr>
           <tr>
-            <td>empty</td>
-            <td>A field is empty</td>
-            <td></td>
+            <td>doesntContainExactly</td>
+            <td>A field doesn't text (case sensitive)</td>
+            <td><code>doesntContainExactly[foo]</code></td>
           </tr>
           <tr>
             <td>integer</td>
@@ -190,13 +200,23 @@ type        : 'UI Behavior'
           </tr>
           <tr>
             <td>is</td>
-            <td>A field matches a value (case insensitive)</td>
+            <td>A field is a value (case insensitive)</td>
             <td><code>is[foo]</code></td>
           </tr>
           <tr>
             <td>isExactly</td>
-            <td>A field is exactly text</td>
+            <td>A field is a value (case-sensitive)</td>
             <td><code>isExactly[foo]</code></td>
+          </tr>
+          <tr>
+            <td>not</td>
+            <td>A field is not a value (case insensitive)</td>
+            <td><code>not[foo]</code></td>
+          </tr>
+          <tr>
+            <td>notExactly</td>
+            <td>A field is not a value (case sensitive)</td>
+            <td><code>notExactly[foo]</code></td>
           </tr>
           <tr>
             <td>length</td>
@@ -241,16 +261,6 @@ type        : 'UI Behavior'
               <div class="ui horizontal divider">Or</div>
               <code>regExp[/^[a-z0-9_-]{3,16}$/]]</code>
             </td>
-          </tr>
-          <tr>
-            <td>not</td>
-            <td>A field does not match a value (case insensitive)</td>
-            <td><code>not[foo]</code></td>
-          </tr>
-          <tr>
-            <td>notExactly</td>
-            <td>A field is not exactly text</td>
-            <td><code>notExactly[foo]</code></td>
           </tr>
           <tr>
             <td>url</td>

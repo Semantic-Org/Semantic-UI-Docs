@@ -145,7 +145,7 @@ themes      : ['Default']
         Scale Down
       </div>
 
-      <h5 class="ui header">Horizontal Only Animations</h5>
+      <h5 class="ui header">Vertical-Only Animations</h5>
       <div class="ui button" data-transition="uncover">
         Uncover
       </div>
@@ -186,7 +186,7 @@ themes      : ['Default']
 
       <div class="ui hidden divider"></div>
 
-      <h5 class="ui header">Animation</h5>
+      <h5 class="ui header">Animations</h5>
       <div class="ui button" data-transition="overlay">
         Overlay
       </div>
@@ -197,7 +197,7 @@ themes      : ['Default']
         Scale Down
       </div>
 
-      <h5 class="ui header">Horizontal-Only Animation</h5>
+      <h5 class="ui header">Vertical Only Animations</h5>
       <div class="ui horizontal button" data-transition="uncover">
         Uncover
       </div>

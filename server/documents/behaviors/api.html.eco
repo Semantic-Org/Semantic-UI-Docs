@@ -554,7 +554,7 @@ type        : 'UI Behavior'
 
       <div class="no example">
         <h4 class="ui header">Response Callbacks</h4>
-        <p>Succesful responses from the server will trigger <code>onSuccess</code>, invalid results <code>onFailure</code>.<p>
+        <p>Successful responses from the server will trigger <code>onSuccess</code>, invalid results <code>onFailure</code>.<p>
         <p><code>onError</code> will only trigger on <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">XHR</a> errors, but not on invalid JSON responses.</p>
         <p>You can use the <code>onResponse</code> callback to adjust the json response before being parsed against a success test.
         <div class="code" data-type="javascript">
@@ -567,7 +567,7 @@ type        : 'UI Behavior'
             successTest: function(response) {
               // test whether a json response is valid
               return response.success || false;
-            }
+            },
             onSuccess: function(response) {
               // valid response and response.success = true
             },

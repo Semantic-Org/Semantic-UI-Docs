@@ -987,6 +987,7 @@ semantic.ready = function() {
         preview       = $code.data('preview')  || false,
         label         = $code.data('label')    || false,
         preserve      = $code.data('preserve') || false,
+        escape        = $code.data('escape') || false,
         displayType   = {
           html       : 'HTML',
           javascript : 'Javascript',
@@ -1021,7 +1022,7 @@ semantic.ready = function() {
       }
 
       // escape html entities
-      if(contentType != 'html') {
+      if(contentType != 'html' || escape) {
         code = escapeHTML(code);
       }
 

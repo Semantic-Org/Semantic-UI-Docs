@@ -30,21 +30,26 @@ themes      : ['Default']
         <p>Sidebars do not have any inherent formatting, and can be used alongside other UI to display any off-canvas content of your choosing.</p>
         <p>The following example uses additional classes from <a href="/collections/menu.html">ui menu</a> to provide structure for sidebar content.</p>
       </div>
-      <div class="code" data-type="html" data-title="Example HTML">
-        <div class="ui left vertical inverted labeled icon sidebar menu">
-          <a class="item">
-            <i class="home icon"></i>
-            Home
-          </a>
-          <a class="item">
-            <i class="block layout icon"></i>
-            Topics
-          </a>
-          <a class="item">
-            <i class="smile icon"></i>
-            Friends
-          </a>
-        </div>
+      <div class="code" data-type="html" data-escape="true">
+        &lt;body&gt;
+          &lt;div class=&quot;ui left vertical inverted labeled icon sidebar menu&quot;&gt;
+            &lt;a class=&quot;item&quot;&gt;
+              &lt;i class=&quot;home icon&quot;&gt;&lt;/i&gt;
+              Home
+            &lt;/a&gt;
+            &lt;a class=&quot;item&quot;&gt;
+              &lt;i class=&quot;block layout icon&quot;&gt;&lt;/i&gt;
+              Topics
+            &lt;/a&gt;
+            &lt;a class=&quot;item&quot;&gt;
+              &lt;i class=&quot;smile icon&quot;&gt;&lt;/i&gt;
+              Friends
+            &lt;/a&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;pusher&quot;&gt;
+            &lt;!-- Site content !--&gt;
+          &lt;/div&gt;
+        &lt;/body&gt;
       </div>
       <div class="code" data-demo="true" data-type="javascript">
       $('.left.demo.sidebar')
@@ -91,8 +96,8 @@ themes      : ['Default']
           <tr>
             <th></th>
             <th>Multiple Visible <i class="help circle link icon" data-content="Whether multiple sidebars of this type can be visible at same time"></i></th>
-            <th>Supports Horizontal Sidebars</th>
             <th>Supports Vertical Sidebars</th>
+            <th>Supports Horizontal Sidebars</th>
           </tr>
         </thead>
         <tbody>
@@ -238,15 +243,15 @@ themes      : ['Default']
       <div class="ui info message">
         Sidebar will automatically add the correct layout on first load if it is not set-up, however fixing your page's layout on load <b>will reduce performance and is not recommended</b>.
       </div>
-      <div class="code" data-type="html">
-        <!--body tag-->
-          <div class="ui sidebar">
+      <div class="code" data-type="html" data-escape="true">
+        &lt;body&gt;
+          &lt;div class=&quot;ui sidebar&quot;&gt;
             ...
-          </div>
-          <div class="pusher">
-            Your site's actual content
-          </div>
-        <!--/body-->
+          &lt;/div&gt;
+          &lt;div class=&quot;pusher&quot;&gt;
+            Your site&#39;s actual content
+          &lt;/div&gt;
+        &lt;/body&gt;
       </div>
     </div>
 
@@ -256,24 +261,25 @@ themes      : ['Default']
       <div class="ui ignored warning message">
         Fixed content that is not included adjacent to your <code>pusher</code> <b>will lose its positioning</b> when a sidebar is shown.
       </div>
-      <div class="code" data-type="html">
-        <!--body-->
-          <div class="ui sidebar">
+      <div class="code" data-type="html" data-escape="true">
+        &lt;body&gt;
+          &lt;div class=&quot;ui sidebar&quot;&gt;
             ...
-          </div>
-          <div class="ui top fixed menu">
+          &lt;/div&gt;
+          &lt;div class=&quot;ui top fixed menu&quot;&gt;
             ...
-          </div>
-          <div class="pusher">
-            Your site's actual content
-          </div>
-        <!--/body-->
+          &lt;/div&gt;
+          &lt;div class=&quot;pusher&quot;&gt;
+            Your site&#39;s actual content
+          &lt;/div&gt;
+        &lt;/body&gt;
       </div>
     </div>
 
     <div class="no example">
       <h4 class="ui header">iOS Sidebars</h4>
       <p>Sidebars use a special fix for iOS that are added using <code>userAgent</code> detection.</p>
+      <p>This should have no meaningful affect on your code, but will prevent the canvas from incorrectly autoresizing when a sidebar opens.</p>
       <div class="code" data-type="css">
       html.ios {
         overflow-x: hidden;
@@ -284,7 +290,6 @@ themes      : ['Default']
         height: initial !important;
       }
       </div>
-      <p>In <code>2.0</code>, unlike previous versions, this should have no affect on your code. <code>document</code> scroll values will still report correctly in Safari iOS, even though <code>overflow</code> is added to <code>html</code> to prevent the canvas from resizing by the browser when a sidebar displays.</p>
     </div>
 
     <h2 class="ui dividing header">Behavior</h2>

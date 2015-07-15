@@ -25,7 +25,7 @@ type        : 'UI Behavior'
     <h2 class="ui dividing header">Usage</h2>
 
     <div class="example">
-      <h4 class="ui header">Validation Rules</h4>
+      <h4 class="ui header">Setting-up Fields</h4>
       <p>Form validation requires passing in a validation object with the rules required to validate your form.</p>
       <div class="ui ignored info message">
         A validation object includes a list of form elements, and rules to validate each against. Fields are matched by either the <code>id</code> tag, <code>name</code> tag, or the <code>data-validate</code> metadata matching the identifier provided in the settings object.
@@ -154,7 +154,7 @@ type        : 'UI Behavior'
       <div class="ui info message">Validation rules are found in <code>$.fn.form.settings.rules</code>, to add new global validation rules, modify <code>$.fn.form.settings.rules</code> to include your function.</div>
       <div class="in red message">To pass parameters to a rule, use bracket notation in your settings object. For example <code>type: 'not[dog]'</code></div>
 
-      <h4 class="ui header">Basic</h4>
+      <h3 class="ui header"><a href="#empty">Empty</a></h3>
       <table class="ui celled sortable basic table segment">
         <tbody>
           <tr>
@@ -168,7 +168,7 @@ type        : 'UI Behavior'
         </tbody>
       </table>
 
-      <h4 class="ui header">Content Type</h4>
+      <h3 class="ui header"><a href="#content-type">Content Type</h3>
       <table class="ui celled sortable basic table segment">
         <tbody>
           <tr>
@@ -196,7 +196,7 @@ type        : 'UI Behavior'
           </tr>
         </tbody>
       </table>
-      <h4 class="ui header">Specified Value</h4>
+      <h3 class="ui header"><a href="#specified-content">Specified Content</a></h3>
       <table class="ui celled sortable basic table segment">
         <tbody>
           <tr>
@@ -246,7 +246,7 @@ type        : 'UI Behavior'
           </tr>
         </tbody>
       </table>
-      <h4 class="ui header">Length</h4>
+      <h3 class="ui header"><a href="#length">Length</a></h3>
       <table class="ui celled sortable basic table segment">
         <tbody>
           <tr>
@@ -267,7 +267,7 @@ type        : 'UI Behavior'
         </tbody>
       </table>
 
-      <h4 class="ui header">Field Matching</h4>
+      <h3 class="ui header"><a href="#matching-fields">Matching Fields</a></h3>
       <table class="ui celled sortable basic table segment">
         <tbody>
           <tr>
@@ -283,7 +283,7 @@ type        : 'UI Behavior'
         </tbody>
       </table>
 
-      <h4 class="ui header">Selection Count</h4>
+      <h3 class="ui header"><a href="#selection-count">Selection Count</a></h3>
       <table class="ui celled sortable basic table segment">
         <tbody>
           <tr>
@@ -560,8 +560,8 @@ type        : 'UI Behavior'
     <h2 class="ui dividing header">Rule Examples</h2>
 
     <div class="field example">
-      <h4 class="ui header">Field Types</h4>
-      <p>The following shows examples of validating different types of content.</p>
+      <h4 class="ui header">Empty</h4>
+      <p>The following shows examples of validating different types of empty or unchecked content.</p>
       <form class="ui form">
         <div class="field">
           <label>Empty</label>
@@ -624,9 +624,9 @@ type        : 'UI Behavior'
 
     <div class="type example">
       <h4 class="ui header">Content Type</h4>
-      <p>Inputs can match against common content types, or your own custom regular expression.</p>
+      <p>Inputs can match against common content types, or your own custom <a href="http://www.regular-expressions.info/" target="_blank">regular expressions</a>.</p>
       <form class="ui form">
-        <div class="three fields">
+        <div class="two fields">
           <div class="field">
             <label>Integer</label>
             <input name="integer" type="text" value="101">
@@ -635,9 +635,15 @@ type        : 'UI Behavior'
             <label>E-mail</label>
             <input name="email" type="text" value="jack@foo">
           </div>
+        </div>
+        <div class="two fields">
           <div class="field">
             <label>URL</label>
             <input name="url" type="text" value="ww.fakeurl.com">
+          </div>
+          <div class="field">
+            <label>RegEx</label>
+            <input name="regex" type="text" value="joe">
           </div>
         </div>
         <div class="ui submit button">Submit</div>
@@ -674,7 +680,127 @@ type        : 'UI Behavior'
                     prompt : 'Please enter a url'
                   }
                 ]
+              },
+              regex: {
+                identifier  : 'regex',
+                rules: [
+                  {
+                    type   : 'regExp[/^[a-z0-9_-]{4,16}$/]',
+                    prompt : 'Please enter a 4-16 letter username'
+                  }
+                ]
               }
+            }
+          })
+        ;
+      </div>
+    </div>
+    <div class="match example">
+      <h4 class="ui header">Matching Fields</h4>
+      <p>Fields can be required to match, or not match other fields. You may consider using this with <a href="#optional-fields">optional fields</a>.</p>
+      <form class="ui form">
+        <div class="two fields">
+          <div class="field">
+            <label>Match 1</label>
+            <input name="match1" type="text" value="same">
+          </div>
+          <div class="field">
+            <label>Match 2</label>
+            <input name="match2" type="text" value="different">
+          </div>
+        </div>
+        <div class="two fields">
+          <div class="field">
+            <label>Different 1</label>
+            <input name="different1" type="text" value="same">
+          </div>
+          <div class="field">
+            <label>Different 2</label>
+            <input name="different2" type="text" value="same">
+          </div>
+        </div>
+        <div class="ui submit button">Submit</div>
+        <div class="ui error message"></div>
+      </form>
+      <div class="evaluated code">
+        $('.match.example form')
+          .form({
+            on: 'blur',
+            fields: {
+              match: {
+                identifier  : 'match2',
+                rules: [
+                  {
+                    type   : 'match[match1]',
+                    prompt : 'Please put the same value in both fields'
+                  }
+                ]
+              },
+              different: {
+                identifier  : 'different2',
+                rules: [
+                  {
+                    type   : 'different[different1]',
+                    prompt : 'Please put different values for each field'
+                  }
+                ]
+              }
+            }
+          })
+        ;
+      </div>
+    </div>
+    <div class="length example">
+      <h4 class="ui header">Length</h4>
+      <p>Inputs can match against length of content</p>
+      <form class="ui form">
+        <div class="field">
+          <label>Length</label>
+          <input name="length" type="text" value="12345">
+        </div>
+        <div class="field">
+          <label>minLength</label>
+          <textarea name="minLength" cols="5"></textarea>
+        </div>
+        <div class="field">
+          <label>maxLength</label>
+          <textarea name="maxLength" cols="5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla metus leo, scelerisque quis pretium non, ultricies in dolor. Vivamus pulvinar odio at nisl egestas tempor. Quisque nec diam gravida, convallis massa et, aliquam purus. Nunc eget aliquet leo. Morbi sodales mi placerat volutpat rhoncus. Pellentesque sed leo eu risus rutrum suscipit ut dapibus est. Curabitur lacus diam, viverra mollis purus ut, facilisis consectetur dui. Etiam molestie suscipit ligula, vitae lacinia mi tempor ac. Pellentesque accumsan porttitor nisi. Sed ac metus ac arcu feugiat posuere. Curabitur eget pharetra felis. Donec consectetur felis sed iaculis vulputate. Sed mollis ultrices consequat.</textarea>
+        </div>
+        <div class="ui submit button">Submit</div>
+        <div class="ui error message"></div>
+      </form>
+      <div class="evaluated code">
+        $('.length.example form')
+          .form({
+            on: 'blur',
+            fields: {
+              length: {
+                identifier  : 'length',
+                rules: [
+                  {
+                    type   : 'length[6]',
+                    prompt : 'Please enter 6 characters'
+                  }
+                ]
+              },
+              minLength: {
+                identifier  : 'minLength',
+                rules: [
+                  {
+                    type   : 'minLength[100]',
+                    prompt : 'Please enter at least 100 characters'
+                  }
+                ]
+              },
+              maxLength: {
+                identifier  : 'maxLength',
+                rules: [
+                  {
+                    type   : 'maxLength[100]',
+                    prompt : 'Please enter at most 100 characters'
+                  }
+                ]
+              },
             }
           })
         ;
@@ -813,7 +939,7 @@ type        : 'UI Behavior'
     </div>
 
     <div class="multi example">
-      <h4 class="ui header">Multiple Selection</h4>
+      <h4 class="ui header">Selection Count</h4>
       <p>Multiple selects can specify how many options should be allowed.</p>
       <form class="ui form">
         <div class="three fields">
@@ -949,7 +1075,7 @@ type        : 'UI Behavior'
     </div>
 
     <div class="optional example">
-      <h4 class="ui header">Optional Validation Fields</h4>
+      <h4 class="ui header">Optional Fields</h4>
       <p>Adding the parameter <code>optional: true</code> will only add your validation rules when the field is <b>not empty</b>.
       <div class="ignored code">
       $('.ui.form')

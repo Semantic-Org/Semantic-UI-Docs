@@ -10,25 +10,79 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script>
 $(document).ready(function() {
-$('.ui.sidebar')
-  .sidebar({
-    transition: 'overlay'
-  })
-  .sidebar('attach events', '.ui.button', 'toggle');
+  $('.initialized .ui.checkbox').checkbox();
 });
 </script>
 
 <!-- TEST CSS HERE !-->
 <style type="text/css">
-
+  .container {
+    padding-top: 5em;
+  }
 </style>
 
-<div class="ui visible right overlay sidebar menu">
-  <h2 class="ui header">Hello sidebar</h2>
-</div>
-<div class="pusher">
-  <%= @getVersion() %>
-    <h2 class="ui header">Hello Content</h2>
-    <a class="ui button">Toggle</a>
+<div class="ui container">
+  <form class="ui form">
+    <div class="fields">
+      <div class="field">
+        <label for="chk1">One</label>
+        <input type="checkbox" id="chk1">
+      </div>
+      <div class="field">
+        <label for="chk2">Two</label>
+        <input type="checkbox" id="chk2">
+      </div>
+      <div class="field">
+        <label for="chk3">Three</label>
+        <input type="checkbox" id="chk3">
+      </div>
+    </div>
+    <div class="fields">
+      <div class="field">
+        <label>One</label>
+        <div class="ui checkbox">
+          <input type="checkbox" />
+          <label>Checkbox</label>
+        </div>
+      </div>
+      <div class="field">
+        <label>Two</label>
+        <div class="ui toggle checkbox">
+          <input type="checkbox" />
+          <label>Toggle</label>
+        </div>
+      </div>
+      <div class="field">
+        <label>Three</label>
+        <div class="ui slider checkbox">
+          <input type="checkbox" />
+          <label>Slider</label>
+        </div>
+      </div>
+    </div>
+    <div class="initialized fields">
+      <div class="field">
+        <label>One</label>
+        <div class="ui checkbox">
+          <input type="checkbox" />
+          <label>Checkbox</label>
+        </div>
+      </div>
+      <div class="field">
+        <label>Two</label>
+        <div class="ui toggle checkbox">
+          <input type="checkbox" />
+          <label>Toggle</label>
+        </div>
+      </div>
+      <div class="field">
+        <label>Three</label>
+        <div class="ui slider checkbox">
+          <input type="checkbox" />
+          <label>Slider</label>
+        </div>
+      </div>
+    </div>
+  </form>
 </div>
 </body>

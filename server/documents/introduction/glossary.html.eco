@@ -136,7 +136,7 @@ type        : 'Introduction'
     </tr>
     <tr>
       <td>Node JS</td>
-      <td>Node is a event driven programming language frequently used to run command line tools for front end development. <a href="http://www.nodejs.com" target="_blank">nodejs.org</a></td>
+      <td>Node is a event driven programming language frequently used to run command line tools for front end development. <a href="http://www.nodejs.org" target="_blank">nodejs.org</a></td>
     </tr>
   </table>
 

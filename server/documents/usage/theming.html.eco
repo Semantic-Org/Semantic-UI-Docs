@@ -53,7 +53,6 @@ type        : 'Usage'
     <div class="ui ignored code" data-type="less" data-less="true" data-title="site/globals/site.variables">
     @primaryColor   : @pink;
     @secondaryColor : @grey;
-
     @red            : #B03060;
     @orange         : #FE9A76;
     @yellow         : #FFD700;

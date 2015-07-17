@@ -10,79 +10,41 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script>
 $(document).ready(function() {
-  $('.initialized .ui.checkbox').checkbox();
+  $('.ui.dropdown').dropdown();
 });
 </script>
 
 <!-- TEST CSS HERE !-->
 <style type="text/css">
-  .container {
-    padding-top: 5em;
-  }
+.container {
+  padding-top: 5em;
+}
 </style>
 
 <div class="ui container">
-  <form class="ui form">
-    <div class="fields">
-      <div class="field">
-        <label for="chk1">One</label>
-        <input type="checkbox" id="chk1">
-      </div>
-      <div class="field">
-        <label for="chk2">Two</label>
-        <input type="checkbox" id="chk2">
-      </div>
-      <div class="field">
-        <label for="chk3">Three</label>
-        <input type="checkbox" id="chk3">
-      </div>
+  <div class="ui search selection dropdown">
+    <input type="hidden">
+    <i class="dropdown icon"></i>
+    <div class="default text">Select a number</div>
+    <div class="menu">
+        <div class="item">One</div>
+        <div class="item">Two</div>
+        <div class="item">Three</div>
     </div>
-    <div class="fields">
-      <div class="field">
-        <label>One</label>
-        <div class="ui checkbox">
-          <input type="checkbox" />
-          <label>Checkbox</label>
+</div>
+<div class="ui menu">
+    <div class="item">
+        <div class="ui search selection dropdown">
+            <input type="hidden">
+            <i class="dropdown icon"></i>
+            <div class="default text">Select a number</div>
+            <div class="menu">
+                <div class="item">One</div>
+                <div class="item">Two</div>
+                <div class="item">Three</div>
+            </div>
         </div>
-      </div>
-      <div class="field">
-        <label>Two</label>
-        <div class="ui toggle checkbox">
-          <input type="checkbox" />
-          <label>Toggle</label>
-        </div>
-      </div>
-      <div class="field">
-        <label>Three</label>
-        <div class="ui slider checkbox">
-          <input type="checkbox" />
-          <label>Slider</label>
-        </div>
-      </div>
     </div>
-    <div class="initialized fields">
-      <div class="field">
-        <label>One</label>
-        <div class="ui checkbox">
-          <input type="checkbox" />
-          <label>Checkbox</label>
-        </div>
-      </div>
-      <div class="field">
-        <label>Two</label>
-        <div class="ui toggle checkbox">
-          <input type="checkbox" />
-          <label>Toggle</label>
-        </div>
-      </div>
-      <div class="field">
-        <label>Three</label>
-        <div class="ui slider checkbox">
-          <input type="checkbox" />
-          <label>Slider</label>
-        </div>
-      </div>
-    </div>
-  </form>
+</div>
 </div>
 </body>

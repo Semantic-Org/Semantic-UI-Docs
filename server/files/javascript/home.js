@@ -74,7 +74,7 @@ semantic.home.ready = function() {
       parseFile: function(content) {
         var
           variables = {},
-          lines = content.match(/^(@[\s|\S]+?;)/gm),
+          lines = content.match(/^\s*(@[\s|\S]+?;)/gm),
           name,
           value
         ;

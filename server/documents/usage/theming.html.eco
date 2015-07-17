@@ -99,13 +99,23 @@ type        : 'Usage'
       @checkboxActiveBackground: @primaryColor;
       @checkboxActiveBorderColor: @primaryColor;
       @checkboxActiveCheckColor: @white;
+      /* Focused Checkbox */
+      @checkboxActiveFocusBackground: @primaryColorFocus;
+      @checkboxActiveFocusBorderColor: @primaryColorFocus;
+      @checkboxActiveFocusCheckColor: @white;
       @checkboxTransition: none;
-
+      /* Radio */
+      @radioActiveBackground: @white;
+      @radioActiveBorderColor: @primaryColor;
+      @radioActiveBulletColor: @primaryColor;
+      /* Focused Radio */
+      @radioActiveFocusBackground: @white;
+      @radioActiveFocusBorderColor: @primaryColorFocus;
+      @radioActiveFocusBulletColor: @primaryColorFocus;
       /* Slider */
       @sliderOnLineColor: @primaryColor;
-
-      /* Radio */
-      @radioActiveBulletColor: @primaryColor;
+      /* Focused Slider */
+      @sliderOnFocusLineColor: @primaryColorFocus;
     </div>
     <div class="ui checkbox">
       <input type="checkbox" name="checkbox" checked >

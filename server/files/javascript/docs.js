@@ -489,17 +489,17 @@ semantic.ready = function() {
           name,
           value
         ;
-        console.log(lines);
         if(lines) {
           $.each(lines, function(index, line) {
             // clear whitespace
             line = $.trim(line);
+            console.log(line);
             // match variables only
             if(line[0] == '@') {
-              console.log(name, value);
               name = line.match(/^@(.+?):/);
               value = line.match(/:\s*([\s|\S]+?;)/);
               if( ($.isArray(name) && name.length >= 2) && ($.isArray(value) && value.length >= 2) ) {
+              console.log(name[1], value[1]);
                 name = name[1];
                 value = value[1];
                 variables[name] = value;

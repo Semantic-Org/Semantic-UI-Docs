@@ -26,24 +26,20 @@ themes      : ['Default']
     <div class="no example">
       <h4 class="ui header">Sidebar</h4>
       <p>A sidebar</p>
-      <div class="ui ignored info message">
-        <p>Sidebars do not have any inherent formatting, and can be used alongside other UI to display any off-canvas content of your choosing.</p>
-        <p>The following example uses additional classes from <a href="/collections/menu.html">ui menu</a> to provide structure for sidebar content.</p>
+      <div class="ui ignored warning message">
+        <p>Although sidebars can be any content, in most cases, sidebars are used with <a href="/collections/menu.html#vertical"><code>inverted vertical menu</code></a>. Please see the <a href="#/usage">usage tab</a> for more details.</p>
       </div>
       <div class="code" data-type="html" data-escape="true">
         &lt;body&gt;
-          &lt;div class=&quot;ui left vertical inverted labeled icon sidebar menu&quot;&gt;
+          &lt;div class=&quot;ui sidebar inverted vertical menu&quot;&gt;
             &lt;a class=&quot;item&quot;&gt;
-              &lt;i class=&quot;home icon&quot;&gt;&lt;/i&gt;
-              Home
+              1
             &lt;/a&gt;
             &lt;a class=&quot;item&quot;&gt;
-              &lt;i class=&quot;block layout icon&quot;&gt;&lt;/i&gt;
-              Topics
+              2
             &lt;/a&gt;
             &lt;a class=&quot;item&quot;&gt;
-              &lt;i class=&quot;smile icon&quot;&gt;&lt;/i&gt;
-              Friends
+              3
             &lt;/a&gt;
           &lt;/div&gt;
           &lt;div class=&quot;pusher&quot;&gt;
@@ -51,8 +47,31 @@ themes      : ['Default']
           &lt;/div&gt;
         &lt;/body&gt;
       </div>
-      <div class="code" data-demo="true" data-type="javascript">
-      $('.left.demo.sidebar')
+      <div class="code" data-demo="true" data-type="javascript" data-eval="$('.simple.sidebar').sidebar('toggle');">
+      $('.ui.sidebar')
+        .sidebar('toggle')
+      ;
+      </div>
+    </div>
+    <div class="another example" data-class="labeled icon menu" data-use-content="true">
+      <div class="code" data-type="html" data-escape="true">
+        &lt;div class=&quot;ui left demo vertical inverted sidebar labeled icon menu&quot;&gt;
+          &lt;a class=&quot;item&quot;&gt;
+            &lt;i class=&quot;home icon&quot;&gt;&lt;/i&gt;
+            Home
+          &lt;/a&gt;
+          &lt;a class=&quot;item&quot;&gt;
+            &lt;i class=&quot;block layout icon&quot;&gt;&lt;/i&gt;
+            Topics
+          &lt;/a&gt;
+          &lt;a class=&quot;item&quot;&gt;
+            &lt;i class=&quot;smile icon&quot;&gt;&lt;/i&gt;
+            Friends
+          &lt;/a&gt;
+        &lt;/div&gt;
+      </div>
+      <div class="code" data-demo="true" data-type="javascript" data-eval="$('.left.demo.sidebar').sidebar('toggle');">
+      $('.ui.labeled.icon.sidebar')
         .sidebar('toggle')
       ;
       </div>
@@ -75,7 +94,7 @@ themes      : ['Default']
 
     <h3>Pusher</h3>
 
-    <div class="no example">
+    <div class="no example" data-class="dimmed" data-use-content="true">
       <h4 class="ui header">Dimmed</h4>
       <p>A pusher can be dimmed</p>
       <div class="code" data-type="html">
@@ -85,132 +104,15 @@ themes      : ['Default']
 
     <h2 class="ui dividing header">Variations</h2>
 
-    <div class="no left example">
-      <h4 class="ui header">Transitions</h4>
-      <p>A sidebar can use different transitions to display itself</p>
-      <div class="ui ignored message">
-        <p>If you require legacy browser support setting <code>useLegacy: auto</code> will add feature detection for <code>translate3D</code> to make sure that older browsers like <b>IE < 10</b> will automatically fall back to javascript animations.</p>
-      </div>
-      <table class="ui celled definition collapsing table">
-        <thead>
-          <tr>
-            <th></th>
-            <th>Multiple Visible <i class="help circle link icon" data-content="Whether multiple sidebars of this type can be visible at same time"></i></th>
-            <th>Supports Vertical Sidebars</th>
-            <th>Supports Horizontal Sidebars</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Overlay</td>
-            <td><i class="green check icon"></i></td>
-            <td><i class="green check icon"></i></td>
-            <td><i class="green check icon"></i></td>
-          </tr>
-          <tr>
-            <td>Push</td>
-            <td><i class="green check icon"></i></td>
-            <td><i class="green check icon"></i></td>
-            <td><i class="green check icon"></i></td>
-          </tr>
-          <tr>
-            <td>Scale Down</td>
-            <td><i class="green check icon"></i></td>
-            <td><i class="green check icon"></i></td>
-            <td><i class="red cancel icon"></i></td>
-          </tr>
-          <tr>
-            <td>Uncover</td>
-            <td><i class="red cancel icon"></i></td>
-            <td><i class="green check icon"></i></td>
-            <td><i class="red cancel icon"></i></td>
-          </tr>
-          <tr>
-            <td>Slide Along</td>
-            <td><i class="red cancel icon"></i></td>
-            <td><i class="green check icon"></i></td>
-            <td><i class="red cancel icon"></i></td>
-          </tr>
-          <tr>
-            <td>Slide Out</td>
-            <td><i class="red cancel icon"></i></td>
-            <td><i class="green check icon"></i></td>
-            <td><i class="red cancel icon"></i></td>
-          </tr>
-        </tbody>
-      </table>
-      <h5 class="ui header">Animations</h5>
-      <div class="ui button" data-transition="overlay">
-        Overlay
-      </div>
-      <div class="ui button" data-transition="push">
-        Push
-      </div>
-      <div class="ui button" data-transition="scale down">
-        Scale Down
-      </div>
-
-      <h5 class="ui header">Vertical-Only Animations</h5>
-      <div class="ui button" data-transition="uncover">
-        Uncover
-      </div>
-      <div class="ui button" data-transition="slide along">
-        Slide Along
-      </div>
-      <div class="ui button" data-transition="slide out">
-        Slide Out
-      </div>
-    </div>
-
     <div class="no direction example">
       <h4 class="ui header">Direction</h4>
       <p>A sidebar can appear on different sides of the page</p>
 
-      <div class="ui toggle dim checkbox">
-        <input type="checkbox" name="dim" />
-        <label>Dim Page</label>
-      </div>
-
-      <div class="ui hidden divider"></div>
-
-      <h5 class="ui header">Direction</h5>
-      <div class="ui buttons">
-        <div class="ui button" data-direction="left">
-          Left
-        </div>
-        <div class="ui active button" data-direction="right">
-          Right
-        </div>
-        <div class="ui button" data-direction="top">
-          Top
-        </div>
-        <div class="ui button" data-direction="bottom">
-          Bottom
-        </div>
-      </div>
-
-      <div class="ui hidden divider"></div>
-
-      <h5 class="ui header">Animations</h5>
-      <div class="ui button" data-transition="overlay">
-        Overlay
-      </div>
-      <div class="ui button" data-transition="push">
-        Push
-      </div>
-      <div class="ui button" data-transition="scale down">
-        Scale Down
-      </div>
-
-      <h5 class="ui header">Vertical Only Animations</h5>
-      <div class="ui horizontal button" data-transition="uncover">
-        Uncover
-      </div>
-      <div class="ui horizontal button" data-transition="slide along">
-        Slide Along
-      </div>
-      <div class="ui horizontal button" data-transition="slide out">
-        Slide Out
+      <div class="code" data-type="html">
+        <div class="ui top sidebar"></div>
+        <div class="ui right sidebar"></div>
+        <div class="ui bottom sidebar"></div>
+        <div class="ui left sidebar"></div>
       </div>
 
     </div>
@@ -237,7 +139,7 @@ themes      : ['Default']
 
     <h2 class="ui dividing header">Set-up</h2>
 
-    <div class="no example">
+    <div class="no example" data-class="sidebar, pusher">
       <h4 class="ui header">Page Structure</h4>
       <p>Using a sidebar requires a specific page structure. For optimal performance your page should be already set-up with this structure before initializing a sidebar.</p>
       <div class="ui info message">
@@ -254,8 +156,30 @@ themes      : ['Default']
         &lt;/body&gt;
       </div>
     </div>
+    <div class="no example" data-class="vertical menu" data-use-content="true">
+      <h4 class="ui header">Using with Menu</h4>
+      <p>Sidebars can be any content, however the most common type of content to display off-canvas is a <a href="/collections/menu.html"><code>menu</code></a>. To understand the required structure for a menu, please refer to the <a href="/collections/menu.html">menu documentation</a>.</p>
+      <div class="code" data-escape="true">
+        &lt;body&gt;
+          &lt;div class=&quot;ui left vertical menu sidebar&quot;&gt;
+            &lt;a class=&quot;item&quot;&gt;
+              Item 1
+            &lt;/a&gt;
+            &lt;a class=&quot;item&quot;&gt;
+              Item 2
+            &lt;/a&gt;
+            &lt;a class=&quot;item&quot;&gt;
+              Item 3
+            &lt;/a&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;pusher&quot;&gt;
+            &lt;!-- Site content !--&gt;
+          &lt;/div&gt;
+        &lt;/body&gt;
+      </div>
+    </div>
 
-    <div class="no example">
+    <div class="no example" data-class="fixed" data-use-content="true">
       <h4 class="ui header">Using Fixed Content</h4>
       <p>Any fixed position content that should move with page content when your sidebar is visible, should receive the class name <code>fixed</code> and exist as a sibling element to your sidebar.
       <div class="ui ignored warning message">
@@ -366,6 +290,107 @@ themes      : ['Default']
   <div class="ui tab" data-tab="examples">
 
     <h2 class="ui header">Examples</h2>
+
+    <div class="no direction example">
+      <h4 class="ui header">Transitions</h4>
+      <p>Not all sidebar transitions are available for every sidebar direction, or when multiple sidebars are visible at a time.</p>
+      <table class="ui celled definition table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Multiple Visible <i class="help circle link icon" data-content="Whether multiple sidebars of this type can be visible at same time"></i></th>
+            <th>Supports Vertical Sidebars</th>
+            <th>Supports Horizontal Sidebars</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Overlay</td>
+            <td><i class="green check icon"></i></td>
+            <td><i class="green check icon"></i></td>
+            <td><i class="green check icon"></i></td>
+          </tr>
+          <tr>
+            <td>Push</td>
+            <td><i class="green check icon"></i></td>
+            <td><i class="green check icon"></i></td>
+            <td><i class="green check icon"></i></td>
+          </tr>
+          <tr>
+            <td>Scale Down</td>
+            <td><i class="green check icon"></i></td>
+            <td><i class="green check icon"></i></td>
+            <td><i class="red cancel icon"></i></td>
+          </tr>
+          <tr>
+            <td>Uncover</td>
+            <td><i class="red cancel icon"></i></td>
+            <td><i class="green check icon"></i></td>
+            <td><i class="red cancel icon"></i></td>
+          </tr>
+          <tr>
+            <td>Slide Along</td>
+            <td><i class="red cancel icon"></i></td>
+            <td><i class="green check icon"></i></td>
+            <td><i class="red cancel icon"></i></td>
+          </tr>
+          <tr>
+            <td>Slide Out</td>
+            <td><i class="red cancel icon"></i></td>
+            <td><i class="green check icon"></i></td>
+            <td><i class="red cancel icon"></i></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="ui toggle dim checkbox">
+        <input type="checkbox" name="dim" />
+        <label>Dim Page</label>
+      </div>
+
+      <div class="ui hidden divider"></div>
+
+      <h5 class="ui header">Direction</h5>
+      <div class="ui buttons">
+        <div class="ui button" data-direction="left">
+          Left
+        </div>
+        <div class="ui active button" data-direction="right">
+          Right
+        </div>
+        <div class="ui button" data-direction="top">
+          Top
+        </div>
+        <div class="ui button" data-direction="bottom">
+          Bottom
+        </div>
+      </div>
+
+      <div class="ui hidden divider"></div>
+
+      <h5 class="ui header">All Direction Animations</h5>
+      <div class="ui button" data-transition="overlay">
+        Overlay
+      </div>
+      <div class="ui button" data-transition="push">
+        Push
+      </div>
+      <div class="ui button" data-transition="scale down">
+        Scale Down
+      </div>
+
+      <h5 class="ui header">Vertical-Only Animations</h5>
+      <div class="ui horizontal button" data-transition="uncover">
+        Uncover
+      </div>
+      <div class="ui horizontal button" data-transition="slide along">
+        Slide Along
+      </div>
+      <div class="ui horizontal button" data-transition="slide out">
+        Slide Out
+      </div>
+
+    </div>
 
     <div class="no example">
       <h4 class="ui header">Displaying Multiple</h4>

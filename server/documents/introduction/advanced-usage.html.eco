@@ -18,12 +18,13 @@ type        : 'Introduction'
     <p>You don't have to use <a href="/introduction/build-tools.html">our gulp pipeline</a>, just import the task into your own <code>gulpfile</code></p>
     <div class="ignored code" data-type="JS" data-title="Custom gulpfile.js">
     var
+      gulp  = require('gulp'),
       watch = require('./semantic/tasks/watch'),
       build = require('./semantic/tasks/build')
     ;
     // import task with a custom task name
-    gulp.task('watch ui', 'Watch Semantic UI', watch));
-    gulp.task('build ui', 'Build Semantic UI', build));
+    gulp.task('watch ui', watch));
+    gulp.task('build ui', build));
     </div>
   </div>
 

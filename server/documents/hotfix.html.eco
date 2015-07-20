@@ -10,7 +10,23 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script>
 $(document).ready(function() {
-  $('.ui.dropdown').dropdown();
+$('.ui.form').form(
+    {
+        fields : {
+          invoiceType: {
+            identifier  : 'invoice_type',
+            rules: [
+                {
+                    type   : 'checked',
+                    prompt : 'Specify the type of invoice that you would like to create'
+                },
+            ]
+          }
+        },
+        inline : true,
+        on     : 'blur',
+    }
+);
 });
 </script>
 
@@ -22,29 +38,31 @@ $(document).ready(function() {
 </style>
 
 <div class="ui container">
-  <div class="ui search selection dropdown">
-    <input type="hidden">
-    <i class="dropdown icon"></i>
-    <div class="default text">Select a number</div>
-    <div class="menu">
-        <div class="item">One</div>
-        <div class="item">Two</div>
-        <div class="item">Three</div>
-    </div>
-</div>
-<div class="ui menu">
-    <div class="item">
-        <div class="ui search selection dropdown">
-            <input type="hidden">
-            <i class="dropdown icon"></i>
-            <div class="default text">Select a number</div>
-            <div class="menu">
-                <div class="item">One</div>
-                <div class="item">Two</div>
-                <div class="item">Three</div>
-            </div>
+
+<form class="ui form">
+  <div class="inline fields">
+      <div class="field">
+        <div class="ui radio checkbox">
+            <input name="invoice_type" type="radio" value="down-payment">
+            <label for="grand-total">Grand Total</label>
         </div>
+      </div>
+      <div class="field">
+        <div class="ui radio checkbox">
+            <input name="invoice_type" type="radio" value="down-payment">
+            <label for="name">Category Totals</label>
+        </div>
+      </div>
+      <div class="field">
+        <div class="ui radio checkbox">
+            <input name="invoice_type" type="radio" value="down-payment">
+            <label for="name">Line Item Totals</label>
+        </div>
+      </div>
     </div>
-</div>
+    <div class="ui submit button">Submit</div>
+  </div>
+</form>
+
 </div>
 </body>

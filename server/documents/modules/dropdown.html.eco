@@ -264,6 +264,7 @@ themes      : ['Default', 'Material']
 
     <div class="another dropdown example">
       <div class="ui multiple dropdown">
+        <input type="hidden" name="filters">
         <i class="filter icon"></i>
         <span class="text">Filter Posts</span>
         <div class="menu">

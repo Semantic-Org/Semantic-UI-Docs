@@ -12,6 +12,7 @@ type        : 'UI Module'
 
 themes      : ['Default', 'Material']
 ---
+
 <link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/modal.less" />
 <script src="/javascript/modal.js"></script>
 

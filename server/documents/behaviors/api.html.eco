@@ -934,6 +934,10 @@ type        : 'UI Behavior'
           <td>Gets event that API request will occur on</td>
         </tr>
         <tr>
+          <td>get url encoded value(value)</td>
+          <td>Returns <code>encodeURIComponent</code> value only if value passsed is not already encoded
+        </tr>
+        <tr>
           <td>read cached response(url)</td>
           <td>Reads a locally cached response for a URL</td>
         </tr>
@@ -1058,13 +1062,7 @@ type        : 'UI Behavior'
           <td>false</td>
           <td>Variables to use for replacement</td>
           <td></td>
-        </tr><!--
-        <tr>
-          <td>encodeUrlData</td>
-          <td>true</td>
-          <td>Where url data should be encoded with <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent"><code>encodeURIComponent</code></a> before being added to URL.</td>
-          <td></td>
-        </tr> -->
+        </tr>
         <tr>
           <td>mockResponse</td>
           <td>false</td>
@@ -1128,6 +1126,12 @@ type        : 'UI Behavior'
           <td>onResponse(response)</td>
           <td>state context</td>
           <td>Allows modifying the server's response before parsed by other callbacks to determine API event success</td>
+        </tr>
+        <tr>
+          <td>successTest(response)</td>
+          <td></td>
+          <td>Determines whether completed JSON response should be <a href="#determining-json-success">treated as successful</a>
+          </td>
         </tr>
         <tr>
           <td>onSuccess(response, element)</td>

@@ -10,23 +10,10 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script>
 $(document).ready(function() {
-$('.ui.form').form(
-    {
-        fields : {
-          invoiceType: {
-            identifier  : 'invoice_type',
-            rules: [
-                {
-                    type   : 'checked',
-                    prompt : 'Specify the type of invoice that you would like to create'
-                },
-            ]
-          }
-        },
-        inline : true,
-        on     : 'blur',
-    }
-);
+var
+  multi   = $('#multi').dropdown({useLabels: false, maxSelections: 3})
+;
+
 });
 </script>
 
@@ -39,30 +26,17 @@ $('.ui.form').form(
 
 <div class="ui container">
 
-<form class="ui form">
-  <div class="inline fields">
-      <div class="field">
-        <div class="ui radio checkbox">
-            <input name="invoice_type" type="radio" value="down-payment">
-            <label for="grand-total">Grand Total</label>
+<div class="ui list">
+    <div class="item">
+        <div class="ui image blue label">
+            <img src="{{ userAvatarFromId _id }}">
+            @{{username}}
+            {{#if userCanRemove _id}}
+                <i class="delete icon"></i>
+            {{/if}}
         </div>
-      </div>
-      <div class="field">
-        <div class="ui radio checkbox">
-            <input name="invoice_type" type="radio" value="down-payment">
-            <label for="name">Category Totals</label>
-        </div>
-      </div>
-      <div class="field">
-        <div class="ui radio checkbox">
-            <input name="invoice_type" type="radio" value="down-payment">
-            <label for="name">Line Item Totals</label>
-        </div>
-      </div>
     </div>
-    <div class="ui submit button">Submit</div>
-  </div>
-</form>
+</div>
 
 </div>
 </body>

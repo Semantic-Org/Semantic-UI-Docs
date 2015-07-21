@@ -1198,12 +1198,20 @@ themes      : ['Default', 'Material']
       <p>Using <code>maxSelections</code> lets you force a maximum number of selections. You can also use <a href="http://laptop-vm:9778/behaviors/form.html#validation-rules">form validation</a> rules to specify minimum and maximum validation settings for multi-selects inside forms.</p>
 
       <div class="ui sub header">Selection</div>
-      <select multiple name="skills" class="ui fluid dropdown">
+      <select multiple name="skills" class="ui fluid normal dropdown">
         <%- @partial('examples/single/skill-menu') %>
       </select>
 
       <div class="ui sub header">Search Selection</div>
-      <div class="ui fluid multiple search selection dropdown">
+      <div class="ui fluid multiple search normal selection dropdown">
+        <input type="hidden" name="country">
+        <i class="dropdown icon"></i>
+        <div class="default text">Select Country</div>
+        <%- @partial('examples/single/flag-menu') %>
+      </div>
+
+      <div class="ui sub header">Without Labels</div>
+      <div class="ui fluid multiple search special selection dropdown">
         <input type="hidden" name="country">
         <i class="dropdown icon"></i>
         <div class="default text">Select Country</div>
@@ -1211,8 +1219,14 @@ themes      : ['Default', 'Material']
       </div>
 
       <div class="evaluated code" data-type="javascript">
-        $('.max.example .ui.dropdown')
+        $('.max.example .ui.normal.dropdown')
           .dropdown({
+            maxSelections: 3
+          })
+        ;
+        $('.max.example .ui.special.dropdown')
+          .dropdown({
+            useLabels: false,
             maxSelections: 3
           })
         ;
@@ -1389,7 +1403,7 @@ themes      : ['Default', 'Material']
       </div>
     </div>
 
-    <div class="restore dropdown example">
+    <div class="restore example">
       <h4 class="ui header">Restoring Defaults</h4>
       <p>You can restore a dropdown to its value set on page load</p>
       <div class="ui multiple selection dropdown">
@@ -2129,7 +2143,15 @@ themes      : ['Default', 'Material']
         </tr>
         <tr>
           <td>set selected(value)</td>
-          <td>Sets selected state to a given value</td>
+          <td>Sets value as selected</td>
+        </tr>
+        <tr>
+          <td>set selected([value1, value2])</td>
+          <td>Adds a group of values as selected</td>
+        </tr>
+        <tr>
+          <td>set exactly([value1, value2])</td>
+          <td>Sets selected values to exactly specified values, removing current selection</td>
         </tr>
         <tr>
           <td>set text(text)</td>

@@ -28,6 +28,13 @@ type        : 'Introduction'
     </div>
   </div>
 
+  <h2 class="ui dividing header">Prototyping with Semantic UI</h2>
+  <div class="no example">
+    <h4>Sketch Files</h4>
+    <p>If you are looking to prototype layouts using <a href="http://bohemiancoding.com/sketch/" target="_blank">Sketch</a> with Semantic UI check out <a href="https://github.com/guacamoly/semantic-ui-kit-for-sketch" target="_blank">Semantic UI Sketch Files</a></p>
+    <img class="ui bordered rounded fluid image" src="https://github.com/guacamoly/semantic-ui-kit-for-sketch/raw/master/snapshot.jpg?raw=true">
+  </div>
+
   <h2 class="ui dividing header">Single Components</h2>
 
   <div class="no example">

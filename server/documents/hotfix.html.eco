@@ -10,10 +10,8 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script>
 $(document).ready(function() {
-var
-  multi   = $('#multi').dropdown({useLabels: false, maxSelections: 3})
-;
-
+    $('.ui.dropdown')
+    .dropdown({debug: true});
 });
 </script>
 
@@ -25,18 +23,36 @@ var
 </style>
 
 <div class="ui container">
+<form class="ui form">
+    <div class="field">
+        <label>First Name</label>
+        <input type="text" name="first-name" placeholder="First Name">
+    </div>
+    <div class="field">
+        <label>Gender</label>
+        <select class="ui disabled dropdown">
+            <option value="">Gender</option>
+            <option value="1">Male</option>
+            <option value="0">Female</option>
+        </select>
+    </div>
+    <div class="field">
+        <label>Choices</label>
+        <div class="ui disabled dropdown">Dropdown <i class="dropdown icon"></i>
 
-<div class="ui list">
-    <div class="item">
-        <div class="ui image blue label">
-            <img src="{{ userAvatarFromId _id }}">
-            @{{username}}
-            {{#if userCanRemove _id}}
-                <i class="delete icon"></i>
-            {{/if}}
+            <div class="menu">
+                <div class="item">Choice 1</div>
+                <div class="item">Choice 2</div>
+                <div class="item">Choice 3</div>
+            </div>
         </div>
     </div>
-</div>
+    <div class="field">
+        <label>Last Name</label>
+        <input type="text" name="last-name" placeholder="Last Name">
+    </div>
+</form>
+
 
 </div>
 </body>

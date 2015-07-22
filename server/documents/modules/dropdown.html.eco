@@ -1403,7 +1403,7 @@ themes      : ['Default', 'Material']
       </div>
     </div>
 
-    <div class="restore example">
+    <div class="restore dropdown example">
       <h4 class="ui header">Restoring Defaults</h4>
       <p>You can restore a dropdown to its value set on page load</p>
       <div class="ui multiple selection dropdown">

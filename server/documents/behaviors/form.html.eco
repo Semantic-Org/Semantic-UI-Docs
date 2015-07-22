@@ -76,7 +76,7 @@ type        : 'UI Behavior'
                   prompt : 'Please enter a password'
                 },
                 {
-                  type   : 'length[6]',
+                  type   : 'minLength[6]',
                   prompt : 'Your password must be at least 6 characters'
                 }
               ]
@@ -255,9 +255,9 @@ type        : 'UI Behavior'
             <td class="six wide"><code>minLength[5]</code></td>
           </tr>
           <tr>
-            <td>length</td>
+            <td>exactLength</td>
             <td>A field is exactly length</td>
-            <td><code>length[16]</code></td>
+            <td><code>exactLength[16]</code></td>
           </tr>
           <tr>
             <td>maxLength</td>
@@ -755,12 +755,12 @@ type        : 'UI Behavior'
       <p>Inputs can match against length of content</p>
       <form class="ui form">
         <div class="field">
-          <label>Length</label>
-          <input name="length" type="text" value="12345">
-        </div>
-        <div class="field">
           <label>minLength</label>
           <textarea name="minLength" cols="5"></textarea>
+        </div>
+        <div class="field">
+          <label>Exact Length</label>
+          <input name="exactLength" type="text" value="12345">
         </div>
         <div class="field">
           <label>maxLength</label>
@@ -774,21 +774,21 @@ type        : 'UI Behavior'
           .form({
             on: 'blur',
             fields: {
-              length: {
-                identifier  : 'length',
-                rules: [
-                  {
-                    type   : 'length[6]',
-                    prompt : 'Please enter 6 characters'
-                  }
-                ]
-              },
               minLength: {
                 identifier  : 'minLength',
                 rules: [
                   {
                     type   : 'minLength[100]',
                     prompt : 'Please enter at least 100 characters'
+                  }
+                ]
+              },
+              exactLength: {
+                identifier  : 'exactLength',
+                rules: [
+                  {
+                    type   : 'exactLength[6]',
+                    prompt : 'Please enter exactly 6 characters'
                   }
                 ]
               },

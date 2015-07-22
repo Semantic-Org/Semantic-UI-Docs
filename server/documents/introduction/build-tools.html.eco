@@ -302,4 +302,9 @@ type        : 'Introduction'
     <p>You can learn more about <code>theme.config</code> by checking out the <a href="/usage/theming.html#using-packaged-themes">theming guide</a></p>
   </div>
 
+  <div class="no example">
+    <h4>Importing Gulp Tasks</h4>
+    <p>See our <a href="/introduction/advanced-usage.html">recipes section</a> for examples on how to import individual gulp tasks into your custom Gulpfile.</p>
+  </div>
+
 </div>

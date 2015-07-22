@@ -16,6 +16,7 @@ type        : 'Introduction'
   <div class="no example">
     <h4>Importing Gulp Tasks</h4>
     <p>You don't have to use <a href="/introduction/build-tools.html">our gulp pipeline</a>, just import the task into your own <code>gulpfile</code></p>
+    <p>You can <a href="https://github.com/Semantic-Org/Example-External-Gulpfile" target="_blank">fork this example project</a> to see an example of how to import Semantic UI tasks into your project.</p>
     <div class="ignored code" data-type="JS" data-title="Custom gulpfile.js">
     var
       gulp  = require('gulp'),

@@ -10,33 +10,24 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script>
 $(document).ready(function() {
-var
-  multi   = $('#multi').dropdown({useLabels: false, maxSelections: 3})
-;
+
 
 });
 </script>
 
 <!-- TEST CSS HERE !-->
 <style type="text/css">
-.container {
-  padding-top: 5em;
-}
 </style>
 
 <div class="ui container">
+<a href="#" target="_blank" class="ui circular facebook left labeled icon button"><i class="facebook icon"></i>Share
+</a>
+<a href="#" target="_blank" class="ui circular twitter left labeled icon button"><i class="twitter icon"></i>Tweet
+</a>
 
-<div class="ui list">
-    <div class="item">
-        <div class="ui image blue label">
-            <img src="{{ userAvatarFromId _id }}">
-            @{{username}}
-            {{#if userCanRemove _id}}
-                <i class="delete icon"></i>
-            {{/if}}
-        </div>
-    </div>
-</div>
+<a href="#" class="ui circular left labeled icon button">
+ <i class="envelope outline icon"></i>Email to a friend
+</a>
 
 </div>
 </body>

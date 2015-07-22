@@ -1361,6 +1361,7 @@ themes      : ['Default', 'Material']
       <div class="evaluated code" data-type="javascript">
         $('.no.label.example .ui.dropdown')
           .dropdown({
+            debug: true,
             useLabels: false
           })
         ;

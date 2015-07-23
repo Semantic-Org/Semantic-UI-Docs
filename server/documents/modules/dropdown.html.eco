@@ -80,8 +80,8 @@ themes      : ['Default', 'Material']
       </div>
       <div class="ui selection dropdown">
         <input type="hidden" name="gender">
-        <div class="default text">Gender</div>
         <i class="dropdown icon"></i>
+        <div class="default text">Gender</div>
         <div class="menu">
           <div class="item" data-value="1">Male</div>
           <div class="item" data-value="0">Female</div>

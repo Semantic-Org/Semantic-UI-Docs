@@ -343,6 +343,10 @@ type        : 'UI Module'
     <div class="example">
       <h4 class="ui header">Initializing</h4>
       <p>Sticky is initialized on content that should be stuck to viewport. Most instances require specifying a secondary <code>context</code> which will define the top and bottom bounds of the sticky element. Sticky content must be included inside a containing element. This container can be a <a href="/elements/rail.html">ui rail</a> or your own arbitrary container, but should exist parallel to your context.</p>
+
+      <div class="ui warning ignored message">
+        Sticky does not work in tables without using <code>table-layout: fixed</code> to prevent automatic resizing with content
+      </div>
       <div class="code" data-type="html">
         <div class="ui rail">
           <div class="ui sticky">

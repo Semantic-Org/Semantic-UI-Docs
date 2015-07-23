@@ -568,6 +568,9 @@ type        : 'UI Behavior'
               // test whether a json response is valid
               return response.success || false;
             },
+            onComplete: function(response) {
+              // always called after xhr complete
+            },
             onSuccess: function(response) {
               // valid response and response.success = true
             },
@@ -1134,12 +1137,12 @@ type        : 'UI Behavior'
           </td>
         </tr>
         <tr>
-          <td>onSuccess(response, element)</td>
+          <td>onSuccess(response, element, xhr)</td>
           <td>state context</td>
           <td>Callback after successful response, JSON response must pass <code>successTest</code></td>
         </tr>
         <tr>
-          <td>onComplete(response, element)</td>
+          <td>onComplete(response, element, xhr)</td>
           <td>state context</td>
           <td>Callback on request complete regardless of conditions</td>
         </tr>
@@ -1149,12 +1152,12 @@ type        : 'UI Behavior'
           <td>Callback on failed response, or JSON response that fails <code>successTest</code></td>
         </tr>
         <tr>
-          <td>onError(errorMessage, element)</td>
+          <td>onError(errorMessage, element, xhr)</td>
           <td>state context</td>
           <td>Callback on server error from returned status code, or XHR failure.</td>
         </tr>
         <tr>
-          <td>onAbort(errorMessage, element)</td>
+          <td>onAbort(errorMessage, element, xhr)</td>
           <td>state context</td>
           <td>Callback on abort caused by user clicking a link or manually cancelling request.</td>
         </tr>

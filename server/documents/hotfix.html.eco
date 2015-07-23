@@ -10,12 +10,6 @@ type       : 'Library'
 <!-- TEST JS HERE !-->
 <script>
 $(document).ready(function() {
-    $('.button').popup({
-        on: 'hover',
-        onShow: function() {
-            console.log('show');
-        }
-    });
 });
 </script>
 
@@ -24,6 +18,6 @@ $(document).ready(function() {
 </style>
 
 <div class="ui container" style="padding-top: 2em;">
-    <div class="ui button first" data-content="One">One</div>
-    <div class="ui button second" data-content="Two">Two</div>
+
+</div>
 </body>

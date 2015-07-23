@@ -364,34 +364,17 @@ themes      : ['Default']
       <h4>Using HTML5 State</h4>
       <p>For sites that are able to replicate change on the server, tab can automatically map changes in tab navigation to <a href="http://diveintohtml5.info/history.html" target="_blank">html5 state.</a>
       </p>
-      <div class="ui ignored info message">
-        Since these docs are statically hosted on GitHub Pages, html state is not supported. The following example will cause a "not found" error on page refresh.
+      <div class="ui ignored warning message">
+        Since these docs are statically hosted on GitHub Pages, html5 state tabs are not demonstratable from the docs. You will need to try this example in your own code.
       </div>
-      <div class="evaluated code" data-type="javascript">
-        $('.state.example .menu .item')
+      <div class="code" data-type="javascript">
+        $('.ui.menu .item')
           .tab({
-            context     : '.state.example',
-            history     : true,
             historyType : 'state',
             // base url for all other path changes
-            path        : '/modules/tab.html'
+            path        : '/my/base/url'
           })
         ;
-      </div>
-
-      <div class="ui pointing secondary menu">
-        <a class="active item" data-tab="olive">Olive</a>
-        <a class="item" data-tab="apple">Apple</a>
-        <a class="item" data-tab="cucumber">Cucumber</a>
-      </div>
-      <div class="ui active tab segment" data-tab="olive">
-        Olive tab
-      </div>
-      <div class="ui tab segment" data-tab="apple">
-        Apple tab
-      </div>
-      <div class="ui tab segment" data-tab="cucumber">
-        Cucumber tab
       </div>
     </div>
 

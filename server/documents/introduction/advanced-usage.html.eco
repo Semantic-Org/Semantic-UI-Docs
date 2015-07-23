@@ -16,6 +16,7 @@ type        : 'Introduction'
   <div class="no example">
     <h4>Importing Gulp Tasks</h4>
     <p>You don't have to use <a href="/introduction/build-tools.html">our gulp pipeline</a>, just import the task into your own <code>gulpfile</code></p>
+    <p>You can <a href="https://github.com/Semantic-Org/Example-External-Gulpfile" target="_blank">fork this example project</a> to see an example of how to import Semantic UI tasks into your project.</p>
     <div class="ignored code" data-type="JS" data-title="Custom gulpfile.js">
     var
       gulp  = require('gulp'),
@@ -26,6 +27,13 @@ type        : 'Introduction'
     gulp.task('watch ui', watch));
     gulp.task('build ui', build));
     </div>
+  </div>
+
+  <h2 class="ui dividing header">Prototyping with Semantic UI</h2>
+  <div class="no example">
+    <h4>Sketch Files</h4>
+    <p>If you are looking to prototype layouts using <a href="http://bohemiancoding.com/sketch/" target="_blank">Sketch</a> with Semantic UI check out <a href="https://github.com/guacamoly/semantic-ui-kit-for-sketch" target="_blank">Semantic UI Sketch Files</a></p>
+    <img class="ui bordered rounded fluid image" src="https://github.com/guacamoly/semantic-ui-kit-for-sketch/raw/master/snapshot.jpg?raw=true">
   </div>
 
   <h2 class="ui dividing header">Single Components</h2>

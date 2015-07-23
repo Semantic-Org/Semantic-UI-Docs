@@ -1361,6 +1361,7 @@ themes      : ['Default', 'Material']
       <div class="evaluated code" data-type="javascript">
         $('.no.label.example .ui.dropdown')
           .dropdown({
+            debug: true,
             useLabels: false
           })
         ;
@@ -1403,7 +1404,7 @@ themes      : ['Default', 'Material']
       </div>
     </div>
 
-    <div class="restore example">
+    <div class="restore dropdown example">
       <h4 class="ui header">Restoring Defaults</h4>
       <p>You can restore a dropdown to its value set on page load</p>
       <div class="ui multiple selection dropdown">

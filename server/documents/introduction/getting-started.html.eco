@@ -56,18 +56,24 @@ type        : 'Main'
       </div>
     </div>
     <div class="ui basic tab vertical segment" data-tab="linux">
-      <h4>Install from Git without Sudo</h4>
+      <h4>Install via PPA</h4>
+      <p>Although <a href="http://www.ubuntuupdates.org/ppa/chris_lea_nodejs" target="_blank">Chris Lea's PPA</a> was once the best way to install node, it is now somewhat out of date.</p>
+      <p>The recommended path to install Semantic UI is using <a href="https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager" target="_blank">Joyent's package manager</a> guide.</p>
+      <h4>Ubuntu</h4>
       <div class="ignored code" data-type="bash">
-        mkdir ~/local
-        echo 'export PATH=$HOME/local/bin:$PATH' >> ~/.bashrc
-        . ~/.bashrc
-        git clone git://github.com/joyent/node.git
-        cd node
-        ./configure --prefix=~/local
-        make install
-        git clone git://github.com/isaacs/npm.git
-        cd npm
-        make install
+        curl --silent --location https://deb.nodesource.com/setup_0.12 | sudo bash -
+        sudo apt-get install --yes nodejs
+      </div>
+      <h4>Debian</h4>
+      <div class="ignored code" data-type="bash">
+        apt-get install curl
+        curl --silent --location https://deb.nodesource.com/setup_0.12 | bash -
+        apt-get install --yes nodejs
+      </div>
+      <h4>Red Hat</h4>
+      <div class="ignored code" data-type="bash">
+      curl --silent --location https://rpm.nodesource.com/setup | bash -
+      yum -y install nodejs
       </div>
     </div>
     <div class="ui basic tab vertical segment" data-tab="win">
@@ -77,8 +83,20 @@ type        : 'Main'
   </div>
 
   <div class="no example">
+    <h4>Install Gulp</h4>
+    <p>Semantic UI uses <a href="http://www.gulpjs.com" target="_blank">Gulp</a> to provide command line tools for building themed versions of the library with just the components you need.</p>
+    <p>Gulp is an NPM module and must be installed globally</p>
+    <div class="ignored code" data-type="bash">
+    npm install -g gulp
+    </div>
+  </div>
+
+  <div class="no example">
     <h4>Install Semantic UI</h4>
     <p>Semantic UI is available in an eponymous package on NPM</p>
+    <div class="ui ignored warning message">
+      If you experience issues with install hanging after setup, hold tight <a href="https://github.com/Semantic-Org/Semantic-UI/issues/2086#issuecomment-123771843">a fix is on the way</a> shortly
+    </div>
     <div class="ui secondary menu">
       <a class="active item" data-tab="video">
         Video

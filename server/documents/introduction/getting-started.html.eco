@@ -94,9 +94,6 @@ type        : 'Main'
   <div class="no example">
     <h4>Install Semantic UI</h4>
     <p>Semantic UI is available in an eponymous package on NPM</p>
-    <div class="ui ignored warning message">
-      If you experience issues with install hanging after setup, hold tight <a href="https://github.com/Semantic-Org/Semantic-UI/issues/2086#issuecomment-123771843">a fix is on the way</a> shortly
-    </div>
     <div class="ui secondary menu">
       <a class="active item" data-tab="video">
         Video

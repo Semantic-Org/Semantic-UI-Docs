@@ -258,7 +258,7 @@ type        : 'UI Module'
 
       <h2 class="ui dividing header">Transition Direction</h2>
 
-      <p>If an animation direction is not specified it will automatically be determined based on the elements current visibility. For no example, if the element is visible the animation "fade out" will be called, if the animation is not visible "fade in".</p>
+      <p>If an animation direction is not specified it will automatically be determined based on the elements current visibility. For example, if the element is visible the animation "fade out" will be called, if the animation is not visible "fade in".</p>
 
       <div class="code" data-demo="true" data-title="Automatically choosing direction">
       $('.long.leaf.image')

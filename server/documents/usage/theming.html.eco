@@ -229,7 +229,7 @@ type        : 'Usage'
   <div class="no example">
     <h4>Browsing for Themes</h4>
     <p>Each UI definitions include a dropdown at the top of the page to preview themes included with the project.</p>
-    <p>Themes are <b>per component</b>, so although, for example, material themes are available for <a href="/collections/menu.html">menu</a>, <a href="/elements/button.html">button</a>, and <a href="/globals/site.html">site</a>, changing all values to "material" will produce an error for components which do not include that theme.</p>
+    <p>Themes are <b>per component</b>, so although, for example, material themes are available for <a href="/collections/menu.html">menu</a>, <a href="/elements/button.html">button</a>, and <a href="/globals/site.html">site</a>, changing all values to "material" will produce an error for components which are not included in that theme.</p>
   </div>
 
   <h2 class="ui dividing header">

@@ -188,6 +188,7 @@ themes      : ['Default', 'Basic', 'Classic']
         <th colspan="3">
           Git Repository
         </th>
+      </thead>
       <tbody>
         <tr>
           <td class="collapsing">

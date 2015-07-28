@@ -10,7 +10,7 @@ docpadConfig = {
 
 	plugins:
     ghpages:
-      deployRemote: 'origin'
+      deployRemote: 'beta'
       deployBranch: 'gh-pages'
 
 	# =================================
@@ -29,7 +29,7 @@ docpadConfig = {
 			# Here are some old site urls that you would like to redirect from
 			oldUrls: [],
 
-			version: "2.0.7",
+			version: "2.1.0",
 
 			branch: "master",
 

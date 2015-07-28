@@ -32,7 +32,7 @@ type        : 'Usage'
     </blockquote>
     <p>Components in Semantic UI are designed to help developers adhere to <a href="https://books.google.com/books?id=0qG4TQi-e-4C&pg=PT234&lpg=PT234&dq=%22progressive+truthfulness%22+frederick+brooks&source=bl&ots=yrjNc6wnz8&sig=PJoYODuRku2A1kBoFOPfn4iGYnc&hl=en&sa=X&ved=0CCIQ6AEwAGoVChMImdSMpIOVxgIVCx-sCh3EQgBu#v=onepage&q=%22progressive%20truthfulness%22%20frederick%20brooks&f=false" target="_blank">progressive truthfulness</a> in their development.</p>
     <p>Instead of having to create components from a blank canvas, developers using Semantic UI only need to specify how their components should differ from the default theme using <a href="http://lesscss.org/features/#variables-feature" target="_blank">CSS variables</a>.</p>
-    <p>For developers who don't have time to hone a specific look and feel the default theme is elegant and neutral designed with greyscale colors, and a legible, open source sans-serif font <a href="http://www.latofonts.com"><code>Lato</code></a>.</p>
+    <p>For developers who don't have time to hone a specific look-and-feel the default theme is elegant and neutral with a legible, open source sans-serif font <a href="http://www.latofonts.com"><code>Lato</code></a>.</p>
 
   </div>
 

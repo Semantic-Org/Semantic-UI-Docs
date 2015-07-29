@@ -928,7 +928,7 @@ themes      : ['Default']
 
   <div class="example" data-use-content="true">
     <h4 class="ui header">Floated</h4>
-    <p>An element inside a list can be floated left or right</p>
+    <p>An list, or an element inside a list can be floated left or right</p>
     <div class="ui middle aligned divided list">
       <div class="item">
         <div class="right floated content">
@@ -966,6 +966,18 @@ themes      : ['Default']
           Molly
         </div>
       </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui right floated horizontal list">
+      <div class="disabled item" href="#">&copy; GitHub, Inc.</div>
+      <a class="item" href="#">Terms</a>
+      <a class="item" href="#">Privacy</a>
+      <a class="item" href="#">Contact</a>
+    </div>
+    <div class="ui horizontal list">
+      <a class="item" href="#">About Us</a>
+      <a class="item" href="#">Jobs</a>
     </div>
   </div>
 

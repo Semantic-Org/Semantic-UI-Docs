@@ -221,9 +221,6 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
   </div>
   <div class="another example">
     <div class="ui top attached tabular menu">
-      <div class="item">
-        <img src="/images/logo.png">
-      </div>
       <a class="active item">
         Bio
       </a>
@@ -241,6 +238,27 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
     </div>
     <div class="ui bottom attached segment">
       <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui top attached segment">
+      <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+    </div>
+    <div class="ui bottom attached tabular menu">
+      <a class="active item">
+        Active Project
+      </a>
+      <a class="item">
+        Project #2
+      </a>
+      <a class="item">
+        Project #3
+      </a>
+      <div class="right menu">
+        <a class="item">
+          <i class="add icon"> New Tab
+        </a>
+      </div>
     </div>
   </div>
   <div class="another example">
@@ -264,6 +282,31 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
       <div class="twelve wide stretched column">
         <div class="ui segment">
           This is an stretched grid column. This segment will always match the tab height
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui grid">
+      <div class="twelve wide stretched column">
+        <div class="ui segment">
+          This is an stretched grid column. This segment will always match the tab height
+        </div>
+      </div>
+      <div class="four wide column">
+        <div class="ui vertical fluid right tabular menu">
+          <a class="active item">
+            Bio
+          </a>
+          <a class="item">
+            Pics
+          </a>
+          <a class="item">
+            Companies
+          </a>
+          <a class="item">
+            Links
+          </a>
         </div>
       </div>
     </div>

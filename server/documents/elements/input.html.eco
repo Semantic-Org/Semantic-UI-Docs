@@ -24,7 +24,6 @@ themes      : ['Default']
   <div class="example">
     <h4 class="ui header">
       Input
-      <span class="ui teal label">Flexbox</span>
     </h4>
     <p>A standard input</p>
     <div class="ui input">
@@ -118,6 +117,14 @@ themes      : ['Default']
           <div class="item">.net</div>
           <div class="item">.org</div>
         </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui right labeled input">
+      <input type="text" placeholder="Enter weight..">
+      <div class="ui basic label">
+        kg
       </div>
     </div>
   </div>

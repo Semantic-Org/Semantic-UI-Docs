@@ -81,9 +81,56 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
         $12.99 a month
       </div>
     </div>
-
   </div>
 
+  <div class="example" data-class="labeled, left labeled">
+    <h4 class="ui header">Labeled</h4>
+    <p>A button can appear alongside a <a href="/elements/label.html">label</a></p>
+    <div class="ui labeled button" tabindex="0">
+      <div class="ui button">
+        <i class="heart icon"></i> Like
+      </div>
+      <a class="ui basic label">
+        2,048
+      </a>
+    </div>
+    <div class="ui labeled button" tabindex="0">
+      <div class="ui button">
+        <i class="fork icon"></i> Forks
+      </div>
+      <a class="ui basic label">
+        1,048
+      </a>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui left labeled button" tabindex="0">
+      <a class="ui basic label">
+        2,048
+      </a>
+      <div class="ui button">
+        <i class="heart icon"></i> Like
+      </div>
+    </div>
+    <div class="ui left labeled button" tabindex="0">
+      <a class="ui basic label">
+        1,048
+      </a>
+      <div class="ui button">
+        <i class="fork icon"></i> Forks
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui left labeled button" tabindex="0">
+      <div class="ui left pointing label">
+        Elliot
+      </div>
+      <div class="ui button">
+        <i class="edit icon"></i> Edit
+      </div>
+    </div>
+  </div>
 
   <div class="example">
     <h4 class="ui header">Icon</h4>
@@ -95,7 +142,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
 
   <div class="example" data-class="labeled icon, right labeled icon">
     <h4 class="ui header">Labeled Icon</h4>
-    <p>A button can have an icon and a label</p>
+    <p>A button can use an icon as a label</p>
     <button class="ui labeled icon button">
       <i class="pause icon"></i>
       Pause

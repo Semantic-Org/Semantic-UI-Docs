@@ -24,7 +24,7 @@ type        : 'Usage'
   </h2>
 
   <div class="no example">
-    <h4>Progressive Truthfulnesss</h4>
+    <h4>Progressive Truthfulness</h4>
     <blockquote>
       <p>[Progressive truthfulness] is perhaps a better way to build models of physical objects...Start with a model that is fully detailed but only resembles what is wanted. Then, one adjusts one attribute after another, bringing the result ever closer to the mental vision of the new creation, or to the real properties of a real-world object</p>
       <p>...Starting with exemplars that themselves have consistency of style ensures that such consistency is the designer's to lose.</p>
@@ -48,7 +48,7 @@ type        : 'Usage'
     <p>Each <a href="#theme-inheritance">level of inheritance</a> includes a special file <code>site.variables</code> which defines theme-wide defaults that each component can extend.</p>
 
     <p>Global variables use higher level abstractions, to avoid tedium in having to modify multiple properties to change the appearance of an element.</p>
-    <p>Other button shades like those used in <code>hover</code>, <code>active</code> and <code>focus</code> states are created by modifying the saturation and lightness of color variabless, these derived variables will automatically adjust to your new color palette.</a>
+    <p>Other button shades like those used in <code>hover</code>, <code>active</code> and <code>focus</code> states are created by modifying the saturation and lightness of color variables, these derived variables will automatically adjust to your new color palette.</a>
 
     <div class="ui ignored code" data-type="less" data-less="true" data-title="site/globals/site.variables">
     @primaryColor   : @pink;

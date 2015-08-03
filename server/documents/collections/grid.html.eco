@@ -62,7 +62,7 @@ themes      : ['Default']
     <div class="highlighted example" data-use-content="true" data-class="row">
       <h4 class="ui header">Rows</h4>
       <p>Rows are groups of columns which are aligned horizontally.</p>
-      <p>Rows can either be <em>explicit</em>, marked with an additional <code>row</code> element, or <em>implicit</em>, automatically occuring when no more space is left in a previous row.
+      <p>Rows can either be <em>explicit</em>, marked with an additional <code>row</code> element, or <em>implicit</em>, automatically occurring when no more space is left in a previous row.
       </p>
       <p>After each group of columns vertical spacing is added to separate each group of columns, creating vertical rhythm.
       <div class="ui four column grid">

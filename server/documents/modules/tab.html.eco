@@ -476,7 +476,7 @@ themes      : ['Default']
     <div class="no example">
       <h4 class="ui header">Setting Paths</h4>
       <p>Using <code>historyType: state</code> requires specifying a <b>base URL without any internal state</b>. This cannot be set automatically to <code>window.location</code> because all tabs with html5 state will appear as normal page urls, and route accordingly.</p>
-      <p>HTML5 state will only work with dynamic site back-ends because it requires each tab path to correctly route on the server to the apprpopriate content.</p>
+      <p>HTML5 state will only work with dynamic site back-ends because it requires each tab path to correctly route on the server to the appropriate content.</p>
       <div class="code">
       $('.ui.menu .item')
         .tab({
@@ -632,7 +632,7 @@ themes      : ['Default']
           <td>If enabled limits tabs to children of passed context</td>
         </tr>
         <tr>
-          <td>mayDepth</td>
+          <td>maxDepth</td>
           <td>25</td>
           <td>Maximum amount of nested tabs allowed (avoids recursion)</td>
         </tr>

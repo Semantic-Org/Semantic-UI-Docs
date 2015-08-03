@@ -5,7 +5,7 @@ element     : 'reset'
 elementType : 'global'
 
 title       : 'Reset'
-description : 'A reset is a set of normalized values for CSS properties that correct for abberations in browser defaults'
+description : 'A reset is a set of normalized values for CSS properties that correct for aberations in browser defaults'
 type        : 'UI Global'
 
 themes      : ['Default', 'Basic', 'Resetcss']
@@ -440,7 +440,7 @@ themes      : ['Default', 'Basic', 'Resetcss']
                 <td>$10.00</td>
               </tr>
               <tr>
-                <td>Band of Gypsys</td>
+                <td>Band of Gypsies</td>
                 <td>1970</td>
                 <td>$12.00</td>
               </tr>

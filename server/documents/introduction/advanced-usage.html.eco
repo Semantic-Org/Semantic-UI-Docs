@@ -82,7 +82,7 @@ type        : 'Introduction'
   <div class="no example">
     <h4>Importing Semantic</h4>
     <p><code>semantic.less</code> is available in all releases as an entry point for importing multiple components from other LESS files.</p>
-    <div class="ignored code"  data-type="LESS" data-title="Importing LESSS">
+    <div class="ignored code"  data-type="LESS" data-title="Importing LESS">
       /* Import all components */
       @import 'src/semantic';
     </div>

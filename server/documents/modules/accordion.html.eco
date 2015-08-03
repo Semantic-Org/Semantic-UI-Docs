@@ -408,7 +408,7 @@ themes      : ['Default', 'Chubby']
 
     <div class="no example">
       <h4 class="ui header">AJAX Content</h4>
-      <p>Accordions use <a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver" target="_blank">DOM Mutation Observers</a> and delegated events to allow for easy compataibility with AJAX content, or content added after initialization.</p>
+      <p>Accordions use <a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver" target="_blank">DOM Mutation Observers</a> and delegated events to allow for easy compatibility with AJAX content, or content added after initialization.</p>
       <p>If the DOM tree changes the module will automatically call <code>module.refresh</code> and update the selector cache. Because events are bound on the parent module using delegated events, events will automatically fire on content added after initialization.</p>
       <p>If you change other attributes of the module without DOM insertion and need to update the cache you can do so by calling this module's <code>refresh</code> behavior.
       <div class="code" data-type="javascript">

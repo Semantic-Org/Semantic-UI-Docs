@@ -453,7 +453,7 @@ type        : 'UI Module'
         <tr>
           <td>pushing</td>
           <td>false</td>
-          <td>Whether element should be "pushed" by the viewport, attachig to the bottom of the screen when scrolling up</td>
+          <td>Whether element should be "pushed" by the viewport, attaching to the bottom of the screen when scrolling up</td>
         </tr>
         <tr>
           <td>jitter</td>

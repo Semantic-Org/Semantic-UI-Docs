@@ -121,6 +121,7 @@ type        : 'Main'
       &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/semantic/dist/semantic.min.css&quot;&gt;
       &lt;script src=&quot;semantic/dist/semantic.min.js&quot;&gt;&lt;/script&gt;
     </div>
+    <p> Notice: If you followed the instructions from the video, you will notice that under the directory 'semantic', there is no directory 'dist'. Instead the directory 'out' is created. So, replace the word 'dist' with the word 'out' in the above two lines. </p>
   </div>
   <h2 class="ui dividing header">Updating</h2>
 

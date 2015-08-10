@@ -1002,7 +1002,7 @@ themes      : ['Default', 'Material']
       <h4 class="ui header">Scrolling</h4>
       <p>A dropdown can have its menu scroll</p>
       <div class="ui ignored warning message">
-        Scroling dropdowns are incompatible with the usage of <code>sub menu</code>.
+        Scrolling dropdowns are incompatible with the usage of <code>sub menu</code>.
       </div>
       <div class="ui scrolling dropdown">
         <input type="hidden" name="gender">
@@ -2106,6 +2106,10 @@ themes      : ['Default', 'Material']
         </tr>
       </thead>
       <tbody>
+        <tr>
+          <td>refresh</td>
+          <td>Refreshes all cached selectors and data</td>
+        </tr>
         <tr>
           <td>toggle</td>
           <td>Toggles current visibility of dropdown</td>

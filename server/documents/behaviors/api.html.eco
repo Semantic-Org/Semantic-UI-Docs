@@ -598,7 +598,7 @@ type        : 'UI Behavior'
         <div class="code" data-type="json" data-title="Example Server Response">
         {
           "success": true,
-          "message": "We've retreived your data from the server"
+          "message": "We've retrieved your data from the server"
           "data": {
             // payload here
           }
@@ -1075,7 +1075,7 @@ type        : 'UI Behavior'
         <tr>
           <td>mockResponseAsync(settings, callback)</td>
           <td>false</td>
-          <td>When specified, this function can be used to retreive content from a server and return it asynchronously <b>instead of</b> a standard AJAX call. The callback function should return the server response.</td>
+          <td>When specified, this function can be used to retrieve content from a server and return it asynchronously <b>instead of</b> a standard AJAX call. The callback function should return the server response.</td>
           <td>function or false</td>
         </tr>
         <tr>

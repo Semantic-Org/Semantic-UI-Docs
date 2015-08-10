@@ -602,7 +602,7 @@ type        : 'Main'
   <h2 class="ui dividing header">Checkbox</h2>
 
 <!--   <div class="indeterminate example">
-    <h4 class="ui header">Progresssively Enhanced</h4>
+    <h4 class="ui header">Progressively Enhanced</h4>
     <p><a href="/modules/checkbox.html">Checkboxes</a> now can work without javascript, although additional features are available with javascript use.</p>
 
     <div class="ui checkbox">

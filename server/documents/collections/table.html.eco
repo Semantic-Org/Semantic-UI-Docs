@@ -936,7 +936,7 @@ themes      : ['Default', 'Basic', 'Classic']
     <div class="ui ignored warning icon message">
       <i class="warning icon"></i>
       <div class="content">
-        To ensure icons don't wrap to a seperate line you must either specify collapsing on the widest row in the collapsing column, or on all rows
+        To ensure icons don't wrap to a separate line you must either specify collapsing on the widest row in the collapsing column, or on all rows
       </div>
     </div>
 

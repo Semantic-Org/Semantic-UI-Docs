@@ -187,7 +187,7 @@ type        : 'UI Behavior'
 
       <p>Visibility's default settings will only have each callback occur <b>the first time</b> which the conditions are met. On subsequent occurences the event will not fire.</p>
 
-      <p>Setting <code>continuous: true</code> will make the callback fire <b>anytime the callback contitions are met</b>. So for example if you set a "top visible" callback, this callback will fire with each change in scroll when the top is visible on the page.</p>
+      <p>Setting <code>continuous: true</code> will make the callback fire <b>anytime the callback conditions are met</b>. So for example if you set a "top visible" callback, this callback will fire with each change in scroll when the top is visible on the page.</p>
 
       <p>Setting <code>once: false</code> will make the callback fire each time a callback <b>becomes true</b>. So, using the same "top visible" example, the callback will fire each time the top of an element is passed. Even if you scroll back up and pass the element again</p>
 

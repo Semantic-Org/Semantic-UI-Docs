@@ -9,7 +9,7 @@
 
   <link rel="image_src" type="image/jpeg" href="images/share.png" />
 
-  <!-- Site Properities -->
+  <!-- Site Properties -->
   <%- @getBlock('meta').toHTML() %>
   <title><%= @getPreparedTitle() %></title>
 

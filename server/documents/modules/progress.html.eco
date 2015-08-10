@@ -579,7 +579,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
         <tr>
           <td>label</td>
           <td>percent</td>
-          <td>Can be set to either to display progres as <b>percent</b> or <b>ratio</b>. Matches up to corresponding text template with the same name.</td>
+          <td>Can be set to either to display progress as <b>percent</b> or <b>ratio</b>. Matches up to corresponding text template with the same name.</td>
         </tr>
         <tr>
           <td>random</td>

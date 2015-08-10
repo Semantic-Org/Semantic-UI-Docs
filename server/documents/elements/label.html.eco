@@ -407,10 +407,16 @@ themes      : ['Default']
   </div>
 
   <div class="example">
-    <h4 class="ui header">Basic</h4>
+    <h4 class="ui header">Basic
+      <div class="ui label">New in 2.1</div>
+    </h4>
     <p>A label can reduce its complexity</p>
-    <a class="ui basic label">Red</a>
-    <a class="ui pointing basic label">Red</a>
+    <a class="ui basic label">Basic</a>
+    <a class="ui pointing basic label">Pointing Basic</a>
+    <a class="ui basic image label">
+      <img src="/images/avatar/small/elliot.jpg">
+      Elliot
+    </a>
   </div>
 
   <div class="example">

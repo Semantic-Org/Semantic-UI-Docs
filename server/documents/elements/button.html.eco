@@ -361,6 +361,14 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
     </button>
   </div>
 
+  <div class="example">
+    <h4 class="ui header">Floated</h4>
+    <p>A button can be aligned to the left or right of its container</p>
+    <button class="ui right floated button">Right Floated</button>
+    <button class="ui left floated button">Left Floated</button>
+  </div>
+
+
   <div class="spaced example">
     <h4 class="ui header">Colored</h4>
     <p>A button can have different colors</p>

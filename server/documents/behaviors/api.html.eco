@@ -254,6 +254,7 @@ type        : 'UI Behavior'
       <div class="no example">
         <h4 class="ui header">Routing Data to URLs</h4>
         <p>If your API urls include templated variables they will be replaced during your request by one of four possible ways, listed in of inheritance.</p>
+        <p>All parameters used in a url are encoded using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent" target="_blank"><code>encodeURIComponent</code></a> by default, to prevent from malicious strings from affecting your query. To disable this feature you can set <a href="#settings"><code>encodeParameters: false</code></a>.
       </div>
 
       <div class="no routed example">
@@ -992,6 +993,11 @@ type        : 'UI Behavior'
           <td>stateContext</td>
           <td>this</td>
           <td>UI state will be applied to this element, defaults to triggering element.</td>
+        </tr>
+        <tr>
+          <td>encodeParameters</td>
+          <td>true</td>
+          <td>Whether to encode parameters with <code>encodeURIComponent</code> before adding into url string</td>
         </tr>
         <tr>
           <td>defaultData</td>

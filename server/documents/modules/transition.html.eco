@@ -256,7 +256,17 @@ type        : 'UI Module'
       ;
       </div>
 
-      <h2 class="ui dividing header">Transition Direction</h2>
+      <h2 class="ui dividing header">Specifying a direction</h2>
+      <p>To force an animation direction, add either <code>in</code> or <code>out</code> to the animation name.</p>
+      <div class="code" data-demo="true" data-title="Specifying a direction">
+      $('.long.leaf.image')
+        // if a direction if specified it will be obeyed
+        .transition('horizontal flip in')
+        .transition('vertical flip in')
+      ;
+      </div>
+
+      <h2 class="ui dividing header">Automatic Direction</h2>
 
       <p>If an animation direction is not specified it will automatically be determined based on the elements current visibility. For example, if the element is visible the animation "fade out" will be called, if the animation is not visible "fade in".</p>
 
@@ -266,13 +276,6 @@ type        : 'UI Module'
         .transition('fade up')
         // this is now fade up in
         .transition('fade up')
-      ;
-      </div>
-      <div class="code" data-demo="true" data-title="Specifying a direction">
-      $('.long.leaf.image')
-        // if a direction if specified it will be obeyed
-        .transition('horizontal flip in')
-        .transition('vertical flip in')
       ;
       </div>
 

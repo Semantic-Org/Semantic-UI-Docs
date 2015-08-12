@@ -7,28 +7,28 @@ title      : 'Test Page'
 type       : 'Library'
 ---
 
+<div class="ui container">
+   <div class="ui fluid search selection dropdown">
+      <input type="hidden" name="language">
+      <i class="dropdown icon"></i>
+      <div class="default text">Select language</div>
+      <div class="menu">
+          <div class="item" data-value="gb"><i class="gb flag"></i>English</div>
+          <div class="item" data-value="es"><i class="es flag"></i>Spanish</div>
+      </div>
+  </div>
+</div>
+</body>
 <!-- TEST JS HERE !-->
 <script>
 $(document).ready(function() {
-
-  $('.menu .item').tab({
-    auto: true
-  });
+  $('.ui.dropdown').dropdown();
 });
 </script>
 
 <!-- TEST CSS HERE !-->
 <style type="text/css">
+body > .ui.container:first-child {
+  margin-top: 5em;
+}
 </style>
-
-<div class="ui container" style="padding-top: 2em;">
-  <div class="ui menu">
-    <a class="item" data-tab="profile.php?student=2027">Basic Profile</a>
-  </div>
-
-  <div class="ui bottom attached tab segment" data-tab="profile.php?student=2027">
-
-  </div>
-
-</div>
-</body>

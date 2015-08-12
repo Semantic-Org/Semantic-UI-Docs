@@ -10,7 +10,7 @@ type        : 'UI Module'
 element     : 'dropdown'
 elementType : 'module'
 
-themes      : ['Default', 'Material']
+themes      : ['Default', 'GitHub', 'Material']
 ---
 
 <link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/dropdown.less" />

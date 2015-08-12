@@ -75,8 +75,8 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
   <div class="example">
     <h4 class="ui header">Cards</h4>
     <p>A group of cards. </p>
-    <div class="ui ignored info message">
-      Cards use <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes" target="_blank">flexbox</a> to make sure rows of content stretch to be equal height.
+    <div class="ui ignored warning message">
+      To have groups of cards be equal height you must use <code>ui cards</code>. Card groups use <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes" target="_blank">flexbox</a> to make sure rows of content stretch to be equal height.
     </div>
     <div class="ui ignored message">
       <p>Cards are designed to be flexible to your content. <code>content</code> blocks can include any custom elements related to your content.</p>

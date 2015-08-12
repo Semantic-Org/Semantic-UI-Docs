@@ -8,15 +8,16 @@ type       : 'Library'
 ---
 
 <div class="ui container">
-   <div class="ui fluid search selection dropdown">
-      <input type="hidden" name="language">
-      <i class="dropdown icon"></i>
-      <div class="default text">Select language</div>
-      <div class="menu">
-          <div class="item" data-value="gb"><i class="gb flag"></i>English</div>
-          <div class="item" data-value="es"><i class="es flag"></i>Spanish</div>
-      </div>
+ <div class="ui fluid left icon input">
+    <input placeholder="Email" name="email" type="email"></input>
+    <i class="mail icon"></i>
   </div>
+  <br/>
+  <div class="ui fluid corner labeled left icon input">
+    <input placeholder="Email" name="email" type="email"></input>
+    <i class="mail icon"></i>
+  <div class="ui corner label"><i class="asterisk icon"></i></div>
+</div>
 </div>
 </body>
 <!-- TEST JS HERE !-->

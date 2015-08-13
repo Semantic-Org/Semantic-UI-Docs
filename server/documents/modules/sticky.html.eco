@@ -272,6 +272,72 @@ type        : 'UI Module'
                   </div>
                 </div>
               </div>
+              <div class="item">
+                <div class="ui tiny image">
+                  <img src="/images/wireframe/image.png">
+                </div>
+                <div class="middle aligned content">
+                  <a class="header">Followup Article</a>
+                  <div class="meta">
+                    <span class="author">By <a>Author</a></span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="ui tiny image">
+                  <img src="/images/wireframe/image.png">
+                </div>
+                <div class="middle aligned content">
+                  <a class="header">Followup Article</a>
+                  <div class="meta">
+                    <span class="author">By <a>Author</a></span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="ui tiny image">
+                  <img src="/images/wireframe/image.png">
+                </div>
+                <div class="middle aligned content">
+                  <a class="header">Followup Article</a>
+                  <div class="meta">
+                    <span class="author">By <a>Author</a></span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="ui tiny image">
+                  <img src="/images/wireframe/image.png">
+                </div>
+                <div class="middle aligned content">
+                  <a class="header">Followup Article</a>
+                  <div class="meta">
+                    <span class="author">By <a>Author</a></span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="ui tiny image">
+                  <img src="/images/wireframe/image.png">
+                </div>
+                <div class="middle aligned content">
+                  <a class="header">Followup Article</a>
+                  <div class="meta">
+                    <span class="author">By <a>Author</a></span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="ui tiny image">
+                  <img src="/images/wireframe/image.png">
+                </div>
+                <div class="middle aligned content">
+                  <a class="header">Followup Article</a>
+                  <div class="meta">
+                    <span class="author">By <a>Author</a></span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -281,6 +347,12 @@ type        : 'UI Module'
             <img class="ui wireframe image" src="/images/wireframe/image.png">
           </div>
         </div>
+        <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
+        <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
         <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
         <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">
         <img class="ui wireframe paragraph image" src="/images/wireframe/paragraph.png">

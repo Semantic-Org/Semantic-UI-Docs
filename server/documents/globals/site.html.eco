@@ -8,7 +8,7 @@ standalone  : true
 title       : 'Site'
 description : 'A site is a set of global constraints that define the basic parameters of all UI elements'
 type        : 'UI Global'
-themes      : ['Default', 'Material']
+themes      : ['Default', 'GitHub', 'Material']
 
 ---
 <link rel="stylesheet/less" type="text/css" href="/src/definitions/globals/site.less" />

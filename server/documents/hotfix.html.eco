@@ -7,57 +7,29 @@ title      : 'Test Page'
 type       : 'Library'
 ---
 
+<div class="ui container">
+ <div class="ui fluid left icon input">
+    <input placeholder="Email" name="email" type="email"></input>
+    <i class="mail icon"></i>
+  </div>
+  <br/>
+  <div class="ui fluid corner labeled left icon input">
+    <input placeholder="Email" name="email" type="email"></input>
+    <i class="mail icon"></i>
+  <div class="ui corner label"><i class="asterisk icon"></i></div>
+</div>
+</div>
+</body>
 <!-- TEST JS HERE !-->
 <script>
 $(document).ready(function() {
-  $advancedSettingsForms = $('.advanced-settings-form');
-
-$.each($advancedSettingsForms, function (i, value) {
-    var $form = $(this);
-    $form.form({debug: true});
-    console.log($form.form('get value', 'same_name')); // this should log the value of input[name="same_name"], but instead it logs div[data-section="same_name"]
-
-    console.log($form.form('get values')); // the value of input[name="same_name"] doesn't show up in the log at all
-});
+  $('.ui.dropdown').dropdown();
 });
 </script>
 
 <!-- TEST CSS HERE !-->
 <style type="text/css">
+body > .ui.container:first-child {
+  margin-top: 5em;
+}
 </style>
-
-<div class="ui container" style="padding-top: 2em;">
-<div class="ui small form advanced-settings-form" data-section="same_name">
-</div>
-
-<div class="ui small form advanced-settings-form" data-section="some_form">
-    <div class="field">
-        <label>A Field</label>
-        <div class="ui input advanced-settings-field">
-            <input type="text" name="a_field" value="yo" />
-        </div>
-    </div>
-
-    <div class="field">
-        <label>Another Field</label>
-        <div class="ui selection dropdown advanced-settings-field">
-            <input type="hidden" name="another_field">
-                <i class="dropdown icon"></i>
-                <div class="default text">Blah</div>
-                <div class="menu">
-                    <div class="above item" data-value="sup">sup</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="field">
-            <div class="ui toggle checkbox advanced-settings-field">
-                <input type="checkbox" name="same_name" tabindex="0" class="hidden" />
-                <label>Yo yo</label>
-            </div>
-        </div>
-
-    </div>
-</div>
-</div>
-</body>

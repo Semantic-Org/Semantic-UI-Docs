@@ -121,16 +121,6 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
       </div>
     </div>
   </div>
-  <div class="another example">
-    <div class="ui left labeled button" tabindex="0">
-      <div class="ui left pointing label">
-        Elliot
-      </div>
-      <div class="ui button">
-        <i class="edit icon"></i> Edit
-      </div>
-    </div>
-  </div>
 
   <div class="example">
     <h4 class="ui header">Icon</h4>

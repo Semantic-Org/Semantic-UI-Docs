@@ -10,7 +10,7 @@ type        : 'UI Module'
 element     : 'dropdown'
 elementType : 'module'
 
-themes      : ['Default', 'Material']
+themes      : ['Default', 'GitHub', 'Material']
 ---
 
 <link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/dropdown.less" />
@@ -1406,7 +1406,7 @@ themes      : ['Default', 'Material']
 
     <div class="restore dropdown example">
       <h4 class="ui header">Restoring Defaults</h4>
-      <p>You can restore a dropdown to its value set on page load</p>
+      <p>You can restore a dropdown to its value set on page load using the <code>restore defaults</code> behavior. If no default text is set on load, restore defaults will restore placeholder text</p>
       <div class="ui multiple selection dropdown">
         <input name="gender" type="hidden" value="default,default2" />
         <i class="dropdown icon"></i>
@@ -1417,21 +1417,31 @@ themes      : ['Default', 'Material']
             <div class="item" data-value="default">Default Value</div>
             <div class="item" data-value="default2">Second Default</div>
         </div>
-       </div>
-
+      </div>
+      <div class="ui divider"></div>
       <div class="ui selection dropdown">
         <input name="gender" type="hidden" value="default" />
         <i class="dropdown icon"></i>
-        <div class="default text">Default</div>
+        <div class="default text">Select a value</div>
+        <div class="menu">
+            <div class="item" data-value="0">Value</div>
+            <div class="item" data-value="1">Another Value</div>
+        </div>
+       </div>
+      <div class="ui divider"></div>
+      <div class="ui selection dropdown">
+        <input name="gender" type="hidden" value="default" />
+        <i class="dropdown icon"></i>
+        <div class="text">Default Value</div>
         <div class="menu">
             <div class="item" data-value="0">Value</div>
             <div class="item" data-value="1">Another Value</div>
             <div class="item" data-value="default">Default Value</div>
         </div>
        </div>
-
-      <div class="ui button">
-          Restore
+      <div class="ui divider"></div>
+      <div class="ui primary button">
+          Restore All Dropdowns
       </div>
       <div class="evaluated code" data-type="javascript">
         $('.restore.example .button')
@@ -2030,16 +2040,16 @@ themes      : ['Default', 'Material']
             <td>Selects current item, adjusts dropdown value and changes dropdown text</td>
           </tr>
           <tr>
-            <td>select</td>
-            <td>Selects current item from menu but does not change dropdown text</td>
-          </tr>
-          <tr>
             <td>combo</td>
             <td>Same as activate, but updates previous elements text instead of self</td>
           </tr>
           <tr>
+            <td>select</td>
+            <td>Selects current item from menu and stores value, but does not change dropdown text</td>
+          </tr>
+          <tr>
             <td>hide</td>
-            <td>Hides the dropdown menu but does nothing</td>
+            <td>Hides the dropdown menu and stores value, but does not change text</td>
           </tr>
           <tr>
             <td>function(text, value){}</td>
@@ -2195,7 +2205,7 @@ themes      : ['Default', 'Material']
           <td>Unbinds document intent click</td>
         </tr>
         <tr>
-          <td>determine intent</td>
+        <td>determine intent</td>
           <td>Returns whether event occurred inside dropdown</td>
         </tr>
         <tr>
@@ -2231,6 +2241,14 @@ themes      : ['Default', 'Material']
         <tr>
           <td>is hidden</td>
           <td>Returns whether dropdown is hidden</td>
+        </tr>
+        <tr>
+          <td>get default text</td>
+          <td>Returns dropdown value as set on page load</td>
+        </tr>
+        <tr>
+          <td>get placeholder text</td>
+          <td>Returns placeholder text</td>
         </tr>
       </tbody>
     </table>
@@ -2565,12 +2583,12 @@ themes      : ['Default', 'Material']
         <tr>
           <td>onShow</td>
           <td>Dropdown</td>
-          <td>Is called after a dropdown is shown.</td>
+          <td>Is called before a dropdown is shown. If <code>false</code> is returned, dropdown will not be shown.</td>
         </tr>
         <tr>
           <td>onHide</td>
           <td>Dropdown</td>
-          <td>Is called after a dropdown is hidden.</td>
+          <td>Is called before a dropdown is hidden. If <code>false</code> is returned, dropdown will not be hidden.</td>
         </tr>
       </tbody>
     </table>

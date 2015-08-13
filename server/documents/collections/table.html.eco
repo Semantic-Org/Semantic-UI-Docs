@@ -10,7 +10,7 @@ title       : 'Table'
 description : 'A table displays a collections of data grouped into rows'
 type        : 'UI Collection'
 
-themes      : ['Default', 'Basic', 'Classic']
+themes      : ['Default', 'Basic', 'Classic', 'GitHub']
 ---
 
 <link rel="stylesheet/less" type="text/css" href="/src/definitions/collections/table.less" />

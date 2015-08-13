@@ -256,7 +256,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
       </a>
       <div class="right menu">
         <a class="item">
-          <i class="add icon"> New Tab
+          <i class="add icon"></i> New Tab
         </a>
       </div>
     </div>

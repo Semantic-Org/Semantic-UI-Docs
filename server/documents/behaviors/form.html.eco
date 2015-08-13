@@ -1073,6 +1073,33 @@ type        : 'UI Behavior'
         <div class="ui blue submit button">Submit</div>
       </form>
     </div>
+    <div class="data example">
+      <h4 class="ui header">Using Server Name Attributes</h4>
+      <p>Sometimes an integration requires you to use a specific value for <code>name</code>, or <code>id</code>. In these cases, you can match a form field using the <code>data-validate</code> property.</p>
+      <div class="ignored code">
+      $('.ui.form')
+        .form(
+          fields: {
+            name: {
+              identifier : 'name',
+              rules: [
+                {
+                  type   : 'empty'
+                }
+              ]
+            }
+          }
+        })
+      ;
+      </div>
+      <form class="ui form segment">
+        <div class="field">
+          <label>Name</label>
+          <input type="text" name="SERVER_REQUIRED_NAME" data-validate="name">
+        </div>
+        <div class="ui blue submit button">Submit</div>
+      </form>
+    </div>
 
     <div class="optional example">
       <h4 class="ui header">Optional Fields</h4>

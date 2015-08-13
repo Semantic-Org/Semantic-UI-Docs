@@ -196,6 +196,23 @@ type        : 'UI Behavior'
           </tr>
         </tbody>
       </table>
+
+      <h3 class="ui header"><a href="#payment">Payment</a></h3>
+      <table class="ui celled sortable basic table segment">
+        <tbody>
+          <tr>
+            <td class="four wide">creditCard</td>
+            <td class="six wide">A field is a valid credit card</td>
+            <td><code>creditCard</code></td>
+          </tr>
+          <tr>
+            <td>creditCard[types]</td>
+            <td>A field matches a specified array of card types</td>
+            <td><code>creditCard[visa,mastercard,unionpay]</code></td>
+          </tr>
+        </tbody>
+      </table>
+
       <h3 class="ui header"><a href="#specified-content">Specified Content</a></h3>
       <table class="ui celled sortable basic table segment">
         <tbody>
@@ -246,6 +263,7 @@ type        : 'UI Behavior'
           </tr>
         </tbody>
       </table>
+
       <h3 class="ui header"><a href="#length">Length</a></h3>
       <table class="ui celled sortable basic table segment">
         <tbody>
@@ -272,7 +290,7 @@ type        : 'UI Behavior'
         <tbody>
           <tr>
             <td class="four wide">match</td>
-            <td>A field should match the value of another validation field, for example to confirm passwords</td class="six wide">
+            <td class="six wide">A field should match the value of another validation field, for example to confirm passwords</td>
             <td><code>match[password]</code></td>
           </tr>
           <tr>
@@ -687,6 +705,111 @@ type        : 'UI Behavior'
                   {
                     type   : 'regExp[/^[a-z0-9_-]{4,16}$/]',
                     prompt : 'Please enter a 4-16 letter username'
+                  }
+                ]
+              }
+            }
+          })
+        ;
+      </div>
+    </div>
+    <div class="payment example">
+      <h4 class="ui header">Payment</h4>
+      <p>Inputs can validate credit cards and other payment types.</p>
+
+      <table class="ui very basic collapsing celled table">
+        <tbody>
+          <tr>
+            <td class="four wide">Card Name</td>
+            <td class="six wide">Validation Name</td>
+            <td class="six wide">Test Card Number</td>
+          </tr>
+          <tr>
+            <td>Visa</td>
+            <td><code>visa</code></td>
+            <td>4565340519181845</td>
+          </tr>
+          <tr>
+            <td>American Express</td>
+            <td><code>amex</code></td>
+            <td>378282246310005</td>
+          </tr>
+          <tr>
+            <td>Mastercard</td>
+            <td><code>mastercard</code></td>
+            <td>5200828282828210</td>
+          </tr>
+          <tr>
+            <td>Discover</td>
+            <td><code>discover</code></td>
+            <td>6011111111111117</td>
+          </tr>
+          <tr>
+            <td>Unionpay</td>
+            <td><code>unionpay</code></td>
+            <td>6240008631401148</td>
+          </tr>
+          <tr>
+            <td>JCB</td>
+            <td><code>jcb</code></td>
+            <td>3530111333300000</td>
+          </tr>
+          <tr>
+            <td>Diner's Club</td>
+            <td><code>dinersClub</code></td>
+            <td>38520000023237</td>
+          </tr>
+          <tr>
+            <td>Maestro</td>
+            <td><code>maestro</code></td>
+            <td>6799990100000000019</td>
+          </tr>
+          <tr>
+            <td>Laser</td>
+            <td><code>laser</code></td>
+            <td>630490017740292441</td>
+          </tr>
+          <tr>
+            <td>Visa Electron</td>
+            <td><code>visaElectron</code></td>
+            <td>4917300800000000</td>
+          </tr>
+        </tbody>
+      </table>
+      <form class="ui form segment">
+        <div class="two fields">
+          <div class="field">
+            <label>Credit Card</label>
+            <input name="card" type="text" value="4444444444444444">
+          </div>
+          <div class="field">
+            <label>Certain Type</label>
+            <input name="exact-card" type="text" value="4444444444444444">
+          </div>
+        </div>
+        <div class="ui submit button">Submit</div>
+        <div class="ui error message"></div>
+      </form>
+      <div class="evaluated code">
+        $('.payment.example form')
+          .form({
+            on: 'blur',
+            fields: {
+              card: {
+                identifier  : 'card',
+                rules: [
+                  {
+                    type   : 'creditCard',
+                    prompt : 'Please enter a valid credit card'
+                  }
+                ]
+              },
+              exactCard: {
+                identifier  : 'exact-card',
+                rules: [
+                  {
+                    type   : 'creditCard[visa,amex]',
+                    prompt : 'Please enter a visa or amex card'
                   }
                 ]
               }

@@ -8,22 +8,12 @@ type       : 'Library'
 ---
 
 <div class="ui container">
- <div class="ui fluid left icon input">
-    <input placeholder="Email" name="email" type="email"></input>
-    <i class="mail icon"></i>
-  </div>
-  <br/>
-  <div class="ui fluid corner labeled left icon input">
-    <input placeholder="Email" name="email" type="email"></input>
-    <i class="mail icon"></i>
-  <div class="ui corner label"><i class="asterisk icon"></i></div>
-</div>
 </div>
 </body>
 <!-- TEST JS HERE !-->
 <script>
 $(document).ready(function() {
-  $('.ui.dropdown').dropdown();
+  alert($.fn.form.settings.rules.creditCard('4565340519181845'));
 });
 </script>
 

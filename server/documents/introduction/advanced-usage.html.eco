@@ -24,8 +24,8 @@ type        : 'Introduction'
       build = require('./semantic/tasks/build')
     ;
     // import task with a custom task name
-    gulp.task('watch ui', watch));
-    gulp.task('build ui', build));
+    gulp.task('watch ui', watch);
+    gulp.task('build ui', build);
     </div>
   </div>
 

@@ -36,7 +36,9 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
       </thead>
       <tbody>
         <tr>
-          <td>Cell</td>
+          <td>
+            <div class="ui ribbon label">First</div>
+          </td>
           <td>Cell</td>
           <td>Cell</td>
         </tr>
@@ -569,6 +571,104 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
 
   <h2 class="ui dividing header">Variations</h2>
 
+
+  <div class="example">
+    <h4 class="ui header">Single Line</h4>
+    <p>A table can specify that its cell contents should remain on a single line, and not wrap.</p>
+    <table class="ui single line table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Registration Date</th>
+          <th>E-mail address</th>
+          <th>Premium Plan</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>John Lilki</td>
+          <td>September 14, 2013</td>
+          <td>jhlilk22@yahoo.com</td>
+          <td>No</td>
+        </tr>
+        <tr>
+          <td>Jamie Harington</td>
+          <td>January 11, 2014</td>
+          <td>jamieharingonton@yahoo.com</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Jill Lewis</td>
+          <td>May 11, 2014</td>
+          <td>jilsewris22@yahoo.com</td>
+          <td>Yes</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+  <div class="example">
+    <h4 class="ui header">
+      Fixed
+    </h4>
+    <p>A table can use <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/table-layout"><code>table-layout: fixed</code></a> a special faster form of table rendering that does not resize table cells based on content.</p>
+    <table class="ui fixed table">
+      <thead>
+        <th>Name</th>
+        <th>Status</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>John</td>
+          <td>Approved</td>
+          <td>John is an interesting boy but sometimes you don't really have enough room to describe everything you'd like</td>
+        </tr>
+        <tr>
+          <td>Jamie</td>
+          <td>Approved</td>
+          <td>Jamie is a kind girl but sometimes you don't really have enough room to describe everything you'd like</td>
+        </tr>
+        <tr>
+          <td>Jill</td>
+          <td>Denied</td>
+          <td>Jill is an alright girl but sometimes you don't really have enough room to describe everything you'd like</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="another example">
+    <div class="ui ignored info message">
+      Fixed <code>single line</code> tables will automatically ensure content that does not fit in a single line will receive "..." ellipsis
+    </div>
+    <table class="ui fixed single line table">
+      <thead>
+        <th>Name</th>
+        <th>Status</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>John</td>
+          <td>Approved</td>
+          <td>John is an interesting boy but sometimes you don't really have enough room to describe everything you'd like</td>
+        </tr>
+        <tr>
+          <td>Jamie</td>
+          <td>Approved</td>
+          <td>Jamie is a kind girl but sometimes you don't really have enough room to describe everything you'd like</td>
+        </tr>
+        <tr>
+          <td>Jill</td>
+          <td>Denied</td>
+          <td>Jill is an alright girl but sometimes you don't really have enough room to describe everything you'd like</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
   <div class="example">
     <h4 class="ui header">Stacking</h4>
     <p>A table can specify how it stacks table content responsively</p>
@@ -968,7 +1068,7 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
   </div>
 
   <div class="example">
-    <h4 class="ui header">Even Width</h4>
+    <h4 class="ui header">Column Count</h4>
     <p>A table can specify its column count to divide its content evenly</p>
     <table class="ui five column table">
       <thead>
@@ -1040,42 +1140,6 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
       </tfoot>
     </table>
   </div>
-
-  <div class="example">
-    <h4 class="ui header">Single Line</h4>
-    <p>A table can specify that its cell contents should remain on a single line, and not wrap.</p>
-    <table class="ui single line table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Registration Date</th>
-          <th>E-mail address</th>
-          <th>Premium Plan</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>John Lilki</td>
-          <td>September 14, 2013</td>
-          <td>jhlilk22@yahoo.com</td>
-          <td>No</td>
-        </tr>
-        <tr>
-          <td>Jamie Harington</td>
-          <td>January 11, 2014</td>
-          <td>jamieharingonton@yahoo.com</td>
-          <td>Yes</td>
-        </tr>
-        <tr>
-          <td>Jill Lewis</td>
-          <td>May 11, 2014</td>
-          <td>jilsewris22@yahoo.com</td>
-          <td>Yes</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
 
   <div class="example">
     <h4 class="ui header">Collapsing</h4>

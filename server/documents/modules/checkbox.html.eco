@@ -653,6 +653,22 @@ themes      : ['Default', 'Colored']
         <td>Returns whether element is able to be changed</td>
       </tr>
       <tr>
+        <td>should allow check</td>
+        <td>Returns whether element can be checked (checking if already checked or `beforeChecked` would cancel)</td>
+      </tr>
+      <tr>
+        <td>should allow uncheck</td>
+        <td>Returns whether element can be unchecked (checking if already unchecked or `beforeUnchecked` would cancel)</td>
+      </tr>
+      <tr>
+        <td>should allow determinate</td>
+        <td>Returns whether element can be determinate (checking if already determinate or `beforeDeterminate` would cancel)</td>
+      </tr>
+      <tr>
+        <td>should allow determinate</td>
+        <td>Returns whether element can be ideterminate (checking if already indeterminate or `beforeIndeterminate` would cancel)</td>
+      </tr>
+      <tr>
         <td>can uncheck</td>
         <td>Returns whether element is able to be unchecked</td>
       </tr>
@@ -716,6 +732,26 @@ themes      : ['Default', 'Colored']
           <td>onUnchecked</td>
           <td>HTML input element</td>
           <td>Callback after a checkbox is unchecked.</td>
+        </tr>
+        <tr>
+          <td>beforeChecked</td>
+          <td>HTML input element</td>
+          <td>Callback before a checkbox is checked. Can cancel change by returning <code>false</code></td>
+        </tr>
+        <tr>
+          <td>beforeIndeterminate</td>
+          <td>HTML input element</td>
+          <td>Callback before a checkbox is set to undeterminate. Can cancel change by returning <code>false</code></td>
+        </tr>
+        <tr>
+          <td>beforeDeterminate</td>
+          <td>HTML input element</td>
+          <td>Callback before a checkbox is set to determinate. Can cancel change by returning <code>false</code></td>
+        </tr>
+        <tr>
+          <td>beforeUnchecked</td>
+          <td>HTML input element</td>
+          <td>Callback before a checkbox is unchecked. Can cancel change by returning <code>false</code></td>
         </tr>
         <tr>
           <td>onEnable</td>

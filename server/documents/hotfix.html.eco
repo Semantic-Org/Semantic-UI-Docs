@@ -8,22 +8,60 @@ type       : 'Library'
 ---
 
 <div class="ui container">
- <div class="ui fluid left icon input">
-    <input placeholder="Email" name="email" type="email"></input>
-    <i class="mail icon"></i>
+<div class="ui container">
+    <h1 class="ui header">Semantic UI Button Popup Test</h1>
+    <div class="ui panel">
+      <div id="button1" class="ui button" data-content="This is button #1" data-variation="inverted">
+        Button 1
+      </div>
+      <div id="button2" class="ui button" data-variation="inverted">
+        Button 2
+      </div>
+      <div class="ui popup" data-variation="inverted">
+        This is button #2
+      </div>
+      <div id="button3" class="ui button">
+        Button 3
+      </div>
+      <div class="ui popup">
+        This is button #3
+      </div>
+      <div id="button4" class="ui button">
+        Button 4
+      </div>
+      <div class="ui popup">
+        This is button #4
+      </div>
+      <div id="button5" class="ui button">
+        Button 5
+      </div>
+      <div class="ui popup">
+        This is button #5
+      </div>
+      <div id="button6" class="ui button">
+        Button 6
+      </div>
+    </div>
   </div>
-  <br/>
-  <div class="ui fluid corner labeled left icon input">
-    <input placeholder="Email" name="email" type="email"></input>
-    <i class="mail icon"></i>
-  <div class="ui corner label"><i class="asterisk icon"></i></div>
-</div>
 </div>
 </body>
 <!-- TEST JS HERE !-->
 <script>
-$(document).ready(function() {
-  $('.ui.dropdown').dropdown();
+$('#button1').popup();
+$('#button2').popup();
+$('#button3').popup({
+  variation: "inverted"
+});
+$('#button4').popup({
+  variation: "inverted"
+});
+$('#button5').popup({
+  inline: true,
+  variation: "inverted"
+});
+$('#button6').popup({
+  content: "This is button #6",
+  variation: "inverted"
 });
 </script>
 

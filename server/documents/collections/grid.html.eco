@@ -406,6 +406,21 @@ themes      : ['Default']
         <div class="column"></div>
       </div>
     </div>
+    <div class="example" data-class="mobile reversed">
+      <h4 class="ui header">Reverse Order</h4>
+      <p>Semantic includes special <a href="#reversed"><code>reversed</code></a> variations that allow you to reverse the order of columns or rows by device</p>
+      <div class="ui mobile reversed equal width grid">
+        <div class="column">
+          First
+        </div>
+        <div class="column">
+          Second
+        </div>
+        <div class="column">
+          Third
+        </div>
+      </div>
+    </div>
 
     <div class="highlighted example">
       <h4 class="ui header">Doubling</h4>
@@ -1267,6 +1282,101 @@ themes      : ['Default']
             <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
             <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="example" data-use-content="true" data-class="computer reversed, tablet reversed, mobile reversed, computer vertically reversed, mobile vertically reversed, tablet vertically reversed">
+      <h4 class="ui header">Responsive Order</h4>
+      <p>A grid or row can specify that its columns should reverse order at different device sizes</p>
+      <div class="ui ignored warning message">Reversed grids are not yet compatible with variations like <code>divided</code> which require special <code>:first-child</code> and <code>:last-child</code> styling</div>
+      <div class="ui mobile reversed equal width grid">
+        <div class="column">
+          Tablet Fourth
+        </div>
+        <div class="column">
+          Tablet Third
+        </div>
+        <div class="column">
+          Tablet Second
+        </div>
+        <div class="column">
+          Tablet First
+        </div>
+      </div>
+      <div class="ui tablet reversed equal width grid">
+        <div class="column">
+          Tablet Fourth
+        </div>
+        <div class="column">
+          Tablet Third
+        </div>
+        <div class="column">
+          Tablet Second
+        </div>
+        <div class="column">
+          Tablet First
+        </div>
+      </div>
+      <div class="ui computer reversed equal width grid">
+        <div class="column">
+          Computer Fourth
+        </div>
+        <div class="column">
+          Computer Third
+        </div>
+        <div class="column">
+          Computer Second
+        </div>
+        <div class="column">
+          Computer First
+        </div>
+      </div>
+    </div>
+    <div class="another example">
+      <div class="ui computer vertically reversed grid">
+        <div class="row">
+          <div class="column">Computer Row 4</div>
+        </div>
+        <div class="row">
+          <div class="column">Computer Row 3</div>
+        </div>
+        <div class="row">
+          <div class="column">Computer Row 2</div>
+        </div>
+        <div class="row">
+          <div class="column">Computer Row 1</div>
+        </div>
+      </div>
+    </div>
+    <div class="another example">
+      <div class="ui tablet vertically reversed grid">
+        <div class="row">
+          <div class="column">Tablet Row 4</div>
+        </div>
+        <div class="row">
+          <div class="column">Tablet Row 3</div>
+        </div>
+        <div class="row">
+          <div class="column">Tablet Row 2</div>
+        </div>
+        <div class="row">
+          <div class="column">Tablet Row 1</div>
+        </div>
+      </div>
+    </div>
+    <div class="another example">
+      <div class="ui mobile vertically reversed grid">
+        <div class="row">
+          <div class="column">Mobile Row 4</div>
+        </div>
+        <div class="row">
+          <div class="column">Mobile Row 3</div>
+        </div>
+        <div class="row">
+          <div class="column">Mobile Row 2</div>
+        </div>
+        <div class="row">
+          <div class="column">Mobile Row 1</div>
         </div>
       </div>
     </div>

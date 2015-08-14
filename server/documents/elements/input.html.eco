@@ -49,10 +49,30 @@ themes      : ['Default', 'GitHub']
       <input type="text" placeholder="Search...">
       <i class="search icon"></i>
     </div>
-    <div class="ui divider"></div>
+  </div>
+  <div class="another example">
     <div class="ui icon input loading">
       <input type="text" placeholder="Search...">
       <i class="search icon"></i>
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Disabled</h4>
+    <p>An input field can show that it is disabled</p>
+    <div class="ui disabled input">
+      <input type="text" placeholder="Search...">
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui disabled icon input">
+      <i class="search icon"></i>
+      <input type="text" placeholder="Search...">
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui input">
+      <input type="text" placeholder="Search..." disabled>
     </div>
   </div>
 

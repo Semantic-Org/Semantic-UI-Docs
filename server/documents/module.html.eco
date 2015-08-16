@@ -19,7 +19,7 @@ type        : 'Semantic'
         <i class="top aligned green check icon"></i>
         <div class="content">
           <div class="header">Run-time Performance Analysis</div>
-          <p>All Semantic JavaScript modules provide the ability to log performance traces to the console. this allows you to see which aspects of the module are more or less performant and to track total initialization time when <code>onDomReady</code></p>
+          <p>All Semantic JavaScript modules provide the ability to log performance traces to the console. This allows you to see which aspects of the module are more or less performant and to track total initialization time when <code>onDomReady</code></p>
         </div>
       </div>
       <div class="item">

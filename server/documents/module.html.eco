@@ -19,14 +19,14 @@ type        : 'Semantic'
         <i class="top aligned green check icon"></i>
         <div class="content">
           <div class="header">Run-time Performance Analysis</div>
-          <p>Semantic modules all provide the ability to log performance traces to the console, allowing you to see which aspects of the module are more or less performant and to track total init time <code>onDomReady</code></p>
+          <p>All Semantic JavaScript modules provide the ability to log performance traces to the console. this allows you to see which aspects of the module are more or less performant and to track total initialization time when <code>onDomReady</code></p>
         </div>
       </div>
       <div class="item">
         <i class="top aligned green check icon"></i>
         <div class="content">
           <div class="header">Human Readable Traces</div>
-          <p>Unlike other component libraries that hide explanations of behavior in inline comments which can only be read by combing the source, semantic modules provide run-time debug output to the JavaScript console telling you what each component is doing as it is doing it.</p>
+          <p>Semantic modules provide run-time debug output to the JavaScript console telling you what each component is doing as it is doing it. Contrast this to many other component libraries that hide explanations of behavior in inline comments, which can only be read by reading the source code. </p>
         </div>
       </div>
       <div class="item">
@@ -76,18 +76,16 @@ type        : 'Semantic'
       </div>
     </div>
     <div class="evaluated code" data-type="javascript">
-    // just initializing
-    $('.ui.image img')
-      .popup()
-    ;
+      //Basic initializing
+      $('.ui.image img')
+        .popup();
     </div>
     <div class="evaluated code" data-type="javascript">
-    // initializing with settings
+    // Initializing with settings
     $('.ui.image .corner.label')
       .popup({
         position: 'right center'
-      })
-    ;
+      });
     </div>
   </div>
   <div class="ui tab" data-tab="behavior">
@@ -109,11 +107,9 @@ type        : 'Semantic'
 
       <p>Behaviors can be called using the syntax:</p>
       <div class="code">
-      // both are the same
-      $('.your.element')
-        .module('behavior name', argumentOne, argumentTwo)
-        .module('behaviorName', argumentOne, argumentTwo)
-      ;
+        //The following are equivalent i.e. 'behaviour name' and 'behaviourName':
+        $('.your.element').module('behavior name', argumentOne, argumentTwo);
+        $('.your.element').module('behaviorName', argumentOne, argumentTwo);
       </div>
 
       <h3 class="ui header">Common Behaviors</h3>

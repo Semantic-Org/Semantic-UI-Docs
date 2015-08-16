@@ -47,7 +47,7 @@ themes      : ['Default']
 
       <p>The example below shows four <code>four wide</code> columns will fit in the first row, <code>16 / 4 = 4</code>, and three various sized columns in the second row. <code>2 + 8 + 6 = 16</code></p>
 
-      <p>The default column count, and other arbitrary features of grids can be changed by adjusting Semantic UI's underlying <a href="usage/theming.html">theming variables</a>.</p>
+      <p>The default column count, and other arbitrary features of grids can be changed by adjusting Semantic UI's underlying <a href="/usage/theming.html">theming variables</a>.</p>
 
       <div class="ui grid">
         <div class="four wide column"></div>

@@ -1036,6 +1036,11 @@ type        : 'UI Behavior'
           <td>Minimum duration to show loading indication</td>
         </tr>
         <tr>
+          <td>hideError</td>
+          <td>auto</td>
+          <td>The default <code>auto</code> will automatically remove error state after error duration, unless the element is a <code>form</code></td>
+        </tr>
+        <tr>
           <td>errorDuration</td>
           <td>2000</td>
           <td>Setting to <code>true</code>, will not remove error. Setting to a duration in milliseconds to show error state after request error.</td>

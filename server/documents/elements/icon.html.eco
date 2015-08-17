@@ -1265,6 +1265,14 @@ themes      : ['Default']
     <h2 class="ui dividing header">Variations</h2>
 
     <div class="example">
+      <h4 class="ui header">Fitted</h4>
+      <p>An icon can be fitted, without any space to the left or right of it.</p>
+      Tight spacing
+      <i class="fitted help icon"></i>
+      Tight spacing
+    </div>
+
+    <div class="example">
       <h4 class="ui header">Size</h4>
       <p>An icon can vary in size</p>
       <i class="small home icon"></i>

@@ -180,10 +180,21 @@ type        : 'UI Behavior'
             <td>url</td>
             <td>A field is a url</td>
             <td></td>
+          </tr>
           <tr>
             <td>integer</td>
             <td>A field is an integer value, or matches an integer range</td>
             <td><code>integer</code> or <code>integer[1..10]</code></td>
+          </tr>
+          <tr>
+            <td>decimal</td>
+            <td>A field is a decimal number, optional m</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>number</td>
+            <td>A field is a real number</td>
+            <td></td>
           </tr>
           <tr>
             <td>regExp[expression]</td>
@@ -235,11 +246,6 @@ type        : 'UI Behavior'
             <td>doesntContainExactly</td>
             <td>A field doesn't text (case sensitive)</td>
             <td><code>doesntContainExactly[foo]</code></td>
-          </tr>
-          <tr>
-            <td>integer</td>
-            <td>A field is an integer value, or matches an integer range</td>
-            <td><code>integer</code> or <code>integer[1..10]</code></td>
           </tr>
           <tr>
             <td>is</td>
@@ -656,6 +662,16 @@ type        : 'UI Behavior'
         </div>
         <div class="two fields">
           <div class="field">
+            <label>Decimal</label>
+            <input name="decimal" type="text" value="1.1.1">
+          </div>
+          <div class="field">
+            <label>Number</label>
+            <input name="number" type="text" value="+200">
+          </div>
+        </div>
+        <div class="two fields">
+          <div class="field">
             <label>URL</label>
             <input name="url" type="text" value="ww.fakeurl.com">
           </div>
@@ -678,6 +694,24 @@ type        : 'UI Behavior'
                   {
                     type   : 'integer[1..100]',
                     prompt : 'Please enter an integer value'
+                  }
+                ]
+              },
+              decimal: {
+                identifier  : 'decimal',
+                rules: [
+                  {
+                    type   : 'decimal',
+                    prompt : 'Please enter a valid decimal'
+                  }
+                ]
+              },
+              number: {
+                identifier  : 'number',
+                rules: [
+                  {
+                    type   : 'number',
+                    prompt : 'Please enter a valid number'
                   }
                 ]
               },

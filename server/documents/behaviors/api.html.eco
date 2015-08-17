@@ -1038,7 +1038,7 @@ type        : 'UI Behavior'
         <tr>
           <td>errorDuration</td>
           <td>2000</td>
-          <td>Duration in milliseconds to show error state after request error.</td>
+          <td>Setting to <code>true</code>, will not remove error. Setting to a duration in milliseconds to show error state after request error.</td>
         </tr>
       </tbody>
     </table>

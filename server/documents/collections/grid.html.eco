@@ -1286,21 +1286,37 @@ themes      : ['Default']
       </div>
     </div>
     <div class="example" data-use-content="true" data-class="computer reversed, tablet reversed, mobile reversed, computer vertically reversed, mobile vertically reversed, tablet vertically reversed">
-      <h4 class="ui header">Responsive Order</h4>
+      <h4 class="ui header">Reversed</h4>
       <p>A grid or row can specify that its columns should reverse order at different device sizes</p>
-      <div class="ui ignored warning message">Reversed grids are not yet compatible with variations like <code>divided</code> which require special <code>:first-child</code> and <code>:last-child</code> styling</div>
-      <div class="ui mobile reversed equal width grid">
-        <div class="column">
-          Tablet Fourth
+      <div class="ui ignored info message message">Reversed grids are compatible with <code>divided</code> grids and other complex grid types.</div>
+      <div class="ui computer equal width grid">
+        <div class="row">
+          <div class="column">
+            Computer A Fourth
+          </div>
+          <div class="column">
+            Computer A Third
+          </div>
+          <div class="column">
+            Computer A Second
+          </div>
+          <div class="column">
+            Computer A First
+          </div>
         </div>
-        <div class="column">
-          Tablet Third
-        </div>
-        <div class="column">
-          Tablet Second
-        </div>
-        <div class="column">
-          Tablet First
+        <div class="row">
+          <div class="column">
+            Computer B Fourth
+          </div>
+          <div class="column">
+            Computer B Third
+          </div>
+          <div class="column">
+            Computer B Second
+          </div>
+          <div class="column">
+            Computer B First
+          </div>
         </div>
       </div>
       <div class="ui tablet reversed equal width grid">
@@ -1317,18 +1333,18 @@ themes      : ['Default']
           Tablet First
         </div>
       </div>
-      <div class="ui computer reversed equal width grid">
+      <div class="ui mobile reversed equal width grid">
         <div class="column">
-          Computer Fourth
+          Mobile Fourth
         </div>
         <div class="column">
-          Computer Third
+          Mobile Third
         </div>
         <div class="column">
-          Computer Second
+          Mobile Second
         </div>
         <div class="column">
-          Computer First
+          Mobile First
         </div>
       </div>
     </div>

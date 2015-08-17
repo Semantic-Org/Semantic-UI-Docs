@@ -876,20 +876,20 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
     <h4 class="ui header">Colored</h4>
     <p>Additional colors can be specified.</p>
     <div class="ui menu">
-      <a class="ui active red item">Red</a>
-      <a class="ui orange item">Orange</a>
-      <a class="ui yellow item">Yellow</a>
-      <a class="ui olive item">Olive</a>
-      <a class="ui green item">Green</a>
-      <a class="ui teal item">Teal</a>
+      <a class="active red item">Red</a>
+      <a class="orange item">Orange</a>
+      <a class="yellow item">Yellow</a>
+      <a class="olive item">Olive</a>
+      <a class="green item">Green</a>
+      <a class="teal item">Teal</a>
     </div>
     <div class="ui menu">
-      <a class="ui blue item">Blue</a>
-      <a class="ui violet item">Violet</a>
-      <a class="ui purple item">Purple</a>
-      <a class="ui pink item">Pink</a>
-      <a class="ui brown item">Brown</a>
-      <a class="ui grey item">Grey</a>
+      <a class="blue item">Blue</a>
+      <a class="violet item">Violet</a>
+      <a class="purple item">Purple</a>
+      <a class="pink item">Pink</a>
+      <a class="brown item">Brown</a>
+      <a class="grey item">Grey</a>
     </div>
   </div>
   <div class="another example">
@@ -1029,23 +1029,23 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
   <div class="another example">
     <p>These colors can also be inverted</p>
     <div class="ui inverted menu">
-      <a class="ui active red item">Red</a>
-      <a class="ui orange item">Orange</a>
-      <a class="ui yellow item">Yellow</a>
-      <a class="ui olive item">Olive</a>
-      <a class="ui green item">Green</a>
-      <a class="ui teal item">Teal</a>
+      <a class="active red item">Red</a>
+      <a class="orange item">Orange</a>
+      <a class="yellow item">Yellow</a>
+      <a class="olive item">Olive</a>
+      <a class="green item">Green</a>
+      <a class="teal item">Teal</a>
     </div>
     <div class="ui inverted menu">
-      <a class="ui blue item">Blue</a>
-      <a class="ui violet item">Violet</a>
-      <a class="ui purple item">Purple</a>
-      <a class="ui pink item">Pink</a>
-      <a class="ui brown item">Brown</a>
-      <a class="ui grey item">Grey</a>
+      <a class="blue item">Blue</a>
+      <a class="violet item">Violet</a>
+      <a class="purple item">Purple</a>
+      <a class="pink item">Pink</a>
+      <a class="brown item">Brown</a>
+      <a class="grey item">Grey</a>
     </div>
   </div>
-  <div class="another example">    
+  <div class="another example">
     <div class="ui red three item inverted menu">
       <a class="active item">
         Home

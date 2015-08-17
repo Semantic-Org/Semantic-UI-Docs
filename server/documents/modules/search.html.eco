@@ -13,7 +13,7 @@ type        : 'UI Module'
 <link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/search.less" />
 <script src="/javascript/search.js"></script>
 
-<%- @partial('header', { tabs: { definition: 'Definition', usage: 'Usage', settings: 'Settings'} }) %>
+<%- @partial('header', { tabs: { definition: 'Definition', examples: 'Examples', usage: 'Usage', settings: 'Settings'} }) %>
 
 <div class="main ui container">
 
@@ -149,11 +149,6 @@ type        : 'UI Module'
 
   </div>
 
-  <div class="ui tab" data-tab="examples">
-    <h2 class="ui dividing header">Examples</h2>
-
-
-  </div>
   <div class="ui tab" data-tab="usage">
 
     <h2 class="ui dividing header">Initializing</h2>
@@ -422,6 +417,91 @@ type        : 'UI Module'
     </table>
 
 
+  </div>
+
+  <div class="ui tab" data-tab="examples">
+
+    <h2 class="ui dividing header">Examples</h2>
+
+    <div class="mapping example">
+      <h4 class="ui header">Using Different Response Fields</h4>
+      <p>Search expects a very specific API response, however you can easily modify the mapping of server response to displayed field using the <code>fields</code> parameter.
+      <div class="ui ignored code">
+      $('.ui.search')
+        .search({
+          apiSettings: {
+            url: '//api.github.com/search/repositories?q={query}'
+          },
+          fields: {
+            results : 'items',
+            title   : 'name',
+            url     : 'html_url'
+          },
+          minCharacters : 3
+        })
+      ;
+      </div>
+      <div class="ui search">
+        <div class="ui left icon input">
+          <input class="prompt" type="text" placeholder="Search GitHub">
+          <i class="github icon"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="external example">
+      <h4 class="ui header">Using API Settings</h4>
+      <p><a href="/behaviors/api.html">API</a> provides a callback <a href="/behaviors/api.html#response-callbacks"><code>onResponse</code></a> that can be used to restructure third party APIs to match the expected server response for search.</p>
+      <p>You can also use <a href="/behaviors/api.html#mocking-responses"><code>mockResponseAsync</code></a> to use a custom backend for fullfilling searches.</p>
+      <div class="ui search">
+        <div class="ui left icon input">
+          <input class="prompt" type="text" placeholder="Search GitHub">
+          <i class="github icon"></i>
+        </div>
+      </div>
+      <div class="ignored code" data-type="javascript">
+      $('.ui.search')
+        .search({
+          type          : 'category',
+          minCharacters : 3,
+          apiSettings   : {
+            onResponse: function(githubResponse) {
+              var
+                response = {
+                  results : {}
+                }
+              ;
+              // translate github api response to work with search
+              $.each(githubResponse.items, function(index, item) {
+                var
+                  language   = item.language || 'Unknown',
+                  maxResults = 8
+                ;
+                if(index >= maxResults) {
+                  return false;
+                }
+                // create new language category
+                if(response.results[language] === undefined) {
+                  response.results[language] = {
+                    name    : language,
+                    results : []
+                  };
+                }
+                // add result to category
+                response.results[language].results.push({
+                  title       : item.name,
+                  description : item.description,
+                  url         : item.html_url
+                });
+              });
+              return response;
+            },
+            url: '//api.github.com/search/repositories?q={query}'
+          }
+        })
+      ;
+      </div>
+    </div>
   </div>
 
   <div class="ui tab" data-tab="settings">

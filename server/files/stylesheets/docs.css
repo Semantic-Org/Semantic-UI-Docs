@@ -1117,6 +1117,8 @@ blockquote .author {
 }
 
 /* Animation */
+#example.animated .highlighted.example .html > .grid,
+#example.animated .animated.example .html > .grid,
 #example.animated .highlighted.example > .grid,
 #example.animated .animated.example > .grid {
   margin: -1rem auto;
@@ -1124,6 +1126,7 @@ blockquote .author {
   -moz-animation: grid 7s ease infinite;
   animation: grid 7s ease infinite;
 }
+#example.animated .negative.example .html > .grid,
 #example.animated .negative.example > .grid {
   -webkit-animation: none;
   -moz-animation: none;
@@ -1935,13 +1938,6 @@ code .chunk {
 
 #example .following.menu .menu .active.item {
   font-weight: bold;
-}
-#example .following.menu .item .menu {
-  margin: 0em;
-}
-#example .following.menu .menu .item {
-  margin: 0em;
-  padding: 0.5rem 0.25rem;
 }
 
 /*******************************

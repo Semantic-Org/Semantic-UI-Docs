@@ -288,7 +288,6 @@ semantic.search.ready = function() {
         url: '//api.github.com/search/repositories?q={query}',
         cache: true
       },
-      debug: true,
       fields: {
         results : 'items',
         title   : 'name',

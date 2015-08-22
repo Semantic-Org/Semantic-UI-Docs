@@ -20,6 +20,38 @@ semantic.new.ready = function() {
 
   };
 
+
+  // tab refresh
+  $('.masthead.tab.segment .stackable.menu .item')
+    .tab('setting', 'onLoad', function() {
+      semantic.handler.refreshSticky();
+      $(this).find('.overlay')
+        .visibility('refresh')
+      ;
+    })
+  ;
+
+
+  // 2.1
+
+  $('.mapping.example .ui.search')
+    .search({
+      apiSettings: {
+        url: '//api.github.com/search/repositories?q={query}',
+        cache: true
+      },
+      fields: {
+        results : 'items',
+        title   : 'name',
+        url     : 'html_url'
+      },
+      minCharacters : 3
+    })
+  ;
+
+
+  /// 2.0
+
   // form
   $('.form.example .ui.dropdown')
     .dropdown()

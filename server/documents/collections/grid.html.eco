@@ -1289,7 +1289,7 @@ themes      : ['Default']
       <h4 class="ui header">Reversed</h4>
       <p>A grid or row can specify that its columns should reverse order at different device sizes</p>
       <div class="ui ignored info message message">Reversed grids are compatible with <code>divided</code> grids and other complex grid types.</div>
-      <div class="ui computer equal width grid">
+      <div class="ui computer reversed equal width grid">
         <div class="row">
           <div class="column">
             Computer A Fourth

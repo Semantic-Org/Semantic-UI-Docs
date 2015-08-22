@@ -440,6 +440,29 @@ themes      : ['Default', 'Colored']
         ;
       </div>
     </div>
+
+
+    <div class="cancel example">
+      <h4 class="ui header">Checking Conditions</h4>
+      <p><a href="/modules/checkbox.html">Checkboxes</a> include four new callbacks <code>beforeChecked</code>, <code>beforeUnchecked</code>, <code>beforeDeterminate</code>, and <code>beforeIndeterminate</code>, returning <code>false</code> from these callbacks will cancel the action from occuring before the input value is updated.</p>
+      <div class="ui checkbox">
+        <input type="checkbox" name="example" />
+        <label>Maybe this will work</label>
+      </div>
+      <div class="evaluated code" data-type="javascript">
+        $('.cancel.example .ui.checkbox')
+          .checkbox({
+            beforeChecked: function() {
+              var
+                luckyPerson = (Math.random() < 0.5)
+              ;
+              return luckyPerson;
+            }
+          })
+        ;
+      </div>
+    </div>
+
     <div class="state example">
       <h4 class="ui header">One-Way Choices</h4>
       <p class="ignored">To make a user able to check a box, but unable to uncheck it, use the <code>uncheckable</code> setting.</p>

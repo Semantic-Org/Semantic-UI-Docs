@@ -643,7 +643,7 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
     <div class="ui ignored info message">
       Fixed <code>single line</code> tables will automatically ensure content that does not fit in a single line will receive "..." ellipsis
     </div>
-    <table class="ui fixed single line table">
+    <table class="ui fixed single line celled table">
       <thead>
         <th>Name</th>
         <th>Status</th>
@@ -653,17 +653,17 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
         <tr>
           <td>John</td>
           <td>Approved</td>
-          <td>John is an interesting boy but sometimes you don't really have enough room to describe everything you'd like</td>
+          <td title="This is much too long to fit I'm sorry about that">This is much too long to fit I'm sorry about that</td>
         </tr>
         <tr>
           <td>Jamie</td>
           <td>Approved</td>
-          <td>Jamie is a kind girl but sometimes you don't really have enough room to describe everything you'd like</td>
+          <td>Shorter description</td>
         </tr>
         <tr>
           <td>Jill</td>
           <td>Denied</td>
-          <td>Jill is an alright girl but sometimes you don't really have enough room to describe everything you'd like</td>
+          <td>Shorter description</td>
         </tr>
       </tbody>
     </table>

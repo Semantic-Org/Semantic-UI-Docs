@@ -41,6 +41,23 @@ type        : 'Usage'
     Lead By Example
   </h2>
   <div class="no example">
+    <h4>Retheming GitHub</h4>
+    <p>Semantic UI includes an example project designed to showcase theming. This project includes examples of creating a packaged theme, using component css overrides, and managing your themes with <code>theme.config</code>.</p>
+
+    <p>The example project includes two html files, <code>index.html</code> is designed to swap themes using a sidebar, and uses precompiled css. <code>static.html</code> uses files outputted by Semantic UI and can be used alongside our <a href="/introduction/build-tools.html">gulp pipeline</a> to try modifying themes hands on.</p>
+
+    <p>Some special things to note:</p>
+
+    <div class="ui large bulleted list">
+      <div class="item"><a target="_blank" href="https://github.com/Semantic-Org/example-github/blob/master/semantic/src/themes/github/globals/site.variables">Using site.variables</a> to modify page container sizes, default fonts, and colors</div>
+      <div class="item"><a target="_blank" href="https://github.com/Semantic-Org/example-github/blob/master/semantic/src/themes/github/collections/menu.overrides">Using overrides</a> with variables to add GitHub's specially formatted tab style</div>
+      <div class="item">Combining multiple individual component themes together in one <a target="_blank" href="https://github.com/Semantic-Org/example-github/blob/master/semantic/src/theme.config">theme.config</a></div>
+      <div class="item">Using a <a target="_blank" href="https://github.com/Semantic-Org/example-github/blob/master/semantic/src/themes/github/elements/icon.overrides">custom icon font</a>, and <a target="_blank" href="https://github.com/Semantic-Org/example-github/blob/master/semantic/src/themes/github/elements/icon.variables">modifying paths</a> to assets.</div>
+    </div>
+
+    <a target="_blank" href="https://github.com/Semantic-Org/example-github" class="ui button">View Example</a>
+  </div>
+  <div class="no example">
     <h4>Sitewide Defaults</h4>
 
     <p>Semantic UI includes twelve named colors. Components with color variations inherit these global variables when defining how colors should appear.</p>

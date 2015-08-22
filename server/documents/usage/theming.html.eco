@@ -41,8 +41,10 @@ type        : 'Usage'
     Lead By Example
   </h2>
   <div class="no example">
-    <h4>Retheming GitHub</h4>
-    <p>Semantic UI includes an example project designed to showcase theming. This project includes examples of creating a packaged theme, using component css overrides, and managing your themes with <code>theme.config</code>.</p>
+    <h4>Recreating GitHub</h4>
+    <p>Semantic UI includes an <a target="_blank" href="http://semantic-org.github.io/example-github/">example project</a> designed to showcase theming. This project includes examples of creating a packaged theme, using component css overrides, and managing your themes with <code>theme.config</code>.</p>
+
+    <p>To get started click <b>the paint can</b> icon next to the notification button in the top right</p>
 
     <p>The example project includes two html files, <code>index.html</code> is designed to swap themes using a sidebar, and uses precompiled css. <code>static.html</code> uses files outputted by Semantic UI and can be used alongside our <a href="/introduction/build-tools.html">gulp pipeline</a> to try modifying themes hands on.</p>
 
@@ -54,9 +56,15 @@ type        : 'Usage'
       <div class="item">Combining multiple individual component themes together in one <a target="_blank" href="https://github.com/Semantic-Org/example-github/blob/master/semantic/src/theme.config">theme.config</a></div>
       <div class="item">Using a <a target="_blank" href="https://github.com/Semantic-Org/example-github/blob/master/semantic/src/themes/github/elements/icon.overrides">custom icon font</a>, and <a target="_blank" href="https://github.com/Semantic-Org/example-github/blob/master/semantic/src/themes/github/elements/icon.variables">modifying paths</a> to assets.</div>
     </div>
-
-    <a target="_blank" href="https://github.com/Semantic-Org/example-github" class="ui button">View Example</a>
+    <a target="_blank" href="http://semantic-org.github.io/example-github/" class="ui primary right labeled icon button">
+      <i class="external link icon"></i>
+      View Theming Demo
+    </a>
   </div>
+
+  <h2 class="ui dividing header">
+    Using Themes
+  </h2>
   <div class="no example">
     <h4>Sitewide Defaults</h4>
 

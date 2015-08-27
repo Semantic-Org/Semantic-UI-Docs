@@ -116,7 +116,7 @@ themes      : ['Default', 'GitHub']
     </div>
   </div>
 
-  <div class="example" data-class="left labeled, left corner labeled, right corner labeled, right labeled, labeled">
+  <div class="example" data-class="left labeled, left corner labeled, right corner labeled, right labeled, both sides labeled, labeled">
     <h4 class="ui header">Labeled</h4>
     <p>An input can be formatted with a label</p>
     <div class="ui labeled input">
@@ -146,6 +146,13 @@ themes      : ['Default', 'GitHub']
       <div class="ui basic label">
         kg
       </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui both sides labeled input">
+      <div class="ui label">$</div>
+      <input type="text" placeholder="Amount">
+      <div class="ui basic label">.00</div>
     </div>
   </div>
   <div class="another example">

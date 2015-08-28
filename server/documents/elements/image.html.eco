@@ -23,7 +23,7 @@ themes      : ['Default']
     <h4 class="ui header">Image</h4>
     <p>An image</p>
     <div class="ui ignored message">
-       Unless a size if specified, images will use the original dimensions of the image up to the size of its container.</code>.
+       Unless a size is specified, images will use the original dimensions of the image up to the size of its container.</code>.
     </div>
     <div class="ui ignored info message">
       You can specify an <code>img</code> or <code>svg</code> as a <code>ui image</code> or use a child element.</code>

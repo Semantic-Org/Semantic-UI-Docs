@@ -159,7 +159,7 @@ type        : 'Introduction'
     <p>You can then continue to make modifications to UI and "serve" these files to a live docs instance to see your changes immediately</p>
     <div class="code">
       cd ui/
-      gulp build-docs
+      gulp serve-docs
     </div>
   </div>
   <div class="no example">

@@ -160,8 +160,8 @@ type        : 'Main'
 
     <div class="example" data-class="labeled icon">
       <h4 class="ui header">Labeled Icon Menu</h4>
-      <p>Labeled icon menu has been updated to use a more universal vertical style.</p>
-      <div class="ui inverted vertical labeled icon menu">
+      <p>Labeled icon menu has been updated to greater emphasize icons.</p>
+      <div class="ui vertical labeled icon menu">
         <a class="active red item">
           <i class="gamepad icon"></i>
           Games
@@ -205,11 +205,11 @@ type        : 'Main'
           <div class="three wide column">
             <img class="ui wireframe image" src="/images/wireframe/image.png">
           </div>
-          <div class="ui vertical divider">or</div>
+          <div class="ui vertical divider">and</div>
           <div class="three wide column">
             <img class="ui wireframe image" src="/images/wireframe/image.png">
           </div>
-          <div class="ui vertical divider">or</div>
+          <div class="ui vertical divider">and</div>
           <div class="three wide column">
             <img class="ui wireframe image" src="/images/wireframe/image.png">
           </div>
@@ -218,11 +218,11 @@ type        : 'Main'
           <div class="three wide column">
             <img class="ui wireframe image" src="/images/wireframe/image.png">
           </div>
-          <div class="ui vertical divider">or</div>
+          <div class="ui vertical divider">not</div>
           <div class="three wide column">
             <img class="ui wireframe image" src="/images/wireframe/image.png">
           </div>
-          <div class="ui vertical divider">or</div>
+          <div class="ui vertical divider">nor</div>
           <div class="three wide column">
             <img class="ui wireframe image" src="/images/wireframe/image.png">
           </div>
@@ -276,7 +276,7 @@ type        : 'Main'
     </div>
 
     <div class="example" data-class="tablet reversed">
-      <h4 class="ui header">Reversing Grids</h4>
+      <h4 class="ui header">Reversing Grid Direction</h4>
       <p>Grids now support <a href="/collections/grid.html#reversed">reversing their column flow</a> per-device. This can be useful when a column should appear on the opposite side of the screen on smaller screens.</p>
       <p>Reversing grids are also designed to be compatible with column-order specific variations like divided or celled</p>
       <div class="ui tablet reversed divided equal width grid">
@@ -450,6 +450,32 @@ type        : 'Main'
 
     <h2 class="ui dividing header">New Behaviors</h2>
 
+    <div class="mapping example">
+      <h4 class="ui header">Truly Customized JSON</h4>
+      <p>In <code>2.1</code> and component that uses remote data and requires remote JSON, will let you specify a <code>fields</code> array to modify the expected property name, saving you the trouble of specifying an <a href="/behaviors/api.html#response-callbacks"><code>onResponse</code></a> callback to modify the data structure.</p>
+      <div class="ui ignored code">
+      $('.ui.search')
+        .search({
+          apiSettings: {
+            url: '//api.github.com/search/repositories?q={query}'
+          },
+          fields: {
+            results : 'items',
+            title   : 'name',
+            url     : 'html_url'
+          },
+          minCharacters : 3
+        })
+      ;
+      </div>
+      <div class="ui search">
+        <div class="ui left icon input">
+          <input class="prompt" type="text" placeholder="Search GitHub">
+          <i class="github icon"></i>
+        </div>
+      </div>
+    </div>
+
     <div class="no payment example">
       <h4 class="ui header">Payment Validation</h4>
       <p>We've added new validation rules for payment. These work with luhn and <a href="http://stackoverflow.com/questions/7863058/does-the-luhn-algorithm-work-for-all-mainstream-credit-cards-discover-visa-m?answertab=votes#tab-top">non-luhn card numbers</a>. If you only accept a certain set of credit cards you can specify that too.</p>
@@ -515,31 +541,6 @@ type        : 'Main'
             }
           })
         ;
-      </div>
-    </div>
-    <div class="mapping example">
-      <h4 class="ui header">User Specified JSON</h4>
-      <p>In <code>2.1</code> and component that uses remote data and requires remote JSON, will let you specify a <code>fields</code> array to modify the expected property name, saving you the trouble of specifying an <a href="/behaviors/api.html#response-callbacks"><code>onResponse</code></a> callback to modify the data structure.</p>
-      <div class="ui ignored code">
-      $('.ui.search')
-        .search({
-          apiSettings: {
-            url: '//api.github.com/search/repositories?q={query}'
-          },
-          fields: {
-            results : 'items',
-            title   : 'name',
-            url     : 'html_url'
-          },
-          minCharacters : 3
-        })
-      ;
-      </div>
-      <div class="ui search">
-        <div class="ui left icon input">
-          <input class="prompt" type="text" placeholder="Search GitHub">
-          <i class="github icon"></i>
-        </div>
       </div>
     </div>
   </div>

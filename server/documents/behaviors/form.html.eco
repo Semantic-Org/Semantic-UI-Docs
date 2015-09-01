@@ -46,8 +46,10 @@ type        : 'UI Behavior'
             skills: {
               identifier : 'skills',
               rules: [
-                type   : 'minCount[2]',
-                prompt : 'Please select at least two skills'
+                {
+                  type   : 'minCount[2]',
+                  prompt : 'Please select at least two skills'
+                }
               ]
             },
             gender: {

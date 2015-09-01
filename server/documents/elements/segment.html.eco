@@ -219,7 +219,7 @@ themes      : ['default', 'GitHub']
 
   <div class="piled example">
     <h4 class="ui header">Piled Segments</h4>
-    <p>A group of segments can be raised</p>
+    <p>A group of segments can be piled</p>
     <div class="ui piled segments">
       <div class="ui segment">
         <p>Top</p>

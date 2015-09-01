@@ -258,7 +258,7 @@ themes      : ['Default']
       <p>You can display a dimmer by either invoking .dimmer('show') on a section or a dimmer itself. If you choose to  dim a dimmable section, a dimmer will automatically be created.</p>
       <div class="ignored code">
       // these two are the same
-      $('.ui.dimmable)
+      $('.ui.dimmable')
         .dimmer('show')
       ;
       $('.ui.dimmable .dimmer')

@@ -149,6 +149,13 @@ themes      : ['Default', 'GitHub']
     </div>
   </div>
   <div class="another example">
+    <div class="ui right labeled input">
+      <div class="ui label">$</div>
+      <input type="text" placeholder="Amount">
+      <div class="ui basic label">.00</div>
+    </div>
+  </div>
+  <div class="another example">
     <div class="ui right labeled left icon input">
       <i class="tags icon"></i>
       <input type="text" placeholder="Enter tags">

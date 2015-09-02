@@ -1607,7 +1607,7 @@ type        : 'UI Behavior'
             <td>Callback on each invalid field</td>
           </tr>
           <tr>
-            <td>onSuccess(fields)</td>
+            <td>onSuccess(event, fields)</td>
             <td>form</td>
             <td>Callback if a form is all valid</td>
           </tr>

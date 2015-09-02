@@ -15,8 +15,8 @@ type        : 'Main'
 <div class="main ui intro container">
 
   <div class="ui tab" data-tab="new">
-    <h2 class="ui dividing header">Introduction</h2>
-    <p><code>2.1</code> includes many updates to help bulletproof existing UI, as well as many style tweaks to help refine our default theme.</p>
+    <h2 class="ui dividing header">The Tally</h2>
+    <p><code>2.1</code> sums up around two months of work, including many new features, and updates to help bulletproof existing UI.</p>
     <div class="ui large bulleted list">
       <div class="item"><b>72</b> <a href="https://github.com/Semantic-Org/Semantic-UI/issues?q=is%3Aissue+milestone%3A2.1+is%3Aclosed" target="_blank">closed issues</a></div>
       <div class="item"><b>70</b> bug fixes</div>

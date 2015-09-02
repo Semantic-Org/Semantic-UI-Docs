@@ -568,7 +568,28 @@ type        : 'UI Module'
           <td>searchFullText</td>
           <td>true</td>
           <td>Return local results that match anywhere inside your content</td>
-        </tr>
+      </tr>
+      <tr>
+        <td>fields</td>
+        <td>
+          <div class="code" data-type="css">
+          fields: {
+            categories      : 'results',     // array of categories (category view)
+            categoryName    : 'name',        // name of category (category view)
+            categoryResults : 'results',     // array of results (category view)
+            description     : 'description', // result description
+            image           : 'image',       // result image
+            price           : 'price',       // result price
+            results         : 'results',     // array of results (standard)
+            title           : 'title',       // result title
+            action          : 'action',      // "view more" object name
+            actionText      : 'text',        // "view more" text
+            actionURL       : 'url'          // "view more" url
+          }
+          </div>
+        </td>
+        <td>List mapping display content to JSON property, either with API or <code>source</code>.</td>
+      </tr>
         <tr>
           <td>searchFields</td>
           <td>

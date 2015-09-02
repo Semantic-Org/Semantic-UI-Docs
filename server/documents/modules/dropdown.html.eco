@@ -2390,6 +2390,19 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>Can be set to an object to specify <a href="/behaviors/api.html">API settings</a> for retrieving remote selection menu content from an API endpoint</td>
         </tr>
         <tr>
+          <td>fields</td>
+          <td>
+            <div class="code" data-type="css">
+            fields: {
+              values : 'values', // grouping for all dropdown values
+              name   : 'name',   // displayed dropdown text
+              value  : 'value'   // actual dropdown value
+            }
+            </div>
+          </td>
+          <td>List mapping dropdown content to JSON Property when using API</td>
+        </tr>
+        <tr>
           <td>saveRemoteData</td>
           <td>true</td>
           <td>When enabled will automatically store selected name/value pairs in <code>sessionStorage</code> to preserve user selection on page refresh. Disabling will clear remote dropdown values on refresh.</td>

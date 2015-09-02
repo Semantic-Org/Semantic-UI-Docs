@@ -16,19 +16,23 @@ type        : 'Main'
 
   <div class="ui tab" data-tab="new">
     <h2 class="ui dividing header">Introduction</h2>
-    <p><code>2.1</code> includes many improvements to existing UI</p>
+    <p><code>2.1</code> includes many updates to help bulletproof existing UI, as well as many style tweaks to help refine our default theme.</p>
     <div class="ui large bulleted list">
-      <div class="item"><b>19</b> new features</div>
-      <div class="item"><b>46</b> enhancements</div>
-      <div class="item"><b>28</b> bug fixes</div>
+      <div class="item"><b>72</b> <a href="https://github.com/Semantic-Org/Semantic-UI/issues?q=is%3Aissue+milestone%3A2.1+is%3Aclosed" target="_blank">closed issues</a></div>
+      <div class="item"><b>70</b> bug fixes</div>
+      <div class="item"><b>23</b> new UI updates</div>
+      <div class="item"><b>14</b> feature enhancements</div>
     </div>
+
+    <p>To see the complete list of updates <a href="https://github.com/Semantic-Org/Semantic-UI/blob/<%= @getBranch() %>/RELEASE-NOTES.md#version-210---sep-01-2015">review our release notes</a></p>
 
     <h2 class="ui dividing header">New UI</h2>
 
 
     <div class="example" data-class="labeled, left labeled">
       <h4 class="ui header">Labeled Buttons</h4>
-      <p><a href="/elements/button.html#labeled">Labeled buttons</a> are a special type of button used for displaying a numeric value alongside a button. It's compatible with any label type, but looks great alongside a <code>basic label</code>.</p>
+      <p><a href="/elements/button.html#labeled">Labeled buttons</a> are a useful design pattern for displaying a tally alongside a button.</p>
+      <p>Labeled buttons are compatible with any label type, but looks great alongside a <code>basic label</code>.</p>
       <div class="ui labeled button" tabindex="0">
         <div class="ui red button">
           <i class="heart icon"></i> Like
@@ -38,19 +42,44 @@ type        : 'Main'
         </a>
       </div>
       <div class="ui labeled button" tabindex="0">
-        <div class="ui button">
+        <div class="ui basic blue button">
           <i class="fork icon"></i> Forks
         </div>
-        <a class="ui basic label">
+        <a class="ui basic left pointing blue label">
+          1,048
+        </a>
+      </div>
+      <div class="ui labeled button" tabindex="0">
+        <div class="ui basic violet button">
+          <i class="hospital icon"></i> Hospitals
+        </div>
+        <a class="ui violet tag label">
+          2,048
+        </a>
+      </div>
+      <div class="ui divider"></div>
+      <div class="ui labeled button" tabindex="0">
+        <div class="ui yellow button">
+          <i class="star icon"></i> Star
+        </div>
+        <a class="ui basic yellow left pointing label">
           1,048
         </a>
       </div>
       <div class="ui left labeled button" tabindex="0">
-        <a class="ui basic label">
+        <a class="ui basic right pointing label">
           2,048
         </a>
         <div class="ui button">
           <i class="heart icon"></i> Like
+        </div>
+      </div>
+      <div class="ui left labeled button" tabindex="0">
+        <a class="ui basic label">
+          1,048
+        </a>
+        <div class="ui icon button">
+          <i class="fork icon"></i>
         </div>
       </div>
     </div>
@@ -65,30 +94,59 @@ type        : 'Main'
         Elliot
       <a class="ui pointing red basic label">Red Pointing</a>
       <a class="ui blue basic label">Blue</a>
-      </a>
-    </div>
-
-    <div class="example">
-      <h4 class="ui header">Tabular Menu</h4>
-      <p>Tabular menus now support all four possible directions, making them more flexible for your content.</p>
-      <div class="ui top attached tabular menu">
-        <a class="active item">
-          Bio
-        </a>
-        <a class="item">
-          Photos
-        </a>
-        <div class="right menu">
-          <div class="item">
-            <div class="ui transparent icon input">
-              <input type="text" placeholder="Search users...">
-              <i class="search link icon"></i>
-            </div>
+      <div class="ui divider"></div>
+      <div class="ui equal width stretched grid">
+        <div class="column">
+          <div class="ui segment">
+            <a class="ui right pointing basic teal ribbon label">Pointing</a> Look over here
+            <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+          </div>
+        </div>
+        <div class="column">
+          <div class="ui segment">
+            <a class="ui teal top right attached basic label">So Complex</a>
+            <a class="ui orange top left attached basic label">So Simple</a>
+            <a class="ui violet bottom attached top pointing basic label">Much adjectives</a>
           </div>
         </div>
       </div>
-      <div class="ui bottom attached segment">
-        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+    </div>
+
+    <div class="example" data-class="basic">
+      <h4 class="ui header">Multiple Input Labels</h4>
+      <p><a href="/elements/input.html#labeled">Labeled input</a> now supports labels on both sides of content at the same time.</p>
+      <div class="ui right labeled input">
+        <div class="ui basic label">$</div>
+        <input type="text" placeholder="Amount">
+        <div class="ui basic label">.00</div>
+      </div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">More Tabular Directions</h4>
+      <p><a href="/collections/menu.html#tabular">Tabular menus</a> now support <code>right</code> and <code>bottom</code> positioning.</p>
+      <div class="ui grid">
+        <div class="twelve wide stretched column">
+          <div class="ui segment">
+            This is an stretched grid column. This segment will always match the tab height
+          </div>
+        </div>
+        <div class="four wide column">
+          <div class="ui vertical fluid right tabular menu">
+            <a class="active item">
+              Bio
+            </a>
+            <a class="item">
+              Pics
+            </a>
+            <a class="item">
+              Companies
+            </a>
+            <a class="item">
+              Links
+            </a>
+          </div>
+        </div>
       </div>
     </div>
     <div class="another example">
@@ -132,67 +190,6 @@ type        : 'Main'
         </div>
       </div>
     </div>
-    <div class="another example">
-      <div class="ui grid">
-        <div class="twelve wide stretched column">
-          <div class="ui segment">
-            This is an stretched grid column. This segment will always match the tab height
-          </div>
-        </div>
-        <div class="four wide column">
-          <div class="ui vertical fluid right tabular menu">
-            <a class="active item">
-              Bio
-            </a>
-            <a class="item">
-              Pics
-            </a>
-            <a class="item">
-              Companies
-            </a>
-            <a class="item">
-              Links
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="example" data-class="labeled icon">
-      <h4 class="ui header">Labeled Icon Menu</h4>
-      <p>Labeled icon menu has been updated to greater emphasize icons.</p>
-      <div class="ui vertical labeled icon menu">
-        <a class="active red item">
-          <i class="gamepad icon"></i>
-          Games
-        </a>
-        <a class="pink item">
-          <i class="video camera icon"></i>
-          Channels
-        </a>
-        <a class="blue item">
-          <i class="video play icon"></i>
-          Videos
-        </a>
-      </div>
-      <div class="ui divider"></div>
-      <div class="ui compact labeled icon menu">
-        <a class="item">
-          <i class="gamepad icon"></i>
-          Games
-        </a>
-        <a class="active item">
-          <i class="video camera icon"></i>
-          Channels
-        </a>
-        <a class="item">
-          <i class="video play icon"></i>
-          Videos
-        </a>
-      </div>
-    </div>
-
-    <h2 class="ui dividing header">New Variations</h2>
 
     <div class="example" data-class="tablet reversed">
       <h4 class="ui header">Enhanced Vertical Dividers</h4>
@@ -235,7 +232,7 @@ type        : 'Main'
 
     <div class="example" data-class="tablet reversed">
       <h4 class="ui header">Inverted Colored Menu</h4>
-      <p>Inverted menus now support individual <code>item</code> colors</p>
+      <p><a href="/collections/menu.html#inverted">Inverted menus</a> now support individual <code>item</code> colors</p>
 
       <div class="ui three item labeled icon inverted menu">
         <a class="active red item">
@@ -251,18 +248,18 @@ type        : 'Main'
           Videos
         </a>
       </div>
+    </div>
+
+    <div class="another example">
       <div class="ui vertical inverted menu">
         <a class="active teal item">
           Inbox
-          <div class="ui basic label">1</div>
         </a>
         <a class="orange item">
           Spam
-          <div class="ui basic label">51</div>
         </a>
         <a class="violet item">
           Updates
-          <div class="ui basic label">1</div>
         </a>
         <div class="item">
           <div class="ui transparent inverted icon input">
@@ -271,12 +268,11 @@ type        : 'Main'
           </div>
         </div>
       </div>
-  </div>
-
     </div>
 
+
     <div class="example" data-class="tablet reversed">
-      <h4 class="ui header">Reversing Grid Direction</h4>
+      <h4 class="ui header">Reversable Grid Columns</h4>
       <p>Grids now support <a href="/collections/grid.html#reversed">reversing their column flow</a> per-device. This can be useful when a column should appear on the opposite side of the screen on smaller screens.</p>
       <p>Reversing grids are also designed to be compatible with column-order specific variations like divided or celled</p>
       <div class="ui tablet reversed divided equal width grid">
@@ -451,8 +447,8 @@ type        : 'Main'
     <h2 class="ui dividing header">New Behaviors</h2>
 
     <div class="mapping example">
-      <h4 class="ui header">Truly Customized JSON</h4>
-      <p>In <code>2.1</code> and component that uses remote data and requires remote JSON, will let you specify a <code>fields</code> array to modify the expected property name, saving you the trouble of specifying an <a href="/behaviors/api.html#response-callbacks"><code>onResponse</code></a> callback to modify the data structure.</p>
+      <h4 class="ui header">Fully Customizable JSON</h4>
+      <p>In <code>2.1</code> all component that uses remote data will let you specify a <code>fields</code> array to modify expected JSON property names, saving you the trouble of specifying an <a href="/behaviors/api.html#response-callbacks"><code>onResponse</code></a> callback to modify the data structure.</p>
       <div class="ui ignored code">
       $('.ui.search')
         .search({
@@ -463,8 +459,7 @@ type        : 'Main'
             results : 'items',
             title   : 'name',
             url     : 'html_url'
-          },
-          minCharacters : 3
+          }
         })
       ;
       </div>
@@ -476,10 +471,43 @@ type        : 'Main'
       </div>
     </div>
 
+    <div class="another fields example">
+      <p>Fields can also be used with local search to simplify working with unusual search sources.</p>
+      <div class="ui ignored code">
+      $('.ui.search')
+        .search({
+          searchFields: ['pickle'],
+          fields: {
+            title   : 'mustard'
+          },
+          source: [
+            {
+              mustard: 'Title #1',
+              pickle: 'thing'
+            },
+            {
+              mustard: 'Title #2',
+              pickle: 'another thing'
+            },
+            {
+              mustard: 'Title #3',
+              pickle: 'thing 100'
+            }
+          ]
+        })
+      ;
+      </div>
+      <div class="ui search">
+        <div class="ui icon input">
+          <input class="prompt" type="text" placeholder="Search...">
+          <i class="search icon"></i>
+        </div>
+      </div>
+    </div>
+
     <div class="no payment example">
-      <h4 class="ui header">Payment Validation</h4>
+      <h4 class="ui header">Credit Card Validation</h4>
       <p>We've added new validation rules for payment. These work with luhn and <a href="http://stackoverflow.com/questions/7863058/does-the-luhn-algorithm-work-for-all-mainstream-credit-cards-discover-visa-m?answertab=votes#tab-top">non-luhn card numbers</a>. If you only accept a certain set of credit cards you can specify that too.</p>
-      <p>We have also updated form validation to include a newer, light weight inline prompt style.</p>
       <div class="ui info message">
         Try <code>4565340519181845</code> a test visa card number
       </div>
@@ -543,6 +571,100 @@ type        : 'Main'
         ;
       </div>
     </div>
+
+
+    <h2 class="ui dividing header">Theme Updates</h2>
+
+    <div class="form example" data-class="basic">
+      <h4 class="ui header">Global Form Focus</h4>
+      <p>Global variables have been added to modify form focus color across all components. The default theme now uses a light blue to signal selection.</p>
+      <form class="ui form">
+        <div class="two fields">
+          <div class="field">
+            <label>First Name</label>
+            <input type="text" name="first-name" placeholder="First Name">
+          </div>
+          <div class="field">
+            <label>Last Name</label>
+            <input type="text" name="last-name" placeholder="Last Name">
+          </div>
+        </div>
+        <div class="field">
+          <label>Gender</label>
+          <select class="ui dropdown">
+            <option value="">Gender</option>
+            <option value="1">Male</option>
+            <option value="0">Female</option>
+          </select>
+        </div>
+        <div class="field">
+          <div class="ui checkbox">
+            <input type="checkbox" />
+            <label>I agree to the Terms and Conditions</label>
+          </div>
+        </div>
+        <button class="ui button" type="submit">Submit</button>
+      </form>
+    </div>
+    <div class="validation example">
+      <h4 class="ui header">Updated Form Validation</h4>
+      <p><a href="/behaviors/form.html">Form validation</a> now uses <code>basic label</code> for validation prompts.</p>
+      <form class="ui form">
+        <div class="field">
+          <label>First Name</label>
+          <input type="text" name="first-name" placeholder="First Name">
+        </div>
+        <div class="field">
+          <label>Last Name</label>
+          <input type="text" name="last-name" placeholder="Last Name">
+        </div>
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" name="terms" />
+            <label>I agree to the Terms and Conditions</label>
+          </div>
+        </div>
+        <button class="ui button" type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div class="spaced example" data-class="basic">
+      <h4 class="ui header">Colored Basic Buttons</h4>
+      <p><a href="/elements/button.html#basic">Basic colored buttons</a> now are colored without <code>hover</code>, making the style more similar to common usage on most sites.</p>
+      <button class="ui red basic button">Red</button>
+      <button class="ui orange basic button">Orange</button>
+      <button class="ui yellow basic button">Yellow</button>
+      <button class="ui olive basic button">Olive</button>
+      <button class="ui green basic button">Green</button>
+      <button class="ui teal basic button">Teal</button>
+      <button class="ui blue basic button">Blue</button>
+      <button class="ui violet basic button">Violet</button>
+      <button class="ui purple basic button">Purple</button>
+      <button class="ui pink basic button">Pink</button>
+      <button class="ui brown basic button">Brown</button>
+      <button class="ui grey basic button">Grey</button>
+      <button class="ui black basic button">Black</button>
+    </div>
+
+    <div class="example" data-class="labeled icon">
+      <h4 class="ui header">Labeled Icon Menu</h4>
+      <p>Horizontal <code>labeled icon menu</code> now use stacked icons to appear more in-tune with common icon menu usage.</p>
+      <div class="ui three item labeled icon menu">
+        <a class="active red item">
+          <i class="gamepad icon"></i>
+          Games
+        </a>
+        <a class="pink item">
+          <i class="video camera icon"></i>
+          Channels
+        </a>
+        <a class="blue item">
+          <i class="video play icon"></i>
+          Videos
+        </a>
+      </div>
+    </div>
+
   </div>
 
   <div class="ui tab" data-tab="last">

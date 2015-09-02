@@ -117,13 +117,13 @@ themes      : ['Default', 'GitHub']
     <form class="ui fluid form">
       <div class="field">
         <input type="text" placeholder="First name">
-        <div class="ui pointing basic label">
+        <div class="ui pointing red basic label">
           Please enter a value
         </div>
       </div>
       <div class="ui divider"></div>
       <div class="field" placeholder="Last Name">
-        <div class="ui pointing below basic label">
+        <div class="ui pointing below red basic label">
           Please enter a value
         </div>
         <input type="text">
@@ -131,13 +131,13 @@ themes      : ['Default', 'GitHub']
       <div class="ui divider"></div>
       <div class="inline field">
         <input type="text" placeholder="Username">
-        <div class="ui pointing left basic label">
+        <div class="ui pointing left red basic label">
           That name is taken!
         </div>
       </div>
       <div class="ui divider"></div>
       <div class="inline field">
-        <div class="ui pointing right basic label">
+        <div class="ui pointing right red basic label">
           Your password must be 6 characters or more
         </div>
         <input type="password">

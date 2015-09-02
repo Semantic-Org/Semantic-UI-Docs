@@ -1607,12 +1607,12 @@ type        : 'UI Behavior'
             <td>Callback on each invalid field</td>
           </tr>
           <tr>
-            <td>onSuccess</td>
+            <td>onSuccess(fields)</td>
             <td>form</td>
             <td>Callback if a form is all valid</td>
           </tr>
           <tr>
-            <td>onFailure</td>
+            <td>onFailure(formErrors, fields)</td>
             <td>form</td>
             <td>Callback if any form field is invalid</td>
           </tr>

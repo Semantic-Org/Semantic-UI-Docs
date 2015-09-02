@@ -94,18 +94,8 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
         2,048
       </a>
     </div>
-    <div class="ui labeled button" tabindex="0">
-      <div class="ui button">
-        <i class="fork icon"></i> Forks
-      </div>
-      <a class="ui basic label">
-        1,048
-      </a>
-    </div>
-  </div>
-  <div class="another example">
     <div class="ui left labeled button" tabindex="0">
-      <a class="ui basic label">
+      <a class="ui basic right pointing label">
         2,048
       </a>
       <div class="ui button">
@@ -116,9 +106,27 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
       <a class="ui basic label">
         1,048
       </a>
-      <div class="ui button">
+      <div class="ui icon button">
+        <i class="fork icon"></i>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui labeled button" tabindex="0">
+      <div class="ui red button">
+        <i class="heart icon"></i> Like
+      </div>
+      <a class="ui basic red left pointing label">
+        1,048
+      </a>
+    </div>
+    <div class="ui labeled button" tabindex="0">
+      <div class="ui basic blue button">
         <i class="fork icon"></i> Forks
       </div>
+      <a class="ui basic left pointing blue label">
+        1,048
+      </a>
     </div>
   </div>
 

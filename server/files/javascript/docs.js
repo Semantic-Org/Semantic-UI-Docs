@@ -512,14 +512,21 @@ semantic.ready = function() {
       changeTheme: function(theme) {
         var
           $themeDropdown = $(this),
+          element        = $themeDropdown.data('element'),
           urlData     = {
             theme   : typeof(theme === 'string')
               ? theme.toLowerCase()
               : theme,
             type    : $themeDropdown.data('type'),
             element : $themeDropdown.data('element')
+          },
+          variables = {
+            theme: urlData.theme
           }
         ;
+        variables[element] = urlData.theme;
+        window.less.modifyVars(variables);
+
         $themeDropdown
           .api({
             on       : 'now',
@@ -1380,10 +1387,10 @@ semantic.ready = function() {
 
   //$.fn.api.settings.base = '//api.semantic-ui.com';
   $.extend($.fn.api.settings.api, {
-    categorySearch : '//api.semantic-ui.com/search/category/{query}',
-    getOverrides   : '/src/themes/{$theme}/{$type}s/{$element}.overrides',
-    getVariables   : '/src/themes/{$theme}/{$type}s/{$element}.variables',
-    search         : '//api.semantic-ui.com/search/{query}'
+    categorySearch     : '//api.semantic-ui.com/search/category/{query}',
+    getOverrides       : '/src/themes/{$theme}/{$type}s/{$element}.overrides',
+    getVariables       : '/src/themes/{$theme}/{$type}s/{$element}.variables',
+    search             : '//api.semantic-ui.com/search/{query}'
   });
 
   if(window.Transifex !== undefined) {

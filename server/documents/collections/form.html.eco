@@ -1313,8 +1313,8 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
     <p>Multiple fields may be inline in a row</p>
     <div class="ui form">
       <div class="inline fields">
+        <label>Phone Number</label>
         <div class="field">
-          <label>Phone Number</label>
           <input type="text" placeholder="(xxx)">
         </div>
         <div class="field">

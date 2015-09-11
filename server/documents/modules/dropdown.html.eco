@@ -903,7 +903,7 @@ themes      : ['Default', 'GitHub', 'Material']
 
     <div class="dropdown example">
       <h4 class="ui header">Loading</h4>
-      <p>An dropddown can show that it is currently loading data</p>
+      <p>A dropdown can show that it is currently loading data</p>
       <div class="ui loading dropdown">
         Dropdown <i class="dropdown icon"></i>
         <div class="menu">
@@ -938,7 +938,7 @@ themes      : ['Default', 'GitHub', 'Material']
     </div>
     <div class="dropdown example">
       <h4 class="ui header">Error</h4>
-      <p>An errored dropddown can alert a user to a problem</p>
+      <p>An errored dropdown can alert a user to a problem</p>
       <div class="ui floating dropdown error">
         Dropdown <i class="dropdown icon"></i>
         <div class="menu">

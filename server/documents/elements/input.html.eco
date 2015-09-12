@@ -202,7 +202,7 @@ themes      : ['Default', 'GitHub']
     <div class="ui right action left icon input">
       <i class="search icon"></i>
       <input type="text" placeholder="Search">
-      <div class="ui dropdown button">
+      <div class="ui basic floating dropdown button">
         <div class="text">This Page</div>
         <i class="dropdown icon"></i>
         <div class="menu">
@@ -217,7 +217,7 @@ themes      : ['Default', 'GitHub']
       <input type="text" placeholder="Search...">
       <select class="ui compact selection dropdown">
         <option value="all">All</option>
-        <option value="articles">Articles</option>
+        <option selected value="articles">Articles</option>
         <option value="products">Products</option>
       </select>
       <div type="submit" class="ui button">Search</div>

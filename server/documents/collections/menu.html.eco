@@ -704,8 +704,11 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
     <p>A menu item can be hovered</p>
     <div class="ui ignore warning message">Menu items are only hoverable if they are <code>a</code> links, or given the class name <code>link</code></div>
     <div class="ui compact menu">
-      <div class="hover item">
-        Link
+      <a class="item">
+        A link
+      </a>
+      <div class="link item">
+        div Link
       </div>
     </div>
   </div>

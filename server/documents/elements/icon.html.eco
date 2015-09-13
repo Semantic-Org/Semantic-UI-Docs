@@ -1274,6 +1274,9 @@ themes      : ['Default']
     <div class="example">
       <h4 class="ui header">Size</h4>
       <p>An icon can vary in size</p>
+      <i class="mini home icon"></i>
+      <i class="tiny home icon"></i>
+      <i class="small home icon"></i>
       <i class="small home icon"></i>
       <br>
       <i class="home icon"></i>

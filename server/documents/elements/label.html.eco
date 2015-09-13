@@ -79,7 +79,7 @@ themes      : ['Default', 'GitHub']
     </div>
   </div>
 
-  <div class="example" data-class="pointing above, pointing below, pointing left, pointing right">
+  <div class="example" data-class="pointing above, pointing below, left pointing, right pointing">
     <h4 class="ui header">Pointing</h4>
     <p>A label can point to content next to it</p>
     <form class="ui fluid form">
@@ -99,13 +99,13 @@ themes      : ['Default', 'GitHub']
       <div class="ui divider"></div>
       <div class="inline field">
         <input type="text" placeholder="Username">
-        <div class="ui pointing left label">
+        <div class="ui left pointing label">
           That name is taken!
         </div>
       </div>
       <div class="ui divider"></div>
       <div class="inline field">
-        <div class="ui pointing right label">
+        <div class="ui right pointing label">
           Your password must be 6 characters or more
         </div>
         <input type="password">
@@ -131,13 +131,13 @@ themes      : ['Default', 'GitHub']
       <div class="ui divider"></div>
       <div class="inline field">
         <input type="text" placeholder="Username">
-        <div class="ui pointing left red basic label">
+        <div class="ui left pointing red basic label">
           That name is taken!
         </div>
       </div>
       <div class="ui divider"></div>
       <div class="inline field">
-        <div class="ui pointing right red basic label">
+        <div class="ui right pointing red basic label">
           Your password must be 6 characters or more
         </div>
         <input type="password">

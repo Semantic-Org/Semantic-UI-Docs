@@ -6,10 +6,13 @@ semantic.validateForm.ready = function() {
   // selector cache
   var
     $dogForm      = $('.dog.example .ui.form'),
+    $matchingForm = $('.matching.example .ui.form'),
+    $autoForm     = $('.auto.example .ui.form'),
+    $promptForm   = $('.prompt.example .ui.form'),
     $dropdownForm = $('.dropdown.example .ui.form'),
     $optionalForm = $('.optional.example .ui.form'),
     $inlineForm   = $('.inline.example .ui.form'),
-    $form         = $('.ui.form').not($dogForm).not($inlineForm).not($dropdownForm).not($optionalForm),
+    $form         = $('.ui.form').not($dogForm).not($inlineForm).not($dropdownForm).not($optionalForm).not($promptForm),
     $checkbox     = $('.main.container .ui.checkbox'),
     $dropdown     = $('.main.container .ui.dropdown'),
     // alias
@@ -138,6 +141,24 @@ semantic.validateForm.ready = function() {
     }
   };
 
+  $form
+    .form()
+  ;
+
+  $matchingForm
+    .form({
+      fields: {
+        name: {
+          identifier : 'special-name',
+          rules: [
+            {
+              type   : 'empty'
+            }
+          ]
+        }
+      }
+    })
+  ;
 
   $inlineForm
     .form({
@@ -173,6 +194,41 @@ semantic.validateForm.ready = function() {
       .dropdown()
   ;
 
+/*  $autoForm
+    .form({
+      fields: {
+        name     : 'empty',
+        gender   : 'empty',
+        username : 'empty',
+        password : ['minLength[6]', 'empty'],
+        skills   : ['minCount[2]', 'empty'],
+        terms    : 'checked'
+      }
+    })
+  ;
+*/
+  $promptForm
+    .form({
+      fields: {
+        field1: {
+          rules: [
+            {
+              type   : 'empty'
+            }
+          ]
+        },
+        field2: {
+          rules: [
+            {
+              type   : 'exactly[dog]',
+              prompt : '{name} is set to "{value}" that is totally wrong. It should be {ruleValue}'
+            }
+          ]
+        }
+      }
+    })
+  ;
+
   $optionalForm
     .form({
       fields: {
@@ -203,7 +259,6 @@ semantic.validateForm.ready = function() {
     .form({
       fields: {
         dog: {
-          identifier: 'dog',
           rules: [
             {
               type: 'empty',
@@ -222,11 +277,6 @@ semantic.validateForm.ready = function() {
       }
     })
   ;
-
-  $form
-    .form()
-  ;
-
 };
 
 

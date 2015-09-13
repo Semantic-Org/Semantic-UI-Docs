@@ -12,7 +12,7 @@ semantic.validateForm.ready = function() {
     $dropdownForm = $('.dropdown.example .ui.form'),
     $optionalForm = $('.optional.example .ui.form'),
     $inlineForm   = $('.inline.example .ui.form'),
-    $form         = $('.ui.form').not($dogForm).not($inlineForm).not($dropdownForm).not($optionalForm).not($autoForm).not($promptForm),
+    $form         = $('.ui.form').not($dogForm).not($inlineForm).not($dropdownForm).not($optionalForm).not($promptForm),
     $checkbox     = $('.main.container .ui.checkbox'),
     $dropdown     = $('.main.container .ui.dropdown'),
     // alias
@@ -194,7 +194,7 @@ semantic.validateForm.ready = function() {
       .dropdown()
   ;
 
-  $autoForm
+/*  $autoForm
     .form({
       fields: {
         name     : 'empty',
@@ -206,7 +206,7 @@ semantic.validateForm.ready = function() {
       }
     })
   ;
-
+*/
   $promptForm
     .form({
       fields: {

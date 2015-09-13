@@ -30,7 +30,7 @@ type        : 'UI Behavior'
       <div class="ui ignored info message">
         A validation object includes a list of form elements, and rules to validate each field against. Fields are matched by either the <code>id</code>, <code>name</code>, or <code>data-validate</code>  property matching the identifier specified in the settings object.
       </div>
-      <div class="ignore code" data-title="Shorthand">
+      <div class="ignore code" data-title="Shorthand Validation">
       $('.ui.form')
         .form({
           fields: {
@@ -45,7 +45,7 @@ type        : 'UI Behavior'
       ;
       </div>
       <div class="ui horizontal divider">or</div>
-      <div class="ignore code" data-title="Expanded Version">
+      <div class="ignore code" data-title="Full Validation Settings">
       $('.ui.form')
         .form({
           fields: {

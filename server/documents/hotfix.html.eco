@@ -9,37 +9,10 @@ type       : 'Library'
 
 <div class="ui container">
 
-normal:
-<div class="ui three column middle aligned grid">
-    <div class="column">
-      <img class="ui image" src="http://semantic-ui.com/images/wireframe/image.png">
-    </div>
-    <div class="column">
-      <img class="ui image" src="http://semantic-ui.com/images/wireframe/image.png">
-      <img class="ui image" src="http://semantic-ui.com/images/wireframe/image.png">
-    </div>
-    <div class="column">
-      <img class="ui image" src="http://semantic-ui.com/images/wireframe/image.png">
-    </div>
-</div>
-
-abnormal:
-<div class="ui three column middle aligned grid">
-  <div class="row">
-    <div class="column">
-      <img class="ui image" src="http://semantic-ui.com/images/wireframe/image.png">
-    </div>
-    <div class="column">
-      <img class="ui image" src="http://semantic-ui.com/images/wireframe/image.png">
-      <img class="ui image" src="http://semantic-ui.com/images/wireframe/image.png">
-    </div>
-    <div class="column">
-      <img class="ui image" src="http://semantic-ui.com/images/wireframe/image.png">
-    </div>
-  </div>
-</div>
-
-</div>
+      <select class="ui search dropdown">
+        <%- @partial('examples/single/state-options') %>
+      </select>
+      <div class="ui button">Button</div>
 </body>
 <!-- TEST JS HERE !-->
 <script>
@@ -49,6 +22,11 @@ $(document)
     $('.ui.dropdown')
       .dropdown({
         allowAdditions: true
+      })
+    ;
+    $('.ui.button')
+      .on('click', function() {
+        $('.ui.dropdown').dropdown('set selected', 'VA');
       })
     ;
   })

@@ -771,6 +771,11 @@ blockquote .author {
   max-height: 225px;
 }
 
+#example .clear.dropdown .dropdown {
+  vertical-align: middle;
+}
+
+
 /* Requires Clear */
 #example .clearing.example {
   overflow: hidden;

@@ -342,7 +342,7 @@ type        : 'Usage'
   <div class="no example">
     <h4 class="ui header">Variables Files</h4>
     <p>A .variables file specifies variables which should be adjusted for a theme.</p>
-    <p>A theme's variable file only need to include variables which are different for a theme.</p>
+    <p>A theme's variable file only needs to include variables which are different for a theme.</p>
   </div>
   <div class="no example">
     <h4 class="ui header">Override Files</h4>

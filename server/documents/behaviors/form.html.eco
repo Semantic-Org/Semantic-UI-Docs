@@ -1627,7 +1627,7 @@ type        : 'UI Behavior'
       </tr>
       <tr>
         <td>get validation(element)</td>
-        <td>Returns validation rules for a given field</td>
+        <td>Returns validation rules for a given jQuery-referenced input field</td>
       </tr>
       <tr>
         <td>has field(identifier)</td>

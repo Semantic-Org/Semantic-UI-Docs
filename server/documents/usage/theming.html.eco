@@ -441,6 +441,6 @@ type        : 'Usage'
     </div>
     <p>A site theme, not to be mistaken with <code>site.variables</code> a file located in every theme, is a special user theme that can be loaded on top of all other themes.</p>
     <p>This is the best location to store changes that will be used on a single site. A site theme can be thought of as similar to a <a href="https://codex.wordpress.org/Child_Themes" target="_blank">child theme</a> in Wordpress.</p>
-    <p>Site theme files <b>are optional includes</b> and can be safely removed if you do not need to add additional changes to a component your project</p>
+    <p>Site theme files <b>are optional includes</b> and can be safely removed if you do not need to add additional changes to a component on your project.</p>
   </div>
 </div>

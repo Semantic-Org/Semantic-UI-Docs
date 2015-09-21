@@ -6,7 +6,7 @@ elementType : 'module'
 standalone  : true
 
 title       : 'Slider'
-description : "A slider allows a user to select a value from a small set of options, often binary"
+description : "A slider allows a user to select a numeric value from a designated set of possible values"
 type        : 'UI Module'
 
 themes      : ['Default']
@@ -28,8 +28,8 @@ themes      : ['Default']
       <h4 class="ui header">Slider</h4>
       <p>A standard slider</p>
       <div class="ui slider">
-        <input type="slider" name="example" />
-        <label>Make my profile visible</label>
+        <div class="handle"></div>
+        <div class="value"></div>
       </div>
     </div>
 

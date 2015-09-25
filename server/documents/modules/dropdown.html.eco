@@ -2193,7 +2193,7 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>Adds touch events to element</td>
         </tr>
         <tr>
-          <td>mouse events</td>
+          <td>bind mouse events</td>
           <td>Adds mouse events to element</td>
         </tr>
         <tr>

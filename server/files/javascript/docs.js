@@ -750,6 +750,35 @@ semantic.ready = function() {
         ;
       }
 
+      if ($annotation.find('.copy-btn').size() == 0) {
+          var $copy = $('<a class="ui right ribbon label copy-btn">Copy to Clipboard</a>');
+          $copy.attr('data-clipboard-text', code);
+          var clipboard = new Clipboard('.copy-btn');
+
+          clipboard.on('success', function(e) {
+              console.info('Action:', e.action);
+              console.info('Text:', e.text);
+              console.info('Trigger:', e.trigger);
+
+              $copy.text('Copied!');
+
+              setTimeout(function(){
+                $copy.text('Copy to Clipboard');
+              }, 1000);
+
+              e.clearSelection();
+          });
+
+          clipboard.on('error', function(e) {
+              console.error('Action:', e.action);
+              console.error('Trigger:', e.trigger);
+          });
+
+          $annotation.prepend($copy);
+      } else {
+          $annotation.find('.copy-btn').toggle();
+      }
+
       if($html.size() === 0) {
         $html = $('<div class="html">').insertBefore($annotation);
         $label = $('<div class="ui top attached label">').html('Example');

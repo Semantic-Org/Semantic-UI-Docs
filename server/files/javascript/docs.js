@@ -732,12 +732,14 @@ semantic.ready = function() {
         $ignoredContent = $('.ui.popup, i.code:last-child, .anchor, .code, .existing.segment, .instructive, .language.label, .annotation, .ignore, style, script, .ignored'),
         $demo           = $example.children().not($intro).not($ignoredContent),
         code            = $example.data('code') || $.proxy(handler.generateCode, this)(),
+        existingCode    = '',
         $label
       ;
 
       // process existing code first
       if( $code.hasClass('existing') ) {
         $code.removeClass('existing');
+        existingCode = $code.html();
         $.proxy(handler.initializeCode, $code)(true);
       }
 
@@ -752,7 +754,7 @@ semantic.ready = function() {
 
       if ($annotation.find('.copy-btn').size() == 0) {
           var $copy = $('<a class="ui right ribbon label copy-btn">Copy to Clipboard</a>');
-          $copy.attr('data-clipboard-text', code);
+          $copy.attr('data-clipboard-text', code ? code : existingCode);
           var clipboard = new Clipboard('.copy-btn');
 
           clipboard.on('success', function(e) {

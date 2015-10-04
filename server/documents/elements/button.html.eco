@@ -403,6 +403,22 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
   <div class="example">
     <h4 class="ui header">Toggle</h4>
     <p>A button can be formatted to toggle on and off</p>
+    <script>
+$(document)
+  .ready(function() {
+  var $toggle  = $('.ui.toggle.button');
+  $toggle
+    .state({
+      text: {
+        inactive : 'Vote',
+        active   : 'Voted'
+      }
+    })
+  ;
+
+})
+;
+</script>
     <button class="ui toggle button">
       Vote
     </button>

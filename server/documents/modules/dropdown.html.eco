@@ -2161,6 +2161,10 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>Sets value as selected</td>
         </tr>
         <tr>
+          <td>remove selected(value)</td>
+          <td>Remove value from selected</td>
+        </tr>
+        <tr>
           <td>set selected([value1, value2])</td>
           <td>Adds a group of values as selected</td>
         </tr>

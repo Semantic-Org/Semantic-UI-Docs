@@ -550,7 +550,7 @@ themes      : ['Default']
         <td>Returns cached html for path</td>
       </tr>
       <tr>
-        <td>cache set(path)</td>
+        <td>cache add(path, html)</td>
         <td>Sets cached html for path</td>
       </tr>
       <tr>

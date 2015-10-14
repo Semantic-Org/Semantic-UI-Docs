@@ -494,7 +494,7 @@ themes      : ['Default', 'Material']
       <h4 class="ui header">Approve / Deny Callbacks</h4>
       <p>Modals will automatically tie approve deny callbacks to any positive/approve, negative/deny or ok/cancel buttons.
       <div class="ui ignored info message">
-        If <code>onDeny</code> or <code>onApprove</code> returns false it will prevent the modal from closing
+        If <code>onDeny</code>, <code>onApprove</code> or <code>onHide</code> returns false it will prevent the modal from closing
       </div>
       <div class="code" data-demo="true">
       $('.ui.basic.test.modal')
@@ -802,9 +802,9 @@ themes      : ['Default', 'Material']
           <td>Is called after a modal has finished showing animating.</td>
         </tr>
         <tr>
-          <td>onHide</td>
+          <td>onHide($element)</td>
           <td>Modal</td>
-          <td>Is called after a modal starts to hide.</td>
+          <td>Is called after a modal starts to hide. If the function returns <code>false</code>, the modal will not hide.</td>
         </tr>
         <tr>
           <td>onHidden</td>

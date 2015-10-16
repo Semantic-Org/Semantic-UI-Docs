@@ -48,5 +48,7 @@ gulp serve-docs
 
 If you find any typos or mistakes, submitting a fix is easy!
 
-[Open the documents folder](https://github.com/Semantic-Org/Semantic-UI-Docs/tree/master/server/documents) on GitHub, click the edit button on the appropriate page. Then click to submit a pull request.
+- [Open the `documents/` folder](https://github.com/Semantic-Org/Semantic-UI-Docs/tree/master/server/documents) on GitHub
+- Click the “Edit” button on the appropriate page
+- Click to submit a pull request
 

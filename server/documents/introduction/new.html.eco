@@ -842,7 +842,7 @@ type        : 'Main'
 
     <div class="dropdown example">
       <h4 class="ui header">Multiple Selection</h4>
-      <p>Multiple select dropdowns are now available, and can generate automatically from standard html selects.  </p>
+      <p>Multiple select dropdowns are now available, and can generate automatically from standard HTML selects.  </p>
       <p>Dropdowns now all support advanced keyboard shortcuts like <code>pagedown</code>, <code>delete</code>, <code>shift+left</code> <code>ctrl+click</code>, and selection using first letter of item.</p>
       <p>Additionally dropdowns will now automatically open <code>upward</code> if there is not enough space available in the viewport below a dropdown.</p>
       <select class="ui fluid dropdown" multiple>

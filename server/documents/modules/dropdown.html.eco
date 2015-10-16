@@ -76,7 +76,7 @@ themes      : ['Default', 'GitHub', 'Material']
       <h4 class="ui header">Selection</h4>
       <p>A dropdown can be used to select between choices in a form</p>
       <div class="ui ignored info message">
-        Selection dropdowns can be initialized directly on a <code>select</code> or with the matching html and a hidden <code>input</code>.
+        Selection dropdowns can be initialized directly on a <code>select</code> or with the matching HTML and a hidden <code>input</code>.
       </div>
       <div class="ui selection dropdown">
         <input type="hidden" name="gender">
@@ -1769,8 +1769,8 @@ themes      : ['Default', 'GitHub', 'Material']
 
     <div class="no example">
       <h4 class="ui header">Initializing Existing HTML</h4>
-      <p>Initializing a dropdown with pre-existing html allows for greater performance than initializing a dropdown directly on a <code>select</code> element.</p>
-      <div class="ui ignored info message">Any select element initialized as dropdown will also be hidden until Javascript can create html, this is to avoid the flash of unstyled content, and the change in element height adjusting page flow.</div>
+      <p>Initializing a dropdown with pre-existing HTML allows for greater performance than initializing a dropdown directly on a <code>select</code> element.</p>
+      <div class="ui ignored info message">Any select element initialized as dropdown will also be hidden until Javascript can create HTML, this is to avoid the flash of unstyled content, and the change in element height adjusting page flow.</div>
       <div class="code" data-label="HTML" data-type="html">
         <div class="ui dropdown">
           <input type="hidden" name="gender">
@@ -2504,7 +2504,7 @@ themes      : ['Default', 'GitHub', 'Material']
         <tr>
           <td>preserveHTML</td>
           <td>true</td>
-          <td>Whether html included in dropdown values should be preserved. (Allows icons to show up in selected value)</td>
+          <td>Whether HTML included in dropdown values should be preserved. (Allows icons to show up in selected value)</td>
         </tr>
         <tr>
           <td>sortSelect</td>

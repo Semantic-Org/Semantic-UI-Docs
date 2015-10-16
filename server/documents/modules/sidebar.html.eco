@@ -597,7 +597,7 @@ themes      : ['Default']
         <tr>
           <td>delaySetup</td>
           <td>false</td>
-          <td>When sidebar is initialized without the proper html, using this option will defer creation of DOM to use <code>requestAnimationFrame</code>.</td>
+          <td>When sidebar is initialized without the proper HTML, using this option will defer creation of DOM to use <code>requestAnimationFrame</code>.</td>
         </tr>
       </tbody>
     </table>

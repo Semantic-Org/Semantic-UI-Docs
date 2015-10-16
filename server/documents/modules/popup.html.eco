@@ -42,7 +42,7 @@ themes      : ['Default']
 
     <div class="example">
       <h4 class="ui header">HTML</h4>
-      <p>An element can specify html for a popup</p>
+      <p>An element can specify HTML for a popup</p>
 
       <div class="ui card" data-html="<div class='header'>User Rating</div><div class='content'><div class='ui star rating'><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i><i class='icon'></i><i class='icon'></i></div></div>">
         <div class="image">
@@ -187,7 +187,7 @@ themes      : ['Default']
 
     <div class="no example">
       <h4 class="ui header">Using a Pre-existing Popup</h4>
-      <p>Using a pre-existing popup allows for you to include complex html inside your popup.<p>
+      <p>Using a pre-existing popup allows for you to include complex HTML inside your popup.<p>
       <p>If you include your popup on page load as an adjacent sibling element to your activating element it can be found automatically.</p>
       <p>To instruct popup to look inline for your popup element you can initialize it with the <code>inline</code> parameter</p>
       <div class="code" data-type="javascript">
@@ -219,16 +219,16 @@ themes      : ['Default']
 
     <div class="no example">
       <h4 class="ui header">Specifying Content In Metadata</h4>
-      <p>Frequently used settings like, title, content, html, or offset or variation, can be included in html metadata<p>
+      <p>Frequently used settings like, title, content, HTML, or offset or variation, can be included in HTML metadata<p>
       <div class="ui info icon ignored message">
         <i class="info icon"></i>
         <div class="content">
           <div class="header">Specifying Content</div>
           <p>Popups can specify content in three ways:<p>
           <ul class="list">
-            <li>Using html <code>title</code> attribute</li>
+            <li>Using HTML <code>title</code> attribute</li>
             <li>Using <code>data-content</code> attribute</li>
-            <li>Using <code>data-html</code> for specific html</li>
+            <li>Using <code>data-html</code> for specific HTML</li>
             <li>Using the content property in the initialization of the popup</li>
           </ul>
           <p>Popups can also specify some other frequently used settings using metadata<p>
@@ -326,7 +326,7 @@ themes      : ['Default']
 
     <div class="example">
       <h4 class="ui header">Wide Popup Menu</h4>
-      <p>An easier way to display complex content, like a wide popup menu is to have the popup content as a pre-  existing part of your page's html.</p>
+      <p>An easier way to display complex content, like a wide popup menu is to have the popup content as a pre-  existing part of your page's HTML.</p>
       <p>Using the setting <code>inline: true</code> will let Semantic know to display the next sibling <code>ui  popup</code> element after the activator.</p>
 
       <p>Tweaking settings like the delay for show, and hide, and making the menu hoverable will help it function   more like a dropdown menu</p>

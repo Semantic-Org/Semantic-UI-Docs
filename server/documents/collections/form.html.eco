@@ -289,7 +289,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
     <h4 class="ui header">Checkbox</h4>
     <p>A form can contain a <a href="/modules/checkbox.html">checkbox</a></p>
     <div class="ui ignored info message">
-      UI checkbox are special, styled versions of standard html checkboxes.
+      UI checkbox are special, styled versions of standard HTML checkboxes.
     </div>
     <div class="evaluated code" data-type="javascript" data-label="true">
     $('.ui.checkbox')

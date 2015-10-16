@@ -547,15 +547,15 @@ themes      : ['Default']
       </tr>
       <tr>
         <td>cache read(path)</td>
-        <td>Returns cached html for path</td>
+        <td>Returns cached HTML for path</td>
       </tr>
       <tr>
         <td>cache add(path, html)</td>
-        <td>Sets cached html for path</td>
+        <td>Sets cached HTML for path</td>
       </tr>
       <tr>
         <td>cache remove(path)</td>
-        <td>Removes cached html for path</td>
+        <td>Removes cached HTML for path</td>
       </tr>
     </table>
   </div>
@@ -594,7 +594,7 @@ themes      : ['Default']
         <tr>
           <td>evaluateScripts</td>
           <td>once</td>
-          <td>Whether inline scripts in tab html should be parsed on tab load. Defaults to <code>once</code>, parsing only on first load. Can also be set to <code>true</code> or <code>false</code> to always parse or never parse inline scripts.</td>
+          <td>Whether inline scripts in tab HTML should be parsed on tab load. Defaults to <code>once</code>, parsing only on first load. Can also be set to <code>true</code> or <code>false</code> to always parse or never parse inline scripts.</td>
         </tr>
         <tr>
           <td>alwaysRefresh</td>

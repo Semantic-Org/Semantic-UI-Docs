@@ -74,7 +74,7 @@ themes      : ['Default']
     <div class="example">
       <h4 class="ui header">Setting existing values</h4>
       <p>The starting rating can be set either using metadata value <code>data-rating</code> or the setting <code>initialRating</code>.
-      <p>The maximum rating can be be set using the metadata value <code>data-max-rating</code> or the settings <code>maxRating</code>, or you can just include the icon html yourself on initialization to avoid the overhead of the <code>DOM template insertions</code>. </p>
+      <p>The maximum rating can be be set using the metadata value <code>data-max-rating</code> or the settings <code>maxRating</code>, or you can just include the icon HTML yourself on initialization to avoid the overhead of the <code>DOM template insertions</code>. </p>
       <div class="ui ignored info message">If a metadata rating is specified it will automatically override the default value specified in Javascript.</div>
       <div class="code" data-type="javascript">
       $('.toggle.example .rating')

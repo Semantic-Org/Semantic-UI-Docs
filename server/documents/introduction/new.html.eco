@@ -1058,7 +1058,7 @@ type        : 'Main'
                   results : {}
                 }
               ;
-              // translate github api response to work with search
+              // translate GitHub API response to work with search
               $.each(githubResponse.items, function(index, item) {
                 var
                   language   = item.language || 'Unknown',

@@ -243,7 +243,7 @@ themes      : ['Default']
       $('.dynamic.example .menu .item')
         .tab({
           cache: false,
-          // faking api request
+          // faking API request
           apiSettings: {
             loadingDuration : 300,
             mockResponse    : function(settings) {

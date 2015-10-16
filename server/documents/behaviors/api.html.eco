@@ -641,7 +641,7 @@ type        : 'UI Behavior'
                 if(!githubResponse || !githubResponse.items) {
                   return;
                 }
-                // translate github api response to work with search
+                // translate GitHub API response to work with search
                 $.each(githubResponse.items, function(index, item) {
                   var
                     language   = item.language || 'Unknown',
@@ -1134,7 +1134,7 @@ type        : 'UI Behavior'
         <tr>
           <td>onRequest(promise, xhr)</td>
           <td>state context</td>
-          <td>Callback that occurs when request is made. Receives both the api success promise and the xhr request promise.</td>
+          <td>Callback that occurs when request is made. Receives both the API success promise and the xhr request promise.</td>
         </tr>
         <tr>
           <td>onResponse(response)</td>
@@ -1274,7 +1274,7 @@ type        : 'UI Behavior'
               legacyParameters  : 'You are using legacy API success callback names',
               missingAction     : 'API action used but no url was defined',
               missingSerialize  : 'Required dependency jquery-serialize-object missing, using basic serialize',
-              missingURL        : 'No URL specified for api event',
+              missingURL        : 'No URL specified for API event',
               noReturnedValue   : 'The beforeSend callback must return a settings object, beforeSend ignored.',
               parseError        : 'There was an error parsing your request',
               requiredParameter : 'Missing a required URL parameter: ',

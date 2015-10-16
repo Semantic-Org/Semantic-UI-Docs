@@ -169,7 +169,7 @@ type        : 'UI Module'
     </div>
 
     <h4 class="ui header">Named URL</h4>
-    <p>You can specify custom API settings to adjust the url, callback settings, or specify a different api action.</p>
+    <p>You can specify custom API settings to adjust the url, callback settings, or specify a different API action.</p>
     <div class="code" data-label="javascript">
 
       // initializes with default endpoint /search/{query}
@@ -471,7 +471,7 @@ type        : 'UI Module'
                   results : {}
                 }
               ;
-              // translate github api response to work with search
+              // translate GitHub API response to work with search
               $.each(githubResponse.items, function(index, item) {
                 var
                   language   = item.language || 'Unknown',

@@ -258,7 +258,7 @@ themes      : ['default']
     <div class="no example">
 
       <h4 class="ui header">Animating with Javascript</h4>
-      <p>Animations use CSS3 transitions and javascript to set-up the correct conditions.</p>
+      <p>Animations use CSS3 transitions and Javascript to set-up the correct conditions.</p>
 
       <p>Initializing a shape</p>
       <div class="code">

@@ -368,7 +368,7 @@ type        : 'UI Module'
     <div class="examples">
       <h2 class="ui dividing header">Introduction</h2>
 
-      <p>UI Transitions provide a wrapper for using css transitions in javascript providing cross-browser callbacks, advanced queuing, and feature detection.</p>
+      <p>UI Transitions provide a wrapper for using CSS transitions in Javascript providing cross-browser callbacks, advanced queuing, and feature detection.</p>
       <p>Transitions are loosely coupled with other ui modules like <a href="/modules/dropdown.html">dropdowns</a> and <a href="/modules/modal.html">modals</a> to provide element transitions</p>
 
       <h3 class="ui header">Types</h3>
@@ -388,7 +388,7 @@ type        : 'UI Module'
       </div>
 
       <h3 class="ui header">Passing in settings</h3>
-      <p>Transitions use similar argument shorthand as <a href="http://api.jquery.com/animate/">animate</a>. You can specify callback functions, animation duration, and other settings using the same arguments. Durations can be specified as strings with css shorthand, or with numbers.</p>
+      <p>Transitions use similar argument shorthand as <a href="http://api.jquery.com/animate/">animate</a>. You can specify callback functions, animation duration, and other settings using the same arguments. Durations can be specified as strings with CSS shorthand, or with numbers.</p>
       <div class="code" data-demo="true" data-title="Settings objects">
       $('.green.leaf')
         .transition({
@@ -630,7 +630,7 @@ type        : 'UI Module'
         <tr>
           <td>animation</td>
           <td>fade</td>
-          <td>Named animation event to used. Must be defined in css.</td>
+          <td>Named animation event to used. Must be defined in CSS.</td>
         </tr>
         <tr>
           <td>interval</td>
@@ -650,7 +650,7 @@ type        : 'UI Module'
         <tr>
           <td>duration</td>
           <td>500ms</td>
-          <td>Duration of the css transition animation</td>
+          <td>Duration of the CSS transition animation</td>
         </tr>
         <tr>
           <td>useFailSafe</td>
@@ -792,7 +792,7 @@ type        : 'UI Module'
           <td colspan="2">
             <div class="code">
   errors   : {
-    noAnimation : 'There is no css animation matching the one you specified.',
+    noAnimation : 'There is no CSS animation matching the one you specified.',
     method      : 'The method you called is not defined'
   }
             </div>

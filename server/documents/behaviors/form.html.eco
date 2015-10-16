@@ -1797,7 +1797,7 @@ type        : 'UI Behavior'
         Templates
       </h4>
       <p>Templates are used to construct elements</p>
-      <div class="ui ignored info message">Templates are found in <code>settings.template</code>, to modify templates across all forms, modify <code>$.fn.form.settings.templates</code> to include your function. They must return html.</div>
+      <div class="ui ignored info message">Templates are found in <code>settings.template</code>, to modify templates across all forms, modify <code>$.fn.form.settings.templates</code> to include your function. They must return HTML.</div>
       <table class="ui celled sortable definition table">
         <thead>
           <th class="four wide">Template</th>

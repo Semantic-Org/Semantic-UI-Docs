@@ -289,7 +289,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
     <h4 class="ui header">Checkbox</h4>
     <p>A form can contain a <a href="/modules/checkbox.html">checkbox</a></p>
     <div class="ui ignored info message">
-      UI checkbox are special, styled versions of standard html checkboxes.
+      UI checkbox are special, styled versions of standard HTML checkboxes.
     </div>
     <div class="evaluated code" data-type="javascript" data-label="true">
     $('.ui.checkbox')
@@ -931,7 +931,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
 
   <div class="form example" data-tag="select" data-use-content="true">
     <h4 class="ui header">HTML Select</h4>
-    <p>If javascript or <a href="/modules/dropdown.html">ui dropdown</a> are not a viable option, forms also can provide basic styling for select elements</p>
+    <p>If Javascript or <a href="/modules/dropdown.html">ui dropdown</a> are not a viable option, forms also can provide basic styling for select elements</p>
     <div class="ui form">
       <div class="field">
         <select>

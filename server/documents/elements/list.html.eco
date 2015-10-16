@@ -134,13 +134,13 @@ themes      : ['Default']
         <i class="folder icon"></i>
         <div class="content">
           <div class="header">dist</div>
-          <div class="description">Compiled css and js files</div>
+          <div class="description">Compiled CSS and JS files</div>
           <div class="list">
             <div class="item">
               <i class="folder icon"></i>
               <div class="content">
                 <div class="header">components</div>
-                <div class="description">Individual component css and js</div>
+                <div class="description">Individual component CSS and JS</div>
               </div>
             </div>
           </div>

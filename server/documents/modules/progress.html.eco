@@ -408,8 +408,8 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
       </div>
     </div>
     <div class="example">
-      <h4 class="ui header">With javascript</h4>
-      <p>A progress bar can be initialized with a javascript settings object</p>
+      <h4 class="ui header">With Javascript</h4>
+      <p>A progress bar can be initialized with a Javascript settings object</p>
       <div class="code" data-type="javascript" data-demo="true">
         $('#example2').progress({
           percent: 22

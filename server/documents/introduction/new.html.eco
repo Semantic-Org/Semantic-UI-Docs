@@ -842,7 +842,7 @@ type        : 'Main'
 
     <div class="dropdown example">
       <h4 class="ui header">Multiple Selection</h4>
-      <p>Multiple select dropdowns are now available, and can generate automatically from standard html selects.  </p>
+      <p>Multiple select dropdowns are now available, and can generate automatically from standard HTML selects.  </p>
       <p>Dropdowns now all support advanced keyboard shortcuts like <code>pagedown</code>, <code>delete</code>, <code>shift+left</code> <code>ctrl+click</code>, and selection using first letter of item.</p>
       <p>Additionally dropdowns will now automatically open <code>upward</code> if there is not enough space available in the viewport below a dropdown.</p>
       <select class="ui fluid dropdown" multiple>
@@ -1058,7 +1058,7 @@ type        : 'Main'
                   results : {}
                 }
               ;
-              // translate github api response to work with search
+              // translate GitHub API response to work with search
               $.each(githubResponse.items, function(index, item) {
                 var
                   language   = item.language || 'Unknown',
@@ -1258,7 +1258,7 @@ type        : 'Main'
 
   <!--   <div class="indeterminate example">
       <h4 class="ui header">Progressively Enhanced</h4>
-      <p><a href="/modules/checkbox.html">Checkboxes</a> now can work without javascript, although additional features are available with javascript use.</p>
+      <p><a href="/modules/checkbox.html">Checkboxes</a> now can work without Javascript, although additional features are available with Javascript use.</p>
 
       <div class="ui checkbox">
         <input type="checkbox" />

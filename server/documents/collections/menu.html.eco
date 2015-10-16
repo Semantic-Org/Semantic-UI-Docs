@@ -568,7 +568,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
     <h4 class="ui header">Dropdown Item</h4>
     <p>An item may contain a nested menu in a <a href="/modules/dropdown.html">dropdown</a>.</p>
     <div class="ui ignored message">
-      <p>To have a dropdown open without javascript, use the <a href="/modules/dropdown.html#simple">simple</a> variation</p>
+      <p>To have a dropdown open without Javascript, use the <a href="/modules/dropdown.html#simple">simple</a> variation</p>
     </div>
     <div class="ui vertical menu">
       <div class="ui dropdown item">

@@ -22,7 +22,7 @@ type        : 'Introduction'
       <tr>
         <td class="three wide">Globals</td>
         <td>
-          Globals are styles that are applied across a site. These include things like css resets, and sitewide font, link and sizing defaults.</p>
+          Globals are styles that are applied across a site. These include things like CSS resets, and sitewide font, link and sizing defaults.</p>
           <p>Most importantly, globals include site-wide <a href="/usage/theming.html">theming variables</a> that other components can inherit and modify.</td>
       </tr>
       </tr>
@@ -53,7 +53,7 @@ type        : 'Introduction'
       <tr>
         <td>Behaviors</td>
         <td>
-          <p>Behaviors are standalone javascript components that describe how page elements should act, but not how they should appear. Behaviors include things like form validation, state management, and API request routing.</p>
+          <p>Behaviors are standalone Javascript components that describe how page elements should act, but not how they should appear. Behaviors include things like form validation, state management, and API request routing.</p>
         </td>
       </tr>
     </tbody>
@@ -75,7 +75,7 @@ type        : 'Introduction'
       <tr>
         <td>Definition</td>
         <td>
-          <p>A definition is a set of css and javascript which describe a component's essential qualities.</p>
+          <p>A definition is a set of CSS and Javascript which describe a component's essential qualities.</p>
           <p>Definition use variables to express arbitrary parts of a component's appearance so that they can be changed with themes.</p>
         </td>
       </tr>
@@ -84,7 +84,7 @@ type        : 'Introduction'
         <td>
           <p><code>ui</code> is a special class name used to distinguish parts of components from components.</p>
           <p>For example, a <a href="/elements/list.html">list</a> will receive the class <code>ui list</code> because it has a corresponding definition, however a list item, will receive just the class <code>item</code>.</p>
-          <p>The ui class name helps encapsulate css rules by making sure all 'parts of a component' are defined in context to a 'whole' component.</p>
+          <p>The ui class name helps encapsulate CSS rules by making sure all 'parts of a component' are defined in context to a 'whole' component.</p>
           <p>It also helps make scanning unknown code simpler. If you see <code>ui</code> you know you are looking at a component.</p>
         </td>
       </tr>
@@ -107,7 +107,7 @@ type        : 'Introduction'
       <tr>
         <td>Definition</td>
         <td>
-          <p>A definition is a set of css and javascript which describe a component's essential qualities.</p>
+          <p>A definition is a set of CSS and Javascript which describe a component's essential qualities.</p>
           <p>Definition use variables to express arbitrary parts of a component's appearance so that they can be changed with themes.</p>
         </td>
       </tr>
@@ -141,7 +141,7 @@ type        : 'Introduction'
       <tr>
         <td>Behaviors</td>
         <td>
-          <p>Behaviors are actions that a component can perform. Behaviors are represented by simple phrases like "set value" or "increment", that can be invoked in javascript. Behaviors are automatically converted from spaced lowercase phrases to internal javascript methods at invocation.</p>
+          <p>Behaviors are actions that a component can perform. Behaviors are represented by simple phrases like "set value" or "increment", that can be invoked in Javascript. Behaviors are automatically converted from spaced lowercase phrases to internal Javascript methods at invocation.</p>
         </td>
       </tr>
     </tbody>
@@ -157,7 +157,7 @@ type        : 'Introduction'
     <tr>
       <td class="three wide">Namespace</td>
       <td>A name given to an element for the explicit purpose of containing the application of properties.</p>
-      <p>In Semantic UI, components are given the class name <code>ui</code> to help distinguish them from parts of elements in code, and to provide a namespace for definitions which can limit the scope of css rules.</td>
+      <p>In Semantic UI, components are given the class name <code>ui</code> to help distinguish them from parts of elements in code, and to provide a namespace for definitions which can limit the scope of CSS rules.</td>
     </tr>
     <tr>
       <td>Gulp</td>

@@ -169,7 +169,7 @@ themes      : ['Default']
     <h3>Dimmer</h3>
     <div class="example">
       <h4 class="ui header">Simple Dimmer</h4>
-      <p>A dimmer can be controlled without javascript</p>
+      <p>A dimmer can be controlled without Javascript</p>
       <div class="ignored ui info message">Having any parent element receive the class <code>ui dimmable dimmed</code> will trigger the dimmer to display.</div>
       <div class="ui dimmable dimmed segment">
         <div class="ui simple dimmer"></div>
@@ -419,7 +419,7 @@ themes      : ['Default']
         <tr>
           <td>opacity</td>
           <td class="six wide">auto</td>
-          <td>Dimmers opacity from 0-1. Defaults to <code>auto</code> which uses the css specified opacity.</td>
+          <td>Dimmers opacity from 0-1. Defaults to <code>auto</code> which uses the CSS specified opacity.</td>
         </tr>
         <tr>
           <td>variation</td>
@@ -444,7 +444,7 @@ themes      : ['Default']
         <tr>
           <td>useCSS</td>
           <td class="six wide">true</td>
-          <td>Whether to dim dimmers using css transitions.</td>
+          <td>Whether to dim dimmers using CSS transitions.</td>
         </tr>
         <tr>
           <td>duration</td>

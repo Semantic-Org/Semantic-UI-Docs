@@ -445,7 +445,7 @@ type        : 'UI Module'
       <div class="ui bulleted list">
         <div class="item">Loading images without specified size</div>
         <div class="item">Setting CSS which adjusts the layout of the page</div>
-        <div class="item">Hiding elements using javascript</div>
+        <div class="item">Hiding elements using Javascript</div>
       </div>
       <p>Refreshing cached values just requires calling the <code>refresh</code> behavior.</p>
       <div class="ui code">
@@ -459,7 +459,7 @@ type        : 'UI Module'
     <div class="example">
       <h4 class="ui header">Sticky Conditions</h4>
       <p>Sticky content is required to be inside its own <code>position: relative</code> container that is either the sticky context, or <b>shares vertical positioning with the context element</b>.</p>
-      <p>You can use <code>ui rail</code> or <code>ui grid</code> column that are in the same row to provide this set-up, or your own custom css</p>
+      <p>You can use <code>ui rail</code> or <code>ui grid</code> column that are in the same row to provide this set-up, or your own custom CSS</p>
       <p>Sticky elements swap between being bound to the edges of their container, or fixed to the edges of the browser viewport</p>
       <table class="ui celled definition table">
         <thead>
@@ -535,7 +535,7 @@ type        : 'UI Module'
         <tr>
           <td>observeChanges</td>
           <td>false</td>
-          <td>Whether any change in <code>context</code> dom should automatically refresh cached sticky positions</td>
+          <td>Whether any change in <code>context</code> DOM should automatically refresh cached sticky positions</td>
         </tr>
         <tr>
           <td>context</td>

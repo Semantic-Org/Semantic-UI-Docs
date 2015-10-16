@@ -169,7 +169,7 @@ type        : 'UI Module'
     </div>
 
     <h4 class="ui header">Named URL</h4>
-    <p>You can specify custom API settings to adjust the url, callback settings, or specify a different api action.</p>
+    <p>You can specify custom API settings to adjust the url, callback settings, or specify a different API action.</p>
     <div class="code" data-label="javascript">
 
       // initializes with default endpoint /search/{query}
@@ -395,7 +395,7 @@ type        : 'UI Module'
         </tr>
         <tr>
           <td>add results(html)</td>
-          <td>Adds html to results and displays</td>
+          <td>Adds HTML to results and displays</td>
         </tr>
         <tr>
           <td>show results</td>
@@ -471,7 +471,7 @@ type        : 'UI Module'
                   results : {}
                 }
               ;
-              // translate github api response to work with search
+              // translate GitHub API response to work with search
               $.each(githubResponse.items, function(index, item) {
                 var
                   language   = item.language || 'Unknown',
@@ -562,7 +562,7 @@ type        : 'UI Module'
         <tr>
           <td>source</td>
           <td>false</td>
-          <td>Specify a javascript object which will be searched locally</td>
+          <td>Specify a Javascript object which will be searched locally</td>
         </tr>
         <tr>
           <td>searchFullText</td>
@@ -617,7 +617,7 @@ type        : 'UI Module'
           <td>
             easeOutExpo
           </td>
-          <td>Easing equation when using fallback javascript animation</td>
+          <td>Easing equation when using fallback Javascript animation</td>
         </tr>
       </tbody>
     </table>
@@ -641,7 +641,7 @@ type        : 'UI Module'
         <tr>
           <td>onResultsAdd(html)</td>
           <td>module</td>
-          <td>Callback after processing element template to add html to results. Function should return false to prevent default actions.</td>
+          <td>Callback after processing element template to add HTML to results. Function should return false to prevent default actions.</td>
         </tr>
         <tr>
           <td>onSearchQuery(query)</td>
@@ -670,7 +670,7 @@ type        : 'UI Module'
       Templates
     </h2>
 
-    <p>These templates are used to generate the html structures for search results</p>
+    <p>These templates are used to generate the HTML structures for search results</p>
 
     <div class="ui ignored info message">
       By specifying a search as <code>type: 'customType'</code>, and a custom template under <code>$.fn.search.settings.templates.customType</code> you can create custom search results. Keep in mind that <code>.title</code> will be used for matching results <code>onSelect</code>

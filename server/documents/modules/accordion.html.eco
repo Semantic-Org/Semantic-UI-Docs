@@ -420,7 +420,7 @@ themes      : ['Default', 'Chubby']
 
     <p>Behaviors are short english phrases used for accessing specific functionality in
 
-    <p>Behaviors are accessible with javascript using the syntax:<p>
+    <p>Behaviors are accessible with Javascript using the syntax:<p>
     <div class="code">
     $('.ui.accordion').accordion('behavior', argumentOne, argumentTwo...);
     </div>

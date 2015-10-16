@@ -30,7 +30,7 @@ themes      : ['Default']
         Tab
       </h4>
       <p>A basic tab</p>
-      <div class="ui ignored info message">A tab is hidden by default, and will only become visible when given the class name <code>active</code> or when activated with javascript. For more information, see the usage section.</div>
+      <div class="ui ignored info message">A tab is hidden by default, and will only become visible when given the class name <code>active</code> or when activated with Javascript. For more information, see the usage section.</div>
       <div class="ui top attached tabular menu">
         <div class="item">Tab</div>
       </div>
@@ -80,7 +80,7 @@ themes      : ['Default']
 
     <div class="first example">
       <h4 class="ui header">Basic Tabs</h4>
-      <p>Tabs are connecting using paths specified in the <code>data-tab</code> attribute. Tab is then initialized in javascript on the activating elements.</p>
+      <p>Tabs are connecting using paths specified in the <code>data-tab</code> attribute. Tab is then initialized in Javascript on the activating elements.</p>
       <div class="ui ignored info message">
         To have a tab visible on page load, add the class <code>active</code> to both the initializing menu and the tab.
       </div>
@@ -243,7 +243,7 @@ themes      : ['Default']
       $('.dynamic.example .menu .item')
         .tab({
           cache: false,
-          // faking api request
+          // faking API request
           apiSettings: {
             loadingDuration : 300,
             mockResponse    : function(settings) {
@@ -547,15 +547,15 @@ themes      : ['Default']
       </tr>
       <tr>
         <td>cache read(path)</td>
-        <td>Returns cached html for path</td>
+        <td>Returns cached HTML for path</td>
       </tr>
       <tr>
         <td>cache add(path, html)</td>
-        <td>Sets cached html for path</td>
+        <td>Sets cached HTML for path</td>
       </tr>
       <tr>
         <td>cache remove(path)</td>
-        <td>Removes cached html for path</td>
+        <td>Removes cached HTML for path</td>
       </tr>
     </table>
   </div>
@@ -594,7 +594,7 @@ themes      : ['Default']
         <tr>
           <td>evaluateScripts</td>
           <td>once</td>
-          <td>Whether inline scripts in tab html should be parsed on tab load. Defaults to <code>once</code>, parsing only on first load. Can also be set to <code>true</code> or <code>false</code> to always parse or never parse inline scripts.</td>
+          <td>Whether inline scripts in tab HTML should be parsed on tab load. Defaults to <code>once</code>, parsing only on first load. Can also be set to <code>true</code> or <code>false</code> to always parse or never parse inline scripts.</td>
         </tr>
         <tr>
           <td>alwaysRefresh</td>

@@ -535,7 +535,7 @@ type        : 'UI Module'
         <tr>
           <td>observeChanges</td>
           <td>false</td>
-          <td>Whether any change in <code>context</code> dom should automatically refresh cached sticky positions</td>
+          <td>Whether any change in <code>context</code> DOM should automatically refresh cached sticky positions</td>
         </tr>
         <tr>
           <td>context</td>

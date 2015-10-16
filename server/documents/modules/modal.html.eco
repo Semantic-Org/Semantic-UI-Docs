@@ -583,7 +583,7 @@ themes      : ['Default', 'Material']
     <h2 class="ui dividing header">Usage</h2>
 
     <h3 class="ui header">Initializing a modal</h3>
-    <p>A modal can be included anywhere on the page. On initialization a modal's current size will be cached, and the element will be detached from the dom and moved inside a dimmer.</p>
+    <p>A modal can be included anywhere on the page. On initialization a modal's current size will be cached, and the element will be detached from the DOM and moved inside a dimmer.</p>
     <div class="ui info message">
       <div class="header">Why move modal content?</div>
       <p>Having a modal inside the page dimmer allows for 3D animations without having the 3D perspective settings alter the rest of the page content. Additionally, content outside the dimmer can be blurred or altered without affecting the modal's content.</p>
@@ -714,7 +714,7 @@ themes      : ['Default', 'Material']
         <tr>
           <td>observeChanges</td>
           <td>false</td>
-          <td>Whether any change in <code>modal</code> dom should automatically refresh cached positions</td>
+          <td>Whether any change in <code>modal</code> DOM should automatically refresh cached positions</td>
         </tr>
         <tr>
           <td>allowMultiple</td>

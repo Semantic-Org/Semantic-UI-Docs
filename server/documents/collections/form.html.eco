@@ -931,7 +931,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
 
   <div class="form example" data-tag="select" data-use-content="true">
     <h4 class="ui header">HTML Select</h4>
-    <p>If javascript or <a href="/modules/dropdown.html">ui dropdown</a> are not a viable option, forms also can provide basic styling for select elements</p>
+    <p>If Javascript or <a href="/modules/dropdown.html">ui dropdown</a> are not a viable option, forms also can provide basic styling for select elements</p>
     <div class="ui form">
       <div class="field">
         <select>

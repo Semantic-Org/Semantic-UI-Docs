@@ -445,7 +445,7 @@ type        : 'UI Module'
       <div class="ui bulleted list">
         <div class="item">Loading images without specified size</div>
         <div class="item">Setting CSS which adjusts the layout of the page</div>
-        <div class="item">Hiding elements using javascript</div>
+        <div class="item">Hiding elements using Javascript</div>
       </div>
       <p>Refreshing cached values just requires calling the <code>refresh</code> behavior.</p>
       <div class="ui code">

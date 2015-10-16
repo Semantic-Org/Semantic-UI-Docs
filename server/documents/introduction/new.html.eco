@@ -1258,7 +1258,7 @@ type        : 'Main'
 
   <!--   <div class="indeterminate example">
       <h4 class="ui header">Progressively Enhanced</h4>
-      <p><a href="/modules/checkbox.html">Checkboxes</a> now can work without javascript, although additional features are available with javascript use.</p>
+      <p><a href="/modules/checkbox.html">Checkboxes</a> now can work without Javascript, although additional features are available with Javascript use.</p>
 
       <div class="ui checkbox">
         <input type="checkbox" />

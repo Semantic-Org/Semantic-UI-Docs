@@ -264,7 +264,7 @@ type        : 'Usage'
 
   <div class="no example">
     <h4 class="ui header">Definition File</h4>
-    <p>Each component includes a source CSS and javascript file which declares how a components variables should affect its display on screen. Definition files are updated with each new release of Semantic UI, which may also include new variables.</p>
+    <p>Each component includes a source CSS and Javascript file which declares how a components variables should affect its display on screen. Definition files are updated with each new release of Semantic UI, which may also include new variables.</p>
     <p>Navigating definition files are a great way for developers who are comfortable with CSS to get an idea of how themes affect a components display.</p>
 
     <p>Here's an abridged version of <a href="/elements/button.html">button</a> with an explanation of each section of the file.</p>

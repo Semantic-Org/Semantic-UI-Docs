@@ -499,10 +499,10 @@ themes      : ['Default']
       <h4 class="ui header">Starting Visible</h4>
       <p>A sidebar can start visible by adding the class name <code>visible</code></p>
       <div class="ui ignored warning message">
-        You must include the class <code>pushable</code> on a sidebars containing element for it to appear correctly before javascript initializes the element
+        You must include the class <code>pushable</code> on a sidebars containing element for it to appear correctly before Javascript initializes the element
       </div>
       <div class="ui ignored info message">
-        Although sidebars support any size content, sidebars that are visible on load only support standard, predefined sizes like <code>thin</code> or <code>wide</code>. This makes sure content can be positioned correctly before javascript is available.
+        Although sidebars support any size content, sidebars that are visible on load only support standard, predefined sizes like <code>thin</code> or <code>wide</code>. This makes sure content can be positioned correctly before Javascript is available.
       </div>
       <div class="ui bottom attached segment pushable">
         <div class="ui visible inverted left vertical sidebar menu">
@@ -651,17 +651,17 @@ themes      : ['Default']
         <tr>
           <td>useLegacy</td>
           <td>false</td>
-          <td>Whether javascript animations should be used. Defaults to <code>false</code>. Setting to <code>auto</code> will use legacy animations only for browsers that do not support CSS transforms</td>
+          <td>Whether Javascript animations should be used. Defaults to <code>false</code>. Setting to <code>auto</code> will use legacy animations only for browsers that do not support CSS transforms</td>
         </tr>
         <tr>
           <td>duration</td>
           <td>500</td>
-          <td>Duration of sidebar animation when using legacy javascript animation</td>
+          <td>Duration of sidebar animation when using legacy Javascript animation</td>
         </tr>
         <tr>
           <td>easing</td>
           <td>easeInOutQuint</td>
-          <td>Easing to use when using legacy javascript animation</td>
+          <td>Easing to use when using legacy Javascript animation</td>
         </tr>
       </tbody>
     </table>

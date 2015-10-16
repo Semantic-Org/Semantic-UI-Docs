@@ -562,7 +562,7 @@ type        : 'UI Module'
         <tr>
           <td>source</td>
           <td>false</td>
-          <td>Specify a javascript object which will be searched locally</td>
+          <td>Specify a Javascript object which will be searched locally</td>
         </tr>
         <tr>
           <td>searchFullText</td>
@@ -617,7 +617,7 @@ type        : 'UI Module'
           <td>
             easeOutExpo
           </td>
-          <td>Easing equation when using fallback javascript animation</td>
+          <td>Easing equation when using fallback Javascript animation</td>
         </tr>
       </tbody>
     </table>

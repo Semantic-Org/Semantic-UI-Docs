@@ -169,7 +169,7 @@ themes      : ['Default']
     <h3>Dimmer</h3>
     <div class="example">
       <h4 class="ui header">Simple Dimmer</h4>
-      <p>A dimmer can be controlled without javascript</p>
+      <p>A dimmer can be controlled without Javascript</p>
       <div class="ignored ui info message">Having any parent element receive the class <code>ui dimmable dimmed</code> will trigger the dimmer to display.</div>
       <div class="ui dimmable dimmed segment">
         <div class="ui simple dimmer"></div>

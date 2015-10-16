@@ -178,7 +178,7 @@ themes      : ['Default', 'Colored']
       <h4 class="ui header">Indeterminate</h4>
       <p>A checkbox can be indeterminate</p>
       <div class="ui ignored info message">
-        An indeterminate state can only be set in javascript, see examples section
+        An indeterminate state can only be set in Javascript, see examples section
       </div>
       <div class="ui checkbox">
         <input type="checkbox" />
@@ -555,7 +555,7 @@ themes      : ['Default', 'Colored']
 
     <div class="simple example">
       <h4 class="ui header">Checkbox</h4>
-      <p>A checkbox does not require javascript to function.</p>
+      <p>A checkbox does not require Javascript to function.</p>
       <div class="ui checkbox">
         <input type="checkbox">
         <label>Label</label>
@@ -570,7 +570,7 @@ themes      : ['Default', 'Colored']
 
     <div class="example">
       <h4 class="ui header">Full Featured Checkboxes</h4>
-      <p>Using javascript with checkboxes will automatically make the checkbox's label trigger a change in the input and provide callback functions. Additionally, some states like <code>indeterminate</code> can only be triggered with javascript.</p>
+      <p>Using Javascript with checkboxes will automatically make the checkbox's label trigger a change in the input and provide callback functions. Additionally, some states like <code>indeterminate</code> can only be triggered with Javascript.</p>
       <div class="ui checkbox">
         <input type="checkbox">
         <label>Label</label>
@@ -586,7 +586,7 @@ themes      : ['Default', 'Colored']
 
     <div class="simple example">
       <h4 class="ui header">Linked Labels</h4>
-      <p>If you just need labels to link without any other features of javascript checkboxes, you can match the <code>for</code> attribute of the label to an input's id.</p>
+      <p>If you just need labels to link without any other features of Javascript checkboxes, you can match the <code>for</code> attribute of the label to an input's id.</p>
       <div class="ui checkbox">
         <input id="example-id" type="checkbox">
         <label for="example-id">Label</label>
@@ -601,7 +601,7 @@ themes      : ['Default', 'Colored']
 
     <h2 class="ui dividing header">Behavior</h2
       >
-    <p>Behaviors are accessible with javascript using the syntax:<p>
+    <p>Behaviors are accessible with Javascript using the syntax:<p>
     <div class="code">
     $('.ui.checkbox').checkbox('behavior', argumentOne, argumentTwo...);
     </div>

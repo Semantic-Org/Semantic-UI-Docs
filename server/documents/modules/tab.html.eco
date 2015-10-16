@@ -30,7 +30,7 @@ themes      : ['Default']
         Tab
       </h4>
       <p>A basic tab</p>
-      <div class="ui ignored info message">A tab is hidden by default, and will only become visible when given the class name <code>active</code> or when activated with javascript. For more information, see the usage section.</div>
+      <div class="ui ignored info message">A tab is hidden by default, and will only become visible when given the class name <code>active</code> or when activated with Javascript. For more information, see the usage section.</div>
       <div class="ui top attached tabular menu">
         <div class="item">Tab</div>
       </div>
@@ -80,7 +80,7 @@ themes      : ['Default']
 
     <div class="first example">
       <h4 class="ui header">Basic Tabs</h4>
-      <p>Tabs are connecting using paths specified in the <code>data-tab</code> attribute. Tab is then initialized in javascript on the activating elements.</p>
+      <p>Tabs are connecting using paths specified in the <code>data-tab</code> attribute. Tab is then initialized in Javascript on the activating elements.</p>
       <div class="ui ignored info message">
         To have a tab visible on page load, add the class <code>active</code> to both the initializing menu and the tab.
       </div>

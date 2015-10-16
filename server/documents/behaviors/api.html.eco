@@ -173,7 +173,7 @@ type        : 'UI Behavior'
 
         <p>Any element can have an API action attached directly to it. By default the action will occur on the most appropriate event for the type of element. For example a button will call your server <code>onclick</code>, an input <code>oninput</code>, or a form <code>onsubmit</code>.</p>
 
-        <p>API actions and data can be specified in javascript on initialization</p>
+        <p>API actions and data can be specified in Javascript on initialization</p>
         <div class="code" data-type="html">
           <div class="ui follow button">
             Follow
@@ -326,7 +326,7 @@ type        : 'UI Behavior'
 
       <div class="no example">
         <h4 class="ui header">3. Settings Specified in Javascript</h4>
-        <p>URL variable, and GET/POST data can be specified at run-time in the javascript object </p>
+        <p>URL variable, and GET/POST data can be specified at run-time in the Javascript object </p>
         <div class="code" data-type="javascript">
           $('.follow.button')
             .api({
@@ -433,8 +433,8 @@ type        : 'UI Behavior'
         <p>Structured form data is beneficial over <a href="https://api.jquery.com/serialize/">jQuery's serialize</a> for several reasons</p>
         <ul class="ui large list">
           <li>Serialize object correctly converts structured form names like <code>name="name[first]"</code> into nested object literals</li>
-          <li>Structured form data can be modified in javascript in <code>beforeSend</code></li>
-          <li>Form data will automatically be converted to their javascript equivalents, for instance, checkboxes will be converted to <code>boolean</code> values.</li>
+          <li>Structured form data can be modified in Javascript in <code>beforeSend</code></li>
+          <li>Form data will automatically be converted to their Javascript equivalents, for instance, checkboxes will be converted to <code>boolean</code> values.</li>
         </ul>
         <div class="ui ignored warning message">
           Structured form data requires including <a href="https://github.com/macek/jquery-serialize-object" target="_blank">macek's serialize object.</a>
@@ -1080,7 +1080,7 @@ type        : 'UI Behavior'
         <tr>
           <td>mockResponse</td>
           <td>false</td>
-          <td>Can be set to a javascript object which will be returned automatically instead of requesting JSON from server </td>
+          <td>Can be set to a Javascript object which will be returned automatically instead of requesting JSON from server </td>
           <td>{} or false</td>
         </tr>
         <tr>

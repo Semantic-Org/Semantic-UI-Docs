@@ -570,7 +570,7 @@ type        : 'UI Behavior'
               return response.success || false;
             },
             onComplete: function(response) {
-              // always called after xhr complete
+              // always called after XHR complete
             },
             onSuccess: function(response) {
               // valid response and response.success = true
@@ -1134,7 +1134,7 @@ type        : 'UI Behavior'
         <tr>
           <td>onRequest(promise, xhr)</td>
           <td>state context</td>
-          <td>Callback that occurs when request is made. Receives both the API success promise and the xhr request promise.</td>
+          <td>Callback that occurs when request is made. Receives both the API success promise and the XHR request promise.</td>
         </tr>
         <tr>
           <td>onResponse(response)</td>
@@ -1244,7 +1244,7 @@ type        : 'UI Behavior'
             }
             </div>
           </td>
-          <td>Metadata used to store xhr and response promise</td>
+          <td>Metadata used to store XHR and response promise</td>
         </tr>
         <tr>
           <td>debug</td>

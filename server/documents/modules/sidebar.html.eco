@@ -121,7 +121,7 @@ themes      : ['Default']
       <h4 class="ui header">Width</h4>
       <p>A sidebar can specify its width</p>
       <div class="ui message">
-        A sidebar will automatically adjust its animations to match any custom size specified in css
+        A sidebar will automatically adjust its animations to match any custom size specified in CSS
       </div>
       <div class="code" data-type="html">
         <div class="ui thin sidebar"></div>
@@ -270,11 +270,11 @@ themes      : ['Default']
           <td>Returns page content to original position</td>
         </tr>
         <tr>
-          <td>add body css</td>
+          <td>add body CSS</td>
           <td>Adds stylesheet to page head to trigger sidebar animations</td>
         </tr>
         <tr>
-          <td>remove body css</td>
+          <td>remove body CSS</td>
           <td>Removes any inline stylesheets for sidebar animation</td>
         </tr>
         <tr>

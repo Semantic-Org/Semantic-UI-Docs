@@ -42,11 +42,11 @@ type        : 'Usage'
   </h2>
   <div class="no example">
     <h4>Recreating GitHub</h4>
-    <p>Semantic UI includes an <a target="_blank" href="http://semantic-org.github.io/example-github/">example project</a> designed to showcase theming. This project includes examples of creating a packaged theme, using component css overrides, and managing your themes with <code>theme.config</code>.</p>
+    <p>Semantic UI includes an <a target="_blank" href="http://semantic-org.github.io/example-github/">example project</a> designed to showcase theming. This project includes examples of creating a packaged theme, using component CSS overrides, and managing your themes with <code>theme.config</code>.</p>
 
     <p>To get started click <b>the paint can</b> icon next to the notification button in the top right</p>
 
-    <p>The example project includes two html files, <code>index.html</code> is designed to swap themes using a sidebar, and uses precompiled css. <code>static.html</code> uses files outputted by Semantic UI and can be used alongside our <a href="/introduction/build-tools.html">gulp pipeline</a> to try modifying themes hands on.</p>
+    <p>The example project includes two html files, <code>index.html</code> is designed to swap themes using a sidebar, and uses precompiled CSS. <code>static.html</code> uses files outputted by Semantic UI and can be used alongside our <a href="/introduction/build-tools.html">gulp pipeline</a> to try modifying themes hands on.</p>
 
     <p>Some special things to note:</p>
 
@@ -264,8 +264,8 @@ type        : 'Usage'
 
   <div class="no example">
     <h4 class="ui header">Definition File</h4>
-    <p>Each component includes a source css and javascript file which declares how a components variables should affect its display on screen. Definition files are updated with each new release of Semantic UI, which may also include new variables.</p>
-    <p>Navigating definition files are a great way for developers who are comfortable with css to get an idea of how themes affect a components display.</p>
+    <p>Each component includes a source CSS and javascript file which declares how a components variables should affect its display on screen. Definition files are updated with each new release of Semantic UI, which may also include new variables.</p>
+    <p>Navigating definition files are a great way for developers who are comfortable with CSS to get an idea of how themes affect a components display.</p>
 
     <p>Here's an abridged version of <a href="/elements/button.html">button</a> with an explanation of each section of the file.</p>
 
@@ -325,7 +325,7 @@ type        : 'Usage'
   -webkit-tap-highlight-color: @tapColor;
 }
 
-/* Additional css removed for brevity */
+/* Additional CSS removed for brevity */
 
 /* Load CSS Overrides and Inline */
 .loadUIOverrides();
@@ -346,7 +346,7 @@ type        : 'Usage'
   </div>
   <div class="no example">
     <h4 class="ui header">Override Files</h4>
-    <p>An .overrides file specifies additional css rules to be added to a definition for a theme. This file also has access to all inherited variables for a component.</p>
+    <p>An .overrides file specifies additional CSS rules to be added to a definition for a theme. This file also has access to all inherited variables for a component.</p>
   </div>
 
   <h2 class="ui dividing header">

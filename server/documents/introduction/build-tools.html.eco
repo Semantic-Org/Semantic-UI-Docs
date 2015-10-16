@@ -92,13 +92,13 @@ type        : 'Introduction'
         <i class="folder icon"></i>
         <div class="content">
           <div class="header">dist</div>
-          <div class="description">Compiled css and js files</div>
+          <div class="description">Compiled CSS and js files</div>
           <div class="list">
             <div class="item">
               <i class="folder icon"></i>
               <div class="content">
                 <div class="header">components</div>
-                <div class="description">Individual component css and js</div>
+                <div class="description">Individual component CSS and js</div>
               </div>
             </div>
             <div class="item">
@@ -162,7 +162,7 @@ type        : 'Introduction'
         </tr>
         <tr>
           <td>build-css</td>
-          <td>Build css files</td>
+          <td>Build CSS files</td>
         </tr>
         <tr>
           <td>build-assets</td>

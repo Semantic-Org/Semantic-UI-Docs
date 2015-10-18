@@ -688,8 +688,8 @@ themes      : ['Default', 'Colored']
         <td>Returns whether element can be determinate (checking if already determinate or `beforeDeterminate` would cancel)</td>
       </tr>
       <tr>
-        <td>should allow determinate</td>
-        <td>Returns whether element can be ideterminate (checking if already indeterminate or `beforeIndeterminate` would cancel)</td>
+        <td>should allow indeterminate</td>
+        <td>Returns whether element can be indeterminate (checking if already indeterminate or `beforeIndeterminate` would cancel)</td>
       </tr>
       <tr>
         <td>can uncheck</td>

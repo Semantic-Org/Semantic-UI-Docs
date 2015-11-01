@@ -71,7 +71,7 @@ semantic.ready = function() {
     $example             = $('.example'),
     $popupExample        = $example.not('.no'),
     $shownExample        = $example.filter('.shown'),
-    $prerenderedExample  = $example.has('.ui.checkbox, .ui.dropdown, .ui.search, .ui.rating, .ui.dimmer, .ui.embed'),
+    $prerenderedExample  = $example.has('.ui.checkbox, .ui.dropdown, .ui.search, .ui.progress, .ui.rating, .ui.dimmer, .ui.embed'),
 
     $visibilityExample   = $example.filter('.visiblity').find('.overlay, .demo.segment, .items img'),
 
@@ -722,6 +722,13 @@ semantic.ready = function() {
       $example.data('code', code);
       return code;
     },
+
+    copyCode: function() {
+      $(this)
+        .popup('change content', 'Copied to clipboard')
+      ;
+    },
+
     createCode: function() {
       var
         $example        = $(this).closest('.example'),
@@ -732,6 +739,7 @@ semantic.ready = function() {
         $ignoredContent = $('.ui.popup, i.code:last-child, .anchor, .code, .existing.segment, .instructive, .language.label, .annotation, .ignore, style, script, .ignored'),
         $demo           = $example.children().not($intro).not($ignoredContent),
         code            = $example.data('code') || $.proxy(handler.generateCode, this)(),
+        $copyCode,
         $label
       ;
 
@@ -751,9 +759,28 @@ semantic.ready = function() {
       }
 
       if($html.size() === 0) {
-        $html = $('<div class="html">').insertBefore($annotation);
-        $label = $('<div class="ui top attached label">').html('Example');
-        $label.prependTo($html);
+        $html     = $('<div class="html">').insertBefore($annotation);
+        $label    = $('<div class="ui top attached label">').html('Example <i data-content="Copy code" class="copy link icon"></i>');
+        $copyCode = $label.find('i.copy');
+        $copyCode
+          .on('click', handler.copyCode)
+          .popup({
+            variation    : 'inverted',
+            offset       : -12,
+            distanceAway : 6
+          })
+        ;
+        $label
+          .prependTo($html)
+        ;
+        new Clipboard($copyCode.get(0), {
+          text: function() {
+            var
+              code = $copyCode.closest('.example').data('code') || ''
+            ;
+            return handler.formatCode(code);
+          }
+        });
         if($demo.length === 0) {
           $html.addClass('empty');
         }
@@ -978,6 +1005,14 @@ semantic.ready = function() {
 
     },
 
+    formatCode: function(code) {
+      var
+        indent     = handler.getIndent(code) || 2,
+        whiteSpace = new RegExp('\\n\\s{' + indent + '}', 'g')
+      ;
+      return $.trim(code).replace(whiteSpace, '\n');
+    },
+
     initializeCode: function(codeSample) {
       var
         $code         = $(this).show(),
@@ -1007,8 +1042,6 @@ semantic.ready = function() {
           ? 'instructive bottom attached'
           : 'existing',
         formattedCode = code,
-        whiteSpace,
-        indent,
         styledCode,
         $example,
         $label,
@@ -1028,6 +1061,7 @@ semantic.ready = function() {
         return $('<div>').html(string).text();
       }
 
+
       // escape html entities
       if(contentType != 'html' || escape) {
         code = escapeHTML(code);
@@ -1043,9 +1077,7 @@ semantic.ready = function() {
         formattedCode = code;
       }
       else {
-        indent        = handler.getIndent(code) || 2;
-        whiteSpace    = new RegExp('\\n\\s{' + indent + '}', 'g');
-        formattedCode = $.trim(code).replace(whiteSpace, '\n');
+        formattedCode = handler.formatCode(code);
       }
 
       // color code

@@ -533,7 +533,7 @@ themes      : ['Default']
         onChange: function(value) {
           $('.demo.icon')
             .popup({
-              transition: value
+              transition: 'value'
             })
             .popup('toggle')
           ;

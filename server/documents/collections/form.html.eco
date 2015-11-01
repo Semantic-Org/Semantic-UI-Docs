@@ -1133,6 +1133,37 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
     </div>
   </div>
 
+  <div class="example" data-use-content="true">
+    <h4 class="ui header">Equal Width</h4>
+    <p>Forms can automatically divide fields to be equal width</p>
+    <div class="ui equal width form">
+      <div class="fields">
+        <div class="field">
+          <label>Username</label>
+          <input type="text" placeholder="Username">
+        </div>
+        <div class="field">
+          <label>Password</label>
+          <input type="password">
+        </div>
+      </div>
+      <div class="fields">
+        <div class="field">
+          <label>First name</label>
+          <input type="text" placeholder="First Name">
+        </div>
+        <div class="field">
+          <label>Middle name</label>
+          <input type="text" placeholder="Middle Name">
+        </div>
+        <div class="field">
+          <label>Last name</label>
+          <input type="text" placeholder="Last Name">
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="example">
     <h4 class="ui header">Inverted</h4>
     <p>A form on a dark background may have to invert its color scheme</p>
@@ -1289,6 +1320,38 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
       </div>
     </div>
   </div>
+
+  <div class="example" data-use-content="true">
+    <h4 class="ui header">Equal Width</h4>
+    <p>Fields can automatically divide fields to be equal width</p>
+    <div class="ui form">
+      <div class="fields">
+        <div class="field">
+          <label>Username</label>
+          <input type="text" placeholder="Username">
+        </div>
+        <div class="field">
+          <label>Password</label>
+          <input type="password">
+        </div>
+      </div>
+      <div class="equal width fields">
+        <div class="field">
+          <label>First name</label>
+          <input type="text" placeholder="First Name">
+        </div>
+        <div class="field">
+          <label>Middle name</label>
+          <input type="text" placeholder="Middle Name">
+        </div>
+        <div class="field">
+          <label>Last name</label>
+          <input type="text" placeholder="Last Name">
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <div class="example" data-use-content="true">
     <h4 class="ui header">Inline</h4>

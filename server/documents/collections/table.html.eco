@@ -731,7 +731,7 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
 
 
   <div class="example">
-    <h4 class="ui header">Selectable</h4>
+    <h4 class="ui header">Selectable Row</h4>
     <p>A table can have its rows appear selectable</p>
     <table class="ui selectable celled table">
       <thead>
@@ -803,6 +803,92 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
       </tbody>
     </table>
 
+  </div>
+  <div class="example">
+    <h4 class="ui header">Selectable Cell</h4>
+    <p>A table cell can be selectable</p>
+    <div class="ui ignored info message">Using an <code>a</code> link inside a selectable cell will automatically make the hit box the entire cell area. By default links will inherit their cell color.</div>
+    <table class="ui celled table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Status</th>
+          <th>Edit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>John</td>
+          <td>No Action</td>
+          <td class="selectable">
+            <a href="#">Edit</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Jamie</td>
+          <td>Approved</td>
+          <td class="selectable">
+            <a href="#">Edit</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Jill</td>
+          <td>Denied</td>
+          <td class="selectable">
+            <a href="#">Edit</a>
+          </td>
+        </tr>
+        <tr class="warning">
+          <td>John</td>
+          <td>No Action</td>
+          <td class="selectable warning">
+            <a href="#">Requires change</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Jamie</td>
+          <td class="positive">Approved</td>
+          <td class="selectable positive">
+            <a href="#">Approve</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Jill</td>
+          <td class="negative">Denied</td>
+          <td class="selectable negative">
+            <a href="#">Remove</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="another example">
+    <table class="ui selectable inverted table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Status</th>
+          <th class="right aligned">Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>John</td>
+          <td>Approved</td>
+          <td class="right aligned">None</td>
+        </tr>
+        <tr>
+          <td>Jamie</td>
+          <td>Approved</td>
+          <td class="right aligned">Requires call</td>
+        </tr>
+        <tr>
+          <td>Jill</td>
+          <td>Denied</td>
+          <td class="right aligned">None</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
   <div class="example">

@@ -9,26 +9,44 @@ type       : 'Library'
 
 <div class="ui container">
 
-      <select class="ui search dropdown">
-        <%- @partial('examples/single/state-options') %>
-      </select>
-      <div class="ui button">Button</div>
+  <div class="ui indicating progress" data-value="1" data-total="20" id="example5">
+    <div class="bar"></div>
+    <div class="label">Adding Photos</div>
+  </div>
+  <div class="ui icon buttons">
+    <div class="decrement ui red button"><i class="minus icon"></i></div>
+    <div class="reset ui blue button"><i class="undo icon"></i></div>
+    <div class="complete ui orange button"><i class="checkmark icon"></i></div>
+    <div class="increment ui green button"><i class="plus icon"></i></div>
+  </div>
+</div>
+
 </body>
 <!-- TEST JS HERE !-->
 <script>
 $(document)
   .ready(function(){
 
-    $('.ui.dropdown')
-      .dropdown({
-        allowAdditions: true
-      })
-    ;
-    $('.ui.button')
-      .on('click', function() {
-        $('.ui.dropdown').dropdown('set selected', 'VA');
-      })
-    ;
+  $('#example5')
+    .progress({
+      text: {
+        active  : 'Adding {value} of {total} photos',
+        success : '{total} Photos Uploaded!'
+      }
+    })
+  ;
+  $('.increment.button').click(function() {
+    $('#example5').progress('increment');
+  });
+  $('.decrement.button').click(function() {
+    $('#example5').progress('decrement');
+  });
+  $('.reset.button').click(function() {
+    $('#example5').progress('reset');
+  });
+  $('.complete.button').click(function() {
+    $('#example5').progress('complete');
+  });
   })
 ;
 </script>

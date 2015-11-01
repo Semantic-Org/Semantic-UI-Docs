@@ -2117,6 +2117,10 @@ themes      : ['Default', 'GitHub', 'Material']
       </thead>
       <tbody>
         <tr>
+          <td>setup menu</td>
+          <td>Recreates dropdown menu from select <code>option</code> values.</td>
+        </tr>
+        <tr>
           <td>refresh</td>
           <td>Refreshes all cached selectors and data</td>
         </tr>
@@ -2582,6 +2586,11 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>onLabelCreate($label)</td>
           <td>$label</td>
           <td>Allows you to modify a label before it is added. Expects <code>$label</code> to be returned.</td>
+        </tr>
+        <tr>
+          <td>onLabelRemove(value)</td>
+          <td>$label</td>
+          <td>Called when a label is remove, <code>return false;</code> will prevent the label from being removed.</td>
         </tr>
         <tr>
           <td>onLabelSelect($selectedLabels)</td>

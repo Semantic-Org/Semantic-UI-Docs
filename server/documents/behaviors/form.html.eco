@@ -301,12 +301,12 @@ type        : 'UI Behavior'
           </tr>
           <tr>
             <td>decimal</td>
-            <td>A field is a decimal number, optional m</td>
+            <td>A field must be a decimal number</td>
             <td></td>
           </tr>
           <tr>
             <td>number</td>
-            <td>A field is a real number</td>
+            <td>A field is any number decimal or non-decimal</td>
             <td></td>
           </tr>
           <tr>

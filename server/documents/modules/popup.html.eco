@@ -283,6 +283,14 @@ themes      : ['Default']
           <td>Hides all visible pop ups on the page</td>
         </tr>
         <tr>
+          <td>get popup</td>
+          <td>Returns current popup dom element</td>
+        </tr>
+        <tr>
+          <td>change content(html)</td>
+          <td>Changes current popup content</td>
+        </tr>
+        <tr>
           <td>toggle</td>
           <td>Toggles visibility of popup</td>
         </tr>

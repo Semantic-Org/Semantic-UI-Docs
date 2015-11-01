@@ -5,6 +5,7 @@
   <script src="/javascript/library/highlight.min.js"></script>
   <script src="/javascript/library/history.js"></script>
   <script src="/javascript/library/tablesort.js"></script>
+  <script src="/javascript/library/clipboard.min.js"></script>
 <% else: %>
   <script src="/javascript/library/jquery.min.js"></script>
   <script src="/javascript/library/cookie.min.js"></script>
@@ -12,5 +13,6 @@
   <script src="/javascript/library/highlight.min.js"></script>
   <script src="/javascript/library/history.min.js"></script>
   <script src="/javascript/library/tablesort.min.js"></script>
+  <script src="/javascript/library/clipboard.min.js"></script>
 <% end %>
 

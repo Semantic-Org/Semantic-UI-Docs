@@ -732,12 +732,14 @@ semantic.ready = function() {
         $ignoredContent = $('.ui.popup, i.code:last-child, .anchor, .code, .existing.segment, .instructive, .language.label, .annotation, .ignore, style, script, .ignored'),
         $demo           = $example.children().not($intro).not($ignoredContent),
         code            = $example.data('code') || $.proxy(handler.generateCode, this)(),
+        existingCode    = '',
         $label
       ;
 
       // process existing code first
       if( $code.hasClass('existing') ) {
         $code.removeClass('existing');
+        existingCode = $code.html();
         $.proxy(handler.initializeCode, $code)(true);
       }
 
@@ -748,6 +750,35 @@ semantic.ready = function() {
           .hide()
           .insertAfter($demo.last())
         ;
+      }
+
+      if ($annotation.find('.copy-btn').size() == 0) {
+          var $copy = $('<a class="ui right ribbon label copy-btn">Copy to Clipboard</a>');
+          $copy.attr('data-clipboard-text', code ? code : existingCode);
+          var clipboard = new Clipboard('.copy-btn');
+
+          clipboard.on('success', function(e) {
+              console.info('Action:', e.action);
+              console.info('Text:', e.text);
+              console.info('Trigger:', e.trigger);
+
+              $copy.text('Copied!');
+
+              setTimeout(function(){
+                $copy.text('Copy to Clipboard');
+              }, 1000);
+
+              e.clearSelection();
+          });
+
+          clipboard.on('error', function(e) {
+              console.error('Action:', e.action);
+              console.error('Trigger:', e.trigger);
+          });
+
+          $annotation.prepend($copy);
+      } else {
+          $annotation.find('.copy-btn').toggle();
       }
 
       if($html.size() === 0) {

@@ -2398,9 +2398,10 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>
             <div class="code" data-type="css">
             fields: {
-              values : 'values', // grouping for all dropdown values
-              name   : 'name',   // displayed dropdown text
-              value  : 'value'   // actual dropdown value
+              remoteValues : 'results', // grouping for api results
+              values       : 'values', // grouping for all dropdown values
+              name         : 'name',   // displayed dropdown text
+              value        : 'value'   // actual dropdown value
             }
             </div>
           </td>
@@ -2534,6 +2535,29 @@ themes      : ['Default', 'GitHub', 'Material']
             200
           </td>
           <td>Duration of animation events</td>
+        </tr>
+        <tr>
+          <td>keys</td>
+          <td>
+          <div class="code">
+          keys : {
+            backspace  : 8,
+            delimiter  : 188, // comma
+            deleteKey  : 46,
+            enter      : 13,
+            escape     : 27,
+            pageUp     : 33,
+            pageDown   : 34,
+            leftArrow  : 37,
+            upArrow    : 38,
+            rightArrow : 39,
+            downArrow  : 40
+          }
+          </div>
+          </td>
+          <td>
+            The <code>keycode</code> used to represent keyboard shortcuts. To avoid issues with some foreign languages, you can pass <code>false</code> for comma delimiter's value
+          </td>
         </tr>
         <tr>
           <td>delay</td>

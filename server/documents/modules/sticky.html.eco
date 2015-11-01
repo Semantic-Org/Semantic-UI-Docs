@@ -412,7 +412,7 @@ type        : 'UI Module'
 
     <h2 class="ui dividing header">Usage</h2>
 
-    <div class="example">
+    <div class="no example">
       <h4 class="ui header">Initializing</h4>
       <p>Sticky is initialized on content that should be stuck to viewport. Most instances require specifying a secondary <code>context</code> which will define the top and bottom bounds of the sticky element. Sticky content must be included inside a containing element. This container can be a <a href="/elements/rail.html">ui rail</a> or your own arbitrary container, but should exist parallel to your context.</p>
 
@@ -437,12 +437,12 @@ type        : 'UI Module'
       ;
       </div>
     </div>
-    <div class="example">
+    <div class="no example">
       <h4 class="ui header">Refreshing Cached Values</h4>
       <p>Sticky content caches its current offset on the page and other crucial values on initialization. This prevents it from having to query the DOM on each browser scroll which would drastically reduce performance.</p>
       <p>Sticky uses <a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver">mutation observers</a> to adjust its position when content is added to the context, and also will automatically recalculate on browser <code>resize</code>, but any other changes to your page that adjust the elements context require you to refresh the sticky's position</p>
       <p>Examples of changes that might affect sticky elements are:</p>
-      <div class="ui bulleted list">
+      <div class="ui bulleted ignored list">
         <div class="item">Loading images without specified size</div>
         <div class="item">Setting CSS which adjusts the layout of the page</div>
         <div class="item">Hiding elements using javascript</div>
@@ -456,12 +456,12 @@ type        : 'UI Module'
       </div>
     </div>
 
-    <div class="example">
+    <div class="no example">
       <h4 class="ui header">Sticky Conditions</h4>
       <p>Sticky content is required to be inside its own <code>position: relative</code> container that is either the sticky context, or <b>shares vertical positioning with the context element</b>.</p>
       <p>You can use <code>ui rail</code> or <code>ui grid</code> column that are in the same row to provide this set-up, or your own custom css</p>
       <p>Sticky elements swap between being bound to the edges of their container, or fixed to the edges of the browser viewport</p>
-      <table class="ui celled definition table">
+      <table class="ui ignored celled definition table">
         <thead>
           <tr>
             <th></th>
@@ -493,7 +493,7 @@ type        : 'UI Module'
         </tbody>
       </table>
     </div>
-    <div class="example">
+    <div class="no example">
       <h4 class="ui header">Adjusting Offset and Padding</h4>
       <p>If you have content fixed to the viewport it might make sense to include a top or bottom offset. An <code>offset</code> will adjust all values so that content does not overlap any content between the top of the browser and the specified value. A <code>bottomOffset</code> will do the same thing for content fixed to the bottom of the viewport.</p>
       <div class="code" data-type="javascript">

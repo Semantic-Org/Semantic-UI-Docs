@@ -476,7 +476,7 @@ type        : 'UI Module'
             <td>Element is fixed to top of viewport</td>
           </tr>
           <tr>
-            <td>Fixed Top</td>
+            <td>Fixed Bottom</td>
             <td>ui fixed bottom sticky</td>
             <td>Element is fixed to bottom of viewport</td>
           </tr>

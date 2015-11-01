@@ -1297,7 +1297,7 @@ type        : 'UI Behavior'
         .dropdown()
       ;
       $('.ui.form')
-        .form(
+        .form({
           fields: {
             gender: {
               identifier  : 'gender',

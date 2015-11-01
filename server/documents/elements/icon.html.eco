@@ -1293,8 +1293,8 @@ themes      : ['Default']
     <div class="example">
       <h4 class="ui header">Link</h4>
       <p>An icon can be formatted as a link</p>
-      <i class="close icon link icon"></i>
-      <i class="help icon link icon"></i>
+      <i class="close link icon"></i>
+      <i class="help link icon"></i>
     </div>
 
     <div class="example">

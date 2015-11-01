@@ -325,7 +325,7 @@ themes      : ['Default']
     </div>
 
     <div class="ui ignored code">
-      <div class="ui four column doubling grid container">
+      <div class="ui four column doubling stackable grid container">
         <div class="column">
           <p></p>
           <p></p>

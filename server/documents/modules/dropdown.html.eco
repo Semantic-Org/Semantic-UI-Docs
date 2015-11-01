@@ -2117,6 +2117,10 @@ themes      : ['Default', 'GitHub', 'Material']
       </thead>
       <tbody>
         <tr>
+          <td>setup menu</td>
+          <td>Recreates dropdown menu from select <code>option</code> values.</td>
+        </tr>
+        <tr>
           <td>refresh</td>
           <td>Refreshes all cached selectors and data</td>
         </tr>
@@ -2398,9 +2402,10 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>
             <div class="code" data-type="css">
             fields: {
-              values : 'values', // grouping for all dropdown values
-              name   : 'name',   // displayed dropdown text
-              value  : 'value'   // actual dropdown value
+              remoteValues : 'results', // grouping for api results
+              values       : 'values', // grouping for all dropdown values
+              name         : 'name',   // displayed dropdown text
+              value        : 'value'   // actual dropdown value
             }
             </div>
           </td>
@@ -2536,6 +2541,29 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>Duration of animation events</td>
         </tr>
         <tr>
+          <td>keys</td>
+          <td>
+          <div class="code">
+          keys : {
+            backspace  : 8,
+            delimiter  : 188, // comma
+            deleteKey  : 46,
+            enter      : 13,
+            escape     : 27,
+            pageUp     : 33,
+            pageDown   : 34,
+            leftArrow  : 37,
+            upArrow    : 38,
+            rightArrow : 39,
+            downArrow  : 40
+          }
+          </div>
+          </td>
+          <td>
+            The <code>keycode</code> used to represent keyboard shortcuts. To avoid issues with some foreign languages, you can pass <code>false</code> for comma delimiter's value
+          </td>
+        </tr>
+        <tr>
           <td>delay</td>
           <td>
           <div class="code">
@@ -2586,6 +2614,11 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>onLabelCreate($label)</td>
           <td>$label</td>
           <td>Allows you to modify a label before it is added. Expects <code>$label</code> to be returned.</td>
+        </tr>
+        <tr>
+          <td>onLabelRemove(value)</td>
+          <td>$label</td>
+          <td>Called when a label is remove, <code>return false;</code> will prevent the label from being removed.</td>
         </tr>
         <tr>
           <td>onLabelSelect($selectedLabels)</td>

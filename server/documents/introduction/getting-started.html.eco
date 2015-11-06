@@ -27,16 +27,11 @@ type        : 'Main'
     <p>For integrating Semantic UI tasks into your own build tools, or using a CDN see our <a href="/introduction/advanced-usage.html">recipes</a> section.</p>
 
   </div>
-  <div class="no example">
-
-    <h4 class="ui header">This build stuff is too much!</h4>
-
-    <p>If you aren't comfortable working with variables, build tools, or just need a simple solution you can use our static css/js only package</p>
-    <a href="https://github.com/Semantic-Org/Semantic-UI-CSS/archive/master.zip" class="ui button">Download Zip</a>
-
-    <p>If you are using Semantic UI as a dependency and just want to use our default theme, use our <a href="https://github.com/Semantic-Org/Semantic-UI-CSS" target="_blank"><code>semantic-ui-css</code></a> or <a href="https://github.com/Semantic-Org/Semantic-UI-Less" target="_blank"><code>semantic-ui-less</code></a> repo.</p>
-
-
+  <div class="ui large info message">
+    <div class="ui header">Simpler Setup</div>
+    <p>If you are using Semantic UI as a dependency and just want to use our default theme, use our lighter <a href="https://github.com/Semantic-Org/Semantic-UI-CSS" target="_blank"><code>semantic-ui-css</code></a> or <a href="https://github.com/Semantic-Org/Semantic-UI-Less" target="_blank"><code>semantic-ui-less</code></a> repo. If you just need the files you can download them as a zip from GitHub.</p>
+    <a href="https://github.com/Semantic-Org/Semantic-UI-CSS/archive/master.zip" class="ui secondary button">Download Zip</a>
+    <a href="https://github.com/Semantic-Org/" class="ui button" target="_blank">View all Semantic-Org Repos </a>
   </div>
 
   <h2 class="ui dividing header">Installing</h2>

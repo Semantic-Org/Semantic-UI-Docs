@@ -1791,6 +1791,8 @@ themes      : ['Default', 'GitHub', 'Material']
     <div class="no dropdown example">
       <h4 class="ui header">Specifying Different Text &amp; Hidden Input Values</h4>
       <p>You can specify different values for selected text, and selected form values by adding <code>data-text</code> or <code>data-value</code> to any item. This is useful if you include additional data, like icons, that you want to appear only inside the dropdown menu.</p>
+      <div class="ui ignored info message">If you don't specify a value (either in the `select` or via a `data-value` property, then the input value will be set to the lowercased text in the element.</div>
+
       <div class="code" data-label="HTML" data-type="html">
         <div class="ui selection dropdown">
           <input type="hidden" name="gender">

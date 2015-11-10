@@ -817,7 +817,7 @@ type        : 'UI Behavior'
         <tr>
           <td>checkOnRefresh</td>
           <td>true</td>
-          <td>Whether visibility conditions should be checked on calls to <code>refresh</code>. These calls can be triggered from either <code>resize</code>, <code>load</code> or manually calling <code>$('.foo').visiblity('refresh')</code></td>
+          <td>Whether visibility conditions should be checked on calls to <code>refresh</code>. These calls can be triggered from either <code>resize</code>, <code>load</code> or manually calling <code>$('.foo').visibility('refresh')</code></td>
         </tr>
         <tr>
           <td>offset</td>

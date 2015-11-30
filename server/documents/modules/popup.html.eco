@@ -879,11 +879,13 @@ themes      : ['Default']
           <td>errors</td>
           <td colspan="2">
             <div class="code">
-    error: {
-      content   : 'Your popup has no content specified',
-      method    : 'The method you called is not defined.',
-      recursion : 'Popup attempted to reposition element to fit, but could not find an adequate position.'
-    }
+            error: {
+              invalidPosition : 'The position you specified is not a valid position',
+              cannotPlace     : 'Popup does not fit within the boundaries of the viewport',
+              method          : 'The method you called is not defined.',
+              noTransition    : 'This module requires ui transitions <https://github.com/Semantic-Org/UI-Transition>',
+              notFound        : 'The target or popup you specified does not exist on the page'
+            }
             </div>
           </td>
         </tr>

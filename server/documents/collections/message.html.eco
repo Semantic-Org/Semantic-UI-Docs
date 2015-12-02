@@ -91,7 +91,7 @@ themes      : ['Default', 'GitHub', 'Gmail']
         .on('click', function() {
           $(this)
             .closest('.message')
-            .transition('fade')
+            .fadeOut()
           ;
         })
       ;

@@ -42,7 +42,7 @@ type        : 'UI Behavior'
         })
       ;
       </div>
-      <p>Centrally manage your entire API making sure you aren't caught modifying urls across your codebase. Define your endpoints using an <a href="#working-with-named-urls">intuitive templating system</a> that <a href="#url-variables">automatically passes data</a> found in your UI.</p>
+      <p>Centrally manage your entire API making sure you aren't caught modifying urls across your codebase. Define your endpoints using an <a href="#api-actions">intuitive templating system</a> that <a href="#passing-data">automatically passes data</a> found in your UI.</p>
       <div class="ignored code" data-type="javascript">
         var api = {
           'get followers' : '/followers/{id}?results={count}',

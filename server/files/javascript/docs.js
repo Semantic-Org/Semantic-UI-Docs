@@ -629,7 +629,7 @@ semantic.ready = function() {
 
     openMusic: function() {
       var
-        url       = 'http://www.stratus.sc/player?links=https://soundcloud.com/into-the-light/sets/sui-2&popup=true',
+        url       = 'http://stratus.soundcloud.com/player?links=https://soundcloud.com/into-the-light/sets/sui-2&popup=true',
         newWindow = window.open(url,'name','height=196,width=733')
       ;
       if(window.focus) {

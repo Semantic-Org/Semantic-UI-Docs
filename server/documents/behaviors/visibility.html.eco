@@ -805,6 +805,11 @@ type        : 'UI Behavior'
           <td>Whether visibility conditions should be checked immediately on init</td>
         </tr>
         <tr>
+          <td>context</td>
+          <td>window</td>
+          <td>The scroll context visibility should use.</td>
+        </tr>
+        <tr>
           <td>refreshOnLoad</td>
           <td>true</td>
           <td>Whether visibility conditions should be checked on window <code>load</code>. This ensures that after images load content positions will be updated correctly.</td>

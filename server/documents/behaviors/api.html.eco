@@ -204,8 +204,22 @@ type        : 'UI Behavior'
           .api()
         ;
         </div>
+        <div class="ui info message">
+        <p>If you use a centralized API and use metadata to call the API, and if Semantic UI elements for which API calls are being made are initialized in a general fashion, then an apiSettings object must still always be provided in order for the API calls to happen (the object may be left empty or a setting such as turning debugging on or off could be included).</p>
+        </div>
+        <h5 class="ui header">Example:</h5>
+        <h6>This:</h6>
+        <div class="code javascript">
+        $('.ui.dropdown').dropdown(
+            {apiSettings: { } 
+            }
+          );</div>
+        </div>
+        <h6>Instead of:</h6>
+        <div class="code javascript">
+        $('.ui.dropdown').dropdown();
+        </div>
       </div>
-
       <div class="no example">
         <h4 class="ui header">Specifying DOM Events</h4>
         <p>If you need to override what action an API event occurs on you can use the <code>on</code> parameter.</p>

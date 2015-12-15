@@ -398,12 +398,16 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
     </div>
     <div class="ui form">
       <div class="field">
-        <label>Gender</label>
-        <select class="ui dropdown">
-          <option value="">Gender</option>
-          <option value="1">Male</option>
-          <option value="0">Female</option>
-        </select>
+          <label>Gender</label>
+          <div class="ui selection dropdown">
+              <input type="hidden" name="gender">
+              <i class="dropdown icon"></i>
+              <div class="default text">Gender</div>
+              <div class="menu">
+                  <div class="item" data-value="1">Male</div>
+                  <div class="item" data-value="0">Female</div>
+              </div>
+          </div>
       </div>
     </div>
   </div>

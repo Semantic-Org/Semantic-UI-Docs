@@ -13,7 +13,7 @@ semantic.api = {};
 // ready event
 semantic.api.ready = function() {
 
-  $.fn.api.settings.mockResponseAsync = function(settings, callback) {
+  $.fn.api.settings.responseAsync = function(settings, callback) {
     setTimeout(function() {
       callback({
         "success": "true"
@@ -27,8 +27,8 @@ semantic.api.ready = function() {
       type          : 'category',
       minCharacters : 3,
       apiSettings   : {
-        mockResponseAsync: false,
-        onFailure: function() {
+        responseAsync : false,
+        onFailure     : function() {
           $(this).search('display message', '<b>Hold off a few minutes</b> <div class="ui divider"></div> GitHub rate limit exceeded for anonymous search.');
         },
         onResponse: function(githubResponse) {

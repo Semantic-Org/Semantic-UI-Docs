@@ -46,7 +46,6 @@
 <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/search.css">
 <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/shape.css">
 <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/sidebar.css">
-<link rel="stylesheet" type="text/css" class="ui" href="/dist/components/slider.css">
 <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/sticky.css">
 <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/tab.css">
 <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/transition.css">

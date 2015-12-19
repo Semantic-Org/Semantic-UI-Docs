@@ -70,8 +70,8 @@ type        : 'UI Behavior'
     </div>
 
     <div class="no example">
-      <h4 class="ui header">Tools for Mocking</h4>
-      <p>New powerful callbacks like <a href="#mocking-responses"><code>mockResponse</code></a> and <a href="##using-custom-backends"><code>mockResponseAsync</code></a> let you asynchronously mock responses and trigger the same callbacks as your API.</p>
+      <h4 class="ui header">Tools for Third-Party Integrations & Mocking</h4>
+      <p>New powerful callbacks like <a href="#fulfilling-responses"><code>response</code></a> and <a href="#using-custom-backends"><code>responseAsync</code></a> let you asynchronously mock responses and trigger the same callbacks as your API.</p>
     </div>
 
 
@@ -210,7 +210,7 @@ type        : 'UI Behavior'
         <h4 class="ui header">Specifying DOM Events</h4>
         <p>If you need to override what action an API event occurs on you can use the <code>on</code> parameter.</p>
         <div class="ui message">
-          API requests for the following demos have been faked using API's <code>mockResponse</code> to avoid rate throttling from public APIs. No actual data is returned.
+          API requests for the following demos have been faked using API's <code>response</code> setting to avoid rate throttling from public APIs. No actual data is returned.
         </div>
         <div class="code" data-demo="true">
         $('.follow.button')
@@ -798,12 +798,12 @@ type        : 'UI Behavior'
       <h2 class="ui dividing header">Advanced Use</h2>
 
         <div class="no sync mocked example">
-          <h4 class="ui header">Mocking Responses</h4>
-          <p>In <code>2.0</code> API includes two new parameter <code>mockResponse</code> and <code>mockResponseAsync</code> which allows you to specify a string, or as a sync or aync function for returning an API response</p>
+          <h4 class="ui header">Fulfilling Responses</h4>
+          <p>In <code>2.0</code> API includes two new parameter <code>response</code> and <code>responseAsync</code> which allows you to specify a string, or as a sync or aync function for returning an API response. (These were previously <code>mockResponse</code> and <code>mockResponseAsync</code>.)</p>
           <div class="code" data-type="javascript" data-demo="true">
             $('.sync.mocked .button')
               .api({
-                mockResponse: {
+                response: {
                   success: true
                 }
               })
@@ -826,7 +826,7 @@ type        : 'UI Behavior'
           <div class="code" data-type="javascript" data-demo="true">
             $('.async.mocked .button')
               .api({
-                mockResponseAsync: function(settings, callback) {
+                responseAsync: function(settings, callback) {
                   var response = {
                     success: true
                   };
@@ -1078,16 +1078,28 @@ type        : 'UI Behavior'
           <td></td>
         </tr>
         <tr>
-          <td>mockResponse</td>
+          <td>response</td>
           <td>false</td>
           <td>Can be set to a javascript object which will be returned automatically instead of requesting JSON from server </td>
           <td>{} or false</td>
         </tr>
         <tr>
-          <td>mockResponseAsync(settings, callback)</td>
+          <td>responseAsync(settings, callback)</td>
           <td>false</td>
           <td>When specified, this function can be used to retrieve content from a server and return it asynchronously <b>instead of</b> a standard AJAX call. The callback function should return the server response.</td>
           <td>function or false</td>
+        </tr>
+        <tr>
+          <td>mockResponse</td>
+          <td>false</td>
+          <td>Alias of <code>response</code></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>mockResponseAsync</td>
+          <td>false</td>
+          <td>Alias of <code>responseAsync</code></td>
+          <td></td>
         </tr>
         <tr>
           <td>method</td>

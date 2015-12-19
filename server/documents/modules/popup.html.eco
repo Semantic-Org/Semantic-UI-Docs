@@ -692,11 +692,6 @@ themes      : ['Default']
           <td>10</td>
           <td>Number of iterations before giving up search for popup position when a popup cannot fit on screen</td>
         </tr>
-        <tr>
-          <td>inverted</td>
-          <td>false</td>
-          <td>Invert text and background colors</td>
-        </tr>
       </tbody>
     </table>
 

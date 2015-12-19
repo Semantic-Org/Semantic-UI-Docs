@@ -108,6 +108,8 @@ type        : 'UI Module'
       </div>
     </div>
 
+    <!-- Coming in 2.2
+
     <div class="local example">
       <h4 class="ui header">Selection</h4>
       <p>A search can used inside a form to store a selection</p>
@@ -130,7 +132,7 @@ type        : 'UI Module'
           })
         ;
       </div>
-    </div>
+    </div> -->
 
     <div class="another local example">
       <div class="ui search selection">

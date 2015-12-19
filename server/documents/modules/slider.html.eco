@@ -2,7 +2,7 @@
 layout      : 'default'
 css         : 'slider'
 element     : 'slider'
-elementType : 'module'
+elementType : 'Draft'
 standalone  : true
 
 title       : 'Slider'

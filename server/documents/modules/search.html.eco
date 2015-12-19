@@ -108,6 +108,69 @@ type        : 'UI Module'
       </div>
     </div>
 
+    <!-- Coming in 2.2
+
+    <div class="local example">
+      <h4 class="ui header">Selection</h4>
+      <p>A search can used inside a form to store a selection</p>
+      <div class="ui ignored info message">
+        <p>Search selections are identical to normal search elements but include an addition hidden input for storing the currently selected value for a form. They are also formatted to match selection styles found in other form components.</p>
+        <p>Search selections allow for a function similar to <a href="/modules/dropdown.html#selection">search selection dropdowns</a> and can be used to store an input value retrieved remotely. Selections can use either local or remote content sources.</p>
+      </div>
+      <div class="ui search selection">
+        <input type="hidden">
+        <div class="ui icon input">
+          <input class="prompt" type="text" placeholder="Search countries...">
+          <i class="remove icon"></i>
+        </div>
+        <div class="results"></div>
+      </div>
+      <div class="code" data-type="javascript">
+        $('.ui.search')
+          .search{
+            source: countries
+          })
+        ;
+      </div>
+    </div> -->
+
+    <div class="another local example">
+      <div class="ui search selection">
+        <input type="hidden">
+        <div class="ui icon input">
+          <input class="prompt" type="text" placeholder="Search countries...">
+          <i class="search icon"></i>
+          <i class="remove icon"></i>
+        </div>
+        <div class="results"></div>
+      </div>
+    </div>
+
+    <div class="another local example">
+      <div class="ui search selection">
+        <input type="hidden">
+        <div class="ui left icon input">
+          <input class="prompt" type="text" placeholder="Search countries...">
+          <i class="search icon"></i>
+          <i class="remove icon"></i>
+        </div>
+        <div class="results"></div>
+      </div>
+    </div>
+
+    <h2 class="ui dividing header">States</h2>
+    <div class="example">
+      <h4 class="ui header">Loading</h4>
+      <p>A search can show a loading indicator</p>
+      <div class="ui loading search">
+        <div class="ui icon input">
+          <input class="prompt" type="text" placeholder="Search...">
+          <i class="search icon"></i>
+        </div>
+        <div class="results"></div>
+      </div>
+    </div>
+
     <h2 class="ui dividing header">States</h2>
     <div class="example">
       <h4 class="ui header">Loading</h4>

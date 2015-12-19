@@ -1,7 +1,7 @@
-semantic.dropdown = {};
+semantic.checkbox = {};
 
 // ready event
-semantic.dropdown.ready = function() {
+semantic.checkbox.ready = function() {
 
   // selector cache
   var
@@ -32,5 +32,5 @@ semantic.dropdown.ready = function() {
 
 // attach ready event
 $(document)
-  .ready(semantic.dropdown.ready)
+  .ready(semantic.checkbox.ready)
 ;

@@ -692,11 +692,6 @@ themes      : ['Default']
           <td>10</td>
           <td>Number of iterations before giving up search for popup position when a popup cannot fit on screen</td>
         </tr>
-        <tr>
-          <td>inverted</td>
-          <td>false</td>
-          <td>Invert text and background colors</td>
-        </tr>
       </tbody>
     </table>
 
@@ -748,6 +743,12 @@ themes      : ['Default']
           <td>$module</td>
           <td>$popup</td>
           <td>Callback after popup is hidden</td>
+        </tr>
+        <tr>
+          <td>onUnplaceable</td>
+          <td>$module</td>
+          <td>$popup</td>
+          <td>Callback after popup cannot be plaed on screen</td>
         </tr>
       </tbody>
     </table>
@@ -879,11 +880,13 @@ themes      : ['Default']
           <td>errors</td>
           <td colspan="2">
             <div class="code">
-    error: {
-      content   : 'Your popup has no content specified',
-      method    : 'The method you called is not defined.',
-      recursion : 'Popup attempted to reposition element to fit, but could not find an adequate position.'
-    }
+            error: {
+              invalidPosition : 'The position you specified is not a valid position',
+              cannotPlace     : 'Popup does not fit within the boundaries of the viewport',
+              method          : 'The method you called is not defined.',
+              noTransition    : 'This module requires ui transitions <https://github.com/Semantic-Org/UI-Transition>',
+              notFound        : 'The target or popup you specified does not exist on the page'
+            }
             </div>
           </td>
         </tr>

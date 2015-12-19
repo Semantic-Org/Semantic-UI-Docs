@@ -7,20 +7,28 @@ title      : 'Test Page'
 type       : 'Library'
 ---
 
-<div class="ui container">
-
-
-    <select class="ui search dropdown">
-      <%- @partial('examples/single/state-options') %>
-    </select>
-</div>
+<h1 id="hello">Hello</h1>
+<div class="ui popup">POPUP</div>
+<h1 id="result"></h1>
+<div class="ui button">Update</div>
 
 </body>
 <!-- TEST JS HERE !-->
 <script>
 $(document)
   .ready(function(){
-    $('.ui.search.dropdown').dropdown();
+    $('#hello').popup({
+        on: 'click'
+    });
+
+    function update() {
+        var v = $('#hello').popup('is visible');
+        $('#result').html(v.toString());
+    }
+
+    update();
+
+    $('.button').click(update);
   })
 ;
 </script>

@@ -603,7 +603,7 @@ themes      : ['Default', 'Colored']
       >
     <p>Behaviors are accessible with Javascript using the syntax:<p>
     <div class="code">
-    $('.ui.checkbox').checkbox('behavior', argumentOne, argumentTwo...);
+    $('.ui.checkbox').checkbox(<i>behavior</i>, argumentOne, argumentTwo...);
     </div>
 
     <table class="ui definition celled table segment">

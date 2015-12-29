@@ -7,7 +7,7 @@ standalone  : true
 
 title       : 'Slider'
 description : "A slider allows a user to select a numeric value from a designated set of possible values"
-type        : 'UI Module'
+type        : 'Draft'
 
 themes      : ['Default']
 ---

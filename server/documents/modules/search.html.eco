@@ -132,7 +132,7 @@ type        : 'UI Module'
           })
         ;
       </div>
-    </div> -->
+    </div>
 
     <div class="another local example">
       <div class="ui search selection">
@@ -156,7 +156,7 @@ type        : 'UI Module'
         </div>
         <div class="results"></div>
       </div>
-    </div>
+    </div> -->
 
     <h2 class="ui dividing header">States</h2>
     <div class="example">

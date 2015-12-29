@@ -8,7 +8,7 @@ elementType : 'draft'
 
 title       : 'State'
 description : 'State allows elements to trigger actions on a server'
-type        : 'UI Behavior'
+type        : 'Draft'
 ---
 
 <script src="/javascript/library/serialize-object.js"></script>

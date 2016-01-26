@@ -293,11 +293,11 @@ themes      : ['Default', 'Material']
           </div>
           <div class="actions">
             <div class="two fluid ui inverted buttons">
-              <div class="ui red basic inverted button">
+              <div class="ui cancel red basic inverted button">
                 <i class="remove icon"></i>
                 No
               </div>
-              <div class="ui green basic inverted button">
+              <div class="ui ok green basic inverted button">
                 <i class="checkmark icon"></i>
                 Yes
               </div>

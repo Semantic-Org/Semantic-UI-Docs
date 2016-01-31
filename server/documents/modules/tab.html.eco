@@ -370,6 +370,7 @@ themes      : ['Default']
       <div class="code" data-type="javascript">
         $('.ui.menu .item')
           .tab({
+            history : true,
             historyType : 'state',
             // base url for all other path changes
             path        : '/my/base/url'

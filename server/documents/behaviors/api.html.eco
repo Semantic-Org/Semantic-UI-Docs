@@ -234,7 +234,7 @@ type        : 'UI Behavior'
           })
         ;
         </div>
-        <p>Keep in mind passing a new settings object will destroy the previous instance, and all its settings and events. If you want to preserve the previous instance, you can trigger a new request with the the <code>query</code> behavior</p>
+        <p>Keep in mind passing a new settings object will destroy the previous instance, and all its settings and events. If you want to preserve the previous instance, you can trigger a new request with the <code>query</code> behavior</p>
         <div class="code" data-demo="true">
         // set-up API button with events
         $('.follow.button')

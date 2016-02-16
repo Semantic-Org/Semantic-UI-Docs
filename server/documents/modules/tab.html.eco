@@ -583,6 +583,11 @@ themes      : ['Default']
           <td>Whether tab should load remote content as same url as history</td>
         </tr>
         <tr>
+          <td>deactivate</td>
+          <td>'siblings'</td>
+          <td>When set to <code>siblings</code> will only deactivate elements that are DOM siblings with the activated element. When set to <code>all</code> the component will deactivate all other elements initialized at the same time.</td>
+        </tr>
+        <tr>
           <td>history</td>
           <td>false</td>
           <td>Whether to record history events for tab changes</td>

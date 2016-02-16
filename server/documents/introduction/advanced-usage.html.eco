@@ -12,6 +12,7 @@ type        : 'Introduction'
 
 <div class="main ui intro container">
 
+
   <h2 class="ui dividing header">Custom Pipelines</h2>
   <div class="no example">
     <h4>Importing Gulp Tasks</h4>
@@ -27,6 +28,70 @@ type        : 'Introduction'
     gulp.task('watch ui', watch);
     gulp.task('build ui', build);
     </div>
+  </div>
+
+  <h2 class="ui dividing header">Semantic.json Settings</h2>
+
+  <div class="no example">
+    <h4>Auto-Install</h4>
+    <p>Running <code>npm install</code> normally will launch an interactive installer, to allow this installer to run without user interaction include a special flag <code>autoInstall: true</code>in your <code>semantic.json</code> file.</p>
+    <div class="ignored code" data-type="JS" data-title="semantic.json">
+     {
+      // install will now automatically build your project files without user interaction
+      "autoInstall": true,
+
+      // these settings may be different
+      "base": "",
+      "paths": {
+        "source": {
+          "config": "src/theme.config",
+          "definitions": "src/definitions/",
+          "site": "src/site/",
+          "themes": "src/themes/"
+        },
+        "output": {
+          "packaged": "dist/",
+          "uncompressed": "dist/components/",
+          "compressed": "dist/components/",
+          "themes": "dist/themes/"
+        },
+        "clean": "dist/"
+      },
+      "permission": false,
+      "rtl": false,
+    }
+    </div>
+  </div>
+
+    <div class="no example">
+      <h4>Right-to-left (RTL) Languages</h4>
+      <p>Including the flag <code>rtl:true</code> will build Semantic UI using <a href="https://github.com/MohammadYounes/rtlcss" target="_blank">RTLCSS</a>.</p>
+      <p>To build both LTR and RTL versions use the flag <code>rtl: 'both'</code></p>
+      <div class="ignored code" data-type="JS" data-title="semantic.json">
+       {
+        // builds both LTR and RTL version
+        "rtl": "both",
+
+        // these settings may be different
+        "base": "",
+        "paths": {
+          "source": {
+            "config": "src/theme.config",
+            "definitions": "src/definitions/",
+            "site": "src/site/",
+            "themes": "src/themes/"
+          },
+          "output": {
+            "packaged": "dist/",
+            "uncompressed": "dist/components/",
+            "compressed": "dist/components/",
+            "themes": "dist/themes/"
+          },
+          "clean": "dist/"
+        },
+        "permission": false,
+      }
+      </div>
   </div>
 
   <h2 class="ui dividing header">Prototyping with Semantic UI</h2>

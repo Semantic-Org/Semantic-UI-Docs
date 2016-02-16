@@ -6,29 +6,38 @@ standalone : true
 title      : 'Test Page'
 type       : 'Library'
 ---
+<div class="ui top attached tabular menu">
+  <a class="item" data-tab="one">one</a>
+  <a class="item" data-tab="two">two</a>
+  <a class="item" data-tab="three">three</a>
+</div>
 
-<h1 id="hello">Hello</h1>
-<div class="ui popup">POPUP</div>
-<h1 id="result"></h1>
-<div class="ui button">Update</div>
+<div class="ui bottom attached tab segment" data-tab="one">One</div>
+<div class="ui bottom attached tab segment" data-tab="two">Two</div>
+<div class="ui bottom attached tab segment" data-tab="three">Three</div>
 
+<div class="ui segment" id="log"></div>
+
+<div class="ui button">
+  Change tab
+</div>
 </body>
 <!-- TEST JS HERE !-->
 <script>
 $(document)
   .ready(function(){
-    $('#hello').popup({
-        on: 'click'
+
+    $tabs = $('.tabular.menu .item');
+
+    $tabs.tab({
+      onFirstLoad: function(tabPath) {
+       $('#log').append('<p>First load: ' + tabPath + '</p>');
+      }
     });
+  $('.button').on('click', function() {
 
-    function update() {
-        var v = $('#hello').popup('is visible');
-        $('#result').html(v.toString());
-    }
-
-    update();
-
-    $('.button').click(update);
+    $.tab('change tab', 'one');
+  });
   })
 ;
 </script>

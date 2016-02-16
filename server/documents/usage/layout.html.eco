@@ -47,6 +47,17 @@ type        : 'Usage'
         </div>
       </div>
     </a>
+    <a class="ui card" href="/examples/attached.html">
+      <div class="image">
+        <img src="/images/examples/attached.png">
+      </div>
+      <div class="content">
+        <div class="header">Attached Content</div>
+        <div class="description">
+          Examples of content that can attach to other content
+        </div>
+      </div>
+    </a>
     <a class="ui card" href="/examples/bootstrap.html">
       <div class="image">
         <img src="/images/examples/bootstrap.png">

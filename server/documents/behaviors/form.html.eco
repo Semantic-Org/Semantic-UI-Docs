@@ -442,6 +442,49 @@ type        : 'UI Behavior'
       </table>
     </div>
 
+    <div class="custom rule example">
+      <h4 class="ui header">Adding Custom Rules</h4>
+      <p>You can extend form validation to include your own rules. Keep in mind these will need to be executed synchronously.</p>
+      <div class="ignore code">
+      // some arbitrary business-logic
+      window.user = {
+        name       : 'Simon',
+        adminLevel : 1
+      };
+      // custom form validation rule
+      $.fn.form.settings.rules.adminLevel = function(value, adminLevel) {
+        return (window.user.adminLevel >= adminLevel)
+      };
+      $('.ui.form')
+        .form({
+          fields: {
+            dog: {
+              identifier: 'dog',
+              rules: [
+                {
+                  type: 'adminLevel[2]',
+                  prompt: 'You must be at least a level-2 admin to add a dog'
+                }
+              ]
+            }
+          }
+        })
+      ;
+      </div>
+      <form class="ui form segment">
+        <p>Let's go ahead and get you signed up.</p>
+        <div class="field">
+          <label>Dog</label>
+          <input placeholder="Dog" name="dog" type="text">
+        </div>
+        <div class="ui blue submit button">
+          <i class="add icon"></i>
+          Add Dog
+        </div>
+        <div class="ui error message"></div>
+      </form>
+    </div>
+
     <div class="inline example">
       <h4 class="ui header">Built-in Events</h4>
       <p>
@@ -1543,22 +1586,24 @@ type        : 'UI Behavior'
       <div class="ignore code">
       $('.ui.form')
         .form({
-          dog: {
-            identifier: 'dog',
-            rules: [
-              {
-                type: 'empty',
-                prompt: 'You must have a dog to add'
-              },
-              {
-                type: 'contains[fluffy]',
-                prompt: 'I only want you to add fluffy dogs!'
-              },
-              {
-                type: 'not[mean]',
-                prompt: 'Why would you add a mean dog to the list?'
-              }
-            ]
+          fields: {
+            dog: {
+              identifier: 'dog',
+              rules: [
+                {
+                  type: 'empty',
+                  prompt: 'You must have a dog to add'
+                },
+                {
+                  type: 'contains[fluffy]',
+                  prompt: 'I only want you to add fluffy dogs!'
+                },
+                {
+                  type: 'not[mean]',
+                  prompt: 'Why would you add a mean dog to the list?'
+                }
+              ]
+            }
           }
         })
       ;

@@ -7,28 +7,25 @@ title      : 'Test Page'
 type       : 'Library'
 ---
 
-<h1 id="hello">Hello</h1>
-<div class="ui popup">POPUP</div>
-<h1 id="result"></h1>
-<div class="ui button">Update</div>
 
 </body>
 <!-- TEST JS HERE !-->
 <script>
 $(document)
   .ready(function(){
-    $('#hello').popup({
-        on: 'click'
-    });
+    $("#h").click(function() {
+  $('.ui.modal').modal({
+      onHide: function() {
+      },
+      blurring: true,
+      inverted: true,
+      observeChanges: true
+    })
+    .modal('show');
+});
 
-    function update() {
-        var v = $('#hello').popup('is visible');
-        $('#result').html(v.toString());
-    }
+$('.hide').popup();
 
-    update();
-
-    $('.button').click(update);
   })
 ;
 </script>

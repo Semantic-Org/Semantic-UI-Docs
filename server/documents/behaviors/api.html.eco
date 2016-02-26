@@ -822,7 +822,7 @@ type        : 'UI Behavior'
 
         <div class="no async mocked example">
           <h4 class="ui header">Using Custom Backends</h4>
-          <p>Using <code>mockResponseAsync</code> you can specify a function which can execute your API request. This allows for you to use custom backends or wrappers outside of <code>$.ajax</code> for integrating API requests.</p>
+          <p>Using <code>responseAsync</code> you can specify a function which can execute your API request. This allows for you to use custom backends or wrappers outside of <code>$.ajax</code> for integrating API requests.</p>
           <div class="code" data-type="javascript" data-demo="true">
             $('.async.mocked .button')
               .api({

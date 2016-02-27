@@ -437,9 +437,9 @@ themes      : ['Default']
         <div class="column"><i class="diamond icon"></i>Diamond</div>
         <div class="column"><i class="fax icon"></i>Fax</div>
         <div class="column"><i class="fire extinguisher icon"></i>Fire Extinguisher</div>
-        <div class="column"><i class="fire icon"></i>Fire</div>ag Checkered</div>
-        <div class="column"><i class="flag icon">
-        <div class="column"><i class="flag checkered icon"></i>Fl</i>Flag</div>
+        <div class="column"><i class="fire icon"></i>Fire</div>
+        <div class="column"><i class="flag checkered icon"></i>Flag Checkered</div>
+        <div class="column"><i class="flag icon"></i>Flag</div>
         <div class="column"><i class="flag outline icon"></i>Flag Outline</div>
         <div class="column"><i class="gift icon"></i>Gift</div>
         <div class="column"><i class="hourglass empty icon"></i>Hourglass Empty</div>

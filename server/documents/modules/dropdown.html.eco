@@ -2613,13 +2613,13 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>Is called after a dropdown selection is removed using a multiple select dropdown, only receives the removed value</td>
         </tr>
         <tr>
-          <td>onLabelCreate($label)</td>
-          <td>$label</td>
-          <td>Allows you to modify a label before it is added. Expects <code>$label</code> to be returned.</td>
+          <td>onLabelCreate(value, text)</td>
+          <td>$label (jQDOM)</td>
+          <td>Allows you to modify a label before it is added. Expects the jQ DOM element for a label to be returned.</td>
         </tr>
         <tr>
           <td>onLabelRemove(value)</td>
-          <td>$label</td>
+          <td>$label (jqDOM)</td>
           <td>Called when a label is remove, <code>return false;</code> will prevent the label from being removed.</td>
         </tr>
         <tr>

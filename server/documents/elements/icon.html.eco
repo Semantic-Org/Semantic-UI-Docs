@@ -33,7 +33,7 @@ themes      : ['Default']
       <h4 class="ui header">Web Content</h4>
       <p>Icons can represent types of content found on websites</p>
       <div class="ui doubling five column grid">
-        <div class="column"><i class="add to calendar icon"></i>Add to Calendar</div>
+        <div class="column"><i class="add to calendar icon"></i>Add To Calendar</div>
         <div class="column"><i class="alarm icon icon"></i>Alarm</div>
         <div class="column"><i class="alarm outline icon"></i>Alarm Outline</div>
         <div class="column"><i class="alarm mute outline icon"></i>Alarm Mute Outline</div>
@@ -43,7 +43,7 @@ themes      : ['Default']
         <div class="column"><i class="bug icon"></i>Bug</div>
         <div class="column"><i class="calendar outline icon"></i>Calendar Outline</div>
         <div class="column"><i class="calendar icon"></i>Calendar</div>
-        <div class="column"><i class="checked calendar icon"></i>Checked calendar</div>
+        <div class="column"><i class="checked calendar icon"></i>Checked Calendar</div>
         <div class="column"><i class="cloud icon"></i>Cloud</div>
         <div class="column"><i class="code icon"></i>Code</div>
         <div class="column"><i class="comment outline icon"></i>Comment Outline</div>
@@ -54,49 +54,52 @@ themes      : ['Default']
         <div class="column"><i class="copyright icon"></i>Copyright</div>
         <div class="column"><i class="creative commons icon"></i>Creative Commons</div>
         <div class="column"><i class="dashboard icon"></i>Dashboard</div>
-        <div class="column"><i class="delete calendar icon"></i>Delete calendar</div>
-        <div class="column"><i class="external square icon"></i>External square</div>
+        <div class="column"><i class="delete calendar icon"></i>Delete Calendar</div>
+        <div class="column"><i class="external square icon"></i>External Square</div>
         <div class="column"><i class="external icon"></i>External</div>
         <div class="column"><i class="external icon"></i>External</div>
         <div class="column"><i class="eyedropper icon"></i>Eyedropper</div>
         <div class="column"><i class="feed icon"></i>Feed</div>
         <div class="column"><i class="find icon"></i>Find</div>
-        <div class="column"><i class="hand peace icon"></i>Hand peace</div>
-        <div class="column"><i class="hand pointer icon"></i>Hand pointer</div>
         <div class="column"><i class="hashtag icon"></i>Hashtag</div>
         <div class="column"><i class="heartbeat icon"></i>Heartbeat</div>
         <div class="column"><i class="history icon"></i>History</div>
         <div class="column"><i class="home icon"></i>Home</div>
+        <div class="column"><i class="hourglass full icon"></i>Hourglass Full</div>
+        <div class="column"><i class="hourglass start icon"></i>Hourglass Start</div>
+        <div class="column"><i class="hourglass half icon"></i>Hourglass Half</div>
+        <div class="column"><i class="hourglass end icon"></i>Hourglass End</div>
+        <div class="column"><i class="hourglass empty icon"></i>Hourglass Empty</div>
         <div class="column"><i class="idea icon"></i>Idea</div>
         <div class="column"><i class="image icon"></i>Image</div>
         <div class="column"><i class="inbox icon"></i>Inbox</div>
         <div class="column"><i class="industry icon"></i>Industry</div>
         <div class="column"><i class="lab icon"></i>Lab</div>
         <div class="column"><i class="mail outline icon"></i>Mail Outline</div>
-        <div class="column"><i class="mail square icon"></i>Mail square</div>
+        <div class="column"><i class="mail square icon"></i>Mail Square</div>
         <div class="column"><i class="mail icon"></i>Mail</div>
-        <div class="column"><i class="mouse pointer icon"></i>Mouse pointer</div>
+        <div class="column"><i class="mouse pointer icon"></i>Mouse Pointer</div>
         <div class="column"><i class="options icon"></i>Options</div>
-        <div class="column"><i class="paint brush icon"></i>Paint brush</div>
+        <div class="column"><i class="paint brush icon"></i>Paint Brush</div>
         <div class="column"><i class="payment icon"></i>Payment</div>
         <div class="column"><i class="percent icon"></i>Percent</div>
         <div class="column"><i class="privacy icon"></i>Privacy</div>
         <div class="column"><i class="protect icon"></i>Protect</div>
         <div class="column"><i class="registered icon"></i>Registered</div>
-        <div class="column"><i class="remove from calendar icon"></i>Remove from calendar</div>
+        <div class="column"><i class="remove from calendar icon"></i>Remove From Calendar</div>
         <div class="column"><i class="search icon"></i>Search</div>
         <div class="column"><i class="setting icon"></i>Setting</div>
         <div class="column"><i class="settings icon"></i>Settings</div>
         <div class="column"><i class="shop icon"></i>Shop</div>
-        <div class="column"><i class="shopping bag icon"></i>Shopping bag</div>
-        <div class="column"><i class="shopping basket icon"></i>Shopping basket</div>
+        <div class="column"><i class="shopping bag icon"></i>Shopping Bag</div>
+        <div class="column"><i class="shopping basket icon"></i>Shopping Basket</div>
         <div class="column"><i class="signal icon"></i>Signal</div>
         <div class="column"><i class="sitemap icon"></i>Sitemap</div>
         <div class="column"><i class="tag icon"></i>Tag</div>
         <div class="column"><i class="tags icon"></i>Tags</div>
         <div class="column"><i class="tasks icon"></i>Tasks</div>
         <div class="column"><i class="terminal icon"></i>Terminal</div>
-        <div class="column"><i class="text telephone icon"></i>Text telephone</div>
+        <div class="column"><i class="text telephone icon"></i>Text Telephone</div>
         <div class="column"><i class="ticket icon"></i>Ticket</div>
         <div class="column"><i class="trademark icon"></i>Trademark</div>
         <div class="column"><i class="trophy icon"></i>Trophy</div>
@@ -131,12 +134,16 @@ themes      : ['Default']
         <i class="eyedropper icon"></i>
         <i class="feed icon"></i>
         <i class="find icon"></i>
-        <i class="hand peace icon"></i>
         <i class="hand pointer icon"></i>
         <i class="hashtag icon"></i>
         <i class="heartbeat icon"></i>
         <i class="history icon"></i>
         <i class="home icon"></i>
+        <i class="hourglass empty icon"></i>
+        <i class="hourglass end icon"></i>
+        <i class="hourglass full icon"></i>
+        <i class="hourglass half icon"></i>
+        <i class="hourglass start icon"></i>
         <i class="idea icon"></i>
         <i class="image icon"></i>
         <i class="inbox icon"></i>
@@ -176,7 +183,8 @@ themes      : ['Default']
     <div class="icon example">
       <h4 class="ui header">User Actions</h4>
       <p>Icons can represent common actions a user can take</p>
-      <div class="ui doubling five column grid">        <div class="column"><i class="add to cart icon"></i>Add To Cart
+      <div class="ui doubling five column grid">
+        <div class="column"><i class="add to cart icon"></i>Add To Cart</div>
         <div class="column"><i class="add user icon"></i>Add User</div>
         <div class="column"><i class="adjust icon"></i>Adjust</div>
         <div class="column"><i class="archive icon"></i>Archive</div>
@@ -187,8 +195,8 @@ themes      : ['Default']
         <div class="column"><i class="clone icon"></i>Clone</div>
         <div class="column"><i class="cloud download icon"></i>Cloud Download</div>
         <div class="column"><i class="cloud upload icon"></i>Cloud Upload</div>
-        <div class="column"><i class="commenting icon"></i>Commenting</div>
-        <div class="column"><i class="commenting outline icon"></i>Commenting Outline</div>
+        <div class="column"><i class="talk icon"></i>Talk</div>
+        <div class="column"><i class="talk outline icon"></i>Talk Outline</div>
         <div class="column"><i class="compress icon"></i>Compress</div>
         <div class="column"><i class="configure icon"></i>Configure</div>
         <div class="column"><i class="download icon"></i>Download</div>
@@ -198,11 +206,6 @@ themes      : ['Default']
         <div class="column"><i class="expand icon"></i>Expand</div>
         <div class="column"><i class="external share icon"></i>External Share</div>
         <div class="column"><i class="filter icon"></i>Filter</div>
-        <div class="column"><i class="hand lizard icon"></i>Hand Lizard</div>
-        <div class="column"><i class="hand paper icon"></i>Hand Paper</div>
-        <div class="column"><i class="hand rock icon"></i>Hand Rock</div>
-        <div class="column"><i class="hand scissors icon"></i>Hand Scissors</div>
-        <div class="column"><i class="hand spock icon"></i>Hand Spock</div>
         <div class="column"><i class="hide icon"></i>Hide</div>
         <div class="column"><i class="in cart icon"></i>In Cart</div>
         <div class="column"><i class="lock icon"></i>Lock</div>
@@ -252,8 +255,8 @@ themes      : ['Default']
         <i class="clone icon"></i>
         <i class="cloud download icon"></i>
         <i class="cloud upload icon"></i>
-        <i class="commenting icon"></i>
-        <i class="commenting outline icon"></i>
+        <i class="talk icon"></i>
+        <i class="talk outline icon"></i>
         <i class="compress icon"></i>
         <i class="configure icon"></i>
         <i class="download icon"></i>
@@ -263,11 +266,6 @@ themes      : ['Default']
         <i class="expand icon"></i>
         <i class="external share icon"></i>
         <i class="filter icon"></i>
-        <i class="hand lizard icon"></i>
-        <i class="hand paper icon"></i>
-        <i class="hand rock icon"></i>
-        <i class="hand scissors icon"></i>
-        <i class="hand spock icon"></i>
         <i class="hide icon"></i>
         <i class="in cart icon"></i>
         <i class="lock icon"></i>
@@ -427,7 +425,6 @@ themes      : ['Default']
       <p>Icons can be used to represent common objects</p>
       <div class="ui doubling five column grid">
         <div class="column"><i class="anchor icon"></i>Anchor</div>
-        <div class="column"><i class="law icon"></i>Law</div>
         <div class="column"><i class="bar icon"></i>Bar</div>
         <div class="column"><i class="bomb icon"></i>Bomb</div>
         <div class="column"><i class="book icon"></i>Book</div>
@@ -442,11 +439,14 @@ themes      : ['Default']
         <div class="column"><i class="flag icon"></i>Flag</div>
         <div class="column"><i class="flag outline icon"></i>Flag Outline</div>
         <div class="column"><i class="gift icon"></i>Gift</div>
-        <div class="column"><i class="hourglass empty icon"></i>Hourglass Empty</div>
-        <div class="column"><i class="hourglass end icon"></i>Hourglass End</div>
-        <div class="column"><i class="hourglass full icon"></i>Hourglass Full</div>
-        <div class="column"><i class="hourglass half icon"></i>Hourglass Half</div>
-        <div class="column"><i class="hourglass start icon"></i>Hourglass Start</div>
+        <div class="column"><i class="hand lizard icon"></i>Hand Lizard</div>
+        <div class="column"><i class="hand peace icon"></i>Hand Peace</div>
+        <div class="column"><i class="hand paper icon"></i>Hand Paper</div>
+        <div class="column"><i class="hand pointer icon"></i>Hand Pointer</div>
+        <div class="column"><i class="hand rock icon"></i>Hand Rock</div>
+        <div class="column"><i class="hand scissors icon"></i>Hand Scissors</div>
+        <div class="column"><i class="hand spock icon"></i>Hand Spock</div>
+        <div class="column"><i class="law icon"></i>Law</div>
         <div class="column"><i class="leaf icon"></i>Leaf</div>
         <div class="column"><i class="legal icon"></i>Legal</div>
         <div class="column"><i class="lemon icon"></i>Lemon</div>
@@ -472,7 +472,6 @@ themes      : ['Default']
       </div>
       <div class="existing code">
         <i class="anchor icon"></i>
-        <i class="law icon"></i>
         <i class="bar icon"></i>
         <i class="bomb icon"></i>
         <i class="book icon"></i>
@@ -487,11 +486,13 @@ themes      : ['Default']
         <i class="flag icon"></i>
         <i class="flag outline icon"></i>
         <i class="gift icon"></i>
-        <i class="hourglass empty icon"></i>
-        <i class="hourglass end icon"></i>
-        <i class="hourglass full icon"></i>
-        <i class="hourglass half icon"></i>
-        <i class="hourglass start icon"></i>
+        <i class="hand lizard icon"></i>
+        <i class="hand peace icon"></i>
+        <i class="hand paper icon"></i>
+        <i class="hand rock icon"></i>
+        <i class="hand scissors icon"></i>
+        <i class="hand spock icon"></i>
+        <i class="law icon"></i>
         <i class="leaf icon"></i>
         <i class="legal icon"></i>
         <i class="lemon icon"></i>
@@ -842,7 +843,7 @@ themes      : ['Default']
         <div class="column"><i class="rss icon"></i>Rss</div>
         <div class="column"><i class="rss square icon"></i>Rss Square</div>
         <div class="column"><i class="server icon"></i>Server</div>
-        <div class="column"><i class="usb icon"></i>USB</div>
+        <div class="column"><i class="usb icon"></i>Usb</div>
       </div>
       <div class="existing code">
         <i class="barcode icon"></i>

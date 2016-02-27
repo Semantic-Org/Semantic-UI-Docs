@@ -659,6 +659,11 @@ type        : 'UI Module'
           <td>Name used in debug logs</td>
         </tr>
         <tr>
+          <td>silent</td>
+          <td>False</td>
+          <td>Silences all console output including error messages, regardless of other debug settings.</td>
+        </tr>
+        <tr>
           <td>debug</td>
           <td>False</td>
           <td>Provides standard debug output to console</td>

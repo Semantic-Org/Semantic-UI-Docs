@@ -15,7 +15,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
 <link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/progress.less" />
 <script src="/javascript/progress.js"></script>
 
-<%- @partial('header', { tabs: {  definition: 'Definition', usage: 'Usage', settings: 'Settings' }}) %>
+<%- @partial('header', { tabs: 'module' }) %>
 
 <div class="main ui container">
 
@@ -540,6 +540,93 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
               ratio: '{value} de {total}'
             }
           })
+        ;
+      </div>
+    </div>
+
+  </div>
+  <div class="ui examples tab" data-tab="examples">
+
+    <h2 class="ui dividing header">Examples</h2>
+
+    <div class="rapid example">
+      <h4 class="ui header">Rapid Update</h4>
+      <p>Progress bar will automatically poll for the last progress value after completing an animation, so that animation easing continues to work smoothly, even if update events occur much more frequently than UI updates.</p>
+      <a class="ui button" data-url="/images/large-pdf.pdf">
+        Rapidly Update Progress
+      </a>
+      <div class="code" data-type="html" data-preview="true">
+        <div class="ui indicating progress" data-value="1" data-total="100" id="example5">
+          <div class="bar">
+            <div class="progress"></div>
+          </div>
+          <div class="label">Waiting for you to press button</div>
+        </div>
+      </div>
+      <div class="evaluated code" data-type="javascript" data-demo="true">
+        $('.rapid.example .ui.button')
+          .on('click', function() {
+            var
+              $button = $(this),
+              currentProgress = 1,
+              updateEvent
+            ;
+            // updates every 20ms until complete
+            updateEvent = setInterval(function() {
+              var
+                $progress = $('.rapid.example .ui.progress')
+              ;
+              currentProgress += 1;
+              $progress
+                .progress('set progress', currentProgress)
+              ;
+              $button.text(currentProgress);
+              if(currentProgress >= 100) {
+                clearInterval(updateEvent)
+              }
+            }, 20)
+          })
+        ;
+        $('.rapid.example .ui.progress')
+          .progress({
+            duration: 200,
+            text: {
+              active: '{value} of {total} done'
+            }
+          })
+        ;
+      </div>
+    </div>
+    <div class="upload example">
+      <h4 class="ui header">File Upload</h4>
+      <p>Progress can be used to display the progress of a file upload event</p>
+      <a class="ui button" data-url="/images/large-pdf.pdf">
+        Load PDF
+      </a>
+      <div class="code" data-type="html" data-preview="true">
+        <div class="ui indicating progress" data-value="1" data-total="20" id="example5">
+          <div class="bar"></div>
+          <div class="label">Uploading File</div>
+        </div>
+      </div>
+      <div class="evaluated code" data-type="javascript" data-demo="true">
+        $('.upload.example .ui.button')
+          .api({
+            debug: true,
+            dataType: 'text',
+            onSuccess: function() {
+              console.log('Completed downloading');
+            },
+            onError: function(error) {
+              console.log(error);
+            },
+            onDownloadProgress: function(progress) {
+              console.log('progress', progress);
+            }
+          })
+        ;
+        $('.upload.example .ui.progress')
+          .progress()
         ;
       </div>
     </div>

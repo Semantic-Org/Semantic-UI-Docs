@@ -10,21 +10,43 @@ type       : 'Library'
 
 </body>
 <!-- TEST JS HERE !-->
+<div class="ui container">
+    <div id="statistics-container" class="ui two statistics">
+    <div class="tiny statistic">
+        <div class="value">
+            <i class="world icon"></i> <span id="monthly-rank">123</span>
+        </div>
+        <div class="label" data-i18n>Global rank</div>
+    </div>
+    <div class="tiny statistic">
+        <div class="value">
+            <i class="money icon"></i> <span id="monthly-tokens">7932</span>
+        </div>
+        <div class="label" data-i18n>Score</div>
+    </div>
+</div>
+
+<!-- Somewhere else -->
+<br><br>
+
+<div class="ui tiny statistic">
+    <div class="value">
+        <i class="world icon"></i> <span id="monthly-rank">123</span>
+    </div>
+    <div class="label" data-i18n>Global rank</div>
+</div>
+<div class="ui tiny statistic">
+    <div class="value">
+        <i class="money icon"></i> <span id="monthly-tokens">7932</span>
+    </div>
+    <div class="label" data-i18n>Score</div>
+</div>
+</div>
+
+</div>
 <script>
 $(document)
   .ready(function(){
-    $("#h").click(function() {
-  $('.ui.modal').modal({
-      onHide: function() {
-      },
-      blurring: true,
-      inverted: true,
-      observeChanges: true
-    })
-    .modal('show');
-});
-
-$('.hide').popup();
 
   })
 ;

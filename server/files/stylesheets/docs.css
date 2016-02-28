@@ -136,6 +136,9 @@ blockquote .author {
   margin-right: 1em;
 }
 
+#example #toc > * {
+  will-change: transform;
+}
 #example #toc > :last-child {
   padding-bottom: 2em;
 }

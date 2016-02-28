@@ -1071,11 +1071,11 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
       <div class="two fields">
         <div class="disabled field">
           <label>First Name</label>
-          <input placeholder="Read Only" disabled type="text">
+          <input placeholder="Read Only" type="text" disabled tabindex="-1">
         </div>
         <div class="disabled field">
           <label>Last Name</label>
-          <input placeholder="Disabled" disabled type="text">
+          <input placeholder="Disabled" type="text" disabled tabindex="-1">
         </div>
       </div>
     </div>

@@ -338,7 +338,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
     <div class="ui vertical menu">
       <a class="active teal item">
         Inbox
-        <div class="ui teal pointing left label">1</div>
+        <div class="ui teal left pointing label">1</div>
       </a>
       <a class="item">
         Spam

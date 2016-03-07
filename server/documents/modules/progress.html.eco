@@ -705,20 +705,20 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
             var
               $progress       = $('.rapid.example .ui.progress'),
               $button         = $(this),
-              isComplete      = $progress.progress('is complete'),
               updateEvent
             ;
-            // restart count if done
-            if(isComplete) {
-              $progress.progress('reset');
-            }
+            // restart to zero
+            clearInterval(window.updateEvent)
+            $progress.progress('reset');
+
             // updates every 10ms until complete
-            updateEvent = setInterval(function() {
+            window.updateEvent = setInterval(function() {
               $progress.progress('increment');
               $button.text( $progress.progress('get value') );
               // stop update when complete
-              if(isComplete) {
-                clearInterval(updateEvent)
+              console.log($progress.progress('is complete'));
+              if($progress.progress('is complete')) {
+                clearInterval(window.updateEvent)
               }
             }, 10);
           })

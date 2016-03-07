@@ -544,6 +544,142 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
       </div>
     </div>
 
+
+    <h2 class="ui dividing header">Behavior</h2>
+
+    <p>All the following behaviors can be called using the syntax:</p>
+    <div class="code">
+    $('.your.element')
+      .progress('behavior name', argumentOne, argumentTwo)
+    ;
+    </div>
+
+    <table class="ui definition celled sortable table segment">
+      <thead>
+        <th>Behavior</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>set percent(percent)</td>
+          <td>Sets current percent of progress to value. If using a total will convert from percent to estimated value.</td>
+        </tr>
+        <tr>
+          <td>set progress(value)</td>
+          <td>Sets progress to specified value. Will automatically calculate percent from total.</td>
+        </tr>
+        <tr>
+          <td>increment(incrementValue)</td>
+          <td>Increments progress by increment value, if not passed a value will use random amount specified in settings</td>
+        </tr>
+        <tr>
+          <td>decrement(decrementValue)</td>
+          <td>Decrements progress by decrement value, if not passed a value will use random amount specified in settings</td>
+        </tr>
+        <tr>
+          <td>update progress(value)</td>
+          <td>Immediately updates progress to value, ignoring progress animation interval delays</td>
+        </tr>
+        <tr>
+          <td>complete</td>
+          <td>Finishes progress and sets loaded to 100%</td>
+        </tr>
+        <tr>
+          <td>reset</td>
+          <td>Resets progress to zero</td>
+        </tr>
+        <tr>
+          <td>set total(total)</td>
+          <td>Set total to a new value</td>
+        </tr>
+        <tr>
+          <td>get text(text)</td>
+          <td>Replaces templated string with value, total, percent left and percent.</td>
+        </tr>
+        <tr>
+          <td>get normalized value(value)</td>
+          <td>Returns normalized value inside acceptable range specified by total.</td>
+        </tr>
+        <tr>
+          <td>get percent</td>
+          <td>Returns percent as last specified</td>
+        </tr>
+        <tr>
+          <td>get value</td>
+          <td>Returns current progress value</td>
+        </tr>
+        <tr>
+          <td>get total</td>
+          <td>Returns total</td>
+        </tr>
+        <tr>
+          <td>is complete</td>
+          <td>Returns whether progress is completed</td>
+        </tr>
+        <tr>
+          <td>is success</td>
+          <td>Returns whether progress was a success</td>
+        </tr>
+        <tr>
+          <td>is warning</td>
+          <td>Returns whether progress is in warning state</td>
+        </tr>
+        <tr>
+          <td>is error</td>
+          <td>Returns whether progress is in error state</td>
+        </tr>
+        <tr>
+          <td>is active</td>
+          <td>Returns whether progress is in active state</td>
+        </tr>
+        <tr>
+          <td>set active</td>
+          <td>Sets progress to active state</td>
+        </tr>
+        <tr>
+          <td>set warning</td>
+          <td>Sets progress to warning state</td>
+        </tr>
+        <tr>
+          <td>set success</td>
+          <td>Sets progress to success state</td>
+        </tr>
+        <tr>
+          <td>set error</td>
+          <td>Sets progress to error state</td>
+        </tr>
+        <tr>
+          <td>set duration(value)</td>
+          <td>Changes progress animation speed</td>
+        </tr>
+        <tr>
+          <td>set label(text)</td>
+          <td>Sets progress exterior label to text</td>
+        </tr>
+        <tr>
+          <td>set bar label(text)</td>
+          <td>Sets progress bar label to text</td>
+        </tr>
+        <tr>
+          <td>remove active</td>
+          <td>Removes progress to active state</td>
+        </tr>
+        <tr>
+          <td>remove warning</td>
+          <td>Removes progress to warning state</td>
+        </tr>
+        <tr>
+          <td>remove success</td>
+          <td>Removes progress to success state</td>
+        </tr>
+        <tr>
+          <td>remove error</td>
+          <td>Removes progress to error state</td>
+        </tr>
+      </tbody>
+    </table>
+
+
   </div>
   <div class="ui examples tab" data-tab="examples">
 
@@ -553,7 +689,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
       <h4 class="ui header">Rapid Update</h4>
       <p>Progress bar will automatically poll for the last progress value after completing an animation, so that animation easing continues to work smoothly, even if update events occur much more frequently than UI updates.</p>
       <a class="ui button" data-url="/images/large-pdf.pdf">
-        Rapidly Update Progress
+        Rapidly Update
       </a>
       <div class="code" data-type="html" data-preview="true">
         <div class="ui indicating progress" data-value="1" data-total="100" id="example5">
@@ -563,33 +699,34 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
           <div class="label">Waiting for you to press button</div>
         </div>
       </div>
-      <div class="evaluated code" data-type="javascript" data-demo="true">
+      <div class="evaluated code" data-type="javascript">
         $('.rapid.example .ui.button')
           .on('click', function() {
             var
-              $button = $(this),
-              currentProgress = 1,
+              $progress       = $('.rapid.example .ui.progress'),
+              $button         = $(this),
+              isComplete      = $progress.progress('is complete'),
               updateEvent
             ;
-            // updates every 20ms until complete
+            // restart count if done
+            if(isComplete) {
+              $progress.progress('reset');
+            }
+            // updates every 10ms until complete
             updateEvent = setInterval(function() {
-              var
-                $progress = $('.rapid.example .ui.progress')
-              ;
-              currentProgress += 1;
-              $progress
-                .progress('set progress', currentProgress)
-              ;
-              $button.text(currentProgress);
-              if(currentProgress >= 100) {
+              $progress.progress('increment');
+              $button.text( $progress.progress('get value') );
+              // stop update when complete
+              if(isComplete) {
                 clearInterval(updateEvent)
               }
-            }, 20)
+            }, 10);
           })
         ;
         $('.rapid.example .ui.progress')
           .progress({
             duration: 200,
+            total: 200,
             text: {
               active: '{value} of {total} done'
             }

@@ -1195,7 +1195,7 @@ themes      : ['Default', 'GitHub', 'Material']
 
     <div class="max example">
       <h4 class="ui header">Maximum Selections</h4>
-      <p>Using <code>maxSelections</code> lets you force a maximum number of selections. You can also use <a href="http://laptop-vm:9778/behaviors/form.html#validation-rules">form validation</a> rules to specify minimum and maximum validation settings for multi-selects inside forms.</p>
+      <p>Using <code>maxSelections</code> lets you force a maximum number of selections. You can also use <a href="behaviors/form.html#validation-rules">form validation</a> rules to specify minimum and maximum validation settings for multi-selects inside forms.</p>
 
       <div class="ui sub header">Selection</div>
       <select multiple name="skills" class="ui fluid normal dropdown">
@@ -1361,7 +1361,6 @@ themes      : ['Default', 'GitHub', 'Material']
       <div class="evaluated code" data-type="javascript">
         $('.no.label.example .ui.dropdown')
           .dropdown({
-            debug: true,
             useLabels: false
           })
         ;
@@ -2153,6 +2152,10 @@ themes      : ['Default', 'GitHub', 'Material']
         <tr>
           <td>restore default text</td>
           <td>Restores dropdown text to its value on page load</td>
+        </tr>
+        <tr>
+          <td>restore placeholder text</td>
+          <td>Restores dropdown text to its prompt, placeholder text</td>
         </tr>
         <tr>
           <td>restore default value</td>

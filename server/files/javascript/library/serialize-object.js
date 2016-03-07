@@ -3,7 +3,7 @@
  * @copyright 2014, macek <paulmacek@gmail.com>
  * @link https://github.com/macek/jquery-serialize-object
  * @license BSD
- * @version 2.4.3
+ * @version 2.5.0
  */
 (function(root, factory) {
 
@@ -124,18 +124,12 @@
   FormSerializer.patterns = patterns;
 
   FormSerializer.serializeObject = function serializeObject() {
-    if (this.length > 1) {
-      return new Error("jquery-serialize-object can only serialize one form at a time");
-    }
     return new FormSerializer($, this).
       addPairs(this.serializeArray()).
       serialize();
   };
 
   FormSerializer.serializeJSON = function serializeJSON() {
-    if (this.length > 1) {
-      return new Error("jquery-serialize-object can only serialize one form at a time");
-    }
     return new FormSerializer($, this).
       addPairs(this.serializeArray()).
       serializeJSON();

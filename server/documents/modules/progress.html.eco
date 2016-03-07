@@ -686,7 +686,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
     <h2 class="ui dividing header">Examples</h2>
 
     <div class="rapid example">
-      <h4 class="ui header">Rapid Update</h4>
+      <h4 class="ui header">Frequently Updated Progress</h4>
       <p>Progress bar will automatically poll for the last progress value after completing an animation, so that animation easing continues to work smoothly, even if update events occur much more frequently than UI updates.</p>
       <a class="ui button" data-url="/images/large-pdf.pdf">
         Rapidly Update
@@ -708,17 +708,16 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
               updateEvent
             ;
             // restart to zero
-            clearInterval(window.updateEvent)
+            clearInterval(window.fakeProgress)
             $progress.progress('reset');
 
             // updates every 10ms until complete
-            window.updateEvent = setInterval(function() {
+            window.fakeProgress = setInterval(function() {
               $progress.progress('increment');
               $button.text( $progress.progress('get value') );
-              // stop update when complete
-              console.log($progress.progress('is complete'));
+              // stop incrementing when complete
               if($progress.progress('is complete')) {
-                clearInterval(window.updateEvent)
+                clearInterval(window.fakeProgress)
               }
             }, 10);
           })
@@ -734,7 +733,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
         ;
       </div>
     </div>
-    <div class="upload example">
+<!--     <div class="upload example">
       <h4 class="ui header">File Upload</h4>
       <p>Progress can be used to display the progress of a file upload event</p>
       <a class="ui button" data-url="/images/large-pdf.pdf">
@@ -766,7 +765,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
           .progress()
         ;
       </div>
-    </div>
+    </div> -->
 
   </div>
 

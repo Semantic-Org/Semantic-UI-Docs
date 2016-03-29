@@ -7,40 +7,76 @@ title      : 'Test Page'
 type       : 'Library'
 ---
 
-
-<script src="/javascript/library/serialize-object.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.17/vue.min.js"></script>
 <!-- TEST JS HERE !-->
 <div class="ui container">
-    <form>
-        <div class="ui button">Click</div>
-        <input name="foo" value="baz">
-    </form>
+
+  <div class="ui form">
+    <label>Related tasks</label>
+    <select class="ui fluid normal selection dropdown t-relatedtasks" multiple="" v-model="form_add_task.related_tasks">
+      <option v-for="task in tasks" class="ui label" :value="task.id">
+        {{ task.position }}
+      </option>
+    </select>
+  </div>
+
+  <div class="ui hidden divider"></div>
+
+
+  <div class="ui form" v-show="form_add_task.related_tasks.length > 0">
+    <label>Finished tasks</label>
+    <select class="ui  fluid normal selection dropdown t-finishedtasks" multiple="" v-model="form_add_task.finished_tasks">
+      <option v-for="task in tasks" class="ui label" :value="task.id">
+        {{ task.position }}
+      </option>
+    </select>
+  </div>
+
+<pre>{{ $data | json }}</pre>
+
 </div>
 <script>
-$(document)
-  .ready(function(){
-    $('.ui.button').on('click', function() {
-        $('form').submit();
+var app = new Vue({
+
+  el: 'body',
+  data: {
+    tasks: [{
+      id: 1111,
+      position: 1,
+      title: 'Task1'
+    }, {
+      id: 2222,
+      position: 2,
+      title: 'Task2'
+    }, {
+      id: 3333,
+      position: 3,
+      title: 'Task3'
+    }]
+  },
+  ready: function() {
+
+    $('.t-relatedtasks').dropdown({
+      onRemove: function(value, text, $removedChoice) {
+        console.log(value, 'removed');
+        $('.t-finishedtasks').dropdown('remove selected', value);
+      },
+      onAdd: function(value, text, $choice) {
+        console.log(value, 'added');
+        $('.t-finishedtasks').dropdown('set selected', value);
+      }
     });
-    $('form').api({
-        url: '/fake',
-        serializeForm : true,
-        data          : {
-            some_key: 'some data' //Not sent
-        },
-        beforeSend : function (settings) {
-            settings.data.another_key = 'other data'; //Not sent
-            return settings;
-        }
-    });
-  })
-;
+
+    $('.t-finishedtasks').dropdown();
+  }
+
+})
+
 </script>
-</body>
 
 <!-- TEST CSS HERE !-->
 <style type="text/css">
-.ui.container {
+body > .ui.container:first-child {
   margin-top: 5em;
 }
 </style>

@@ -77,7 +77,7 @@ themes      : ['Default']
 
   <div class="example">
     <h4 class="ui header">Image</h4>
-    <p>A item can contain an image</p>
+    <p>An item can contain an image</p>
     <div class="ui divided items">
       <div class="item">
         <div class="image">
@@ -99,7 +99,7 @@ themes      : ['Default']
 
   <div class="example">
     <h4 class="ui header">Content</h4>
-    <p>A item can contain content</p>
+    <p>An item can contain content</p>
     <div class="ui divided items">
       <div class="item">
         <div class="ui tiny image">
@@ -130,7 +130,7 @@ themes      : ['Default']
 
   <div class="example">
     <h4 class="ui header">Header</h4>
-    <p>A item can contain a header</p>
+    <p>An item can contain a header</p>
     <div class="ui items">
       <div class="item">
         <div class="ui tiny image">
@@ -161,7 +161,7 @@ themes      : ['Default']
 
   <div class="example">
     <h4 class="ui header">Metadata</h4>
-    <p>A item can contain content metadata</p>
+    <p>An item can contain content metadata</p>
     <div class="ui ignored info message">
       <i class="info icon"></i>
       You can include an arbitrary amount of metadata using your own class conventions, all child elements will automatically be spaced
@@ -217,10 +217,10 @@ themes      : ['Default']
 
   <div class="example">
     <h4 class="ui header">Link</h4>
-    <p>A item can contain contain links as images, headers, or inside content</p>
+    <p>An item can contain contain links as images, headers, or inside content</p>
     <div class="ui yellow message">
       <i class="star icon"></i>
-      To make the entire content of a item link, check out the link variation below
+      To make the entire content of an item link, check out the link variation below
     </div>
     <div class="ui items">
       <div class="item">
@@ -261,7 +261,7 @@ themes      : ['Default']
 
   <div class="example">
     <h4 class="ui header">Description</h4>
-    <p>A item can contain a description with a single or multiple paragraphs</p>
+    <p>An item can contain a description with a single or multiple paragraphs</p>
     <div class="ui items">
       <div class="item">
         <a class="ui small image">
@@ -280,7 +280,7 @@ themes      : ['Default']
 
   <div class="example">
     <h4 class="ui header">Extra Content</h4>
-    <p>A item can contain extra content meant to be formatted separately from the main content</p>
+    <p>An item can contain extra content meant to be formatted separately from the main content</p>
     <div class="ui items">
       <div class="item">
         <div class="content">
@@ -300,7 +300,7 @@ themes      : ['Default']
 
   <div class="example">
     <h4 class="ui header">Rating</h4>
-    <p>A item can contain icons signifying a 'like' or 'favorite' action</p>
+    <p>An item can contain icons signifying a 'like' or 'favorite' action</p>
     <div class="ui ignored info message">
       You can use the <a href="/modules/rating.html">rating</a> component to attach events to like and favorite icons
     </div>
@@ -466,7 +466,7 @@ themes      : ['Default']
 
   <div class="example">
     <h4 class="ui header">Link Item</h4>
-    <p>A item can be formatted so that the entire contents link to another page</p>
+    <p>An item can be formatted so that the entire contents link to another page</p>
     <div class="ui link items">
       <div class="item">
         <div class="ui tiny image">

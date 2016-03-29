@@ -2298,6 +2298,11 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>Whether search selection should allow users to add their own selections, works for single or multiselect.</td>
         </tr>
         <tr>
+          <td>hideAdditions</td>
+          <td>true</td>
+          <td>When disabled user additions will appear in the results menu using a specially formatted selection item formatted by <code>templates.addition</code>.</td>
+        </tr>
+        <tr>
           <td>action</td>
           <td>auto</td>
           <td>

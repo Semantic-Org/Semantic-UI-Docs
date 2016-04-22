@@ -980,6 +980,10 @@ blockquote .author {
   width: 175px;
   height: 175px;
 }
+#example .example .annotation.visible + .icon.buttons {
+  margin-top: 1rem;
+}
+
 
 /*******************************
            UI Pages

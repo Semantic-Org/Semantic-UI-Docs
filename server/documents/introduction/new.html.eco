@@ -4,17 +4,29 @@ css         : 'new'
 standalone  : true
 order       : 1
 
-title       : 'New in 2.1'
+title       : 'New in 2.2'
 description : 'An introduction to new features found in the latest release'
 type        : 'Main'
 ---
 
-<%- @partial('header',  { tabs: { new: 'New in 2.1', last: 'New in 2.0' } }) %>
+<%- @partial('header',  { tabs: { new: 'New in 2.2', prev: 'New in 2.1', last: 'New in 2.0' } }) %>
 <script src="/javascript/new.js"></script>
 
 <div class="main ui intro container">
 
   <div class="ui tab" data-tab="new">
+    <h2 class="ui dividing header">By The Numbers</h2>
+    <p><code>2.2</code> includes several months of updates, many new features, and bug releases.</p>
+    <div class="ui large bulleted list">
+      <div class="item"><b>72</b> <a href="https://github.com/Semantic-Org/Semantic-UI/issues?q=is%3Aissue+milestone%3A2.1+is%3Aclosed" target="_blank">closed issues</a></div>
+      <div class="item"><b>70</b> bug fixes</div>
+      <div class="item"><b>23</b> new UI updates</div>
+      <div class="item"><b>14</b> feature enhancements</div>
+    </div>
+
+
+  </div>
+  <div class="ui tab" data-tab="prev">
     <h2 class="ui dividing header">The Tally</h2>
     <p><code>2.1</code> sums up around two months of work, including many new features, and updates to help bulletproof existing UI.</p>
     <div class="ui large bulleted list">

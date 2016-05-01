@@ -825,6 +825,11 @@ type        : 'UI Behavior'
           <td>Whether visibility conditions should be checked on calls to <code>refresh</code>. These calls can be triggered from either <code>resize</code>, <code>load</code> or manually calling <code>$('.foo').visibility('refresh')</code></td>
         </tr>
         <tr>
+          <td>zIndex</td>
+          <td>1</td>
+          <td>Specify a z-index when using <code>type: 'fixed'</code>. <div class="ui teal horizontal label">New in 2.2</div></td>
+        </tr>
+        <tr>
           <td>offset</td>
           <td>0</td>
           <td>Value that context <code>scrollTop</code> should be adjusted in pixels. Useful for making content appear below content fixed to the page.</td>

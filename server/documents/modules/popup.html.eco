@@ -24,8 +24,14 @@ themes      : ['Default']
       Types
     </h2>
 
+    <h3 class="ui header">Javascript</h3>
+
+    <div class="ui ignored info message">
+      Popup includes both a javascript version (with a full featureset) and a limited CSS only version, which can be useful in pages that use many popups, or with libraries like React or Meteor to avoid handling DOM lifecycle.
+    </div>
+
     <div class="example">
-      <h4 class="ui header">Content</h4>
+      <h4 class="ui header">Popup</h4>
       <p>An element can specify popup content to appear</p>
       <div class="ui icon button" data-content="Add users to your feed">
         <i class="add icon"></i>
@@ -33,7 +39,7 @@ themes      : ['Default']
     </div>
 
     <div class="example">
-      <h4 class="ui header">Title</h4>
+      <h4 class="ui header">Titled</h4>
       <p>An element can specify popup content with a title</p>
       <img src="/images/avatar/small/elliot.jpg" data-title="Elliot Fu" data-content="Elliot has been a member since July 2012" class="ui avatar image">
       <img src="/images/avatar/small/stevie.jpg" data-title="Stevie Feliciano" data-content="Stevie has been a member since August 2013" class="ui avatar image">
@@ -97,6 +103,81 @@ themes      : ['Default']
         <div class="ui star rating" data-rating="3"></div>
       </div>
     </div>
+
+    <h3 class="ui header">No Javascript</h3>
+
+    <div class="example">
+      <h4 class="ui header">Tooltip
+        <div class="ui teal horizontal label">New in 2.2</div>
+      </h4>
+      <p>An element can specify a simple tooltip that can appear without javascript</p>
+      <div class="ui warning ignored message">
+        Tooltips use an element's <code>:before</code> and <code>:after</code> psuedo classes. Elements like <code>icon</code> that already use these classes for styling will need to have the tooltips to a wrapping element, like a button, or a <code>span</code> to make sure tooltips work correctly.
+      </div>
+      <div class="ui icon button" data-tooltip="Add users to your feed">
+        <i class="add icon"></i>
+      </div>
+      <div class="ui icon button" data-tooltip="Add users to your feed" data-inverted>
+        <i class="add icon"></i>
+      </div>
+    </div>
+    <div class="another example">
+      <div class="ui button" data-tooltip="Add users to your feed" data-position="top left">
+        Top Left
+      </div>
+      <div class="ui button" data-tooltip="Add users to your feed" data-position="top center">
+        Top Center
+      </div>
+      <div class="ui button" data-tooltip="Add users to your feed" data-position="top right">
+        Top Right
+      </div>
+      <div class="ui divider"></div>
+      <div class="ui button" data-tooltip="Add users to your feed" data-position="bottom left">
+        Bottom Left
+      </div>
+      <div class="ui button" data-tooltip="Add users to your feed" data-position="bottom center">
+        Bottom Center
+      </div>
+      <div class="ui button" data-tooltip="Add users to your feed" data-position="bottom right">
+        Bottom Right
+      </div>
+      <div class="ui divider"></div>
+      <div class="ui button" data-tooltip="Add users to your feed" data-position="right center">
+        Right Center
+      </div>
+      <div class="ui button" data-tooltip="Add users to your feed" data-position="left center">
+        Left Center
+      </div>
+    </div>
+    <div class="another example">
+      <div class="ui button" data-inverted data-tooltip="Add users to your feed" data-position="top left">
+        Top Left
+      </div>
+      <div class="ui button" data-inverted data-tooltip="Add users to your feed" data-position="top center">
+        Top Center
+      </div>
+      <div class="ui button" data-inverted data-tooltip="Add users to your feed" data-position="top right">
+        Top Right
+      </div>
+      <div class="ui divider"></div>
+      <div class="ui button" data-inverted data-tooltip="Add users to your feed" data-position="bottom left">
+        Bottom Left
+      </div>
+      <div class="ui button" data-inverted data-tooltip="Add users to your feed" data-position="bottom center">
+        Bottom Center
+      </div>
+      <div class="ui button" data-inverted data-tooltip="Add users to your feed" data-position="bottom right">
+        Bottom Right
+      </div>
+      <div class="ui divider"></div>
+      <div class="ui button" data-inverted data-tooltip="Add users to your feed" data-position="right center">
+        Right Center
+      </div>
+      <div class="ui button" data-inverted data-tooltip="Add users to your feed" data-position="left center">
+        Left Center
+      </div>
+    </div>
+
 
     <h2 class="ui dividing header">Variations</h2>
 
@@ -168,6 +249,9 @@ themes      : ['Default']
       <h4 class="ui header">Inverted</h4>
       <p>A popup can have its colors inverted</p>
       <i class="circular heart icon link" data-content="Hello. This is an inverted popup" data-variation="inverted"></i>
+      <div class="ui icon button" data-tooltip="Hello. This is an inverted popup" data-position="top left" data-inverted>
+        <i class="add icon"></i>
+      </div>
     </div>
   </div>
 

@@ -11,6 +11,7 @@ semantic.validateForm.ready = function() {
     $promptForm   = $('.prompt.example .ui.form'),
     $dropdownForm = $('.dropdown.example .ui.form'),
     $optionalForm = $('.optional.example .ui.form'),
+    $dependsForm  = $('.depends.example .ui.form'),
     $inlineForm   = $('.inline.example .ui.form'),
     $form         = $('.ui.form').not($dogForm).not($inlineForm).not($dropdownForm).not($optionalForm).not($promptForm),
     $checkbox     = $('.main.container .ui.checkbox'),
@@ -222,6 +223,23 @@ semantic.validateForm.ready = function() {
             {
               type   : 'exactly[dog]',
               prompt : '{name} is set to "{value}" that is totally wrong. It should be {ruleValue}'
+            }
+          ]
+        }
+      }
+    })
+  ;
+
+  $dependsForm
+    .form({
+      fields: {
+        yearsPracticed: {
+          identifier : 'yearsPracticed',
+          depends    : 'isDoctor',
+          rules      : [
+            {
+              type   : 'empty',
+              prompt : 'Please enter the number of years you have been a doctor'
             }
           ]
         }

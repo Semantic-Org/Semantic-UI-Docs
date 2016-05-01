@@ -1020,6 +1020,7 @@ type        : 'UI Behavior'
         ;
       </div>
     </div>
+
     <div class="length example">
       <h4 class="ui header">Length</h4>
       <p>Inputs can match against length of content</p>
@@ -1368,6 +1369,47 @@ type        : 'UI Behavior'
           <input type="text" name="SERVER_REQUIRED_NAME" data-validate="name">
         </div>
         <div class="ui blue submit button">Submit</div>
+      </form>
+    </div>
+
+    <div class="depends example">
+      <h4 class="ui header">
+        Dependent Fields
+        <div class="ui teal horizontal label">New in 2.2</div>
+      </h4>
+      <p>You can specify validation fields to only be used when other fields are present. Simply add <code>depends: 'id'</code> with the ID of the field that must be non-blank for this rule to evaluate.</p>
+      <div class="ignored code">
+      $('.ui.form')
+        .form({
+          fields: {
+            yearsPracticed: {
+              identifier : 'yearsPracticed',
+              depends    : 'isDoctor',
+              rules      : [
+                {
+                  type   : 'empty',
+                  prompt : 'Please enter the number of years you have been a doctor'
+                }
+              ]
+            }
+          }
+        })
+      ;
+      </div>
+      <form class="ui form segment">
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" name="isDoctor" />
+            <label>Are you a doctor?</label>
+          </div>
+        </div>
+        <div class="field">
+          <label>How long have you been a medical professional</label>
+          <input type="text" name="yearsPracticed">
+        </div>
+        <div class="ui divider"></div>
+        <div class="ui blue submit button">Submit</div>
+        <div class="ui error message"></div>
       </form>
     </div>
 

@@ -1089,7 +1089,7 @@ themes      : ['Default']
         <div class="column"><i class="text height icon"></i>Text Height</div>
         <div class="column"><i class="text width icon"></i>Text Width</div>
         <div class="column"><i class="underline icon"></i>Underline</div>
-        <div class="column"><i class="unlink icon"></i>Unlink</div>
+        <div class="column"><i class="unlinkify icon"></i>Unlink</div>
         <div class="column"><i class="unordered list icon"></i>Unordered List</div>
       </div>
       <div class="existing code">
@@ -1120,7 +1120,7 @@ themes      : ['Default']
         <i class="text height icon"></i>
         <i class="text width icon"></i>
         <i class="underline icon"></i>
-        <i class="unlink icon"></i>
+        <i class="unlinkify icon"></i>
         <i class="unordered list icon"></i>
       </div>
     </div>

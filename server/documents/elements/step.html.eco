@@ -187,7 +187,7 @@ themes      : ['Default', 'Basic', 'GitHub']
 
   <h2 class="ui dividing header">States</h2>
 
-  <div class="example">
+  <div class="example" data-class="active">
     <h4 class="ui header">Active</h4>
     <p>A step can be highlighted as active</p>
     <div class="ui steps">
@@ -200,7 +200,7 @@ themes      : ['Default', 'Basic', 'GitHub']
       </div>
     </div>
   </div>
-  <div class="example">
+  <div class="example" data-class="completed">
     <h4 class="ui header">Completed</h4>
     <p>A step can show that a user has completed it</p>
     <div class="ui steps">
@@ -224,7 +224,7 @@ themes      : ['Default', 'Basic', 'GitHub']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="disabled">
     <h4 class="ui header">Disabled</h4>
     <p>A step can show that it cannot be selected</p>
     <div class="ui steps">
@@ -236,7 +236,7 @@ themes      : ['Default', 'Basic', 'GitHub']
 
   <h2 class="ui dividing header">Variations</h2>
 
-  <div class="example">
+  <div class="example" data-class="stackable">
     <h4 class="ui header">Stackable</h4>
     <p>A step can stack vertically only on smaller screens</p>
     <div class="ui tablet stackable steps">
@@ -263,7 +263,7 @@ themes      : ['Default', 'Basic', 'GitHub']
       </div>
     </div>
   </div>
-  <div class="example">
+  <div class="example" data-class="fluid">
     <h4 class="ui header">Fluid</h4>
     <p>A fluid step takes up the width of its container</p>
     <div class="ui two column grid">
@@ -291,7 +291,7 @@ themes      : ['Default', 'Basic', 'GitHub']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="attached">
     <h4 class="ui header">
       Attached
     </h4>
@@ -350,7 +350,7 @@ themes      : ['Default', 'Basic', 'GitHub']
 
 
 
-  <div class="example">
+  <div class="example" data-class="count">
     <h4 class="ui header">Evenly Divided</h4>
     <p>Steps can be divided evenly inside their parent</p>
     <div class="ui three steps">
@@ -392,10 +392,59 @@ themes      : ['Default', 'Basic', 'GitHub']
     </div>
   </div>
 
-  <div class="example">
+  <div class="example" data-class="size">
     <h4 class="ui header">Size</h4>
     <p>Steps can have different sizes</p>
-
+    <div class="ui mini steps">
+      <div class="step">
+        <i class="truck icon"></i>
+        <div class="content">
+          <div class="title">Shipping</div>
+          <div class="description">Choose your shipping options</div>
+        </div>
+      </div>
+      <div class="active step">
+        <i class="payment icon"></i>
+        <div class="content">
+          <div class="title">Billing</div>
+          <div class="description">Enter billing information</div>
+        </div>
+      </div>
+      <div class="disabled step">
+        <i class="info icon"></i>
+        <div class="content">
+          <div class="title">Confirm Order</div>
+          <div class="description">Verify order details</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui tiny steps">
+      <div class="step">
+        <i class="truck icon"></i>
+        <div class="content">
+          <div class="title">Shipping</div>
+          <div class="description">Choose your shipping options</div>
+        </div>
+      </div>
+      <div class="active step">
+        <i class="payment icon"></i>
+        <div class="content">
+          <div class="title">Billing</div>
+          <div class="description">Enter billing information</div>
+        </div>
+      </div>
+      <div class="disabled step">
+        <i class="info icon"></i>
+        <div class="content">
+          <div class="title">Confirm Order</div>
+          <div class="description">Verify order details</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
     <div class="ui small steps">
       <div class="step">
         <i class="truck icon"></i>
@@ -436,6 +485,56 @@ themes      : ['Default', 'Basic', 'GitHub']
       </div>
     </div>
   </div>
+  <div class="another example">
+    <div class="ui big steps">
+      <div class="step">
+        <i class="truck icon"></i>
+        <div class="content">
+          <div class="title">Shipping</div>
+        </div>
+      </div>
+      <div class="active step">
+        <i class="payment icon"></i>
+        <div class="content">
+          <div class="title">Billing</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui huge steps">
+      <div class="step">
+        <i class="truck icon"></i>
+        <div class="content">
+          <div class="title">Shipping</div>
+        </div>
+      </div>
+      <div class="active step">
+        <i class="payment icon"></i>
+        <div class="content">
+          <div class="title">Billing</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="another example">
+    <div class="ui massive steps">
+      <div class="step">
+        <i class="truck icon"></i>
+        <div class="content">
+          <div class="title">Shipping</div>
+        </div>
+      </div>
+      <div class="active step">
+        <i class="payment icon"></i>
+        <div class="content">
+          <div class="title">Billing</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 
 </div>

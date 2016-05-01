@@ -330,7 +330,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
   </div>
 
 
-  <div class="spaced example">
+  <div class="spaced example" data-class="size">
     <h4 class="ui header">Size</h4>
     <p>A button can have different sizes</p>
     <button class="mini ui button">
@@ -459,7 +459,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
     <div class="ui bottom attached button" tabindex="0">Bottom</div>
   </div>
 
-  <div class="another example">
+  <div class="another layered example">
     <div class="ui two top attached buttons">
         <div class="ui button">One</div>
         <div class="ui button">Two</div>

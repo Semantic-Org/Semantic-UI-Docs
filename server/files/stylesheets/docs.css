@@ -1213,6 +1213,9 @@ blockquote .author {
   }
 }
 
+#example .layered.example {
+  z-index: 1;
+}
 
 /*--------------
       Demo

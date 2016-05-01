@@ -581,9 +581,19 @@ themes      : ['Default']
           <td>Whether to move popup to same offset container as target element when <code>popup</code> already exists on the page. Using a popup inside of an element without <code>overflow:visible</code>, like a sidebar, may require you to set this to <code>false</code></td>
         </tr>
         <tr>
+          <td>boundary</td>
+          <td>window</td>
+          <td>When the popup surpasses the boundary of this element, it will attempt to find another display position.</td>
+        </tr>
+        <tr>
           <td>context</td>
           <td>body</td>
-          <td>Selector or jquery object specifying where the popup should be created</td>
+          <td>Selector or jquery object specifying where the popup should be created.</td>
+        </tr>
+        <tr>
+          <td>scrollContext</td>
+          <td>window</td>
+          <td>Will automatically hide a popup on scroll event in this context</td>
         </tr>
         <tr>
           <td>jitter</td>

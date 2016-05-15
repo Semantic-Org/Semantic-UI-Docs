@@ -1311,24 +1311,38 @@ themes      : ['Default', 'GitHub', 'Material']
           "success": true,
           "results": [
             {
+              // name displayed in dropdown
               "name"  : "Choice 1",
-              "value" : "value1"
+
+              // selected value
+              "value" : "value1",
+
+              // name displayed after selection (optional)
+              "text"  : "Choice 1"
+
+              // whether field should be displayed as disabled (optional)
+              "disabled"  : false
+
             },
             {
               "name"  : "Choice 2",
-              "value" : "value2"
+              "value" : "value2",
+              "text"  : "Choice 2"
             },
             {
               "name"  : "Choice 3",
-              "value" : "value3"
+              "value" : "value3",
+              "text"  : "Choice 3"
             },
             {
               "name"  : "Choice 4",
-              "value" : "value4"
+              "value" : "value4",
+              "text"  : "Choice 4"
             },
             {
               "name"  : "Choice 5",
-              "value" : "value5"
+              "value" : "value5",
+              "text"  : "Choice 5"
             }
           ]
       }
@@ -2519,7 +2533,7 @@ themes      : ['Default', 'GitHub', 'Material']
         <tr>
           <td>fullTextSearch</td>
           <td>false</td>
-          <td>Whether search selections should look for string match anywhere in string</td>
+          <td>Specifying to "true" will use a fuzzy full text search, setting to "exact" will force the exact search to be matched somewhere in the string</td>
         </tr>
         <tr>
           <td>preserveHTML</td>

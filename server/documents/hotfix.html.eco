@@ -7,93 +7,56 @@ title      : 'Test Page'
 type       : 'Library'
 ---
 <div class="ui container">
-  <div class="ui equal width form">
-    <div class="fields">
-      <div class="ten wide field">
-        <label>Ten Wide</label>
-        <input type="text" placeholder="Ten">
-      </div>
-      <div class="six wide field">
-        <label>Six Wide</label>
-        <input type="text" placeholder="Six">
-      </div>
-    </div>
-    <div class="four fields">
-      <div class="field">
-        <label>Middle name</label>
-        <input type="text" placeholder="Middle Name">
-      </div>
-      <div class="field">
-        <label>Last name</label>
-        <input type="text" placeholder="Last Name">
-      </div>
-      <div class="field">
-        <label>Middle name</label>
-        <input type="text" placeholder="Middle Name">
-      </div>
-      <div class="field">
-        <label>Last name</label>
-        <input type="text" placeholder="Last Name">
-      </div>
-    </div>
-    <div class="ui equal width form">
-      <div class="fields">
-        <div class="field">
-          <label>Middle name</label>
-          <input type="text" placeholder="Middle Name">
-        </div>
-        <div class="field">
-          <label>Last name</label>
-          <input type="text" placeholder="Last Name">
-        </div>
-        <div class="field">
-          <label>Middle name</label>
-          <input type="text" placeholder="Middle Name">
-        </div>
-        <div class="field">
-          <label>Last name</label>
-          <input type="text" placeholder="Last Name">
-        </div>
-      </div>
-      <div class="field">
-        <label>More</label>
-        <input type="text" placeholder="More">
-      </div>
-      <div class="field">
-        <label>More</label>
-        <input type="text" placeholder="More">
-      </div>
-    </div>
-  </div>
+<h2 class="ui dividing header">
+    Inconsistent basic button styling
+</h2>
+
+<h4 class="ui header">
+  Standard Button
+  <div class="sub header">The emphatic version looks just like the colored one.</div>
+</h4>
+
+<button class="ui primary button">
+  Primary Button
+</button>
+<button class="ui blue button">
+  Blue Button
+</button>
+<button class="ui secondary button">
+  Secondary Button
+</button>
+<button class="ui black button">
+  Black Button
+</button>
+
+<div class="ui divider"></div>
+
+<h4 class="ui header">
+  Basic Button
+  <div class="sub header">The emphatic version looks different from the colored one.</div>
+</h4>
+
+<button class="ui basic primary button">
+  Primary Button
+</button>
+<button class="ui basic positive button">
+  Positive Button
+</button>
+<button class="ui basic negative button">
+  Negative Button
+</button>
+<button class="ui basic blue button">
+  Blue Button
+</button>
+<button class="ui basic secondary button">
+  Secondary Button
+</button>
+<button class="ui basic black button">
+  Black Button
+</button>
 </div>
 <script>
 $(document).ready(function() {
- var
-  content = [{
-    title: 'Horse',
-    description: 'An Animal',
-  }, {
-    title: 'Cow',
-    description: 'Another Animal',
-  }, {
-    title: 'Cat',
-    description: 'Another Animal',
-  }, {
-    title: 'Dog',
-    description: 'Another Animal',
-  }];
-$('.ui.search')
-  .search({
-    source: content,
-    searchFields: [
-      'title'
-    ],
-    onSelect: function(result, response) {
-      if(result.title == 'Cat') {
-        return false;
-      }
-    }
-  });
 
 });
 

@@ -7,56 +7,27 @@ title      : 'Test Page'
 type       : 'Library'
 ---
 <div class="ui container">
-<h2 class="ui dividing header">
-    Inconsistent basic button styling
-</h2>
+<div class="context">
+    <h1>FOOBAR</h1>
+    <p>Loren ipsum<br />dolor sit amet</p>
+</div>
 
-<h4 class="ui header">
-  Standard Button
-  <div class="sub header">The emphatic version looks just like the colored one.</div>
-</h4>
-
-<button class="ui primary button">
-  Primary Button
-</button>
-<button class="ui blue button">
-  Blue Button
-</button>
-<button class="ui secondary button">
-  Secondary Button
-</button>
-<button class="ui black button">
-  Black Button
-</button>
-
-<div class="ui divider"></div>
-
-<h4 class="ui header">
-  Basic Button
-  <div class="sub header">The emphatic version looks different from the colored one.</div>
-</h4>
-
-<button class="ui basic primary button">
-  Primary Button
-</button>
-<button class="ui basic positive button">
-  Positive Button
-</button>
-<button class="ui basic negative button">
-  Negative Button
-</button>
-<button class="ui basic blue button">
-  Blue Button
-</button>
-<button class="ui basic secondary button">
-  Secondary Button
-</button>
-<button class="ui basic black button">
-  Black Button
+<button class="ui button circular icon">
+    <i class="icon settings"></i>
 </button>
 </div>
 <script>
 $(document).ready(function() {
+$('h1').visibility({
+   type: 'fixed',
+   context: 'div',
+   debug: true
+});
+
+$('button').on('click', function(e) {
+    console.log('should reset');
+  $('h1').visibility('destroy');
+});
 
 });
 
@@ -64,7 +35,11 @@ $(document).ready(function() {
 
 <!-- TEST CSS HERE !-->
 <style type="text/css">
-body > .ui.container:first-child {
-  margin-top: 5em;
-}
+
+    .container {
+       height: 60px;
+       overflow: scroll;
+       margin-bottom: 20px;
+    }
+
 </style>

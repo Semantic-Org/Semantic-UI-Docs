@@ -603,6 +603,11 @@ themes      : ['Default']
           <td>Tab should reload content every time it is opened</td>
         </tr>
         <tr>
+          <td>cacheType <div class="ui horizontal label">2.2</div></td>
+          <td>response</td>
+          <td>Can be set to either <code>response</code> or <code>html</code>. Response will cache the original response on load, this way callbacks always receive the same content. Using `html` will cache the resulting html after all callbacks, making sure any changes to content are preserved.</td>
+        </tr>
+        <tr>
           <td>cache</td>
           <td>true</td>
           <td>Tab should cache content after loading locally to avoid server trip on second load</td>

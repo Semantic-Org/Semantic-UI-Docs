@@ -8,18 +8,44 @@ type       : 'Library'
 ---
 
 <div class="ui container">
-<div class="ui long modal">
-    <div class="content">Test</div>
-</div>
+
+  <div class="ui search">
+    <input id="search-input" class="prompt" type="text" placeholder="Animals...">
+    <div class="results"></div>
+  </div>
+
+
 </div>
 
 <script>
 $(document).ready(function() {
-$('.ui.modal').modal('show');
+ var
+  content = [{
+    title: 'Horse',
+    description: 'An Animal',
+  }, {
+    title: 'Cow',
+    description: 'Another Animal',
+  }, {
+    title: 'Cat',
+    description: 'Another Animal',
+  }, {
+    title: 'Dog',
+    description: 'Another Animal',
+  }];
+$('.ui.search')
+  .search({
+    source: content,
+    searchFields: [
+      'title'
+    ],
+    onSelect: function(result, response) {
+      if(result.title == 'Cat') {
+        return false;
+      }
+    }
+  });
 
-setTimeout( function() {
- $('.ui.modal').modal('destroy');
-}, 500 );
 });
 
 </script>

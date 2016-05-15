@@ -171,19 +171,6 @@ type        : 'UI Module'
       </div>
     </div>
 
-    <h2 class="ui dividing header">States</h2>
-    <div class="example">
-      <h4 class="ui header">Loading</h4>
-      <p>A search can show a loading indicator</p>
-      <div class="ui loading search">
-        <div class="ui icon input">
-          <input class="prompt" type="text" placeholder="Search...">
-          <i class="search icon"></i>
-        </div>
-        <div class="results"></div>
-      </div>
-    </div>
-
     <h2 class="ui dividing header">Variations</h2>
 
     <div class="category example">

@@ -6,17 +6,66 @@ standalone : true
 title      : 'Test Page'
 type       : 'Library'
 ---
-
 <div class="ui container">
-
-  <div class="ui search">
-    <input id="search-input" class="prompt" type="text" placeholder="Animals...">
-    <div class="results"></div>
+  <div class="ui equal width form">
+    <div class="fields">
+      <div class="ten wide field">
+        <label>Ten Wide</label>
+        <input type="text" placeholder="Ten">
+      </div>
+      <div class="six wide field">
+        <label>Six Wide</label>
+        <input type="text" placeholder="Six">
+      </div>
+    </div>
+    <div class="four fields">
+      <div class="field">
+        <label>Middle name</label>
+        <input type="text" placeholder="Middle Name">
+      </div>
+      <div class="field">
+        <label>Last name</label>
+        <input type="text" placeholder="Last Name">
+      </div>
+      <div class="field">
+        <label>Middle name</label>
+        <input type="text" placeholder="Middle Name">
+      </div>
+      <div class="field">
+        <label>Last name</label>
+        <input type="text" placeholder="Last Name">
+      </div>
+    </div>
+    <div class="ui equal width form">
+      <div class="fields">
+        <div class="field">
+          <label>Middle name</label>
+          <input type="text" placeholder="Middle Name">
+        </div>
+        <div class="field">
+          <label>Last name</label>
+          <input type="text" placeholder="Last Name">
+        </div>
+        <div class="field">
+          <label>Middle name</label>
+          <input type="text" placeholder="Middle Name">
+        </div>
+        <div class="field">
+          <label>Last name</label>
+          <input type="text" placeholder="Last Name">
+        </div>
+      </div>
+      <div class="field">
+        <label>More</label>
+        <input type="text" placeholder="More">
+      </div>
+      <div class="field">
+        <label>More</label>
+        <input type="text" placeholder="More">
+      </div>
+    </div>
   </div>
-
-
 </div>
-
 <script>
 $(document).ready(function() {
  var

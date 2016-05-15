@@ -365,7 +365,7 @@ themes      : ['Default']
       <p>For sites that are able to replicate change on the server, tab can automatically map changes in tab navigation to <a href="http://diveintohtml5.info/history.html" target="_blank">html5 state.</a>
       </p>
       <div class="ui ignored warning message">
-        Since these docs are statically hosted on GitHub Pages, html5 state tabs are not demonstratable from the docs. You will need to try this example in your own code.
+        Since these docs are statically hosted on GitHub Pages, html5 state tabs are not demonstrable from the docs. You will need to try this example in your own code.
       </div>
       <div class="code" data-type="javascript">
         $('.ui.menu .item')

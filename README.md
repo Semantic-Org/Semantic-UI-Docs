@@ -43,7 +43,7 @@ gulp build-docs
 By default, docs build to `build-docs/` (from the adjacent folder `docs/`). 
 **The command _must_ be run from your UI folder!** (In the above example, we use `./ui`.) 
 
-To configure a different `docs` location, modify [ `tasks/docs.json`](https://github.com/Semantic-Org/Semantic-UI/blob/master/tasks/admin/docs.json) accordingly.
+To configure a different `docs` location, modify [ `tasks/config/docs.js`](https://github.com/Semantic-Org/Semantic-UI/blob/master/tasks/config/docs.js) accordingly.
 
 
 ### Running the Server

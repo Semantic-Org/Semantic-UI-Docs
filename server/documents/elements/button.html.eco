@@ -412,7 +412,6 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
     <h4 class="ui header">Positive</h4>
     <p>A button can hint towards a positive consequence</p>
     <button class="positive ui button">Positive Button</button>
-    <button class="negative ui button">Negative Button</button>
   </div>
 
   <div class="example">

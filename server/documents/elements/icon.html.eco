@@ -1,4 +1,4 @@
----
+    ---
 layout      : 'default'
 css         : 'icon'
 standalone  : true
@@ -311,6 +311,7 @@ themes      : ['Default']
         <div class="column"><i class="announcement icon"></i>Announcement</div>
         <div class="column"><i class="birthday icon"></i>Birthday</div>
         <div class="column"><i class="help circle icon"></i>Help Circle</div>
+        <div class="column"><i class="help circle outline icon"></i>Help Circle Outline</div>
         <div class="column"><i class="help icon"></i>Help</div>
         <div class="column"><i class="info circle icon"></i>Info Circle</div>
         <div class="column"><i class="info icon"></i>Info</div>
@@ -1185,6 +1186,36 @@ themes      : ['Default']
         <i class="visa icon"></i>
       </div>
     </div>
+    <div class="icon example">
+      <h4 class="ui header">Accessibility</h4>
+      <p>Icons can represent accessibility standards</p>
+      <div class="ui doubling five column grid">
+        <div class="column"><i class="wheelchair icon"></i>Wheelchair</div>
+        <div class="column"><i class="asl interpreting icon"></i>American Sign Language (ASL) Interpreting</div>
+        <div class="column"><i class="assistive listening systems icon"></i>Assistive Listening Systems</div>
+        <div class="column"><i class="audio description icon"></i>Audio Description</div>
+        <div class="column"><i class="blind icon"></i>Blind</div>
+        <div class="column"><i class="braille icon"></i>Braille</div>
+        <div class="column"><i class="deafness icon"></i>Deafness</div>
+        <div class="column"><i class="low vision icon"></i>Low Vision</div>
+        <div class="column"><i class="sign language icon"></i>Sign Language</div>
+        <div class="column"><i class="universal access icon"></i>Universal Access</div>
+        <div class="column"><i class="volume control phone icon"></i>Volume Control Phone</div>
+      </div>
+      <div class="existing code">
+        <i class="wheelchair icon"></i>
+        <i class="asl interpreting icon"></i>
+        <i class="assistive listening systems icon"></i>
+        <i class="audio description icon"></i>
+        <i class="blind icon"></i>
+        <i class="braille icon"></i>
+        <i class="deafness icon"></i>
+        <i class="low vision icon"></i>
+        <i class="sign language icon"></i>
+        <i class="universal access icon"></i>
+        <i class="volume control phone icon"></i>
+      </div>
+    </div>
 
 
     <div class="icon example">
@@ -1216,26 +1247,33 @@ themes      : ['Default']
         <div class="column"><i class="dropbox icon"></i>Dropbox</div>
         <div class="column"><i class="drupal icon"></i>Drupal</div>
         <div class="column"><i class="empire icon"></i>Empire</div>
+        <div class="column"><i class="envira gallery icon"></i>Envira Gallery</div>
         <div class="column"><i class="expeditedssl icon"></i>Expeditedssl</div>
         <div class="column"><i class="facebook icon"></i>Facebook</div>
-        <div class="column"><i class="facebook icon"></i>Facebook</div>
+        <div class="column"><i class="facebook f icon"></i>Facebook F</div>
         <div class="column"><i class="facebook square icon"></i>Facebook Square</div>
         <div class="column"><i class="firefox icon"></i>Firefox</div>
+        <div class="column"><i class="first order icon"></i>First Order</div>
         <div class="column"><i class="flickr icon"></i>Flickr</div>
+        <div class="column"><i class="font awesome icon"></i>Font Awesome</div>
         <div class="column"><i class="fonticons icon"></i>Fonticons</div>
         <div class="column"><i class="fort awesome icon"></i>Fort Awesome</div>
         <div class="column"><i class="forumbee icon"></i>Forumbee</div>
         <div class="column"><i class="foursquare icon"></i>Foursquare</div>
-        <div class="column"><i class="gg circle icon"></i>Gg Circle</div>
         <div class="column"><i class="gg icon"></i>Gg</div>
+        <div class="column"><i class="gg circle icon"></i>Gg Circle</div>
         <div class="column"><i class="git icon"></i>Git</div>
         <div class="column"><i class="git square icon"></i>Git Square</div>
-        <div class="column"><i class="github alternate icon"></i>Github Alternate</div>
         <div class="column"><i class="github icon"></i>Github</div>
+        <div class="column"><i class="github alternate icon"></i>Github Alternate</div>
         <div class="column"><i class="github square icon"></i>Github Square</div>
+        <div class="column"><i class="gitlab icon"></i>Gitlab</div>
         <div class="column"><i class="gittip icon"></i>Gittip</div>
+        <div class="column"><i class="glide icon"></i>Glide</div>
+        <div class="column"><i class="glide g icon"></i>Glide G</div>
         <div class="column"><i class="google icon"></i>Google</div>
         <div class="column"><i class="google plus icon"></i>Google Plus</div>
+        <div class="column"><i class="google plus circle icon"></i>Google Plus Circle</div>
         <div class="column"><i class="google plus square icon"></i>Google Plus Square</div>
         <div class="column"><i class="hacker news icon"></i>Hacker News</div>
         <div class="column"><i class="houzz icon"></i>Houzz</div>
@@ -1262,8 +1300,9 @@ themes      : ['Default']
         <div class="column"><i class="opera icon"></i>Opera</div>
         <div class="column"><i class="optinmonster icon"></i>Optinmonster</div>
         <div class="column"><i class="pagelines icon"></i>Pagelines</div>
-        <div class="column"><i class="pied piper alternate icon"></i>Pied Piper Alternate</div>
         <div class="column"><i class="pied piper icon"></i>Pied Piper</div>
+        <div class="column"><i class="pied piper alternate icon"></i>Pied Piper Alternate</div>
+        <div class="column"><i class="pied piper hat icon"></i>Pied Piper Hat</div>
         <div class="column"><i class="pinterest icon"></i>Pinterest</div>
         <div class="column"><i class="pinterest icon"></i>Pinterest</div>
         <div class="column"><i class="pinterest square icon"></i>Pinterest Square</div>
@@ -1271,8 +1310,8 @@ themes      : ['Default']
         <div class="column"><i class="product hunt icon"></i>Product Hunt</div>
         <div class="column"><i class="qq icon"></i>Qq</div>
         <div class="column"><i class="rebel icon"></i>Rebel</div>
-        <div class="column"><i class="reddit alien icon"></i>Reddit Alien</div>
         <div class="column"><i class="reddit icon"></i>Reddit</div>
+        <div class="column"><i class="reddit alien icon"></i>Reddit Alien</div>
         <div class="column"><i class="reddit square icon"></i>Reddit Square</div>
         <div class="column"><i class="renren icon"></i>Renren</div>
         <div class="column"><i class="safari icon"></i>Safari</div>
@@ -1284,15 +1323,19 @@ themes      : ['Default']
         <div class="column"><i class="skype icon"></i>Skype</div>
         <div class="column"><i class="slack icon"></i>Slack</div>
         <div class="column"><i class="slideshare icon"></i>Slideshare</div>
+        <div class="column"><i class="snapchat icon"></i>Snapchat</div>
+        <div class="column"><i class="snapchat ghost icon"></i>Snapchat Ghost</div>
+        <div class="column"><i class="snapchat square icon"></i>Snapchat Square</div>
         <div class="column"><i class="soundcloud icon"></i>Soundcloud</div>
         <div class="column"><i class="spotify icon"></i>Spotify</div>
         <div class="column"><i class="stack exchange icon"></i>Stack Exchange</div>
         <div class="column"><i class="stack overflow icon"></i>Stack Overflow</div>
         <div class="column"><i class="steam icon"></i>Steam</div>
         <div class="column"><i class="steam square icon"></i>Steam Square</div>
-        <div class="column"><i class="stumbleupon circle icon"></i>Stumbleupon Circle</div>
         <div class="column"><i class="stumbleupon icon"></i>Stumbleupon</div>
+        <div class="column"><i class="stumbleupon circle icon"></i>Stumbleupon Circle</div>
         <div class="column"><i class="tencent weibo icon"></i>Tencent Weibo</div>
+        <div class="column"><i class="themeisle icon"></i>Themeisle</div>
         <div class="column"><i class="trello icon"></i>Trello</div>
         <div class="column"><i class="tripadvisor icon"></i>Tripadvisor</div>
         <div class="column"><i class="tumblr icon"></i>Tumblr</div>
@@ -1301,6 +1344,8 @@ themes      : ['Default']
         <div class="column"><i class="twitter icon"></i>Twitter</div>
         <div class="column"><i class="twitter square icon"></i>Twitter Square</div>
         <div class="column"><i class="viacoin icon"></i>Viacoin</div>
+        <div class="column"><i class="viadeo icon"></i>Viadeo</div>
+        <div class="column"><i class="viadeo square icon"></i>Viadeo Square</div>
         <div class="column"><i class="vimeo icon"></i>Vimeo</div>
         <div class="column"><i class="vimeo square icon"></i>Vimeo Square</div>
         <div class="column"><i class="vine icon"></i>Vine</div>
@@ -1311,11 +1356,14 @@ themes      : ['Default']
         <div class="column"><i class="wikipedia icon"></i>Wikipedia</div>
         <div class="column"><i class="windows icon"></i>Windows</div>
         <div class="column"><i class="wordpress icon"></i>Wordpress</div>
+        <div class="column"><i class="wpbeginner icon"></i>Wpbeginner</div>
+        <div class="column"><i class="wpforms icon"></i>Wpforms</div>
         <div class="column"><i class="xing icon"></i>Xing</div>
         <div class="column"><i class="xing square icon"></i>Xing Square</div>
         <div class="column"><i class="y combinator icon"></i>Y Combinator</div>
         <div class="column"><i class="yahoo icon"></i>Yahoo</div>
         <div class="column"><i class="yelp icon"></i>Yelp</div>
+        <div class="column"><i class="yoast icon"></i>Yoast</div>
         <div class="column"><i class="youtube icon"></i>Youtube</div>
         <div class="column"><i class="youtube play icon"></i>Youtube Play</div>
         <div class="column"><i class="youtube square icon"></i>Youtube Square</div>
@@ -1346,26 +1394,33 @@ themes      : ['Default']
         <i class="dropbox icon"></i>
         <i class="drupal icon"></i>
         <i class="empire icon"></i>
+        <i class="envira gallery icon"></i>
         <i class="expeditedssl icon"></i>
         <i class="facebook icon"></i>
-        <i class="facebook icon"></i>
+        <i class="facebook f icon"></i>
         <i class="facebook square icon"></i>
         <i class="firefox icon"></i>
+        <i class="first order icon"></i>
         <i class="flickr icon"></i>
+        <i class="font awesome icon"></i>
         <i class="fonticons icon"></i>
         <i class="fort awesome icon"></i>
         <i class="forumbee icon"></i>
         <i class="foursquare icon"></i>
-        <i class="gg circle icon"></i>
         <i class="gg icon"></i>
+        <i class="gg circle icon"></i>
         <i class="git icon"></i>
         <i class="git square icon"></i>
-        <i class="github alternate icon"></i>
         <i class="github icon"></i>
+        <i class="github alternate icon"></i>
         <i class="github square icon"></i>
+        <i class="gitlab icon"></i>
         <i class="gittip icon"></i>
+        <i class="glide icon"></i>
+        <i class="glide g icon"></i>
         <i class="google icon"></i>
         <i class="google plus icon"></i>
+        <i class="google plus circle icon"></i>
         <i class="google plus square icon"></i>
         <i class="hacker news icon"></i>
         <i class="houzz icon"></i>
@@ -1392,8 +1447,9 @@ themes      : ['Default']
         <i class="opera icon"></i>
         <i class="optinmonster icon"></i>
         <i class="pagelines icon"></i>
-        <i class="pied piper alternate icon"></i>
         <i class="pied piper icon"></i>
+        <i class="pied piper alternate icon"></i>
+        <i class="pied piper hat icon"></i>
         <i class="pinterest icon"></i>
         <i class="pinterest icon"></i>
         <i class="pinterest square icon"></i>
@@ -1401,8 +1457,8 @@ themes      : ['Default']
         <i class="product hunt icon"></i>
         <i class="qq icon"></i>
         <i class="rebel icon"></i>
-        <i class="reddit alien icon"></i>
         <i class="reddit icon"></i>
+        <i class="reddit alien icon"></i>
         <i class="reddit square icon"></i>
         <i class="renren icon"></i>
         <i class="safari icon"></i>
@@ -1414,15 +1470,19 @@ themes      : ['Default']
         <i class="skype icon"></i>
         <i class="slack icon"></i>
         <i class="slideshare icon"></i>
+        <i class="snapchat icon"></i>
+        <i class="snapchat ghost icon"></i>
+        <i class="snapchat square icon"></i>
         <i class="soundcloud icon"></i>
         <i class="spotify icon"></i>
         <i class="stack exchange icon"></i>
         <i class="stack overflow icon"></i>
         <i class="steam icon"></i>
         <i class="steam square icon"></i>
-        <i class="stumbleupon circle icon"></i>
         <i class="stumbleupon icon"></i>
+        <i class="stumbleupon circle icon"></i>
         <i class="tencent weibo icon"></i>
+        <i class="themeisle icon"></i>
         <i class="trello icon"></i>
         <i class="tripadvisor icon"></i>
         <i class="tumblr icon"></i>
@@ -1431,6 +1491,8 @@ themes      : ['Default']
         <i class="twitter icon"></i>
         <i class="twitter square icon"></i>
         <i class="viacoin icon"></i>
+        <i class="viadeo icon"></i>
+        <i class="viadeo square icon"></i>
         <i class="vimeo icon"></i>
         <i class="vimeo square icon"></i>
         <i class="vine icon"></i>
@@ -1441,11 +1503,14 @@ themes      : ['Default']
         <i class="wikipedia icon"></i>
         <i class="windows icon"></i>
         <i class="wordpress icon"></i>
+        <i class="wpbeginner icon"></i>
+        <i class="wpforms icon"></i>
         <i class="xing icon"></i>
         <i class="xing square icon"></i>
         <i class="y combinator icon"></i>
         <i class="yahoo icon"></i>
         <i class="yelp icon"></i>
+        <i class="yoast icon"></i>
         <i class="youtube icon"></i>
         <i class="youtube play icon"></i>
         <i class="youtube square icon"></i>

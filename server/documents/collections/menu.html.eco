@@ -28,6 +28,11 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
     <p>A menu</p>
     <div class="ui ignored message">
       Starting in <code>2.0</code> menus now use flexbox. This allows each menu item to automatically stretch to the size of the largest item.
+      
+      Dropdowns must be initialized with 
+      
+      $('.ui.dropdown').dropdown();
+      
     </div>
     <div class="ui three item menu">
       <a class="active item">Editorials</a>

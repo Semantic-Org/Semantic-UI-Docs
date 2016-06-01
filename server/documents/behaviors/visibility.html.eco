@@ -327,7 +327,7 @@ type        : 'UI Behavior'
     </div>
     <div class="no example">
       <h4 class="ui header">Grouped Events</h4>
-      <p><code>onPassed</code> allows you to specify a collection of callbacks that occur after different percentages of an element are passed</p>
+      <p><code>onPassed</code> allows you to specify a collection of callbacks that occur after different percentages or pixels of an element are passed</p>
       <table class="ui celled definition table">
         <thead>
           <tr>
@@ -342,15 +342,15 @@ type        : 'UI Behavior'
               onPassed {}
             </td>
             <td>
-              A percentage of an element's content has been passed
+              A distance from the top of an element's content has been passed, either as a percentage or in pixels
             </td>
             <td>
               <div class="code" data-type="javascript">
               onPassed: {
                 40: function() {
-                  // do something at 40%
+                  // do something when having passed 40 pixels.
                 },
-                80: function() {
+                '80%': function() {
                   // do something at 80%
                 }
               }

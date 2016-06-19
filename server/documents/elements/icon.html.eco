@@ -13,13 +13,13 @@ type        : 'UI Element'
 themes      : ['Default']
 ---
 
-<%- @partial('header', { tabs: { icons: 'Icons', definition: 'Definition' } }) %>
+<%- @partial('header', { tabs: { icon: 'Icons', definition: 'Definition' } }) %>
 
 <script src="/javascript/icon.js"></script>
 
 <div class="main ui container">
 
-  <div class="ui active tab" data-tab="icons">
+  <div class="ui active tab" data-tab="icon">
 
     <h2 class="ui header">Icon Set</h2>
     <p>An icon set contains an arbitrary number of glyphs</p>

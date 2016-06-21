@@ -142,7 +142,7 @@ themes      : ['Default']
       <p><a href="/elements/container.html">Containers</a> are elements designed to limit page content to a reasonable maximum width for display based on the size of the user's screen.</p>
       <p>Using a <a href="/elements/container.html#containers-using-grids"><code>ui grid container</code></a> is the best way to include top-level page content inside a grid.</p>
       <div class="ui warning message">
-        <p>In version <code>1.x</code> of Semantic UI <code>page grid</code> were used to to contain the maximum width of grids holding page content. Page grid have been deprecated in favor for the simpler <code>container</code> element.</p>
+        <p>In version <code>1.x</code> of Semantic UI <code>page grid</code> were used to contain the maximum width of grids holding page content. Page grid have been deprecated in favor for the simpler <code>container</code> element.</p>
       </div>
     </div>
 

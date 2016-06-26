@@ -603,6 +603,11 @@ themes      : ['Default']
           <td>Tab should reload content every time it is opened</td>
         </tr>
         <tr>
+          <td>deactivate <div class="ui horizontal label">2.2</div></td>
+          <td>siblings</td>
+          <td>Can be set to either <code>siblings</code> or <code>all</code>. Siblings will only de-activate tab activators that are <code>siblings</code> of the clicked element when a tab is selected. <code>All</code> will deactivate all other tab activators initialized at the same time.</td>
+        </tr>
+        <tr>
           <td>cacheType <div class="ui horizontal label">2.2</div></td>
           <td>response</td>
           <td>Can be set to either <code>response</code> or <code>html</code>. Response will cache the original response on load, this way callbacks always receive the same content. Using `html` will cache the resulting html after all callbacks, making sure any changes to content are preserved.</td>

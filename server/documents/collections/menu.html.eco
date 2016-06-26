@@ -27,7 +27,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
     </h4>
     <p>A menu</p>
     <div class="ui ignored message">
-      Starting in <code>2.0</code> menus now use flexbox. This allows each menu item to automatically stretch to the size of the largest item.
+      <p>Starting in <code>2.0</code> menus now use flexbox. This allows each menu item to automatically stretch to the size of the largest item.
     </div>
     <div class="ui three item menu">
       <a class="active item">Editorials</a>
@@ -36,6 +36,9 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
     </div>
   </div>
   <div class="another school example">
+    <div class="ui ignored info message">
+      Many of the following examples use a coupling with <a href="/modules/dropdown.html">dropdowns</a> to display dropdown menus inside of <code>ui menu</code>. Please consult the dropdown documentation for the correct javascript initialization for this component.
+    </div>
     <div class="ui text menu">
       <div class="item">
         <img src="/images/new-school.jpg">

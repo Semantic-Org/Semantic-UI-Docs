@@ -18,11 +18,14 @@ type        : 'Main'
     <h2 class="ui dividing header">By The Numbers</h2>
     <p><code>2.2</code> represents nearly a half year of updates, many new features, and bug patches.</p>
     <div class="ui large bulleted list">
-      <div class="item"><b>72</b> <a href="https://github.com/Semantic-Org/Semantic-UI/issues?q=is%3Aissue+milestone%3A2.1+is%3Aclosed" target="_blank">closed issues</a></div>
+      <div class="item"><b>124</b> <a href="https://github.com/Semantic-Org/Semantic-UI/issues?q=is%3Aissue+milestone%3A2.1+is%3Aclosed" target="_blank">closed issues</a></div>
+      <div class="item"><b>40</b> new features</div>
       <div class="item"><b>70</b> bug fixes</div>
-      <div class="item"><b>23</b> new UI updates</div>
-      <div class="item"><b>14</b> feature enhancements</div>
     </div>
+
+    <p>For the complete list of bugs, their accompanying issue threads and the fixes please consult the release notes</p>
+    <a class="ui button" href="https://github.com/Semantic-Org/Semantic-UI/blob/master/RELEASE-NOTES.md#version-220---june-26-2016" target="_blank">Release Notes</a>
+
     <h2 class="ui dividing header">Project Changes</h2>
 
     <div class="no example">

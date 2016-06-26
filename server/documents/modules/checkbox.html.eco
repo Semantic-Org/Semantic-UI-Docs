@@ -718,7 +718,7 @@ themes      : ['Default', 'Colored']
         </tr>
         <tr>
           <td>fireOnInit</td>
-          <td>true</td>
+          <td>false</td>
           <td>Whether callbacks for checked status should be fired on init as well as change</td>
         </tr>
       </tbody>

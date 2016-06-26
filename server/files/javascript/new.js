@@ -24,10 +24,25 @@ semantic.new.ready = function() {
   $('.masthead.tab.segment .stackable.menu .item')
     .tab('setting', 'onLoad', function() {
       semantic.handler.refreshSticky();
+      $(this).find('.memory.example .demo').visibility('refresh');
       $(this).find('.overlay')
         .visibility('refresh')
       ;
     })
+  ;
+
+  // 2.2
+  $('.faster.example .ui.multiple.dropdown')
+    .dropdown({
+      debug: true,
+      verbose: true,
+      allowAdditions: true
+    })
+  ;
+
+  // form
+  $('.depends.example .ui.checkbox')
+    .checkbox()
   ;
 
 
@@ -297,6 +312,7 @@ semantic.new.ready = function() {
   // visiblity
   $('.visibility.example .overlay')
     .visibility({
+      silent : true,
       type   : 'fixed',
       offset : 15 // give some space from top of screen
     })

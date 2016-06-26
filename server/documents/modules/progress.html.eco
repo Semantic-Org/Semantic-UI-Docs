@@ -692,7 +692,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
         Rapidly Update
       </a>
       <div class="code" data-type="html" data-preview="true">
-        <div class="ui indicating progress" data-value="1" data-total="100" id="example5">
+        <div class="ui indicating progress" data-value="1" data-total="200" id="example5">
           <div class="bar">
             <div class="progress"></div>
           </div>
@@ -724,9 +724,9 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
         ;
         $('.rapid.example .ui.progress')
           .progress({
-            duration: 200,
-            total: 200,
-            text: {
+            duration : 200,
+            total    : 200,
+            text     : {
               active: '{value} of {total} done'
             }
           })

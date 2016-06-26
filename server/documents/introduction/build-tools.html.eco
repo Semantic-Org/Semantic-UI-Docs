@@ -306,5 +306,13 @@ type        : 'Introduction'
     <h4>Importing Gulp Tasks</h4>
     <p>See our <a href="/introduction/advanced-usage.html">recipes section</a> for examples on how to import individual gulp tasks into your custom Gulpfile.</p>
   </div>
+  <div class="no example">
+    <h4>
+      Auto-Install & Continuous Integration
+      <div class="ui teal horizontal label">New in 2.2</div>
+    </h4>
+    <p>We've added a new setting to <code>semantic.json</code> in 2.2 to help make working with a CLI, or other automated deployments more streamlined.</p>
+    <p>Specifying <code>autoInstall: true</code> in an environments <code>semantic.json</code> configuration will prevent any user prompting when running <code>npm install</code> allowing for automated deployment.</p>
+  </div>
 
 </div>

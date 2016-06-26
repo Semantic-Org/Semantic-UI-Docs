@@ -24,10 +24,6 @@ semantic.button.ready = function() {
     }
   ;
 
-  $invertedButtons
-    .state()
-  ;
-
   $buttons
     .on('click', handler.activate)
   ;

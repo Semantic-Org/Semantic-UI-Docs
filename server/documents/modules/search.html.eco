@@ -615,31 +615,41 @@ type        : 'UI Module'
           <td>Specify a Javascript object which will be searched locally</td>
         </tr>
         <tr>
+          <td>selectFirstResult</td>
+          <td>true</td>
+          <td>Whether the search should automatically select the first search result after searching</td>
+        </tr>
+        <tr>
+          <td>showNoResults</td>
+          <td>false</td>
+          <td>Whether a "no results" message should be shown if no results are found. (These messages can be modified using the <code>template</code> object specified below)</td>
+        </tr>
+        <tr>
           <td>searchFullText</td>
           <td>true</td>
           <td>Return local results that match anywhere inside your content</td>
-      </tr>
-      <tr>
-        <td>fields</td>
-        <td>
-          <div class="code" data-type="css">
-          fields: {
-            categories      : 'results',     // array of categories (category view)
-            categoryName    : 'name',        // name of category (category view)
-            categoryResults : 'results',     // array of results (category view)
-            description     : 'description', // result description
-            image           : 'image',       // result image
-            price           : 'price',       // result price
-            results         : 'results',     // array of results (standard)
-            title           : 'title',       // result title
-            action          : 'action',      // "view more" object name
-            actionText      : 'text',        // "view more" text
-            actionURL       : 'url'          // "view more" url
-          }
-          </div>
-        </td>
-        <td>List mapping display content to JSON property, either with API or <code>source</code>.</td>
-      </tr>
+        </tr>
+        <tr>
+          <td>fields</td>
+          <td>
+            <div class="code" data-type="css">
+            fields: {
+              categories      : 'results',     // array of categories (category view)
+              categoryName    : 'name',        // name of category (category view)
+              categoryResults : 'results',     // array of results (category view)
+              description     : 'description', // result description
+              image           : 'image',       // result image
+              price           : 'price',       // result price
+              results         : 'results',     // array of results (standard)
+              title           : 'title',       // result title
+              action          : 'action',      // "view more" object name
+              actionText      : 'text',        // "view more" text
+              actionURL       : 'url'          // "view more" url
+            }
+            </div>
+          </td>
+          <td>List mapping display content to JSON property, either with API or <code>source</code>.</td>
+        </tr>
         <tr>
           <td>searchFields</td>
           <td>

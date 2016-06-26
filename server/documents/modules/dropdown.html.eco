@@ -2307,6 +2307,11 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>Event used to trigger dropdown (Hover, Click, Custom Event)</td>
         </tr>
         <tr>
+          <td>allowReselection</td>
+          <td>false</td>
+          <td>When set to <code>true</code> will fire <code>onChange</code> even when the value a user select matches the currently selected value.</td>
+        </tr>
+        <tr>
           <td>allowAdditions</td>
           <td>false</td>
           <td>Whether search selection should allow users to add their own selections, works for single or multiselect.</td>
@@ -2371,6 +2376,11 @@ themes      : ['Default', 'GitHub', 'Material']
               <div class="description">matches against text only</div>
             </div>
           </div>
+        </tr>
+        <tr>
+          <td>selectOnKeydown</td>
+          <td>true</td>
+          <td>Whether dropdown should select new option when using keyboard shortcuts. Setting to <code>false</code> will require <code>enter</code> or left click to confirm a choice.</td>
         </tr>
         <tr>
           <td>forceSelection</td>

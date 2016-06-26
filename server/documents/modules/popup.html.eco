@@ -416,6 +416,26 @@ themes      : ['Default']
 
     <h2 class="ui dividing header">Examples</h2>
 
+    <div class="boundary example">
+      <h4 class="ui header">Specifying Popup Boundaries
+        <div class="ui horizontal teal label">New in 2.2</div>
+      </h4>
+      <p>Popups now include a new setting <code>boundary</code> that let you specify that a popup should not escape the boundary of another section. This can be useful in complex paned layouts</p>
+      <p>Additionally popups can now specify a scroll context, to allow for scroll containers other than window to cause a clicked popup to hide on scroll.</p>
+      <div class="evaluated code" data-type="javascript">
+        $('.boundary.example .button')
+          .popup({
+            boundary: '.boundary.example .segment'
+          })
+        ;
+      </div>
+
+      <div class="ui segment">
+        <div class="ui button" data-content="This popup is very long but wont escape the segment it is placed in">Hover Me</div>
+        <p>Normally this popup would open in the default position <code>top center</code> but because this would escape the boundaries of the segment it will search other available positions until it can find one to place the popup while staying inside the segment</p>
+      </div>
+    </div>
+
     <div class="example">
       <h4 class="ui header">Wide Popup Menu</h4>
       <p>An easier way to display complex content, like a wide popup menu is to have the popup content as a pre-  existing part of your page's HTML.</p>
@@ -663,6 +683,11 @@ themes      : ['Default']
           <td>movePopup</td>
           <td>true</td>
           <td>Whether to move popup to same offset container as target element when <code>popup</code> already exists on the page. Using a popup inside of an element without <code>overflow:visible</code>, like a sidebar, may require you to set this to <code>false</code></td>
+        </tr>
+        <tr>
+          <td>observeChanges</td>
+          <td>true</td>
+          <td>Whether popup should attach <code>mutationObservers</code> to automatically run <code>destroy</code> when the element is removed from the page's DOM.</td>
         </tr>
         <tr>
           <td>boundary</td>
@@ -957,22 +982,22 @@ themes      : ['Default']
         </tr>
         <tr>
           <td>silent</td>
-          <td>False</td>
+          <td>false</td>
           <td>Silences all console output including error messages, regardless of other debug settings.</td>
         </tr>
         <tr>
           <td>debug</td>
-          <td>False</td>
+          <td>false</td>
           <td>Provides standard debug output to console</td>
         </tr>
         <tr>
           <td>performance</td>
-          <td>True</td>
+          <td>true</td>
           <td>Provides standard debug output to console</td>
         </tr>
         <tr>
           <td>verbose</td>
-          <td>True</td>
+          <td>true</td>
           <td>Provides ancillary debug output to console</td>
         </tr>
         <tr>

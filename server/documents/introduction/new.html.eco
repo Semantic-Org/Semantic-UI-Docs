@@ -16,7 +16,7 @@ type        : 'Main'
 
   <div class="ui tab" data-tab="new">
     <h2 class="ui dividing header">By The Numbers</h2>
-    <p><code>2.2</code> includes several months of updates, many new features, and bug releases.</p>
+    <p><code>2.2</code> represents nearly a half year of updates, many new features, and bug patches.</p>
     <div class="ui large bulleted list">
       <div class="item"><b>72</b> <a href="https://github.com/Semantic-Org/Semantic-UI/issues?q=is%3Aissue+milestone%3A2.1+is%3Aclosed" target="_blank">closed issues</a></div>
       <div class="item"><b>70</b> bug fixes</div>
@@ -355,7 +355,7 @@ type        : 'Main'
 
     <div class="example">
       <h4 class="ui header">More Basic Buttons</h4>
-      <p>We've added <code>primary</code>, <code>secondary</code>, <code>positive</code> and <code>negative</code> <code>basic</code> buttons</p>
+      <p>We've added <code>primary</code>, <code>secondary</code>, <code>positive</code> and <code>negative</code> <a href="/elements/button.html#basic"><code>basic</code> buttons</a></p>
       <button class="ui primary basic button">Primary</button>
       <button class="ui secondary basic button">Secondary</button>
       <button class="ui positive basic button">Positive</button>
@@ -507,7 +507,7 @@ type        : 'Main'
           </tr>
         </tbody>
       </table>
-      <a class="ui button" href="/modules/rating.html#settings">Visibility settings
+      <a class="ui button" href="/behaviors/visibility.html#settings">Visibility settings
         <i class="right chevron icon"></i>
       </a>
     </div>
@@ -529,7 +529,7 @@ type        : 'Main'
           </tr>
         </tbody>
       </table>
-      <a class="ui button" href="/modules/rating.html#settings">Tab settings
+      <a class="ui button" href="/modules/tab.html#settings">Tab settings
         <i class="right chevron icon"></i>
       </a>
     </div>
@@ -550,7 +550,7 @@ type        : 'Main'
           </tr>
         </tbody>
       </table>
-      <a class="ui button" href="/modules/rating.html#settings">Tab settings
+      <a class="ui button" href="/modules/shape.html#settings">Shape settings
         <i class="right chevron icon"></i>
       </a>
     </div>

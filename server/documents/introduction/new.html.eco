@@ -24,21 +24,99 @@ type        : 'Main'
       <div class="item"><b>14</b> feature enhancements</div>
     </div>
     <h2 class="ui dividing header">Project Changes</h2>
-    <h4 class="ui header">jQuery 3.0 Support</h4>
-    <p>We now support jQuery 3.0 out of the box. Learn more about <a href="https://blog.jquery.com/2015/07/13/jquery-3-0-and-jquery-compat-3-0-alpha-versions-released/" target="_blank">jQuery 3.0</a> to see why you should switch.</p>
 
-    <h4 class="ui header">Webpack Support</h4>
-    <p>Our CSS pipeline has been corrected to fix incompatibilty issues with Webpack.</p>
+    <div class="no example">
+      <h4 class="ui header">Critical Bug Fixes</h4>
 
-    <h4>Better CI / Automation Support</h4>
-    <p>We've added a new <code>semantic.json</code> setting <a href="/introduction/build-tools.html#auto-install--continuous-integration"><code>autoInstall</code></a> which allows for silent install when Semantic UI is used in CLI environments, making testing more streamlined.</p>
+      <p><code>2.2</code> brings many new bug fixes. For a complete list please check out our release notes. Here is a highlight of some critical bugs</p>
 
-    <h4 class="ui header">Silent Mode</h4>
-    <p>All JS components now include a new setting <code>silent: true</code> that will prevent all console output including errors.</p>
+      <div class="ui styled bug accordion">
+        <div class="title">
+          <i class="dropdown icon"></i>
+          View Critical Bug List
+        </div>
+        <div class="content">
+          <div class="ui large relaxed bulleted list">
+            <div class="item">
+              <b>All UI</b> - Using <code>component('setting, {})</code> to add multiple settings as an object literal, for example <code>error: {}</code>, will now deep extend the existing object instead of replacing it.
+            </div>
+            <div class="item">
+              <b>API</b> - <code>beforeSend</code> would not correctly cancel request when <code>return false;</code> is used in callback.
+            </div>
+            <div class="item">
+              <b>API</b> - <code>cache: 'local'</code> would not return the localstorage cached results in some cases
+            </div>
+            <div class="item">
+              <b>Divider</b> - Descenders like "g" are cut off in <code>horizontal divider</code>
+            </div>
+            <div class="item">
+              <b>Dropdown</b> - <code>forceSelection</code> will now automatically select values with multi dropdowns. When using <code>userAdditions</code> setting it will now automatically tokenize the current entered value
+            </div>
+            <div class="item">
+              <b>Dropdown</b> - <code>search selection</code> would not let you move back in an entered search string with left arrow
+            </div>
+            <div class="item">
+              <b>Dropdown</b> - Fixed issue where value set using javascript DOM metadata would be cleared when a message or user addition triggered <code>refresh</code>
+            </div>
+            <div class="item">
+              <b>Form Validation / Dropdown</b> - Using "enter" key in a <code>search dropdown</code> could cause a form to be submitted
+            </div>
+            <div class="item">
+              <b>Form Validation</b> - Fix issue with some foreign email addresses with extended charsets causing email validation to fail
+            </div>
+            <div class="item">
+              <b>Form Validation</b> - Revalidating a field <code>on: blur</code> could cause fields not yet interacted with to be validated
+            </div>
+            <div class="item">
+              <b>Form</b> - Fixed issue with <code>(x) fields</code> and <code>equal width</code> fields where middle rows would be slightly smaller because they include both left and right padding in % width. (Edges only have one side padding). Field groups now use negative margins instead.
+            </div>
+            <div class="item">
+              <b>Popup</b> - Fixed issue where clicking element inside popup removed from DOM (like clicking a multi select label) would cause popup to close
+            </div>
+            <div class="item">
+              <b>Rail</b> - Fixed incorrect width for <code>close rail</code> and <code>very close rail</code> caused by variable addition with mixed units <code>px</code> + <code>em</code>
+            </div>
+            <div class="item">
+              <b>Search</b> - Fixed bug where a previously XHR query could cause the next one to fail depending on the latency of the request.
+            </div>
+            <div class="item">
+              <b>Search</b> - Fixed an issue where <code>onResult</code> returning <code>false</code> would not prevent the search menu from hiding. Clicking on an empty results message will also no longer close the search results.
+            </div>
+            <div class="item">
+              <b>Sticky/Visibility</b> -  Added mutation observer to teardown element with <code>destroy</code> if removed from DOM context, fixing a possible memory leak
+            </div>
+            <div class="item">
+              <b>Video</b> - Fixed issue with <code>.video('change')</code> behavior not properly changing video.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">jQuery 3.0 Support</h4>
+      <p>We now support jQuery 3.0 out of the box. Learn more about <a href="https://blog.jquery.com/2015/07/13/jquery-3-0-and-jquery-compat-3-0-alpha-versions-released/" target="_blank">jQuery 3.0</a> to see why you should switch.</p>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">Webpack Support</h4>
+      <p>Our CSS pipeline has been corrected to fix incompatibilty issues with Webpack.</p>
+    </div>
+    <div class="no example">
+      <h4>Better CI / Automation Support</h4>
+      <p>We've added a new <code>semantic.json</code> setting <a href="/introduction/build-tools.html#auto-install--continuous-integration"><code>autoInstall</code></a> which allows for silent install when Semantic UI is used in CLI environments, making testing more streamlined.</p>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">Silent Mode</h4>
+      <p>All JS components now include a new setting <code>silent: true</code> that will prevent all console output including errors.</p>
+    </div>
 
 
-    <h4>More CSS Sizing Variables</h4>
-    <p>We've added many new variables to make sizing with relative EM units a cinch in custom themes. The default theme now defines relative pixel unit variables from <code>@1px-@64px</code> <code>REM</code> and <code>@relative1px-@relative64px</code> with <code>EM</code>.</p>
+    <div class="no example">
+      <h4 class="ui header">More CSS Variables</h4>
+      <p>We've added many new variables, including many to make sizing with relative EM units a cinch in custom themes. The default theme now defines relative pixel unit variables from <code>@1px-@64px</code> <code>REM</code> and <code>@relative1px-@relative64px</code> with <code>EM</code>.</p>
+    </div>
 
     <h2 class="ui dividing header">New Features</h2>
 
@@ -107,7 +185,7 @@ type        : 'Main'
       </div>
     </div>
     <div class="icon example">
-      <h4 class="ui header">Tons of New Icons</h4>
+      <h4 class="ui header">New Icons</h4>
       <p>2.2 of Semantic UI includes the latest version of <a href="http://fontawesome.io/" target="_blank">Font Awesome</a> with 50+ new icons. For a complete breakdown of new icons please check <a href="http://fontawesome.io/whats-new/" target="_blank">Font Awesome's list</a>.</p>
       <div class="ui doubling five column grid">
         <div class="column"><i class="wheelchair icon"></i>Wheelchair</div>
@@ -304,6 +382,8 @@ type        : 'Main'
 
     <h2 class="ui dividing header">New Settings</h2>
 
+    <p>We've added many new settings to components to help provide more granular control for some use-cases.</p>
+
     <div class="example">
       <h4 class="ui header">Dropdowns</h4>
       <table class="ui definition table">
@@ -330,7 +410,7 @@ type        : 'Main'
           </tr>
         </tbody>
       </table>
-      <a class="ui primary button" href="/modules/dropdown.html#settings">View all settings
+      <a class="ui button" href="/modules/dropdown.html#settings">Dropdown settings
         <i class="right chevron icon"></i>
       </a>
     </div>
@@ -348,9 +428,13 @@ type        : 'Main'
             <td>scrollContext</td>
             <td>A selector or DOM element which should be used for determining if user has scrolled.</td>
           </tr>
+          <tr>
+            <td>observeChanges</td>
+            <td>Whether popup should automatically watch for its own removal from page to avoid memory leaks.</td>
+          </tr>
         </tbody>
       </table>
-      <a class="ui primary button" href="/modules/popup.html#settings">View all settings
+      <a class="ui button" href="/modules/popup.html#settings">Popup settings
         <i class="right chevron icon"></i>
       </a>
     </div>
@@ -371,7 +455,7 @@ type        : 'Main'
           </tr>
         </tbody>
       </table>
-      <a class="ui primary button" href="/modules/search.html#settings">View all settings
+      <a class="ui button" href="/modules/search.html#settings">Search settings
         <i class="right chevron icon"></i>
       </a>
     </div>
@@ -387,7 +471,7 @@ type        : 'Main'
           </tr>
         </tbody>
       </table>
-      <a class="ui primary button" href="/modules/rating.html#settings">View all settings
+      <a class="ui button" href="/modules/rating.html#settings">Rating settings
         <i class="right chevron icon"></i>
       </a>
     </div>
@@ -396,6 +480,11 @@ type        : 'Main'
       <h4 class="ui header">Visibility</h4>
       <table class="ui definition table">
         <tbody>
+          <tr>
+            <td>zIndex</td>
+            <td>Allows you to specify the <code>z-index</code> used with <code>type: 'fixed'</code>
+            </td>
+          </tr>
           <tr>
             <td>onFixed</td>
             <td>A callback used with <code>type: 'fixed'</code> to occur when content is fixed to the page.
@@ -418,11 +507,53 @@ type        : 'Main'
           </tr>
         </tbody>
       </table>
-      <a class="ui primary button" href="/modules/rating.html#settings">View all settings
+      <a class="ui button" href="/modules/rating.html#settings">Visibility settings
         <i class="right chevron icon"></i>
       </a>
     </div>
 
+
+    <div class="example">
+      <h4 class="ui header">Tab</h4>
+      <table class="ui definition table">
+        <tbody>
+          <tr>
+            <td>cacheType</td>
+            <td>When set to <code>html</code> will cache the tabs html after load, reloading with the exact same html. Setting to <code>response</code> will cache the serve response, allowing for load events to fire with same contents.
+            </td>
+          </tr>
+          <tr>
+            <td>deactivate</td>
+            <td>When set to <code>siblings</code> deactivates only DOM elements that are siblings of the selected tab activator. <code>all</code> will deactivate all other elements initialized at the same time.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <a class="ui button" href="/modules/rating.html#settings">Tab settings
+        <i class="right chevron icon"></i>
+      </a>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Shape</h4>
+      <table class="ui definition table">
+        <tbody>
+          <tr>
+            <td>width</td>
+            <td>When set to <code>next</code> will use the size of the next <code>side</code> during the shape's animation. When set to <code>initial</code> it will use the size of the shape at initialization. When set to a specifix pixel width, will force the size to that width.
+            </td>
+          </tr>
+          <tr>
+            <td>height</td>
+            <td>When set to <code>next</code> will use the size of the next <code>side</code> during the shape's animation. When set to <code>initial</code> it will use the size of the shape at initialization. When set to a specifix pixel height, will force the size to that height.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <a class="ui button" href="/modules/rating.html#settings">Tab settings
+        <i class="right chevron icon"></i>
+      </a>
+    </div>
   </div>
   <div class="ui tab" data-tab="prev">
     <h2 class="ui dividing header">The Tally</h2>

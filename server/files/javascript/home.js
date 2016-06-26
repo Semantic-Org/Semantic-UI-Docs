@@ -44,7 +44,7 @@ semantic.home.ready = function() {
         ],
         direction = directions[Math.floor(Math.random() * directions.length)]
       ;
-      if($nextSide.size() > 0) {
+      if($nextSide.length > 0) {
         clearTimeout(handler.timer);
         handler.timer = setTimeout(function() {
           $logo
@@ -116,7 +116,7 @@ semantic.home.ready = function() {
             element : $themeDropdown.data('element')
           }
         ;
-        if($existingVariables.size() > 0) {
+        if($existingVariables.length > 0) {
           $variableCode = $('<div class="ui variable code" data-type="less" data-preserve="true" />');
           $variableCode
             .insertAfter($existingVariables)
@@ -125,7 +125,7 @@ semantic.home.ready = function() {
           console.log($variableCode);
         }
 
-        if($existingOverrides.size() > 0) {
+        if($existingOverrides.length > 0) {
           $overrideCode = $('<div class="ui override code" data-type="less" data-preserve="true" />');
           $overrideCode
             .insertAfter($existingOverrides)
@@ -149,7 +149,7 @@ semantic.home.ready = function() {
                   dataType : 'text',
                   urlData  : urlData,
                   onSuccess: function(content) {
-                    if( $('style.override').size() > 0 ) {
+                    if( $('style.override').length > 0 ) {
                       $('style.override').remove();
                     }
                     $('<style>' + content + '</style>')

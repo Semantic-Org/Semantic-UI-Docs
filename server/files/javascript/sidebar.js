@@ -66,7 +66,7 @@ semantic.sidebar.ready = function() {
           direction  = $('.direction.example .buttons .button.active').data('direction'),
           dimPage    = $('.direction.example .dim').checkbox('is checked')
         ;
-        if( $(this).filter('.disabled').size() === 0) {
+        if( $(this).filter('.disabled').length === 0) {
           $('.' + direction + '.demo.sidebar')
             .not('.styled')
             .sidebar('setting', {

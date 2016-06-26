@@ -20,6 +20,10 @@ semantic.new.ready = function() {
 
   };
 
+  $('.bug.accordion')
+    .accordion()
+  ;
+
   // tab refresh
   $('.masthead.tab.segment .stackable.menu .item')
     .tab('setting', 'onLoad', function() {
@@ -36,7 +40,10 @@ semantic.new.ready = function() {
     .dropdown({
       debug: true,
       verbose: true,
-      allowAdditions: true
+      allowAdditions: true,
+      onChange: function() {
+        console.log('onChange');
+      }
     })
   ;
 

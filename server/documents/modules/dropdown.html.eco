@@ -1195,7 +1195,7 @@ themes      : ['Default', 'GitHub', 'Material']
 
     <div class="max example">
       <h4 class="ui header">Maximum Selections</h4>
-      <p>Using <code>maxSelections</code> lets you force a maximum number of selections. You can also use <a href="http://laptop-vm:9778/behaviors/form.html#validation-rules">form validation</a> rules to specify minimum and maximum validation settings for multi-selects inside forms.</p>
+      <p>Using <code>maxSelections</code> lets you force a maximum number of selections. You can also use <a href="behaviors/form.html#validation-rules">form validation</a> rules to specify minimum and maximum validation settings for multi-selects inside forms.</p>
 
       <div class="ui sub header">Selection</div>
       <select multiple name="skills" class="ui fluid normal dropdown">
@@ -1311,24 +1311,38 @@ themes      : ['Default', 'GitHub', 'Material']
           "success": true,
           "results": [
             {
+              // name displayed in dropdown
               "name"  : "Choice 1",
-              "value" : "value1"
+
+              // selected value
+              "value" : "value1",
+
+              // name displayed after selection (optional)
+              "text"  : "Choice 1"
+
+              // whether field should be displayed as disabled (optional)
+              "disabled"  : false
+
             },
             {
               "name"  : "Choice 2",
-              "value" : "value2"
+              "value" : "value2",
+              "text"  : "Choice 2"
             },
             {
               "name"  : "Choice 3",
-              "value" : "value3"
+              "value" : "value3",
+              "text"  : "Choice 3"
             },
             {
               "name"  : "Choice 4",
-              "value" : "value4"
+              "value" : "value4",
+              "text"  : "Choice 4"
             },
             {
               "name"  : "Choice 5",
-              "value" : "value5"
+              "value" : "value5",
+              "text"  : "Choice 5"
             }
           ]
       }
@@ -1361,7 +1375,6 @@ themes      : ['Default', 'GitHub', 'Material']
       <div class="evaluated code" data-type="javascript">
         $('.no.label.example .ui.dropdown')
           .dropdown({
-            debug: true,
             useLabels: false
           })
         ;
@@ -1969,28 +1982,28 @@ themes      : ['Default', 'GitHub', 'Material']
           <i class="dropdown icon"></i>
           <div class="default text">States</div>
           <div class="menu">
-            <div data-value="AL">Alabama</div>
-            <div data-value="AK">Alaska</div>
-            <div data-value="AZ">Arizona</div>
-            <div data-value="AR">Arkansas</div>
-            <div data-value="CA">California</div>
-            <!-- Saving your scroll sanity !-->
-            <div data-value="OH">Ohio</div>
-            <div data-value="OK">Oklahoma</div>
-            <div data-value="OR">Oregon</div>
-            <div data-value="PA">Pennsylvania</div>
-            <div data-value="RI">Rhode Island</div>
-            <div data-value="SC">South Carolina</div>
-            <div data-value="SD">South Dakota</div>
-            <div data-value="TN">Tennessee</div>
-            <div data-value="TX">Texas</div>
-            <div data-value="UT">Utah</div>
-            <div data-value="VT">Vermont</div>
-            <div data-value="VA">Virginia</div>
-            <div data-value="WA">Washington</div>
-            <div data-value="WV">West Virginia</div>
-            <div data-value="WI">Wisconsin</div>
-            <div data-value="WY">Wyoming</div>
+						<div class="item" data-value="AL">Alabama</div>
+						<div class="item" data-value="AK">Alaska</div>
+						<div class="item" data-value="AZ">Arizona</div>
+						<div class="item" data-value="AR">Arkansas</div>
+						<div class="item" data-value="CA">California</div>
+						<!-- Saving your scroll sanity !-->
+						<div class="item" data-value="OH">Ohio</div>
+						<div class="item" data-value="OK">Oklahoma</div>
+						<div class="item" data-value="OR">Oregon</div>
+						<div class="item" data-value="PA">Pennsylvania</div>
+						<div class="item" data-value="RI">Rhode Island</div>
+						<div class="item" data-value="SC">South Carolina</div>
+						<div class="item" data-value="SD">South Dakota</div>
+						<div class="item" data-value="TN">Tennessee</div>
+						<div class="item" data-value="TX">Texas</div>
+						<div class="item" data-value="UT">Utah</div>
+						<div class="item" data-value="VT">Vermont</div>
+						<div class="item" data-value="VA">Virginia</div>
+						<div class="item" data-value="WA">Washington</div>
+						<div class="item" data-value="WV">West Virginia</div>
+						<div class="item" data-value="WI">Wisconsin</div>
+						<div class="item" data-value="WY">Wyoming</div>
           </div>
         </div>
       </div>
@@ -2155,6 +2168,10 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>Restores dropdown text to its value on page load</td>
         </tr>
         <tr>
+          <td>restore placeholder text</td>
+          <td>Restores dropdown text to its prompt, placeholder text</td>
+        </tr>
+        <tr>
           <td>restore default value</td>
           <td>Restores dropdown value to its value on page load</td>
         </tr>
@@ -2290,9 +2307,19 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>Event used to trigger dropdown (Hover, Click, Custom Event)</td>
         </tr>
         <tr>
+          <td>allowReselection</td>
+          <td>false</td>
+          <td>When set to <code>true</code> will fire <code>onChange</code> even when the value a user select matches the currently selected value.</td>
+        </tr>
+        <tr>
           <td>allowAdditions</td>
           <td>false</td>
           <td>Whether search selection should allow users to add their own selections, works for single or multiselect.</td>
+        </tr>
+        <tr>
+          <td>hideAdditions</td>
+          <td>true</td>
+          <td>When disabled user additions will appear in the results menu using a specially formatted selection item formatted by <code>templates.addition</code>.</td>
         </tr>
         <tr>
           <td>action</td>
@@ -2327,6 +2354,11 @@ themes      : ['Default', 'GitHub', 'Material']
           </div>
         </tr>
         <tr>
+          <td>minCharacters</td>
+          <td>1</td>
+          <td>The minimum characters for a search to begin showing results</td>
+        </tr>
+        <tr>
           <td>match</td>
           <td>both</td>
           <td>When using <code>search selection</code> specifies how to match values.
@@ -2344,6 +2376,11 @@ themes      : ['Default', 'GitHub', 'Material']
               <div class="description">matches against text only</div>
             </div>
           </div>
+        </tr>
+        <tr>
+          <td>selectOnKeydown</td>
+          <td>true</td>
+          <td>Whether dropdown should select new option when using keyboard shortcuts. Setting to <code>false</code> will require <code>enter</code> or left click to confirm a choice.</td>
         </tr>
         <tr>
           <td>forceSelection</td>
@@ -2506,7 +2543,7 @@ themes      : ['Default', 'GitHub', 'Material']
         <tr>
           <td>fullTextSearch</td>
           <td>false</td>
-          <td>Whether search selections should look for string match anywhere in string</td>
+          <td>Specifying to "true" will use a fuzzy full text search, setting to "exact" will force the exact search to be matched somewhere in the string</td>
         </tr>
         <tr>
           <td>preserveHTML</td>
@@ -2613,13 +2650,13 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>Is called after a dropdown selection is removed using a multiple select dropdown, only receives the removed value</td>
         </tr>
         <tr>
-          <td>onLabelCreate($label)</td>
-          <td>$label</td>
-          <td>Allows you to modify a label before it is added. Expects <code>$label</code> to be returned.</td>
+          <td>onLabelCreate(value, text)</td>
+          <td>$label (jQDOM)</td>
+          <td>Allows you to modify a label before it is added. Expects the jQ DOM element for a label to be returned.</td>
         </tr>
         <tr>
           <td>onLabelRemove(value)</td>
-          <td>$label</td>
+          <td>$label (jqDOM)</td>
           <td>Called when a label is remove, <code>return false;</code> will prevent the label from being removed.</td>
         </tr>
         <tr>
@@ -2758,6 +2795,11 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>name</td>
           <td>Dropdown</td>
           <td>Name used in debug logs</td>
+        </tr>
+        <tr>
+          <td>silent</td>
+          <td>False</td>
+          <td>Silences all console output including error messages, regardless of other debug settings.</td>
         </tr>
         <tr>
           <td>debug</td>

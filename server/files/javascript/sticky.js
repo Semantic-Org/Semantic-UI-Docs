@@ -37,7 +37,7 @@ semantic.sticky.ready = function() {
         $inlineSticky = $(this).find('.segment .ui.sticky'),
         $context      = $(this).find('.segment')
       ;
-      if($inlineSticky.size() > 0) {
+      if($inlineSticky.length > 0) {
         $inlineSticky
           .sticky({
             context: $context,

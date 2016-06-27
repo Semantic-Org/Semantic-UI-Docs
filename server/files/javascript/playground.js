@@ -113,7 +113,7 @@ semantic.playground.ready = function() {
           var
             $parts = $element.children()
           ;
-          if($parts.size() === 0) {
+          if($parts.length === 0) {
             $element.text('Example');
           }
           else {
@@ -218,7 +218,7 @@ semantic.playground.ready = function() {
           ;
           $inputs
             .each(function() {
-              var 
+              var
                 type  = $(this).attr('type'),
                 value = $(this).val()
               ;

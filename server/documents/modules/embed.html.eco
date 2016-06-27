@@ -75,7 +75,7 @@ type        : 'UI Module'
 
       <div class="ui embed"
         data-source="youtube"
-        data-id="pfdu_gTry8E"
+        data-id="O6Xo21L0ybE"
         data-placeholder="/images/image-16by9.png">
       </div>
 
@@ -133,7 +133,7 @@ type        : 'UI Module'
       </div>
       <div class="code" data-type="html" data-preview="true">
         <div class="ui embed"
-          data-url="https://www.youtube.com/embed/pfdu_gTry8E"
+          data-url="https://www.youtube.com/embed/O6Xo21L0ybE"
           data-placeholder="/images/bear-waving.jpg"
         ></div>
       </div>
@@ -148,7 +148,7 @@ type        : 'UI Module'
       <div class="code" data-type="html" data-preview="true">
         <div class="ui embed"
           data-source="youtube"
-          data-id="pfdu_gTry8E"
+          data-id="O6Xo21L0ybE"
         ></div>
       </div>
     </div>
@@ -162,7 +162,7 @@ type        : 'UI Module'
       <div class="code" data-type="html" data-preview="true">
         <div class="ui embed"
           data-source="youtube"
-          data-id="pfdu_gTry8E"
+          data-id="O6Xo21L0ybE"
           data-icon="video"
           data-placeholder="/images/bear-waving.jpg"
         ></div>
@@ -175,7 +175,7 @@ type        : 'UI Module'
       <div class="code" data-type="javascript" data-demo="true">
         $('.custom.example .ui.embed').embed({
           source      : 'youtube',
-          id          : 'pfdu_gTry8E',
+          id          : 'O6Xo21L0ybE',
           placeholder : '/images/bear-waving.jpg'
         });
       </div>
@@ -534,6 +534,11 @@ type        : 'UI Module'
           <td>name</td>
           <td>Embed</td>
           <td>Name used in debug logs</td>
+        </tr>
+        <tr>
+          <td>silent</td>
+          <td>False</td>
+          <td>Silences all console output including error messages, regardless of other debug settings.</td>
         </tr>
         <tr>
           <td>debug</td>

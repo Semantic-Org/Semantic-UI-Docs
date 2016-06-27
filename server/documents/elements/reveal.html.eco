@@ -146,8 +146,12 @@ themes      : ['Default']
     <h4 class="ui header">Instant</h4>
     <p>An element can show its content without delay</p>
     <div class="ui instant move reveal">
-      <img class="visible content" src="/images/wireframe/square-image.png">
-      <img class="hidden content" src="/images/avatar/large/chris.jpg">
+      <div class="visible content">
+        <img src="/images/wireframe/square-image.png" class="ui small image">
+      </div>
+      <div class="hidden content">
+        <img src="/images/avatar/large/chris.jpg" class="ui small image">
+      </div>
     </div>
   </div>
 
@@ -158,8 +162,12 @@ themes      : ['Default']
     <h4 class="ui header">Disabled</h4>
     <p>A disabled reveal will not animate when hovered</p>
     <div class="ui disabled move reveal">
-      <img class="visible content" src="/images/wireframe/square-image.png">
-      <img class="hidden content" src="/images/avatar/large/chris.jpg">
+      <div class="visible content">
+        <img src="/images/wireframe/square-image.png" class="ui small image">
+      </div>
+      <div class="hidden content">
+        <img src="/images/avatar/large/chris.jpg" class="ui small image">
+      </div>
     </div>
   </div>
 

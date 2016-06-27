@@ -27,7 +27,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
     </h4>
     <p>A menu</p>
     <div class="ui ignored message">
-      Starting in <code>2.0</code> menus now use flexbox. This allows each menu item to automatically stretch to the size of the largest item.
+      <p>Starting in <code>2.0</code> menus now use flexbox. This allows each menu item to automatically stretch to the size of the largest item.
     </div>
     <div class="ui three item menu">
       <a class="active item">Editorials</a>
@@ -36,6 +36,9 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
     </div>
   </div>
   <div class="another school example">
+    <div class="ui ignored info message">
+      Many of the following examples use a coupling with <a href="/modules/dropdown.html">dropdowns</a> to display dropdown menus inside of <code>ui menu</code>. Please consult the dropdown documentation for the correct javascript initialization for this component.
+    </div>
     <div class="ui text menu">
       <div class="item">
         <img src="/images/new-school.jpg">
@@ -338,7 +341,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
     <div class="ui vertical menu">
       <a class="active teal item">
         Inbox
-        <div class="ui teal pointing left label">1</div>
+        <div class="ui teal left pointing label">1</div>
       </a>
       <a class="item">
         Spam
@@ -1367,9 +1370,32 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
   </div>
 
   <div class="example">
-    <h4 class="ui header">Horizontal Sizes</h4>
-    <p>A horizontal menu can vary in size</p>
-    <div class="ui large menu">
+    <h4 class="ui header">Size</h4>
+    <p>A menu can vary in size</p>
+    <div class="ui mini menu">
+      <a class="active item">
+        Home
+      </a>
+      <a class="item">
+        Messages
+      </a>
+      <div class="right menu">
+        <div class="ui dropdown item">
+          Language <i class="dropdown icon"></i>
+          <div class="menu">
+            <a class="item">English</a>
+            <a class="item">Russian</a>
+            <a class="item">Spanish</a>
+          </div>
+        </div>
+        <div class="item">
+            <div class="ui primary button">Sign Up</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui tiny menu">
       <a class="active item">
         Home
       </a>
@@ -1414,9 +1440,78 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
       </div>
     </div>
   </div>
+  <div class="another example">
+    <div class="ui large menu">
+      <a class="active item">
+        Home
+      </a>
+      <a class="item">
+        Messages
+      </a>
+      <div class="right menu">
+        <div class="ui dropdown item">
+          Language <i class="dropdown icon"></i>
+          <div class="menu">
+            <a class="item">English</a>
+            <a class="item">Russian</a>
+            <a class="item">Spanish</a>
+          </div>
+        </div>
+        <div class="item">
+            <div class="ui primary button">Sign Up</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui huge menu">
+      <a class="active item">
+        Home
+      </a>
+      <a class="item">
+        Messages
+      </a>
+      <div class="right menu">
+        <div class="ui dropdown item">
+          Language <i class="dropdown icon"></i>
+          <div class="menu">
+            <a class="item">English</a>
+            <a class="item">Russian</a>
+            <a class="item">Spanish</a>
+          </div>
+        </div>
+        <div class="item">
+            <div class="ui primary button">Sign Up</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui massive menu">
+      <a class="active item">
+        Home
+      </a>
+      <a class="item">
+        Messages
+      </a>
+      <div class="right menu">
+        <div class="ui dropdown item">
+          Language <i class="dropdown icon"></i>
+          <div class="menu">
+            <a class="item">English</a>
+            <a class="item">Russian</a>
+            <a class="item">Spanish</a>
+          </div>
+        </div>
+        <div class="item">
+            <div class="ui primary button">Sign Up</div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="example">
     <p>A vertical menu can also vary in size</p>
-    <div class="ui large vertical menu">
+    <div class="ui mini vertical menu">
       <a class="active item">
         <div class="ui teal label">1</div>
         Inbox
@@ -1439,6 +1534,50 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
   </div>
   <div class="another example">
     <div class="ui small vertical menu">
+      <a class="active item">
+        <div class="ui small teal label">1</div>
+        Inbox
+      </a>
+      <a class="item">
+        <div class="ui small label">51</div>
+        Spam
+      </a>
+      <a class="item">
+        <div class="ui small label">1</div>
+        Updates
+      </a>
+      <div class="item">
+        <div class="ui icon input">
+          <input type="text" placeholder="Search mail...">
+          <i class="search icon"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui large vertical menu">
+      <a class="active item">
+        <div class="ui small teal label">1</div>
+        Inbox
+      </a>
+      <a class="item">
+        <div class="ui small label">51</div>
+        Spam
+      </a>
+      <a class="item">
+        <div class="ui small label">1</div>
+        Updates
+      </a>
+      <div class="item">
+        <div class="ui icon input">
+          <input type="text" placeholder="Search mail...">
+          <i class="search icon"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui massive vertical menu">
       <a class="active item">
         <div class="ui small teal label">1</div>
         Inbox

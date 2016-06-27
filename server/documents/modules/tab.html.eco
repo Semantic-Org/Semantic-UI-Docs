@@ -365,7 +365,7 @@ themes      : ['Default']
       <p>For sites that are able to replicate change on the server, tab can automatically map changes in tab navigation to <a href="http://diveintohtml5.info/history.html" target="_blank">html5 state.</a>
       </p>
       <div class="ui ignored warning message">
-        Since these docs are statically hosted on GitHub Pages, html5 state tabs are not demonstratable from the docs. You will need to try this example in your own code.
+        Since these docs are statically hosted on GitHub Pages, html5 state tabs are not demonstrable from the docs. You will need to try this example in your own code.
       </div>
       <div class="code" data-type="javascript">
         $('.ui.menu .item')
@@ -608,6 +608,16 @@ themes      : ['Default']
           <td>Tab should reload content every time it is opened</td>
         </tr>
         <tr>
+          <td>deactivate <div class="ui horizontal label">2.2</div></td>
+          <td>siblings</td>
+          <td>Can be set to either <code>siblings</code> or <code>all</code>. Siblings will only de-activate tab activators that are <code>siblings</code> of the clicked element when a tab is selected. <code>All</code> will deactivate all other tab activators initialized at the same time.</td>
+        </tr>
+        <tr>
+          <td>cacheType <div class="ui horizontal label">2.2</div></td>
+          <td>response</td>
+          <td>Can be set to either <code>response</code> or <code>html</code>. Response will cache the original response on load, this way callbacks always receive the same content. Using `html` will cache the resulting html after all callbacks, making sure any changes to content are preserved.</td>
+        </tr>
+        <tr>
           <td>cache</td>
           <td>true</td>
           <td>Tab should cache content after loading locally to avoid server trip on second load</td>
@@ -778,6 +788,11 @@ themes      : ['Default']
           <td>name</td>
           <td>Tab</td>
           <td>Name used in debug logs</td>
+        </tr>
+        <tr>
+          <td>silent</td>
+          <td>False</td>
+          <td>Silences all console output including error messages, regardless of other debug settings.</td>
         </tr>
         <tr>
           <td>debug</td>

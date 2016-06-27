@@ -6,45 +6,40 @@ standalone : true
 title      : 'Test Page'
 type       : 'Library'
 ---
-<div class="ui top attached tabular menu">
-  <a class="item" data-tab="one">one</a>
-  <a class="item" data-tab="two">two</a>
-  <a class="item" data-tab="three">three</a>
+<div class="ui container">
+<div class="context">
+    <h1>FOOBAR</h1>
+    <p>Loren ipsum<br />dolor sit amet</p>
 </div>
 
-<div class="ui bottom attached tab segment" data-tab="one">One</div>
-<div class="ui bottom attached tab segment" data-tab="two">Two</div>
-<div class="ui bottom attached tab segment" data-tab="three">Three</div>
-
-<div class="ui segment" id="log"></div>
-
-<div class="ui button">
-  Change tab
+<button class="ui button circular icon">
+    <i class="icon settings"></i>
+</button>
 </div>
-</body>
-<!-- TEST JS HERE !-->
 <script>
-$(document)
-  .ready(function(){
+$(document).ready(function() {
+$('h1').visibility({
+   type: 'fixed',
+   context: 'div',
+   debug: true
+});
 
-    $tabs = $('.tabular.menu .item');
+$('button').on('click', function(e) {
+    console.log('should reset');
+  $('h1').visibility('destroy');
+});
 
-    $tabs.tab({
-      onFirstLoad: function(tabPath) {
-       $('#log').append('<p>First load: ' + tabPath + '</p>');
-      }
-    });
-  $('.button').on('click', function() {
+});
 
-    $.tab('change tab', 'one');
-  });
-  })
-;
 </script>
 
 <!-- TEST CSS HERE !-->
 <style type="text/css">
-body > .ui.container:first-child {
-  margin-top: 5em;
-}
+
+    .container {
+       height: 60px;
+       overflow: scroll;
+       margin-bottom: 20px;
+    }
+
 </style>

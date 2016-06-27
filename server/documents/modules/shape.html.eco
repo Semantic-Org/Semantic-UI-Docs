@@ -402,6 +402,28 @@ themes      : ['default']
           <td>700ms</td>
           <td>Duration of side change animation</td>
         </tr>
+        <tr>
+          <td>width <div class="ui horizontal teal label">2.2</div></td>
+          <td>initial</td>
+          <td>
+            <div class="ui bulleted list">
+              <div class="item">When set to <code>next</code> will use the width of the next <code>side</code> during the shape's animation.</div>
+              <div class="item">When set to <code>initial</code> it will use the width of the shape at initialization.</div>
+              <div class="item">When set to a specifix pixel height, will force the width to that height.</div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>height <div class="ui horizontal teal label">2.2</div></td>
+          <td>initial</td>
+          <td>
+            <div class="ui bulleted list">
+              <div class="item">When set to <code>next</code> will use the height of the next <code>side</code> during the shape's animation.</div>
+              <div class="item">When set to <code>initial</code> it will use the height of the shape at initialization.</div>
+              <div class="item">When set to a specifix pixel height, will force the height to that height.</div>
+            </div>
+          </td>
+        </tr>
       </tbody>
     </table>
 
@@ -497,6 +519,11 @@ themes      : ['default']
           <td>name</td>
           <td>Shape</td>
           <td>Name used in debug logs</td>
+        </tr>
+        <tr>
+          <td>silent</td>
+          <td>False</td>
+          <td>Silences all console output including error messages, regardless of other debug settings.</td>
         </tr>
         <tr>
           <td>debug</td>

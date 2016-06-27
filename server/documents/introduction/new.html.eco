@@ -4,17 +4,561 @@ css         : 'new'
 standalone  : true
 order       : 1
 
-title       : 'New in 2.1'
+title       : 'New in 2.2'
 description : 'An introduction to new features found in the latest release'
 type        : 'Main'
 ---
 
-<%- @partial('header',  { tabs: { new: 'New in 2.1', last: 'New in 2.0' } }) %>
+<%- @partial('header',  { tabs: { new: 'New in 2.2', prev: 'New in 2.1', last: 'New in 2.0' } }) %>
 <script src="/javascript/new.js"></script>
 
 <div class="main ui intro container">
 
   <div class="ui tab" data-tab="new">
+    <h2 class="ui dividing header">By The Numbers</h2>
+    <p><code>2.2</code> represents nearly a half year of updates, many new features, and bug patches.</p>
+    <div class="ui large bulleted list">
+      <div class="item"><b>124</b> <a href="https://github.com/Semantic-Org/Semantic-UI/issues?q=is%3Aissue+milestone%3A2.1+is%3Aclosed" target="_blank">closed issues</a></div>
+      <div class="item"><b>40</b> new features</div>
+      <div class="item"><b>70</b> bug fixes</div>
+    </div>
+
+    <p>For the complete list of bugs, their accompanying issue threads and the fixes please consult the release notes</p>
+    <a class="ui button" href="https://github.com/Semantic-Org/Semantic-UI/blob/master/RELEASE-NOTES.md#version-220---june-26-2016" target="_blank">Release Notes</a>
+
+    <h2 class="ui dividing header">Project Changes</h2>
+
+    <div class="no example">
+      <h4 class="ui header">Critical Bug Fixes</h4>
+
+      <p><code>2.2</code> brings many new bug fixes. For a complete list please check out our release notes. Here is a highlight of some critical bugs</p>
+
+      <div class="ui styled bug accordion">
+        <div class="title">
+          <i class="dropdown icon"></i>
+          View Critical Bug List
+        </div>
+        <div class="content">
+          <div class="ui large relaxed bulleted list">
+            <div class="item">
+              <b>All UI</b> - Using <code>component('setting, {})</code> to add multiple settings as an object literal, for example <code>error: {}</code>, will now deep extend the existing object instead of replacing it.
+            </div>
+            <div class="item">
+              <b>API</b> - <code>beforeSend</code> would not correctly cancel request when <code>return false;</code> is used in callback.
+            </div>
+            <div class="item">
+              <b>API</b> - <code>cache: 'local'</code> would not return the localstorage cached results in some cases
+            </div>
+            <div class="item">
+              <b>Divider</b> - Descenders like "g" are cut off in <code>horizontal divider</code>
+            </div>
+            <div class="item">
+              <b>Dropdown</b> - <code>forceSelection</code> will now automatically select values with multi dropdowns. When using <code>userAdditions</code> setting it will now automatically tokenize the current entered value
+            </div>
+            <div class="item">
+              <b>Dropdown</b> - <code>search selection</code> would not let you move back in an entered search string with left arrow
+            </div>
+            <div class="item">
+              <b>Dropdown</b> - Fixed issue where value set using javascript DOM metadata would be cleared when a message or user addition triggered <code>refresh</code>
+            </div>
+            <div class="item">
+              <b>Form Validation / Dropdown</b> - Using "enter" key in a <code>search dropdown</code> could cause a form to be submitted
+            </div>
+            <div class="item">
+              <b>Form Validation</b> - Fix issue with some foreign email addresses with extended charsets causing email validation to fail
+            </div>
+            <div class="item">
+              <b>Form Validation</b> - Revalidating a field <code>on: blur</code> could cause fields not yet interacted with to be validated
+            </div>
+            <div class="item">
+              <b>Form</b> - Fixed issue with <code>(x) fields</code> and <code>equal width</code> fields where middle rows would be slightly smaller because they include both left and right padding in % width. (Edges only have one side padding). Field groups now use negative margins instead.
+            </div>
+            <div class="item">
+              <b>Popup</b> - Fixed issue where clicking element inside popup removed from DOM (like clicking a multi select label) would cause popup to close
+            </div>
+            <div class="item">
+              <b>Rail</b> - Fixed incorrect width for <code>close rail</code> and <code>very close rail</code> caused by variable addition with mixed units <code>px</code> + <code>em</code>
+            </div>
+            <div class="item">
+              <b>Search</b> - Fixed bug where a previously XHR query could cause the next one to fail depending on the latency of the request.
+            </div>
+            <div class="item">
+              <b>Search</b> - Fixed an issue where <code>onResult</code> returning <code>false</code> would not prevent the search menu from hiding. Clicking on an empty results message will also no longer close the search results.
+            </div>
+            <div class="item">
+              <b>Sticky/Visibility</b> -  Added mutation observer to teardown element with <code>destroy</code> if removed from DOM context, fixing a possible memory leak
+            </div>
+            <div class="item">
+              <b>Video</b> - Fixed issue with <code>.video('change')</code> behavior not properly changing video.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">jQuery 3.0 Support</h4>
+      <p>We now support jQuery 3.0 out of the box. Learn more about <a href="https://blog.jquery.com/2015/07/13/jquery-3-0-and-jquery-compat-3-0-alpha-versions-released/" target="_blank">jQuery 3.0</a> to see why you should switch.</p>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">Webpack Support</h4>
+      <p>Our CSS pipeline has been corrected to fix incompatibilty issues with Webpack.</p>
+    </div>
+    <div class="no example">
+      <h4>Better CI / Automation Support</h4>
+      <p>We've added a new <code>semantic.json</code> setting <a href="/introduction/build-tools.html#auto-install--continuous-integration"><code>autoInstall</code></a> which allows for silent install when Semantic UI is used in CLI environments, making testing more streamlined.</p>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">Silent Mode</h4>
+      <p>All JS components now include a new setting <code>silent: true</code> that will prevent all console output including errors.</p>
+    </div>
+
+
+    <div class="no example">
+      <h4 class="ui header">More CSS Variables</h4>
+      <p>We've added many new variables, including many to make sizing with relative EM units a cinch in custom themes. The default theme now defines relative pixel unit variables from <code>@1px-@64px</code> <code>REM</code> and <code>@relative1px-@relative64px</code> with <code>EM</code>.</p>
+    </div>
+
+    <h2 class="ui dividing header">New Features</h2>
+
+    <div class="example">
+      <h4 class="ui header">CSS-Only Tooltips</h4>
+      <p>2.2 includes CSS only popups that work without JS initialization using the <code>data-tooltip</code> property on any element. CSS tooltips even support inversion and specified positioning.</p>
+      <div class="ui icon button" data-tooltip="Add users to your feed" data-delay="500">
+        <i class="add icon"></i>
+      </div>
+      <div class="ui icon button" data-tooltip="Add users to your feed" data-inverted>
+        <i class="add icon"></i>
+      </div>
+      <div class="ui button" data-tooltip="Add users to your feed" data-position="top left">
+        Top Left
+      </div>
+      <div class="ui button" data-tooltip="Add users to your feed" data-position="top center">
+        Top Center
+      </div>
+      <div class="ui button" data-tooltip="Add users to your feed" data-position="top right">
+        Top Right
+      </div>
+      <div class="ui divider"></div>
+      <div class="ui button" data-tooltip="Add users to your feed" data-position="bottom left">
+        Bottom Left
+      </div>
+      <div class="ui button" data-tooltip="Add users to your feed" data-position="bottom center">
+        Bottom Center
+      </div>
+      <div class="ui button" data-tooltip="Add users to your feed" data-position="bottom right">
+        Bottom Right
+      </div>
+      <div class="ui divider"></div>
+      <div class="ui button" data-tooltip="Add users to your feed" data-position="right center">
+        Right Center
+      </div>
+      <div class="ui button" data-tooltip="Add users to your feed" data-position="left center">
+        Left Center
+      </div>
+    </div>
+    <div class="another example">
+      <div class="ui button" data-inverted data-tooltip="Add users to your feed" data-position="top left">
+        Top Left
+      </div>
+      <div class="ui button" data-inverted data-tooltip="Add users to your feed" data-position="top center">
+        Top Center
+      </div>
+      <div class="ui button" data-inverted data-tooltip="Add users to your feed" data-position="top right">
+        Top Right
+      </div>
+      <div class="ui divider"></div>
+      <div class="ui button" data-inverted data-tooltip="Add users to your feed" data-position="bottom left">
+        Bottom Left
+      </div>
+      <div class="ui button" data-inverted data-tooltip="Add users to your feed" data-position="bottom center">
+        Bottom Center
+      </div>
+      <div class="ui button" data-inverted data-tooltip="Add users to your feed" data-position="bottom right">
+        Bottom Right
+      </div>
+      <div class="ui divider"></div>
+      <div class="ui button" data-inverted data-tooltip="Add users to your feed" data-position="right center">
+        Right Center
+      </div>
+      <div class="ui button" data-inverted data-tooltip="Add users to your feed" data-position="left center">
+        Left Center
+      </div>
+    </div>
+    <div class="icon example">
+      <h4 class="ui header">New Icons</h4>
+      <p>2.2 of Semantic UI includes the latest version of <a href="http://fontawesome.io/" target="_blank">Font Awesome</a> with 50+ new icons. For a complete breakdown of new icons please check <a href="http://fontawesome.io/whats-new/" target="_blank">Font Awesome's list</a>.</p>
+      <div class="ui doubling five column grid">
+        <div class="column"><i class="wheelchair icon"></i>Wheelchair</div>
+        <div class="column"><i class="asl interpreting icon"></i>American Sign Language (ASL) Interpreting</div>
+        <div class="column"><i class="assistive listening systems icon"></i>Assistive Listening Systems</div>
+        <div class="column"><i class="audio description icon"></i>Audio Description</div>
+        <div class="column"><i class="blind icon"></i>Blind</div>
+        <div class="column"><i class="braille icon"></i>Braille</div>
+        <div class="column"><i class="deafness icon"></i>Deafness</div>
+        <div class="column"><i class="low vision icon"></i>Low Vision</div>
+        <div class="column"><i class="sign language icon"></i>Sign Language</div>
+        <div class="column"><i class="universal access icon"></i>Universal Access</div>
+        <div class="column"><i class="volume control phone icon"></i>Volume Control Phone</div>
+      </div>
+      <div class="ui divider"></div>
+      <a href="/elements/icon.html" class="ui primary button">View All Icons <i class="right chevron icon"></i></a>
+    </div>
+    <div class="rapid example">
+      <h4 class="ui header">Rapid-Ready Progress</h4>
+      <p>Progress bars in 2.2 have been recoded to handle rapid update events.</p>
+      <p>Now developers can trigger updates at fast intervals without causing animations to stutter, or easing tweens to occur unnaturally.</p>
+      <div class="code" data-type="html" data-preview="true">
+        <div class="ui indicating progress" data-value="1" data-total="200" id="example5">
+          <div class="bar">
+            <div class="progress"></div>
+          </div>
+          <div class="label">Waiting for you to press button</div>
+        </div>
+      </div>
+      <a class="ui button" data-url="/images/large-pdf.pdf">
+        Rapidly Update
+      </a>
+      <div class="evaluated code" data-type="javascript">
+        $('.rapid.example .ui.button')
+          .on('click', function() {
+            var
+              $progress       = $('.rapid.example .ui.progress'),
+              $button         = $(this),
+              updateEvent
+            ;
+            clearInterval(window.fakeProgress)
+            $progress.progress('reset');
+
+            // updates every 10ms until complete
+            window.fakeProgress = setInterval(function() {
+              $progress.progress('increment');
+              $button.text( $progress.progress('get value') );
+              // stop incrementing when complete
+              if($progress.progress('is complete')) {
+                clearInterval(window.fakeProgress)
+              }
+            }, 10);
+          })
+        ;
+        $('.rapid.example .ui.progress')
+          .progress({
+            duration : 200,
+            total    : 200,
+            text     : {
+              active: '{value} of {total} done'
+            }
+          })
+        ;
+      </div>
+    </div>
+    <div class="memory example">
+      <h4 class="ui header">Reduced Memory Leaks</h4>
+      <p><a href="/modules/sticky.html">Sticky</a>, <a href="/behaviors/visibility.html">visibility</a>, <a href="/modules/popup.html">popup</a>, and <a href="modules/dropdown.html">dropdown</a>, modules that can attach events on initialization to <code>window</code> and <code>body</code>, for example to detect changes in window scroll, will now use <a href="https://github.com/Semantic-Org/Semantic-UI/blob/master/dist/components/visibility.js#L143" target="_blank">additional mutation observers</a> to determine if they are removed from the DOM and automatically fire their <code>destroy</code> behaviors.</p>
+      <p>This can prevent memory leaks when the parent element of a component is removed without the element is propertly teared down by calling its <code>destroy</code> behavior.</p>
+      <div class="ui primary button">Simulate Memory Leak</div>
+      <div class="ui display segment">
+        Not Active
+      </div>
+      <div class="wrapper">
+        <div class="ui demo segment">
+          This segment has visibility events attached to modify the button above to say "active" when it is on screen
+        </div>
+      </div>
+      <div class="evaluated code">
+        $('.memory.example .demo.segment')
+          .visibility({
+            onOnScreen: function() {
+              // this will no longer fire even though element was removed indirectly
+              $('.memory.example .display.segment').html('This is active');
+            }
+          })
+        ;
+        // button will remove parent of visibility element and callback will stop firing automatically
+        $('.memory.example .ui.button')
+          .on('click', function() {
+            $('.memory.example .display.segment').html('De-activated');
+            $('.memory.example .wrapper')
+              .remove()
+            ;
+          })
+        ;
+      </div>
+    </div>
+    <div class="depends example">
+      <h4 class="ui header">Dependent Form Validation</h4>
+      <p>Form field validation can now specify a <a href="/behaviors/form.html#dependent-fields"><code>depends</code> property</a> which will only cause validation to occur only when another field, like a checkbox or input, is selected.</p>
+      <form class="ui form segment">
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" name="isDoctor" />
+            <label>Are you a doctor?</label>
+          </div>
+        </div>
+        <div class="field">
+          <label>How long have you been a medical professional</label>
+          <input type="text" name="yearsPracticed">
+        </div>
+        <div class="ui divider"></div>
+        <div class="ui blue submit button">Submit</div>
+        <div class="ui error message"></div>
+      </form>
+      <div class="evaluated code">
+      $('.depends.example .ui.form')
+        .form({
+          onSuccess: function() {
+            alert('No form problems');
+            return false;
+          },
+          fields: {
+            yearsPracticed: {
+              identifier : 'yearsPracticed',
+              depends    : 'isDoctor',
+              rules      : [
+                {
+                  type   : 'empty',
+                  prompt : 'Please enter the number of years you have been a doctor'
+                }
+              ]
+            }
+          }
+        })
+      ;
+      </div>
+    </div>
+    <div class="faster example">
+      <h4 class="ui header">Faster Dropdown Selection</h4>
+      <p>We've updated dropdowns to make it simpler to breeze through forms with dropdowns, and provide more intuitive selection controls</p>
+      <div class="ui large relaxed bulleted list">
+        <div class="item">
+          Multiple select dropdowns use a new algorithm for line breaks based on actual rendered pixels and not estimated length based on glyph width calculations, meaning more choices can squeeze on a line than before.
+        </div>
+        <div class="item">
+          Dropdowns now change selections on keyboards without hitting "enter", this lets users quickly navigate between dropdown elements in a form without having to hit "enter" before "tab" after each field entry, saving an additional keystroke.
+        </div>
+        <div class="item">
+          All dropdown menus now support letter keyboard shortcuts. Hitting "C" for instance will let you jump to "California" in a dropdown list, then hitting it again "Colorado", even without using a search selection dropdown.
+        </div>
+      </div>
+      <div class="ui two column very relaxed divided grid">
+        <div class="column">
+          <select class="ui fluid dropdown">
+            <%- @partial('examples/single/state-options') %>
+          </select>
+        </div>
+        <div class="column">
+          <select class="ui multiple search fluid dropdown" multiple>
+            <%- @partial('examples/single/state-options') %>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">More Basic Buttons</h4>
+      <p>We've added <code>primary</code>, <code>secondary</code>, <code>positive</code> and <code>negative</code> <a href="/elements/button.html#basic"><code>basic</code> buttons</a></p>
+      <button class="ui primary basic button">Primary</button>
+      <button class="ui secondary basic button">Secondary</button>
+      <button class="ui positive basic button">Positive</button>
+      <button class="ui negative basic button">Negative</button>
+    </div>
+
+    <div class="boundary example">
+      <h4 class="ui header">Popup Boundaries and Scroll Context</h4>
+      <p>Popups now include a new setting <code>boundary</code> that let you specify that a popup should not escape the boundary of another section. This can be useful in complex paned layouts</p>
+      <p>Additionally popups can now specify a scroll context, to allow for scroll containers other than window to cause a clicked popup to hide on scroll.</p>
+      <div class="evaluated code" data-type="javascript">
+        $('.boundary.example .button')
+          .popup({
+            boundary: '.boundary.example .segment'
+          })
+        ;
+      </div>
+
+      <div class="ui segment">
+        <div class="ui button" data-content="This popup is very long but wont escape the segment it is placed in">Hover Me</div>
+        <p>Normally this popup would open in the default position <code>top center</code> but because this would escape the boundaries of the segment it will search other available positions until it can find one to place the popup while staying inside the segment</p>
+      </div>
+    </div>
+
+    <h2 class="ui dividing header">New Settings</h2>
+
+    <p>We've added many new settings to components to help provide more granular control for some use-cases.</p>
+
+    <div class="example">
+      <h4 class="ui header">Dropdowns</h4>
+      <table class="ui definition table">
+        <tbody>
+          <tr>
+            <td>selectOnKeydown</td>
+            <td>Whether dropdown should change active selection on keyboard shortcuts, preventing the requirement of hitting <code>enter</code> to confirm selection before the user tabs out of the field. (This will save one extra keystroke)
+            </td>
+          <tr>
+            <td>allowReselection</td>
+            <td>Setting to <code>true</code> will allow <code>onChange</code> to be triggered even when reselecting the same option</td>
+          </tr>
+          <tr>
+            <td>fullTextSearch</td>
+            <td>Setting to true will allow search across any part of string, setting to <code>exact</code> will disable fuzzy matching for dropdowns.</td>
+          </tr>
+          <tr>
+            <td>hideAdditions</td>
+            <td>Setting to true will allow custom user additions without triggering a special dropdown message for "Add custom choice". This is now enabled by default</td>
+          </tr>
+          <tr>
+            <td>minCharacters</td>
+            <td>Minimum characters required to begin showing filtered results</td>
+          </tr>
+        </tbody>
+      </table>
+      <a class="ui button" href="/modules/dropdown.html#settings">Dropdown settings
+        <i class="right chevron icon"></i>
+      </a>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Popup</h4>
+      <table class="ui definition table">
+        <tbody>
+          <tr>
+            <td>boundary</td>
+            <td>A selector, or DOM element that the popup should never escape when positioning itself
+            </td>
+          </tr>
+          <tr>
+            <td>scrollContext</td>
+            <td>A selector or DOM element which should be used for determining if user has scrolled.</td>
+          </tr>
+          <tr>
+            <td>observeChanges</td>
+            <td>Whether popup should automatically watch for its own removal from page to avoid memory leaks.</td>
+          </tr>
+        </tbody>
+      </table>
+      <a class="ui button" href="/modules/popup.html#settings">Popup settings
+        <i class="right chevron icon"></i>
+      </a>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Search</h4>
+      <table class="ui definition table">
+        <tbody>
+          <tr>
+            <td>selectFirstResult</td>
+            <td>Whether the first search result element should be selected after results appear.
+            </td>
+          </tr>
+          <tr>
+            <td>showNoResults</td>
+            <td>Whether a message should appear when no search results are returned
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <a class="ui button" href="/modules/search.html#settings">Search settings
+        <i class="right chevron icon"></i>
+      </a>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Rating</h4>
+      <table class="ui definition table">
+        <tbody>
+          <tr>
+            <td>fireOnInit</td>
+            <td>Whether the rating component should fire callbacks on initialization.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <a class="ui button" href="/modules/rating.html#settings">Rating settings
+        <i class="right chevron icon"></i>
+      </a>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Visibility</h4>
+      <table class="ui definition table">
+        <tbody>
+          <tr>
+            <td>zIndex</td>
+            <td>Allows you to specify the <code>z-index</code> used with <code>type: 'fixed'</code>
+            </td>
+          </tr>
+          <tr>
+            <td>onFixed</td>
+            <td>A callback used with <code>type: 'fixed'</code> to occur when content is fixed to the page.
+            </td>
+          </tr>
+          <tr>
+            <td>onUnfixed</td>
+            <td>A callback used with <code>type: 'fixed'</code> to occur when content is fixed to the page.
+            </td>
+          </tr>
+          <tr>
+            <td>onLoaded</td>
+            <td>A callback used with <code>type: 'image'</code> to occur when content is loaded.
+            </td>
+          </tr>
+          <tr>
+            <td>onAllLoaded</td>
+            <td>A callback used with <code>type: 'image'</code> to occur when all images initialized together are loaded.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <a class="ui button" href="/behaviors/visibility.html#settings">Visibility settings
+        <i class="right chevron icon"></i>
+      </a>
+    </div>
+
+
+    <div class="example">
+      <h4 class="ui header">Tab</h4>
+      <table class="ui definition table">
+        <tbody>
+          <tr>
+            <td>cacheType</td>
+            <td>When set to <code>html</code> will cache the tabs html after load, reloading with the exact same html. Setting to <code>response</code> will cache the serve response, allowing for load events to fire with same contents.
+            </td>
+          </tr>
+          <tr>
+            <td>deactivate</td>
+            <td>When set to <code>siblings</code> deactivates only DOM elements that are siblings of the selected tab activator. <code>all</code> will deactivate all other elements initialized at the same time.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <a class="ui button" href="/modules/tab.html#settings">Tab settings
+        <i class="right chevron icon"></i>
+      </a>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Shape</h4>
+      <table class="ui definition table">
+        <tbody>
+          <tr>
+            <td>width</td>
+            <td>When set to <code>next</code> will use the size of the next <code>side</code> during the shape's animation. When set to <code>initial</code> it will use the size of the shape at initialization. When set to a specifix pixel width, will force the size to that width.
+            </td>
+          </tr>
+          <tr>
+            <td>height</td>
+            <td>When set to <code>next</code> will use the size of the next <code>side</code> during the shape's animation. When set to <code>initial</code> it will use the size of the shape at initialization. When set to a specifix pixel height, will force the size to that height.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <a class="ui button" href="/modules/shape.html#settings">Shape settings
+        <i class="right chevron icon"></i>
+      </a>
+    </div>
+  </div>
+  <div class="ui tab" data-tab="prev">
     <h2 class="ui dividing header">The Tally</h2>
     <p><code>2.1</code> sums up around two months of work, including many new features, and updates to help bulletproof existing UI.</p>
     <div class="ui large bulleted list">
@@ -25,9 +569,6 @@ type        : 'Main'
     </div>
 
     <p>To see the complete list of updates <a href="https://github.com/Semantic-Org/Semantic-UI/blob/<%= @getBranch() %>/RELEASE-NOTES.md#version-210---sep-01-2015">review our release notes</a></p>
-
-    <h2 class="ui dividing header">New UI</h2>
-
 
     <div class="example" data-class="labeled, left labeled">
       <h4 class="ui header">Labeled Buttons</h4>

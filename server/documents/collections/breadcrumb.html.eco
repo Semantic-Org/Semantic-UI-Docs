@@ -106,9 +106,27 @@ themes      : ['Default']
 
   <h2 class="ui dividing header">Variations</h2>
 
-  <div class="example">
+  <div class="example" data-class="size">
     <h4 class="ui header">Size</h4>
     <p>A breadcrumb can vary in size</p>
+    <div class="ui mini breadcrumb">
+      <a class="section">Home</a>
+      <i class="right chevron icon divider"></i>
+      <a class="section">Registration</a>
+      <i class="right chevron icon divider"></i>
+      <div class="active section">Personal Information</div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui tiny breadcrumb">
+      <a class="section">Home</a>
+      <i class="right chevron icon divider"></i>
+      <a class="section">Registration</a>
+      <i class="right chevron icon divider"></i>
+      <div class="active section">Personal Information</div>
+    </div>
+  </div>
+  <div class="another example">
     <div class="ui small breadcrumb">
       <a class="section">Home</a>
       <i class="right chevron icon divider"></i>
@@ -127,7 +145,25 @@ themes      : ['Default']
     </div>
   </div>
   <div class="another example">
+    <div class="ui big breadcrumb">
+      <a class="section">Home</a>
+      <i class="right chevron icon divider"></i>
+      <a class="section">Registration</a>
+      <i class="right chevron icon divider"></i>
+      <div class="active section">Personal Information</div>
+    </div>
+  </div>
+  <div class="another example">
     <div class="ui huge breadcrumb">
+      <a class="section">Home</a>
+      <i class="right chevron icon divider"></i>
+      <a class="section">Registration</a>
+      <i class="right chevron icon divider"></i>
+      <div class="active section">Personal Information</div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui massive breadcrumb">
       <a class="section">Home</a>
       <i class="right chevron icon divider"></i>
       <a class="section">Registration</a>

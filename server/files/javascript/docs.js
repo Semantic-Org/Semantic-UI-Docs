@@ -203,7 +203,7 @@ semantic.ready = function() {
           $section    = $menuItems.filter('.active'),
           index       = $menuItems.index($section)
         ;
-        if($section.prev().size() > 0) {
+        if($section.prev().length > 0) {
           $section
             .removeClass('active')
             .prev('.item')
@@ -248,8 +248,8 @@ semantic.ready = function() {
           index          = $exampleHeaders.index($section),
           $followSection = $followMenu.find('.menu > .item'),
           $activeSection = $followSection.eq(index),
-          inClosedTab    = ($(this).closest('.tab:not(.active)').size() > 0),
-          anotherExample = ($(this).filter('.another.example').size() > 0),
+          inClosedTab    = ($(this).closest('.tab:not(.active)').length > 0),
+          anotherExample = ($(this).filter('.another.example').length > 0),
           isActive       = $activeSection.hasClass('active')
         ;
         if(index !== -1 && !inClosedTab && !anotherExample && !isActive) {
@@ -308,7 +308,7 @@ semantic.ready = function() {
 
     tryCreateMenu: function(event) {
       if($(window).width() > 640 && !$('body').hasClass('basic')) {
-        if($container.size() > 0 && $container.find('.following.menu').size() === 0) {
+        if($container.length > 0 && $container.find('.following.menu').length === 0) {
           handler.createMenu();
           handler.createWaypoints();
           $(window).off('resize.menu');
@@ -340,7 +340,7 @@ semantic.ready = function() {
             id       = window.escape(safeName),
             $anchor  = $('<a />').addClass('anchor').attr('id', id)
           ;
-          if($title.size() > 0) {
+          if($title.length > 0) {
             $title.after($anchor);
           }
         })
@@ -385,7 +385,7 @@ semantic.ready = function() {
           var
             $currentHeader = $(this),
             $nextElements  = $currentHeader.nextUntil('h2'),
-            $examples      = $nextElements.find('.example:not(.another)').andSelf().filter('.example:not(.another)'),
+            $examples      = $nextElements.find('.example:not(.another)').addBack().filter('.example:not(.another)'),
             activeClass    = (index === 0)
               ? 'active '
               : '',
@@ -395,13 +395,13 @@ semantic.ready = function() {
             $anchor  = $('<a />').addClass('anchor').attr('id', id)
           ;
           html += '<div class="item">';
-          if($examples.size() === 0) {
+          if($examples.length === 0) {
             html += '<a class="'+activeClass+'title" href="#'+ id +'"><b>' + $(this).text() + '</b></a>';
           }
           else {
             html += '<a class="'+activeClass+'title"><i class="dropdown icon"></i> <b>' + $(this).text() + '</b></a>';
           }
-          if($examples.size() > 0) {
+          if($examples.length > 0) {
             html += '<div class="'+activeClass+'content menu">';
             $examples
               .each(function() {
@@ -412,7 +412,7 @@ semantic.ready = function() {
                   id       = window.escape(safeName),
                   $anchor  = $('<a />').addClass('anchor').attr('id', id)
                 ;
-                if($title.size() > 0) {
+                if($title.length > 0) {
                   html += '<a class="item" href="#'+id+'">' + text + '</a>';
                 }
               })
@@ -444,6 +444,7 @@ semantic.ready = function() {
         .prependTo($container)
       ;
       $sticky.sticky({
+        silent: true,
         context: $container,
         offset: 30
       });
@@ -543,7 +544,7 @@ semantic.ready = function() {
                   dataType : 'text',
                   urlData  : urlData,
                   onSuccess: function(content) {
-                    if( $('style.override').size() > 0 ) {
+                    if( $('style.override').length > 0 ) {
                       $('style.override').remove();
                     }
                     console.log(content);
@@ -681,7 +682,7 @@ semantic.ready = function() {
         $demo       = $example.children().not($intro).not($ignored),
         code        = ''
       ;
-      if( $code.size() === 0) {
+      if( $code.length === 0) {
         $demo
           .each(function() {
             var
@@ -750,7 +751,7 @@ semantic.ready = function() {
       }
 
       // create annotation wrapper
-      if($annotation.size() === 0) {
+      if($annotation.length === 0) {
         $annotation = $('<div/>')
           .addClass('annotation')
           .hide()
@@ -758,7 +759,7 @@ semantic.ready = function() {
         ;
       }
 
-      if($html.size() === 0) {
+      if($html.length === 0) {
         $html     = $('<div class="html">').insertBefore($annotation);
         $label    = $('<div class="ui top attached label">').html('Example <i data-content="Copy code" class="copy link icon"></i>');
         $copyCode = $label.find('i.copy');
@@ -793,7 +794,7 @@ semantic.ready = function() {
       }
 
       // create code inside annotation wrapper
-      if( $example.find('.instructive').size() === 0) {
+      if( $example.find('.instructive').length === 0) {
         $code = $('<div/>')
           .data('type', 'html')
           .addClass('code')
@@ -1235,12 +1236,13 @@ semantic.ready = function() {
   // create sidebar sticky
   $tocSticky
     .sticky({
+      silent: true,
       context: $fullHeightContainer
     })
   ;
 
   // load page tabs
-  if( $pageTabs.size() > 0 ) {
+  if( $pageTabs.length > 0 ) {
     $pageTabs
       .tab({
         context      : '.main.container',
@@ -1249,13 +1251,14 @@ semantic.ready = function() {
         onFirstLoad  : function() {
           handler.makeCode();
 
-          $container = ($('.fixed.column').size() > 0 )
+          $container = ($('.fixed.column').length > 0 )
             ? $(this).find('.examples')
             : $(this)
           ;
           $(this).find('> .rail .ui.sticky, .fixed .ui.sticky')
             .sticky({
               context: $container,
+              silent: true,
               offset: 30
             })
           ;
@@ -1368,7 +1371,7 @@ semantic.ready = function() {
     })
   ;
 
-  if($.fn.tablesort !== undefined && $sortTable.size() > 0) {
+  if($.fn.tablesort !== undefined && $sortTable.length > 0) {
     $sortTable
       .tablesort()
     ;

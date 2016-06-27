@@ -19,15 +19,15 @@ semantic.dimmer.ready = function() {
     show: function() {
       $(this)
         .closest('.example')
-        .children('.segment:not(.instructive)')
-          .dimmer('show')
+        .find('> .html > .segment, > .segment:not(.existing):not(.html)')
+        .dimmer('show')
       ;
     },
     hide: function() {
       $(this)
         .closest('.example')
-        .children('.segment:not(.instructive)')
-          .dimmer('hide')
+        .find('> .html > .segment, > .segment:not(.existing):not(.html)')
+        .dimmer('hide')
       ;
     },
     page: function() {

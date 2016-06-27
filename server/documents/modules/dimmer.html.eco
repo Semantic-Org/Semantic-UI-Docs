@@ -46,10 +46,6 @@ themes      : ['Default']
         </div>
         <img class="ui medium wireframe image" src="/images/wireframe/media-paragraph.png">
       </div>
-      <div class="ui ignored ignored icon buttons">
-        <div class="ui show button"><i class="plus icon"></i></div>
-        <div class="ui hide button"><i class="minus icon"></i></div>
-      </div>
       <div class="ui existing code">
         <div class="ui segment">
           <!-- Dimmer Generated Automatically No Need to Include !-->
@@ -63,6 +59,10 @@ themes      : ['Default']
           </div>
           <p></p>
         </div>
+      </div>
+      <div class="ui ignored ignored icon buttons">
+        <div class="ui show button"><i class="plus icon"></i></div>
+        <div class="ui hide button"><i class="minus icon"></i></div>
       </div>
     </div>
 
@@ -564,6 +564,11 @@ themes      : ['Default']
           <td>name</td>
           <td>Dimmer</td>
           <td>Name used in debug logs</td>
+        </tr>
+        <tr>
+          <td>silent</td>
+          <td>False</td>
+          <td>Silences all console output including error messages, regardless of other debug settings.</td>
         </tr>
         <tr>
           <td>debug</td>

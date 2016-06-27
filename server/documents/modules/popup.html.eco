@@ -24,8 +24,14 @@ themes      : ['Default']
       Types
     </h2>
 
+    <h3 class="ui header">Javascript</h3>
+
+    <div class="ui ignored info message">
+      Popup includes both a javascript version (with a full featureset) and a limited CSS only version, which can be useful in pages that use many popups, or with libraries like React or Meteor to avoid handling DOM lifecycle.
+    </div>
+
     <div class="example">
-      <h4 class="ui header">Content</h4>
+      <h4 class="ui header">Popup</h4>
       <p>An element can specify popup content to appear</p>
       <div class="ui icon button" data-content="Add users to your feed">
         <i class="add icon"></i>
@@ -33,7 +39,7 @@ themes      : ['Default']
     </div>
 
     <div class="example">
-      <h4 class="ui header">Title</h4>
+      <h4 class="ui header">Titled</h4>
       <p>An element can specify popup content with a title</p>
       <img src="/images/avatar/small/elliot.jpg" data-title="Elliot Fu" data-content="Elliot has been a member since July 2012" class="ui avatar image">
       <img src="/images/avatar/small/stevie.jpg" data-title="Stevie Feliciano" data-content="Stevie has been a member since August 2013" class="ui avatar image">
@@ -97,6 +103,81 @@ themes      : ['Default']
         <div class="ui star rating" data-rating="3"></div>
       </div>
     </div>
+
+    <h3 class="ui header">No Javascript</h3>
+
+    <div class="example">
+      <h4 class="ui header">Tooltip
+        <div class="ui teal horizontal label">New in 2.2</div>
+      </h4>
+      <p>An element can specify a simple tooltip that can appear without javascript</p>
+      <div class="ui warning ignored message">
+        Tooltips use an element's <code>:before</code> and <code>:after</code> psuedo classes. Elements like <code>icon</code> that already use these classes for styling will need to have the tooltips to a wrapping element, like a button, or a <code>span</code> to make sure tooltips work correctly.
+      </div>
+      <div class="ui icon button" data-tooltip="Add users to your feed">
+        <i class="add icon"></i>
+      </div>
+      <div class="ui icon button" data-tooltip="Add users to your feed" data-inverted>
+        <i class="add icon"></i>
+      </div>
+    </div>
+    <div class="another example">
+      <div class="ui button" data-tooltip="Add users to your feed" data-position="top left">
+        Top Left
+      </div>
+      <div class="ui button" data-tooltip="Add users to your feed" data-position="top center">
+        Top Center
+      </div>
+      <div class="ui button" data-tooltip="Add users to your feed" data-position="top right">
+        Top Right
+      </div>
+      <div class="ui divider"></div>
+      <div class="ui button" data-tooltip="Add users to your feed" data-position="bottom left">
+        Bottom Left
+      </div>
+      <div class="ui button" data-tooltip="Add users to your feed" data-position="bottom center">
+        Bottom Center
+      </div>
+      <div class="ui button" data-tooltip="Add users to your feed" data-position="bottom right">
+        Bottom Right
+      </div>
+      <div class="ui divider"></div>
+      <div class="ui button" data-tooltip="Add users to your feed" data-position="right center">
+        Right Center
+      </div>
+      <div class="ui button" data-tooltip="Add users to your feed" data-position="left center">
+        Left Center
+      </div>
+    </div>
+    <div class="another example">
+      <div class="ui button" data-inverted data-tooltip="Add users to your feed" data-position="top left">
+        Top Left
+      </div>
+      <div class="ui button" data-inverted data-tooltip="Add users to your feed" data-position="top center">
+        Top Center
+      </div>
+      <div class="ui button" data-inverted data-tooltip="Add users to your feed" data-position="top right">
+        Top Right
+      </div>
+      <div class="ui divider"></div>
+      <div class="ui button" data-inverted data-tooltip="Add users to your feed" data-position="bottom left">
+        Bottom Left
+      </div>
+      <div class="ui button" data-inverted data-tooltip="Add users to your feed" data-position="bottom center">
+        Bottom Center
+      </div>
+      <div class="ui button" data-inverted data-tooltip="Add users to your feed" data-position="bottom right">
+        Bottom Right
+      </div>
+      <div class="ui divider"></div>
+      <div class="ui button" data-inverted data-tooltip="Add users to your feed" data-position="right center">
+        Right Center
+      </div>
+      <div class="ui button" data-inverted data-tooltip="Add users to your feed" data-position="left center">
+        Left Center
+      </div>
+    </div>
+
 
     <h2 class="ui dividing header">Variations</h2>
 
@@ -168,6 +249,9 @@ themes      : ['Default']
       <h4 class="ui header">Inverted</h4>
       <p>A popup can have its colors inverted</p>
       <i class="circular heart icon link" data-content="Hello. This is an inverted popup" data-variation="inverted"></i>
+      <div class="ui icon button" data-tooltip="Hello. This is an inverted popup" data-position="top left" data-inverted>
+        <i class="add icon"></i>
+      </div>
     </div>
   </div>
 
@@ -331,6 +415,26 @@ themes      : ['Default']
   <div class="ui tab" data-tab="examples">
 
     <h2 class="ui dividing header">Examples</h2>
+
+    <div class="boundary example">
+      <h4 class="ui header">Specifying Popup Boundaries
+        <div class="ui horizontal teal label">New in 2.2</div>
+      </h4>
+      <p>Popups now include a new setting <code>boundary</code> that let you specify that a popup should not escape the boundary of another section. This can be useful in complex paned layouts</p>
+      <p>Additionally popups can now specify a scroll context, to allow for scroll containers other than window to cause a clicked popup to hide on scroll.</p>
+      <div class="evaluated code" data-type="javascript">
+        $('.boundary.example .button')
+          .popup({
+            boundary: '.boundary.example .segment'
+          })
+        ;
+      </div>
+
+      <div class="ui segment">
+        <div class="ui button" data-content="This popup is very long but wont escape the segment it is placed in">Hover Me</div>
+        <p>Normally this popup would open in the default position <code>top center</code> but because this would escape the boundaries of the segment it will search other available positions until it can find one to place the popup while staying inside the segment</p>
+      </div>
+    </div>
 
     <div class="example">
       <h4 class="ui header">Wide Popup Menu</h4>
@@ -581,9 +685,24 @@ themes      : ['Default']
           <td>Whether to move popup to same offset container as target element when <code>popup</code> already exists on the page. Using a popup inside of an element without <code>overflow:visible</code>, like a sidebar, may require you to set this to <code>false</code></td>
         </tr>
         <tr>
+          <td>observeChanges</td>
+          <td>true</td>
+          <td>Whether popup should attach <code>mutationObservers</code> to automatically run <code>destroy</code> when the element is removed from the page's DOM.</td>
+        </tr>
+        <tr>
+          <td>boundary</td>
+          <td>window</td>
+          <td>When the popup surpasses the boundary of this element, it will attempt to find another display position.</td>
+        </tr>
+        <tr>
           <td>context</td>
           <td>body</td>
-          <td>Selector or jquery object specifying where the popup should be created</td>
+          <td>Selector or jquery object specifying where the popup should be created.</td>
+        </tr>
+        <tr>
+          <td>scrollContext</td>
+          <td>window</td>
+          <td>Will automatically hide a popup on scroll event in this context</td>
         </tr>
         <tr>
           <td>jitter</td>
@@ -862,18 +981,23 @@ themes      : ['Default']
           <td>Name used in debug logs</td>
         </tr>
         <tr>
+          <td>silent</td>
+          <td>false</td>
+          <td>Silences all console output including error messages, regardless of other debug settings.</td>
+        </tr>
+        <tr>
           <td>debug</td>
-          <td>False</td>
+          <td>false</td>
           <td>Provides standard debug output to console</td>
         </tr>
         <tr>
           <td>performance</td>
-          <td>True</td>
+          <td>true</td>
           <td>Provides standard debug output to console</td>
         </tr>
         <tr>
           <td>verbose</td>
-          <td>True</td>
+          <td>true</td>
           <td>Provides ancillary debug output to console</td>
         </tr>
         <tr>

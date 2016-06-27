@@ -165,7 +165,7 @@ themes      : ['Default']
       <div class="item">
         <div>Benefits</div>
         <div class="list">
-          <div class="item">Use Anywhere</div>
+          <a class="item" href="#">Link to somewhere</a>
           <div class="item">Rebates</div>
           <div class="item">Discounts</div>
         </div>

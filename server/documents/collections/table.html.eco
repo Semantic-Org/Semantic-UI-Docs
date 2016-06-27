@@ -1742,7 +1742,7 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
     <h4 class="ui header">Sortable</h4>
     <p>A table may allow a user to sort contents by clicking on a table header.</p>
 
-    <div class="ui warning message">Adding a classname of <code>ascending</code> or <code>descending</code> to the <code>th</code> will show the user the direction of sort. This example uses a modified version of the kylefox's <a href="https://github.com/kylefox/jquery-tablesort">tablesort plugin</a> to provide the proper class names. To make sortable tables work, include <a href="http://semantic-ui.com/javascript/library/tablesort.js">this javascript</a> into your page and call <code>$('table').tablesort()</code> when DOM is ready.
+    <div class="ui ignored warning message">Adding a classname of <code>ascending</code> or <code>descending</code> to the <code>th</code> will show the user the direction of sort. This example uses a modified version of the kylefox's <a href="https://github.com/kylefox/jquery-tablesort">tablesort plugin</a> to provide the proper class names. To make sortable tables work, include <a href="http://semantic-ui.com/javascript/library/tablesort.js">this javascript</a> into your page and call <code>$('table').tablesort()</code> when DOM is ready.
     </div>
 
     <table class="ui sortable celled table">
@@ -1969,6 +1969,7 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
         </tr>
         <tr>
           <td>John</td>
+          <td>Approved</td>
           <td>Approved</td>
           <td>None</td>
         </tr>

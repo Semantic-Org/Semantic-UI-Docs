@@ -135,6 +135,11 @@ themes      : ['Default']
           <td>Class names used to determine element state</td>
         </tr>
         <tr>
+          <td>silent</td>
+          <td>False</td>
+          <td>Silences all console output including error messages, regardless of other debug settings.</td>
+        </tr>
+        <tr>
           <td>debug</td>
           <td>false</td>
           <td>Debug output to console</td>

@@ -238,6 +238,11 @@ themes      : ['Default']
           <td>A number representing the default rating to apply</td>
         </tr>
         <tr>
+          <td>fireOnInit</td>
+          <td>false</td>
+          <td>Whether callbacks like <code>onRate</code> should fire immediately after initializing with the current value.</td>
+        </tr>
+        <tr>
           <td>clearable</td>
           <td>auto</td>
           <td>By default a rating will be only clearable if there is 1 icon. Setting to true/false will allow or disallow a user to clear their rating</td>
@@ -326,6 +331,11 @@ themes      : ['Default']
           <td>name</td>
           <td>Rating</td>
           <td>Name used in debug logs</td>
+        </tr>
+        <tr>
+          <td>silent</td>
+          <td>False</td>
+          <td>Silences all console output including error messages, regardless of other debug settings.</td>
         </tr>
         <tr>
           <td>debug</td>

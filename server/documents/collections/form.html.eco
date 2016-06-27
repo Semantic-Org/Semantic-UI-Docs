@@ -398,12 +398,16 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
     </div>
     <div class="ui form">
       <div class="field">
-        <label>Gender</label>
-        <select class="ui dropdown">
-          <option value="">Gender</option>
-          <option value="1">Male</option>
-          <option value="0">Female</option>
-        </select>
+          <label>Gender</label>
+          <div class="ui selection dropdown">
+              <input type="hidden" name="gender">
+              <i class="dropdown icon"></i>
+              <div class="default text">Gender</div>
+              <div class="menu">
+                  <div class="item" data-value="1">Male</div>
+                  <div class="item" data-value="0">Female</div>
+              </div>
+          </div>
       </div>
     </div>
   </div>
@@ -1071,11 +1075,11 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
       <div class="two fields">
         <div class="disabled field">
           <label>First Name</label>
-          <input placeholder="Read Only" disabled type="text">
+          <input placeholder="Read Only" type="text" disabled tabindex="-1">
         </div>
         <div class="disabled field">
           <label>Last Name</label>
-          <input placeholder="Disabled" disabled type="text">
+          <input placeholder="Disabled" type="text" disabled tabindex="-1">
         </div>
       </div>
     </div>
@@ -1102,7 +1106,37 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
 
   <div class="example">
     <h4 class="ui header">Size</h4>
-    <p>A form can also be small or large</p>
+    <p>A form can vary in size</p>
+    <div class="ui mini form">
+      <div class="two fields">
+        <div class="field">
+          <label>First Name</label>
+          <input placeholder="First Name" type="text">
+        </div>
+        <div class="field">
+          <label>Last Name</label>
+          <input placeholder="Last Name" type="text">
+        </div>
+      </div>
+      <div class="ui submit button">Submit</div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui tiny form">
+      <div class="two fields">
+        <div class="field">
+          <label>First Name</label>
+          <input placeholder="First Name" type="text">
+        </div>
+        <div class="field">
+          <label>Last Name</label>
+          <input placeholder="Last Name" type="text">
+        </div>
+      </div>
+      <div class="ui submit button">Submit</div>
+    </div>
+  </div>
+  <div class="another example">
     <div class="ui small form">
       <div class="two fields">
         <div class="field">
@@ -1119,6 +1153,51 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
   </div>
   <div class="another example">
     <div class="ui large form">
+      <div class="two fields">
+        <div class="field">
+          <label>First Name</label>
+          <input placeholder="First Name" type="text">
+        </div>
+        <div class="field">
+          <label>Last Name</label>
+          <input placeholder="Last Name" type="text">
+        </div>
+      </div>
+      <div class="ui submit button">Submit</div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui big form">
+      <div class="two fields">
+        <div class="field">
+          <label>First Name</label>
+          <input placeholder="First Name" type="text">
+        </div>
+        <div class="field">
+          <label>Last Name</label>
+          <input placeholder="Last Name" type="text">
+        </div>
+      </div>
+      <div class="ui submit button">Submit</div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui huge form">
+      <div class="two fields">
+        <div class="field">
+          <label>First Name</label>
+          <input placeholder="First Name" type="text">
+        </div>
+        <div class="field">
+          <label>Last Name</label>
+          <input placeholder="Last Name" type="text">
+        </div>
+      </div>
+      <div class="ui submit button">Submit</div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui massive form">
       <div class="two fields">
         <div class="field">
           <label>First Name</label>

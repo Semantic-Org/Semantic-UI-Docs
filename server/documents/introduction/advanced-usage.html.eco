@@ -169,7 +169,7 @@ type        : 'Introduction'
     <h4>Download Docs Server</h4>
     <p>The easiest way to get <a href="https://github.com/Semantic-Org/Semantic-UI-Docs/">Semantic UI docs</a> is to clone the repo</p>
     <div class="code">
-      git clone git@github.com:Semantic-Org/Semantic-UI-Docs.git
+      git clone https://github.com/Semantic-Org/Semantic-UI-Docs.git
     </div>
   </div>
   <div class="no example">

@@ -752,7 +752,7 @@ themes      : ['Default']
       <h4 class="ui header">
         Equal Width
       </h4>
-      <p>A row can automatically resize all elements to split the available width evenly</p>
+      <p>A grid can automatically resize all elements to split the available width evenly</p>
       <div class="ui equal width grid">
         <div class="column">
           <div class="ui segment">
@@ -813,7 +813,7 @@ themes      : ['Default']
       <h4 class="ui header">
         Stretched
       </h4>
-      <p>An can stretch its contents to take up the entire column height</p>
+      <p>A row can stretch its contents to take up the entire column height</p>
       <div class="ui three column divided grid">
         <div class="stretched row">
           <div class="column">
@@ -972,7 +972,7 @@ themes      : ['Default']
 
     <div class="example" data-use-content="true">
       <h4 class="ui header">Colored</h4>
-      <p>A grid row or column can be colored</p>
+      <p>A row or column can be colored</p>
       <div class="ui five column padded grid">
         <div class="red column">Red</div>
         <div class="orange column">Orange</div>

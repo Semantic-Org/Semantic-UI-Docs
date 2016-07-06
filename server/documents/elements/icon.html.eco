@@ -50,7 +50,6 @@ themes      : ['Default']
         <div class="column"><i class="comment icon"></i>Comment</div>
         <div class="column"><i class="comments outline icon"></i>Comments Outline</div>
         <div class="column"><i class="comments icon"></i>Comments</div>
-        <div class="column"><i class="comments icon"></i>Comments</div>
         <div class="column"><i class="copyright icon"></i>Copyright</div>
         <div class="column"><i class="creative commons icon"></i>Creative Commons</div>
         <div class="column"><i class="dashboard icon"></i>Dashboard</div>

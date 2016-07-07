@@ -130,6 +130,11 @@ blockquote .author {
      Sidebar
 ---------------*/
 
+
+#example .ui.sidebar.menu .item {
+  will-change: transform;
+}
+
 #example .sidebar.menu .logo.image,
 #example .sticky.menu .logo.image {
   width: 35px;
@@ -182,7 +187,7 @@ blockquote .author {
 
 #example .masthead.segment {
   position: relative;
-  z-index: 1;
+  z-index: 3;
   margin: 0em;
   min-height: 185px;
   padding: 3em 0em;

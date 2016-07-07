@@ -12,6 +12,7 @@ type        : 'Introduction'
 
 <div class="main ui intro container">
 
+
   <h2 class="ui dividing header">Custom Pipelines</h2>
   <div class="no example">
     <h4>Importing Gulp Tasks</h4>
@@ -29,6 +30,70 @@ type        : 'Introduction'
     </div>
   </div>
 
+  <h2 class="ui dividing header">Semantic.json Settings</h2>
+
+  <div class="no example">
+    <h4>Auto-Install</h4>
+    <p>Running <code>npm install</code> normally will launch an interactive installer, to allow this installer to run without user interaction include a special flag <code>autoInstall: true</code>in your <code>semantic.json</code> file.</p>
+    <div class="ignored code" data-type="JS" data-title="semantic.json">
+     {
+      // install will now automatically build your project files without user interaction
+      "autoInstall": true,
+
+      // these settings may be different
+      "base": "",
+      "paths": {
+        "source": {
+          "config": "src/theme.config",
+          "definitions": "src/definitions/",
+          "site": "src/site/",
+          "themes": "src/themes/"
+        },
+        "output": {
+          "packaged": "dist/",
+          "uncompressed": "dist/components/",
+          "compressed": "dist/components/",
+          "themes": "dist/themes/"
+        },
+        "clean": "dist/"
+      },
+      "permission": false,
+      "rtl": false,
+    }
+    </div>
+  </div>
+
+    <div class="no example">
+      <h4>Right-to-left (RTL) Languages</h4>
+      <p>Including the flag <code>rtl:true</code> will build Semantic UI using <a href="https://github.com/MohammadYounes/rtlcss" target="_blank">RTLCSS</a>.</p>
+      <p>To build both LTR and RTL versions use the flag <code>rtl: 'both'</code></p>
+      <div class="ignored code" data-type="JS" data-title="semantic.json">
+       {
+        // builds both LTR and RTL version
+        "rtl": "both",
+
+        // these settings may be different
+        "base": "",
+        "paths": {
+          "source": {
+            "config": "src/theme.config",
+            "definitions": "src/definitions/",
+            "site": "src/site/",
+            "themes": "src/themes/"
+          },
+          "output": {
+            "packaged": "dist/",
+            "uncompressed": "dist/components/",
+            "compressed": "dist/components/",
+            "themes": "dist/themes/"
+          },
+          "clean": "dist/"
+        },
+        "permission": false,
+      }
+      </div>
+  </div>
+
   <h2 class="ui dividing header">Prototyping with Semantic UI</h2>
   <div class="no example">
     <h4>Sketch Files</h4>
@@ -40,11 +105,14 @@ type        : 'Introduction'
 
   <div class="no example">
     <h4>CDN Releases</h4>
-    <p>Individual components are available on <a href="http://osscdn.com/#/semantic-ui">OSS CDN</a></p>
+    <p>Individual components are available on <a href="https://www.jsdelivr.com/projects/semantic-ui">jsDelivr</a></p>
     <div class="code">
-    <link rel="stylesheet" type="text/css" class="ui" href="//oss.maxcdn.com/semantic-ui/<%= @getVersion() %>/components/component-name.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/<%= @getVersion() %>/semantic.min.css" integrity="sha256-pPbI0vDzgZ7JRdi3J6zdmBRMfDircVPDpH+sPWdf8nY=" crossorigin="anonymous">
     </div>
-    <a class="ui button" href="http://osscdn.com/#/semantic-ui" target="_blank">View All CDN Files</a>
+    <div class="code">
+    <script src="https://cdn.jsdelivr.net/semantic-ui/<%= @getVersion() %>/semantic.min.js" integrity="sha256-V9KQx5JePXsTb/xam4ALIhrJmnnujI6r4W1CZjqvzH4=" crossorigin="anonymous"></script>
+    </div>
+    <a class="ui button" href="https://www.jsdelivr.com/projects/semantic-ui" target="_blank">View All CDN Files</a>
   </div>
 
   <div class="no example">

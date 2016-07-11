@@ -616,7 +616,7 @@ type        : 'UI Module'
         </tr>
         <tr>
           <td>selectFirstResult</td>
-          <td>true</td>
+          <td>false</td>
           <td>Whether the search should automatically select the first search result after searching</td>
         </tr>
         <tr>

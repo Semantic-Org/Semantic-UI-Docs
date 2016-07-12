@@ -778,7 +778,7 @@ type        : 'UI Behavior'
     <div class="no example">
 
       <h4 class="ui header">
-        Fucntionality
+        Functionality
         <div class="sub header">Settings to configure visibility behavior</div>
       </h4>
       <table class="ui celled sortable definition table segment">

@@ -2091,7 +2091,7 @@ themes      : ['Default', 'GitHub', 'Material']
           .dropdown({
             action: function(text, value) {
               // nothing built in occurs
-            })
+            }
           })
         ;
       </div>

@@ -232,7 +232,7 @@ type        : 'UI Behavior'
       <p>If you need to specify a different identifier you can use the <code>identifier</code> property on each validation rule</p>
       <div class="ignored code">
       $('.ui.form')
-        .form(
+        .form({
           fields: {
             name: {
               identifier : 'special-name',

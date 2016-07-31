@@ -420,10 +420,10 @@ themes      : ['Default', 'Material']
 
     <h2 class="ui dividing header">States</h2>
 
-    <div class="example">
+    <div class="no example">
       <h4 class="ui header">Active</h4>
       <p>An active modal is visible on the page</p>
-      <div class="code" data-type="html">
+      <div class="visible code" data-type="html">
         <div class="ui active modal"></div>
       </div>
     </div>
@@ -720,6 +720,11 @@ themes      : ['Default', 'Material']
           <td>allowMultiple</td>
           <td>false</td>
           <td>If set to true will not close other visible modals when opening a new one</td>
+        </tr>
+        <tr>
+          <td>keyboardShortcuts</td>
+          <td>true</td>
+          <td>Whether to automatically bind keyboard shortcuts</td>
         </tr>
         <tr>
           <td>offset</td>

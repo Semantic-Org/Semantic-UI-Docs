@@ -8,6 +8,7 @@ semantic.validateForm.ready = function() {
     $dogForm      = $('.dog.example .ui.form'),
     $matchingForm = $('.matching.example .ui.form'),
     $autoForm     = $('.auto.example .ui.form'),
+    $colorForm    = $('.color.example .ui.form'),
     $promptForm   = $('.prompt.example .ui.form'),
     $ruleForm     = $('.custom.rule.example .ui.form'),
     $dropdownForm = $('.dropdown.example .ui.form'),
@@ -211,6 +212,20 @@ semantic.validateForm.ready = function() {
     })
   ;
 */
+
+  $colorForm.form({
+    fields: {
+      color: {
+        identifier: 'color',
+        rules: [{
+          type: 'regExp',
+          value: /rgb\((\d{1,3}), (\d{1,3}), (\d{1,3})\)/i,
+        }]
+      }
+    }
+  });
+
+
   $promptForm
     .form({
       fields: {

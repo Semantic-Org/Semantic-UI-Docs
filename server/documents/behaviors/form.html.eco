@@ -156,10 +156,35 @@ type        : 'UI Behavior'
             <label>I agree to the terms and conditions</label>
           </div>
         </div>
-        <div class="ui blue submit button">Submit</div>
+        <div class="ui primary submit button">Submit</div>
         <div class="ui error message"></div>
       </div>
     </form>
+    <div class="color example">
+      <h4 class="ui header">Passing Parameters to Rules <div class="ui horizontal teal label">New in 2.2.3</div></h4>
+      <p>Typically rules that include a parameter are written <code>minLength[2]</code> with the value being passed in as brackets.</p>
+      <p>If passing in properties as a string is not ideal, or if you are pulling values from another javascript variable, it might make sense to consider using <code>value</code> to pass in the rule value.</p>
+      <div class="ignored code">
+        $('.ui.form').form({
+          fields: {
+            color: {
+              identifier: 'color',
+              rules: [{
+                type: 'regExp',
+                value: /rgb\((\d{1,3}), (\d{1,3}), (\d{1,3})\)/i,
+              }]
+            }
+          }
+        });
+      </div>
+      <form class="ui form segment">
+        <div class="field">
+          <label>Color</label>
+          <input placeholder="Enter rgb" name="color" type="text" value="rgb(255, 255, 255)">
+        </div>
+        <div class="ui primary submit button">Submit</div>
+      </form>
+    </div>
 
     <div class="prompt example">
       <h4 class="ui header">Customizing Prompts</h4>
@@ -220,7 +245,7 @@ type        : 'UI Behavior'
             <input type="text" name="field2">
           </div>
         </div>
-        <div class="ui blue submit button">Submit</div>
+        <div class="ui primary submit button">Submit</div>
         <div class="ui error message">
         </div>
       </form>
@@ -251,7 +276,7 @@ type        : 'UI Behavior'
           <label>Special Field</label>
           <input type="text" name="special-name">
         </div>
-        <div class="ui blue submit button">Submit</div>
+        <div class="ui primary submit button">Submit</div>
         <div class="ui error message">
         </div>
       </form>
@@ -311,7 +336,7 @@ type        : 'UI Behavior'
           </tr>
           <tr>
             <td>regExp[expression]</td>
-            <td>Matches against a regular expression, expects RegExp to be enclosed in <code>/</code></td>
+            <td>Matches against a regular expression, when using bracketed notation RegExp values must be escaped.</td>
             <td>
               <code>regExp[/^[a-z0-9_-]{3,16}$/gi]]</code>
               <div class="ui horizontal divider">Or</div>
@@ -477,7 +502,7 @@ type        : 'UI Behavior'
           <label>Dog</label>
           <input placeholder="Dog" name="dog" type="text">
         </div>
-        <div class="ui blue submit button">
+        <div class="ui primary submit button">
           <i class="add icon"></i>
           Add Dog
         </div>
@@ -502,7 +527,7 @@ type        : 'UI Behavior'
           <label>Test Field</label>
           <input placeholder="Test Field" name="name" type="text">
         </div>
-        <div class="ui blue submit button">Submit</div>
+        <div class="ui primary submit button">Submit</div>
         <div class="ui reset button">Reset</div>
         <div class="ui clear button">Clear</div>
       </form>
@@ -555,7 +580,7 @@ type        : 'UI Behavior'
             <label>I agree to the terms and conditions</label>
           </div>
         </div>
-        <div class="ui blue submit button">Submit</div>
+        <div class="ui primary submit button">Submit</div>
         <div class="ui reset button">Reset</div>
         <div class="ui clear button">Clear</div>
       </form>
@@ -642,7 +667,7 @@ type        : 'UI Behavior'
             <label>I agree to the terms and conditions</label>
           </div>
         </div>
-        <div class="ui blue submit button">Submit</div>
+        <div class="ui primary submit button">Submit</div>
         <div class="ui clear button">Clear</div>
       </form>
     </div>
@@ -729,7 +754,7 @@ type        : 'UI Behavior'
             <label>I agree to the terms and conditions</label>
           </div>
         </div>
-        <div class="ui blue submit button">Submit</div>
+        <div class="ui primary submit button">Submit</div>
       </form>
     </div>
 
@@ -1334,6 +1359,10 @@ type        : 'UI Behavior'
     <h2 class="ui dividing header">Form Examples</h2>
 
     <div class="dropdown example">
+      <h4 class="ui header">Regular Expressions</h4>
+
+    </div>
+    <div class="dropdown example">
       <h4 class="ui header">Validating Dropdowns</h4>
       <p><a href="/modules/dropdown.html">Dropdowns</a> can also be validated like other form fields. Simply match the validation rule to the <code>input</code> or <code>select</code> associated with the dropdown</p>
       <div class="ignored code">
@@ -1384,7 +1413,7 @@ type        : 'UI Behavior'
             </div>
           </div>
         </div>
-        <div class="ui blue submit button">Submit</div>
+        <div class="ui primary submit button">Submit</div>
       </form>
     </div>
     <div class="data example">
@@ -1411,7 +1440,7 @@ type        : 'UI Behavior'
           <label>Name</label>
           <input type="text" name="SERVER_REQUIRED_NAME" data-validate="name">
         </div>
-        <div class="ui blue submit button">Submit</div>
+        <div class="ui primary submit button">Submit</div>
       </form>
     </div>
 
@@ -1451,7 +1480,7 @@ type        : 'UI Behavior'
           <input type="text" name="yearsPracticed">
         </div>
         <div class="ui divider"></div>
-        <div class="ui blue submit button">Submit</div>
+        <div class="ui primary submit button">Submit</div>
         <div class="ui error message"></div>
       </form>
     </div>
@@ -1499,7 +1528,7 @@ type        : 'UI Behavior'
           </div>
         </div>
         <div class="ui divider"></div>
-        <div class="ui blue submit button">Submit</div>
+        <div class="ui primary submit button">Submit</div>
         <div class="ui error message"></div>
       </form>
     </div>
@@ -1537,7 +1566,7 @@ type        : 'UI Behavior'
           <label>E-mail</label>
           <input type="text" name="email">
         </div>
-        <div class="ui blue submit button">Submit</div>
+        <div class="ui primary submit button">Submit</div>
         <div class="ui error message"></div>
       </form>
     </div>
@@ -1574,7 +1603,7 @@ type        : 'UI Behavior'
             <label>I agree to the Terms and Conditions</label>
           </div>
         </div>
-        <div class="ui blue submit button">Submit</div>
+        <div class="ui primary submit button">Submit</div>
         <div class="ui error message"></div>
       </form>
     </div>
@@ -1618,7 +1647,7 @@ type        : 'UI Behavior'
             <label>I agree to the Terms and Conditions</label>
           </div>
         </div>
-        <div class="ui blue submit button">Submit</div>
+        <div class="ui primary submit button">Submit</div>
       </form>
     </div>
 
@@ -1656,7 +1685,7 @@ type        : 'UI Behavior'
           <label>Dog</label>
           <input placeholder="Dog" name="dog" type="text">
         </div>
-        <div class="ui blue submit button">
+        <div class="ui primary submit button">
           <i class="add icon"></i>
           Add Dog
         </div>

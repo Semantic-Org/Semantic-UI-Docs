@@ -7,39 +7,23 @@ title      : 'Test Page'
 type       : 'Library'
 ---
 <div class="ui container">
-<div class="context">
-    <h1>FOOBAR</h1>
-    <p>Loren ipsum<br />dolor sit amet</p>
+<div class="ui 4:3 embed"
+    data-url="https://example.com/video?id=123456"
+    data-icon="right circle arrow"
+    data-placeholder="http://example.net/icon.png">
+    <i class="right circle arrow icon"></i>
+</div>
 </div>
 
-<button class="ui button circular icon">
-    <i class="icon settings"></i>
-</button>
 </div>
 <script>
 $(document).ready(function() {
-$('h1').visibility({
-   type: 'fixed',
-   context: 'div',
-   debug: true
-});
-
-$('button').on('click', function(e) {
-    console.log('should reset');
-  $('h1').visibility('destroy');
-});
-
+$('.ui.embed').embed();
 });
 
 </script>
 
 <!-- TEST CSS HERE !-->
 <style type="text/css">
-
-    .container {
-       height: 60px;
-       overflow: scroll;
-       margin-bottom: 20px;
-    }
 
 </style>

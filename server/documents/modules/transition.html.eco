@@ -603,10 +603,6 @@ type        : 'UI Module'
             <td>is supported</td>
             <td>Returns whether animations are supported</td>
           </tr>
-          <tr>
-            <td>is visible</td>
-            <td>Returns whether element is visible</td>
-          </tr>
         </tbody>
       </table>
     </div>

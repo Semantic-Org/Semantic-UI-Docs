@@ -499,6 +499,18 @@ type        : 'UI Element'
         <td class="disabled"></td>
       </tr>
       <tr>
+        <td><i class="scotland flag"></i></td>
+        <td>Scotland</td>
+        <td>gb sct</td>
+        <td class="disabled"></td>
+      </tr>
+      <tr>
+        <td><i class="wales flag"></i></td>
+        <td>Wales</td>
+        <td>gb wls</td>
+        <td class="disabled"></td>
+      </tr>
+      <tr>
         <td><i class="grenada flag"></i></td>
         <td>Grenada</td>
         <td>gd</td>

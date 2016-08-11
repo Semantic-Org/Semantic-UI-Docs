@@ -209,7 +209,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
 
   <div class="example">
     <h4 class="ui header">Tabular</h4>
-    <p>A message can be formatted to show tabs of information</p>
+    <p>A menu can be formatted to show tabs of information</p>
     <div class="ui ignored info message">
       Be sure to visit the <a href="/modules/tab.html">tab documentation</a> for information on how to set up dynamic tabs
     </div>

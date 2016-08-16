@@ -56,7 +56,6 @@ themes      : ['Default']
         <div class="column"><i class="delete calendar icon"></i>Delete Calendar</div>
         <div class="column"><i class="external square icon"></i>External Square</div>
         <div class="column"><i class="external icon"></i>External</div>
-        <div class="column"><i class="external icon"></i>External</div>
         <div class="column"><i class="eyedropper icon"></i>Eyedropper</div>
         <div class="column"><i class="feed icon"></i>Feed</div>
         <div class="column"><i class="find icon"></i>Find</div>
@@ -128,7 +127,6 @@ themes      : ['Default']
         <i class="dashboard icon"></i>
         <i class="delete calendar icon"></i>
         <i class="external square icon"></i>
-        <i class="external icon"></i>
         <i class="external icon"></i>
         <i class="eyedropper icon"></i>
         <i class="feed icon"></i>

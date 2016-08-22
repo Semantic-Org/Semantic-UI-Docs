@@ -987,7 +987,7 @@ themes      : ['Default']
         <div class="column"><i class="subway icon"></i>Subway</div>
         <div class="column"><i class="taxi icon"></i>Taxi</div>
         <div class="column"><i class="train icon"></i>Train</div>
-        <div class="column"><i class="television icon"></i>Television</div>
+        <div class="column"><i class="tv icon"></i>TV</div>
         <div class="column"><i class="tree icon"></i>Tree</div>
         <div class="column"><i class="university icon"></i>University</div>
       </div>

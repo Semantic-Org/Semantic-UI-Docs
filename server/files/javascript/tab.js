@@ -33,6 +33,18 @@ semantic.dropdown.ready = function() {
     })
   ;
 
+  $('.context.example #context1 .menu .item')
+    .tab({
+      context: $('.context.example #context1')
+    })
+  ;
+  $('.context.example #context2 .menu .item')
+    .tab({
+      // special keyword works same as above
+      context: 'parent'
+    })
+  ;
+
   $('.dynamic.example .menu .item')
     .tab({
       apiSettings: {

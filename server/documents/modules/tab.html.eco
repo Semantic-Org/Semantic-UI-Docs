@@ -111,6 +111,19 @@ themes      : ['Default']
       <div class="ui ignored info message">
         If you are using tab contexts inside of tabs, you can also specify <code>childrenOnly: true</code> which will only look for tabs as the immediate children of the given context, or <code>context: 'parent'</code> a special keyword which avoids having to create unique selectors for each group.
       </div>
+      <div class="code" data-type="javascript">
+        $('#context1 .menu .item')
+          .tab({
+            context: $('#context1')
+          })
+        ;
+        $('#context2 .menu .item')
+          .tab({
+            // special keyword works same as above
+            context: 'parent'
+          })
+        ;
+      </div>
       <div id="context1">
         <div class="ui secondary menu">
           <a class="item" data-tab="first">First</a>
@@ -164,19 +177,6 @@ themes      : ['Default']
         <div class="ui tab segment" data-tab="sixth">
           6
         </div>
-      </div>
-      <div class="evaluated code" data-type="javascript">
-        $('#context1 .menu .item')
-          .tab({
-            context: $('#context1')
-          })
-        ;
-        $('#context2 .menu .item')
-          .tab({
-            // special keyword works same as above
-            context: 'parent'
-          })
-        ;
       </div>
       <div class="existing code" data-type="html">
         <div id="context1">

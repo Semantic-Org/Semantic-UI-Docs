@@ -107,10 +107,10 @@ type        : 'Introduction'
     <h4>CDN Releases</h4>
     <p>Individual components are available on <a href="https://www.jsdelivr.com/projects/semantic-ui">jsDelivr</a></p>
     <div class="code">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/<%= @getVersion() %>/semantic.min.css" integrity="sha256-pPbI0vDzgZ7JRdi3J6zdmBRMfDircVPDpH+sPWdf8nY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/<%= @getVersion() %>/semantic.min.css">
     </div>
     <div class="code">
-    <script src="https://cdn.jsdelivr.net/semantic-ui/<%= @getVersion() %>/semantic.min.js" integrity="sha256-V9KQx5JePXsTb/xam4ALIhrJmnnujI6r4W1CZjqvzH4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/semantic-ui/<%= @getVersion() %>/semantic.min.js"></script>
     </div>
     <a class="ui button" href="https://www.jsdelivr.com/projects/semantic-ui" target="_blank">View All CDN Files</a>
   </div>

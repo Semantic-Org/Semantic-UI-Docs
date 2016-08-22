@@ -752,7 +752,7 @@ themes      : ['Default']
       <h4 class="ui header">
         Equal Width
       </h4>
-      <p>A row can automatically resize all elements to split the available width evenly</p>
+      <p>A grid can automatically resize all elements to split the available width evenly</p>
       <div class="ui equal width grid">
         <div class="column">
           <div class="ui segment">
@@ -972,7 +972,7 @@ themes      : ['Default']
 
     <div class="example" data-use-content="true">
       <h4 class="ui header">Colored</h4>
-      <p>A grid row or column can be colored</p>
+      <p>A row or column can be colored</p>
       <div class="ui five column padded grid">
         <div class="red column">Red</div>
         <div class="orange column">Orange</div>

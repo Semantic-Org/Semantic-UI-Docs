@@ -736,17 +736,19 @@ themes      : ['Default']
         <div class="column"><i class="mobile icon"></i>Mobile</div>
         <div class="column"><i class="tablet icon"></i>Tablet</div>
         <div class="column"><i class="battery empty icon"></i>Battery Empty</div>
-        <div class="column"><i class="battery full icon"></i>Battery Full</div>
         <div class="column"><i class="battery low icon"></i>Battery Low</div>
         <div class="column"><i class="battery medium icon"></i>Battery Medium</div>
+        <div class="column"><i class="battery high icon"></i>High Battery</div>
+        <div class="column"><i class="battery full icon"></i>Battery Full</div>
       </div>
       <div class="existing code">
         <i class="mobile icon"></i>
         <i class="tablet icon"></i>
         <i class="battery empty icon"></i>
-        <i class="battery full icon"></i>
         <i class="battery low icon"></i>
         <i class="battery medium icon"></i>
+        <i class="battery high icon"></i>
+        <i class="battery full icon"></i>
       </div>
     </div>
     <div class="icon example">
@@ -756,7 +758,6 @@ themes      : ['Default']
         <div class="column"><i class="desktop icon"></i>Desktop</div>
         <div class="column"><i class="disk outline icon"></i>Disk Outline</div>
         <div class="column"><i class="game icon"></i>Game</div>
-        <div class="column"><i class="high battery icon"></i>High Battery</div>
         <div class="column"><i class="keyboard icon"></i>Keyboard</div>
         <div class="column"><i class="laptop icon"></i>Laptop</div>
         <div class="column"><i class="plug icon"></i>Plug</div>
@@ -766,7 +767,6 @@ themes      : ['Default']
         <i class="desktop icon"></i>
         <i class="disk outline icon"></i>
         <i class="game icon"></i>
-        <i class="high battery icon"></i>
         <i class="keyboard icon"></i>
         <i class="laptop icon"></i>
         <i class="plug icon"></i>

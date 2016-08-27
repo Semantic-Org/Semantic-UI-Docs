@@ -266,7 +266,7 @@ themes      : ['default', 'GitHub']
     <p>A segment can be attached to other content on a page</p>
 
     <div class="ui ignored info message">
-      <p>Attached segments are designed to be used with other <code>attached</code> variations like <a href="/header.html#attached">attached header</a> or <a href="/collections/message.html#attached">attached messages</a>.</p>
+      <p>Attached segments are designed to be used with other <code>attached</code> variations like <a href="/elements/header.html#attached">attached header</a> or <a href="/collections/message.html#attached">attached messages</a>.</p>
     </div>
     <div class="ui top attached segment">
       <p>This segment is on top</p>

@@ -2707,6 +2707,10 @@ themes      : ['Default', 'GitHub', 'Material']
         <tr>
           <td>message</td>
           <td colspan="2">
+            <p>
+              You can specify site wide messages by modifying <code>$.fn.dropdown.settings.message</code>
+              that will apply on any dropdown if it appears in the page.
+            </p>
             <div class="code">
             message: {
               addResult     : 'Add <b>{term}</b>',

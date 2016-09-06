@@ -27,7 +27,7 @@ themes      : ['Default']
       <h4 class="ui header">Sidebar</h4>
       <p>A sidebar</p>
       <div class="ui ignored warning message">
-        <p>Although sidebars can be any content, in most cases, sidebars are used with <a href="/collections/menu.html#vertical"><code>inverted vertical menu</code></a>. Please see the <a href="#/usage">usage tab</a> for more details.</p>
+        <p>Although sidebars can be used with any content, in most cases, sidebars are used with <a href="/collections/menu.html#vertical"><code>inverted vertical menu</code></a>. Please see the <a href="#/usage">usage tab</a> for more details.</p>
       </div>
       <div class="code" data-type="html" data-escape="true">
         &lt;body&gt;

@@ -217,7 +217,7 @@ themes      : ['Default']
 
   <div class="example">
     <h4 class="ui header">Link</h4>
-    <p>An item can contain contain links as images, headers, or inside content</p>
+    <p>An item can contain links as images, headers, or inside content</p>
     <div class="ui yellow message">
       <i class="star icon"></i>
       To make the entire content of an item link, check out the link variation below

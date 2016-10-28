@@ -7,49 +7,56 @@ title      : 'Test Page'
 type       : 'Library'
 ---
 <div class="ui container">
-<form class="ui form">
-  <div class="fields">
-    <div class="seven wide field">
-      <label>Card Number</label>
-      <div class="ui fluid button" tabindex="0">Submit Order</div>
-    </div>
-    <div class="three wide field">
-      <label>CVC</label>
-      <input type="text" name="card[cvc]" maxlength="3" placeholder="CVC">
-    </div>
-    <div class="six wide field">
-      <label>Expiration</label>
-      <div class="two fields">
-        <div class="field">
-          <select class="ui fluid dropdown" name="card[expire-month]">
-            <option value="">Month</option>
-            <option value="1">January</option>
-            <option value="2">February</option>
-            <option value="3">March</option>
-            <option value="4">April</option>
-            <option value="5">May</option>
-            <option value="6">June</option>
-            <option value="7">July</option>
-            <option value="8">August</option>
-            <option value="9">September</option>
-            <option value="10">October</option>
-            <option value="11">November</option>
-            <option value="12">December</option>
-          </select>
-        </div>
-        <div class="field">
-          <input type="text" name="card[expire-year]" maxlength="4" placeholder="Year">
-        </div>
-      </div>
-    </div>
-  </div>
-</form>
+<div class="ui basic segment">
+    1. After "First" tab is clicked, click the "ClickMe" button. Alert will appear<br />
+    2. <b>BUG:</b> When "First" tab is clicked on again, button stops working. Changing <i>cacheType</i> doesnt change anything!<br />
+    3. <b>The goal is to run JS once and then leave it be</b>. So scripts must be evaluated once and tab should not reload, if focused on again.
 </div>
 
+<div class="ui top attached tabular menu">
+  <a class="active item" data-tab="first">First</a>
+  <a class="item" data-tab="second">Second</a>
+</div>
+<div class="ui bottom attached active tab segment" data-tab="first">
+
+</div>
+<div class="ui bottom attached tab segment" data-tab="second">
+
+</div>
 </div>
 <script>
 $(document).ready(function() {
-  $('.ui.dropdown').dropdown();
+  var firstTabContent = "<div id='testfirst'>One&nbsp;<button>ClickMe</button></div> \n" +
+                "<script type='text/javascript'>\n" +
+                "   $(function() { $('button').click(function() { alert(1) }); $('#testfirst').append('<div>dynamically appended div <b>(will disappear if tab is clicked again!)</b> ' + (new Date()).getTime() + '</div>') });\n" +
+                "</scr" + "ipt>";
+
+$('.menu .item')
+.tab({
+    cache: true,
+    cacheType: 'DOM',
+    evaluateScripts: true,
+    onFirstLoad: function(tabPath, parameterArray, historyEvent) {
+        console.log('Initialized tab: ' + tabPath);
+    },
+    onLoad: function(tabPath, parameterArray, historyEvent) { //tab selected
+        console.log('Selected tab: ' + tabPath);
+    },
+    apiSettings: {
+        loadingDuration : 300,
+        mockResponse    : function(settings) {
+            var response = {
+                first  :  firstTabContent,
+
+              second : 'Two',
+
+              third  : 'Three'
+            };
+
+            return response[settings.urlData.tab];
+        }
+    }
+});
 });
 
 </script>

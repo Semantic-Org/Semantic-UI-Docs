@@ -13,7 +13,7 @@ type        : 'Legal'
     <i class="help circle icon"></i>
     <div class="content">
       <div class="header">What's in a Contributor License Agreement (CLA)?</div>
-      This CLA makes sure that you both entitled to contribute to Semantic UI (you are not bound by a policy that prohibits you) and understand your code might be used in derivative works. Additionally this agreement helps legally protect Semantic UI if you decide at a later date you no longer want your code being used.
+      This CLA makes sure that you are entitled to contribute to Semantic UI (you are not bound by a policy that prohibits you) and that you understand parts of your code may be used in derivative works. Additionally this agreement helps to legally protect Semantic UI should you later decide that you no longer want to contribute your code.
     </div>
   </div>
   <div class="ui tab active" data-tab="individual">
@@ -21,7 +21,7 @@ type        : 'Legal'
 
     <p>Thank you for your interest in contributing to Semantic UI ("We" or "Us").</p>
 
-    <p>This contributor agreement ("Agreement") documents the rights granted by contributors to Us. To make this document effective, please sign it and send it to Us by email or electronic submission, following the instructions at . This is a legally binding document, so please read it carefully before agreeing to it. The Agreement may cover more than one software project managed by Us.</p>
+    <p>This contributor agreement ("Agreement") documents the rights granted by contributors to Us. To make this document effective, please sign it and send it to Us by email or electronic submission, following the instructions at [URL]. This is a legally binding document, so please read it carefully before agreeing to it. The Agreement may cover more than one software project managed by Us.</p>
 
     <h2 class="ui header">1. Definitions</h2>
 

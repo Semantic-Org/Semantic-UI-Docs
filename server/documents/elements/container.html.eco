@@ -5,8 +5,8 @@ element     : 'container'
 elementType : 'element'
 standalone  : true
 
-title       : 'Container'
-description : 'A container limits content to a maximum width'
+title       : '容器'
+description : '构建一个最大宽度的容器。'
 type        : 'UI Element'
 
 themes      : ['Default']

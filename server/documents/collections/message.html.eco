@@ -247,7 +247,7 @@ themes      : ['Default', 'GitHub', 'Gmail']
     <div class="ui error message">
       <i class="close icon"></i>
       <div class="header">
-        There was some errors with your submission
+        There were some errors with your submission
       </div>
       <ul class="list">
         <li>You must include both a upper and lower case letters in your password.</li>

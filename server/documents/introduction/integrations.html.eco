@@ -17,12 +17,10 @@ type        : 'Introduction'
   </h2>
 
   <div class="example">
-    <h4>Managing Lifecycle</h4>
-    <p>Semantic UI components are designed to be compatible with libraries that tightly manage UI lifecycle like <a href="https://facebook.github.io/react/docs/getting-started.html" target="_blank">React</a>. No special bindings are needed.</p>
-    <p>Most components use <a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver" target="_blank">mutation observers</a> to watch for changes in internal state, and all components are built with <code>initialize</code>, <code>refresh</code> and <code>destroy</code> methods which will regenerate, refresh cached values, and teardown components.</p>
+    <h4>Contribute to React Development</h4>
+    <p>Semantic UI React bindings are still in development, but are available for most components.</p>
+    <a href="https://github.com/Semantic-Org/Semantic-UI-React" target="_blank" class="ui button"><i class="github icon"></i>Visit React Repo</a>
   </div>
-  <iframe width="100%" height="500" src="//jsfiddle.net/7hmopb2b/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-
 
   <h2 class="ui dividing header">
     Meteor

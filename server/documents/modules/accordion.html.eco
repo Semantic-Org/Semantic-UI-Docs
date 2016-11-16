@@ -481,7 +481,7 @@ themes      : ['Default', 'Chubby']
           <td>Whether child content opacity should be animated (may cause performance issues with many child elements)</td>
         </tr>
         <tr>
-          <td>close nested</td>
+          <td>closeNested</td>
           <td>true</td>
           <td>Close open nested accordion content when an element closes</td>
         </tr>

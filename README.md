@@ -32,7 +32,7 @@ Then you should put `docs/` under `vendor/`, so it looks like this:
         ...
         ...
 
-Next, run the commands to build the docs:
+If you haven't run `npm install` in your `./SemanticUI` folder yet, do that now. Next, run the commands to build the docs:
 
 ```
 # "ui" can be any folder that contains the SUI build files

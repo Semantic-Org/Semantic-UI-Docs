@@ -34,8 +34,8 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
       </div>
       <div class="ignored">
         <div class="ui icon buttons">
-          <div class="decrement ui basic red button"><i class="minus icon"></i></div>
-          <div class="increment ui basic green button"><i class="plus icon"></i></div>
+          <div class="decrement ui basic red button icon"><i class="minus icon"></i></div>
+          <div class="increment ui basic green button icon"><i class="plus icon"></i></div>
         </div>
       </div>
     </div>
@@ -48,8 +48,8 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
       </div>
       <div class="ignored">
         <div class="ui icon buttons">
-          <div class="decrement ui basic red button"><i class="minus icon"></i></div>
-          <div class="increment ui basic green button"><i class="plus icon"></i></div>
+          <div class="decrement ui basic red button icon"><i class="minus icon"></i></div>
+          <div class="increment ui basic green button icon"><i class="plus icon"></i></div>
         </div>
       </div>
     </div>
@@ -173,7 +173,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
       </div>
       <div class="ignored">
         <div class="ui icon buttons">
-          <div class="increment ui basic green button"><i class="plus icon"></i></div>
+          <div class="increment ui basic green button icon"><i class="plus icon"></i></div>
         </div>
       </div>
     </div>
@@ -192,8 +192,8 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
       </div>
       <div class="ignored">
         <div class="ui icon buttons">
-          <div class="decrement ui basic red button"><i class="minus icon"></i></div>
-          <div class="increment ui basic green button"><i class="plus icon"></i></div>
+          <div class="decrement ui basic red button icon"><i class="minus icon"></i></div>
+          <div class="increment ui basic green button icon"><i class="plus icon"></i></div>
         </div>
       </div>
     </div>
@@ -221,8 +221,8 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
       </div>
       <div class="ignored">
         <div class="ui icon buttons">
-          <div class="decrement ui basic red button"><i class="minus icon"></i></div>
-          <div class="increment ui basic green button"><i class="plus icon"></i></div>
+          <div class="decrement ui basic red button icon"><i class="minus icon"></i></div>
+          <div class="increment ui basic green button icon"><i class="plus icon"></i></div>
         </div>
       </div>
     </div>
@@ -255,8 +255,8 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
       </div>
       <div class="ignored">
         <div class="ui icon buttons">
-          <div class="decrement ui basic red button"><i class="minus icon"></i></div>
-          <div class="increment ui basic green button"><i class="plus icon"></i></div>
+          <div class="decrement ui basic red button icon"><i class="minus icon"></i></div>
+          <div class="increment ui basic green button icon"><i class="plus icon"></i></div>
         </div>
       </div>
     </div>
@@ -305,8 +305,8 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
       </div>
       <div class="ignored">
         <div class="ui icon buttons">
-          <div class="decrement ui basic red button"><i class="minus icon"></i></div>
-          <div class="increment ui basic green button"><i class="plus icon"></i></div>
+          <div class="decrement ui basic red button icon"><i class="minus icon"></i></div>
+          <div class="increment ui basic green button icon"><i class="plus icon"></i></div>
         </div>
       </div>
     </div>
@@ -381,8 +381,8 @@ themes      : ['Default', 'Classic', 'Basic', 'Striped']
         </div>
         <div class="ignored">
           <div class="ui icon buttons">
-            <div class="decrement ui basic inverted red button"><i class="minus icon"></i></div>
-            <div class="increment ui basic inverted green button"><i class="plus icon"></i></div>
+            <div class="decrement ui basic inverted red button icon"><i class="minus icon"></i></div>
+            <div class="increment ui basic inverted green button icon"><i class="plus icon"></i></div>
           </div>
         </div>
       </div>

@@ -799,7 +799,7 @@ type        : 'UI Behavior'
 
         <div class="no sync mocked example">
           <h4 class="ui header">Fulfilling Responses</h4>
-          <p>In <code>2.0</code> API includes two new parameter <code>response</code> and <code>responseAsync</code> which allows you to specify a string, or as a sync or aync function for returning an API response. (These were previously <code>mockResponse</code> and <code>mockResponseAsync</code>.)</p>
+          <p>In <code>2.0</code> API includes two new parameter <code>response</code> and <code>responseAsync</code> which allows you to specify a string, or as a sync or async function for returning an API response. (These were previously <code>mockResponse</code> and <code>mockResponseAsync</code>.)</p>
           <div class="code" data-type="javascript" data-demo="true">
             $('.sync.mocked .button')
               .api({

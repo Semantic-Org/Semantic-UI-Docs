@@ -178,7 +178,7 @@ blockquote .author {
   color: rgba(255, 255, 255, 1);
 }
 #example #toc .menu .active.item {
-  color: #6DFFFF !important;
+  color: #FFF;
 }
 
 /*--------------

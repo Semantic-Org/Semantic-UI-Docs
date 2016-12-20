@@ -279,28 +279,21 @@ themes      : ['Default', 'Material']
       </div>
       <div class="existing code">
         <div class="ui basic modal">
-          <i class="close icon"></i>
-          <div class="header">
+          <div class="ui icon header">
+            <i class="archive icon"></i>
             Archive Old Messages
           </div>
-          <div class="image content">
-            <div class="image">
-              <i class="archive icon"></i>
-            </div>
-            <div class="description">
-              <p>Your inbox is getting full, would you like us to enable automatic archiving of old messages?</p>
-            </div>
+          <div class="content">
+            <p>Your inbox is getting full, would you like us to enable automatic archiving of old messages?</p>
           </div>
           <div class="actions">
-            <div class="two fluid ui inverted buttons">
-              <div class="ui cancel red basic inverted button">
-                <i class="remove icon"></i>
-                No
-              </div>
-              <div class="ui ok green basic inverted button">
-                <i class="checkmark icon"></i>
-                Yes
-              </div>
+            <div class="ui red basic cancel inverted button">
+              <i class="remove icon"></i>
+              No
+            </div>
+            <div class="ui green ok inverted button">
+              <i class="checkmark icon"></i>
+              Yes
             </div>
           </div>
         </div>
@@ -920,4 +913,3 @@ themes      : ['Default', 'Material']
   </div>
 
 </div>
-

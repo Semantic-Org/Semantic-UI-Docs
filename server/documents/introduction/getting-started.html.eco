@@ -122,9 +122,19 @@ type        : 'Main'
 
   <div class="no example">
     <h4>Include in Your HTML</h4>
-    <p>Running the gulp build tools will compile CSS and Javascript for use in your project. Just link to these files in your HTML.</p>
+    <p>Running the gulp build tools will compile CSS and Javascript for use in your project. Just link to these files in your HTML along with the latest <a href="http://www.jquery.com" target="_blank">jQuery</a>.</p>
     <div class="ignored code" data-type="html" data-escape="true">
+      <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+
       &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;semantic/dist/semantic.min.css&quot;&gt;
+      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;semantic/dist/semantic.min.css&quot;&gt;
+      &lt;script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"&gt;&lt;/script&gt;
       &lt;script src=&quot;semantic/dist/semantic.min.js&quot;&gt;&lt;/script&gt;
     </div>
   </div>

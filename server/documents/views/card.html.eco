@@ -547,7 +547,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
   </div>
   <div class="example">
     <h4 class="ui header">Raised Card</h4>
-    <p>A segment may be formatted to raise above the page.</p>
+    <p>A card may be formatted to raise above the page.</p>
     <div class="ui raised card">
       <div class="content">
         <div class="header">Cute Dog</div>

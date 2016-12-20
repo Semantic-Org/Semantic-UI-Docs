@@ -2348,7 +2348,7 @@ themes      : ['Default', 'GitHub', 'Material']
               <div class="description">Dropdown menu is hidden</div>
             </div>
             <div class="item">
-              <div class="header">function(text, value){}</div>
+              <div class="header">function(text, value, element){}</div>
               <div class="description">custom function is executed with values specified in callback</div>
             </div>
           </div>

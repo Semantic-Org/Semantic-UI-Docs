@@ -1239,7 +1239,7 @@ themes      : ['Default']
         <div class="column"><i class="delicious icon"></i>Delicious</div>
         <div class="column"><i class="deviantart icon"></i>Deviantart</div>
         <div class="column"><i class="digg icon"></i>Digg</div>
-        <div class="column"><i class="dribbble icon"></i>Dribbble</div>
+        <div class="column"><i class="dribble icon"></i>Dribble</div>
         <div class="column"><i class="dropbox icon"></i>Dropbox</div>
         <div class="column"><i class="drupal icon"></i>Drupal</div>
         <div class="column"><i class="empire icon"></i>Empire</div>

@@ -671,7 +671,7 @@ themes      : ['Default']
         <tr>
           <td>cacheType <div class="ui horizontal label">2.2</div></td>
           <td>response</td>
-          <td>Can be set to either <code>response</code> or <code>html</code>. Response will cache the original response on load, this way callbacks always receive the same content. Using `html` will cache the resulting html after all callbacks, making sure any changes to content are preserved.</td>
+          <td>Can be set to either <code>response</code>, <code>DOM</code> or <code>html</code>. Using <code>DOM</code> will cache the a clone of the DOM tree, preserving all events as they existed on render. <code>response</code> will cache the original response on load, this way callbacks always receive the same content. Using <code>html</code> will cache the resulting html after all callbacks, making sure any changes to content are preserved.</td>
         </tr>
         <tr>
           <td>cache</td>

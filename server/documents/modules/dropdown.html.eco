@@ -1264,90 +1264,6 @@ themes      : ['Default', 'GitHub', 'Material']
         ;
       </div>
     </div>
-    <div class="remote no example">
-      <h4 class="ui header">Remote Content</h4>
-      <p>Search selection dropdowns can specify <a href="/behaviors/api.html">API settings</a> for retrieving values remotely, this can use either a named API <code>action</code> or <code>url</code>.</p>
-      <p class="ignored">Using API can allow users to select choices from large datasets that would be too large to include directly in page markups.</p>
-      <p class="ignored">If your backend is not designed to return the correct markup you can use API's <code><a href="/behaviors/api.html#adjusting-server-responses">onResponse</a></code> callback to adjust the format of an API response after it is received from the server.</p>
-      <p class="ignored">Requests for the same API endpoints will automatically cached locally, to avoid server roundtrips. You can disable this by adjusting the <code>cache</code> API setting.</p>
-      <div class="ui ignored positive message">When a user refreshes the page, selection labels are automatically recreated by using <code>sessionStorage</code> to store the corresponding names for selected values. You can disable this feature by setting <code>saveRemoteData: false</code></div>
-
-
-      <div class="ui form">
-        <div class="two fields">
-          <div class="field">
-            <label>Favorite Animal</label>
-            <div class="ui search selection dropdown">
-              <input type="hidden">
-              <i class="dropdown icon"></i>
-              <input type="text" class="search">
-              <div class="default text">Select one...</div>
-            </div>
-          </div>
-          <div class="field">
-            <label>Favorite Animals</label>
-            <div class="ui multiple search selection dropdown">
-              <input type="hidden">
-              <i class="dropdown icon"></i>
-              <input type="text" class="search">
-              <div class="default text">Select...</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="evaluated code" data-type="javascript">
-        $('.remote.example .ui.dropdown')
-          .dropdown({
-            apiSettings: {
-              url: '//api.semantic-ui.com/tags/{query}'
-            }
-          })
-        ;
-      </div>
-      <div class="code" data-type="JSON">
-      // Expected server response
-      {
-          "success": true,
-          "results": [
-            {
-              // name displayed in dropdown
-              "name"  : "Choice 1",
-
-              // selected value
-              "value" : "value1",
-
-              // name displayed after selection (optional)
-              "text"  : "Choice 1"
-
-              // whether field should be displayed as disabled (optional)
-              "disabled"  : false
-
-            },
-            {
-              "name"  : "Choice 2",
-              "value" : "value2",
-              "text"  : "Choice 2"
-            },
-            {
-              "name"  : "Choice 3",
-              "value" : "value3",
-              "text"  : "Choice 3"
-            },
-            {
-              "name"  : "Choice 4",
-              "value" : "value4",
-              "text"  : "Choice 4"
-            },
-            {
-              "name"  : "Choice 5",
-              "value" : "value5",
-              "text"  : "Choice 5"
-            }
-          ]
-      }
-      </div>
-    </div>
 
     <div class="no label example">
       <h4 class="ui header">Text Labels</h4>
@@ -1499,6 +1415,135 @@ themes      : ['Default', 'GitHub', 'Material']
         </div>
       </div>
     </div>
+
+
+    <h2 class="ui dividing header">Remote Content</h2>
+
+    <div class="remote no example">
+      <h4 class="ui header">Using Returned API Results</h4>
+      <p>Search selection dropdowns can specify <a href="/behaviors/api.html">API settings</a> for retrieving values remotely, this can use either a named API <code>action</code> or <code>url</code>.</p>
+      <p class="ignored">Using API can allow users to select choices from large datasets that would be too large to include directly in page markups.</p>
+      <p class="ignored">If your backend is not designed to return the correct markup you can use API's <code><a href="/behaviors/api.html#adjusting-server-responses">onResponse</a></code> callback to adjust the format of an API response after it is received from the server.</p>
+      <p class="ignored">Requests for the same API endpoints will automatically cached locally, to avoid server roundtrips. You can disable this by adjusting the <code>cache</code> API setting.</p>
+      <div class="ui ignored positive message">When a user refreshes the page, selection labels are automatically recreated by using <code>sessionStorage</code> to store the corresponding names for selected values. You can disable this feature by setting <code>saveRemoteData: false</code></div>
+
+
+      <div class="ui form">
+        <div class="two fields">
+          <div class="field">
+            <label>Favorite Animal</label>
+            <div class="ui search selection dropdown">
+              <input type="hidden">
+              <i class="dropdown icon"></i>
+              <input type="text" class="search">
+              <div class="default text">Select one...</div>
+            </div>
+          </div>
+          <div class="field">
+            <label>Favorite Animals</label>
+            <div class="ui multiple search selection dropdown">
+              <input type="hidden">
+              <i class="dropdown icon"></i>
+              <input type="text" class="search">
+              <div class="default text">Select...</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="evaluated code" data-type="javascript">
+        $('.remote.example .ui.dropdown')
+          .dropdown({
+            apiSettings: {
+              // this url parses query server side and returns filtered results
+              url: '//api.semantic-ui.com/tags/{query}'
+            },
+          })
+        ;
+      </div>
+      <div class="code" data-type="JSON">
+      // Expected server response
+      {
+          "success": true,
+          "results": [
+            {
+              // name displayed in dropdown
+              "name"  : "Choice 1",
+
+              // selected value
+              "value" : "value1",
+
+              // name displayed after selection (optional)
+              "text"  : "Choice 1"
+
+              // whether field should be displayed as disabled (optional)
+              "disabled"  : false
+
+            },
+            {
+              "name"  : "Choice 2",
+              "value" : "value2",
+              "text"  : "Choice 2"
+            },
+            {
+              "name"  : "Choice 3",
+              "value" : "value3",
+              "text"  : "Choice 3"
+            },
+            {
+              "name"  : "Choice 4",
+              "value" : "value4",
+              "text"  : "Choice 4"
+            },
+            {
+              "name"  : "Choice 5",
+              "value" : "value5",
+              "text"  : "Choice 5"
+            }
+          ]
+      }
+      </div>
+    </div>
+
+    <div class="remote no example">
+      <h4 class="ui header">Using Returned Queryset</h4>
+      <p>Ideally API results should only return values <b>matching the passed query term</b> to reduce transmissions over the wire, however as a convenience, you may also return the full set of results from an API endpoint and filter them against the query clientside using the setting <code>filterAPIResults: true</code>.</p>
+      <div class="ui form">
+        <div class="two fields">
+          <div class="field">
+            <label>Favorite Animal</label>
+            <div class="ui search selection dropdown">
+              <input type="hidden">
+              <i class="dropdown icon"></i>
+              <input type="text" class="search">
+              <div class="default text">Select one...</div>
+            </div>
+          </div>
+          <div class="field">
+            <label>Favorite Animals</label>
+            <div class="ui multiple search selection dropdown">
+              <input type="hidden">
+              <i class="dropdown icon"></i>
+              <input type="text" class="search">
+              <div class="default text">Select...</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="evaluated code" data-type="javascript">
+        $('.remote.example .ui.dropdown')
+          .dropdown({
+            apiSettings: {
+              // this url just returns a list of tags (with API response expected above)
+              url: '//api.semantic-ui.com/tags/'
+            },
+            filterAPIResults: true
+          })
+        ;
+      </div>
+    </div>
+
     <h2 class="ui header">Menus</h2>
 
     <div class="transition example">

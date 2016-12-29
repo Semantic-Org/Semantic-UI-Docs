@@ -1412,7 +1412,8 @@ semantic.ready = function() {
     .dropdown({
       allowTab       : false,
       on             : 'click',
-      fullTextSearch : true,
+      fullTextSearch : 'exact',
+      match          : 'text',
       onShow         : function() {
         $(this).popup('hide');
       },

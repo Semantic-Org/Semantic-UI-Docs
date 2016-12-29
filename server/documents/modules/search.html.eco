@@ -222,9 +222,9 @@ type        : 'UI Module'
     <p>You can specify custom API settings to adjust the url, callback settings, or specify a different API action.</p>
     <div class="code" data-label="javascript">
 
-      // initializes with default endpoint /search/{query}
       $('.ui.search')
         .search({
+          // change search endpoint to a custom endpoint by manipulating apiSettings
           apiSettings: {
             url: 'custom-search/?q={query}'
           },

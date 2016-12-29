@@ -234,6 +234,9 @@ blockquote .author {
 #example .language.dropdown.button {
   margin-top: 0.3em;
 }
+#example .language.dropdown > .text .description {
+  color: rgba(255, 255, 255, 0.4);
+}
 #example .language.dropdown > .menu {
   width: 280px;
   transform: translate3d(0, 0, 0);

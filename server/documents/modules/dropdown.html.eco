@@ -1419,8 +1419,8 @@ themes      : ['Default', 'GitHub', 'Material']
 
     <h2 class="ui dividing header">Remote Content</h2>
 
-    <div class="remote no example">
-      <h4 class="ui header">Returning Matched Values Remotely</h4>
+    <div class="remote filter no example">
+      <h4 class="ui header">Match Search Query on Server</h4>
       <p>Search selection dropdowns can specify <a href="/behaviors/api.html">API settings</a> for retrieving values remotely, this can use either a named API <code>action</code> or <code>url</code>.</p>
       <p class="ignored">Using API can allow users to select choices from large datasets that would be too large to include directly in page markups.</p>
       <p class="ignored">If your backend is not designed to return the correct markup you can use API's <code><a href="/behaviors/api.html#adjusting-server-responses">onResponse</a></code> callback to adjust the format of an API response after it is received from the server.</p>
@@ -1452,7 +1452,7 @@ themes      : ['Default', 'GitHub', 'Material']
       </div>
 
       <div class="evaluated code" data-type="javascript">
-        $('.remote.example .ui.dropdown')
+        $('.remote.filter.example .ui.dropdown')
           .dropdown({
             apiSettings: {
               // this url parses query server side and returns filtered results
@@ -1505,11 +1505,19 @@ themes      : ['Default', 'GitHub', 'Material']
       </div>
     </div>
 
-    <div class="remote no example">
-      <h4 class="ui header">Retreiving All Values Remotely</h4>
-      <p>Ideally API results should only return values <b>matching the passed query term</b> to reduce transmissions over the wire, however as a convenience, you may also return the full set of results from an API endpoint and filter them against the query clientside using the setting <code>filterRemoteData: true</code>.</p>
+    <div class="remote choices no example">
+      <h4 class="ui header">Return All Choices Remotely</h4>
+      <p>When possible choicesets are large, ideally API results should only return values <b>matching the passed query term</b> to reduce transmissions over the wire. However if there are only a few hundred or less choices, you may consider returning the full set of results from an API endpoint and filtering them against the query clientside using the setting <code>filterRemoteData: true</code>.</p>
       <div class="ui form">
-        <div class="two fields">
+        <div class="three fields">
+          <div class="field">
+            <label>Favorite Animal</label>
+            <div class="ui selection dropdown">
+              <input type="hidden">
+              <i class="dropdown icon"></i>
+              <div class="default text">Select one...</div>
+            </div>
+          </div>
           <div class="field">
             <label>Favorite Animal</label>
             <div class="ui search selection dropdown">
@@ -1532,7 +1540,7 @@ themes      : ['Default', 'GitHub', 'Material']
       </div>
 
       <div class="evaluated code" data-type="javascript">
-        $('.remote.example .ui.dropdown')
+        $('.remote.choices.example .ui.dropdown')
           .dropdown({
             apiSettings: {
               // this url just returns a list of tags (with API response expected above)

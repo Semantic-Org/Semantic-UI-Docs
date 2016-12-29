@@ -269,6 +269,28 @@ type        : 'UI Behavior'
         <tbody>
           <tr>
             <td>
+              onOnScreen
+            </td>
+            <td>
+              Any part of element is in current scroll viewport
+            </td>
+            <td>
+              <div class="code" data-type="javascript">screen.bottom >= element.top && screen.bottom <= element.bottom</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              onOffScreen
+            </td>
+            <td>
+              No part of element is in current scroll viewport
+            </td>
+            <td>
+              <div class="code" data-type="javascript">screen.bottom <= element.top || screen.top >= element.bottom</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
               onTopVisible
             </td>
             <td>

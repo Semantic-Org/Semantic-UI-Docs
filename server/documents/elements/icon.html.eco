@@ -33,104 +33,129 @@ themes      : ['Default']
       <h4 class="ui header">Web Content</h4>
       <p>Icons can represent types of content found on websites</p>
       <div class="ui doubling five column grid">
-        <div class="column"><i class="add to calendar icon"></i>Add To Calendar</div>
-        <div class="column"><i class="alarm icon icon"></i>Alarm</div>
-        <div class="column"><i class="alarm outline icon"></i>Alarm Outline</div>
-        <div class="column"><i class="alarm mute outline icon"></i>Alarm Mute Outline</div>
-        <div class="column"><i class="alarm mute icon"></i>Alarm Mute</div>
-        <div class="column"><i class="at icon"></i>At</div>
-        <div class="column"><i class="browser icon"></i>Browser</div>
-        <div class="column"><i class="bug icon"></i>Bug</div>
-        <div class="column"><i class="calendar outline icon"></i>Calendar Outline</div>
-        <div class="column"><i class="calendar icon"></i>Calendar</div>
-        <div class="column"><i class="checked calendar icon"></i>Checked Calendar</div>
-        <div class="column"><i class="cloud icon"></i>Cloud</div>
-        <div class="column"><i class="code icon"></i>Code</div>
-        <div class="column"><i class="comment outline icon"></i>Comment Outline</div>
-        <div class="column"><i class="comment icon"></i>Comment</div>
-        <div class="column"><i class="comments outline icon"></i>Comments Outline</div>
-        <div class="column"><i class="comments icon"></i>Comments</div>
-        <div class="column"><i class="copyright icon"></i>Copyright</div>
-        <div class="column"><i class="creative commons icon"></i>Creative Commons</div>
-        <div class="column"><i class="dashboard icon"></i>Dashboard</div>
-        <div class="column"><i class="delete calendar icon"></i>Delete Calendar</div>
-        <div class="column"><i class="external square icon"></i>External Square</div>
-        <div class="column"><i class="external icon"></i>External</div>
-        <div class="column"><i class="eyedropper icon"></i>Eyedropper</div>
-        <div class="column"><i class="feed icon"></i>Feed</div>
-        <div class="column"><i class="find icon"></i>Find</div>
-        <div class="column"><i class="hashtag icon"></i>Hashtag</div>
-        <div class="column"><i class="heartbeat icon"></i>Heartbeat</div>
-        <div class="column"><i class="history icon"></i>History</div>
-        <div class="column"><i class="home icon"></i>Home</div>
-        <div class="column"><i class="hourglass full icon"></i>Hourglass Full</div>
-        <div class="column"><i class="hourglass start icon"></i>Hourglass Start</div>
-        <div class="column"><i class="hourglass half icon"></i>Hourglass Half</div>
-        <div class="column"><i class="hourglass end icon"></i>Hourglass End</div>
-        <div class="column"><i class="hourglass empty icon"></i>Hourglass Empty</div>
-        <div class="column"><i class="idea icon"></i>Idea</div>
-        <div class="column"><i class="image icon"></i>Image</div>
-        <div class="column"><i class="inbox icon"></i>Inbox</div>
-        <div class="column"><i class="industry icon"></i>Industry</div>
-        <div class="column"><i class="lab icon"></i>Lab</div>
-        <div class="column"><i class="mail outline icon"></i>Mail Outline</div>
-        <div class="column"><i class="mail square icon"></i>Mail Square</div>
-        <div class="column"><i class="mail icon"></i>Mail</div>
-        <div class="column"><i class="mouse pointer icon"></i>Mouse Pointer</div>
-        <div class="column"><i class="options icon"></i>Options</div>
-        <div class="column"><i class="paint brush icon"></i>Paint Brush</div>
-        <div class="column"><i class="payment icon"></i>Payment</div>
-        <div class="column"><i class="percent icon"></i>Percent</div>
-        <div class="column"><i class="privacy icon"></i>Privacy</div>
-        <div class="column"><i class="protect icon"></i>Protect</div>
-        <div class="column"><i class="registered icon"></i>Registered</div>
-        <div class="column"><i class="remove from calendar icon"></i>Remove From Calendar</div>
-        <div class="column"><i class="search icon"></i>Search</div>
-        <div class="column"><i class="setting icon"></i>Setting</div>
-        <div class="column"><i class="settings icon"></i>Settings</div>
-        <div class="column"><i class="shop icon"></i>Shop</div>
-        <div class="column"><i class="shopping bag icon"></i>Shopping Bag</div>
-        <div class="column"><i class="shopping basket icon"></i>Shopping Basket</div>
-        <div class="column"><i class="signal icon"></i>Signal</div>
-        <div class="column"><i class="sitemap icon"></i>Sitemap</div>
-        <div class="column"><i class="tag icon"></i>Tag</div>
-        <div class="column"><i class="tags icon"></i>Tags</div>
-        <div class="column"><i class="tasks icon"></i>Tasks</div>
-        <div class="column"><i class="terminal icon"></i>Terminal</div>
-        <div class="column"><i class="text telephone icon"></i>Text Telephone</div>
-        <div class="column"><i class="ticket icon"></i>Ticket</div>
-        <div class="column"><i class="trademark icon"></i>Trademark</div>
-        <div class="column"><i class="trophy icon"></i>Trophy</div>
-        <div class="column"><i class="wifi icon"></i>Wifi</div>
+        <div class="column"><i class="add to calendar"></i>Add To Calendar</div>
+        <div class="column"><i class="address book"></i>Address Book</div>
+        <div class="column"><i class="address book outline"></i>Address Book Outline</div>
+        <div class="column"><i class="address card"></i>Address Card</div>
+        <div class="column"><i class="address card outline"></i>Address Card Outline</div>
+        <div class="column"><i class="alarm"></i>Alarm</div>
+        <div class="column"><i class="alarm mute"></i>Alarm Mute</div>
+        <div class="column"><i class="alarm mute outline"></i>Alarm Mute Outline</div>
+        <div class="column"><i class="alarm outline"></i>Alarm Outline</div>
+        <div class="column"><i class="at"></i>At</div>
+        <div class="column"><i class="browser"></i>Browser</div>
+        <div class="column"><i class="bug"></i>Bug</div>
+        <div class="column"><i class="calendar"></i>Calendar</div>
+        <div class="column"><i class="calendar outline"></i>Calendar Outline</div>
+        <div class="column"><i class="checked calendar"></i>Checked Calendar</div>
+        <div class="column"><i class="cloud"></i>Cloud</div>
+        <div class="column"><i class="code"></i>Code</div>
+        <div class="column"><i class="comment"></i>Comment</div>
+        <div class="column"><i class="comment outline"></i>Comment Outline</div>
+        <div class="column"><i class="comments"></i>Comments</div>
+        <div class="column"><i class="comments"></i>Comments</div>
+        <div class="column"><i class="comments outline"></i>Comments Outline</div>
+        <div class="column"><i class="copyright"></i>Copyright</div>
+        <div class="column"><i class="creative commons"></i>Creative Commons</div>
+        <div class="column"><i class="dashboard"></i>Dashboard</div>
+        <div class="column"><i class="delete calendar"></i>Delete Calendar</div>
+        <div class="column"><i class="external"></i>External</div>
+        <div class="column"><i class="external"></i>External</div>
+        <div class="column"><i class="external square"></i>External Square</div>
+        <div class="column"><i class="eyedropper"></i>Eyedropper</div>
+        <div class="column"><i class="feed"></i>Feed</div>
+        <div class="column"><i class="find"></i>Find</div>
+        <div class="column"><i class="hand pointer"></i>Hand Pointer</div>
+        <div class="column"><i class="handshake"></i>Handshake</div>
+        <div class="column"><i class="hashtag"></i>Hashtag</div>
+        <div class="column"><i class="heartbeat"></i>Heartbeat</div>
+        <div class="column"><i class="history"></i>History</div>
+        <div class="column"><i class="home"></i>Home</div>
+        <div class="column"><i class="hourglass empty"></i>Hourglass Empty</div>
+        <div class="column"><i class="hourglass end"></i>Hourglass End</div>
+        <div class="column"><i class="hourglass full"></i>Hourglass Full</div>
+        <div class="column"><i class="hourglass half"></i>Hourglass Half</div>
+        <div class="column"><i class="hourglass start"></i>Hourglass Start</div>
+        <div class="column"><i class="id badge"></i>Id Badge</div>
+        <div class="column"><i class="id card"></i>Id Card</div>
+        <div class="column"><i class="id card outline"></i>Id Card Outline</div>
+        <div class="column"><i class="idea"></i>Idea</div>
+        <div class="column"><i class="image"></i>Image</div>
+        <div class="column"><i class="inbox"></i>Inbox</div>
+        <div class="column"><i class="industry"></i>Industry</div>
+        <div class="column"><i class="lab"></i>Lab</div>
+        <div class="column"><i class="mail"></i>Mail</div>
+        <div class="column"><i class="mail outline"></i>Mail Outline</div>
+        <div class="column"><i class="mail square"></i>Mail Square</div>
+        <div class="column"><i class="mouse pointer"></i>Mouse Pointer</div>
+        <div class="column"><i class="open envelope"></i>Open Envelope</div>
+        <div class="column"><i class="open envelope outline"></i>Open Envelope Outline</div>
+        <div class="column"><i class="options"></i>Options</div>
+        <div class="column"><i class="paint brush"></i>Paint Brush</div>
+        <div class="column"><i class="payment"></i>Payment</div>
+        <div class="column"><i class="percent"></i>Percent</div>
+        <div class="column"><i class="podcast"></i>Podcast</div>
+        <div class="column"><i class="privacy"></i>Privacy</div>
+        <div class="column"><i class="protect"></i>Protect</div>
+        <div class="column"><i class="registered"></i>Registered</div>
+        <div class="column"><i class="remove from calendar"></i>Remove From Calendar</div>
+        <div class="column"><i class="search"></i>Search</div>
+        <div class="column"><i class="setting"></i>Setting</div>
+        <div class="column"><i class="settings"></i>Settings</div>
+        <div class="column"><i class="shop"></i>Shop</div>
+        <div class="column"><i class="shopping bag"></i>Shopping Bag</div>
+        <div class="column"><i class="shopping basket"></i>Shopping Basket</div>
+        <div class="column"><i class="signal"></i>Signal</div>
+        <div class="column"><i class="sitemap"></i>Sitemap</div>
+        <div class="column"><i class="tag"></i>Tag</div>
+        <div class="column"><i class="tags"></i>Tags</div>
+        <div class="column"><i class="tasks"></i>Tasks</div>
+        <div class="column"><i class="terminal"></i>Terminal</div>
+        <div class="column"><i class="text telephone"></i>Text Telephone</div>
+        <div class="column"><i class="ticket"></i>Ticket</div>
+        <div class="column"><i class="trademark"></i>Trademark</div>
+        <div class="column"><i class="trophy"></i>Trophy</div>
+        <div class="column"><i class="window close"></i>Window Close</div>
+        <div class="column"><i class="window close outline"></i>Window Close Outline</div>
+        <div class="column"><i class="window maximize"></i>Window Maximize</div>
+        <div class="column"><i class="window minimize"></i>Window Minimize</div>
+        <div class="column"><i class="window restore"></i>Window Restore</div>
       </div>
       <div class="existing code">
         <i class="add to calendar icon"></i>
-        <i class="alarm outline icon"></i>
-        <i class="alarm mute outline icon"></i>
-        <i class="alarm mute icon"></i>
+        <i class="address book icon"></i>
+        <i class="address book outline icon"></i>
+        <i class="address card icon"></i>
+        <i class="address card outline icon"></i>
         <i class="alarm icon"></i>
+        <i class="alarm mute icon"></i>
+        <i class="alarm mute outline icon"></i>
+        <i class="alarm outline icon"></i>
         <i class="at icon"></i>
         <i class="browser icon"></i>
         <i class="bug icon"></i>
-        <i class="calendar outline icon"></i>
         <i class="calendar icon"></i>
+        <i class="calendar outline icon"></i>
         <i class="checked calendar icon"></i>
         <i class="cloud icon"></i>
         <i class="code icon"></i>
-        <i class="comment outline icon"></i>
         <i class="comment icon"></i>
-        <i class="comments outline icon"></i>
+        <i class="comment outline icon"></i>
         <i class="comments icon"></i>
+        <i class="comments icon"></i>
+        <i class="comments outline icon"></i>
         <i class="copyright icon"></i>
         <i class="creative commons icon"></i>
         <i class="dashboard icon"></i>
         <i class="delete calendar icon"></i>
-        <i class="external square icon"></i>
         <i class="external icon"></i>
+        <i class="external icon"></i>
+        <i class="external square icon"></i>
         <i class="eyedropper icon"></i>
         <i class="feed icon"></i>
         <i class="find icon"></i>
         <i class="hand pointer icon"></i>
+        <i class="handshake icon"></i>
         <i class="hashtag icon"></i>
         <i class="heartbeat icon"></i>
         <i class="history icon"></i>
@@ -140,19 +165,25 @@ themes      : ['Default']
         <i class="hourglass full icon"></i>
         <i class="hourglass half icon"></i>
         <i class="hourglass start icon"></i>
+        <i class="id badge icon"></i>
+        <i class="id card icon"></i>
+        <i class="id card outline icon"></i>
         <i class="idea icon"></i>
         <i class="image icon"></i>
         <i class="inbox icon"></i>
         <i class="industry icon"></i>
         <i class="lab icon"></i>
+        <i class="mail icon"></i>
         <i class="mail outline icon"></i>
         <i class="mail square icon"></i>
-        <i class="mail icon"></i>
         <i class="mouse pointer icon"></i>
+        <i class="open envelope icon"></i>
+        <i class="open envelope outline icon"></i>
         <i class="options icon"></i>
         <i class="paint brush icon"></i>
         <i class="payment icon"></i>
         <i class="percent icon"></i>
+        <i class="podcast icon"></i>
         <i class="privacy icon"></i>
         <i class="protect icon"></i>
         <i class="registered icon"></i>
@@ -173,7 +204,11 @@ themes      : ['Default']
         <i class="ticket icon"></i>
         <i class="trademark icon"></i>
         <i class="trophy icon"></i>
-        <i class="wifi icon"></i>
+        <i class="window close icon"></i>
+        <i class="window close outline icon"></i>
+        <i class="window maximize icon"></i>
+        <i class="window minimize icon"></i>
+        <i class="window restore icon"></i>
       </div>
     </div>
     <div class="icon example">

@@ -1438,6 +1438,7 @@ themes      : ['Default']
         <div class="column"><i class="youtube play icon"></i>Youtube Play</div>
         <div class="column"><i class="youtube square icon"></i>Youtube Square</div>
       </div>
+      <div class="existing code">
         <i class="500px icon"></i>
         <i class="adn icon"></i>
         <i class="amazon icon"></i>
@@ -1596,7 +1597,6 @@ themes      : ['Default']
         <i class="youtube icon"></i>
         <i class="youtube play icon"></i>
         <i class="youtube square icon"></i>
-      <div class="existing code">
       </div>
     </div>
   </div>

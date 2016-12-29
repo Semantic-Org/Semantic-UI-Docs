@@ -586,6 +586,11 @@ type        : 'UI Module'
           <td>Minimum characters to query for results</td>
         </tr>
         <tr>
+          <td>searchOnFocus</td>
+          <td>true</td>
+          <td>Whether search should show results on focus (must also match min character length)</td>
+        </tr>
+        <tr>
           <td>transition</td>
           <td>
             fade

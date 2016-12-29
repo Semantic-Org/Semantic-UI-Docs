@@ -235,10 +235,8 @@ blockquote .author {
   margin-top: 0.3em;
 }
 #example .language.dropdown > .menu {
+  width: 280px;
   transform: translate3d(0, 0, 0);
-}
-#example .language.dropdown > .menu .description {
-  display: none;
 }
 
 /*--------------

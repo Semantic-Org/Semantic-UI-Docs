@@ -1420,7 +1420,7 @@ themes      : ['Default', 'GitHub', 'Material']
     <h2 class="ui dividing header">Remote Content</h2>
 
     <div class="remote no example">
-      <h4 class="ui header">Using Returned API Results</h4>
+      <h4 class="ui header">Returning Matched Values Remotely</h4>
       <p>Search selection dropdowns can specify <a href="/behaviors/api.html">API settings</a> for retrieving values remotely, this can use either a named API <code>action</code> or <code>url</code>.</p>
       <p class="ignored">Using API can allow users to select choices from large datasets that would be too large to include directly in page markups.</p>
       <p class="ignored">If your backend is not designed to return the correct markup you can use API's <code><a href="/behaviors/api.html#adjusting-server-responses">onResponse</a></code> callback to adjust the format of an API response after it is received from the server.</p>
@@ -1506,8 +1506,8 @@ themes      : ['Default', 'GitHub', 'Material']
     </div>
 
     <div class="remote no example">
-      <h4 class="ui header">Using Returned Queryset</h4>
-      <p>Ideally API results should only return values <b>matching the passed query term</b> to reduce transmissions over the wire, however as a convenience, you may also return the full set of results from an API endpoint and filter them against the query clientside using the setting <code>filterAPIResults: true</code>.</p>
+      <h4 class="ui header">Retreiving All Values Remotely</h4>
+      <p>Ideally API results should only return values <b>matching the passed query term</b> to reduce transmissions over the wire, however as a convenience, you may also return the full set of results from an API endpoint and filter them against the query clientside using the setting <code>filterRemoteData: true</code>.</p>
       <div class="ui form">
         <div class="two fields">
           <div class="field">
@@ -1538,7 +1538,7 @@ themes      : ['Default', 'GitHub', 'Material']
               // this url just returns a list of tags (with API response expected above)
               url: '//api.semantic-ui.com/tags/'
             },
-            filterAPIResults: true
+            filterRemoteData: true
           })
         ;
       </div>
@@ -2494,6 +2494,11 @@ themes      : ['Default', 'GitHub', 'Material']
             </div>
           </td>
           <td>List mapping dropdown content to JSON Property when using API</td>
+        </tr>
+        <tr>
+          <td>filterRemoteData</td>
+          <td>false</td>
+          <td>Whether results returned from API should be filtered by query before being displayed</td>
         </tr>
         <tr>
           <td>saveRemoteData</td>

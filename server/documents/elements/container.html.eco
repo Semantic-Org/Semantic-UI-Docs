@@ -66,19 +66,12 @@ themes      : ['Default']
             <td>Fluid</td>
             <td>Fluid</td>
           </tr>
-      <!--     <tr>
+          <tr>
             <td>Variable</td>
             <td><code>$largestMobileScreen</code></td>
             <td><code>$mobileBreakpoint</code></td>
             <td><code>$smallMonitorBreakpoint</code></td>
             <td><code>$largeMonitorBreakpoint</code></td>
-          </tr> -->
-          <tr>
-            <td class="single line">Responsive Visibility</td>
-            <td><code>mobile only</code></td>
-            <td><code>tablet only</code></td>
-            <td><code>small monitor only</code></td>
-            <td><code>large monitor only</code></td>
           </tr>
           <tr>
             <td>Device Width</td>
@@ -89,6 +82,10 @@ themes      : ['Default']
           </tr>
         </tbody>
       </table>
+      <h3 class="ui header">Responsive Visibility</h3>
+      <p>Since variations in Semantic UI are only assigned in the scope of components, there are no "free floating" responsive class names, however some components include responsive variations to help ease responsive design. <a href=href="/collections/grid.html#device-visibility">Grid</a> for example, includes responsive classes for hiding or showing <code>column</code>, <code>row</code> based on device type.</p>
+
+      <a href="/collections/grid.html#device-visibility" class="ui secondary button">See grid responsive variations <i class="right chevron icon"></i></a>
 
       <h3 class="ui header">Determining Maximum Widths</h3>
 

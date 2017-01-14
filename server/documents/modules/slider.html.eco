@@ -1,56 +1,292 @@
 ---
 layout      : 'default'
-css         : 'slider'
-element     : 'slider'
-elementType : 'Draft'
+css         : 'minimal'
 standalone  : true
+
+element     : 'slider'
+elementType : 'module'
 
 title       : 'Slider'
 description : "A slider allows a user to select a numeric value from a designated set of possible values"
-type        : 'Draft'
+type        : 'UI Module'
 
 themes      : ['Default']
 ---
 <script src="/javascript/slider.js"></script>
 <link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/slider.less" />
-
+<style>
+  .ui.vertical.slider {
+    height: 400px;
+    margin-right: 20px;
+    display: inline-block;
+  }
+</style>
 <%- @partial('header', { tabs: 'module' }) %>
 
 <div class="main ui container">
 
-  <div class="ui tab" data-tab="definition">
+  <div class="ui definition tab" data-tab="definition">
 
 
     <h2 class="ui dividing header">Types</h2>
 
 
     <div class="example">
-      <h4 class="ui header">Slider</h4>
+      <h4 class="ui header">Standard</h4>
       <p>A standard slider</p>
       <div class="ui slider">
-        <div class="handle"></div>
-        <div class="value"></div>
+        <div class="inner">
+          <div class="track"></div>
+          <div class="track-fill"></div>
+          <div class="thumb"></div>
+        </div>
       </div>
     </div>
 
+    <div class="example">
+      <h4 class="ui header">Smooth</h4>
+      <p>A smooth slider</p>
+      <div class="ui smooth slider"></div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Double</h4>
+      <p>A slider with two thumbs</p>
+      <div class="ui double slider"></div>
+      <p class="value-display"></p>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Vertical</h4>
+      <p>A vertical slider</p>
+      <div class="ui vertical slider"></div>
+      <div class="ui vertical reversed slider"></div>
+      <div class="ui vertical labeled slider"></div>
+      <div class="ui vertical double slider"></div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Reversed</h4>
+      <p>A slider can be reversed</p>
+      <div class="ui reversed slider"></div>
+    </div>
+
+    <h2 class="ui dividing header">Labeling</h2>
+
+    <div class="example">
+      <h4 class="ui header">Standard</h4>
+      <p>A labeled slider</p>
+      <div class="ui labeled slider"></div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Reversed</h4>
+      <p>A reversed labeled slider</p>
+      <div class="ui labeled reversed slider"></div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Custom</h4>
+      <p>A slider with custom labels</p>
+      <div class="ui ignored info message">
+        The labels you provide will be evenly spread across the slider. See <a href="#custom-label-function">custom label settings</a> for a more percise option.
+      </div>
+      <div class="ui labeled slider">
+        <ul class="labels">
+          <li class="label"><</li>
+          <li class="label">=</li>
+          <li class="label">></li>
+        </ul>
+      </div>
+    </div>
 
     <h2 class="ui dividing header">States</h2>
 
     <div class="example">
-      <h4 class="ui header">Read-only</h4>
-      <p>A slider can be read-only and unable to change states</p>
-    </div>
-
-    <div class="example">
       <h4 class="ui header">Disabled</h4>
-      <p>A slider can be read-only and unable to change states</p>
+      <p>A slider can be disabled</p>
+      <div class="ui disabled slider"></div>
     </div>
 
     <h2 class="ui dividing header">Variations</h2>
+    <div class="example">
+      <h4 class="ui header">Hover</h4>
+      <p>A slider's handle can appear on hover</p>
+      <div class="ui hover slider"></div>
+    </div>
 
+    <div class="example">
+      <h4 class="ui header">Inverted</h4>
+      <p>A slider can have its colors inverted</p>
+      <div class="ui inverted segment">
+        <div class="ui inverted slider"></div>
+        <div class="ui inverted labeled slider"></div>
+      </div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Size</h4>
+      <p>A slider can vary in size</p>
+      <div class="ui slider small"></div>
+      <p>Small</p>
+      <div class="ui slider"></div>
+      <p>Standard</p>
+      <div class="ui slider large"></div>
+      <p>Lage</p>
+      <div class="ui slider big"></div>
+      <p>Big</p>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Color</h4>
+      <p>A slider can vary in color</p>
+      <div class="ui red slider"></div>
+      <div class="ui orange slider"></div>
+      <div class="ui yellow slider"></div>
+      <div class="ui olive slider"></div>
+      <div class="ui green slider"></div>
+      <div class="ui teal slider"></div>
+      <div class="ui blue slider"></div>
+      <div class="ui violet slider"></div>
+      <div class="ui purple slider"></div>
+      <div class="ui pink slider"></div>
+      <div class="ui brown slider"></div>
+      <div class="ui grey slider"></div>
+      <div class="ui black slider"></div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Inverted Color</h4>
+      <div class="ui inverted segment">
+        <div class="ui inverted red slider"></div>
+        <div class="ui inverted orange slider"></div>
+        <div class="ui inverted yellow slider"></div>
+        <div class="ui inverted olive slider"></div>
+        <div class="ui inverted green slider"></div>
+        <div class="ui inverted teal slider"></div>
+        <div class="ui inverted blue slider"></div>
+        <div class="ui inverted violet slider"></div>
+        <div class="ui inverted purple slider"></div>
+        <div class="ui inverted pink slider"></div>
+        <div class="ui inverted brown slider"></div>
+        <div class="ui inverted grey slider"></div>
+        <div class="ui inverted black slider"></div>
+      </div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Basic</h4>
+      <p>A slider can have basic coloring</p>
+      <div class="ui basic slider"></div>
+      <div class="ui basic red slider"></div>
+      <div class="ui basic orange slider"></div>
+      <div class="ui basic yellow slider"></div>
+      <div class="ui basic olive slider"></div>
+      <div class="ui basic green slider"></div>
+      <div class="ui basic teal slider"></div>
+      <div class="ui basic blue slider"></div>
+      <div class="ui basic violet slider"></div>
+      <div class="ui basic purple slider"></div>
+      <div class="ui basic pink slider"></div>
+      <div class="ui basic brown slider"></div>
+      <div class="ui basic grey slider"></div>
+      <div class="ui basic black slider"></div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Basic Inverted</h4>
+      <div class="ui inverted segment">
+        <div class="ui basic inverted slider"></div>
+        <div class="ui basic inverted red slider"></div>
+        <div class="ui basic inverted orange slider"></div>
+        <div class="ui basic inverted yellow slider"></div>
+        <div class="ui basic inverted olive slider"></div>
+        <div class="ui basic inverted green slider"></div>
+        <div class="ui basic inverted teal slider"></div>
+        <div class="ui basic inverted blue slider"></div>
+        <div class="ui basic inverted violet slider"></div>
+        <div class="ui basic inverted purple slider"></div>
+        <div class="ui basic inverted pink slider"></div>
+        <div class="ui basic inverted brown slider"></div>
+        <div class="ui basic inverted grey slider"></div>
+        <div class="ui basic inverted black slider"></div>
+      </div>
+    </div>
   </div>
 
   <div class="ui examples tab" data-tab="examples">
+
+    <h2 class="ui dividing header">Manipulating step</h2>
+
+    <div class="custom step example">
+      <h4 class="ui header">Custom step</h4>
+      <p>This slider has a step of two</p>
+      <div class="ui slider"></div>
+      <p class="display"></p>
+      <div class="evaluated code" data-type="javascript">
+        $('.custom.step .ui.slider').slider({
+          start: 10,
+          step: 2,
+          onMove: updateDisplay,
+          onChange: updateDisplay
+        });
+
+        function updateDisplay(value) {
+          $('.custom.step .display').html('Value: ' + value)
+        }
+      </div>
+    </div>
+
+    <div class="undefined step example">
+      <h4 class="ui header">Undefined step</h4>
+      <p>This slider has no step</p>
+      <div class="ui slider"></div>
+      <p class="display"></p>
+      <div class="evaluated code" data-type="javascript">
+        $('.undefined.step .ui.slider').slider({
+          start: 10,
+          step: 0,
+          onMove: updateDisplay,
+          onChange: updateDisplay
+        });
+
+        function updateDisplay(value) {
+          $('.undefined.step .display').html('Value: ' + value)
+        }
+      </div>
+    </div>
+
+    <h2 class="ui dividing header">Labels</h2>
+
+    <div class="custom labels example">
+      <h4 class="ui header">Custom label function</h4>
+      <p>You can provide your own label interpreter.</p>
+      <p>This <b>will not</b> change the value that is returned by the slider.</p>
+      <div class="ui labeled slider"></div>
+      <div class="evaluated code" data-type="javascript">
+        $('.custom.labels .ui.slider').slider({
+          start: 10,
+          interpretLabel: function(value) {
+            if(value == 2) {
+              return null; // return null, '', or false to skip label render
+            }
+            return `1/` + value;
+          }
+        });
+      </div>
+    </div>
+
+    <div class="letter labels example">
+      <h4 class="ui header">Letter labeling</h4>
+      <p>You can change the labels to have letters instead of numbers.</p>
+      <div class="ui labeled slider"></div>
+      <div class="evaluated code" data-type="javascript">
+        $('.letter.labels .ui.slider').slider({
+          start: 10,
+          labelType: 'letter'
+        });
+      </div>
+    </div>
 
   </div>
 
@@ -60,112 +296,112 @@ themes      : ['Default']
 
     <h2 class="ui dividing header">Behavior</h2>
     <p>Behaviors are accessible with javascript using the syntax:<p>
-    <div class="code">
-    $('.ui.slider').slider('behavior', argumentOne, argumentTwo...);
+      <div class="code">
+        $('.ui.slider').slider('behavior', argumentOne, argumentTwo...);
+      </div>
+
+      <table class="ui definition celled table segment">
+        <tr>
+          <td>bind events(selector, behavior)</td>
+          <td>Bind an slider event to another page element matching selector</td>
+        </tr>
+      </table>
     </div>
 
-    <table class="ui definition celled table segment">
-      <tr>
-        <td>bind events(selector, behavior)</td>
-        <td>Bind an slider event to another page element matching selector</td>
-      </tr>
-    </table>
+
+    <div class="ui tab" data-tab="settings">
+      <h2 class="ui dividing header">Slider</h2>
+
+      <p>These settings are specific to slider, and determine the parameters of its behavior</p>
+
+      <table class="ui celled sortable definition table segment">
+        <thead>
+          <th class="three wide"></th>
+          <th class="three wide">Default</th>
+          <th>Description</th>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+
+      <table class="ui celled sortable definition table segment">
+        <thead>
+          <th class="three wide"></th>
+          <th class="three wide">Context</th>
+          <th>Description</th>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+
+      <h2 class="ui dividing header">Module</h2>
+
+      <p>These settings are native to all modules, and define how the component ties content to DOM attributes, and debugging settings for the module.</p>
+      <table class="ui sortable celled definition table">
+        <thead>
+          <th></th>
+          <th class="six wide">Default</th>
+          <th>Description</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>name</td>
+            <td>Slider</td>
+            <td>Name used in log statements</td>
+          </tr>
+          <tr>
+            <td>namespace</td>
+            <td>slider</td>
+            <td>Event namespace. Makes sure module teardown does not effect other events attached to an element.</td>
+          </tr>
+          <tr>
+            <td>selector</td>
+            <td>
+              <div class="code" data-type="css">
+              </div>
+            </td>
+            <td>Selectors used to find parts of a module</td>
+          </tr>
+          <tr>
+            <td>className</td>
+            <td>
+              <div class="code">
+              </div>
+            </td>
+            <td>Class names used to determine element state</td>
+          </tr>
+          <tr>
+            <td>silent</td>
+            <td>False</td>
+            <td>Silences all console output including error messages, regardless of other debug settings.</td>
+          </tr>
+          <tr>
+            <td>debug</td>
+            <td>false</td>
+            <td>Debug output to console</td>
+          </tr>
+          <tr>
+            <td>performance</td>
+            <td>true</td>
+            <td>Show <code>console.table</code> output with performance metrics</td>
+          </tr>
+          <tr>
+            <td>verbose</td>
+            <td>false</td>
+            <td>Debug output includes all internal behaviors</td>
+          </tr>
+          <tr>
+            <td>errors</td>
+            <td colspan="2">
+              <div class="code">
+                error   : {
+                  method   : 'The method you called is not defined.'
+                }
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
   </div>
-
-
-  <div class="ui tab" data-tab="settings">
-    <h2 class="ui dividing header">Slider</h2>
-
-    <p>These settings are specific to slider, and determine the parameters of its behavior</p>
-
-    <table class="ui celled sortable definition table segment">
-      <thead>
-        <th class="three wide"></th>
-        <th class="three wide">Default</th>
-        <th>Description</th>
-      </thead>
-      <tbody>
-      </tbody>
-    </table>
-
-    <table class="ui celled sortable definition table segment">
-      <thead>
-        <th class="three wide"></th>
-        <th class="three wide">Context</th>
-        <th>Description</th>
-      </thead>
-      <tbody>
-      </tbody>
-    </table>
-
-    <h2 class="ui dividing header">Module</h2>
-
-    <p>These settings are native to all modules, and define how the component ties content to DOM attributes, and debugging settings for the module.</p>
-    <table class="ui sortable celled definition table">
-      <thead>
-        <th></th>
-        <th class="six wide">Default</th>
-        <th>Description</th>
-      </thead>
-      <tbody>
-        <tr>
-          <td>name</td>
-          <td>Slider</td>
-          <td>Name used in log statements</td>
-        </tr>
-        <tr>
-          <td>namespace</td>
-          <td>slider</td>
-          <td>Event namespace. Makes sure module teardown does not effect other events attached to an element.</td>
-        </tr>
-        <tr>
-          <td>selector</td>
-          <td>
-            <div class="code" data-type="css">
-            </div>
-          </td>
-          <td>Selectors used to find parts of a module</td>
-        </tr>
-        <tr>
-          <td>className</td>
-          <td>
-            <div class="code">
-            </div>
-          </td>
-          <td>Class names used to determine element state</td>
-        </tr>
-        <tr>
-          <td>silent</td>
-          <td>False</td>
-          <td>Silences all console output including error messages, regardless of other debug settings.</td>
-        </tr>
-        <tr>
-          <td>debug</td>
-          <td>false</td>
-          <td>Debug output to console</td>
-        </tr>
-        <tr>
-          <td>performance</td>
-          <td>true</td>
-          <td>Show <code>console.table</code> output with performance metrics</td>
-        </tr>
-        <tr>
-          <td>verbose</td>
-          <td>false</td>
-          <td>Debug output includes all internal behaviors</td>
-        </tr>
-        <tr>
-          <td>errors</td>
-          <td colspan="2">
-            <div class="code">
-            error   : {
-              method   : 'The method you called is not defined.'
-            }
-            </div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-</div>

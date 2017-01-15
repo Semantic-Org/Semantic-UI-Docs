@@ -227,13 +227,10 @@ themes      : ['Default']
         $('.custom.step .ui.slider').slider({
           start: 10,
           step: 2,
-          onMove: updateDisplay,
-          onChange: updateDisplay
+          onMove: function (value) {
+            $('.custom.step .display').html('Value: ' + value)
+          }
         });
-
-        function updateDisplay(value) {
-          $('.custom.step .display').html('Value: ' + value)
-        }
       </div>
     </div>
 
@@ -246,13 +243,10 @@ themes      : ['Default']
         $('.undefined.step .ui.slider').slider({
           start: 10,
           step: 0,
-          onMove: updateDisplay,
-          onChange: updateDisplay
+          onMove: function (value) {
+            $('.undefined.step .display').html('Value: ' + value)
+          }
         });
-
-        function updateDisplay(value) {
-          $('.undefined.step .display').html('Value: ' + value)
-        }
       </div>
     </div>
 
@@ -266,8 +260,8 @@ themes      : ['Default']
       <div class="evaluated code" data-type="javascript">
         $('.custom.labels .ui.slider').slider({
           start: 10,
-          interpretLabel: function(value) {
-            if(value == 2) {
+          interpretLabel: function (value) {
+            if (value == 2) {
               return null; // return null, '', or false to skip label render
             }
             return `1/` + value;
@@ -290,9 +284,59 @@ themes      : ['Default']
 
   </div>
 
-  <div class="ui tab" data-tab="usage">
+  <div class="ui usage tab" data-tab="usage">
 
-    <h2 class="ui dividing header">Usage</h2>
+    <h2 class="ui dividing header">Initializing</h2>
+
+    <div class="example">
+      <h4 class="ui header">Standard</h4>
+      <p>A pure, default, no nonsense slider. It will not appear until it is initialized.</p>
+      <div class="code" data-type="javascript" data-demo="true">
+        $('#example1').slider();
+      </div>
+      <div class="ui slider" id="example1"></div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Min/max</h4>
+      <p>You can set what you want the bounds of the slider to be.</p>
+      <div class="code" data-type="javascript" data-demo="true">
+        $('#example2').slider({
+          min: 1,
+          max: 10,
+        });
+      </div>
+      <div class="ui labeled slider" id="example2"></div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Start value</h4>
+      <p>You can provide a start value for the slider.</p>
+      <div class="code" data-type="javascript" data-demo="true">
+        $('#example3').slider({
+          start: 5
+        });
+      </div>
+      <div class="ui labeled slider" id="example3"></div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Callbacks</h4>
+      <p>What's the point of a slider if you can't get it's value?</p>
+      <div class="code" data-type="javascript" data-demo="true">
+        $('#example4').slider({
+          onMove: function (value) {
+            $('#move').html('onMove value: ' + value);
+          },
+          onChange: function (value) {
+            $('#change').html('onChange value: ' + value);
+          }
+        });
+      </div>
+      <div class="ui labeled slider" id="example4"></div>
+      <p id="move"></p>
+      <p id="change"></p>
+    </div>
 
     <h2 class="ui dividing header">Behavior</h2>
     <p>Behaviors are accessible with javascript using the syntax:<p>

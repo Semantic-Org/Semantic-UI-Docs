@@ -27,8 +27,7 @@ semantic.slider.ready = function() {
     max: 10,
     start: 5,
     step: 1,
-    onMove: updateDisplay,
-    onChange: updateDisplay
+    onMove: updateDisplay
   })
 };
 

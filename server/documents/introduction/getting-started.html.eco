@@ -129,7 +129,6 @@ type        : 'Main'
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"&gt;&lt;/script&gt;
       &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;semantic/dist/semantic.min.css&quot;&gt;
-      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;semantic/dist/semantic.min.css&quot;&gt;
       &lt;script
   src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="

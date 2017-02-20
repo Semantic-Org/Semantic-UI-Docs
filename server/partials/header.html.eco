@@ -180,18 +180,17 @@
 </div>
 
 <% if 'development' in @getEnvironments(): %>
-<div class="ui vertical beg transition hidden segment">
-  <i class="large red delete link icon"></i>
-  <div class="ui red header">
-    <i class="disabled warning sign icon"></i>
-    <div class="content">
-      Want to Support Open Source? Whitelist Your Ad-Blocker.
-      <div class="sub header">
-        We promise to not show more than one small ad per page. Dont worry, hiding this message will make sure you won't get nagged again.
+<% else: %>
+  <div class="ui vertical beg transition hidden segment">
+    <i class="large red delete link icon"></i>
+    <div class="ui red header">
+      <i class="disabled warning sign icon"></i>
+      <div class="content">
+        Want to Support Open Source? Whitelist Your Ad-Blocker.
+        <div class="sub header">
+          We promise to not show more than one small ad per page. Dont worry, hiding this message will make sure you won't get nagged again.
+        </div>
       </div>
     </div>
   </div>
-</div>
-<% else: %>
-
 <% end %>

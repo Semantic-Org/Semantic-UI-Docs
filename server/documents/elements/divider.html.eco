@@ -37,6 +37,9 @@ themes      : ['default']
     <div class="ui info ignored message">
       A vertical divider will automatically swap to a horizontal divider at mobile resolutions when used inside a <a href="/collections/grid.html#stackable-grid"><code>stackable grid</code></a>
     </div>
+    <div class="ui warning ignored message">
+      There is a know bug of vertical dividers after a W3C update. Please read <a href="https://github.com/Semantic-Org/Semantic-UI/issues/4342" target="_blank" rel="nofollow">#4342</a> for more information
+    </div>
     <div class="ui three column very relaxed grid">
       <div class="column">
         <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">

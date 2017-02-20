@@ -867,7 +867,7 @@ themes      : ['Default']
           <td>onUnplaceable</td>
           <td>$module</td>
           <td>$popup</td>
-          <td>Callback after popup cannot be plaed on screen</td>
+          <td>Callback after popup cannot be placed on screen</td>
         </tr>
       </tbody>
     </table>

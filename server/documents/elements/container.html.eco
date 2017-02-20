@@ -32,7 +32,7 @@ themes      : ['Default']
 
       <h3 class="ui header">Container Sizes</h3>
 
-      <p>Containers are designed to responsively adjust their maximum width based on the size of the screen they are appearing.</p>
+      <p>Containers are designed to responsively adjust their maximum width based on the size of the screen on which they are appearing.</p>
 
       <table class="ui celled definition table">
         <thead>

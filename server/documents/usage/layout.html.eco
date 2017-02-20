@@ -43,7 +43,7 @@ type        : 'Usage'
       <div class="content">
         <div class="header">Grid</div>
         <div class="description">
-          An introduction to using Semantic UI grids
+          An introduction to using Semantic UI grids.
         </div>
       </div>
     </a>
@@ -54,7 +54,7 @@ type        : 'Usage'
       <div class="content">
         <div class="header">Attached Content</div>
         <div class="description">
-          Examples of content that can attach to other content
+          Examples of content that can attach to other content.
         </div>
       </div>
     </a>
@@ -65,7 +65,7 @@ type        : 'Usage'
       <div class="content">
         <div class="header">Bootstrap Migration</div>
         <div class="description">
-          Examples of replacements for components found in Bootstrap
+          Examples of replacements for components found in Bootstrap.
         </div>
       </div>
     </a>
@@ -81,7 +81,7 @@ type        : 'Usage'
       <div class="content">
         <div class="header">Homepage</div>
         <div class="description">
-          A simple, responsive homepage design with sidebar
+          A simple, responsive homepage design with sidebar.
         </div>
       </div>
     </a>
@@ -92,7 +92,7 @@ type        : 'Usage'
       <div class="content">
         <div class="header">Sticky Menus</div>
         <div class="description">
-         Using visibility APIs to fix content after passing position in page
+         Using visibility APIs to fix content after passing position in page.
         </div>
       </div>
     </a>
@@ -103,7 +103,7 @@ type        : 'Usage'
       <div class="content">
         <div class="header">Fixed Menu</div>
         <div class="description">
-          Using a fixed menu with page content
+          Using a fixed menu with page content.
         </div>
       </div>
     </a>

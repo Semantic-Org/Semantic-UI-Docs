@@ -28,7 +28,7 @@ type        : 'UI Behavior'
       <h4 class="ui header">Specifying Validation Rules</h4>
       <p>Form validation requires passing in a validation object with the rules required to validate your form.</p>
       <div class="ui ignored info message">
-        A validation object includes a list of form elements, and rules to validate each field against. Fields are matched by either the <code>id</code>, <code>name</code>, or <code>data-validate</code>  property matching the identifier specified in the settings object.
+        A validation object includes a list of form elements, and rules to validate each field against. Fields are matched by either the <code>id</code>, <code>name</code>, or <code>data-validate</code>  property matching the identifier specified in the settings object. Validation objects must use either shorthand or longhand exclusively.
       </div>
       <div class="ignore code" data-title="Shorthand Validation">
       $('.ui.form')

@@ -264,6 +264,23 @@ blockquote .author {
 }
 
 /*--------------
+    Ad Beg
+---------------*/
+
+#example .beg.segment {
+  background-color: #F9F5F5;
+  padding: 2em 3em;
+}
+#example .beg.segment .delete.icon {
+  position: absolute;
+  top: 1.5em;
+  right: 1.5em;
+}
+#example .beg.segment .ui.header {
+  margin: 0 !important;
+}
+
+/*--------------
     Download
 ---------------*/
 

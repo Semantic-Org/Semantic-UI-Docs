@@ -6,51 +6,89 @@ standalone : true
 title      : 'Test Page'
 type       : 'Library'
 ---
-<div class="ui container">
-<div id="first" class="ui search">
-  <div class="ui left icon input">
-    <input class="prompt" type="text" placeholder="Search countries">
-    <i class="icon"></i>
+<!-- <div class="ui modal small" id="yyyyyy">
+  <i class="close icon" tabindex="0"></i>
+  <div class="header">Entre em contato</div>
+  <div class="content">
+    <form class="ui form">
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" name="nome" placeholder="Digite seu nome">
+      </div>
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" name="nome" placeholder="Digite seu nome">
+      </div>
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" name="nome" placeholder="Digite seu nome">
+      </div>
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" name="nome" placeholder="Digite seu nome">
+      </div>
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" name="nome" placeholder="Digite seu nome">
+      </div>
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" name="nome" placeholder="Digite seu nome">
+      </div>
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" name="nome" placeholder="Digite seu nome">
+      </div>
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" name="nome" placeholder="Digite seu nome">
+      </div>
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" name="nome" placeholder="Digite seu nome">
+      </div>
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" name="nome" placeholder="Digite seu nome">
+      </div>
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" name="nome" placeholder="Digite seu nome">
+      </div>
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" name="nome" placeholder="Digite seu nome">
+      </div>
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" name="nome" placeholder="Digite seu nome">
+      </div>
+    </form>
   </div>
+  <div class="actions">
+    <button class="ui button red cancelar">111111</button>
+    <button class="ui button primary right labeled icon">222222<i class="checkmark icon"></i></button>
+  </div>
+</div> -->
+<div class="ui container">
+<div class="ui vertical inverted very padded segment">
+    <div class="ui vertical inverted very padded segment">
+        <div class="ui vertical inverted very padded segment">
+            Lorem...
+        </div>
+    </div>
 </div>
 </div>
 <script>
-$(document).ready(function() {
-                var content = [
-                               { title: 'Andorra' },
-                               { title: 'United Arab Emirates' },
-                               { title: 'Afghanistan' },
-                               { title: 'Antigua' },
-                               { title: 'Anguilla' },
-                               { title: 'Albania' },
-                               { title: 'Armenia' },
-                               { title: 'Netherlands Antilles' },
-                               { title: 'Angola' },
-                               { title: 'Argentina' },
-                               { title: 'American Samoa' },
-                               { title: 'Austria' },
-                               { title: 'Australia' },
-                               { title: 'Aruba' },
-                               { title: 'Aland Islands' },
-                               { title: 'Azerbaijan' },
-                               { title: 'Bosnia' },
-                               { title: 'Barbados' },
-                               { title: 'Bangladesh' },
-                               { title: 'Belgium' },
-                               { title: 'Burkina Faso' },
-                               { title: 'Bulgaria' },
-                               { title: 'Bahrain' },
-                               { title: 'Burundi' }
-                               // etc
-                               ];
-                               $('#first').search({source: content ,showNoResults: false});
-
-
-});
+  $(document).ready(function() {
+    $('.ui.modal').modal('show');
+  });
 
 </script>
 
 <!-- TEST CSS HERE !-->
 <style type="text/css">
-
+  .container {
+    margin-top: 2rem !important;
+  }
 </style>

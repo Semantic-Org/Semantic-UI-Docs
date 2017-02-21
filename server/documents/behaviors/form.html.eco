@@ -282,6 +282,51 @@ type        : 'UI Behavior'
       </form>
     </div>
 
+    <div class="prompt example">
+      <h4 class="ui header">
+        Validating Programmatically
+        <div class="ui teal label">Updated in 2.2.8</div>
+      </h4>
+      <p>Form validation provides additional behaviors to programmatically trigger validation for either the form or an individual field, and check validation on the form or individual fields.</p>
+      <p>Please see the <a href="#behaviors">behaviors section</a> for an explanation on syntax.</p>
+      <table class="ui celled sortable basic table segment">
+        <tbody>
+          <tr>
+            <td class="four wide"><b>validate form</b></td>
+            <td>Validates entire form and displays errors if necessary</td>
+          </tr>
+          <tr>
+            <td class="four wide"><b>is valid</b></td>
+            <td>Returns whether a form is valid</td>
+          </tr>
+          <tr>
+            <td class="four wide"><b>is valid(fieldName)</b></td>
+            <td>Returns whether a field in a form is valid (does not update UI)</td>
+          </tr>
+          <tr>
+            <td class="four wide"><b>validate field(fieldName)</b></td>
+            <td>Validates a particular field and displays errors if necessary</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="ignored code">
+      $('.ui.form')
+        .form({
+          fields: [
+           email: 'empty',
+           name: 'empty'
+          ]
+        })
+      ;
+      if( $('.ui.form').form('is valid', 'email')) {
+        // email is valid
+      }
+      if( $('.ui.form').form('is valid') {
+        // form is valid (both email and name)
+      }
+      </div>
+    </div>
+
     <h2 class="ui dividing header">Rules</h2>
 
     <div class="no example">
@@ -838,7 +883,7 @@ type        : 'UI Behavior'
           </div>
           <div class="field">
             <label>E-mail</label>
-            <input name="email" type="text" value="jack@foo">
+            <input name="email" type="text" value="jack">
           </div>
         </div>
         <div class="two fields">
@@ -1696,7 +1741,7 @@ type        : 'UI Behavior'
   </div>
 
   <div class="ui tab" data-tab="settings">
-    <h2 class="ui dividing header">Behavior</h2>
+    <h2 class="ui dividing header">Behaviors</h2>
 
     All the following behaviors can be called using the syntax
 
@@ -1714,12 +1759,16 @@ type        : 'UI Behavior'
         <td>Returns true/false whether a form passes its validation rules</td>
       </tr>
       <tr>
-        <td>validate form</td>
-        <td>Validates form and calls onSuccess or onFailure</td>
+        <td>is valid(fieldName)</td>
+        <td>Returns true/false whether a field passes its validation rules</td>
       </tr>
       <tr>
-        <td>get change event</td>
-        <td>gets browser property change event</td>
+        <td>validate form</td>
+        <td>Validates form, updates UI, and calls onSuccess or onFailure</td>
+      </tr>
+      <tr>
+        <td>validate field(fieldName)</td>
+        <td>Validates field, updates UI, and calls onSuccess or onFailure</td>
       </tr>
       <tr>
         <td>get field(id)</td>

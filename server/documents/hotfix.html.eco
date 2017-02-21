@@ -71,17 +71,73 @@ type       : 'Library'
   </div>
 </div> -->
 <div class="ui container">
-<div class="ui vertical inverted very padded segment">
-    <div class="ui vertical inverted very padded segment">
-        <div class="ui vertical inverted very padded segment">
-            Lorem...
+<form class="ui form segment">
+        <p>Tell Us About Yourself</p>
+        <div class="two fields">
+          <div class="field">
+            <label>Name</label>
+            <input placeholder="First Name" name="name" type="text">
+          </div>
+          <div class="field">
+            <label>Gender</label>
+            <select class="ui dropdown" name="gender">
+              <option value="">Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
         </div>
-    </div>
-</div>
+        <div class="two fields">
+          <div class="field">
+            <label>Username</label>
+            <input placeholder="Username" name="username" type="text">
+          </div>
+          <div class="field">
+            <label>Password</label>
+            <input type="password" name="password">
+          </div>
+        </div>
+        <div class="field">
+          <label>Skills</label>
+          <select name="skills" multiple class="ui dropdown">
+            <option value="">Select Skills</option>
+            <option value="css">CSS</option>
+            <option value="html">HTML</option>
+            <option value="javascript">Javascript</option>
+            <option value="design">Graphic Design</option>
+            <option value="plumbing">Plumbing</option>
+            <option value="mech">Mechanical Engineering</option>
+            <option value="repair">Kitchen Repair</option>
+          </select>
+        </div>
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" name="terms" />
+            <label>I agree to the terms and conditions</label>
+          </div>
+        </div>
+        <div class="ui primary submit button">Submit</div>
+        <div class="ui error message"></div>
+      </div>
+    </form>
 </div>
 <script>
   $(document).ready(function() {
-    $('.ui.modal').modal('show');
+    $('.ui.dropdown').dropdown();
+      $('.ui.form')
+        .form({
+          fields: {
+            name     : 'empty',
+            gender   : 'empty',
+            username : 'empty',
+            password : ['minLength[6]', 'empty'],
+            skills   : ['minCount[2]', 'empty'],
+            terms    : 'checked'
+          }
+        })
+      ;
+      // $('.ui.form').form('validate field', 'username');
+      console.log($('.ui.form').form('is valid', 'username'));
   });
 
 </script>

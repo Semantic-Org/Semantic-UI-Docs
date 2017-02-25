@@ -339,113 +339,278 @@ themes      : ['Default']
     </div>
 
     <h2 class="ui dividing header">Behavior</h2>
-    <p>Behaviors are accessible with javascript using the syntax:<p>
-      <div class="code">
-        $('.ui.slider').slider('behavior', argumentOne, argumentTwo...);
-      </div>
 
-      <table class="ui definition celled table segment">
+    <p>All the following behaviors can be called using the syntax:</p>
+    <div class="code">
+    $('.ui.slider').slider('behavior name', argumentOne, argumentTwo);
+    </div>
+
+    <table class="ui definition celled sortable table segment">
+      <thead>
+        <th>Behavior</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
         <tr>
-          <td>bind events(selector, behavior)</td>
-          <td>Bind an slider event to another page element matching selector</td>
+          <td>set value(value)</td>
+          <td>Sets the slider to given value. This <b>will</b> fire the <code>onChange</code> and <code>onMove</code> callbacks.</td>
         </tr>
-      </table>
-    </div>
-
-
-    <div class="ui tab" data-tab="settings">
-      <h2 class="ui dividing header">Slider</h2>
-
-      <p>These settings are specific to slider, and determine the parameters of its behavior</p>
-
-      <table class="ui celled sortable definition table segment">
-        <thead>
-          <th class="three wide"></th>
-          <th class="three wide">Default</th>
-          <th>Description</th>
-        </thead>
-        <tbody>
-        </tbody>
-      </table>
-
-      <table class="ui celled sortable definition table segment">
-        <thead>
-          <th class="three wide"></th>
-          <th class="three wide">Context</th>
-          <th>Description</th>
-        </thead>
-        <tbody>
-        </tbody>
-      </table>
-
-      <h2 class="ui dividing header">Module</h2>
-
-      <p>These settings are native to all modules, and define how the component ties content to DOM attributes, and debugging settings for the module.</p>
-      <table class="ui sortable celled definition table">
-        <thead>
-          <th></th>
-          <th class="six wide">Default</th>
-          <th>Description</th>
-        </thead>
-        <tbody>
-          <tr>
-            <td>name</td>
-            <td>Slider</td>
-            <td>Name used in log statements</td>
-          </tr>
-          <tr>
-            <td>namespace</td>
-            <td>slider</td>
-            <td>Event namespace. Makes sure module teardown does not effect other events attached to an element.</td>
-          </tr>
-          <tr>
-            <td>selector</td>
-            <td>
-              <div class="code" data-type="css">
-              </div>
-            </td>
-            <td>Selectors used to find parts of a module</td>
-          </tr>
-          <tr>
-            <td>className</td>
-            <td>
-              <div class="code">
-              </div>
-            </td>
-            <td>Class names used to determine element state</td>
-          </tr>
-          <tr>
-            <td>silent</td>
-            <td>False</td>
-            <td>Silences all console output including error messages, regardless of other debug settings.</td>
-          </tr>
-          <tr>
-            <td>debug</td>
-            <td>false</td>
-            <td>Debug output to console</td>
-          </tr>
-          <tr>
-            <td>performance</td>
-            <td>true</td>
-            <td>Show <code>console.table</code> output with performance metrics</td>
-          </tr>
-          <tr>
-            <td>verbose</td>
-            <td>false</td>
-            <td>Debug output includes all internal behaviors</td>
-          </tr>
-          <tr>
-            <td>errors</td>
-            <td colspan="2">
-              <div class="code">
-                error   : {
-                  method   : 'The method you called is not defined.'
-                }
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
+        <tr>
+          <td>set value double(firstValue, secondValue)</td>
+          <td>Sets the values for a double slider. This <b>will</b> fire the <code>onChange</code> and <code>onMove</code> callbacks.</td>
+        </tr>
+        <tr>
+          <td>set position(position)</td>
+          <td>Sets the slider position. This <b>will</b> set the slider the value.</td>
+        </tr>
+        <tr>
+          <td>update value(value)</td>
+          <td>Sets the slider position. This <b>will not</b> fire the <code>onChange</code> and <code>onMove</code> callbacks.</td>
+        </tr>
+        <tr>
+          <td>goto min</td>
+          <td>Sets the slider to the min value.</td>
+        </tr>
+        <tr>
+          <td>goto max</td>
+          <td>Sets the slider to the max value.</td>
+        </tr>
+        <tr>
+          <td>get min</td>
+          <td>Returns the sliders minimum value.</td>
+        </tr>
+        <tr>
+          <td>get max</td>
+          <td>Returns the sliders maximum value.</td>
+        </tr>
+        <tr>
+          <td>get step</td>
+          <td>Returns the sliders value step.</td>
+        </tr>
+        <tr>
+          <td>get value</td>
+          <td>Returns the sliders value.</td>
+        </tr>
+        <tr>
+          <td>get thumb value(<code>first</code> or <code>second</code>)</td>
+          <td>Returns the given thumbs value.</td>
+        </tr>
+        <tr>
+          <td>get current thumbValue</td>
+          <td>Returns the value of the focused thumb.</td>
+        </tr>
+        <tr>
+          <td>get thumb position(<code>first</code> or <code>second</code>)</td>
+          <td>Returns the given thumbs position.</td>
+        </tr>
+        <tr>
+          <td>determine value(position)</td>
+          <td>Determines the value for the given position.</td>
+        </tr>
+        <tr>
+          <td>determine position fromValue(value)</td>
+          <td>Determines the position for the given value.</td>
+        </tr>
+        <tr>
+          <td>determine position fromRatio(ratio)</td>
+          <td>Determines the position for the given ratio.</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
+
+
+  <div class="ui tab" data-tab="settings">
+    <h3 class="ui header">
+      Slider Settings
+      <div class="sub header">Settings that modify the slider behavior</div>
+    </h3>
+    <table class="ui celled sortable definition table segment">
+      <thead>
+        <tr>
+          <th>Setting</th>
+          <th class="four wide">Default</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>min</td>
+          <td><code>0</code></td>
+          <td>The minimum value of the slider.</td>
+        </tr>
+        <tr>
+          <td>max</td>
+          <td><code>20</code></td>
+          <td>The maximum value of the slider.</td>
+        </tr>
+        <tr>
+          <td>step</td>
+          <td><code>1</code></td>
+          <td>The step value of the slider.</td>
+        </tr>
+        <tr>
+          <td>start</td>
+          <td><code>0</code></td>
+          <td>The start value of the slider thumb.</td>
+        </tr>
+        <tr>
+          <td>doubleStart</td>
+          <td><code>1</code></td>
+          <td>The start value of the second slider thumb.</td>
+        </tr>
+        <tr>
+          <td>labelType</td>
+          <td><code>'number'</code></td>
+          <td>The label type. Can be one of <code>'number'</code>, <code>'letter'</code>, or <code>'none'</code></td>
+        </tr>
+        <tr>
+          <td>smooth</td>
+          <td><code>false</code></td>
+          <td>If a slider is smooth, it will not snap to a value.</td>
+        </tr>
+        <tr>
+          <td>decimalPlaces</td>
+          <td><code>2</code></td>
+          <td>The decimal place to round the slider value to.</td>
+        </tr>
+        <tr>
+          <td>pageMultiplier</td>
+          <td><code>2</code></td>
+          <td>The step multiplier for a page up key press.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 class="ui header">
+      Callbacks
+      <div class="sub header">Callbacks specify a function to occur after a specific behavior.</div>
+    </h3>
+
+    <table class="ui celled sortable definition table segment">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Parameters</th>
+          <th>Context</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>onChange</td>
+          <td>(<code>value</code>, <code>thumbValue</code>, <code>secondThumbValue</code>)</td>
+          <td>Value</td>
+          <td>Callback after slider finishes being dragged or a value changes.</td>
+        </tr>
+        <tr>
+          <td>onMove</td>
+          <td>(<code>value</code>, <code>thumbValue</code>, <code>secondThumbValue</code>)</td>
+          <td>Value</td>
+          <td>Callback after the slider's position changes.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 class="ui header">
+      Constants
+      <div class="sub header">Constants for the module.</div>
+    </h3>
+    <table class="ui sortable celled definition table">
+      <thead>
+        <th></th>
+        <th class="six wide">Default</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>className</td>
+          <td>
+            <div class="code">
+              className: {
+                reversed : 'reversed',
+                disabled : 'disabled',
+                labeled  : 'labeled',
+                vertical : 'vertical',
+                doubled  : 'double',
+                smooth   : 'smooth'
+              },
+            </div>
+          </td>
+          <td>Class names used to determine element state</td>
+        </tr>
+        <tr>
+          <td>keys</td>
+          <td>
+            <div class="code">
+              keys: {
+                pageUp     : 33,
+                pageDown   : 34,
+                leftArrow  : 37,
+                upArrow    : 38,
+                rightArrow : 39,
+                downArrow  : 40
+              },
+            </div>
+          </td>
+          <td>Key ids used to determine key presses</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 class="ui header">
+      Debug Settings
+      <div class="sub header">Debug settings controls debug output to the console</div>
+    </h3>
+    <table class="ui sortable celled definition table">
+      <thead>
+        <th></th>
+        <th class="six wide">Default</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>name</td>
+          <td>Slider</td>
+          <td>Name used in log statements</td>
+        </tr>
+        <tr>
+          <td>namespace</td>
+          <td>slider</td>
+          <td>Event namespace. Makes sure module teardown does not effect other events attached to an element.</td>
+        </tr>
+        <tr>
+          <td>silent</td>
+          <td>False</td>
+          <td>Silences all console output including error messages, regardless of other debug settings.</td>
+        </tr>
+        <tr>
+          <td>debug</td>
+          <td>false</td>
+          <td>Debug output to console</td>
+        </tr>
+        <tr>
+          <td>performance</td>
+          <td>true</td>
+          <td>Show <code>console.table</code> output with performance metrics</td>
+        </tr>
+        <tr>
+          <td>verbose</td>
+          <td>false</td>
+          <td>Debug output includes all internal behaviors</td>
+        </tr>
+        <tr>
+          <td>errors</td>
+          <td colspan="2">
+            <div class="code">
+              error: {
+                method    : 'The method you called is not defined.',
+                notdouble : 'This slider is not a double slider'
+              },
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

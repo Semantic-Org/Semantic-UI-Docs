@@ -1470,7 +1470,7 @@ themes      : ['Default', 'GitHub', 'Material']
 
     <div class="upward example">
       <h4 class="ui header">Upward</h4>
-      <p>A dropdown menu will automatically change which direction it opens if it cant fit on screen. If you need a dropdown to open in a specific direction you can specify it when initializing a dropdown.</p>
+      <p>A dropdown menu will automatically change which direction it opens if it can't fit on screen. If you need a dropdown to open in a specific direction you can specify it when initializing a dropdown.</p>
       <div class="code" data-demo="true">
         $('.upward.example .dropdown')
           .dropdown({
@@ -2840,4 +2840,3 @@ themes      : ['Default', 'GitHub', 'Material']
   </div>
 
 </div>
-

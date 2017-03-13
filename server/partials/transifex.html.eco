@@ -14,5 +14,5 @@
     ignore_class : ['code', 'anchor']
   };
 </script>
-<script type="text/javascript" src="http://cdn.transifex.com/live.js"></script>
+<script type="text/javascript" src="//cdn.transifex.com/live.js"></script>
 <% end %>

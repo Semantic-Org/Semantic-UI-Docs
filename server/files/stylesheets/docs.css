@@ -2037,6 +2037,10 @@ code .chunk {
 }
 
 
+/*******************************
+        Advertisements
+*******************************/
+
 /* Rail Ad */
 #example .rail .advertisement {
   display: block;
@@ -2049,6 +2053,86 @@ code .chunk {
   margin: 0 -1.5em;
   width: auto;
 }
+
+#example .bsa-cpc {
+  height: 38px;
+}
+#example .bsa-cpc #_default_ {
+  position: relative;
+  border-bottom: solid 1px #dddddd;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.5;
+  transition: background 0.3s ease;
+}
+#example .bsa-cpc #_default_:hover {
+  background-color: #FAFAFA;
+}
+
+#example .bsa-cpc .default-ad {
+  display: none;
+}
+
+#example .bsa-cpc ._default_ {
+  display: inline-block;
+  overflow: hidden;
+  padding: 10px 3em;
+  max-width: 1044px;
+  color: #415a5a;
+  text-align: left;
+  line-height: 1;
+  margin-right: 344px;
+  display: block;
+}
+
+#example .bsa-cpc ._default_ > * {
+  vertical-align: middle;
+}
+
+#example .bsa-cpc a {
+  text-decoration: none;
+}
+
+#example .bsa-cpc .default-image {
+  display: inline-block;
+  margin-right: 6px;
+  line-height: 0;
+}
+
+#example .bsa-cpc .default-image img {
+  height: 18px;
+  border-radius: 3px;
+}
+
+#example .bsa-cpc .default-title:after {
+  content: " — ";
+}
+
+#example .bsa-cpc .default-title,
+#example .bsa-cpc .default-description {
+  display: inline;
+}
+
+#example .bsa-cpc .default-title {
+  position: relative;
+  font-weight: 600;
+}
+
+#example .bsa-cpc .default-description:after {
+  position: relative;
+  top: 0px;
+  right: 0px;
+  padding: 4px 6px;
+  float: right;
+  border-radius: 3px;
+  background-color: #848484;
+  color: #fff;
+  content: "Ad";
+  text-transform: uppercase;
+  font-size: 9px;
+  font-family: Verdana, sans-serif;
+}
+
 
 
 /*******************************
@@ -2134,6 +2218,9 @@ code .chunk {
     vertical-align: bottom;
     padding-left: 3em;
     padding-right: 0em;
+  }
+  #example .bsa-cpc ._default_ {
+    margin-right: 0px;
   }
 }
 
@@ -2313,6 +2400,12 @@ code .chunk {
   -webkit-flex: 1 0 auto;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
+  }
+
+  /* Ad Label */
+  #example .bsa-cpc ._default_ {
+    padding-left: 1em;
+    padding-right: 1em;
   }
 
   /* Let Buttons Vertically Stack */

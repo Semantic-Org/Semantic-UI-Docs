@@ -7,61 +7,71 @@ title      : 'Test Page'
 type       : 'Library'
 ---
 <div class="ui container">
-<div class="ui basic segment">
-    1. After "First" tab is clicked, click the "ClickMe" button. Alert will appear<br />
-    2. <b>BUG:</b> When "First" tab is clicked on again, button stops working. Changing <i>cacheType</i> doesnt change anything!<br />
-    3. <b>The goal is to run JS once and then leave it be</b>. So scripts must be evaluated once and tab should not reload, if focused on again.
-</div>
-
-<div class="ui top attached tabular menu">
-  <a class="active item" data-tab="first">First</a>
-  <a class="item" data-tab="second">Second</a>
-</div>
-<div class="ui bottom attached active tab segment" data-tab="first">
-
-</div>
-<div class="ui bottom attached tab segment" data-tab="second">
-
+<div class="ui floating dropdown labeled icon button">
+  <i class="filter icon"></i>
+  <span class="text">Filter Posts</span>
+  <div class="menu">
+    <div class="ui icon search input">
+      <i class="search icon"></i>
+      <input type="text" placeholder="Search tags...">
+    </div>
+    <div class="divider"></div>
+    <div class="header">
+      <i class="tags icon"></i>
+      Tag Label
+    </div>
+    <div class="scrolling menu">
+      <div class="item">
+        <div class="ui red empty circular label"></div>
+        Important
+      </div>
+      <div class="item">
+        <div class="ui blue empty circular label"></div>
+        Announcement
+      </div>
+      <div class="item">
+        <div class="ui black empty circular label"></div>
+        Cannot Fix
+      </div>
+      <div class="item">
+        <div class="ui purple empty circular label"></div>
+        News
+      </div>
+      <div class="item">
+        <div class="ui orange empty circular label"></div>
+        Enhancement
+      </div>
+      <div class="item">
+        <div class="ui empty circular label"></div>
+        Change Declined
+      </div>
+      <div class="item">
+        <div class="ui yellow empty circular label"></div>
+        Off Topic
+      </div>
+      <div class="item">
+        <div class="ui pink empty circular label"></div>
+        Interesting
+      </div>
+      <div class="item">
+        <div class="ui green empty circular label"></div>
+        Discussion
+      </div>
+    </div>
+  </div>
 </div>
 </div>
 <script>
 $(document).ready(function() {
-  var firstTabContent = "<div id='testfirst'>One&nbsp;<button>ClickMe</button></div> \n" +
-                "<script type='text/javascript'>\n" +
-                "   $(function() { $('button').click(function() { alert(1) }); $('#testfirst').append('<div>dynamically appended div <b>(will disappear if tab is clicked again!)</b> ' + (new Date()).getTime() + '</div>') });\n" +
-                "</scr" + "ipt>";
-
-$('.menu .item')
-.tab({
-    cache: true,
-    cacheType: 'DOM',
-    evaluateScripts: true,
-    onFirstLoad: function(tabPath, parameterArray, historyEvent) {
-        console.log('Initialized tab: ' + tabPath);
-    },
-    onLoad: function(tabPath, parameterArray, historyEvent) { //tab selected
-        console.log('Selected tab: ' + tabPath);
-    },
-    apiSettings: {
-        loadingDuration : 300,
-        mockResponse    : function(settings) {
-            var response = {
-                first  :  firstTabContent,
-
-              second : 'Two',
-
-              third  : 'Three'
-            };
-
-            return response[settings.urlData.tab];
-        }
-    }
-});
+  $('.ui.dropdown').dropdown({
+  });
 });
 
 </script>
 
 <!-- TEST CSS HERE !-->
 <style type="text/css">
-
+.ui.pointing.dropdown {
+  margin-top: 60rem;
+}
 </style>

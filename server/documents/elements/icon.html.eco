@@ -206,8 +206,8 @@ themes      : ['Default']
         <div class="column"><i class="in cart icon"></i>In Cart</div>
         <div class="column"><i class="lock icon"></i>Lock</div>
         <div class="column"><i class="mail forward icon"></i>Mail Forward</div>
-        <div class="column"><i class="object group icon"></i>Object Group</div>
-        <div class="column"><i class="object ungroup icon"></i>Object Ungroup</div>
+        <div class="column"><i class="group object icon"></i>Group Object</div>
+        <div class="column"><i class="ungroup object icon"></i>Ungroup Object</div>
         <div class="column"><i class="pin icon"></i>Pin</div>
         <div class="column"><i class="print icon"></i>Print</div>
         <div class="column"><i class="random icon"></i>Random</div>

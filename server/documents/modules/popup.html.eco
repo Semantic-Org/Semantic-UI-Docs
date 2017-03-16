@@ -112,7 +112,7 @@ themes      : ['Default']
       </h4>
       <p>An element can specify a simple tooltip that can appear without javascript</p>
       <div class="ui warning ignored message">
-        Tooltips use an element's <code>:before</code> and <code>:after</code> psuedo classes. Elements like <code>icon</code> that already use these classes for styling will need to have the tooltips to a wrapping element, like a button, or a <code>span</code> to make sure tooltips work correctly.
+        Tooltips use an element's <code>:before</code> and <code>:after</code> pseudo classes. Elements like <code>icon</code> that already use these classes for styling will need to have the tooltips to a wrapping element, like a button, or a <code>span</code> to make sure tooltips work correctly.
       </div>
       <div class="ui icon button" data-tooltip="Add users to your feed">
         <i class="add icon"></i>

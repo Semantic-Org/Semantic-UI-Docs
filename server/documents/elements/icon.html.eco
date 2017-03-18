@@ -1345,9 +1345,9 @@ themes      : ['Default']
         <div class="column"><i class="lastfm icon"></i>Lastfm</div>
         <div class="column"><i class="lastfm square icon"></i>Lastfm Square</div>
         <div class="column"><i class="leanpub icon"></i>Leanpub</div>
-        <div class="column"><i class="linode icon"></i>Linode</div>
         <div class="column"><i class="linkedin icon"></i>Linkedin</div>
         <div class="column"><i class="linkedin square icon"></i>Linkedin Square</div>
+        <div class="column"><i class="linode icon"></i>Linode</div>
         <div class="column"><i class="linux icon"></i>Linux</div>
         <div class="column"><i class="maxcdn icon"></i>Maxcdn</div>
         <div class="column"><i class="meetup icon"></i>Meetup</div>
@@ -1503,9 +1503,9 @@ themes      : ['Default']
         <i class="lastfm icon"></i>
         <i class="lastfm square icon"></i>
         <i class="leanpub icon"></i>
-        <i class="linode icon"></i>
         <i class="linkedin icon"></i>
         <i class="linkedin square icon"></i>
+        <i class="linode icon"></i>
         <i class="linux icon"></i>
         <i class="maxcdn icon"></i>
         <i class="meetup icon"></i>

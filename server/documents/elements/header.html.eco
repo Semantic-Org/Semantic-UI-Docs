@@ -6,8 +6,8 @@ standalone  : true
 element     : 'header'
 elementType : 'element'
 
-title       : 'Header'
-description : 'A header provides a short summary of content'
+title       : 'Heading'
+description : 'A heading provides a short summary of content'
 type        : 'UI Element'
 
 themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
@@ -22,46 +22,46 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
   <h2 class="ui dividing header">Types</h2>
 
   <div class="example" data-tag="h1,h2,h3,h4,h5">
-    <h4 class="ui header">Page Headers</h4>
-    <p class="header">Headers may be oriented to give the hierarchy of a section in the context of the page</p>
+    <h4 class="ui header">Page Headings</h4>
+    <p class="header">Headings may be oriented to give the hierarchy of a section in the context of the page</p>
     <div class="ignored info ui message">Page headings are sized using <a href="https://j.eremy.net/confused-about-rem-and-em/" target="_blank"><code>rem</code></a> and are not affected by surrounding content size.</div>
-    <h1 class="ui header">First header</h1>
+    <h1 class="ui header">First heading</h1>
     <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-    <h2 class="ui header">Second header</h2>
+    <h2 class="ui header">Second heading</h2>
     <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-    <h3 class="ui header">Third header</h3>
+    <h3 class="ui header">Third heading</h3>
     <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-    <h4 class="ui header">Fourth header</h4>
+    <h4 class="ui header">Fourth heading</h4>
     <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-    <h5 class="ui header">Fifth header</h5>
+    <h5 class="ui header">Fifth heading</h5>
     <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
   </div>
 
   <div class="example" data-class="size">
-    <h4 class="ui header">Content Headers</h4>
-    <p>Headers may be oriented to give the importance of a section in the context of the content that surrounds it</p>
+    <h4 class="ui header">Content Headings</h4>
+    <p>Headings may be oriented to give the importance of a section in the context of the content that surrounds it</p>
     <div class="ignored info ui message">Content headings are sized with <a href="https://j.eremy.net/confused-about-rem-and-em/" target="_blank"><code>em</code></a> and are based on the font-size of their container.</div>
     <div class="ui ignored icon font buttons">
       <a class="increase ui button"> <i class="plus icon"></i></a>
       <a class="decrease ui button"> <i class="minus icon"></i></a>
     </div>
     <div class="ui sizer vertical segment">
-      <div class="ui huge header">Huge Header</div>
+      <div class="ui huge header">Huge Heading</div>
       <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-      <div class="ui large header">Large Header</div>
+      <div class="ui large header">Large Heading</div>
       <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-      <div class="ui medium header">Medium Header</div>
+      <div class="ui medium header">Medium Heading</div>
       <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-      <div class="ui small header">Small Header</div>
+      <div class="ui small header">Small Heading</div>
       <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-      <div class="ui tiny header">Tiny Header</div>
+      <div class="ui tiny header">Tiny Heading</div>
       <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
     </div>
   </div>
 
   <div class="example">
-    <h4 class="ui header">Icon Headers</h4>
-    <p>A header can be formatted to emphasize an icon</p>
+    <h4 class="ui header">Icon Headings</h4>
+    <p>A heading can be formatted to emphasize an icon</p>
     <h2 class="ui icon header">
       <i class="settings icon"></i>
       <div class="content">
@@ -80,8 +80,8 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
   </div>
 
   <div class="example" data-class="sub">
-    <h4 class="ui header">Sub Headers</h4>
-    <p>Headers may be formatted to label smaller or de-emphasized content.</p>
+    <h4 class="ui header">Sub Headings</h4>
+    <p>Headings may be formatted to label smaller or de-emphasized content.</p>
     <h2 class="ui sub header">
       Price
     </h2>
@@ -119,7 +119,7 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
 
   <div class="example" data-use-content="true" data-class="image" data-tag="img">
     <h4 class="ui header">Image</h4>
-    <p>A header may contain an <a href="/elements/image.html">image</a></p>
+    <p>A heading may contain an <a href="/elements/image.html">image</a></p>
     <h2 class="ui header">
       <img class="ui image" src="/images/icons/school.png">
       <div class="content">
@@ -149,7 +149,7 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
 
   <div class="example" data-use-content="true" data-class="icon">
     <h4 class="ui header">Icon</h4>
-    <p>A header may contain an <a href="/elements/icon.html">icon</a></p>
+    <p>A heading may contain an <a href="/elements/icon.html">icon</a></p>
     <h2 class="ui header">
       <i class="plug icon"></i>
       <div class="content">
@@ -170,8 +170,8 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
   </div>
 
   <div class="example" data-use-content="true" data-class="sub">
-    <h4 class="ui header">Subheader</h4>
-    <p>Headers may contain subheaders</p>
+    <h4 class="ui header">Subheading</h4>
+    <p>Headings may contain subheadings</p>
     <h2 class="ui header">
       Account Settings
       <div class="sub header">Manage your account settings and set e-mail preferences.</div>
@@ -181,23 +181,23 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
   <div class="another example">
     <h1 class="ui header">
       H1
-      <div class="sub header">Sub Header</div>
+      <div class="sub header">Sub Heading</div>
     </h1>
     <h2 class="ui header">
       H2
-      <div class="sub header">Sub Header</div>
+      <div class="sub header">Sub Heading</div>
     </h2>
     <h3 class="ui header">
       H3
-      <div class="sub header">Sub Header</div>
+      <div class="sub header">Sub Heading</div>
     </h3>
     <h4 class="ui header">
       H4
-      <div class="sub header">Sub Header</div>
+      <div class="sub header">Sub Heading</div>
     </h4>
     <h5 class="ui header">
       H5
-      <div class="sub header">Sub Header</div>
+      <div class="sub header">Sub Heading</div>
     </h5>
   </div>
 
@@ -205,9 +205,9 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
 
   <div class="example">
     <h4 class="ui header">Disabled</h4>
-    <p>A header can show that it is inactive</p>
+    <p>A heading can show that it is inactive</p>
     <div class="ui disabled header">
-      Disabled Header
+      Disabled Heading
     </div>
     <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
   </div>
@@ -217,10 +217,10 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
 
   <div class="example">
     <h4 class="ui header">Dividing</h4>
-    <p>A header can be formatted to divide itself from the content below it</p>
+    <p>A heading can be formatted to divide itself from the content below it</p>
     <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
     <h3 class="ui dividing header">
-      Dividing Header
+      Dividing Heading
     </h3>
     <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
   </div>
@@ -228,9 +228,9 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
 
   <div class="example">
     <h4 class="ui header">Block</h4>
-    <p>A header can be formatted to appear inside a content block</p>
+    <p>A heading can be formatted to appear inside a content block</p>
     <h3 class="ui block header">
-      Block Header
+      Block Heading
     </h3>
     <img class="ui wireframe image" src="/images/wireframe/media-paragraph.png">
 
@@ -238,7 +238,7 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
 
   <div class="example">
     <h4 class="ui header">Attached</h4>
-    <p>A header can be attached to other content, like a <a href="/elements/segment.html">segment</a></p>
+    <p>A heading can be attached to other content, like a <a href="/elements/segment.html">segment</a></p>
     <h3 class="ui top attached header">
       Top Attached
     </h3>
@@ -258,7 +258,7 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
 
   <div class="example">
     <h4 class="ui header">Floating</h4>
-    <p>A header can sit to the left or right of other content</p>
+    <p>A heading can sit to the left or right of other content</p>
     <div class="ui clearing segment">
       <h3 class="ui right floated header">
         Go Forward
@@ -270,7 +270,7 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
   </div>
   <div class="clearing example">
     <h4 class="ui header">Text Alignment</h4>
-    <p>A header can have its text aligned to a side</p>
+    <p>A heading can have its text aligned to a side</p>
     <div class="ui segment">
       <h3 class="ui right aligned header">
         Right
@@ -289,7 +289,7 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
 
   <div class="example">
     <h4 class="ui header">Colored</h4>
-    <p>A header can be formatted with different colors</p>
+    <p>A heading can be formatted with different colors</p>
     <h4 class="ui red header">Red</h4>
     <h4 class="ui orange header">Orange</h4>
     <h4 class="ui yellow header">Yellow</h4>
@@ -307,9 +307,9 @@ themes      : ['Default', 'Classic', 'Bookish', 'Chubby', 'Material']
 
   <div class="example">
     <h4 class="ui header">Inverted</h4>
-    <p>A header can have its colors inverted for contrast</p>
+    <p>A heading can have its colors inverted for contrast</p>
     <div class="ui ignored info message">
-      Inverted headers use modified light versions of your site's color scheme that are adapted to have more contrast on dark background
+      Inverted headings use modified light versions of your site's color scheme that are adapted to have more contrast on dark background
     </div>
     <div class="ui inverted segment">
       <h4 class="ui red inverted header">Red</h4>

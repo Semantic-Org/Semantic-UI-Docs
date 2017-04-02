@@ -42,7 +42,7 @@ type        : 'Usage'
   </h2>
   <div class="no example">
     <h4>Recreating GitHub</h4>
-    <p>Semantic UI includes an <a target="_blank" href="http://semantic-org.github.io/example-github/">example project</a> designed to showcase theming. This project includes examples of creating a packaged theme, using component CSS overrides, and managing your themes with <code>theme.config</code>.</p>
+    <p>Semantic UI includes an <a target="_blank" href="https://github.com/Semantic-Org/example-github">example project</a> designed to showcase theming. This project includes examples of creating a packaged theme, using component CSS overrides, and managing your themes with <code>theme.config</code>.</p>
 
     <p>To get started click <b>the paint can</b> icon next to the notification button in the top right</p>
 
@@ -56,7 +56,7 @@ type        : 'Usage'
       <div class="item">Combining multiple individual component themes together in one <a target="_blank" href="https://github.com/Semantic-Org/example-github/blob/master/semantic/src/theme.config">theme.config</a></div>
       <div class="item">Using a <a target="_blank" href="https://github.com/Semantic-Org/example-github/blob/master/semantic/src/themes/github/elements/icon.overrides">custom icon font</a>, and <a target="_blank" href="https://github.com/Semantic-Org/example-github/blob/master/semantic/src/themes/github/elements/icon.variables">modifying paths</a> to assets.</div>
     </div>
-    <a target="_blank" href="http://semantic-org.github.io/example-github/" class="ui primary right labeled icon button">
+    <a target="_blank" href="https://github.com/Semantic-Org/example-github" class="ui primary right labeled icon button">
       <i class="external link icon"></i>
       View Theming Demo
     </a>

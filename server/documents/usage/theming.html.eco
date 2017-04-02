@@ -44,9 +44,11 @@ type        : 'Usage'
     <h4>Recreating GitHub</h4>
     <p>Semantic UI includes an <a target="_blank" href="http://semantic-org.github.io/example-github/">example project</a> designed to showcase theming. This project includes examples of creating a packaged theme, using component CSS overrides, and managing your themes with <code>theme.config</code>.</p>
 
+    <!--
     <p>To get started click <b>the paint can</b> icon next to the notification button in the top right</p>
 
     <p>The example project includes two HTML files, <code>index.html</code> is designed to swap themes using a sidebar, and uses precompiled CSS. <code>static.html</code> uses files outputted by Semantic UI and can be used alongside our <a href="/introduction/build-tools.html">gulp pipeline</a> to try modifying themes hands on.</p>
+    -->
 
     <p>Some special things to note:</p>
 

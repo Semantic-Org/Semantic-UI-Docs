@@ -621,7 +621,7 @@ type        : 'UI Module'
         </tr>
         <tr>
           <td>showNoResults</td>
-          <td>false</td>
+          <td>true</td>
           <td>Whether a "no results" message should be shown if no results are found. (These messages can be modified using the <code>template</code> object specified below)</td>
         </tr>
         <tr>

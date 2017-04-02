@@ -34,7 +34,7 @@ type        : 'Main'
     <a href="https://github.com/Semantic-Org/" class="ui button" target="_blank">View all Semantic-Org Repos </a>
   </div>
 
-  <h2 class="ui dividing header">Installing</h2>
+  <h2 class="ui dividing header">安装</h2>
 
 
   <div class="no example">

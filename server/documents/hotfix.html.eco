@@ -6,72 +6,145 @@ standalone : true
 title      : 'Test Page'
 type       : 'Library'
 ---
-<div class="ui container">
-<div class="ui floating dropdown labeled icon button">
-  <i class="filter icon"></i>
-  <span class="text">Filter Posts</span>
-  <div class="menu">
-    <div class="ui icon search input">
-      <i class="search icon"></i>
-      <input type="text" placeholder="Search tags...">
-    </div>
-    <div class="divider"></div>
-    <div class="header">
-      <i class="tags icon"></i>
-      Tag Label
-    </div>
-    <div class="scrolling menu">
-      <div class="item">
-        <div class="ui red empty circular label"></div>
-        Important
+<!-- <div class="ui modal small" id="yyyyyy">
+  <i class="close icon" tabindex="0"></i>
+  <div class="header">Entre em contato</div>
+  <div class="content">
+    <form class="ui form">
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" name="nome" placeholder="Digite seu nome">
       </div>
-      <div class="item">
-        <div class="ui blue empty circular label"></div>
-        Announcement
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" name="nome" placeholder="Digite seu nome">
       </div>
-      <div class="item">
-        <div class="ui black empty circular label"></div>
-        Cannot Fix
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" name="nome" placeholder="Digite seu nome">
       </div>
-      <div class="item">
-        <div class="ui purple empty circular label"></div>
-        News
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" name="nome" placeholder="Digite seu nome">
       </div>
-      <div class="item">
-        <div class="ui orange empty circular label"></div>
-        Enhancement
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" name="nome" placeholder="Digite seu nome">
       </div>
-      <div class="item">
-        <div class="ui empty circular label"></div>
-        Change Declined
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" name="nome" placeholder="Digite seu nome">
       </div>
-      <div class="item">
-        <div class="ui yellow empty circular label"></div>
-        Off Topic
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" name="nome" placeholder="Digite seu nome">
       </div>
-      <div class="item">
-        <div class="ui pink empty circular label"></div>
-        Interesting
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" name="nome" placeholder="Digite seu nome">
       </div>
-      <div class="item">
-        <div class="ui green empty circular label"></div>
-        Discussion
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" name="nome" placeholder="Digite seu nome">
       </div>
-    </div>
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" name="nome" placeholder="Digite seu nome">
+      </div>
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" name="nome" placeholder="Digite seu nome">
+      </div>
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" name="nome" placeholder="Digite seu nome">
+      </div>
+      <div class="field">
+        <label>Nome</label>
+        <input type="text" name="nome" placeholder="Digite seu nome">
+      </div>
+    </form>
   </div>
-</div>
+  <div class="actions">
+    <button class="ui button red cancelar">111111</button>
+    <button class="ui button primary right labeled icon">222222<i class="checkmark icon"></i></button>
+  </div>
+</div> -->
+<div class="ui container">
+<form class="ui form segment">
+        <p>Tell Us About Yourself</p>
+        <div class="two fields">
+          <div class="field">
+            <label>Name</label>
+            <input placeholder="First Name" name="name" type="text">
+          </div>
+          <div class="field">
+            <label>Gender</label>
+            <select class="ui dropdown" name="gender">
+              <option value="">Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+        </div>
+        <div class="two fields">
+          <div class="field">
+            <label>Username</label>
+            <input placeholder="Username" name="username" type="text">
+          </div>
+          <div class="field">
+            <label>Password</label>
+            <input type="password" name="password">
+          </div>
+        </div>
+        <div class="field">
+          <label>Skills</label>
+          <select name="skills" multiple class="ui dropdown">
+            <option value="">Select Skills</option>
+            <option value="css">CSS</option>
+            <option value="html">HTML</option>
+            <option value="javascript">Javascript</option>
+            <option value="design">Graphic Design</option>
+            <option value="plumbing">Plumbing</option>
+            <option value="mech">Mechanical Engineering</option>
+            <option value="repair">Kitchen Repair</option>
+          </select>
+        </div>
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" name="terms" />
+            <label>I agree to the terms and conditions</label>
+          </div>
+        </div>
+        <div class="ui primary submit button">Submit</div>
+        <div class="ui error message"></div>
+      </div>
+    </form>
 </div>
 <script>
-$(document).ready(function() {
-  $('.ui.dropdown').dropdown({
+  $(document).ready(function() {
+    $('.ui.dropdown').dropdown();
+      $('.ui.form')
+        .form({
+          fields: {
+            name     : 'empty',
+            gender   : 'empty',
+            username : 'empty',
+            password : ['minLength[6]', 'empty'],
+            skills   : ['minCount[2]', 'empty'],
+            terms    : 'checked'
+          }
+        })
+      ;
+      // $('.ui.form').form('validate field', 'username');
+      console.log($('.ui.form').form('is valid', 'username'));
   });
-});
 
 </script>
 
 <!-- TEST CSS HERE !-->
 <style type="text/css">
-.ui.pointing.dropdown {
-  margin-top: 60rem;
-}
+  .container {
+    margin-top: 2rem !important;
+  }
 </style>

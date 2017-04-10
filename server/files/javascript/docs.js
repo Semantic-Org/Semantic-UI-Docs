@@ -41,6 +41,7 @@ semantic.ready = function() {
     $search              = $('#search'),
     $sortTable           = $('.sortable.table'),
     $demo                = $('.demo'),
+    $begSegment          = $('.beg.segment'),
 
     $fullHeightContainer = $('.pusher > .full.height'),
     $container           = $('.main.container'),
@@ -111,6 +112,25 @@ semantic.ready = function() {
           metadata = response;
         }
       });
+    },
+
+    showBeg: function() {
+      if(window.localStorage !== undefined) {
+        $begSegment
+          .find('.delete.icon')
+            .on('click', handler.hideBeg)
+        ;
+        if(!window.localStorage.getItem('begDismissed')) {
+          $begSegment.transition('slide down');
+        }
+      }
+    },
+
+    hideBeg: function() {
+      $begSegment.transition('slide down');
+      if(window.localStorage !== undefined) {
+        window.localStorage.setItem('begDismissed', true);
+      }
     },
 
     createIcon: function() {
@@ -1412,7 +1432,8 @@ semantic.ready = function() {
     .dropdown({
       allowTab       : false,
       on             : 'click',
-      fullTextSearch : true,
+      fullTextSearch : 'exact',
+      match          : 'text',
       onShow         : function() {
         $(this).popup('hide');
       },
@@ -1430,6 +1451,13 @@ semantic.ready = function() {
 
   if(window.Transifex !== undefined) {
     window.Transifex.live.onTranslatePage(handler.showLanguageModal);
+  }
+
+  if(typeof detectAdBlock === 'undefined') {
+    handler.showBeg();
+  }
+  else {
+    detectAdBlock.onDetected(handler.showBeg);
   }
 
   handler.getMetadata();

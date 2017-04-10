@@ -222,9 +222,9 @@ type        : 'UI Module'
     <p>You can specify custom API settings to adjust the url, callback settings, or specify a different API action.</p>
     <div class="code" data-label="javascript">
 
-      // initializes with default endpoint /search/{query}
       $('.ui.search')
         .search({
+          // change search endpoint to a custom endpoint by manipulating apiSettings
           apiSettings: {
             url: 'custom-search/?q={query}'
           },
@@ -376,7 +376,7 @@ type        : 'UI Module'
       </thead>
       <tbody>
         <tr>
-          <td>query</td>
+          <td>query (callback)</td>
           <td>Search for value currently set in search input</td>
         </tr>
         <tr>
@@ -396,7 +396,7 @@ type        : 'UI Module'
           <td>Whether has minimum characters</td>
         </tr>
         <tr>
-          <td>search remote(query)</td>
+          <td>search remote(query, callback)</td>
           <td>Search remote endpoint for specified query and display results</td>
         </tr>
         <tr>
@@ -448,11 +448,11 @@ type        : 'UI Module'
           <td>Adds HTML to results and displays</td>
         </tr>
         <tr>
-          <td>show results</td>
+          <td>show results(callback)</td>
           <td>Shows results container</td>
         </tr>
         <tr>
-          <td>hide results</td>
+          <td>hide results(callback)</td>
           <td>Hides results container</td>
         </tr>
         <tr>
@@ -584,6 +584,11 @@ type        : 'UI Module'
           <td>minCharacters</td>
           <td>1</td>
           <td>Minimum characters to query for results</td>
+        </tr>
+        <tr>
+          <td>searchOnFocus</td>
+          <td>true</td>
+          <td>Whether search should show results on focus (must also match min character length)</td>
         </tr>
         <tr>
           <td>transition</td>

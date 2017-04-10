@@ -756,7 +756,7 @@ themes      : ['Default']
           <td>
             slide down
           </td>
-          <td>Named transition to use when animating menu in and out. Fade and slide down are available without including <a href="/modules/transition.html">ui transitions</a></td>
+          <td>Named transition to use when animating menu in and out.</td>
         </tr>
         <tr>
           <td>duration</td>

@@ -234,11 +234,12 @@ blockquote .author {
 #example .language.dropdown.button {
   margin-top: 0.3em;
 }
-#example .language.dropdown > .menu {
-  transform: translate3d(0, 0, 0);
+#example .language.dropdown > .text .description {
+  color: rgba(255, 255, 255, 0.4);
 }
-#example .language.dropdown > .menu .description {
-  display: none;
+#example .language.dropdown > .menu {
+  width: 280px;
+  transform: translate3d(0, 0, 0);
 }
 
 /*--------------
@@ -260,6 +261,23 @@ blockquote .author {
 }
 #example .tab.masthead.segment .tabular.menu .active.item {
   background-color: #F7F7F7;
+}
+
+/*--------------
+    Ad Beg
+---------------*/
+
+#example .beg.segment {
+  background-color: #F9F5F5;
+  padding: 2em 3em;
+}
+#example .beg.segment .delete.icon {
+  position: absolute;
+  top: 1.5em;
+  right: 1.5em;
+}
+#example .beg.segment .ui.header {
+  margin: 0 !important;
 }
 
 /*--------------

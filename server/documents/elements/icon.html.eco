@@ -1758,6 +1758,24 @@ themes      : ['Default']
       </i>
     </div>
     <div class="another example">
+      <i class="huge icons">
+        <i class="puzzle icon"></i>
+        <i class="top left corner add icon"></i>
+      </i>
+      <i class="huge icons">
+        <i class="puzzle icon"></i>
+        <i class="top right corner add icon"></i>
+      </i>
+      <i class="huge icons">
+        <i class="puzzle icon"></i>
+        <i class="bottom left corner add icon"></i>
+      </i>
+      <i class="huge icons">
+        <i class="puzzle icon"></i>
+        <i class="bottom right corner add icon"></i>
+      </i>
+    </div>
+    <div class="another example">
       <h2 class="ui header">
         <i class="large icons">
           <i class="twitter icon"></i>

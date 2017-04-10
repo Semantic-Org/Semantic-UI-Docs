@@ -6,138 +6,96 @@ standalone : true
 title      : 'Test Page'
 type       : 'Library'
 ---
-<!-- <div class="ui modal small" id="yyyyyy">
-  <i class="close icon" tabindex="0"></i>
-  <div class="header">Entre em contato</div>
-  <div class="content">
-    <form class="ui form">
-      <div class="field">
-        <label>Nome</label>
-        <input type="text" name="nome" placeholder="Digite seu nome">
-      </div>
-      <div class="field">
-        <label>Nome</label>
-        <input type="text" name="nome" placeholder="Digite seu nome">
-      </div>
-      <div class="field">
-        <label>Nome</label>
-        <input type="text" name="nome" placeholder="Digite seu nome">
-      </div>
-      <div class="field">
-        <label>Nome</label>
-        <input type="text" name="nome" placeholder="Digite seu nome">
-      </div>
-      <div class="field">
-        <label>Nome</label>
-        <input type="text" name="nome" placeholder="Digite seu nome">
-      </div>
-      <div class="field">
-        <label>Nome</label>
-        <input type="text" name="nome" placeholder="Digite seu nome">
-      </div>
-      <div class="field">
-        <label>Nome</label>
-        <input type="text" name="nome" placeholder="Digite seu nome">
-      </div>
-      <div class="field">
-        <label>Nome</label>
-        <input type="text" name="nome" placeholder="Digite seu nome">
-      </div>
-      <div class="field">
-        <label>Nome</label>
-        <input type="text" name="nome" placeholder="Digite seu nome">
-      </div>
-      <div class="field">
-        <label>Nome</label>
-        <input type="text" name="nome" placeholder="Digite seu nome">
-      </div>
-      <div class="field">
-        <label>Nome</label>
-        <input type="text" name="nome" placeholder="Digite seu nome">
-      </div>
-      <div class="field">
-        <label>Nome</label>
-        <input type="text" name="nome" placeholder="Digite seu nome">
-      </div>
-      <div class="field">
-        <label>Nome</label>
-        <input type="text" name="nome" placeholder="Digite seu nome">
-      </div>
-    </form>
-  </div>
-  <div class="actions">
-    <button class="ui button red cancelar">111111</button>
-    <button class="ui button primary right labeled icon">222222<i class="checkmark icon"></i></button>
-  </div>
-</div> -->
 <div class="ui container">
-<form class="ui form segment">
-        <p>Tell Us About Yourself</p>
-        <div class="two fields">
-          <div class="field">
-            <label>Name</label>
-            <input placeholder="First Name" name="name" type="text">
-          </div>
-          <div class="field">
-            <label>Gender</label>
-            <select class="ui dropdown" name="gender">
-              <option value="">Gender</option>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-            </select>
-          </div>
-        </div>
-        <div class="two fields">
-          <div class="field">
-            <label>Username</label>
-            <input placeholder="Username" name="username" type="text">
-          </div>
-          <div class="field">
-            <label>Password</label>
-            <input type="password" name="password">
-          </div>
-        </div>
-        <div class="field">
-          <label>Skills</label>
-          <select name="skills" multiple class="ui dropdown">
-            <option value="">Select Skills</option>
-            <option value="css">CSS</option>
-            <option value="html">HTML</option>
-            <option value="javascript">Javascript</option>
-            <option value="design">Graphic Design</option>
-            <option value="plumbing">Plumbing</option>
-            <option value="mech">Mechanical Engineering</option>
-            <option value="repair">Kitchen Repair</option>
-          </select>
-        </div>
-        <div class="inline field">
-          <div class="ui checkbox">
-            <input type="checkbox" name="terms" />
-            <label>I agree to the terms and conditions</label>
-          </div>
-        </div>
-        <div class="ui primary submit button">Submit</div>
-        <div class="ui error message"></div>
-      </div>
-    </form>
+<form class="ui form">
+  <div class="field">
+    <label>Empty</label>
+    <input name="empty" type="text">
+  </div>
+  <div class="field">
+    <label>Dropdown</label>
+    <select class="ui dropdown" name="dropdown">
+      <option value="">Select</option>
+      <option value="male">Choice 1</option>
+      <option value="female">Choice 2</option>
+    </select>
+  </div>
+  <div class="inline field">
+    <div class="ui checkbox">
+      <input name="checkbox" type="checkbox">
+      <label>Checkbox</label>
+    </div>
+  </div>
+  <div class="inline field">
+    <div class="ui radio checkbox">
+      <input name="radio" type="radio">
+      <label>Radio</label>
+    </div>
+    <div class="ui radio checkbox">
+      <input name="radio" type="radio">
+      <label>Radio</label>
+    </div>
+    <div class="ui radio checkbox">
+      <input name="radio" type="radio">
+      <label>Radio</label>
+    </div>
+  </div>
+  <div class="ui submit button">Submit</div>
+  <div class="ui error message"></div>
+  <p style="color:red;">The radio field is validated, but is not included in onFailure field parameter values.</p>
+  <div class="output"></div>
+</form>
 </div>
 <script>
-  $(document).ready(function() {
-    $('.ui.dropdown').dropdown();
-      $('.ui.form')
-        .form({
-          fields: {
-            name     : 'empty',
-            gender   : 'empty',
-            username : 'empty',
-            password : ['minLength[6]', 'empty'],
-            skills   : ['minCount[2]', 'empty'],
-            terms    : 'checked'
+  $(document).ready(function() {$('.ui.form')
+  .form({
+    on: 'blur',
+     onFailure: function(formErrors, fields){
+     $('.output').html(JSON.stringify(fields));
+     return false;
+     },
+    fields: {
+      empty: {
+        identifier  : 'empty',
+        rules: [
+          {
+            type   : 'empty',
+            prompt : 'Please enter a value'
           }
-        })
-      ;
-      // $('.ui.form').form('validate field', 'username');
-      console.log($('.ui.form').form('is valid', 'username'));
+        ]
+      },
+      dropdown: {
+        identifier  : 'dropdown',
+        rules: [
+          {
+            type   : 'empty',
+            prompt : 'Please select a dropdown value'
+          }
+        ]
+      },
+      checkbox: {
+        identifier  : 'checkbox',
+        rules: [
+          {
+            type   : 'checked',
+            prompt : 'Please check the checkbox'
+          }
+        ]
+      },
+       radio: {
+        identifier  : 'radio',
+        rules: [
+          {
+            type   : 'checked',
+            prompt : 'Please check the radio'
+          }
+        ]
+      }
+    }
+  })
+;
+
+
   });
 
 </script>

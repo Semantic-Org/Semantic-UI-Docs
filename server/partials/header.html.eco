@@ -178,6 +178,7 @@
     <% end %>
   </div>
 </div>
+  <% unless 'development' in @getEnvironments(): %>
   <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
   <div class="bsa-cpc"></div>
   <script>
@@ -191,3 +192,4 @@
         }
     })();
   </script>
+  <% end %>

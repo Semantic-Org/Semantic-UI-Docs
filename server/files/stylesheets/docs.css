@@ -3,6 +3,42 @@
              Global
 *******************************/
 
+/* Regular */
+@font-face {
+  font-family: 'Lato';
+  src:
+    url(/fonts/lato/Lato-Regular.woff2) format('woff2')
+  ;
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Lato';
+  src:
+    url(/fonts/lato/Lato-Italic.woff2) format('woff2')
+  ;
+  font-style: italic;
+  font-weight: normal;
+}
+
+/* Bold */
+@font-face {
+  font-family: 'Lato';
+  src:
+    url(/fonts/lato/Lato-Bold.woff2) format('woff2')
+  ;
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Lato';
+  src:
+    url(/fonts/lato/Lato-BoldItalic.woff2) format('woff2')
+  ;
+  font-style: italic;
+  font-weight: 700;
+}
+
 
 /*--------------
      Page

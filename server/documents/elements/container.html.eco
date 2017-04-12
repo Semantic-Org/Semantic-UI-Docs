@@ -74,13 +74,6 @@ themes      : ['Default']
             <td><code>$largeMonitorBreakpoint</code></td>
           </tr> -->
           <tr>
-            <td class="single line">Responsive Visibility</td>
-            <td><code>mobile only</code></td>
-            <td><code>tablet only</code></td>
-            <td><code>small monitor only</code></td>
-            <td><code>large monitor only</code></td>
-          </tr>
-          <tr>
             <td>Device Width</td>
             <td>below 768px</td>
             <td>768px - 991px</td>

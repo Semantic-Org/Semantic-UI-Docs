@@ -2090,9 +2090,6 @@ code .chunk {
   width: auto;
 }
 
-#example .bsa-cpc {
-  height: 38px;
-}
 #example .bsa-cpc #_default_ {
   position: relative;
   border-bottom: solid 1px #dddddd;
@@ -2419,6 +2416,14 @@ code .chunk {
   /* Hide Some Fixed Menu Content (Pagination, Search) */
   #example .fixed.menu > .container > .section.item {
     display: none;
+  }
+  #example .masthead.segment {
+    padding-bottom: 0em;
+  }
+
+  #example.button-page .example > .button,
+  #example.button-page .example .html > .button {
+    margin-bottom: 8px;
   }
 
   /* Add Sticky Footers */

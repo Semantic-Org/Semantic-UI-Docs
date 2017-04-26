@@ -673,7 +673,7 @@
     font-size: 32px;
   }
 }
-@media only screen and (min-width : 650px) {
+@media only screen and (min-width : 601px) {
   #example .theming .source.button {
     display: none;
   }

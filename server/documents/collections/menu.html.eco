@@ -90,7 +90,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
   </div>
   <div class="another example">
     <div class="ui top attached menu">
-      <div class="ui dropdown icon item">
+      <div class="ui simple dropdown icon item">
         <i class="wrench icon"></i>
         <div class="menu">
           <div class="item">

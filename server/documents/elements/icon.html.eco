@@ -1641,6 +1641,16 @@ themes      : ['Default']
         <i class="inverted grey users icon"></i>
       </div>
     </div>
+    
+    <div class="example">
+      <h4 class="ui header">Text</h4>
+      <p>An icon can contain text</p>
+      <i class="huge icons">
+        <b class="icon">${...}</b>
+        <b class="icon">@</b>
+        <b class="icon">§</b>
+      </i>
+    </div>
 
     <h2 class="ui dividing header">Groups</h2>
 

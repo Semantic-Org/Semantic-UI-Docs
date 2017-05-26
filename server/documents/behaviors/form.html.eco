@@ -1490,7 +1490,7 @@ type        : 'UI Behavior'
       <p>Adding the parameter <code>optional: true</code> will only add your validation rules when the field is <b>not empty</b>.
       <div class="ignored code">
       $('.ui.form')
-        .form(
+        .form({
           fields: {
             email: {
               identifier : 'email',

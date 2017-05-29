@@ -250,7 +250,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
       <div class="content">
         <a class="header">Team Fu & Hess</a>
         <div class="meta">
-          <span class="date">Create in Sep 2014</span>
+          <span class="date">Created in Sep 2014</span>
         </div>
       </div>
       <div class="extra content">
@@ -282,7 +282,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
         <div class="content">
           <a class="header">Team Fu</a>
           <div class="meta">
-            <span class="date">Create in Sep 2014</span>
+            <span class="date">Created in Sep 2014</span>
           </div>
         </div>
         <div class="extra content">
@@ -306,7 +306,7 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
         <div class="content">
           <a class="header">Team Hess</a>
           <div class="meta">
-            <span class="date">Create in Aug 2014</span>
+            <span class="date">Created in Aug 2014</span>
           </div>
         </div>
         <div class="extra content">

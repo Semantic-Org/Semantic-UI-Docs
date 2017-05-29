@@ -2132,8 +2132,8 @@ themes      : ['Default', 'GitHub', 'Material']
       </thead>
       <tbody>
         <tr>
-          <td>setup menu</td>
-          <td>Recreates dropdown menu from select <code>option</code> values.</td>
+          <td>setup menu(values)</td>
+          <td>Recreates dropdown menu from passed values. <code>values</code> should be an object with the following structure: <code>{ values: [ {value, text, name} ] }</code>.</td>
         </tr>
         <tr>
           <td>refresh</td>

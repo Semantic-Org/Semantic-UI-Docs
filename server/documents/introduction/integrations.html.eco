@@ -98,7 +98,7 @@ type        : 'Introduction'
 
     <p>Every time Meteor starts or refreshes it calls the package semantic:ui to generate Semantic UI.</p>
 
-    <p>The package has a uses the diff between <code>custom.semantic.json</code> and <code>.custom.semantic.json</code> to avoid regenerating files unnecesssarily.</p>
+    <p>The package has a uses the diff between <code>custom.semantic.json</code> and <code>.custom.semantic.json</code> to avoid regenerating files unnecessarily.</p>
 
     <p>If the file <code>.custom.semantic.json</code> does not exist or it is different than custom.semantic.json then it will generate Semantic UI.</p>
   </div>

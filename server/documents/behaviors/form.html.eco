@@ -1753,6 +1753,10 @@ type        : 'UI Behavior'
         <td>add errors(errors)</td>
         <td>Adds errors to form, given an array errors</td>
       </tr>
+      <tr>
+        <td>add prompt(id, prompt)</td>
+        <td>Adds a custom user prompt for a given element with id</td>
+      </tr>
     </table>
 
     <h2 class="ui dividing header">Settings</h2>

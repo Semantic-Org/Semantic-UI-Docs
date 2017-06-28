@@ -382,7 +382,7 @@ type        : 'UI Behavior'
           </tr>
           <tr>
             <td>doesntContainExactly</td>
-            <td>A field doesn't text (case sensitive)</td>
+            <td>A field doesn't contain text (case sensitive)</td>
             <td><code>doesntContainExactly[foo]</code></td>
           </tr>
           <tr>

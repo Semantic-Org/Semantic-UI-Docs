@@ -6,95 +6,68 @@ standalone : true
 title      : 'Test Page'
 type       : 'Library'
 ---
-<div class="ui container">
-<form class="ui form">
-  <div class="field">
-    <label>Empty</label>
-    <input name="empty" type="text">
+<button id='btn1'>
+show modal 1
+</button>
+<button id='btn2'>
+show modal 2
+</button>
+<div class="ui modal" id='modal1'>
+  <i class="close icon"></i>
+  <div class="header">
+    Profile Picture
   </div>
-  <div class="field">
-    <label>Dropdown</label>
-    <select class="ui dropdown" name="dropdown">
-      <option value="">Select</option>
-      <option value="male">Choice 1</option>
-      <option value="female">Choice 2</option>
-    </select>
-  </div>
-  <div class="inline field">
-    <div class="ui checkbox">
-      <input name="checkbox" type="checkbox">
-      <label>Checkbox</label>
+  <div class="image content">
+    <div class="ui medium image">
+      <img src="/images/avatar/large/chris.jpg">
+    </div>
+    <div class="description">
+      <div class="ui header">We've auto-chosen a profile image for you.</div>
+      <p>We've grabbed the following image from the <a href="https://www.gravatar.com" target="_blank">gravatar</a> image associated with your registered e-mail address.</p>
+      <p>Is it okay to use this photo?</p>
     </div>
   </div>
-  <div class="inline field">
-    <div class="ui radio checkbox">
-      <input name="radio" type="radio">
-      <label>Radio</label>
+  <div class="actions">
+    <div class="ui black deny button">
+      Nope
     </div>
-    <div class="ui radio checkbox">
-      <input name="radio" type="radio">
-      <label>Radio</label>
-    </div>
-    <div class="ui radio checkbox">
-      <input name="radio" type="radio">
-      <label>Radio</label>
+    <div class="ui positive right labeled icon button">
+      Yep, that's me
+      <i class="checkmark icon"></i>
     </div>
   </div>
-  <div class="ui submit button">Submit</div>
-  <div class="ui error message"></div>
-  <p style="color:red;">The radio field is validated, but is not included in onFailure field parameter values.</p>
-  <div class="output"></div>
-</form>
+</div>
+<div class="ui modal" id='modal2'>
+  <i class="close icon"></i>
+  <div class="header">
+    Profile Picture
+  </div>
+  <div class="image content">
+    <div class="ui medium image">
+      <img src="/images/avatar/large/chris.jpg">
+    </div>
+    <div class="description">
+      <div class="ui header">We've auto-chosen a profile image for you.</div>
+      <p>We've grabbed the following image from the <a href="https://www.gravatar.com" target="_blank">gravatar</a> image associated with your registered e-mail address.</p>
+      <p>Is it okay to use this photo?</p>
+    </div>
+  </div>
+  <div class="actions">
+    <div class="ui black deny button">
+      Nope
+    </div>
+    <div class="ui positive right labeled icon button">
+      Yep, that's me
+      <i class="checkmark icon"></i>
+    </div>
+  </div>
 </div>
 <script>
-  $(document).ready(function() {$('.ui.form')
-  .form({
-    on: 'blur',
-     onFailure: function(formErrors, fields){
-     $('.output').html(JSON.stringify(fields));
-     return false;
-     },
-    fields: {
-      empty: {
-        identifier  : 'empty',
-        rules: [
-          {
-            type   : 'empty',
-            prompt : 'Please enter a value'
-          }
-        ]
-      },
-      dropdown: {
-        identifier  : 'dropdown',
-        rules: [
-          {
-            type   : 'empty',
-            prompt : 'Please select a dropdown value'
-          }
-        ]
-      },
-      checkbox: {
-        identifier  : 'checkbox',
-        rules: [
-          {
-            type   : 'checked',
-            prompt : 'Please check the checkbox'
-          }
-        ]
-      },
-       radio: {
-        identifier  : 'radio',
-        rules: [
-          {
-            type   : 'checked',
-            prompt : 'Please check the radio'
-          }
-        ]
-      }
-    }
-  })
-;
-
+  $(document).ready(function() {
+$('#modal1').modal({closable: false})
+$('#modal2').modal({inverted: true})
+$('#btn1').click(function(){$('#modal1').modal('show')})
+$('#btn2').click(function(){$('#modal2').modal('show')})
 
   });
 

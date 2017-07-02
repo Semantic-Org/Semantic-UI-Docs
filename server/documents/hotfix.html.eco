@@ -7,56 +7,21 @@ title      : 'Test Page'
 type       : 'Library'
 ---
 <div class="ui container">
-<div class="ui basic segment">
-    1. After "First" tab is clicked, click the "ClickMe" button. Alert will appear<br />
-    2. <b>BUG:</b> When "First" tab is clicked on again, button stops working. Changing <i>cacheType</i> doesnt change anything!<br />
-    3. <b>The goal is to run JS once and then leave it be</b>. So scripts must be evaluated once and tab should not reload, if focused on again.
+    <div class="ui menu">
+  <div class="ui category search item">
+    <div class="ui transparent icon input">
+      <input class="prompt" type="text" placeholder="Search animals..." value="pizza">
+      <i class="search link icon"></i>
+    </div>
+    <div class="results"></div>
+  </div>
 </div>
-
-<div class="ui top attached tabular menu">
-  <a class="active item" data-tab="first">First</a>
-  <a class="item" data-tab="second">Second</a>
-</div>
-<div class="ui bottom attached active tab segment" data-tab="first">
-
-</div>
-<div class="ui bottom attached tab segment" data-tab="second">
-
+<div class="ui segment">
+  <p></p>
 </div>
 </div>
 <script>
 $(document).ready(function() {
-  var firstTabContent = "<div id='testfirst'>One&nbsp;<button>ClickMe</button></div> \n" +
-                "<script type='text/javascript'>\n" +
-                "   $(function() { $('button').click(function() { alert(1) }); $('#testfirst').append('<div>dynamically appended div <b>(will disappear if tab is clicked again!)</b> ' + (new Date()).getTime() + '</div>') });\n" +
-                "</scr" + "ipt>";
-
-$('.menu .item')
-.tab({
-    cache: true,
-    cacheType: 'DOM',
-    evaluateScripts: true,
-    onFirstLoad: function(tabPath, parameterArray, historyEvent) {
-        console.log('Initialized tab: ' + tabPath);
-    },
-    onLoad: function(tabPath, parameterArray, historyEvent) { //tab selected
-        console.log('Selected tab: ' + tabPath);
-    },
-    apiSettings: {
-        loadingDuration : 300,
-        mockResponse    : function(settings) {
-            var response = {
-                first  :  firstTabContent,
-
-              second : 'Two',
-
-              third  : 'Three'
-            };
-
-            return response[settings.urlData.tab];
-        }
-    }
-});
 });
 
 </script>

@@ -970,7 +970,14 @@ type        : 'UI Behavior'
     </h2>
 
     <h4 class="ui header">
-      Behavior
+      AJAX
+    </h4>
+    <div class="ui info message">
+      You can pass in any standard <a href="http://api.jquery.com/jquery.ajax/">jQuery AJAX setting</a> like <code>timeout</code> or <code>contentType</code> to API's settings and it will be automatically passed to the request's AJAX call.
+    </div>
+
+    <h4 class="ui header">
+      API
     </h4>
     <table class="ui sortable celled definition table">
       <thead>

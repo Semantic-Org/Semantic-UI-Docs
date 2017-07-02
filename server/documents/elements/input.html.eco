@@ -150,8 +150,8 @@ themes      : ['Default', 'GitHub']
   </div>
   <div class="another example">
     <div class="ui right labeled input">
-      <div class="ui label">$</div>
-      <input type="text" placeholder="Amount">
+      <label for="amount" class="ui label">$</label>
+      <input type="text" placeholder="Amount" id="amount">
       <div class="ui basic label">.00</div>
     </div>
   </div>

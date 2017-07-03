@@ -240,6 +240,12 @@ description : 'Examples of all user interface elements'
     </div>
     <div class="example">
       <h4 class="ui header">
+        <a href="/modules/slider.html">Slider</a>
+      </h4>
+      <%- @partial('examples/slider') %>
+    </div>
+    <div class="example">
+      <h4 class="ui header">
         <a href="/modules/tab.html">Tab</a>
       </h4>
       <%- @partial('examples/tab') %>

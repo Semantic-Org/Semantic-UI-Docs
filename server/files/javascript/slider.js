@@ -1,29 +1,34 @@
-semantic.dropdown = {};
+semantic.slider = {};
 
-// ready event
-semantic.dropdown.ready = function() {
-
-  // selector cache
+semantic.slider.ready = function() {
   var
-    $slider       = $('.example').find('.ui.slider'),
-    // alias
-    handler
+    $slider       = $('.definition .ui.slider').not('.double'),
+    $double       = $('.definition .ui.double.slider'),
+    valueDisplay  = '.value-display'
   ;
 
-  // event handlers
-  handler = {
+  $slider.slider({
+    min: 0,
+    max: 10,
+    start: 5,
+    step: 1,
+  });
 
-  };
+  function updateDisplay(value, firstVal, secVal) {
+    var
+      $self = $(this),
+      $display = $self.parent().find(valueDisplay)
+    ;
+    $display.html('Values: |' + firstVal + " - " + secVal + '| = ' + value);
+  }
 
-  $slider
-    .slider()
-  ;
-
-
+  $double.slider({
+    min: 0,
+    max: 10,
+    start: 5,
+    step: 1,
+    onMove: updateDisplay
+  })
 };
 
-
-// attach ready event
-$(document)
-  .ready(semantic.dropdown.ready)
-;
+$(document).ready(semantic.slider.ready);

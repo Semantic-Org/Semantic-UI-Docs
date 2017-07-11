@@ -1812,6 +1812,26 @@ type        : 'UI Behavior'
         <td>Returns true/false whether a form passes its validation rules</td>
       </tr>
       <tr>
+        <td>add rule(field, rules)<div class="ui label">New in 2.2.11</div></td>
+        <td>Adds rule to existing rules for field, also aliased as <code>add field</code></td>
+      </tr>
+      <tr>
+        <td>add fields(fields) <div class="ui label">New in 2.2.11</div></td>
+        <td>Adds fields object to existing fields</td>
+      </tr>
+      <tr>
+        <td>remove rule(field, rules)<div class="ui label">New in 2.2.11</div></td>
+        <td>Removes specific rule from field leaving other rules</td>
+      </tr>
+      <tr>
+        <td>remove field(field)<div class="ui label">New in 2.2.11</div></td>
+        <td>Remove all validation for a field</td>
+      </tr>
+      <tr>
+        <td>add prompt(identifier, errors)</td>
+        <td>Adds error prompt to the field with the given identifier</td>
+      </tr>
+      <tr>
         <td>is valid(fieldName)</td>
         <td>Returns true/false whether a field passes its validation rules</td>
       </tr>

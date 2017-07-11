@@ -291,6 +291,37 @@ themes      : ['Default', 'Basic', 'GitHub']
     </div>
   </div>
 
+  <div class="example" data-class="stackable">
+    <h4 class="ui header">
+      Unstackable
+      <div class="ui teal label">New in 2.2.11</div>
+    </h4>
+    <p>A step can prevent itself from stacking on mobile</p>
+    <div class="ui unstackable steps">
+      <div class="step">
+        <i class="plane icon"></i>
+        <div class="content">
+          <div class="title">Shipping</div>
+          <div class="description">Choose your shipping options</div>
+        </div>
+      </div>
+      <div class="active step">
+        <i class="dollar icon"></i>
+        <div class="content">
+          <div class="title">Billing</div>
+          <div class="description">Enter billing information</div>
+        </div>
+      </div>
+      <div class="disabled step">
+        <i class="info circle icon"></i>
+        <div class="content">
+          <div class="title">Confirm Order</div>
+          <div class="description">Verify order details</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="example" data-class="attached">
     <h4 class="ui header">
       Attached

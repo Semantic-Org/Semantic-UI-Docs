@@ -1403,10 +1403,86 @@ type        : 'UI Behavior'
 
     <h2 class="ui dividing header">Form Examples</h2>
 
-    <div class="dropdown example">
-      <h4 class="ui header">Regular Expressions</h4>
-
+    <div class="add example">
+      <h4 class="ui header">
+        Adding Rules Programmatically <div class="ui teal label">New in 2.2.11</div>
+      </h4>
+      <p>You can use the special behaviors <code>add field/rule</code>, <code>remove rule</code> and <code>remove field</code> to dynamically add or remove fields or rules. </p>
+      <div class="ui ignored info message">
+        <div class="ui header">Adding Multiple Rules and Complex Rules</div>
+        You can specify shorthand or full rule objects when adding rules. You can also specifiy fields as an array to modify multiple fields.</code>.
+      </div>
+      <div class="code">
+      // lets only validate username to start
+      $('.add.example .ui.form')
+        .form({
+          username: ['empty', 'minLength[5]']
+        })
+      ;
+      </div>
+      <div class="evaluated code">
+      // lets toggle some validation based on button
+      $('.add.example .ui.positive.button')
+        .on('click', function() {
+          $('.add.example .ui.form')
+            // adding longform
+            .form('add rule', 'gender', {
+              rules: [
+                {
+                  type   : 'empty',
+                  prompt : 'Entering your gender is necessary'
+                }
+              ]
+            })
+            // adding shorthand
+            .form('add rule', 'password', ['empty', 'minLength[5]'])
+          ;
+        })
+      ;
+      </div>
+      <div class="evaluated code">
+      $('.add.example .ui.negative.button')
+        .on('click', function() {
+          $('.add.example .ui.form')
+            // removing multiple at once
+            .form('remove fields', ['gender', 'password'])
+          ;
+        })
+      ;
+      </div>
+      <div class="ui positive button">Add Additional Validation</div>
+      <div class="ui negative button">Remove Additional Validation</div>
+      <form class="ui form segment">
+        <div class="two fields">
+          <div class="field">
+            <label>Username</label>
+            <input type="text" name="username">
+          </div>
+          <div class="field">
+            <label>Password</label>
+            <input type="password" name="password">
+          </div>
+        </div>
+        <div class="two fields">
+          <div class="field">
+            <label>Gender</label>
+            <div class="ui fluid selection dropdown">
+              <input type="hidden" name="gender">
+              <div class="default text">Gender</div>
+              <i class="dropdown icon"></i>
+              <div class="menu">
+                <div class="item" data-value="1">Male</div>
+                <div class="item" data-value="0">Female</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ui primary submit button">Submit</div>
+        <div class="ui clear button">Clear</div>
+        <div class="ui error message"></div>
+      </form>
     </div>
+
     <div class="dropdown example">
       <h4 class="ui header">Validating Dropdowns</h4>
       <p><a href="/modules/dropdown.html">Dropdowns</a> can also be validated like other form fields. Simply match the validation rule to the <code>input</code> or <code>select</code> associated with the dropdown</p>
@@ -1417,24 +1493,8 @@ type        : 'UI Behavior'
       $('.ui.form')
         .form({
           fields: {
-            gender: {
-              identifier  : 'gender',
-              rules: [
-                {
-                  type   : 'empty',
-                  prompt : 'Please enter a gender'
-                }
-              ]
-            },
-            name: {
-              identifier  : 'name',
-              rules: [
-                {
-                  type   : 'empty',
-                  prompt : 'Please enter your name'
-                }
-              ]
-            }
+            gender: 'empty',
+            name: 'empty'
           }
         })
       ;
@@ -1468,14 +1528,7 @@ type        : 'UI Behavior'
       $('.ui.form')
         .form(
           fields: {
-            name: {
-              identifier : 'name',
-              rules: [
-                {
-                  type   : 'empty'
-                }
-              ]
-            }
+            name: 'empty'
           }
         })
       ;

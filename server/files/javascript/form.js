@@ -1,12 +1,13 @@
-semantic.validateForm = {};
+semantic.form = {};
 
 // ready event
-semantic.validateForm.ready = function() {
+semantic.form.ready = function() {
 
   // selector cache
   var
     $codeDropdown = $('.existing.code .dropdown'),
     $dropdown     = $('.main.container .ui.dropdown').not($codeDropdown),
+    $addExample   = $('.add.example form')
     // alias
     handler
   ;
@@ -20,10 +21,11 @@ semantic.validateForm.ready = function() {
     .dropdown()
   ;
 
+
 };
 
 
 // attach ready event
 $(document)
-  .ready(semantic.validateForm.ready)
+  .ready(semantic.form.ready)
 ;

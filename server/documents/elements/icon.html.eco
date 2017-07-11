@@ -105,6 +105,7 @@ themes      : ['Default']
         <div class="column"><i class="shop icon"></i>Shop</div>
         <div class="column"><i class="shopping bag icon"></i>Shopping Bag</div>
         <div class="column"><i class="shopping basket icon"></i>Shopping Basket</div>
+        <div class="column"><i class="sidebar icon"></i>Sidebar</div>
         <div class="column"><i class="signal icon"></i>Signal</div>
         <div class="column"><i class="sitemap icon"></i>Sitemap</div>
         <div class="column"><i class="tag icon"></i>Tag</div>
@@ -194,6 +195,7 @@ themes      : ['Default']
         <i class="shop icon"></i>
         <i class="shopping bag icon"></i>
         <i class="shopping basket icon"></i>
+        <i class="sidebar icon"></i>
         <i class="signal icon"></i>
         <i class="sitemap icon"></i>
         <i class="tag icon"></i>
@@ -1126,7 +1128,6 @@ themes      : ['Default']
         <div class="column"><i class="align right icon"></i>Align Right</div>
         <div class="column"><i class="attach icon"></i>Attach</div>
         <div class="column"><i class="bold icon"></i>Bold</div>
-        <div class="column"><i class="content icon"></i>Content</div>
         <div class="column"><i class="copy icon"></i>Copy</div>
         <div class="column"><i class="cut icon"></i>Cut</div>
         <div class="column"><i class="font icon"></i>Font</div>
@@ -1157,7 +1158,6 @@ themes      : ['Default']
         <i class="align right icon"></i>
         <i class="attach icon"></i>
         <i class="bold icon"></i>
-        <i class="content icon"></i>
         <i class="copy icon"></i>
         <i class="cut icon"></i>
         <i class="font icon"></i>

@@ -6,76 +6,91 @@ standalone : true
 title      : 'Test Page'
 type       : 'Library'
 ---
-<button id='btn1'>
-show modal 1
-</button>
-<button id='btn2'>
-show modal 2
-</button>
-<div class="ui modal" id='modal1'>
-  <i class="close icon"></i>
-  <div class="header">
-    Profile Picture
-  </div>
-  <div class="image content">
-    <div class="ui medium image">
-      <img src="/images/avatar/large/chris.jpg">
-    </div>
-    <div class="description">
-      <div class="ui header">We've auto-chosen a profile image for you.</div>
-      <p>We've grabbed the following image from the <a href="https://www.gravatar.com" target="_blank">gravatar</a> image associated with your registered e-mail address.</p>
-      <p>Is it okay to use this photo?</p>
-    </div>
-  </div>
-  <div class="actions">
-    <div class="ui black deny button">
-      Nope
-    </div>
-    <div class="ui positive right labeled icon button">
-      Yep, that's me
-      <i class="checkmark icon"></i>
-    </div>
-  </div>
-</div>
-<div class="ui modal" id='modal2'>
-  <i class="close icon"></i>
-  <div class="header">
-    Profile Picture
-  </div>
-  <div class="image content">
-    <div class="ui medium image">
-      <img src="/images/avatar/large/chris.jpg">
-    </div>
-    <div class="description">
-      <div class="ui header">We've auto-chosen a profile image for you.</div>
-      <p>We've grabbed the following image from the <a href="https://www.gravatar.com" target="_blank">gravatar</a> image associated with your registered e-mail address.</p>
-      <p>Is it okay to use this photo?</p>
-    </div>
-  </div>
-  <div class="actions">
-    <div class="ui black deny button">
-      Nope
-    </div>
-    <div class="ui positive right labeled icon button">
-      Yep, that's me
-      <i class="checkmark icon"></i>
-    </div>
-  </div>
+<div class="ui container">
+
+      <form class="ui form segment">
+        <p>Tell Us About Yourself</p>
+        <div class="two fields">
+          <div class="field">
+            <label>Name</label>
+            <input placeholder="First Name" name="name" type="text">
+          </div>
+          <div class="field">
+            <label>Gender</label>
+            <select class="ui dropdown" name="gender">
+              <option value="">Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+        </div>
+        <div class="two fields">
+          <div class="field">
+            <label>Username</label>
+            <input placeholder="Username" name="username" type="text">
+          </div>
+          <div class="field">
+            <label>Password</label>
+            <input type="password" name="password">
+          </div>
+        </div>
+        <div class="field">
+          <label>Skills</label>
+          <select name="skills" multiple class="ui dropdown">
+            <option value="">Select Skills</option>
+            <option value="css">CSS</option>
+            <option value="html">HTML</option>
+            <option value="javascript">Javascript</option>
+            <option value="design">Graphic Design</option>
+            <option value="plumbing">Plumbing</option>
+            <option value="mech">Mechanical Engineering</option>
+            <option value="repair">Kitchen Repair</option>
+          </select>
+        </div>
+        <div class="inline field">
+          <div class="ui checkbox">
+            <input type="checkbox" name="terms" />
+            <label>I agree to the terms and conditions</label>
+          </div>
+        </div>
+        <div class="ui primary submit button">Submit</div>
+        <div class="ui error message"></div>
+      </div>
+    </form>
 </div>
 <script>
   $(document).ready(function() {
-$('#modal1').modal({closable: false})
-$('#modal2').modal({inverted: true})
-$('#btn1').click(function(){$('#modal1').modal('show')})
-$('#btn2').click(function(){$('#modal2').modal('show')})
 
-  });
+    $('.ui.dropdown').dropdown();
+    $('.ui.checkbox').checkbox();
+
+      $('.ui.form')
+        .form({
+          fields: {
+            password : ['minLength[6]', 'empty'],
+            skills   : ['minCount[2]', 'empty'],
+            terms    : 'checked'
+          }
+        })
+        .form('add field', 'username', 'empty')
+        .form('add fields', {
+          name   : 'empty',
+          gender : 'empty'
+        })
+        .form('remove rule', 'username', 'empty')
+        .form('remove field', 'terms')
+        .form('validate field', 'username')
+      ;
+
+});
 
 </script>
 
 <!-- TEST CSS HERE !-->
 <style type="text/css">
-  .container {
-    margin-top: 2rem !important;
-  }
+
+.ui.container {
+  padding-top: 2em;
+}
+
 </style>

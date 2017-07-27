@@ -351,6 +351,7 @@ themes      : ['Default']
         <div class="column"><i class="warning circle icon"></i>Warning Circle</div>
         <div class="column"><i class="warning icon"></i>Warning</div>
         <div class="column"><i class="warning sign icon"></i>Warning Sign</div>
+        <div class="column"><i class="dont icon"></i>Dont</div>
       </div>
       <div class="existing code">
         <i class="announcement icon"></i>
@@ -362,6 +363,7 @@ themes      : ['Default']
         <i class="warning circle icon"></i>
         <i class="warning icon"></i>
         <i class="warning sign icon"></i>
+        <i class="dont icon"></i>
       </div>
     </div>
 

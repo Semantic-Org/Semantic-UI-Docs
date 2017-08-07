@@ -1854,6 +1854,38 @@ themes      : ['Default', 'GitHub', 'Material']
         ;
       </div>
     </div>
+    <div class="js example">
+      <h4 class="ui header">
+        Initializing with Javascript Only
+        <div class="ui teal label">New in 2.3.0</div>
+      </h4>
+      <p>You can specify a list of values in the settings object to avoid having to stub the html yourself.</p>
+      <p>Adding <code>selected: true</code> to an item will have that item selected by default.</p>
+      <p>You can also use the <code>placeholder</code> setting to specify placeholder text before an option is selected.</p>
+      <div class="code" data-label="HTML" data-type="html">
+        <div class="ui dropdown">
+          <div class="text"></div>
+          <i class="dropdown icon"></i>
+        </div>
+      </div>
+      <div class="code" data-label="Javascript" data-type="javascript">
+        $('.ui.dropdown')
+          .dropdown({
+            values: [
+              {
+                name: 'Male',
+                value: 'male'
+              },
+              {
+                name     : 'Female',
+                value    : 'female',
+                selected : true
+              }
+            ]
+          })
+        ;
+      </div>
+    </div>
     <div class="no dropdown example">
       <h4 class="ui header">Specifying Different Text &amp; Hidden Input Values</h4>
       <p>You can specify different values for selected text, and selected form values by adding <code>data-text</code> or <code>data-value</code> to any item. This is useful if you include additional data, like icons, that you want to appear only inside the dropdown menu.</p>
@@ -2185,8 +2217,8 @@ themes      : ['Default', 'GitHub', 'Material']
       </thead>
       <tbody>
         <tr>
-          <td>setup menu</td>
-          <td>Recreates dropdown menu from select <code>option</code> values.</td>
+          <td>change values (values)</td>
+          <td>Changes dropdown to use new values</td>
         </tr>
         <tr>
           <td>refresh</td>
@@ -2354,6 +2386,11 @@ themes      : ['Default', 'GitHub', 'Material']
         </tr>
       </thead>
       <tbody>
+        <tr>
+          <td>values</td>
+          <td>false</td>
+          <td>When specified allows you to initialize dropdown with specific values. See usage guide for details.</td>
+        </tr>
         <tr>
           <td>on</td>
           <td>click</td>

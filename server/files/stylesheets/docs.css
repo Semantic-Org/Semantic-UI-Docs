@@ -275,7 +275,6 @@ blockquote .author {
 }
 #example .language.dropdown > .menu {
   width: 280px;
-  transform: translate3d(0, 0, 0);
 }
 
 /*--------------
@@ -385,8 +384,6 @@ blockquote .author {
 }
 #example .fixed.column .sticky {
   margin-top: 0em;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
 }
 
 /*--------------
@@ -2011,12 +2008,6 @@ code .chunk {
 #example .main.container > .tab > .examples > .right.rail .sticky,
 #example .main.container > .tab > .right.rail .sticky {
   padding-bottom: 2em;
-}
-#example .main.container > .right.rail .fixed.sticky,
-#example .main.container > .tab > .examples > .right.rail .fixed.sticky,
-#example .main.container > .tab > .right.rail .fixed.sticky {
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
 }
 
 #example .following.menu .menu .active.item {

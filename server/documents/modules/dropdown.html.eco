@@ -1857,7 +1857,7 @@ themes      : ['Default', 'GitHub', 'Material']
     <div class="js example">
       <h4 class="ui header">
         Initializing with Javascript Only
-        <div class="ui teal label">New in 2.3.0</div>
+        <div class="ui teal label">New in 2.2.12</div>
       </h4>
       <p>You can specify a list of values in the settings object to avoid having to stub the html yourself.</p>
       <p>Adding <code>selected: true</code> to an item will have that item selected by default.</p>

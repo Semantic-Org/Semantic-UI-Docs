@@ -60,7 +60,6 @@ themes      : ['Default']
         <div class="column"><i class="dashboard icon"></i>Dashboard</div>
         <div class="column"><i class="delete calendar icon"></i>Delete Calendar</div>
         <div class="column"><i class="external icon"></i>External</div>
-        <div class="column"><i class="external icon"></i>External</div>
         <div class="column"><i class="external square icon"></i>External Square</div>
         <div class="column"><i class="eyedropper icon"></i>Eyedropper</div>
         <div class="column"><i class="feed icon"></i>Feed</div>

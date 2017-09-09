@@ -161,15 +161,15 @@ type        : 'UI Element'
 
   <div class="example" data-class="size">
     <h4 class="ui header">Size</h4>
-    <p>A rail can have different sizes</p>
+    <p>A rail can have different font sizes</p>
     <div class="ui segment">
       <div class="ui left mini rail">
-        <div class="ui segment">
+        <div class="ui segment" style="font-size:inherit;">
           Mini
         </div>
       </div>
       <div class="ui right tiny rail">
-        <div class="ui segment">
+        <div class="ui segment" style="font-size:inherit;">
           Tiny
         </div>
       </div>
@@ -178,12 +178,12 @@ type        : 'UI Element'
     </div>
     <div class="ui segment">
       <div class="ui left small rail">
-        <div class="ui segment">
+        <div class="ui segment" style="font-size:inherit;">
           Small
         </div>
       </div>
       <div class="ui right large rail">
-        <div class="ui segment">
+        <div class="ui segment" style="font-size:inherit;">
           Large
         </div>
       </div>
@@ -192,12 +192,12 @@ type        : 'UI Element'
     </div>
     <div class="ui segment">
       <div class="ui left big rail">
-        <div class="ui segment">
+        <div class="ui segment" style="font-size:inherit;">
           Big
         </div>
       </div>
       <div class="ui right huge rail">
-        <div class="ui segment">
+        <div class="ui segment" style="font-size:inherit;">
           Huge
         </div>
       </div>
@@ -206,7 +206,7 @@ type        : 'UI Element'
     </div>
     <div class="ui segment">
       <div class="ui right massive rail">
-        <div class="ui segment">
+        <div class="ui segment" style="font-size:inherit;">
           Massive
         </div>
       </div>

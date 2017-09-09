@@ -658,18 +658,14 @@ themes      : ['Default', 'Basic', 'Classic', 'Instagram']
     </div>
     <div class="ui card">
       <div class="content">
-        <div class="header">Cute Dog</div>
-        <div class="meta">
-          <span class="right floated time">2 days ago</span>
-          <span class="category">Animals</span>
-        </div>
-        <div class="description">
-          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        <div class="center aligned header">Jenny Hess</div>
+        <div class="center aligned description">
+          <p>Jenny is a student studying Media Management at the New School</p>
         </div>
       </div>
       <div class="extra content">
-        <div class="right floated author">
-          <img class="ui avatar image" src="/images/avatar/small/matt.jpg"> Matt
+        <div class="center aligned author">
+          <img class="ui avatar image" src="http://semantic-ui.com/images/avatar/small/jenny.jpg"> Jenny
         </div>
       </div>
     </div>

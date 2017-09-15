@@ -53,13 +53,11 @@ themes      : ['Default']
         <div class="column"><i class="comment icon"></i>Comment</div>
         <div class="column"><i class="comment outline icon"></i>Comment Outline</div>
         <div class="column"><i class="comments icon"></i>Comments</div>
-        <div class="column"><i class="comments icon"></i>Comments</div>
         <div class="column"><i class="comments outline icon"></i>Comments Outline</div>
         <div class="column"><i class="copyright icon"></i>Copyright</div>
         <div class="column"><i class="creative commons icon"></i>Creative Commons</div>
         <div class="column"><i class="dashboard icon"></i>Dashboard</div>
         <div class="column"><i class="delete calendar icon"></i>Delete Calendar</div>
-        <div class="column"><i class="external icon"></i>External</div>
         <div class="column"><i class="external icon"></i>External</div>
         <div class="column"><i class="external square icon"></i>External Square</div>
         <div class="column"><i class="eyedropper icon"></i>Eyedropper</div>
@@ -143,13 +141,11 @@ themes      : ['Default']
         <i class="comment icon"></i>
         <i class="comment outline icon"></i>
         <i class="comments icon"></i>
-        <i class="comments icon"></i>
         <i class="comments outline icon"></i>
         <i class="copyright icon"></i>
         <i class="creative commons icon"></i>
         <i class="dashboard icon"></i>
         <i class="delete calendar icon"></i>
-        <i class="external icon"></i>
         <i class="external icon"></i>
         <i class="external square icon"></i>
         <i class="eyedropper icon"></i>

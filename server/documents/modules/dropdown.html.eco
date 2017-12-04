@@ -2908,7 +2908,7 @@ themes      : ['Default', 'GitHub', 'Material']
         <tr>
           <td>performance</td>
           <td>True</td>
-          <td>Provides standard debug output to console</td>
+          <td>Provides performance stats in console, and suppresses other debug output.</td>
         </tr>
         <tr>
           <td>verbose</td>

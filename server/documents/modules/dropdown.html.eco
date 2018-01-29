@@ -2397,6 +2397,11 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>Event used to trigger dropdown (Hover, Click, Custom Event)</td>
         </tr>
         <tr>
+          <td>ignoreCase</td>
+          <td>false<div class="ui label">New in 2.2.13</div></td>
+          <td>Whether values with matching cases should be treated as identical when adding them to a dropdown.</td>
+        </tr>
+        <tr>
           <td>allowReselection</td>
           <td>false</td>
           <td>When set to <code>true</code> will fire <code>onChange</code> even when the value a user select matches the currently selected value.</td>
@@ -2409,7 +2414,7 @@ themes      : ['Default', 'GitHub', 'Material']
         <tr>
           <td>hideAdditions</td>
           <td>true</td>
-          <td>When disabled user additions will appear in the results menu using a specially formatted selection item formatted by <code>templates.addition</code>.</td>
+          <td>If disabled user additions will appear in the dropdown's menu using a specially formatted selection item formatted by <code>templates.addition</code>.</td>
         </tr>
         <tr>
           <td>action</td>

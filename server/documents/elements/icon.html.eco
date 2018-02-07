@@ -387,9 +387,9 @@ themes      : ['Default']
         <i class="spy icon"></i>
         <i class="student icon"></i>
         <i class="user icon"></i>
-        <i class="user circle"></i>
-        <i class="user circle outline"></i>
-        <i class="user outline"></i>
+        <i class="user circle icon"></i>
+        <i class="user circle outline icon"></i>
+        <i class="user outline icon"></i>
         <i class="users icon"></i>
       </div>
     </div>

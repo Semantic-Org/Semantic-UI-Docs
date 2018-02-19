@@ -142,7 +142,7 @@ semantic.ready = function() {
               : $(this).children().eq(1)
           ;
           $('<i/>')
-            .addClass('icon code')
+            .addClass('fitted icon code')
             .insertBefore( $insertPoint )
           ;
         })
@@ -787,7 +787,6 @@ semantic.ready = function() {
           .on('click', handler.copyCode)
           .popup({
             variation    : 'inverted',
-            offset       : -12,
             distanceAway : 6
           })
         ;
@@ -1346,7 +1345,6 @@ semantic.ready = function() {
               hide: 100
             },
             position : 'top left',
-            offset   : -5,
             content  : 'View Source',
             target   : $(this).find('i.code')
           })

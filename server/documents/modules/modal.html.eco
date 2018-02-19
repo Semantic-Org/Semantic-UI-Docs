@@ -98,6 +98,30 @@ themes      : ['Default', 'Material']
     </div>
   </div>
 
+  <div class="ui special modal">
+    <div class="header">
+      Delete Your Account
+    </div>
+    <div class="content">
+      <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+      <div class="ui hidden divider"></div>
+      <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+      <div class="ui hidden divider"></div>
+      <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+      <div class="ui hidden divider"></div>
+      <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+    </div>
+    <div class="actions">
+      <div class="ui negative button">
+        No
+      </div>
+      <div class="ui positive right labeled icon button">
+        Yes
+        <i class="checkmark icon"></i>
+      </div>
+    </div>
+  </div>
+
   <div class="ui tiny test modal">
     <div class="header">
       Delete Your Account
@@ -525,6 +549,22 @@ themes      : ['Default', 'Material']
   <div class="ui tab" data-tab="examples">
 
     <h2 class="ui dividing header">Examples</h2>
+
+    <div class="no example">
+      <h4 class="ui header">
+        Disabling Vertical Centering
+        <div class="ui horizontal teal label">New in 2.3</div>
+      </h4>
+      <p>When your modal has dynamic content, or multiple steps, it can make sense to disable centering so content doesn't jump around vertically when its height changes.</p>
+      <div class="code" data-demo="true">
+      $('.special.modal')
+        .modal({
+          centered: false
+        })
+        .modal('show')
+      ;
+      </div>
+    </div>
 
     <div class="no example">
       <h4 class="ui header">Scrolling Modal</h4>

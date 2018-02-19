@@ -69,7 +69,7 @@ themes      : ['Default']
     <div class="example">
       <h4 class="ui header">Content Dimmer</h4>
       <p>A dimmer can display content</p>
-      <div class="ui ignored info message">Content must be included inside <code>.content .center</code> to display centered correctly in the dimmer.</div>
+      <div class="ui ignored info message">Since <div class="ui horizontal label">2.3</div> dimmers with content now only need a single wrapping <code>content</code> container.</div>
       <div class="ui segment">
         <h3 class="ui header">
           Overlayable Section
@@ -82,12 +82,10 @@ themes      : ['Default']
         <img class="ui medium wireframe image" src="/images/wireframe/media-paragraph.png">
         <div class="ui dimmer">
           <div class="content">
-            <div class="center">
-              <h2 class="ui inverted icon header">
-                <i class="heart icon"></i>
-                Dimmed Message!
-              </h2>
-            </div>
+            <h2 class="ui inverted icon header">
+              <i class="heart icon"></i>
+              Dimmed Message!
+            </h2>
           </div>
         </div>
       </div>
@@ -103,7 +101,7 @@ themes      : ['Default']
       <div class="existing code" data-preview="true">
         <div class="ui page dimmer">
           <div class="content">
-            <div class="center">Hello</div>
+            Hello
           </div>
         </div>
       </div>
@@ -166,6 +164,47 @@ themes      : ['Default']
       </div>
     </div>
 
+    <h3>Alignment</h3>
+    <div class="example">
+      <h4 class="ui header">
+        Vertical Alignment
+        <span class="ui teal label">New in 2.3</span>
+      </h4>
+      <p>A dimmer can have its content top or bottom aligned.</p>
+      <div class="ui segment">
+        <div class="ui top aligned dimmer">
+          <div class="content">
+            <h2 class="ui inverted header">Title</h2>
+            <div class="ui primary button">Add</div>
+            <div class="ui button">View</div>
+          </div>
+        </div>
+        <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+        <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+      </div>
+      <div class="ui ignored ignored icon buttons">
+        <div class="ui show button"><i class="plus icon"></i></div>
+        <div class="ui hide button"><i class="minus icon"></i></div>
+      </div>
+    </div>
+    <div class="another example">
+      <div class="ui segment">
+        <div class="ui bottom aligned dimmer">
+          <div class="content">
+            <h2 class="ui inverted header">Title</h2>
+            <div class="ui primary button">Add</div>
+            <div class="ui button">View</div>
+          </div>
+        </div>
+        <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+        <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+      </div>
+      <div class="ui ignored ignored icon buttons">
+        <div class="ui show button"><i class="plus icon"></i></div>
+        <div class="ui hide button"><i class="minus icon"></i></div>
+      </div>
+    </div>
+
     <h3>Dimmer</h3>
     <div class="example">
       <h4 class="ui header">Simple Dimmer</h4>
@@ -209,11 +248,9 @@ themes      : ['Default']
       <div class="ui medium image">
         <div class="ui dimmer">
           <div class="content">
-            <div class="center">
-              <h2 class="ui inverted header">Title</h2>
-              <div class="ui primary button">Add</div>
-              <div class="ui button">View</div>
-            </div>
+            <h2 class="ui inverted header">Title</h2>
+            <div class="ui primary button">Add</div>
+            <div class="ui button">View</div>
           </div>
         </div>
         <img class="ui image" src="/images/wireframe/image.png">
@@ -221,10 +258,8 @@ themes      : ['Default']
       <div class="ui circular image">
         <div class="ui dimmer">
           <div class="content">
-            <div class="center">
-              <div class="ui small primary button">Add</div>
-              <div class="ui small button">View</div>
-            </div>
+            <div class="ui small primary button">Add</div>
+            <div class="ui small button">View</div>
           </div>
         </div>
         <img src="/images/wireframe/square-image.png">

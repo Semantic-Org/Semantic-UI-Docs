@@ -8,45 +8,66 @@ type       : 'Library'
 ---
 
 <div class="ui container">
-  <div class="ui fluid multiple search selection dropdown">
-    <input name="tags" type="hidden">
-    <i class="dropdown icon"></i>
-    <div class="default text">Skills</div>
-    <div class="menu">
-      <div class="item" data-value="angular">Angular</div>
-  <div class="item" data-value="css">CSS</div>
-  <div class="item" data-value="design">Graphic Design</div>
-  <div class="item" data-value="ember">Ember</div>
-  <div class="item" data-value="html">HTML</div>
-  <div class="item" data-value="ia">Information Architecture</div>
-  <div class="item" data-value="javascript">Javascript</div>
-  <div class="item" data-value="mech">Mechanical Engineering</div>
-  <div class="item" data-value="meteor">Meteor</div>
-  <div class="item" data-value="node">NodeJS</div>
-  <div class="item" data-value="plumbing">Plumbing</div>
-  <div class="item" data-value="python">Python</div>
-  <div class="item" data-value="rails">Rails</div>
-  <div class="item" data-value="react">React</div>
-  <div class="item" data-value="repair">Kitchen Repair</div>
-  <div class="item" data-value="ruby">Ruby</div>
-  <div class="item" data-value="ui">UI Design</div>
-  <div class="item" data-value="ux">User Experience</div>
-    </div>
-
+  <target class="top left">
+    <i class="fitted link heart icon" data-content="This is a popup"></i>
+  </target>
+  <target class="top center">
+    <i class="fitted link heart icon" data-content="This is a popup"></i>
+  </target>
+  <target class="top right">
+    <i class="fitted link heart icon" data-content="This is a popup"></i>
+  </target>
+  <target class="right center">
+    <i class="fitted link heart icon" data-content="This is a popup"></i>
+  </target>
+  <target class="bottom right">
+    <i class="fitted link heart icon" data-content="This is a popup"></i>
+  </target>
+  <target class="bottom center">
+    <i class="fitted link heart icon" data-content="This is a popup"></i>
+  </target>
+  <target class="top right">
+    <i class="fitted link heart icon" data-content="This is a popup"></i>
+  </target>
+  <div class="ui divider"></div>
+  <target class="top left">
+    <div class="ui mini icon button" data-content="Do it do it"><i class="right chevron icon"></i></div>
+  </target>
+  <target class="top left">
+    <div class="ui tiny icon button" data-content="Do it do it"><i class="right chevron icon"></i></div>
+  </target>
+  <target class="top left">
+    <div class="ui small icon button" data-content="Do it do it"><i class="right chevron icon"></i></div>
+  </target>
+  <target class="top left">
+    <div class="ui icon button" data-content="Do it do it"><i class="right chevron icon"></i></div>
+  </target>
 </div>
 
 <script>
   $(document).ready(function() {
-$('.dropdown').dropdown({ allowAdditions: true});
-});
-
+    $('target').each(function() {
+      var
+        $icon    = $(this).children(),
+        position = $(this).attr('class')
+      ;
+      console.log($icon.get(0), position);
+      $icon.popup({
+        on: 'hover',
+        inline: true,
+        preserve: true,
+        position: position
+      });
+    });
+  });
 </script>
 
 <!-- TEST CSS HERE !-->
 <style type="text/css">
 
-
 .ui.container {
-  padding-top: 3em;
+  padding-top: 6em;
 }
+
+
 </style>

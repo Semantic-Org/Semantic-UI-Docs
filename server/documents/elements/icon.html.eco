@@ -21,6 +21,14 @@ themes      : ['Default']
 
   <div class="ui active tab" data-tab="icon">
 
+    <iconSearch class="ui search">
+      <div class="ui icon input">
+        <input class="prompt" type="text" placeholder="Search icons...">
+        <i class="search icon"></i>
+      </div>
+      <div class="results"></div>
+    </iconSearch>
+
     <h2 class="ui header">Icon Set</h2>
     <p>An icon set contains an arbitrary number of glyphs</p>
     <div class="ui ignored warning message">

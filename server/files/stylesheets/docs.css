@@ -1484,6 +1484,20 @@ body.progress.animated .ui.progress .bar {
       Icon
 ---------------*/
 
+#example iconSearch.ui.search {
+  float: right;
+  position: relative;
+  z-index: 3;
+}
+#example iconSearch .result i.icon {
+  font-size: 20px;
+  float: right;
+  margin-top: -5px;
+  margin-left: 11px;
+  color: #000000;
+}
+
+
 #example .icon.example .grid {
   text-align: left;
 }

@@ -178,9 +178,21 @@
     <% end %>
   </div>
 </div>
-
 <% if 'development' in @getEnvironments(): %>
 <% else: %>
+  <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
+  <div class="bsa-cpc"></div>
+  <script>
+    (function(){
+      if(typeof _bsa !== 'undefined' && _bsa) {
+      _bsa.init('default', 'CVAIKK7I', 'placement:semanticuicom', {
+        target: '.bsa-cpc',
+        align: 'horizontal',
+        disable_css: 'true'
+      });
+        }
+    })();
+  </script>
   <div class="ui vertical beg transition hidden segment">
     <i class="large red delete link icon"></i>
     <div class="ui red header">

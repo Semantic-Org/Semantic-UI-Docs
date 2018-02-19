@@ -55,6 +55,7 @@ standalone : true
     <div class="introduction">
       <a class="ui black version label" href="https://github.com/Semantic-Org/Semantic-UI/blob/<%= @getBranch() %>/RELEASE-NOTES.md">
         <%= @getVersion() %>
+        - Jan 2018
       </a>
       <h1 class="ui inverted header">
         <span class="library">

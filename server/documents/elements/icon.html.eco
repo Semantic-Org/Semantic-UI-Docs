@@ -21,7 +21,7 @@ themes      : ['Default']
 
   <div class="ui active tab" data-tab="icon">
 
-    <iconSearch class="ui search">
+    <iconSearch class="ui right aligned search">
       <div class="ui icon input">
         <input class="prompt" type="text" placeholder="Search icons...">
         <i class="search icon"></i>

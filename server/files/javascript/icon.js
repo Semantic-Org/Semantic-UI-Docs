@@ -10,8 +10,8 @@ semantic.icon.ready = function() {
     handler = {
       getIconList: function() {
         var
-          $examples = $('.icon .example')
-          icons = []
+          $examples   = $('.icon .example')
+          icons       = []
         ;
         $examples.each(function() {
           var
@@ -25,11 +25,13 @@ semantic.icon.ready = function() {
               icon  = $icon.attr('class').replace(' icon', '')
               title = '<i class="' + icon +' icon"></i> ' + icon
             ;
-            icons.push({
-              category : category,
-              title    : title,
-              icon     : icon
-            })
+            if(!_.findWhere(icons, { icon: icon})) {
+              icons.push({
+                category : category,
+                title    : title,
+                icon     : icon
+              });
+            }
           });
         });
         return icons;
@@ -70,7 +72,7 @@ semantic.icon.ready = function() {
         $search.blur();
         setTimeout(function() {
           $('iconSearch').transition('bounce');
-          $search.val('HTML Copied to clipboard!');
+          $search.val('Copied to clipboard!');
         }, 50)
         setTimeout(function() {
           $search.val('');

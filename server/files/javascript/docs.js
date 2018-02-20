@@ -463,22 +463,25 @@ semantic.ready = function() {
         .html($sticky)
         .prependTo($container)
       ;
-      $sticky.sticky({
-        silent: true,
-        context: $container,
-        offset: 30
+      requestAnimationFrame(function() {
+        $sticky.sticky({
+          silent: true,
+          context: $container,
+          container: $('html'),
+          offset: 30
+        });
+        $followMenu
+          .accordion({
+            exclusive: false,
+            animateChildren: false,
+            onChange: function() {
+              $('.ui.sticky').sticky('refresh');
+            }
+          })
+          .find('.menu a[href], .title[href]')
+            .on('click', handler.scrollTo)
+        ;
       });
-      $followMenu
-        .accordion({
-          exclusive: false,
-          animateChildren: false,
-          onChange: function() {
-            $('.ui.sticky').sticky('refresh');
-          }
-        })
-        .find('.menu a[href], .title[href]')
-          .on('click', handler.scrollTo)
-      ;
     },
 
     scrollTo: function(event) {
@@ -1253,12 +1256,16 @@ semantic.ready = function() {
   window.less.registerStylesheets();
 
   // create sidebar sticky
-  $tocSticky
-    .sticky({
-      silent: true,
-      context: $fullHeightContainer
-    })
-  ;
+  requestAnimationFrame(function() {
+
+    $tocSticky
+      .sticky({
+        silent: true,
+        container: $('html'),
+        context: $fullHeightContainer
+      })
+    ;
+  });
 
   // load page tabs
   if( $pageTabs.length > 0 ) {
@@ -1274,13 +1281,16 @@ semantic.ready = function() {
             ? $(this).find('.examples')
             : $(this)
           ;
-          $(this).find('> .rail .ui.sticky, .fixed .ui.sticky')
-            .sticky({
-              context: $container,
-              silent: true,
-              offset: 30
-            })
-          ;
+          requestAnimationFrame(function() {
+            $(this).find('> .rail .ui.sticky, .fixed .ui.sticky')
+              .sticky({
+                context: $container,
+                container: $('html'),
+                silent: true,
+                offset: 30
+              })
+            ;
+          });
           $sectionHeaders = $container.children('h2');
           $sectionExample = $container.find('.example');
           $exampleHeaders = $sectionExample.children('h4');

@@ -24,7 +24,8 @@ type        : 'Main'
     <div class="no icon example">
 
       <h4 class="ui header">Font Awesome 5.0 &amp; Better Icon Searching</h4>
-      <p><code>2.3</code> includes a <a href="/elements/icon.html">new port of Font Awesome</a> <code>5.0.6</code>, including <code>929 icons</code>. Icon categories now match icon categories in Font Awesome's documentation, making it easier to find icons between docs.</p>
+      <p>In <code>2.3</code> <a href="/elements/icon.html">icons</a> now include a full port of <a href="https://fontawesome.com/" target="_blank">Font Awesome</a> <code>5.0.6</code>, including 929 icons.</p>
+      <p>Icon categories now match icon categories in Font Awesome's documentation, making it easier to find icons between docs.</p>
       <div class="ui doubling five column vertically padded grid">
         <div class="column"><i class="smile icon"></i>Smile</div>
         <div class="column"><i class="smile outline icon"></i>Smile Outline</div>

@@ -105,11 +105,6 @@ themes      : ['Default', 'Material']
     <div class="content">
       <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
       <div class="ui hidden divider"></div>
-      <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-      <div class="ui hidden divider"></div>
-      <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
-      <div class="ui hidden divider"></div>
-      <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
     </div>
     <div class="actions">
       <div class="ui negative button">

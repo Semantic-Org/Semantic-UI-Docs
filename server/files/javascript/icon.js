@@ -5,7 +5,8 @@ semantic.icon.ready = function() {
 
   // selector cache
   var
-    $grid         = $('.ui.five.column.doubling.grid'),
+    $iconSearch = $('iconSearch.ui.search'),
+    $grid       = $('.ui.five.column.doubling.grid'),
     // alias
     handler = {
       getIconList: function() {
@@ -39,49 +40,52 @@ semantic.icon.ready = function() {
     }
   ;
 
-  $('iconSearch.ui.search')
-    .search({
-      type          : 'category',
-      minCharacters : 1,
-      maxResults    : 10,
-      source        : handler.getIconList(),
-      onResults     : function(result) {
-        setTimeout(function() {
-          var
-            $results = $('iconSearch.ui.search .result')
-          ;
-          $results.each(function() {
-            var
-              $result = $(this)
-            ;
-            new Clipboard(this, {
-              text: function() {
-                var
-                  iconHTML = $result.find('i').get(0).outerHTML
-                ;
-                return iconHTML;
-              }
-          });
-          });
-        }, 0);
-      },
-      onSelect: function() {
-        var
-          $search = $('iconSearch .input > input')
-        ;
-        $search.blur();
-        setTimeout(function() {
-          $('iconSearch').transition('glow');
-          $search.val('Copied to clipboard!');
-        }, 50)
-        setTimeout(function() {
-          $search.val('');
-        }, 1500)
-        return false;
-      }
-    })
-  ;
+  if($iconSearch.length > 0) {
 
+    $iconSearch
+      .search({
+        type          : 'category',
+        minCharacters : 1,
+        maxResults    : 10,
+        source        : handler.getIconList(),
+        onResults     : function(result) {
+          setTimeout(function() {
+            var
+              $results = $('iconSearch.ui.search .result')
+            ;
+            $results.each(function() {
+              var
+                $result = $(this)
+              ;
+              new Clipboard(this, {
+                text: function() {
+                  var
+                    iconHTML = $result.find('i').get(0).outerHTML
+                  ;
+                  return iconHTML;
+                }
+            });
+            });
+          }, 0);
+        },
+        onSelect: function() {
+          var
+            $search = $('iconSearch .input > input')
+          ;
+          $search.blur();
+          setTimeout(function() {
+            $('iconSearch input').transition('glow');
+            $search.val('Copied to clipboard!');
+          }, 50)
+          setTimeout(function() {
+            $search.val('');
+          }, 1500)
+          return false;
+        }
+      })
+    ;
+
+  }
 
 };
 

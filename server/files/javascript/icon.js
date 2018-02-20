@@ -71,7 +71,7 @@ semantic.icon.ready = function() {
         ;
         $search.blur();
         setTimeout(function() {
-          $('iconSearch').transition('bounce');
+          $('iconSearch').transition('glow');
           $search.val('Copied to clipboard!');
         }, 50)
         setTimeout(function() {

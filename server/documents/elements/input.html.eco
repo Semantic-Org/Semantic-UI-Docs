@@ -220,7 +220,7 @@ themes      : ['Default', 'GitHub']
         <option selected value="articles">Articles</option>
         <option value="products">Products</option>
       </select>
-      <div type="submit" class="ui button">Search</div>
+      <div class="ui button">Search</div>
     </div>
   </div>
   <div class="another example">

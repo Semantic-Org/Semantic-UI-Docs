@@ -766,6 +766,11 @@ themes      : ['Default']
           <td>Duration of animation events</td>
         </tr>
         <tr>
+          <td>arrowPixelsFromEdge <div class="ui teal label">New in 2.3</div></td>
+          <td>20</td>
+          <td>When a target element is less than 2x this amount, the popup will appear with the arrow centered on the target element, instead of with the popup edge matching the target's edge.</td>
+        </tr>
+        <tr>
           <td>setFluidWidth</td>
           <td>true</td>
           <td>Whether popup should set fluid popup variation width on load to avoid <code>width: 100%</code> including padding</td>

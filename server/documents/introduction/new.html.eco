@@ -155,7 +155,7 @@ type        : 'Main'
     </div>
     <div class="complex-popup no example">
       <h4 class="ui header">Popups Support Multiple Coordinate Systems</h4>
-      <p>Popups now can correctly place elements with two different coordinate systems (created by a parent with <code>transform</code> or <code>positon</code> set.)</p>
+      <p>Popups now can correctly place elements with two different coordinate systems (created by a parent with <code>transform</code> or <code>position</code> set.)</p>
       <div id="one">
         <p>Button is in here</p>
         <div class="ui button">Button</div>

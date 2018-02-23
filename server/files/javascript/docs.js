@@ -467,7 +467,6 @@ semantic.ready = function() {
         $sticky.sticky({
           silent: true,
           context: $container,
-          container: $('html'),
           offset: 30
         });
         $followMenu
@@ -1261,7 +1260,6 @@ semantic.ready = function() {
     $tocSticky
       .sticky({
         silent: true,
-        container: $('html'),
         context: $fullHeightContainer
       })
     ;
@@ -1285,7 +1283,6 @@ semantic.ready = function() {
             $(this).find('> .rail .ui.sticky, .fixed .ui.sticky')
               .sticky({
                 context: $container,
-                container: $('html'),
                 silent: true,
                 offset: 30
               })

@@ -44,7 +44,7 @@ Watch for changes from your UI folder, and serve to the docs instance:
 gulp serve-docs
 ```
 
-### Publishing to Github Pages
+### Publishing to GitHub Pages
 
 You can publish your docs to GitHub Pages from the command line automatically
 ```

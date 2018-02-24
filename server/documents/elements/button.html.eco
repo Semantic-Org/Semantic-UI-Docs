@@ -338,7 +338,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
 
   <div class="spaced example" data-class="size">
     <h4 class="ui header">Size</h4>
-    <p>A button can have different sizes</p>
+    <p>A button can have different sizes. You can also change button size editing its font-size or line-height style; however changing font-size will create large differences and changing line-height will provide you with far better control of the incremental size of the element.</p>
     <button class="mini ui button">
       Mini
     </button>

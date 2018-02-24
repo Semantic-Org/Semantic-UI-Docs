@@ -321,7 +321,7 @@ type        : 'UI Behavior'
       if( $('.ui.form').form('is valid', 'email')) {
         // email is valid
       }
-      if( $('.ui.form').form('is valid') {
+      if( $('.ui.form').form('is valid')) {
         // form is valid (both email and name)
       }
       </div>

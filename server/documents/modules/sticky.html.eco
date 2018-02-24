@@ -115,7 +115,7 @@ type        : 'UI Module'
 
       <p>Sticky content that is larger than the viewport will automatically scroll independently from the context, shifting scroll direction at any time will also immediately adjust the scroll position of the fixed content.</p>
 
-      <p>This behavior makes sure users aren't required to navigate all the way to the top of the context element to see content that cant fit on-screen inside the sticky element.</p>
+      <p>This behavior makes sure users aren't required to navigate all the way to the top of the context element to see content that can't fit on-screen inside the sticky element.</p>
 
       <div class="code" data-type="javascript">
       $('.ui.sticky')

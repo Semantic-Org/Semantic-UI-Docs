@@ -371,7 +371,7 @@ type        : 'UI Module'
               }
             ]
           }
-        }
+        },
         // optional action below results
         "action": {
           "url": '/path/to/results',

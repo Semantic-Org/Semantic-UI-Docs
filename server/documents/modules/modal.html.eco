@@ -1048,7 +1048,7 @@ themes      : ['Default', 'Material']
           <td colspan="2">
             <div class="code">
       error   : {
-        method    : 'The method you called is not defined.''
+        method    : 'The method you called is not defined.'
       }
             </div>
           </td>

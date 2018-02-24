@@ -6,7 +6,7 @@ elementType : 'element'
 standalone  : true
 
 title       : 'Flag'
-description : 'A flag is is used to represent a political state'
+description : 'A flag is used to represent a political state'
 type        : 'UI Element'
 
 ---

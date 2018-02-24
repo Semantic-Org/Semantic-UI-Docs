@@ -1195,7 +1195,7 @@ themes      : ['Default', 'GitHub', 'Material']
 
     <div class="max example">
       <h4 class="ui header">Maximum Selections</h4>
-      <p>Using <code>maxSelections</code> lets you force a maximum number of selections. You can also use <a href="behaviors/form.html#validation-rules">form validation</a> rules to specify minimum and maximum validation settings for multi-selects inside forms.</p>
+      <p>Using <code>maxSelections</code> lets you force a maximum number of selections. You can also use <a href="/behaviors/form.html#validation-rules">form validation</a> rules to specify minimum and maximum validation settings for multi-selects inside forms.</p>
 
       <div class="ui sub header">Selection</div>
       <select multiple name="skills" class="ui fluid normal dropdown">
@@ -1386,7 +1386,7 @@ themes      : ['Default', 'GitHub', 'Material']
 
     <div class="upward example">
       <h4 class="ui header">Upward</h4>
-      <p>A dropdown menu will automatically change which direction it opens if it cant fit on screen. If you need a dropdown to open in a specific direction you can specify it when initializing a dropdown.</p>
+      <p>A dropdown menu will automatically change which direction it opens if it can't fit on screen. If you need a dropdown to open in a specific direction you can specify it when initializing a dropdown.</p>
       <div class="code" data-demo="true">
         $('.upward.example .dropdown')
           .dropdown({
@@ -2046,7 +2046,7 @@ themes      : ['Default', 'GitHub', 'Material']
     <div class="no example">
       <h4 class="ui header">Multiple Selections</h4>
       <p>You can allow multiple selections by the <code>multiple</code> property on a <code>select</code> element, or by including the class <code>multiple</code> on a dropdown.</p>
-      <p>When a hidden input is used values will be passed through a single value separated by a delimiter. The default is "," but this can be changed by adjusting the <code>delimiter</code> setting.</p>
+      <p>When pre-existing HTML with a hidden input is used, values will be passed through a single value separated by a delimiter. The default is "," but this can be changed by adjusting the <code>delimiter</code> setting.</p>
       <div class="code" data-type="javascript" data-demo="true">
         $('#multi-select')
           .dropdown()
@@ -2217,6 +2217,9 @@ themes      : ['Default', 'GitHub', 'Material']
       </thead>
       <tbody>
         <tr>
+          <td>setup menu(values)</td>
+          <td>Recreates dropdown menu from passed values. <code>values</code> should be an object with the following structure: <code>{ values: [ {value, text, name} ] }</code>.</td>
+        </tr>
           <td>change values (values)</td>
           <td>Changes dropdown to use new values</td>
         </tr>
@@ -2553,7 +2556,7 @@ themes      : ['Default', 'GitHub', 'Material']
         <tr>
           <td>saveRemoteData</td>
           <td>true</td>
-          <td>When enabled will automatically store selected name/value pairs in <code>sessionStorage</code> to preserve user selection on page refresh. Disabling will clear remote dropdown values on refresh.</td>
+          <td>When enabled, will automatically store selected name/value pairs in <code>sessionStorage</code> to preserve user selection on page refresh. Disabling will clear remote dropdown values on refresh.</td>
         </tr>
       </tbody>
     </table>
@@ -2913,7 +2916,7 @@ themes      : ['Default', 'GitHub', 'Material']
         <tr>
           <td>performance</td>
           <td>True</td>
-          <td>Provides standard debug output to console</td>
+          <td>Provides performance stats in console, and suppresses other debug output.</td>
         </tr>
         <tr>
           <td>verbose</td>
@@ -2940,4 +2943,3 @@ themes      : ['Default', 'GitHub', 'Material']
   </div>
 
 </div>
-

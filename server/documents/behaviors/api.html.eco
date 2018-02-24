@@ -44,7 +44,7 @@ type        : 'UI Behavior'
       </div>
       <p>Centrally manage your entire API making sure you aren't caught modifying urls across your codebase. Define your endpoints using an <a href="#api-actions">intuitive templating system</a> that <a href="#passing-data">automatically passes data</a> found in your UI.</p>
       <div class="ignored code" data-type="javascript">
-        var api = {
+        $.fn.api.settings.api = {
           'get followers' : '/followers/{id}?results={count}',
           'create user'   : '/create',
           'add user'      : '/add/{id}',
@@ -112,7 +112,7 @@ type        : 'UI Behavior'
         <div class="code" data-type="javascript">
           /* Two required variables */
           $.fn.api.settings.api = {
-            'get followers' : '/followers/{id}?results={count}',
+            'get followers' : '/followers/{id}?results={count}'
           };
         </div>
       </div>
@@ -121,13 +121,13 @@ type        : 'UI Behavior'
         <div class="ui large bulleted list">
           <div class="item">Uses format <code>{/variable}</code></div>
           <div class="item">Will <b>not</b> abort the request if they cannot be found.</div>
-          <div class="item"><b>Will be removed</b> from the url automatically if not available.</div>
+          <div class="item"><b>Will be removed</b> from the URL automatically if not available.</div>
           <div class="item">Any preceding slash before an optional parameter will be removed from the URL, allowing you to include them in resource paths.</div>
         </div>
         <div class="code" data-type="javascript">
           /* One required, one optional variable */
           $.fn.api.settings.api = {
-            'get followers' : '/followers/{id}/{/sort}',
+            'get followers' : '/followers/{id}/{/sort}'
           };
         </div>
       </div>
@@ -136,7 +136,7 @@ type        : 'UI Behavior'
         <h4 class="ui header">Creating your API</h4>
         <p>You should define your endpoints <b>once in your application</b>. Usually this is done in a central configuration file included on each page.</p>
         <p>These named API endpoints are stored globally in <code>$.fn.api.settings.api</code>.</p>
-        <p>Keeping your endpoints defined in one place makes sure when you update your application you will only need to update a single location with new URLs</p>
+        <p>Keeping your endpoints defined in one place makes sure when you update your application you will only need to update a single location with new URLs.</p>
         <div class="code" data-type="javascript">
           /* Define API endpoints once globally */
           $.fn.api.settings.api = {
@@ -151,7 +151,7 @@ type        : 'UI Behavior'
 
       <div class="no example">
         <h4 class="ui header">Using URLs</h4>
-        <p>Named API actions are not required to use API, you can also manually specify the url for a request and use the same templating:</p>
+        <p>Named API actions are not required to use API, you can also manually specify the URL for a request and use the same templating:</p>
         <div class="code">
         $('.search.button')
           .api({
@@ -173,7 +173,7 @@ type        : 'UI Behavior'
 
         <p>Any element can have an API action attached directly to it. By default the action will occur on the most appropriate event for the type of element. For example a button will call your server <code>onclick</code>, an input <code>oninput</code>, or a form <code>onsubmit</code>.</p>
 
-        <p>API actions and data can be specified in Javascript on initialization</p>
+        <p>API actions and data can be specified in Javascript on initialization:</p>
         <div class="code" data-type="html">
           <div class="ui follow button">
             Follow
@@ -234,7 +234,7 @@ type        : 'UI Behavior'
           })
         ;
         </div>
-        <p>Keep in mind passing a new settings object will destroy the previous instance, and all its settings and events. If you want to preserve the previous instance, you can trigger a new request with the <code>query</code> behavior</p>
+        <p>Keep in mind passing a new settings object will destroy the previous instance, and all its settings and events. If you want to preserve the previous instance, you can trigger a new request with the <code>query</code> behavior.</p>
         <div class="code" data-demo="true">
         // set-up API button with events
         $('.follow.button')
@@ -253,13 +253,13 @@ type        : 'UI Behavior'
 
       <div class="no example">
         <h4 class="ui header">Routing Data to URLs</h4>
-        <p>If your API urls include templated variables they will be replaced during your request by one of four possible ways, listed in of inheritance.</p>
-        <p>All parameters used in a url are encoded using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent" target="_blank"><code>encodeURIComponent</code></a> by default, to prevent from malicious strings from affecting your query. To disable this feature you can set <a href="#settings"><code>encodeParameters: false</code></a>.
+        <p>If your API URLs include templated variables they will be replaced during your request by one of four possible ways, listed in of inheritance.</p>
+        <p>All parameters used in a URL are encoded using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent" target="_blank"><code>encodeURIComponent</code></a> by default, to prevent from malicious strings from affecting your query. To disable this feature you can set <a href="#settings"><code>encodeParameters: false</code></a>.
       </div>
 
       <div class="no routed example">
         <h4 class="ui header">1. Automatically Routed URL Variables</h4>
-        <p>Some special values will be automatically replaced if specified in URL actions</p>
+        <p>Some special values will be automatically replaced if specified in URL actions.</p>
         <table class="ui definition table">
           <thead>
             <tr>
@@ -301,8 +301,8 @@ type        : 'UI Behavior'
 
       <div class="no example">
         <h4 class="ui header">2. URL Variables Specified in Data Attributes</h4>
-        <p>You can include url values as html5 metadata attributes</p>
-        <p>This is often easiest to include unique url data for each triggering element, for example, many follow buttons will trigger the same endpoint, but each will have its own user id.</p>
+        <p>You can include URL values as HTML5 metadata attributes.</p>
+        <p>This is often the easiest way to include unique URL data for each triggering element. For example, many follow buttons will trigger the same endpoint, but each will have its own user id.</p>
         <div class="ui ignored large warning message">
           Only variables specified in your API's URL will be searched for in metadata.
         </div>
@@ -315,7 +315,7 @@ type        : 'UI Behavior'
           </div>
         </div>
         <div class="code" data-type="javascript">
-          // requests different urls for each button
+          // requests different URLs for each button
           $('.follow.button')
             .api({
               action: 'follow user'
@@ -326,7 +326,7 @@ type        : 'UI Behavior'
 
       <div class="no example">
         <h4 class="ui header">3. Settings Specified in Javascript</h4>
-        <p>URL variable, and GET/POST data can be specified at run-time in the Javascript object </p>
+        <p>URL variables and GET/POST data can be specified at run-time in the Javascript object.</p>
         <div class="code" data-type="javascript">
           $('.follow.button')
             .api({
@@ -347,7 +347,7 @@ type        : 'UI Behavior'
 
       <div class="no example">
         <h4 class="ui header">4. Settings Returned from beforeSend</h4>
-        <p>All run settings, not just url data, can be adjusted in a special callback <code>beforeSend</code> which occurs before the API request is sent.</p>
+        <p>All run settings, not just URL data, can be adjusted in a special callback <code>beforeSend</code> which occurs before the API request is sent.</p>
         <div class="ui info message">
           An additional callback <code>beforeXHR</code> lets you modify the XHR object before sending. This is different than beforeSend which is used <b>to modify settings</b> before send.
         </div>
@@ -364,6 +364,7 @@ type        : 'UI Behavior'
               beforeXHR: function(xhr) {
                 // adjust XHR with additional headers
                 xhr.setRequestHeader ('Authorization', 'Basic XXXXXX');
+                return xhr;
               }
             })
           ;
@@ -405,7 +406,7 @@ type        : 'UI Behavior'
 
       <div class="no example">
         <h4 class="ui header">Cancelling Requests</h4>
-        <p>BeforeSend can also be used to check for special conditions for a request to be made. It the <code>beforeSend</code> callback returns false, the request will be cancelled.</p>
+        <p>BeforeSend can also be used to check for special conditions for a request to be made. If the <code>beforeSend</code> callback returns false, the request will be cancelled.</p>
         <div class="code" data-type="javascript" data-demo="true">
           // set somewhere in your code
           window.isLoggedIn = false;
@@ -429,11 +430,11 @@ type        : 'UI Behavior'
 
       <div class="example">
         <h4 class="ui header">1. Routed Form Data</h4>
-        <p>When you use the <code>serializeForm</code> setting, or attach API events on a form. API will automatically include the closest form in data sent to the server.</p>
-        <p>Structured form data is beneficial over <a href="https://api.jquery.com/serialize/">jQuery's serialize</a> for several reasons</p>
+        <p>When you use the <code>serializeForm</code> setting or attach API events on a form, API will automatically include the closest form in data sent to the server.</p>
+        <p>Structured form data is beneficial over <a href="https://api.jquery.com/serialize/">jQuery's serialize</a> for several reasons:</p>
         <ul class="ui large list">
-          <li>Serialize object correctly converts structured form names like <code>name="name[first]"</code> into nested object literals</li>
-          <li>Structured form data can be modified in Javascript in <code>beforeSend</code></li>
+          <li><a href="https://github.com/macek/jquery-serialize-object" target="_blank">Serialize Object</a> correctly converts structured form names like <code>name="name[first]"</code> into nested object literals.</li>
+          <li>Structured form data can be modified in Javascript in <code>beforeSend</code>.</li>
           <li>Form data will automatically be converted to their Javascript equivalents, for instance, checkboxes will be converted to <code>boolean</code> values.</li>
         </ul>
         <div class="ui ignored warning message">
@@ -512,7 +513,7 @@ type        : 'UI Behavior'
 
       <div class="no example">
         <h4 class="ui header">2. Data Routed in Javascript</h4>
-        <p>Server data can be specified directly when initializing an API requests</p>
+        <p>Server data can be specified directly when initializing an API requests.</p>
         <div class="code" data-type="javascript">
           $('.form .submit')
             .api({
@@ -540,7 +541,7 @@ type        : 'UI Behavior'
               // modify data PER element in callback
               beforeSend: function(settings) {
                 // cancel request if no id
-                if( !$(this).data('id') ) {
+                if(!$(this).data('id')) {
                   return false;
                 }
                 settings.data.userID = $(this).data('id');
@@ -591,8 +592,8 @@ type        : 'UI Behavior'
 
       <div class="no example">
         <h4 class="ui header">Determining JSON Success</h4>
-        <p>API has special success conditions for <code>JSON</code> responses. Instead of providing success and failure callbacks based on the HTTP response of the request. A request is considered succesful only if the server's response tells you the action was successful. The response is passed to a validation test <code>successTest</code> which can be used to check the JSON for a valid response.</p>
-        <p>For example you might expect all successful JSON responses to return a top level property signifying the success of the response<p>
+        <p>API has special success conditions for JSON responses. Instead of providing success and failure callbacks based on the HTTP response of the request, a request is considered successful only if the server's response tells you the action was successful. The response is passed to a validation test <code>successTest</code> which can be used to check the JSON for a valid response.</p>
+        <p>For example, you might expect all successful JSON responses to return a top level property signifying the success of the response:<p>
         <div class="ui ignored info message">
           You can use the <code>onResponse</code> callback to modify a server's response by returning a new translated response value before it is parsed by a success test.
         </div>
@@ -618,7 +619,7 @@ type        : 'UI Behavior'
 
       <div class="no response example">
         <h4 class="ui header">Modifying Response JSON</h4>
-        <p>In <code>2.0</code> API includes an <code>onResponse</code> callback which lets you adjust a server's response before a response is validated, allowing you to transform your response before other callbacks fire. This is useful for situations where an API response cannot be modified, but you need the response to conform with a required JSON structure.</p>
+        <p>Since version 2.0, API includes an <code>onResponse</code> callback which lets you adjust a server's response before a response is validated, allowing you to transform your response before other callbacks fire. This is useful for situations where an API response cannot be modified, but you need the response to conform with a required JSON structure.</p>
         <div class="ui search">
           <div class="ui left icon input">
             <input class="prompt" type="text" placeholder="Search GitHub">
@@ -668,6 +669,7 @@ type        : 'UI Behavior'
               }
             }
           })
+        ;
         </div>
       </div>
 
@@ -678,8 +680,8 @@ type        : 'UI Behavior'
 
         <p>API will automatically add class names for <code>loading</code> and <code>error</code>. This will let you trigger different UI states automatically as an API call progresses.</p>
 
-        <p>If you need a different element than the triggering API element to receive state class names you can specify a different selector using <code>settings.stateContext</code>.</p>
-        <p>Using <code>stateContext</code> allows you to easily do things like, trigger a loading state on a form when a submit button is pressed.</p>
+        <p>If you need a different element than the triggering API element to receive state class names, you can specify a different selector using <code>settings.stateContext</code>.</p>
+        <p>Using <code>stateContext</code> allows you to easily do things like trigger a loading state on a form when a submit button is pressed.</p>
 
         <h5 class="ui header">States Included in API Module</h5>
         <table class="ui definition celled table">
@@ -799,7 +801,7 @@ type        : 'UI Behavior'
 
         <div class="no sync mocked example">
           <h4 class="ui header">Fulfilling Responses</h4>
-          <p>In <code>2.0</code> API includes two new parameter <code>response</code> and <code>responseAsync</code> which allows you to specify a string, or as a sync or async function for returning an API response. (These were previously <code>mockResponse</code> and <code>mockResponseAsync</code>.)</p>
+          <p>Since version 2.0, API includes two new parameter <code>response</code> and <code>responseAsync</code> which allows you to specify a Javascript object or a function for returning an API response. (These were previously <code>mockResponse</code> and <code>mockResponseAsync</code>.)</p>
           <div class="code" data-type="javascript" data-demo="true">
             $('.sync.mocked .button')
               .api({
@@ -1112,7 +1114,7 @@ type        : 'UI Behavior'
           <td>method</td>
           <td>get</td>
           <td>Method for transmitting request to server</td>
-          <td>post, get</td>
+          <td>Any valid http method</td>
         </tr>
         <tr>
           <td>dataType</td>

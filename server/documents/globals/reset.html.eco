@@ -5,7 +5,7 @@ element     : 'reset'
 elementType : 'global'
 
 title       : 'Reset'
-description : 'A reset is a set of normalized values for CSS properties that correct for aberations in browser defaults'
+description : 'A reset is a set of normalized values for CSS properties that correct for abberations in browser defaults'
 type        : 'UI Global'
 
 themes      : ['Default', 'Basic', 'Resetcss']
@@ -19,6 +19,9 @@ themes      : ['Default', 'Basic', 'Resetcss']
   <div class="ui active tab" data-tab="overview">
     <h2 class="ui dividing header">What's In Our Reset</h2>
     <p>Semantic's default theme includes the latest <a href="http://necolas.github.io/normalize.css/">Normalize CSS</a> to provide a base line HTML reset. In addition, Semantic UI requires a <b>Box-sizing</b> reset, to make sure that elements handle width definitions in the same way.</p>
+    <div class="ui text message info ignore">
+      The reset is required for Semantic UI components to function properly, and should also be included when using individual components.
+    </div>
 
     <h2 class="ui dividing header">Reset Options</h2>
     <p>

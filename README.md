@@ -22,8 +22,8 @@ Assuming two sibling folders:
 * Clone both repos to respective folders
 * npm install in both directories
 * Go through Semantic UI installer steps (auto)
-* In ./ui folder `gulp build-docs` (builds files to ./docs)
-* In ./docs folder `docpad run`
+* In `./ui` folder `gulp build-docs` (builds files to ./docs)
+* In `./docs` folder `docpad run`
 * Go to http://localhost:9778/ docs should be there
 * Optionally run `gulp serve-docs` in ./ui to serve any changes from ./ui/src to ./docs
 

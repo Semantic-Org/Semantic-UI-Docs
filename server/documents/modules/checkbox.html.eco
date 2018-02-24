@@ -554,8 +554,10 @@ themes      : ['Default', 'Colored']
     <h2 class="ui dividing header">Initializing</h2>
 
     <div class="simple example">
-      <h4 class="ui header">Checkbox</h4>
-      <p>A checkbox does not require Javascript to function.</p>
+      <h4 class="ui header">Initializing a Checkbox</h4>
+      <div class="test code">
+      $('.ui.checkbox').checkbox();
+      </div>
       <div class="ui checkbox">
         <input type="checkbox">
         <label>Label</label>

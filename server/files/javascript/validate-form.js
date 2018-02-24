@@ -15,6 +15,7 @@ semantic.validateForm.ready = function() {
     $optionalForm = $('.optional.example .ui.form'),
     $dependsForm  = $('.depends.example .ui.form'),
     $inlineForm   = $('.inline.example .ui.form'),
+    $addForm      = $('.add.example .ui.form'),
     $form         = $('.ui.form').not($dogForm).not($inlineForm).not($dropdownForm).not($optionalForm).not($promptForm),
     $checkbox     = $('.main.container .ui.checkbox'),
     $dropdown     = $('.main.container .ui.dropdown'),
@@ -332,6 +333,10 @@ semantic.validateForm.ready = function() {
         }
       }
     })
+  ;
+
+  $addForm
+    .form('remove fields', ['password', 'gender'])
   ;
 };
 

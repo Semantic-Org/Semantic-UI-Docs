@@ -80,6 +80,60 @@ themes      : ['Default', 'Material']
       </div>
     </div>
   </div>
+  <div class="ui mini test modal">
+    <div class="header">
+      Delete Your Account
+    </div>
+    <div class="content">
+      <p>Are you sure you want to delete your account</p>
+    </div>
+    <div class="actions">
+      <div class="ui negative button">
+        No
+      </div>
+      <div class="ui positive right labeled icon button">
+        Yes
+        <i class="checkmark icon"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui special modal">
+    <div class="header">
+      Delete Your Account
+    </div>
+    <div class="content">
+      <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+      <div class="ui hidden divider"></div>
+    </div>
+    <div class="actions">
+      <div class="ui negative button">
+        No
+      </div>
+      <div class="ui positive right labeled icon button">
+        Yes
+        <i class="checkmark icon"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui tiny test modal">
+    <div class="header">
+      Delete Your Account
+    </div>
+    <div class="content">
+      <p>Are you sure you want to delete your account</p>
+    </div>
+    <div class="actions">
+      <div class="ui negative button">
+        No
+      </div>
+      <div class="ui positive right labeled icon button">
+        Yes
+        <i class="checkmark icon"></i>
+      </div>
+    </div>
+  </div>
 
   <div class="ui small test modal">
     <div class="header">
@@ -139,6 +193,40 @@ themes      : ['Default', 'Material']
       <div class="ui positive right labeled icon button">
         Yes
         <i class="checkmark icon"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui longer test modal">
+    <div class="header">
+      Profile Picture
+    </div>
+    <div class="scrolling image content">
+      <div class="ui medium image">
+        <img src="/images/wireframe/image.png">
+      </div>
+      <div class="description">
+        <div class="ui header">Modal Header</div>
+        <p>This is an example of expanded content that will cause the modal's dimmer to scroll</p>
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        <div class="ui divider"></div>
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        <div class="ui divider"></div>
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        <div class="ui divider"></div>
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        <div class="ui divider"></div>
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        <div class="ui divider"></div>
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        <div class="ui divider"></div>
+        <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+      </div>
+    </div>
+    <div class="actions">
+      <div class="ui primary approve button">
+        Proceed
+        <i class="right chevron icon"></i>
       </div>
     </div>
   </div>
@@ -399,6 +487,16 @@ themes      : ['Default', 'Material']
     <div class="no example">
       <h4 class="ui header">Size</h4>
       <p>A modal can vary in size</p>
+      <div class="code" data-demo="true" data-eval="$('.mini.test.modal').not('.basic').modal('show')">
+      $('.mini.modal')
+        .modal('show')
+      ;
+      </div>
+      <div class="code" data-demo="true" data-eval="$('.tiny.test.modal').not('.basic').modal('show')">
+      $('.tiny.modal')
+        .modal('show')
+      ;
+      </div>
       <div class="code" data-demo="true" data-eval="$('.small.test.modal').not('.basic').modal('show')">
       $('.small.modal')
         .modal('show')
@@ -406,6 +504,27 @@ themes      : ['Default', 'Material']
       </div>
       <div class="code" data-demo="true" data-eval="$('.large.test.modal').modal('show')">
       $('.large.modal')
+        .modal('show')
+      ;
+      </div>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">
+        Scrolling Content
+        <div class="ui teal label">New in 2.2.11</div>
+      </h4>
+      <p>A modal can use the entire size of the screen</p>
+      <div class="code" data-type="html" data-variation="scrolling">
+        <div class="ui modal">
+          <div class="header">Header</div>
+          <div class="scrolling content">
+            <p>Very long content goes here</p>
+          </div>
+        </div>
+      </div>
+      <div class="code" data-demo="true">
+      $('.ui.longer.modal')
         .modal('show')
       ;
       </div>
@@ -427,10 +546,36 @@ themes      : ['Default', 'Material']
     <h2 class="ui dividing header">Examples</h2>
 
     <div class="no example">
+      <h4 class="ui header">
+        Disabling Vertical Centering
+        <div class="ui horizontal teal label">New in 2.3</div>
+      </h4>
+      <p>When your modal has dynamic content, or multiple steps, it can make sense to disable centering so content doesn't jump around vertically when its height changes.</p>
+      <div class="code" data-demo="true">
+      $('.special.modal')
+        .modal({
+          centered: false
+        })
+        .modal('show')
+      ;
+      </div>
+    </div>
+
+    <div class="no example">
       <h4 class="ui header">Scrolling Modal</h4>
       <p>When your modal content exceeds the height of the browser the scrollable area will automatically expand to include just enough space for scrolling, without scrolling the page below.</p>
       <div class="code" data-demo="true">
       $('.long.modal')
+        .modal('show')
+      ;
+      </div>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">Internally Scrolling Content</h4>
+      <p>You may prefer to have the content of your modal scroll itself, you can do this by using the <code>scrolling content</code> variation.</p>
+      <div class="code" data-demo="true">
+      $('.longer.modal')
         .modal('show')
       ;
       </div>
@@ -903,7 +1048,7 @@ themes      : ['Default', 'Material']
           <td colspan="2">
             <div class="code">
       error   : {
-        method    : 'The method you called is not defined.''
+        method    : 'The method you called is not defined.'
       }
             </div>
           </td>

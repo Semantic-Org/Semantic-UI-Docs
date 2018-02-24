@@ -41,6 +41,7 @@ semantic.ready = function() {
     $search              = $('#search'),
     $sortTable           = $('.sortable.table'),
     $demo                = $('.demo'),
+    $begSegment          = $('.beg.segment'),
 
     $fullHeightContainer = $('.pusher > .full.height'),
     $container           = $('.main.container'),
@@ -113,6 +114,25 @@ semantic.ready = function() {
       });
     },
 
+    showBeg: function() {
+      if(window.localStorage !== undefined) {
+        $begSegment
+          .find('.delete.icon')
+            .on('click', handler.hideBeg)
+        ;
+        if(!window.localStorage.getItem('begDismissed')) {
+          $begSegment.transition('slide down');
+        }
+      }
+    },
+
+    hideBeg: function() {
+      $begSegment.transition('slide down');
+      if(window.localStorage !== undefined) {
+        window.localStorage.setItem('begDismissed', true);
+      }
+    },
+
     createIcon: function() {
       $example
         .each(function(){
@@ -122,7 +142,7 @@ semantic.ready = function() {
               : $(this).children().eq(1)
           ;
           $('<i/>')
-            .addClass('icon code')
+            .addClass('fitted icon code')
             .insertBefore( $insertPoint )
           ;
         })
@@ -443,22 +463,25 @@ semantic.ready = function() {
         .html($sticky)
         .prependTo($container)
       ;
-      $sticky.sticky({
-        silent: true,
-        context: $container,
-        offset: 30
+      requestAnimationFrame(function() {
+        $sticky.sticky({
+          silent: true,
+          context: $container,
+          container: $('html'),
+          offset: 30
+        });
+        $followMenu
+          .accordion({
+            exclusive: false,
+            animateChildren: false,
+            onChange: function() {
+              $('.ui.sticky').sticky('refresh');
+            }
+          })
+          .find('.menu a[href], .title[href]')
+            .on('click', handler.scrollTo)
+        ;
       });
-      $followMenu
-        .accordion({
-          exclusive: false,
-          animateChildren: false,
-          onChange: function() {
-            $('.ui.sticky').sticky('refresh');
-          }
-        })
-        .find('.menu a[href], .title[href]')
-          .on('click', handler.scrollTo)
-      ;
     },
 
     scrollTo: function(event) {
@@ -767,7 +790,6 @@ semantic.ready = function() {
           .on('click', handler.copyCode)
           .popup({
             variation    : 'inverted',
-            offset       : -12,
             distanceAway : 6
           })
         ;
@@ -1234,12 +1256,16 @@ semantic.ready = function() {
   window.less.registerStylesheets();
 
   // create sidebar sticky
-  $tocSticky
-    .sticky({
-      silent: true,
-      context: $fullHeightContainer
-    })
-  ;
+  requestAnimationFrame(function() {
+
+    $tocSticky
+      .sticky({
+        silent: true,
+        container: $('html'),
+        context: $fullHeightContainer
+      })
+    ;
+  });
 
   // load page tabs
   if( $pageTabs.length > 0 ) {
@@ -1255,13 +1281,16 @@ semantic.ready = function() {
             ? $(this).find('.examples')
             : $(this)
           ;
-          $(this).find('> .rail .ui.sticky, .fixed .ui.sticky')
-            .sticky({
-              context: $container,
-              silent: true,
-              offset: 30
-            })
-          ;
+          requestAnimationFrame(function() {
+            $(this).find('> .rail .ui.sticky, .fixed .ui.sticky')
+              .sticky({
+                context: $container,
+                container: $('html'),
+                silent: true,
+                offset: 30
+              })
+            ;
+          });
           $sectionHeaders = $container.children('h2');
           $sectionExample = $container.find('.example');
           $exampleHeaders = $sectionExample.children('h4');
@@ -1326,7 +1355,6 @@ semantic.ready = function() {
               hide: 100
             },
             position : 'top left',
-            offset   : -5,
             content  : 'View Source',
             target   : $(this).find('i.code')
           })
@@ -1412,7 +1440,8 @@ semantic.ready = function() {
     .dropdown({
       allowTab       : false,
       on             : 'click',
-      fullTextSearch : true,
+      fullTextSearch : 'exact',
+      match          : 'text',
       onShow         : function() {
         $(this).popup('hide');
       },
@@ -1430,6 +1459,13 @@ semantic.ready = function() {
 
   if(window.Transifex !== undefined) {
     window.Transifex.live.onTranslatePage(handler.showLanguageModal);
+  }
+
+  if(typeof detectAdBlock === 'undefined') {
+    handler.showBeg();
+  }
+  else {
+    detectAdBlock.onDetected(handler.showBeg);
   }
 
   handler.getMetadata();

@@ -55,6 +55,7 @@ standalone : true
     <div class="introduction">
       <a class="ui black version label" href="https://github.com/Semantic-Org/Semantic-UI/blob/<%= @getBranch() %>/RELEASE-NOTES.md">
         <%= @getVersion() %>
+        - Feb 2018
       </a>
       <h1 class="ui inverted header">
         <span class="library">
@@ -69,7 +70,7 @@ standalone : true
       <a href="/introduction/getting-started.html" class="ui huge inverted download button">
         Get Started
       </a>
-      <a href="/introduction/new.html" class="ui huge inverted basic button">New in 2.2</a>
+      <a href="/introduction/new.html" class="ui huge inverted basic button">New in 2.3</a>
     </div>
     <div class="inverted advertisement">
       <% unless 'development' in @getEnvironments(): %>

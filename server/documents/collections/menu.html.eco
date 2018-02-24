@@ -718,16 +718,6 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
 
 
   <div class="example">
-    <h4 class="ui header">Down</h4>
-    <p>A menu item can be pressed in</p>
-    <div class="ui compact menu">
-      <div class="down item">
-        Link
-      </div>
-    </div>
-  </div>
-
-  <div class="example">
     <h4 class="ui header">Active</h4>
     <p>A menu item can be active</p>
     <div class="ui compact menu">

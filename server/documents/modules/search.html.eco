@@ -59,9 +59,9 @@ type        : 'UI Module'
 
     <div class="local example">
       <h4 class="ui header">Local Search</h4>
-      <p>A search can look for results inside static local content.</p>
+      <p>A search can look for results inside a static local source.</p>
       <div class="ui ignored info message">
-        By default, results will return content first that begin with the query text, but also afterward content that matches the query anywhere inside. To disable full text search you can specify in settings <code>searchFullText: false</code>.
+        By default, results will return content first that begin with the query text, but also afterward content that matches the query anywhere inside. To disable full text search you can specify in settings <code>fullTextSearch: false</code>.
       </div>
       <div class="ui search">
         <div class="ui icon input">
@@ -104,6 +104,50 @@ type        : 'UI Module'
         { title: 'Bahrain' },
         { title: 'Burundi' }
         // etc
+      ];
+      </div>
+    </div>
+
+
+    <div class="local-category example">
+      <h4 class="ui header">
+        Local Category Search
+        <div class="ui teal label">New in 2.3</div>
+      </h4>
+      <p>A search can look for category results inside a static local source.</p>
+      <div class="ui ignored info message">
+        By default, results will return content first that begin with the query text, but also afterward content that matches the query anywhere inside. To disable full text search you can specify in settings <code>fullTextSearch: false</code>.
+      </div>
+      <div class="ui search">
+        <div class="ui icon input">
+          <input class="prompt" type="text" placeholder="Search countries...">
+          <i class="search icon"></i>
+        </div>
+        <div class="results"></div>
+      </div>
+      <div class="code" data-type="javascript">
+        $('.ui.search')
+          .search({
+            type: 'category',
+            source: categoryContent
+          })
+        ;
+      </div>
+      <div class="hidden code" data-type="javascript">
+      var categoryContent = [
+        { category: 'South America', title: 'Brazil' },
+        { category: 'South America', title: 'Peru' },
+        { category: 'North America', title: 'Canada' },
+        { category: 'Asia', title: 'South Korea' },
+        { category: 'Asia', title: 'Japan' },
+        { category: 'Asia', title: 'China' },
+        { category: 'Europe', title: 'Denmark' },
+        { category: 'Europe', title: 'England' },
+        { category: 'Europe', title: 'France' },
+        { category: 'Europe', title: 'Germany' },
+        { category: 'Africa', title: 'Ethiopia' },
+        { category: 'Africa', title: 'Nigeria' },
+        { category: 'Africa', title: 'Zimbabwe' },
       ];
       </div>
     </div>
@@ -222,9 +266,9 @@ type        : 'UI Module'
     <p>You can specify custom API settings to adjust the url, callback settings, or specify a different API action.</p>
     <div class="code" data-label="javascript">
 
-      // initializes with default endpoint /search/{query}
       $('.ui.search')
         .search({
+          // change search endpoint to a custom endpoint by manipulating apiSettings
           apiSettings: {
             url: 'custom-search/?q={query}'
           },
@@ -258,7 +302,7 @@ type        : 'UI Module'
           searchFields   : [
             'title'
           ],
-          searchFullText: false
+          fullTextSearch: false
         })
       ;
     </div>
@@ -376,7 +420,7 @@ type        : 'UI Module'
       </thead>
       <tbody>
         <tr>
-          <td>query</td>
+          <td>query (callback)</td>
           <td>Search for value currently set in search input</td>
         </tr>
         <tr>
@@ -396,7 +440,7 @@ type        : 'UI Module'
           <td>Whether has minimum characters</td>
         </tr>
         <tr>
-          <td>search remote(query)</td>
+          <td>search remote(query, callback)</td>
           <td>Search remote endpoint for specified query and display results</td>
         </tr>
         <tr>
@@ -448,11 +492,11 @@ type        : 'UI Module'
           <td>Adds HTML to results and displays</td>
         </tr>
         <tr>
-          <td>show results</td>
+          <td>show results(callback)</td>
           <td>Shows results container</td>
         </tr>
         <tr>
-          <td>hide results</td>
+          <td>hide results(callback)</td>
           <td>Hides results container</td>
         </tr>
         <tr>
@@ -586,6 +630,11 @@ type        : 'UI Module'
           <td>Minimum characters to query for results</td>
         </tr>
         <tr>
+          <td>searchOnFocus</td>
+          <td>true</td>
+          <td>Whether search should show results on focus (must also match min character length)</td>
+        </tr>
+        <tr>
           <td>transition</td>
           <td>
             fade
@@ -625,9 +674,9 @@ type        : 'UI Module'
           <td>Whether a "no results" message should be shown if no results are found. (These messages can be modified using the <code>template</code> object specified below)</td>
         </tr>
         <tr>
-          <td>searchFullText</td>
-          <td>true</td>
-          <td>Return local results that match anywhere inside your content</td>
+          <td>fullTextSearch</td>
+          <td>'exact'</td>
+          <td>Specifying to "true" will use a fuzzy full text search, setting to "exact" will force the exact search to be matched somewhere in the string, setting to <code>false</code> will only match to start of string. (This setting was previously called <code>searchFullText</code>.)</td>
         </tr>
         <tr>
           <td>fields</td>

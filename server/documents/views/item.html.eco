@@ -333,6 +333,48 @@ themes      : ['Default']
 
   <h2 class="ui dividing header">Variations</h2>
 
+  <div class="example" data-class="unstackable">
+    <h4 class="ui header">Stacking</h4>
+    <p>A table can specify how it stacks items responsively</p>
+    <div class="ui unstackable items">
+      <div class="item">
+        <div class="image">
+          <img src="/images/wireframe/image.png">
+        </div>
+        <div class="content">
+          <a class="header">Header</a>
+          <div class="meta">
+            <span>Description</span>
+          </div>
+          <div class="description">
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+          </div>
+          <div class="extra">
+            Additional Details
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="image">
+          <img src="/images/wireframe/image.png">
+        </div>
+        <div class="content">
+          <a class="header">Header</a>
+          <div class="meta">
+            <span>Description</span>
+          </div>
+          <div class="description">
+            <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+          </div>
+          <div class="extra">
+            Additional Details
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <div class="example">
     <h4 class="ui header">Divided</h4>
     <p>Items can be divided to better distinguish between grouped content</p>

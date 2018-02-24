@@ -1416,7 +1416,7 @@ themes      : ['Default']
             </div>
           </div>
         </div>
-        <div class="two column large screen only row">
+        <div class="two column widescreen only row">
           <div class="column">
             <div class="ui segment">
               Widescreen

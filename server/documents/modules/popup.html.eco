@@ -310,7 +310,7 @@ themes      : ['Default']
           <div class="header">Specifying Content</div>
           <p>Popups can specify content in three ways:<p>
           <ul class="list">
-            <li>Using HTML <code>title</code> attribute</li>
+            <li>Using <code>data-title</code> attribute</li>
             <li>Using <code>data-content</code> attribute</li>
             <li>Using <code>data-html</code> for specific HTML</li>
             <li>Using the content property in the initialization of the popup</li>

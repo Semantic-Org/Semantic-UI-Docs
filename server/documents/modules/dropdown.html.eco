@@ -2046,7 +2046,7 @@ themes      : ['Default', 'GitHub', 'Material']
     <div class="no example">
       <h4 class="ui header">Multiple Selections</h4>
       <p>You can allow multiple selections by the <code>multiple</code> property on a <code>select</code> element, or by including the class <code>multiple</code> on a dropdown.</p>
-      <p>When a hidden input is used values will be passed through a single value separated by a delimiter. The default is "," but this can be changed by adjusting the <code>delimiter</code> setting.</p>
+      <p>When pre-existing HTML with a hidden input is used, values will be passed through a single value separated by a delimiter. The default is "," but this can be changed by adjusting the <code>delimiter</code> setting.</p>
       <div class="code" data-type="javascript" data-demo="true">
         $('#multi-select')
           .dropdown()

@@ -83,7 +83,7 @@ themes      : ['Default']
         </tbody>
       </table>
       <h3 class="ui header">Responsive Visibility</h3>
-      <p>Since variations in Semantic UI are only assigned in the scope of components, there are no "free floating" responsive class names, however some components include responsive variations to help ease responsive design. <a href=href="/collections/grid.html#device-visibility">Grid</a> for example, includes responsive classes for hiding or showing <code>column</code>, <code>row</code> based on device type.</p>
+      <p>Since variations in Semantic UI are only assigned in the scope of components, there are no "free floating" responsive class names, however some components include responsive variations to help ease responsive design. <a href="/collections/grid.html#device-visibility">Grid</a> for example, includes responsive classes for hiding or showing <code>column</code>, <code>row</code> based on device type.</p>
 
       <a href="/collections/grid.html#device-visibility" class="ui secondary button">See grid responsive variations <i class="right chevron icon"></i></a>
 

@@ -145,6 +145,9 @@ type        : 'Main'
     <div class="no centering example">
       <h4 class="ui header">Arrow Aligment on Small Popups</h4>
       <p>Semantic <a href="/modules/popup.html">popups</a> now detects when horizontally aligning the popup on it's arrow is more reasonable than matching edges with a popup.</p>
+      <div class="ui info message">
+        To use this feature be sure to specify <code>movePopup: false</code> in your settings
+      </div>
       <img src="http://oi66.tinypic.com/2zr2ckk.jpg" class="ui image">
 
       <div class="ui divider"></div>
@@ -155,7 +158,7 @@ type        : 'Main'
     </div>
     <div class="complex-popup no example">
       <h4 class="ui header">Popups Support Multiple Coordinate Systems</h4>
-      <p>Popups now can correctly place elements with two different coordinate systems (created by a parent with <code>transform</code> or <code>positon</code> set.)</p>
+      <p>Popups now can correctly place elements with two different coordinate systems. These are typically caused by having a parent element with css properties <code>transform</code> or <code>position</code>.</p>
       <div id="one">
         <p>Button is in here</p>
         <div class="ui button">Button</div>

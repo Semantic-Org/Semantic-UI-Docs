@@ -164,51 +164,37 @@ type        : 'UI Element'
     <p>A rail can have different sizes</p>
     <div class="ui segment">
       <div class="ui left mini rail">
-        <div class="ui segment">
-          Mini
-        </div>
+        Mini
       </div>
       <div class="ui right tiny rail">
-        <div class="ui segment">
-          Tiny
-        </div>
+        Tiny
       </div>
       <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
       <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
     </div>
     <div class="ui segment">
       <div class="ui left small rail">
-        <div class="ui segment">
-          Small
-        </div>
+        Small
       </div>
       <div class="ui right large rail">
-        <div class="ui segment">
-          Large
-        </div>
+        Large
       </div>
       <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
       <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
     </div>
     <div class="ui segment">
       <div class="ui left big rail">
-        <div class="ui segment">
-          Big
-        </div>
+        Big
       </div>
       <div class="ui right huge rail">
-        <div class="ui segment">
-          Huge
-        </div>
+        Huge
       </div>
       <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
       <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
     </div>
     <div class="ui segment">
       <div class="ui right massive rail">
-        <div class="ui segment">
-          Massive
-        </div>
+        Massive
       </div>
       <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
       <img src="/images/wireframe/paragraph.png" class="ui wireframe image">

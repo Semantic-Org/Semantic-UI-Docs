@@ -5,7 +5,7 @@ This folder contains the templates used to generate the static website for [sema
 ## How to Use
 
 
-To install [DocPad](http://github.com/docpad/docpad), the static site generator used to create the HTML for the site.
+You must install [DocPad](http://github.com/docpad/docpad), the static site generator used to create the HTML for the site, to render the contents of this repository.
 ```
 npm install -g docpad
 docpad install eco;

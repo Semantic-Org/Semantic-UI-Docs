@@ -312,10 +312,10 @@ type        : 'UI Behavior'
       <div class="ignored code">
       $('.ui.form')
         .form({
-          fields: [
+          fields: {
            email: 'empty',
            name: 'empty'
-          ]
+          }
         })
       ;
       if( $('.ui.form').form('is valid', 'email')) {

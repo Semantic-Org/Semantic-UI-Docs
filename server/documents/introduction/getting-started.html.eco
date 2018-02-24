@@ -23,7 +23,7 @@ type        : 'Main'
     <p>Semantic UI packaged Gulp build tools so your project can preserve its <a href="/usage/theming.html">own theme changes</a>.</p>
     <p>The easiest way to install Semantic UI is our NPM package which contains special install scripts to make setup interactive and updates seamless.</p>
 
-    <p>For installing with specific integrations like, Ember, React, or Meteor, see our <a href="/introduction/integrations.html">integration guide</a></p>
+    <p>For installing with specific integrations like Ember, React, or Meteor, see our <a href="/introduction/integrations.html">integration guide</a></p>
     <p>For integrating Semantic UI tasks into your own build tools, or using a CDN see our <a href="/introduction/advanced-usage.html">recipes</a> section.</p>
 
   </div>

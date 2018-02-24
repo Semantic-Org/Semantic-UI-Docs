@@ -31,5 +31,4 @@
   <%- @partial('dimmer-demo') %>
   <%- @partial('less') %>
 </body>
-
 </html>

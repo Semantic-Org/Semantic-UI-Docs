@@ -28,7 +28,7 @@ type        : 'UI Behavior'
       <h4 class="ui header">Specifying Validation Rules</h4>
       <p>Form validation requires passing in a validation object with the rules required to validate your form.</p>
       <div class="ui ignored info message">
-        A validation object includes a list of form elements, and rules to validate each field against. Fields are matched by either the <code>id</code>, <code>name</code>, or <code>data-validate</code>  property matching the identifier specified in the settings object. Validation objects must use either shorthand or longhand exclusively.
+        A validation object includes a list of form elements, and rules to validate each field against. Fields are matched by either the <code>id</code>, <code>name</code>, or <code>data-validate</code> property (in that order) matching the identifier specified in the settings object. Validation objects must use either shorthand or longhand exclusively.
       </div>
       <div class="ignore code" data-title="Shorthand Validation">
       $('.ui.form')
@@ -282,6 +282,51 @@ type        : 'UI Behavior'
       </form>
     </div>
 
+    <div class="prompt example">
+      <h4 class="ui header">
+        Validating Programmatically
+        <div class="ui teal label">Updated in 2.2.8</div>
+      </h4>
+      <p>Form validation provides additional behaviors to programmatically trigger validation for either the form or an individual field, and check validation on the form or individual fields.</p>
+      <p>Please see the <a href="#behaviors">behaviors section</a> for an explanation on syntax.</p>
+      <table class="ui celled sortable basic table segment">
+        <tbody>
+          <tr>
+            <td class="four wide"><b>validate form</b></td>
+            <td>Validates entire form and displays errors if necessary</td>
+          </tr>
+          <tr>
+            <td class="four wide"><b>is valid</b></td>
+            <td>Returns whether a form is valid</td>
+          </tr>
+          <tr>
+            <td class="four wide"><b>is valid(fieldName)</b></td>
+            <td>Returns whether a field in a form is valid (does not update UI)</td>
+          </tr>
+          <tr>
+            <td class="four wide"><b>validate field(fieldName)</b></td>
+            <td>Validates a particular field and displays errors if necessary</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="ignored code">
+      $('.ui.form')
+        .form({
+          fields: {
+           email: 'empty',
+           name: 'empty'
+          }
+        })
+      ;
+      if( $('.ui.form').form('is valid', 'email')) {
+        // email is valid
+      }
+      if( $('.ui.form').form('is valid')) {
+        // form is valid (both email and name)
+      }
+      </div>
+    </div>
+
     <h2 class="ui dividing header">Rules</h2>
 
     <div class="no example">
@@ -382,7 +427,7 @@ type        : 'UI Behavior'
           </tr>
           <tr>
             <td>doesntContainExactly</td>
-            <td>A field doesn't text (case sensitive)</td>
+            <td>A field doesn't contain text (case sensitive)</td>
             <td><code>doesntContainExactly[foo]</code></td>
           </tr>
           <tr>
@@ -838,7 +883,7 @@ type        : 'UI Behavior'
           </div>
           <div class="field">
             <label>E-mail</label>
-            <input name="email" type="text" value="jack@foo">
+            <input name="email" type="text" value="jack">
           </div>
         </div>
         <div class="two fields">
@@ -1358,10 +1403,86 @@ type        : 'UI Behavior'
 
     <h2 class="ui dividing header">Form Examples</h2>
 
-    <div class="dropdown example">
-      <h4 class="ui header">Regular Expressions</h4>
-
+    <div class="add example">
+      <h4 class="ui header">
+        Adding Rules Programmatically <div class="ui teal label">New in 2.2.11</div>
+      </h4>
+      <p>You can use the special behaviors <code>add field/rule</code>, <code>remove rule</code> and <code>remove field</code> to dynamically add or remove fields or rules. </p>
+      <div class="ui ignored info message">
+        <div class="ui header">Adding Multiple Rules and Complex Rules</div>
+        You can specify shorthand or full rule objects when adding rules. You can also specifiy fields as an array to modify multiple fields.</code>.
+      </div>
+      <div class="code">
+      // lets only validate username to start
+      $('.add.example .ui.form')
+        .form({
+          username: ['empty', 'minLength[5]']
+        })
+      ;
+      </div>
+      <div class="evaluated code">
+      // lets toggle some validation based on button
+      $('.add.example .ui.positive.button')
+        .on('click', function() {
+          $('.add.example .ui.form')
+            // adding longform
+            .form('add rule', 'gender', {
+              rules: [
+                {
+                  type   : 'empty',
+                  prompt : 'Entering your gender is necessary'
+                }
+              ]
+            })
+            // adding shorthand
+            .form('add rule', 'password', ['empty', 'minLength[5]'])
+          ;
+        })
+      ;
+      </div>
+      <div class="evaluated code">
+      $('.add.example .ui.negative.button')
+        .on('click', function() {
+          $('.add.example .ui.form')
+            // removing multiple at once
+            .form('remove fields', ['gender', 'password'])
+          ;
+        })
+      ;
+      </div>
+      <div class="ui positive button">Add Additional Validation</div>
+      <div class="ui negative button">Remove Additional Validation</div>
+      <form class="ui form segment">
+        <div class="two fields">
+          <div class="field">
+            <label>Username</label>
+            <input type="text" name="username">
+          </div>
+          <div class="field">
+            <label>Password</label>
+            <input type="password" name="password">
+          </div>
+        </div>
+        <div class="two fields">
+          <div class="field">
+            <label>Gender</label>
+            <div class="ui fluid selection dropdown">
+              <input type="hidden" name="gender">
+              <div class="default text">Gender</div>
+              <i class="dropdown icon"></i>
+              <div class="menu">
+                <div class="item" data-value="1">Male</div>
+                <div class="item" data-value="0">Female</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ui primary submit button">Submit</div>
+        <div class="ui clear button">Clear</div>
+        <div class="ui error message"></div>
+      </form>
     </div>
+
     <div class="dropdown example">
       <h4 class="ui header">Validating Dropdowns</h4>
       <p><a href="/modules/dropdown.html">Dropdowns</a> can also be validated like other form fields. Simply match the validation rule to the <code>input</code> or <code>select</code> associated with the dropdown</p>
@@ -1372,24 +1493,8 @@ type        : 'UI Behavior'
       $('.ui.form')
         .form({
           fields: {
-            gender: {
-              identifier  : 'gender',
-              rules: [
-                {
-                  type   : 'empty',
-                  prompt : 'Please enter a gender'
-                }
-              ]
-            },
-            name: {
-              identifier  : 'name',
-              rules: [
-                {
-                  type   : 'empty',
-                  prompt : 'Please enter your name'
-                }
-              ]
-            }
+            gender: 'empty',
+            name: 'empty'
           }
         })
       ;
@@ -1423,14 +1528,7 @@ type        : 'UI Behavior'
       $('.ui.form')
         .form(
           fields: {
-            name: {
-              identifier : 'name',
-              rules: [
-                {
-                  type   : 'empty'
-                }
-              ]
-            }
+            name: 'empty'
           }
         })
       ;
@@ -1490,7 +1588,7 @@ type        : 'UI Behavior'
       <p>Adding the parameter <code>optional: true</code> will only add your validation rules when the field is <b>not empty</b>.
       <div class="ignored code">
       $('.ui.form')
-        .form(
+        .form({
           fields: {
             email: {
               identifier : 'email',
@@ -1696,7 +1794,7 @@ type        : 'UI Behavior'
   </div>
 
   <div class="ui tab" data-tab="settings">
-    <h2 class="ui dividing header">Behavior</h2>
+    <h2 class="ui dividing header">Behaviors</h2>
 
     All the following behaviors can be called using the syntax
 
@@ -1714,12 +1812,36 @@ type        : 'UI Behavior'
         <td>Returns true/false whether a form passes its validation rules</td>
       </tr>
       <tr>
-        <td>validate form</td>
-        <td>Validates form and calls onSuccess or onFailure</td>
+        <td>add rule(field, rules)<div class="ui label">New in 2.2.11</div></td>
+        <td>Adds rule to existing rules for field, also aliased as <code>add field</code></td>
       </tr>
       <tr>
-        <td>get change event</td>
-        <td>gets browser property change event</td>
+        <td>add fields(fields) <div class="ui label">New in 2.2.11</div></td>
+        <td>Adds fields object to existing fields</td>
+      </tr>
+      <tr>
+        <td>remove rule(field, rules)<div class="ui label">New in 2.2.11</div></td>
+        <td>Removes specific rule from field leaving other rules</td>
+      </tr>
+      <tr>
+        <td>remove field(field)<div class="ui label">New in 2.2.11</div></td>
+        <td>Remove all validation for a field</td>
+      </tr>
+      <tr>
+        <td>add prompt(identifier, errors)</td>
+        <td>Adds error prompt to the field with the given identifier</td>
+      </tr>
+      <tr>
+        <td>is valid(fieldName)</td>
+        <td>Returns true/false whether a field passes its validation rules</td>
+      </tr>
+      <tr>
+        <td>validate form</td>
+        <td>Validates form, updates UI, and calls onSuccess or onFailure</td>
+      </tr>
+      <tr>
+        <td>validate field(fieldName)</td>
+        <td>Validates field, updates UI, and calls onSuccess or onFailure</td>
       </tr>
       <tr>
         <td>get field(id)</td>
@@ -1752,6 +1874,10 @@ type        : 'UI Behavior'
       <tr>
         <td>add errors(errors)</td>
         <td>Adds errors to form, given an array errors</td>
+      </tr>
+      <tr>
+        <td>add prompt(id, prompt)</td>
+        <td>Adds a custom user prompt for a given element with id</td>
       </tr>
     </table>
 
@@ -2019,7 +2145,7 @@ type        : 'UI Behavior'
           </tr>
           <tr>
             <td>debug</td>
-            <td>True</td>
+            <td>False</td>
             <td>Provides standard debug output to console</td>
           </tr>
           <tr>
@@ -2029,7 +2155,7 @@ type        : 'UI Behavior'
           </tr>
           <tr>
             <td>verbose</td>
-            <td>True</td>
+            <td>False</td>
             <td>Provides ancillary debug output to console</td>
           </tr>
           <tr>

@@ -337,7 +337,7 @@ type        : 'Usage'
 
   <div class="no example">
     <h4 class="ui header">Theme Files</h4>
-    <p>Themes are made up of two files a <code>.variables</code> file and a <code>.overrides</code> file. A theme can include both variables and overrides, or just either one alone.</p>
+    <p>Themes are made up of two files: a <code>.variables</code> file and a <code>.overrides</code> file. A theme can include both variables and overrides, or just either one alone.</p>
   </div>
   <div class="no example">
     <h4 class="ui header">Variables Files</h4>

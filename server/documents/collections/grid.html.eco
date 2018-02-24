@@ -43,7 +43,7 @@ themes      : ['Default']
     <div class="highlighted example" data-use-content="true" data-class="column">
       <h4 class="ui header">Columns</h4>
       <p>Grids divide horizontal space into indivisible units called "columns". All columns in a grid must specify their width as proportion of the total available row width.</p>
-      <p>All grid systems chooses an arbitrary column count to allow per row. Semantic's default theme uses <b>16 columns</b>.</p>
+      <p>All grid systems choose an arbitrary column count to allow per row. Semantic's default theme uses <b>16 columns</b>.</p>
 
       <p>The example below shows four <code>four wide</code> columns will fit in the first row, <code>16 / 4 = 4</code>, and three various sized columns in the second row. <code>2 + 8 + 6 = 16</code></p>
 

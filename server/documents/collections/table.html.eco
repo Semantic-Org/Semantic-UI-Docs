@@ -325,7 +325,7 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
 
     <div class="ui ignored info message">
       <p>UI tables use <code>border-collapse: separate</code> to allow for tables to receive styles that cannot usually be applied to tables like <code>border-radius</code>. However this can cause some cell borders to appear missing with complex layouts that use <code>rowspan</code> or <code>colspan</code> and rows with varying column count.</p>
-      <p><code>ui complex table</code> does not support some style features, but can correctly display all valid HTML table content.</p>
+      <p><code>ui structured table</code> does not support some style features, but can correctly display all valid HTML table content.</p>
     </div>
 
     <table class="ui celled structured table">
@@ -858,34 +858,6 @@ themes      : ['Default', 'Basic', 'Classic', 'GitHub']
           <td class="selectable negative">
             <a href="#">Remove</a>
           </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="another example">
-    <table class="ui selectable inverted table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Status</th>
-          <th class="right aligned">Notes</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>John</td>
-          <td>Approved</td>
-          <td class="right aligned">None</td>
-        </tr>
-        <tr>
-          <td>Jamie</td>
-          <td>Approved</td>
-          <td class="right aligned">Requires call</td>
-        </tr>
-        <tr>
-          <td>Jill</td>
-          <td>Denied</td>
-          <td class="right aligned">None</td>
         </tr>
       </tbody>
     </table>

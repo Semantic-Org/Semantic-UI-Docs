@@ -523,7 +523,7 @@ themes      : ['Default']
       $('.ui.menu .item')
         .tab({
           history: true,
-          historyType: 'state'
+          historyType: 'state',
           path: '/modules/tab.html'
         })
       ;

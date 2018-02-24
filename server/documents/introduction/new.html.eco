@@ -4,17 +4,235 @@ css         : 'new'
 standalone  : true
 order       : 1
 
-title       : 'New in 2.2'
+title       : 'New in 2.3'
 description : 'An introduction to new features found in the latest release'
 type        : 'Main'
 ---
 
-<%- @partial('header',  { tabs: { new: 'New in 2.2', prev: 'New in 2.1', last: 'New in 2.0' } }) %>
+<%- @partial('header',  { tabs: { twothree: 'New in 2.3', twotwo: 'New in 2.2', twoone: 'New in 2.1', two: 'New in 2.0' } }) %>
 <script src="/javascript/new.js"></script>
 
 <div class="main ui intro container">
 
-  <div class="ui tab" data-tab="new">
+  <div class="ui active tab" data-tab="twothree">
+    <h2 class="ui dividing header">A New Approach</h2>
+
+    <p>After an extended period of patches, Semantic UI <code>2.3</code> marks the return to significant feature changes for the project.</p>
+    <p>In upcoming Semantic releases we will be releasing more frequently, but with smaller changesets, to make it easier for users to upgrade and adjust to global changes.</p>
+
+    <h2 class="ui dividing header">New Features</h2>
+    <div class="no icon example">
+
+      <h4 class="ui header">Font Awesome 5.0 &amp; Better Icon Searching</h4>
+      <p>In <code>2.3</code> <a href="/elements/icon.html">icons</a> now include a full port of <a href="https://fontawesome.com/" target="_blank">Font Awesome</a> <code>5.0.6</code>, including 929 icons.</p>
+      <p>Icon categories now match icon categories in Font Awesome's documentation, making it easier to find icons between docs.</p>
+      <div class="ui doubling five column vertically padded grid">
+        <div class="column"><i class="smile icon"></i>Smile</div>
+        <div class="column"><i class="smile outline icon"></i>Smile Outline</div>
+        <div class="column"><i class="hand rock icon"></i>Hand Rock </div>
+        <div class="column"><i class="hand paper icon"></i>Hand Paper </div>
+        <div class="column"><i class="hand scissors icon"></i>Hand Scissors</div>
+      </div>
+      <p>Semantic UI <a href="/elements/icon.html">icon docs</a> now includes a global icon search with easy copy and paste access to html</p>
+    </div>
+
+
+    <div class="no modal example">
+      <h4 class="ui header">Flexbox Modals and Dimmers</h4>
+
+      <p>Semantic UI <code>2.3</code> includes a rewrite of modal to include non-js flexbox positioning for vertical centering. No longer will you have to call <code>$('.ui.modal').modal('refresh')</code> if content height changes to recenter.</p>
+
+      <p>In addition there's a new setting <code>centerable: false</code> which makes it easier to do top aligned modals when the internal may be dynamic and you dont want content to shift vertically.</p>
+
+
+      <div class="ui special modal">
+        <div class="header">
+          Top Aligned Modal
+        </div>
+        <div class="content">
+          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+          <div class="ui hidden divider"></div>
+        </div>
+        <div class="actions">
+          <div class="ui button">
+            Cancel
+          </div>
+          <div class="ui primary right labeled icon button">
+            Submit
+            <i class="checkmark icon"></i>
+          </div>
+        </div>
+      </div>
+      <a class="ui button" data-url="/images/large-pdf.pdf">
+        Open Top Aligned Modal
+      </a>
+      <div class="evaluated code" data-type="javascript">
+        $('.ui.special.modal')
+          .modal({
+            centered: false
+          })
+          .modal('attach events', '.modal.example .button')
+        ;
+      </div>
+    </div>
+
+    <div class="no modal example">
+      <h4 class="ui header">New Transitions</h4>
+      <p>
+        <a href="/modules/transition.html">Transition</a> now includes <code>zoom</code> and <code>glow</code>. Glow is useful for highlighting elements on page,
+      </p>
+      <div class="code" data-demo="true">
+        $('.autumn.leaf')
+          .transition('zoom')
+        ;
+      </div>
+      <div class="code" data-demo="true">
+        $('.autumn.leaf')
+          .transition('glow')
+        ;
+      </div>
+      <img src="/images/leaves/7.png" class="ui autumn leaf medium image">
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Global Font Weight Variables</h4>
+      <p>Theming now uses two no global variables <code>@bold</code> and <code>@normal</code> making it easier to modify font weights in a more complex font stack</p>
+      <div class="code" data-type="less" data-title="site.variables">
+        /* Use some custom font weights */
+        @bold: 600;
+        @normal: 400;
+      </div>
+
+    </div>
+    <div class="local-category example">
+      <h4 class="ui header">Local Category Search</h4>
+      <p>You can now use category search with the <code>source</code> option without having to add API callbacks</p>
+      <div class="ui search">
+        <div class="ui icon input">
+          <input class="prompt" type="text" placeholder="Search countries...">
+          <i class="search icon"></i>
+        </div>
+        <div class="results"></div>
+      </div>
+      <div class="evaluated code" data-type="javascript">
+        var categoryContent = [
+          { category: 'South America', title: 'Brazil' },
+          { category: 'South America', title: 'Peru' },
+          { category: 'North America', title: 'Canada' },
+          { category: 'Asia', title: 'South Korea' },
+          { category: 'Asia', title: 'Japan' },
+          { category: 'Asia', title: 'China' },
+          { category: 'Europe', title: 'Denmark' },
+          { category: 'Europe', title: 'England' },
+          { category: 'Europe', title: 'France' },
+          { category: 'Europe', title: 'Germany' },
+          { category: 'Africa', title: 'Ethiopia' },
+          { category: 'Africa', title: 'Nigeria' },
+          { category: 'Africa', title: 'Zimbabwe' },
+        ];
+        $('.local-category.example .ui.search')
+          .search({
+            type: 'category',
+            source: categoryContent,
+            searchFields: [
+              'title',
+              'category'
+            ]
+          })
+        ;
+      </div>
+    </div>
+    <div class="no centering example">
+      <h4 class="ui header">Arrow Aligment on Small Popups</h4>
+      <p>Semantic <a href="/modules/popup.html">popups</a> now detects when horizontally aligning the popup on it's arrow is more reasonable than matching edges with a popup.</p>
+      <img src="http://oi66.tinypic.com/2zr2ckk.jpg" class="ui image">
+
+      <div class="ui divider"></div>
+      <img src="/images/avatar/small/elliot.jpg" data-title="Elliot Fu" data-content="Elliot has been a member since July 2012" class="ui avatar image">
+      <div class="evaluated code" data-type="javascript">
+        $('.centering.example .avatar.image').popup();
+      </div>
+    </div>
+    <div class="complex-popup no example">
+      <h4 class="ui header">Popups Support Multiple Coordinate Systems</h4>
+      <p>Popups now can correctly place elements with two different coordinate systems (created by a parent with <code>transform</code> or <code>position</code> set.)</p>
+      <div id="one">
+        <p>Button is in here</p>
+        <div class="ui button">Button</div>
+      </div>
+      <div id="two">
+        <p>Popup is in here</p>
+        <div class="ui popup">
+          <h4 class="ui header">
+            Test
+          </h4>
+          <p>This popup now appears correct without having to move the popup to the same coordinate system by moving the DOM element.</p>
+        </div>
+      </div>
+      <div class="code" data-type="html">
+        <div id="one">
+          <p>Button is in here</p>
+          <div class="ui button">Button</div>
+        </div>
+        <div id="two">
+          <p>Popup is in here</p>
+          <div class="ui popup">
+            <h4 class="ui header">
+              Test
+            </h4>
+            <p>This popup now appears correct without having to move the popup to the same coordinate system by moving the DOM element.</p>
+          </div>
+        </div>
+      </div>
+      <div class="code" data-type="css">
+        /* Activating element is inside #one with different positioning context */
+        #one {
+          display: block;
+          position: relative;
+          padding: 50px 100px;
+          background-color: #F0F0F0;
+        }
+        /* Popup is inside two with position relative (creating another positioning context) */
+        #two {
+          display: block;
+          background-color: #E2EAE4;
+          position: relative;
+          top: 10px;
+          padding: 50px 8px;
+        }
+      </div>
+      <div class="evaluated code" data-type="javascript">
+        $('.complex-popup.example .ui.button')
+          .popup({
+            movePopup: false,
+            popup: $('.complex-popup.example .popup')
+          })
+        ;
+      </div>
+    </div>
+
+    <div class="no example">
+      <h4 class="ui header">New Matching Options</h4>
+      <p>In addition, search now includes three tiers of matched results, similar to the options available in dropdown. Fuzzy results now are turned off by the new default <code>fullTextSearch: 'exact'</code> </p>
+      <div class="ui bulleted list">
+        <div class="item">Query matches the start of field exactly</div>
+        <div class="item">
+          Query matches any part of field <div class="ui teal label">New</div>
+        </div>
+        <div class="item">Query "fuzzy" matches field</div>
+      </div>
+      <div class="ignored code" data-type="javascript">
+        $('.ui.search')
+          .search({
+            fullTextSearch: 'exact' // only matches exact matches (no fuzzy matching)
+          })
+        ;
+      </div>
+    </div>
+
+  </div>
+
+  <div class="ui tab" data-tab="twotwo">
     <h2 class="ui dividing header">By The Numbers</h2>
     <p><code>2.2</code> represents nearly a half year of updates, many new features, and bug patches.</p>
     <div class="ui large bulleted list">
@@ -96,30 +314,6 @@ type        : 'Main'
       </div>
     </div>
 
-    <div class="no example">
-      <h4 class="ui header">jQuery 3.0 Support</h4>
-      <p>We now support jQuery 3.0 out of the box. Learn more about <a href="https://blog.jquery.com/2015/07/13/jquery-3-0-and-jquery-compat-3-0-alpha-versions-released/" target="_blank">jQuery 3.0</a> to see why you should switch.</p>
-    </div>
-
-    <div class="no example">
-      <h4 class="ui header">Webpack Support</h4>
-      <p>Our CSS pipeline has been corrected to fix incompatibilty issues with Webpack.</p>
-    </div>
-    <div class="no example">
-      <h4>Better CI / Automation Support</h4>
-      <p>We've added a new <code>semantic.json</code> setting <a href="/introduction/build-tools.html#auto-install--continuous-integration"><code>autoInstall</code></a> which allows for silent install when Semantic UI is used in CLI environments, making testing more streamlined.</p>
-    </div>
-
-    <div class="no example">
-      <h4 class="ui header">Silent Mode</h4>
-      <p>All JS components now include a new setting <code>silent: true</code> that will prevent all console output including errors.</p>
-    </div>
-
-
-    <div class="no example">
-      <h4 class="ui header">More CSS Variables</h4>
-      <p>We've added many new variables, including many to make sizing with relative EM units a cinch in custom themes. The default theme now defines relative pixel unit variables from <code>@1px-@64px</code> <code>REM</code> and <code>@relative1px-@relative64px</code> with <code>EM</code>.</p>
-    </div>
 
     <h2 class="ui dividing header">New Features</h2>
 
@@ -558,7 +752,7 @@ type        : 'Main'
       </a>
     </div>
   </div>
-  <div class="ui tab" data-tab="prev">
+  <div class="ui tab" data-tab="twoone">
     <h2 class="ui dividing header">The Tally</h2>
     <p><code>2.1</code> sums up around two months of work, including many new features, and updates to help bulletproof existing UI.</p>
     <div class="ui large bulleted list">
@@ -1208,7 +1402,7 @@ type        : 'Main'
 
   </div>
 
-  <div class="ui tab" data-tab="last">
+  <div class="ui tab" data-tab="two">
 
     <h2 class="ui dividing header">Introduction</h2>
 

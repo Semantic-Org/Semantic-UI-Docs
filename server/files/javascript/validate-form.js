@@ -15,6 +15,7 @@ semantic.validateForm.ready = function() {
     $optionalForm = $('.optional.example .ui.form'),
     $dependsForm  = $('.depends.example .ui.form'),
     $inlineForm   = $('.inline.example .ui.form'),
+    $addForm      = $('.add.example .ui.form'),
     $form         = $('.ui.form').not($dogForm).not($inlineForm).not($dropdownForm).not($optionalForm).not($promptForm),
     $checkbox     = $('.main.container .ui.checkbox'),
     $dropdown     = $('.main.container .ui.dropdown'),
@@ -54,7 +55,7 @@ semantic.validateForm.ready = function() {
       identifier  : 'skills',
       rules: [
         {
-          type   : 'minCount[1]',
+          type   : 'minCount[2]',
           prompt : 'Please select at least two skills'
         }
       ]
@@ -239,7 +240,7 @@ semantic.validateForm.ready = function() {
         field2: {
           rules: [
             {
-              type   : 'exactly[dog]',
+              type   : 'isExactly[dog]',
               prompt : '{name} is set to "{value}" that is totally wrong. It should be {ruleValue}'
             }
           ]
@@ -332,6 +333,10 @@ semantic.validateForm.ready = function() {
         }
       }
     })
+  ;
+
+  $addForm
+    .form('remove fields', ['password', 'gender'])
   ;
 };
 

@@ -1213,7 +1213,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
   </div>
 
   <div class="example" data-use-content="true">
-    <h4 class="ui header">Equal Width</h4>
+    <h4 class="ui header">Equal Width Form</h4>
     <p>Forms can automatically divide fields to be equal width</p>
     <div class="ui equal width form">
       <div class="fields">
@@ -1274,7 +1274,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
   <h2 class="ui dividing header">Field Variations</h2>
 
   <div data-use-content="true" class="example">
-    <h4 class="ui header">Inline</h4>
+    <h4 class="ui header">Inline Field</h4>
     <p>A field can have its label next to instead of above it.</p>
     <div class="ui form">
       <div class="inline field">
@@ -1401,7 +1401,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
   </div>
 
   <div class="example" data-use-content="true">
-    <h4 class="ui header">Equal Width</h4>
+    <h4 class="ui header">Equal Width Fields</h4>
     <p>Fields can automatically divide fields to be equal width</p>
     <div class="ui form">
       <div class="fields">
@@ -1433,7 +1433,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
 
 
   <div class="example" data-use-content="true">
-    <h4 class="ui header">Inline</h4>
+    <h4 class="ui header">Inline Fields</h4>
     <p>Multiple fields may be inline in a row</p>
     <div class="ui form">
       <div class="inline fields">

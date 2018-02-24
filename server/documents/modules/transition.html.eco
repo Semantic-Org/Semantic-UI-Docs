@@ -36,6 +36,19 @@ type        : 'UI Module'
       </div>
 
       <div class="no example">
+        <h4 class="ui header">
+          Zoom
+          <div class="ui teal label">New in 2.3</div>
+        </h4>
+        <p>An element can zoom into view from far away</p>
+        <div class="code" data-demo="true">
+        $('.autumn.leaf')
+          .transition('zoom')
+        ;
+        </div>
+      </div>
+
+      <div class="no example">
         <h4 class="ui header">Fade</h4>
         <p>An element can fade into or out of view descending and ascending</p>
         <div class="code" data-demo="true">
@@ -235,6 +248,18 @@ type        : 'UI Module'
         <div class="code" data-demo="true">
         $('.autumn.leaf')
           .transition('bounce')
+        ;
+        </div>
+      </div>
+      <div class="no example">
+        <h4 class="ui header">
+          Glow
+          <div class="ui teal label">New in 2.3</div>
+        </h4>
+        <p>An element can glow to show its position in a page.</p>
+        <div class="code" data-demo="true">
+        $('.autumn.leaf')
+          .transition('glow')
         ;
         </div>
       </div>

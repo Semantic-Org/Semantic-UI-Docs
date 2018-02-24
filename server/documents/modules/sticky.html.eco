@@ -528,6 +528,11 @@ type        : 'UI Module'
           <td>Whether element should be "pushed" by the viewport, attaching to the bottom of the screen when scrolling up</td>
         </tr>
         <tr>
+          <td>setSize</td>
+          <td>true <div class="ui label">New in 2.2.11</div></td>
+          <td>Sets size of <code>fixed</code> content to match its width before fixing to screen dynamically. This is used because fixed may display block or 100% width content differently than it appears before sticking.</td>
+        </tr>
+        <tr>
           <td>jitter</td>
           <td>5</td>
           <td>Sticky container height will only be set if the difference between heights of container and context is larger than this jitter value.</td>

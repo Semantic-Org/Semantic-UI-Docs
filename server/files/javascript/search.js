@@ -5,13 +5,15 @@ semantic.search.ready = function() {
 
   // selector cache
   var
-    $local    = $('.local .ui.search'),
-    $external = $('.external.example .ui.search'),
-    $mapping  = $('.mapping .ui.search'),
-    $standard = $('.standard .ui.search'),
-    $category = $('.category .ui.search'),
+    $local         = $('.local .ui.search'),
+    $localCategory = $('.local-category .ui.search'),
+    $external      = $('.external.example .ui.search'),
+    $mapping       = $('.mapping .ui.search'),
+    $standard      = $('.standard .ui.search'),
+    $category      = $('.category .ui.search'),
 
     content,
+    categoryContent,
     // alias
     handler
   ;
@@ -261,10 +263,35 @@ semantic.search.ready = function() {
     { title: 'Zimbabwe' }
   ];
 
+
+  categoryContent = [
+    { category: 'South America', title: 'Brazil' },
+    { category: 'South America', title: 'Peru' },
+    { category: 'North America', title: 'Canada' },
+    { category: 'Asia', title: 'South Korea' },
+    { category: 'Asia', title: 'Japan' },
+    { category: 'Asia', title: 'China' },
+    { category: 'Europe', title: 'Denmark' },
+    { category: 'Europe', title: 'England' },
+    { category: 'Europe', title: 'France' },
+    { category: 'Europe', title: 'Germany' },
+    { category: 'Africa', title: 'Ethiopia' },
+    { category: 'Africa', title: 'Nigeria' },
+    { category: 'Africa', title: 'Zimbabwe' },
+  ];
+
   $local
     .search({
       searchFields: ['title'],
       source: content
+    })
+  ;
+
+  $localCategory
+    .search({
+      type: 'category',
+      searchFields: ['title'],
+      source: categoryContent
     })
   ;
 

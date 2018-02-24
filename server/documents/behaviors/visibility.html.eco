@@ -269,6 +269,28 @@ type        : 'UI Behavior'
         <tbody>
           <tr>
             <td>
+              onOnScreen
+            </td>
+            <td>
+              Any part of element is in current scroll viewport
+            </td>
+            <td>
+              <div class="code" data-type="javascript">screen.bottom >= element.top && screen.bottom <= element.bottom</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              onOffScreen
+            </td>
+            <td>
+              No part of element is in current scroll viewport
+            </td>
+            <td>
+              <div class="code" data-type="javascript">screen.bottom <= element.top || screen.top >= element.bottom</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
               onTopVisible
             </td>
             <td>
@@ -556,7 +578,7 @@ type        : 'UI Behavior'
       </div>
     </div>
 
-    <div class="visibility example">
+    <div class="visibility shown example">
       <h4 class="ui header">Lazy Loading Images</h4>
       <p>Visibility includes several shortcuts for setting up common visibility events. Using the setting <code>type: 'image'</code> will automatically attach events to an images <code>topVisible</code> to load the contents of <code>data-src</code> as <code>src</code>.</p>
 

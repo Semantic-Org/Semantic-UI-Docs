@@ -10,12 +10,13 @@
     "url": "git://github.com/Semantic-Org/Semantic-UI-Docs.git"
   },
   "dependencies": {
-    "docpad": "~6.79.0",
+    "docpad": "~6.79.4",
+    "docpad-plugin-babel": "~2.2.1",
     "docpad-plugin-copy": "~2.1.3",
-    "docpad-plugin-eco": "~2.1.0",
-    "docpad-plugin-partials": "~2.9.2"
+    "docpad-plugin-eco": "~2.2.1",
+    "docpad-plugin-partials": "~2.12.0"
   },
   "devDependencies": {
-    "docpad-plugin-ghpages": "~2.4.4"
+    "docpad-plugin-ghpages": "~2.6.1"
   }
 }

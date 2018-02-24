@@ -2556,7 +2556,7 @@ themes      : ['Default', 'GitHub', 'Material']
         <tr>
           <td>saveRemoteData</td>
           <td>true</td>
-          <td>When enabled will automatically store selected name/value pairs in <code>sessionStorage</code> to preserve user selection on page refresh. Disabling will clear remote dropdown values on refresh.</td>
+          <td>When enabled, will automatically store selected name/value pairs in <code>sessionStorage</code> to preserve user selection on page refresh. Disabling will clear remote dropdown values on refresh.</td>
         </tr>
       </tbody>
     </table>

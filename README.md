@@ -1,6 +1,8 @@
 # Semantic Docs
 
-This folder contains the templates used to generate the static website for [semantic-ui.com](http://www.semantic-ui.com). You can use this to create a "fork" of the UI documents to serve as styleguide for your project.
+This folder contains the templates used to generate the static website for [semantic-ui.com](http://www.semantic-ui.com). 
+
+You can use this to create a fork of the UI documents to serve as styleguide for your project.
 
 ## How to Use
 

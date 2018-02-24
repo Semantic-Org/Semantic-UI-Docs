@@ -283,8 +283,7 @@ type        : 'Introduction'
         "sticky",
         "tab",
         "transition",
-        "api",
-        "form",
+        "api",        
         "state",
         "visibility"
       ],

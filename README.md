@@ -4,7 +4,7 @@ This folder contains the templates used to generate the static website for [sema
 
 This repo can be used to create a fork of the UI documents to serve as styleguide for your project.
 
-## How to Use
+## Installing Dependencies
 
 
 You must install [DocPad](http://github.com/docpad/docpad), the static site generator used to create the HTML for the site, to render the contents of this repository.

@@ -460,6 +460,7 @@ themes      : ['Default', 'Material']
       </div>
       <div class="code" data-type="html">
         <div class="ui modal">
+          <i class="close icon"></i>
           <div class="header">Header</div>
           <div class="content">
             <p></p>
@@ -473,7 +474,17 @@ themes      : ['Default', 'Material']
       </div>
     </div>
 
-    <h2 class="ui dividing header">Variations</h2>
+    <div class="no example">
+      <h4 class="ui header">
+        Closing Modals
+      </h4>
+      <p>A modal can be closed by clicking the dimmer outside of the modal (if closable is set to true in the <a href="http://semantic-ui.com/modules/modal.html#/settings"settings</a>), or a close icon can be clicked (if present).</p>
+      <div class="ui ignored info message">
+        <p>When a close icon is included in a modal's HTML, it should be placed outside of the header (as shown above).  When included within the modal's HTML in this way, the icon will be rendered outside of the upper right corner of the modal for all modal sizes except the fullscreen modal.  This method of rendering ensures that long header text does not overlap the close icon.  On a fullscreen modal, the close icon is rendered at the end of the header line even though it is outside of the header in the modal's HTML.</p>
+      </div>
+    </div>
+
+<h2 class="ui dividing header">Variations</h2>
 
     <div class="no example">
       <h4 class="ui header">Full Screen</h4>

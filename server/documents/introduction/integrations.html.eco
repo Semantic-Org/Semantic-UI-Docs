@@ -126,9 +126,9 @@ type        : 'Introduction'
     <h4 class="ui header">Installing via CLI</h4>
     <p>Include the library as an NPM dependency, from within an ember-cli app.</p>
 
-    <p>If you are using Ember CLI <code>0.1.5-0.2.3</code>
+    <p>If you are using Ember CLI <code>1.13-2.X</code>
     <div class="code">
-      ember install:addon semantic-ui-ember
+      ember install semantic-ui-ember
     </div>
     <p>If you are using an older version <code>< 0.1.5</code>
     <div class="code">

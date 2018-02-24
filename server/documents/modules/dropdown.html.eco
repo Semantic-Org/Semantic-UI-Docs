@@ -1195,7 +1195,7 @@ themes      : ['Default', 'GitHub', 'Material']
 
     <div class="max example">
       <h4 class="ui header">Maximum Selections</h4>
-      <p>Using <code>maxSelections</code> lets you force a maximum number of selections. You can also use <a href="behaviors/form.html#validation-rules">form validation</a> rules to specify minimum and maximum validation settings for multi-selects inside forms.</p>
+      <p>Using <code>maxSelections</code> lets you force a maximum number of selections. You can also use <a href="/behaviors/form.html#validation-rules">form validation</a> rules to specify minimum and maximum validation settings for multi-selects inside forms.</p>
 
       <div class="ui sub header">Selection</div>
       <select multiple name="skills" class="ui fluid normal dropdown">

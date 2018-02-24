@@ -26,6 +26,7 @@ Assuming two sibling folders:
 * In `./docs` folder `docpad install` then `docpad run`
 * Go to http://localhost:9778/ docs should be there
 * Optionally run `gulp serve-docs` in ./ui to serve any changes from ./ui/src to ./docs
+* To automatically deploy docs to github pages type `docpad deploy-ghpages --env static`
 
 ### Running the Server
 

@@ -1114,7 +1114,7 @@ type        : 'UI Behavior'
           <td>method</td>
           <td>get</td>
           <td>Method for transmitting request to server</td>
-          <td>post, get</td>
+          <td>Any valid http method</td>
         </tr>
         <tr>
           <td>dataType</td>

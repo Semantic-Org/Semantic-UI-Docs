@@ -26,8 +26,6 @@ Assuming two sibling folders:
 * In ./docs folder `docpad run`
 * Go to http://localhost:9778/ docs should be there
 * Optionally run `gulp serve-docs` in ./ui to serve any changes from ./ui/src to ./docs
->>>>>>> 3264be9f53cc7bfd2db466a4ab0ec5488d557991
-
 
 ### Running the Server
 

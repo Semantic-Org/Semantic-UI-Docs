@@ -240,7 +240,7 @@ themes      : ['Default', 'GitHub', 'Gmail']
       <div class="header">
         We're sorry we can't apply that discount
       </div>
-      <p>That offer has expired
+      <p>That offer has expired</p>
     </div>
   </div>
   <div class="another example">

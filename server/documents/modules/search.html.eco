@@ -218,6 +218,21 @@ type        : 'UI Module'
     <h2 class="ui dividing header">Variations</h2>
 
     <div class="category example">
+      <h4 class="ui header">
+        Disabled
+        <div class="ui teal label">New in 2.3.1</div>
+      </h4>
+      <p>A search can show it is currently unable to be interacted with</p>
+      <div class="ui disabled category search">
+        <div class="ui icon input">
+          <input class="prompt" type="text" placeholder="Search animals...">
+          <i class="search icon"></i>
+        </div>
+        <div class="results"></div>
+      </div>
+    </div>
+
+    <div class="category example">
       <h4 class="ui header">Fluid</h4>
       <p>A search can have its results take up the width of its container</p>
       <div class="ui fluid category search">

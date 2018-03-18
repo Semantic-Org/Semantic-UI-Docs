@@ -8,57 +8,13 @@ type       : 'Library'
 ---
 
 <div class="ui container">
-  <div class="ui search">
-  <div class="ui searchbox action icon input">
-    <input type="text" placeholder="Search">
-    <button id="search_options" class="ui transparent icon button">
-      <i class="angle down icon"></i>
-    </button>
-    <button class="ui blue icon button">
-      <i class="search icon"></i>
-    </button>
-  </div>
-  <div id="search_popup" class="ui fluid popup">
-      <div class="ui form">
-        <div class="fields">
-          <div class="inline field">
-            <div class="ui slider checkbox">
-              <input type="checkbox" tabindex="0" class="hidden">
-              <label>Exact Phrase</label>
-            </div>
-            <label></label>
-          </div>
-          <div class="field">
-            <select class="ui dropdown">
-              <option value="0">All Words</option>
-              <option value="1">Any Words</option>
-              <option value="2">Boolean</option>
-            </select>
-          </div>
-          <div class="inline field">
-            <div class="ui slider checkbox">
-              <input type="checkbox" tabindex="0" class="hidden">
-              <label>Only search email</label>
-            </div>
-            <label></label>
-          </div>
-        </div>
-        <div class="field">
-          <div class="ui fluid multiple search selection dropdown">
-            <input type="hidden" name="tags">
-            <div class="default text">Select Tags</div>
-            <div class="menu">
-              <div class="item" data-value="ub">uploaded by</div>
-              <div class="item" data-value="es">email senders</div>
-              <div class="item" data-value="er">email recepients</div>
-              <div class="item" data-value="dt">document types</div>
-              <div class="item" data-value="a">authors</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  <div class="results"></div>
+
+ <select name="skills" class="ui fluid search dropdown">
+  <option value="">Skills</option>
+  <option value="angular">Angular</option>
+  <option value="css">CSS</option>
+  <option value="design">Graphic Design</option>
+</select>
 </div>
 
 
@@ -66,15 +22,16 @@ type       : 'Library'
 
 <script>
   $(document).ready(function() {
-    $('.ui.checkbox').checkbox();
-$('.dropdown').dropdown();
-$('#search_options').popup({
-  on: 'click',
-  position: 'bottom right',
-  popup: '#search_popup',
-  movePopup: false
-});
+  $('.dropdown')
+  .dropdown({
+    action: 'select',
+    onChange: function(value, text, $selectedItem) {
+      console.log(value, text, $selectedItem);
 
+      // $selectedItem is defined
+    }
+  })
+;
   });
 </script>
 
@@ -83,20 +40,6 @@ $('#search_options').popup({
 
 .ui.container {
   padding-top: 6em;
-}
-.searchbox {
-  width: 100%;
-  max-width: 50em;
-}
-
-.ui.transparent.icon.button {
-  margin-left: -39px;
-  background: transparent;
-  box-shadow: none;
-}
-
-#search_popup .fields .field {
-  align-self: center;
 }
 
 

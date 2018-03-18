@@ -3753,7 +3753,7 @@ themes      : ['Default']
       <h4 class="ui header">Icons</h4>
       <p>Several icons can be used together as a group</p>
       <i class="huge icons">
-        <i class="big thin circle icon"></i>
+        <i class="big circle outline icon"></i>
         <i class="user icon"></i>
       </i>
     </div>
@@ -3761,10 +3761,6 @@ themes      : ['Default']
       <i class="huge icons">
         <i class="big red dont icon"></i>
         <i class="black user icon"></i>
-      </i>
-      <i class="huge icons">
-        <i class="big loading sun icon"></i>
-        <i class="user icon"></i>
       </i>
     </div>
     <div class="example" data-class="corner">

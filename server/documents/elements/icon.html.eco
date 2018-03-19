@@ -131,7 +131,7 @@ themes      : ['Default']
         <div class="column"><i class="chevron left icon"></i>chevron left</div>
         <div class="column"><i class="chevron right icon"></i>chevron right</div>
         <div class="column"><i class="chevron up icon"></i>chevron up</div>
-        <div class="column"><i class="cloud download icon"></i>cloud download /div>
+        <div class="column"><i class="cloud download icon"></i>cloud download</div>
         <div class="column"><i class="cloud upload icon"></i>cloud upload</div>
         <div class="column"><i class="download icon"></i>download</div>
         <div class="column"><i class="exchange icon"></i>exchange</div>
@@ -1409,7 +1409,7 @@ themes      : ['Default']
         <div class="column"><i class="clone icon"></i>clone</div>
         <div class="column"><i class="clone outline icon"></i>clone outline</div>
         <div class="column"><i class="cloud icon"></i>cloud</div>
-        <div class="column"><i class="cloud download icon"></i>cloud download /div>
+        <div class="column"><i class="cloud download icon"></i>cloud download</div>
         <div class="column"><i class="cloud upload icon"></i>cloud upload</div>
         <div class="column"><i class="coffee icon"></i>coffee</div>
         <div class="column"><i class="cog icon"></i>cog</div>

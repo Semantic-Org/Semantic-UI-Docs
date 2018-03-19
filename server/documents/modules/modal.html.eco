@@ -52,6 +52,21 @@ themes      : ['Default', 'Material']
       <div class="description">
         <p>That's everything!</p>
       </div>
+      <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+      <div class="ui divider"></div>
+      <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+      <div class="ui divider"></div>
+      <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+      <div class="ui divider"></div>
+      <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+      <div class="ui divider"></div>
+      <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+      <div class="ui divider"></div>
+      <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+      <div class="ui divider"></div>
+      <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+      <div class="ui divider"></div>
+      <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
     </div>
     <div class="actions">
       <div class="ui approve button">

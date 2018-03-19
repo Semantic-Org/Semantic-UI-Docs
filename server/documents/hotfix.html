@@ -7,31 +7,116 @@ title      : 'Test Page'
 type       : 'Library'
 ---
 
-<div class="ui container">
+<h2 class="ui dividing header">Description</h2>
+<p>Semantic UI modal utilizing <a href="https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver" target="_blank">MutationObserver</a> to monitoring DOM changes and try to add `.scrolling` to modals with height over browser window. However, this could be strange when opening in multiple modals. Following table is what I saw in my experiment.</p>
 
- <select name="skills" class="ui fluid search dropdown">
-  <option value="">Skills</option>
-  <option value="angular">Angular</option>
-  <option value="css">CSS</option>
-  <option value="design">Graphic Design</option>
-</select>
+<div class="ui divider"></div>
+<table class="ui basic table">
+  <thead>
+  </thead>
+  <tbody>
+    <tr>
+      <td></td>
+      <td>1st</td>
+      <td>1st `.scrolling`</td>
+    </tr>
+    <tr>
+      <td>2nd</td>
+      <td>[OK] 2nd overlay on 1st</td>
+      <td>[OK] 2nd overlay on 1st</td>
+    </tr>
+    <tr>
+      <td>2nd `.scrolling`</td>
+      <td>[OK] 2nd overlay on 1st</td>
+      <td>[??] 2nd append above 1st</td>
+    </tr>
+  </tbody>
+</table>
+<div class="ui divider"></div>
+
+<div class='ui button open' data-open='first-modal'>Click to open first modal</div>
+
+<div class="ui modal" id="first-modal">
+  <i class="close icon"></i>
+  <div class="header">
+    First Modal
+  </div>
+  <div class="content">
+    <div class="ui button open" data-open="second-modal">Open second modal</div>
+    <h2 class="ui dividing header">Content controler for 1st modal</h2>
+    <div class="ui small buttons" data-target="first-content">
+      <div class="ui button" data-loads="short-content">Short</div>
+      <div class="or"></div>
+      <div class="ui blue button" data-loads="long-content">Long</div>
+    </div>
+    <h2 class="ui dividing header">Content controler for 2st modal</h2>
+    <div class="ui small buttons" data-target="second-content">
+      <div class="ui button" data-loads="short-content">Short</div>
+      <div class="or"></div>
+      <div class="ui blue button" data-loads="long-content">Long</div>
+    </div>
+    <div id="first-content"></div>
+  </div>
+  <div class="actions">
+    <div class="ui black button">
+      Close 1st modal
+    </div>
+  </div>
 </div>
+
+<div class="ui modal" id="second-modal">
+  <i class="close icon"></i>
+  <div class="header">
+    Second Modal
+  </div>
+  <div class="content">
+    <div id="second-content"></div>
+  </div>
+  <div class="actions">
+    <div class="ui black button">
+      Close 2nd modal
+    </div>
+  </div>
+</div>
+
+<script type='text/templ' id='long-content'>
+  <h3 class="ui dividing header">Long content</h3>
+  <p class="">Will have `.scorolling`</p>
+  <div class="ui medium image">
+    <img src="http://placehold.it/350x1080">
+  </div>
+</script>
+<script type='text/templ' id='short-content'>
+  <h3 class="ui dividing header">Short content</h3>
+  <p class="">Will NOT have `.scorolling`</p>
+</script>
 
 
 </div>
 
 <script>
   $(document).ready(function() {
-  $('.dropdown')
-  .dropdown({
-    action: 'select',
-    onChange: function(value, text, $selectedItem) {
-      console.log(value, text, $selectedItem);
+$('.ui.button').click(function(){
+  $modal.filter('#' + this.dataset.open ).modal('show');
+});
 
-      // $selectedItem is defined
-    }
-  })
-;
+var $modal = $('.ui.modal').modal({
+  allowMultiple: true
+});
+
+$('.ui.buttons').click(function(e){
+  var targetId = $(e.currentTarget).find('.button').removeClass('blue').end().data('target');
+  loadContent(targetId, e.target.dataset.loads);
+  e.target.classList.add('blue');
+});
+
+var loadContent = function(target, source){
+  $('#' + target).html($('#' + source).html());
+};
+
+loadContent('first-content', 'long-content');
+loadContent('second-content', 'long-content');
+
   });
 </script>
 

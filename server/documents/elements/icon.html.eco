@@ -131,10 +131,10 @@ themes      : ['Default']
         <div class="column"><i class="chevron left icon"></i>chevron left</div>
         <div class="column"><i class="chevron right icon"></i>chevron right</div>
         <div class="column"><i class="chevron up icon"></i>chevron up</div>
-        <div class="column"><i class="cloud download alternate icon"></i>cloud download alternate</div>
-        <div class="column"><i class="cloud upload alternate icon"></i>cloud upload alternate</div>
+        <div class="column"><i class="cloud download icon"></i>cloud download /div>
+        <div class="column"><i class="cloud upload icon"></i>cloud upload</div>
         <div class="column"><i class="download icon"></i>download</div>
-        <div class="column"><i class="exchange alternate icon"></i>exchange alternate</div>
+        <div class="column"><i class="exchange icon"></i>exchange</div>
         <div class="column"><i class="expand arrows alternate icon"></i>expand arrows alternate</div>
         <div class="column"><i class="external alternate icon"></i>external alternate</div>
         <div class="column"><i class="external square alternate icon"></i>external square alternate</div>
@@ -237,8 +237,8 @@ themes      : ['Default']
         <i class="chevron left icon"></i>
         <i class="chevron right icon"></i>
         <i class="chevron up icon"></i>
-        <i class="cloud download alternate icon"></i>
-        <i class="cloud upload alternate icon"></i>
+        <i class="cloud download icon"></i>
+        <i class="cloud upload icon"></i>
         <i class="download icon"></i>
         <i class="exchange alternate icon"></i>
         <i class="expand arrows alternate icon"></i>
@@ -1409,8 +1409,8 @@ themes      : ['Default']
         <div class="column"><i class="clone icon"></i>clone</div>
         <div class="column"><i class="clone outline icon"></i>clone outline</div>
         <div class="column"><i class="cloud icon"></i>cloud</div>
-        <div class="column"><i class="cloud download alternate icon"></i>cloud download alternate</div>
-        <div class="column"><i class="cloud upload alternate icon"></i>cloud upload alternate</div>
+        <div class="column"><i class="cloud download icon"></i>cloud download /div>
+        <div class="column"><i class="cloud upload icon"></i>cloud upload</div>
         <div class="column"><i class="coffee icon"></i>coffee</div>
         <div class="column"><i class="cog icon"></i>cog</div>
         <div class="column"><i class="cogs icon"></i>cogs</div>
@@ -1581,8 +1581,8 @@ themes      : ['Default']
         <i class="clone icon"></i>
         <i class="clone outline icon"></i>
         <i class="cloud icon"></i>
-        <i class="cloud download alternate icon"></i>
-        <i class="cloud upload alternate icon"></i>
+        <i class="cloud download icon"></i>
+        <i class="cloud upload icon"></i>
         <i class="coffee icon"></i>
         <i class="cog icon"></i>
         <i class="cogs icon"></i>

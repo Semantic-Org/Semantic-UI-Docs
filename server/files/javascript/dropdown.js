@@ -13,6 +13,7 @@ semantic.dropdown.ready = function() {
     $simpleDropdown   = $examples.filter('.simple').find('.ui.dropdown'),
     $transitionButton = $examples.filter('.transition').find('.ui.button').first(),
     $categoryDropdown = $examples.filter('.category').find('.ui.dropdown'),
+    $inverted         = $examples.find('.inverted.segment').find('.ui.dropdown'),
     // alias
     handler
   ;
@@ -61,6 +62,9 @@ semantic.dropdown.ready = function() {
     .dropdown({
       action: 'hide'
     })
+  ;
+  $inverted
+    .dropdown()
   ;
 
 };

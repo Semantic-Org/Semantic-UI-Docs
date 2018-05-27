@@ -2659,6 +2659,11 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>Whether to sort values when creating a dropdown automatically from a select element.</td>
         </tr>
         <tr>
+          <td>sortNatural</td>
+          <td>true</td>
+          <td>Whether to sort values naturally when sorting the automatically created dropdown.</td>
+        </tr>
+        <tr>
           <td>showOnFocus</td>
           <td>true</td>
           <td>Whether to show dropdown menu automatically on element focus.</td>

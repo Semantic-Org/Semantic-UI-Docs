@@ -9,29 +9,31 @@ type       : 'Library'
 
 <div class="ui container">
 
- <select name="skills" class="ui fluid search dropdown">
-  <option value="">Skills</option>
-  <option value="angular">Angular</option>
-  <option value="css">CSS</option>
-  <option value="design">Graphic Design</option>
-</select>
+<div class="ui form">
+  <div class="field">
+    <label>Favorite Animal</label>
+    <div class="ui search selection dropdown">
+      <input type="hidden">
+      <i class="dropdown icon"></i>
+      <input type="text" class="search" tabindex="0">
+      <div class="default text">Select one...</div>
+      <div class="menu" tabindex="-1"></div>
+    </div>
+  </div>
 </div>
-
 
 </div>
 
 <script>
   $(document).ready(function() {
-  $('.dropdown')
-  .dropdown({
-    action: 'select',
-    onChange: function(value, text, $selectedItem) {
-      console.log(value, text, $selectedItem);
 
-      // $selectedItem is defined
-    }
-  })
-;
+    $('.ui.dropdown').dropdown({
+      apiSettings: {
+        url: '//api.semantic-ui.com/tags/xxx',
+        cache: false
+      }
+    });
+
   });
 </script>
 

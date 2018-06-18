@@ -16,7 +16,6 @@
 <script src="/dist/components/shape.js"></script>
 <script src="/dist/components/sidebar.js"></script>
 <script src="/dist/components/site.js"></script>
-<script src="/dist/components/state.js"></script>
 <script src="/dist/components/sticky.js"></script>
 <script src="/dist/components/tab.js"></script>
 <script src="/dist/components/transition.js"></script>

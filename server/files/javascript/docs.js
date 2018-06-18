@@ -30,7 +30,6 @@ semantic.ready = function() {
     $document            = $(document),
     $sortableTables      = $('.sortable.table'),
     $sticky              = $('.ui.sticky'),
-    $tocSticky           = $('.toc .ui.sticky'),
 
     $themeDropdown       = $('.theme.dropdown'),
 
@@ -1255,17 +1254,6 @@ semantic.ready = function() {
   // register less files
   window.less.registerStylesheets();
 
-  // create sidebar sticky
-  requestAnimationFrame(function() {
-
-    $tocSticky
-      .sticky({
-        silent: true,
-        container: $('html'),
-        context: $fullHeightContainer
-      })
-    ;
-  });
 
   // load page tabs
   if( $pageTabs.length > 0 ) {
@@ -1299,9 +1287,6 @@ semantic.ready = function() {
           });
         },
         onLoad : function() {
-          $tocSticky
-            .sticky('refresh')
-          ;
           $(this).find('.ui.sticky')
             .sticky('refresh')
           ;

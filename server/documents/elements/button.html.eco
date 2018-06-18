@@ -13,6 +13,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
 ---
 <link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/button.less" />
 <script src="/javascript/button.js"></script>
+<script src="/javascript/library/state.js"></script>
 
 <%- @partial('header') %>
 
@@ -186,6 +187,8 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
     <p>A button can be formatted to appear on dark backgrounds</p>
     <div class="ui inverted segment">
       <button class="ui inverted button">Standard</button>
+      <button class="ui inverted primary button">Primary</button>
+      <button class="ui inverted secondary button">Secondary</button>
       <button class="ui inverted red button">Red</button>
       <button class="ui inverted orange button">Orange</button>
       <button class="ui inverted yellow button">Yellow</button>
@@ -204,6 +207,8 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
   <div class="another spaced example">
     <div class="ui inverted segment">
       <button class="ui inverted basic button">Basic</button>
+      <button class="ui inverted primary basic button">Primary</button>
+      <button class="ui inverted secondary basic button">Secondary</button>
       <button class="ui inverted red basic button">Basic Red</button>
       <button class="ui inverted orange basic button">Basic Orange</button>
       <button class="ui inverted yellow basic button">Basic Yellow</button>

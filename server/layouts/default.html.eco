@@ -16,17 +16,16 @@
   <div class="pusher">
     <div class="full height">
       <div class="toc">
-        <div class="ui vertical inverted sticky menu">
-        <%- @partial('site-menu') %>
+        <div class="ui vertical inverted menu">
+          <%- @partial('site-menu') %>
         </div>
       </div>
       <div class="article">
         <%- @content %>
+        <%- @partial('footer') %>
       </div>
     </div>
-    <%- @partial('footer') %>
   </div>
-
   <%- @partial('language-modal') %>
   <%- @partial('dimmer-demo') %>
   <%- @partial('less') %>

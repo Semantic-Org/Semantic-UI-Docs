@@ -172,7 +172,7 @@ blockquote .author {
 }
 
 #example .sidebar.menu .logo.image,
-#example .sticky.menu .logo.image {
+#example .ui.menu .logo.image {
   width: 35px;
   margin-right: 1em;
 }
@@ -182,6 +182,13 @@ blockquote .author {
 }
 #example #toc > :last-child {
   padding-bottom: 2em;
+}
+
+
+#example #toc > .ui.menu {
+  max-height: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Incomplete Label */
@@ -599,6 +606,9 @@ blockquote .author {
 }
 #example.minimal.basic .full.height > .toc {
   display: none;
+}
+#example.minimal.basic .full.height > .article {
+  margin-left: 0px;
 }
 #example.minimal.basic .fixed.menu > .container,
 #example.minimal.basic .main.container,
@@ -1986,7 +1996,7 @@ code .chunk {
 
 /* page layout */
 #example .full.height > .toc {
-  position: relative;
+  position: fixed;
   z-index: 1;
   background-color: #1b1c1d;
   width: 250px;
@@ -2003,6 +2013,9 @@ code .chunk {
   width: inherit;
   overflow: hidden;
   will-change: transform;
+  max-height: 100vh;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
 #example .article {
   -webkit-box-flex: 1;
@@ -2010,6 +2023,33 @@ code .chunk {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   min-width: 0px;
+  margin-left: 250px;
+}
+
+#example .full.height > .toc .ui.menu::-webkit-scrollbar-track,
+#example .article::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0);
+}
+#example .full.height > .toc .ui.menu::-webkit-scrollbar-thumb,
+#example .article::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+#example .full.height > .toc .ui.menu:hover::-webkit-scrollbar-track,
+#example .article:hover::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+#example .full.height > .toc .ui.menu:hover::-webkit-scrollbar-thumb,
+#example .article:hover::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+#example > .pusher > .footer,
+#example .article > .footer {
+  border-top: 1px solid #DDDDDD;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.08) inset;
+  background-color: #FAFAFA;
+  padding-top: 2em;
 }
 
 /*******************************
@@ -2339,6 +2379,9 @@ code .chunk {
   /* Hide Fixed Sidebar */
   #example .full.height > .toc {
     display: none;
+  }
+  #example .full.height > .article {
+    margin-left: 0px;
   }
 
   /* Hide Fixed Launch Button */

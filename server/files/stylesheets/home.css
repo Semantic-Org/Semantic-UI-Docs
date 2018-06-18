@@ -259,6 +259,9 @@
 #example.index .ui.header {
   font-weight: normal;
 }
+#example.index .footer .ui.header {
+  font-weight: bold;
+}
 
 #example.index .introduction {
   position: relative;

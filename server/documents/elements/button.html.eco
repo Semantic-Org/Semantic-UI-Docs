@@ -13,6 +13,7 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
 ---
 <link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/button.less" />
 <script src="/javascript/button.js"></script>
+<script src="/javascript/library/state.js"></script>
 
 <%- @partial('header') %>
 

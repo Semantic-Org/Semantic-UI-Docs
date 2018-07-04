@@ -83,6 +83,14 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
       </div>
     </div>
   </div>
+  
+  <div class="example">
+    <h4 class="ui header">Icon</h4>
+    <p>A button can have only an icon</p>
+    <button class="ui icon button">
+      <i class="cloud icon"></i>
+    </button>
+  </div>
 
   <div class="example" data-class="labeled, left labeled">
     <h4 class="ui header">Labeled</h4>
@@ -129,14 +137,6 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
         1,048
       </a>
     </div>
-  </div>
-
-  <div class="example">
-    <h4 class="ui header">Icon</h4>
-    <p>A button can have only an icon</p>
-    <button class="ui icon button">
-      <i class="cloud icon"></i>
-    </button>
   </div>
 
   <div class="example" data-class="labeled icon, right labeled icon">
@@ -235,22 +235,6 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
       <button class="ui button">One</button>
       <button class="ui button">Two</button>
       <button class="ui button">Three</button>
-    </div>
-  </div>
-
-  <div class="example">
-    <h4 class="ui header">Icon Buttons</h4>
-    <p>Button groups can show groups of icons</p>
-    <div class="ui icon buttons">
-      <button class="ui button"><i class="align left icon"></i></button>
-      <button class="ui button"><i class="align center icon"></i></button>
-      <button class="ui button"><i class="align right icon"></i></button>
-      <button class="ui button"><i class="align justify icon"></i></button>
-    </div>
-    <div class="ui icon buttons">
-      <button class="ui button"><i class="bold icon"></i></button>
-      <button class="ui button"><i class="underline icon"></i></button>
-      <button class="ui button"><i class="text width icon"></i></button>
     </div>
   </div>
 

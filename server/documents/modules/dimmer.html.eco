@@ -452,9 +452,9 @@ themes      : ['Default']
       </thead>
       <tbody>
         <tr>
-          <td>opacity</td>
-          <td class="six wide">auto</td>
-          <td>Dimmers opacity from 0-1. Defaults to <code>auto</code> which uses the CSS specified opacity.</td>
+          <td>useFlex</td>
+          <td class="six wide">true</td>
+          <td>Whether dimmers should use flex or legacy positioning</td>
         </tr>
         <tr>
           <td>variation</td>

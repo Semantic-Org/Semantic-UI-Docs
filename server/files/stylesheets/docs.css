@@ -2026,21 +2026,20 @@ code .chunk {
   margin-left: 250px;
 }
 
-#example .full.height > .toc .ui.menu::-webkit-scrollbar-track,
-#example .article::-webkit-scrollbar-track {
+#example .full.height > .toc .ui.menu::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+#example .full.height > .toc .ui.menu::-webkit-scrollbar-track {
   background-color: rgba(255, 255, 255, 0);
 }
-#example .full.height > .toc .ui.menu::-webkit-scrollbar-thumb,
-#example .article::-webkit-scrollbar-track {
+#example .full.height > .toc .ui.menu::-webkit-scrollbar-thumb {
   background-color: rgba(255, 255, 255, 0);
 }
 
-#example .full.height > .toc .ui.menu:hover::-webkit-scrollbar-track,
-#example .article:hover::-webkit-scrollbar-track {
+#example .full.height > .toc .ui.menu:hover::-webkit-scrollbar-track {
   background-color: rgba(255, 255, 255, 0.1);
 }
-#example .full.height > .toc .ui.menu:hover::-webkit-scrollbar-thumb,
-#example .article:hover::-webkit-scrollbar-track {
+#example .full.height > .toc .ui.menu:hover::-webkit-scrollbar-thumb {
   background-color: rgba(255, 255, 255, 0.25);
 }
 

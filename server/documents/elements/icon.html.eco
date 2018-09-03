@@ -168,8 +168,10 @@ themes      : ['Default']
         <div class="column"><i class="share icon"></i>share</div>
         <div class="column"><i class="share square icon"></i>share square</div>
         <div class="column"><i class="share square outline icon"></i>share square outline</div>
-        <div class="column"><i class="sign in alternate icon"></i>sign in alternate</div>
-        <div class="column"><i class="sign out alternate icon"></i>sign out alternate</div>
+        <div class="column"><i class="sign-in icon"></i>sign-in</div>
+        <div class="column"><i class="sign-out icon"></i>sign-out</div>
+        <div class="column"><i class="sign-in alternate icon"></i>sign-in alternate</div>
+        <div class="column"><i class="sign-out alternate icon"></i>sign-out alternate</div>
         <div class="column"><i class="sort icon"></i>sort</div>
         <div class="column"><i class="sort alphabet down icon"></i>sort alphabet down</div>
         <div class="column"><i class="sort alphabet up icon"></i>sort alphabet up</div>
@@ -186,6 +188,8 @@ themes      : ['Default']
         <div class="column"><i class="undo icon"></i>undo</div>
         <div class="column"><i class="undo alternate icon"></i>undo alternate</div>
         <div class="column"><i class="upload icon"></i>upload</div>
+        <div class="column"><i class="zoom-in icon"></i>zoom-in</div>
+        <div class="column"><i class="zoom-out icon"></i>zoom-out</div>
       </div>
       <div class="existing code">
         <i class="angle double down icon"></i>
@@ -1499,8 +1503,8 @@ themes      : ['Default']
         <div class="column"><i class="share square icon"></i>share square</div>
         <div class="column"><i class="share square outline icon"></i>share square outline</div>
         <div class="column"><i class="shield alternate icon"></i>shield alternate</div>
-        <div class="column"><i class="sign in alternate icon"></i>sign in alternate</div>
-        <div class="column"><i class="sign out alternate icon"></i>sign out alternate</div>
+        <div class="column"><i class="sign-in icon"></i>sign-in</div>
+        <div class="column"><i class="sign-out icon"></i>sign-out</div>
         <div class="column"><i class="signal icon"></i>signal</div>
         <div class="column"><i class="sitemap icon"></i>sitemap</div>
         <div class="column"><i class="sliders horizontal icon"></i>sliders horizontal</div>
@@ -3127,7 +3131,7 @@ themes      : ['Default']
         <div class="column"><i class="less icon"></i>less</div>
         <div class="column"><i class="linechat icon"></i>linechat</div>
         <div class="column"><i class="linkedin icon"></i>linkedin</div>
-        <div class="column"><i class="linkedin in icon"></i>linkedin in</div>
+        <div class="column"><i class="linkedin alternate icon"></i>linkedin alternate</div>
         <div class="column"><i class="linode icon"></i>linode</div>
         <div class="column"><i class="linux icon"></i>linux</div>
         <div class="column"><i class="lyft icon"></i>lyft</div>

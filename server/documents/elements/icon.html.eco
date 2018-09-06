@@ -611,6 +611,7 @@ themes      : ['Default']
         <div class="column"><i class="folder outline icon"></i>folder outline</div>
         <div class="column"><i class="folder open icon"></i>folder open</div>
         <div class="column"><i class="folder open outline icon"></i>folder open outline</div>
+        <div class="column"><i class="fork icon"></i>fork</div>
         <div class="column"><i class="keyboard icon"></i>keyboard</div>
         <div class="column"><i class="keyboard outline icon"></i>keyboard outline</div>
         <div class="column"><i class="microchip icon"></i>microchip</div>

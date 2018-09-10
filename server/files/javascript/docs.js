@@ -71,7 +71,7 @@ semantic.ready = function() {
     $example             = $('.example'),
     $popupExample        = $example.not('.no'),
     $shownExample        = $example.filter('.shown'),
-    $prerenderedExample  = $example.has('.ui.checkbox, .ui.dropdown, .ui.search, .ui.progress, .ui.rating, .ui.dimmer, .ui.embed'),
+    $prerenderedExample  = $example.has('.ui.checkbox, .ui.content.loader, .ui.dropdown, .ui.search, .ui.progress, .ui.rating, .ui.dimmer, .ui.embed'),
 
     $visibilityExample   = $example.filter('.visiblity').find('.overlay, .demo.segment, .items img'),
 

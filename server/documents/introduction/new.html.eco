@@ -4,17 +4,180 @@ css         : 'new'
 standalone  : true
 order       : 1
 
-title       : 'New in 2.3'
+title       : 'New in 2.4'
 description : 'An introduction to new features found in the latest release'
 type        : 'Main'
 ---
 
-<%- @partial('header',  { tabs: { twothree: 'New in 2.3', twotwo: 'New in 2.2', twoone: 'New in 2.1', two: 'New in 2.0' } }) %>
+<%- @partial('header',  { tabs: { twoFour: 'New in 2.4', twothree: '2.3', twotwo: '2.2', twoone: '2.1', two: '2.0' } }) %>
+<script src="/javascript/loader.js"></script>
 <script src="/javascript/new.js"></script>
 
 <div class="main ui intro container">
+  <div class="ui active tab" data-tab="twoFour">
+    <h2 class="ui dividing header">
+      Solving Empty State
+    </h2>
+    <p>Semantic <code>2.4</code> brings several new components for handling empty state and content loading with <a href="/elements/segment.html#placeholder"><code>placeholder segment</code></a> and <a href="/elements/loader.html#content-loader"><code>content loader</code></a>.</p>
 
-  <div class="ui active tab" data-tab="twothree">
+    <P>Additionally several important component updates are included in this release, including hybrid flex modals (for full browser & feature support), and clearable dropdowns.</p>
+
+    <h2 class="ui dividing header">
+      New UI Types
+    </h2>
+    <div class="content example">
+      <h4 class="ui header">
+        Content Loaders
+      </h4>
+      <P><a href="/elements/loader.html#content-loader">Content loaders</a> can be used to provide cues for the contours of content that are about to load in an app.</p>
+      <p>Using content loaders can help users prepare themselves for the appearance of new content and help reduce the jarringness of new elements.</p>
+      <%- @partial('examples/content-loader') %>
+    </div>
+    <div class="another example">
+      <div class="ui relaxed divided list">
+        <div class="item">
+          <i class="large github middle aligned icon"></i>
+          <div class="content">
+            <a class="header">Semantic-Org/Semantic-UI-Docs</a>
+            <div class="description">Updated 22 mins ago</div>
+          </div>
+        </div>
+        <div class="item">
+          <i class="large github middle aligned icon"></i>
+          <div class="content">
+            <div class="ui active content loader" style="width: 210px;">
+              <div class="paragraph">
+                <div class="line"></div>
+                <div class="line"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <i class="large github middle aligned icon"></i>
+          <div class="content">
+            <div class="ui active content loader" style="width: 210px;">
+              <div class="paragraph">
+                <div class="line"></div>
+                <div class="line"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <i class="large github middle aligned icon"></i>
+          <div class="content">
+            <div class="ui active content loader" style="width: 210px;">
+              <div class="paragraph">
+                <div class="line"></div>
+                <div class="line"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <i class="large github middle aligned icon"></i>
+          <div class="content">
+            <div class="ui active content loader" style="width: 210px;">
+              <div class="paragraph">
+                <div class="line"></div>
+                <div class="line"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="example">
+      <h4 class="ui header">
+        Placeholder Segment
+      </h4>
+      <p><a href="/elements/segment.html#placeholder">Placeholder segments</a> help reserve empty space in your designs for where content is intended to appear. This is useful when a page is visited for the first time, or when a query returns no results.</p>
+      <p>Placeholders work great with other ui like <code>icon header</code> and <code>grid</code> to provide the user options for creating content, and to provide an explanation for why the section is left blank.</p>
+      <div class="ui placeholder segment">
+        <div class="ui icon header">
+          <i class="dont icon"></i>
+          No users have been added yet
+        </div>
+        <div class="ui primary button">Add User</div>
+      </div>
+    </div>
+    <div class="another example">
+      <div class="ui placeholder segment">
+        <div class="ui two column center aligned grid">
+          <div class="ui vertical divider">Or</div>
+          <div class="middle aligned row">
+            <div class="column">
+              <div class="ui icon header">
+                <i class="search icon"></i>
+                Find Country
+              </div>
+              <div class="field">
+                <div class="ui search">
+                  <div class="ui icon input">
+                    <input class="prompt" type="text" placeholder="Search countries...">
+                    <i class="search icon"></i>
+                  </div>
+                  <div class="results"></div>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="ui icon header">
+                <i class="world icon"></i>
+                Add New Country
+              </div>
+              <div class="ui primary button">
+                Create
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2 class="ui dividing header">
+      New Features
+    </h2>
+    <div class="clearable no example">
+      <h4 class="ui header">
+        Clearable Dropdowns
+      </h4>
+      <p>Now dropdowns can specify that their content can be cleared with <code>clearable: true</code>.</p>
+
+      <div class="ui search selection dropdown">
+        <input type="hidden" name="country" value="kr">
+        <div class="text">
+          <i class="kr flag"></i>South Korea
+        </div>
+        <i class="dropdown icon"></i>
+        <%- @partial('examples/single/flag-menu') %>
+      </div>
+      <div class="ui divider"></div>
+      <div class="ui secondary segment">
+        Show me
+        <div class="ui inline scrolling dropdown">
+          <input type="hidden" name="skill" value="css">
+          <div class="text">css</div>
+          <i class="dropdown icon"></i>
+          <div class="menu">
+            <%- @partial('examples/single/preset-menu') %>
+          </div>
+        </div>
+        classes currently available.
+      </div>
+    </div>
+    <div class="example">
+      <h4 class="ui header">
+        Improved Flexbox Modals
+      </h4>
+      <p>Although flex-box were introduced in <code>2.3.0</code> there were limitations which may have prevented some advanced use-cases. For example, flexbox modals did not support modals that used <code>detachable: false</code> and werent directly inside dimmer flex containers. Also some flex browsers (IE11) do not support absolutely positioned elements inside flex containers, so multiple overlapping modals could not be used in those cases.</p>
+      <p>
+        <code>2.4.0</code> solves this by introducing a hybrid flex system, that will fall back to javascript positioning for browsers or layouts that aren't compatible with flex.
+      </p>
+    </div>
+  </div>
+
+  <div class="ui tab" data-tab="twothree">
     <h2 class="ui dividing header">A New Approach</h2>
 
     <p>After an extended period of patches, Semantic UI <code>2.3</code> marks the return to significant feature changes for the project.</p>

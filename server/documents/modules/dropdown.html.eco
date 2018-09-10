@@ -1191,7 +1191,52 @@ themes      : ['Default', 'GitHub', 'Material']
 
   <div class="ui tab" data-tab="examples">
 
+
     <h2 class="ui header">Selection Dropdowns</h2>
+
+    <div class="clearable example">
+      <h4 class="ui header">
+        Clearable
+        <div class="ui teal label">
+          New in 2.4.0
+        </div>
+      </h4>
+      <p>Using the clearable setting will let users remove their selection from a dropdown.</p>
+
+      <div class="ui fluid search selection dropdown">
+        <input type="hidden" name="country">
+        <div class="default text">Select Country</div>
+        <i class="dropdown icon"></i>
+        <%- @partial('examples/single/flag-menu') %>
+      </div>
+      <div class="ui divider"></div>
+      <div class="ui secondary segment">
+        Show me
+        <div class="ui inline scrolling dropdown">
+          <input type="hidden" name="skill" value="css">
+          <div class="text">css</div>
+          <i class="dropdown icon"></i>
+          <div class="menu">
+            <%- @partial('examples/single/preset-menu') %>
+          </div>
+        </div>
+        classes currently available.
+      </div>
+
+      <div class="evaluated code" data-type="javascript">
+        $('.clearable.example .ui.selection.dropdown')
+          .dropdown({
+            clearable: true
+          })
+        ;
+        $('.clearable.example .ui.inline.dropdown')
+          .dropdown({
+            clearable: true,
+            placeholder: 'any'
+          })
+        ;
+      </div>
+    </div>
 
     <div class="max example">
       <h4 class="ui header">Maximum Selections</h4>
@@ -2398,6 +2443,11 @@ themes      : ['Default', 'GitHub', 'Material']
           <td>on</td>
           <td>click</td>
           <td>Event used to trigger dropdown (Hover, Click, Custom Event)</td>
+        </tr>
+        <tr>
+          <td>clearable</td>
+          <td>false</td>
+          <td>Whether the dropdown value can be cleared by the user after being selected. </td>
         </tr>
         <tr>
           <td>ignoreCase</td>

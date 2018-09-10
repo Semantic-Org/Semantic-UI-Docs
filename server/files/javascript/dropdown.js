@@ -7,6 +7,7 @@ semantic.dropdown.ready = function() {
   var
     $examples         = $('.example'),
     $hoverDropdown    = $examples.filter('.hover').find('.ui.dropdown'),
+    $clearingDropdown = $examples.filter('.clearing').find('.ui.dropdown'),
     $buttonDropdown   = $examples.filter('.button.example').find('.ui.dropdown'),
     $dropdown         = $examples.filter('.dropdown').find('.menu > .item > .ui.dropdown, .menu > .item.ui.dropdown, > .ui.dropdown:not(.simple), .inline.dropdown, .icon.buttons .button, .form .dropdown.selection'),
     $transition       = $examples.filter('.transition').find('.ui.dropdown'),
@@ -26,6 +27,12 @@ semantic.dropdown.ready = function() {
     .on('click', function(event) {
       $transition.dropdown('toggle');
       event.stopImmediatePropagation();
+    })
+  ;
+
+  $clearingDropdown
+    .dropdown({
+      clearable: true
     })
   ;
 

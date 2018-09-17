@@ -47,7 +47,7 @@ themes      : ['default', 'GitHub']
     </div>
     <div class="ui placeholder segment">
       <div class="ui icon header">
-        <i class="dont icon"></i>
+        <i class="search icon"></i>
         We don't have any documents matching your query
       </div>
       <div class="inline">
@@ -60,7 +60,7 @@ themes      : ['default', 'GitHub']
 
   <div class="another local example">
     <div class="ui placeholder segment">
-      <div class="ui two column center aligned grid">
+      <div class="ui two column stackable center aligned grid">
         <div class="ui vertical divider">Or</div>
         <div class="middle aligned row">
           <div class="column">

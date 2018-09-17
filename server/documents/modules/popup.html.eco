@@ -50,7 +50,7 @@ themes      : ['Default']
       <h4 class="ui header">HTML</h4>
       <p>An element can specify HTML for a popup</p>
 
-      <div class="ui card" data-html="<div class='header'>User Rating</div><div class='content'><div class='ui star rating'><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i><i class='icon'></i><i class='icon'></i></div></div>">
+      <div class="ui card" data-html="<div class='header'>User Rating</div><div class='content'><div class='ui star rating'><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i></div></div>">
         <div class="image">
           <img src="/images/movies/totoro-horizontal.jpg">
         </div>

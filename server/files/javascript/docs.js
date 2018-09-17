@@ -496,7 +496,7 @@ semantic.ready = function() {
         .stop()
         .animate({
           scrollTop: position
-        }, duration || 500)
+        }, 500)
       ;
       location.hash = '#' + id;
       event.stopImmediatePropagation();

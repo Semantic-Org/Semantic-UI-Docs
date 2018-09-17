@@ -2518,6 +2518,9 @@ code .chunk {
   #example.button-page .example .html > .button {
     margin-bottom: 8px;
   }
+  #example .stackable.grid .ui.vertical.divider {
+    display: none;
+  }
 
   /* Add Sticky Footers */
   body.pushable > .pusher {

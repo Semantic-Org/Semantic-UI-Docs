@@ -99,7 +99,6 @@ type        : 'Main'
         Placeholder Segment
       </h4>
       <p><a href="/elements/segment.html#placeholder">Placeholder segments</a> allow you to reserve space in your design for where content is intended to appear. This is useful when a page should prompt a user about its intended functionality, even when no content is present.</p>
-      <p>Placeholders are designed to work with other ui like <code>icon header</code> and <code>grid</code> to provide an explanation to create additional UI for explaining additional actions that may help users interact with an empty page.</p>
       <div class="ui placeholder segment">
         <div class="ui icon header">
           <i class="dont icon"></i>

@@ -1415,6 +1415,7 @@ themes      : ['Default']
         <div class="column"><i class="cloud icon"></i>cloud</div>
         <div class="column"><i class="cloud download icon"></i>cloud download</div>
         <div class="column"><i class="cloud upload icon"></i>cloud upload</div>
+        <div class="column"><i class="close icon"></i>close icon</div>
         <div class="column"><i class="coffee icon"></i>coffee</div>
         <div class="column"><i class="cog icon"></i>cog</div>
         <div class="column"><i class="cogs icon"></i>cogs</div>
@@ -1546,6 +1547,7 @@ themes      : ['Default']
         <div class="column"><i class="user circle icon"></i>user circle</div>
         <div class="column"><i class="user circle outline icon"></i>user circle outline</div>
         <div class="column"><i class="wifi icon"></i>wifi</div>
+        <div class="column"><i class="x icon"></i>x icon</div>
       </div>
       <div class="existing code">
         <i class="ban icon"></i>

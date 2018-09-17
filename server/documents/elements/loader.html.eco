@@ -15,6 +15,7 @@ themes      : ['Default', 'Duo', 'Pulsar']
 
 <%- @partial('header') %>
 <link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/loader.less" />
+<script src="/javascript/loader.js"></script>
 
 <div class="main ui container">
 

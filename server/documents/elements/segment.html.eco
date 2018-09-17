@@ -12,6 +12,7 @@ type        : 'UI Element'
 themes      : ['default', 'GitHub']
 ---
 <%- @partial('header') %>
+<script src="/javascript/search.js"></script>
 <link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/segment.less" />
 
 <div class="main ui container">
@@ -23,6 +24,71 @@ themes      : ['default', 'GitHub']
     <p>A segment of content</p>
     <div class="ui segment">
       <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+    </div>
+  </div>
+  <div class="example">
+    <h4 class="ui header">
+      Placeholder Segment
+      <div class="ui teal horizontal label">New in 2.4.0</div>
+    </h4>
+    <p>A segment can be used to reserve space for conditionally displayed content.</p>
+    <div class="ui placeholder segment">
+      <div class="ui icon header">
+        <i class="pdf file outline icon"></i>
+        No documents are listed for this customer.
+      </div>
+      <div class="ui primary button">Add Document</div>
+    </div>
+  </div>
+
+  <div class="another example">
+    <div class="ui ignored info message">
+      To use inline-block content inside a placeholder, wrap the content in <code>inline</code>.
+    </div>
+    <div class="ui placeholder segment">
+      <div class="ui icon header">
+        <i class="dont icon"></i>
+        We don't have any documents matching your query
+      </div>
+      <div class="inline">
+        <div class="ui primary button">Clear Query</div>
+        <div class="ui button">Add Document</div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="another local example">
+    <div class="ui placeholder segment">
+      <div class="ui two column center aligned grid">
+        <div class="ui vertical divider">Or</div>
+        <div class="middle aligned row">
+          <div class="column">
+            <div class="ui icon header">
+              <i class="search icon"></i>
+              Find Country
+            </div>
+            <div class="field">
+              <div class="ui search">
+                <div class="ui icon input">
+                  <input class="prompt" type="text" placeholder="Search countries...">
+                  <i class="search icon"></i>
+                </div>
+                <div class="results"></div>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui icon header">
+              <i class="world icon"></i>
+              Add New Country
+            </div>
+            <div class="ui primary button">
+              Create
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 

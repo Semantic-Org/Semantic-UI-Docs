@@ -14,6 +14,7 @@
 <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/label.css">
 <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/list.css">
 <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/loader.css">
+<link rel="stylesheet" type="text/css" class="ui" href="/dist/components/placeholder.css">
 <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/rail.css">
 <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/reveal.css">
 <link rel="stylesheet" type="text/css" class="ui" href="/dist/components/segment.css">

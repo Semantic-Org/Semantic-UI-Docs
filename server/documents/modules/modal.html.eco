@@ -845,6 +845,11 @@ themes      : ['Default', 'Material']
           <td>If set to false will prevent the modal from being moved to inside the dimmer</td>
         </tr>
         <tr>
+          <td>useFlex</td>
+          <td>'auto'</td>
+          <td>Auto will automatically use flex in browsers that support absolutely positioned elements inside flex containers. Setting to true/false will force this setting for all browsers.</td>
+        </tr>
+        <tr>
           <td>autofocus</td>
           <td>true</td>
           <td>When true, the first form input inside the modal will receive focus when shown.  Set this to false to prevent this behavior.</td>

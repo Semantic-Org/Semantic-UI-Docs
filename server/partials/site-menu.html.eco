@@ -17,7 +17,7 @@
   <b>Getting Started</b>
 </a>
 <a class="item" href="/introduction/new.html">
-  <b>New in 2.3</b>
+  <b>New in 2.4</b>
 </a>
 <div class="item">
   <div class="<%= if @document.elementType is 'introduction' then 'active ' %>header">Introduction</div>

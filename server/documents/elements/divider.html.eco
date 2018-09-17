@@ -34,68 +34,63 @@ themes      : ['default']
     <div class="ui ignored message">
       Vertical dividers requires <code>position: relative</code> on the element that you would like to contain the divider
     </div>
-    <div class="ui info ignored message">
-      A vertical divider will automatically swap to a horizontal divider at mobile resolutions when used inside a <a href="/collections/grid.html#stackable-grid"><code>stackable grid</code></a>
-    </div>
     <div class="ui warning ignored message">
-      There is a known bug of vertical dividers after a W3C update. Please read <a href="https://github.com/Semantic-Org/Semantic-UI/issues/4342" target="_blank" rel="nofollow">#4342</a> for more information
+      Due to a change in W3C implementation of <a href="https://github.com/w3c/csswg-drafts/issues/401" target="_blank" rel="nofollow">absolutely positioned elements in flex containers</a> vertical dividers now currently only support 50/50 splits automatically, and only if not positioned <b>as direct children of flex containers</b> (like grid).
     </div>
-    <div class="ui three column very relaxed grid">
-      <div class="column">
-        <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-        <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-        <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-        <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+    <div class="ui segment">
+      <div class="ui two column very relaxed grid">
+        <div class="column">
+          <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+          <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+          <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+          <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+        </div>
+        <div class="column">
+          <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+          <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+          <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+          <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
+        </div>
       </div>
       <div class="ui vertical divider">
         and
       </div>
-      <div class="column">
-        <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-        <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-        <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-        <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-      </div>
-      <div class="ui vertical divider">
-        not
-      </div>
-      <div class="column">
-        <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-        <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-        <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-        <img class="ui wireframe image" src="/images/wireframe/short-paragraph.png">
-      </div>
     </div>
   </div>
   <div class="another example">
-    <div class="ui two column middle aligned very relaxed stackable grid">
-      <div class="column">
-        <div class="ui form">
-          <div class="field">
-            <label>Username</label>
-            <div class="ui left icon input">
-              <input type="text" placeholder="Username">
-              <i class="user icon"></i>
+    <div class="ui info ignored message">
+      A vertical divider will automatically swap to a horizontal divider at mobile resolutions when used inside a <a href="/collections/grid.html#stackable-grid"><code>stackable grid</code></a>
+    </div>
+    <div class="ui placeholder segment">
+      <div class="ui two column very relaxed stackable grid">
+        <div class="column">
+          <div class="ui form">
+            <div class="field">
+              <label>Username</label>
+              <div class="ui left icon input">
+                <input type="text" placeholder="Username">
+                <i class="user icon"></i>
+              </div>
             </div>
-          </div>
-          <div class="field">
-            <label>Password</label>
-            <div class="ui left icon input">
-              <input type="password">
-              <i class="lock icon"></i>
+            <div class="field">
+              <label>Password</label>
+              <div class="ui left icon input">
+                <input type="password">
+                <i class="lock icon"></i>
+              </div>
             </div>
+            <div class="ui blue submit button">Login</div>
           </div>
-          <div class="ui blue submit button">Login</div>
+        </div>
+        <div class="middle aligned column">
+          <div class="ui big button">
+            <i class="signup icon"></i>
+            Sign Up
+          </div>
         </div>
       </div>
       <div class="ui vertical divider">
         Or
-      </div>
-      <div class="center aligned column">
-        <div class="ui big green labeled icon button">
-          <i class="signup icon"></i>
-          Sign Up
-        </div>
       </div>
     </div>
   </div>

@@ -495,7 +495,7 @@ type        : 'UI Element'
       <tr>
         <td><i class="united kingdom flag"></i></td>
         <td>United Kingdom</td>
-        <td>gb</td>
+        <td>gb uk</td>
         <td class="disabled"></td>
       </tr>
       <tr>

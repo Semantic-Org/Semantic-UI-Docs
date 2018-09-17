@@ -1,0 +1,271 @@
+---
+layout      : 'default'
+css         : 'loader'
+standalone  : true
+
+element     : 'placeholder'
+elementType : 'element'
+
+title       : 'Placeholder'
+description : 'A placeholder is used to reserve splace for content that soon will appear in a layout'
+type        : 'UI Element'
+
+themes      : ['Default']
+---
+
+<%- @partial('header') %>
+<link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/loader.less" />
+<script src="/javascript/loader.js"></script>
+
+<div class="main ui container">
+
+  <h2 class="ui dividing header">Types</h2>
+
+  <div class="example" data-class="image header, paragraph, line, content, loader, image">
+    <h4 class="ui header">
+      Placeholder
+      <div class="ui teal horizontal label">New in 2.4.0</div>
+    </h4>
+    <p>A placeholder is used to reserve space for content that soon will appear in a layout.</p>
+    <div class="ui ignored info message">
+      Placeholders can include <code>paragraph</code>, <code>header</code>, <code>image header</code> and <code>image</code> to let you format the loaders to emulate the content being loaded.
+    </div>
+    <div class="ui placeholder">
+      <div class="image header">
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <div class="paragraph">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui three column stackable grid">
+      <div class="column">
+        <div class="ui raised segment">
+          <div class="ui placeholder">
+            <div class="image header">
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+            <div class="paragraph">
+              <div class="medium line"></div>
+              <div class="short line"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="ui raised segment">
+          <div class="ui placeholder">
+            <div class="image header">
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+            <div class="paragraph">
+              <div class="medium line"></div>
+              <div class="short line"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="ui raised segment">
+          <div class="ui placeholder">
+            <div class="image header">
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+            <div class="paragraph">
+              <div class="medium line"></div>
+              <div class="short line"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another content example">
+    <%- @partial('examples/content-loader') %>
+  </div>
+
+
+  <h2 class="ui dividing header">Content</h2>
+  <div class="example">
+    <h4 class="ui header">Lines</h4>
+    <p>A placeholder can contain have lines of text</p>
+    <div class="ui ignored info message">By default, repeated lines will appear varied in width. However, it may be useful to specify an exact length to make it match up with content more effectively</div>
+    <div class="ui placeholder">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </div>
+  <div class="example">
+    <h4 class="ui header">Headers</h4>
+    <p>A placeholder can contain a header</p>
+    <div class="ui ignored info message">
+      Header content will have a slightly larger block size from paragraph
+    </div>
+    <div class="ui placeholder">
+      <div class="image header">
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui placeholder">
+      <div class="header">
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+  </div>
+  <div class="example">
+    <h4 class="ui header">Paragraph</h4>
+    <p>A placeholder can contain a paragraph</p>
+    <div class="ui ignored info message">Paragraphs are used to group lines together.</div>
+    <div class="ui placeholder">
+      <div class="paragraph">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <div class="paragraph">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+  </div>
+  <div class="example">
+    <h4 class="ui header" data-class="image">Image</h4>
+    <p>A placeholder can contain an image</p>
+    <div class="ui placeholder" style="width:150px;height:150px;">
+      <div class="image"></div>
+    </div>
+  </div>
+  <div class="another example" data-class="square">
+    <div class="ui ignored info message">
+      Using <code>square</code> (1:1) or <code>rectangular</code> (4:3) will embed an aspect ratio into the image loader so that they modify size correctly with responsive styles.
+    </div>
+    <div class="ui three cards">
+      <div class="ui card">
+        <div class="content">
+          <div class="ui placeholder">
+            <div class="square image"></div>
+          </div>
+        </div>
+      </div>
+      <div class="ui card">
+        <div class="content">
+          <div class="ui placeholder">
+            <div class="square image"></div>
+          </div>
+        </div>
+      </div>
+      <div class="ui card">
+        <div class="content">
+          <div class="ui placeholder">
+            <div class="square image"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example" data-class="rectangular">
+    <div class="ui three cards">
+      <div class="ui card">
+        <div class="content">
+          <div class="ui placeholder">
+            <div class="rectangular image"></div>
+          </div>
+        </div>
+      </div>
+      <div class="ui card">
+        <div class="content">
+          <div class="ui placeholder">
+            <div class="rectangular image"></div>
+          </div>
+        </div>
+      </div>
+      <div class="ui card">
+        <div class="content">
+          <div class="ui placeholder">
+            <div class="rectangular image"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h2 class="ui dividing header">Variations</h2>
+
+  <div class="example">
+    <h4 class="ui header">Line Length</h4>
+    <p>A line can specify how long its contents should appear</p>
+    <div class="ui placeholder">
+      <div class="full line"></div>
+      <div class="very long line"></div>
+      <div class="long line"></div>
+      <div class="medium line"></div>
+      <div class="short line"></div>
+      <div class="very short line"></div>
+    </div>
+  </div>
+  <div class="another example">
+
+    <div class="ui placeholder">
+      <div class="image header">
+        <div class="medium line"></div>
+        <div class="full line"></div>
+      </div>
+      <div class="paragraph">
+        <div class="full line"></div>
+        <div class="medium line"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Fluid</h4>
+    <p>A fluid placeholder takes up the width of its container</p>
+    <div class="ui fluid placeholder">
+      <div class="image header">
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <div class="paragraph">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+  </div>
+  <div class="example">
+    <h4 class="ui header">Inverted</h4>
+    <p>A placeholder can have their colors inverted.</p>
+    <div class="ui inverted segment">
+      <div class="ui active inverted placeholder">
+        <div class="image header">
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <div class="paragraph">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -28,10 +28,10 @@ themes      : ['default', 'GitHub']
   </div>
   <div class="example">
     <h4 class="ui header">
-      Placeholder
+      Placeholder Segment
       <div class="ui teal horizontal label">New in 2.4.0</div>
     </h4>
-    <p>A segment may be used to explain the purpose of empty space.</p>
+    <p>A segment can be used to reserve space for conditionally displayed content.</p>
     <div class="ui placeholder segment">
       <div class="ui icon header">
         <i class="dont icon"></i>

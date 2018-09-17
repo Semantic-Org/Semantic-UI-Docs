@@ -18,19 +18,20 @@ type        : 'Main'
     <h2 class="ui dividing header">
       Solving Empty State
     </h2>
-    <p>Semantic <code>2.4</code> brings several new components for handling empty state and content loading with <a href="/elements/segment.html#placeholder"><code>placeholder segment</code></a> and <a href="/elements/loader.html#content-loader"><code>content loader</code></a>.</p>
+    <p>Semantic <code>2.4</code> brings a new components for handling empty state <a href="/elements/loader.html#content-loader"><code>ui placeholder</code></a>, as well as a new type of <code>segment</code> used for reserve space in blank states: <a href="/elements/segment.html#empty"><code>ui placeholder segment</code></a>.</p>
 
-    <P>Additionally several important component updates are included in this release, including hybrid flex modals (for full browser & feature support), and clearable dropdowns.</p>
+    <P>Additionally several important component updates are included in this release. Modals have been re-architected to use hybrid flex support, falling back to JS positioning for more complex use-cases (or older browsers). Dropdowns now include a <code>clearable</code> setting for letting users reset dropdowns to its empty state.</p>
+
+    <div class="ui ignored warning message">If you are upgrading from a previous SUI version, be sure to add <code>@placeholder</code> to your <a href="/introduction/build-tools.html"><code>theme.config</code></a> to include the placeholder component in your code.</div>
 
     <h2 class="ui dividing header">
-      New UI Types
+      New UI Component
     </h2>
     <div class="content example">
       <h4 class="ui header">
-        Content Loaders
+        Placeholders
       </h4>
-      <P><a href="/elements/loader.html#content-loader">Content loaders</a> can be used to provide cues for the contours of content that are about to load in an app.</p>
-      <p>Using content loaders can help users prepare themselves for the appearance of new content and help reduce the jarringness of new elements.</p>
+      <P><a href="/elements/placeholder.html">Placeholders</a> can be used to provide cues for the contours of content that are about to load in an app, and help reduce the perceived load time as new content loads.</p>
       <%- @partial('examples/content-loader') %>
     </div>
     <div class="another example">
@@ -45,10 +46,10 @@ type        : 'Main'
         <div class="item">
           <i class="large github middle aligned icon"></i>
           <div class="content">
-            <div class="ui active content loader" style="width: 210px;">
+            <div class="ui placeholder">
               <div class="paragraph">
-                <div class="line"></div>
-                <div class="line"></div>
+                <div class="medium line"></div>
+                <div class="short line"></div>
               </div>
             </div>
           </div>
@@ -56,10 +57,10 @@ type        : 'Main'
         <div class="item">
           <i class="large github middle aligned icon"></i>
           <div class="content">
-            <div class="ui active content loader" style="width: 210px;">
+            <div class="ui placeholder">
               <div class="paragraph">
-                <div class="line"></div>
-                <div class="line"></div>
+                <div class="medium line"></div>
+                <div class="short line"></div>
               </div>
             </div>
           </div>
@@ -67,10 +68,10 @@ type        : 'Main'
         <div class="item">
           <i class="large github middle aligned icon"></i>
           <div class="content">
-            <div class="ui active content loader" style="width: 210px;">
+            <div class="ui placeholder">
               <div class="paragraph">
-                <div class="line"></div>
-                <div class="line"></div>
+                <div class="medium line"></div>
+                <div class="short line"></div>
               </div>
             </div>
           </div>
@@ -78,10 +79,10 @@ type        : 'Main'
         <div class="item">
           <i class="large github middle aligned icon"></i>
           <div class="content">
-            <div class="ui active content loader" style="width: 210px;">
+            <div class="ui placeholder">
               <div class="paragraph">
-                <div class="line"></div>
-                <div class="line"></div>
+                <div class="medium line"></div>
+                <div class="short line"></div>
               </div>
             </div>
           </div>
@@ -92,8 +93,8 @@ type        : 'Main'
       <h4 class="ui header">
         Placeholder Segment
       </h4>
-      <p><a href="/elements/segment.html#placeholder">Placeholder segments</a> help reserve empty space in your designs for where content is intended to appear. This is useful when a page is visited for the first time, or when a query returns no results.</p>
-      <p>Placeholders work great with other ui like <code>icon header</code> and <code>grid</code> to provide the user options for creating content, and to provide an explanation for why the section is left blank.</p>
+      <p><a href="/elements/segment.html#placeholder">Placeholder segments</a> allow you to reserve space in your design for where content is intended to appear. This is useful when a page should prompt a user about its intended functionality, even when no content is present.</p>
+      <p>Placeholders are designed to work with other ui like <code>icon header</code> and <code>grid</code> to provide an explanation to create additional UI for explaining additional actions that may help users interact with an empty page.</p>
       <div class="ui placeholder segment">
         <div class="ui icon header">
           <i class="dont icon"></i>

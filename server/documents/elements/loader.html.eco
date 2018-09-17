@@ -32,31 +32,6 @@ themes      : ['Default', 'Duo', 'Pulsar']
     </div>
   </div>
 
-  <div class="example" data-class="image header, paragraph, line, content, loader, image">
-    <h4 class="ui header">
-      Content Loader
-      <div class="ui teal horizontal label">New in 2.4.0</div>
-    </h4>
-    <p>A loader can indicate content will soon appear inside a container.</p>
-    <div class="ui ignored info message">
-      Content loaders can include <code>paragraph</code>, <code>header</code>, <code>image header</code> and <code>image</code> to let you format the loaders to emulate the content being loaded.
-    </div>
-    <div class="ui active content loader">
-      <div class="image header">
-        <div class="line"></div>
-        <div class="line"></div>
-      </div>
-      <div class="paragraph">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-      </div>
-    </div>
-  </div>
-  <div class="another content example">
-    <%- @partial('examples/content-loader') %>
-  </div>
-
   <div class="example">
     <h4 class="ui header">Text Loader</h4>
     <p>A loader can contain text</p>
@@ -76,54 +51,6 @@ themes      : ['Default', 'Duo', 'Pulsar']
     </div>
   </div>
 
-
-  <h2 class="ui dividing header">Content</h2>
-  <div class="example">
-    <h4 class="ui header">Headers</h4>
-    <p>A content loader can contain a header</p>
-    <div class="ui active content loader">
-      <div class="image header">
-        <div class="line"></div>
-        <div class="line"></div>
-      </div>
-    </div>
-  </div>
-  <div class="another example">
-    <div class="ui active content loader">
-      <div class="header">
-        <div class="line"></div>
-        <div class="line"></div>
-      </div>
-    </div>
-  </div>
-  <div class="example">
-    <h4 class="ui header">Paragraph</h4>
-    <p>A content loader can contain a paragraph</p>
-    <div class="ui active content loader">
-      <div class="paragraph">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-      </div>
-      <div class="paragraph">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-      </div>
-    </div>
-  </div>
-  <div class="example">
-    <h4 class="ui header">Image</h4>
-    <p>A content loader can contain an image</p>
-    <div class="ui ignored info message">
-      For image loaders you can use <code>square</code> (1:1) or <code>rectangular</code> (4:3) to embed an aspect ratio into the image loader, or manually specify a width and height using your site's css.
-    </div>
-    <div class="ui active content loader" style="width:150px;height:150px;">
-      <div class="image"></div>
-    </div>
-  </div>
 
   <h2 class="ui dividing header">States</h2>
 
@@ -247,21 +174,6 @@ themes      : ['Default', 'Duo', 'Pulsar']
       <br>
       <br>
       <br>
-    </div>
-  </div>
-  <div class="another example">
-    <div class="ui inverted segment">
-      <div class="ui active inverted content loader">
-        <div class="image header">
-          <div class="line"></div>
-          <div class="line"></div>
-        </div>
-        <div class="paragraph">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-        </div>
-      </div>
     </div>
   </div>
   <div class="another example" data-class="inverted dimmer">

@@ -1,7 +1,7 @@
 ---
 layout     : 'homepage'
 css        : 'index'
-standalone : true
+standalone : false
 ---
 <div class="following bar">
   <div class="ui container">

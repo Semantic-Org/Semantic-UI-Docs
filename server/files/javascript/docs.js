@@ -493,9 +493,10 @@ semantic.ready = function() {
         .addClass('active')
       ;
       $('html, body')
+        .stop()
         .animate({
           scrollTop: position
-        }, 500)
+        }, duration || 500)
       ;
       location.hash = '#' + id;
       event.stopImmediatePropagation();
@@ -1449,6 +1450,22 @@ semantic.ready = function() {
   }
   else {
     detectAdBlock.onDetected(handler.showBeg);
+  }
+
+  if(window.location.hash) {
+    var
+      $element = $(window.location.hash),
+      position = $element.offset().top + 10
+    ;
+    $element
+      .addClass('active')
+    ;
+    $('html, body')
+      .stop()
+      .animate({
+        scrollTop: position
+      }, 500)
+    ;
   }
 
   handler.getMetadata();

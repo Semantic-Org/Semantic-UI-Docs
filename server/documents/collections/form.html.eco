@@ -392,7 +392,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
       Dropdown will automatically convert <code>select</code> elements initialized as dropdowns. For more details check out <a href="/modules/dropdown.html#usage">the dropdown docs</a>
     </div>
     <div class="code" data-type="javascript" data-label="true">
-    $('select.dropdown')
+    $('.selection.dropdown')
       .dropdown()
     ;
     </div>

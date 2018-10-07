@@ -109,7 +109,7 @@ type        : 'Main'
     </div>
     <div class="another example">
       <div class="ui placeholder segment">
-        <div class="ui two column center aligned grid">
+        <div class="ui stackable two column center aligned grid">
           <div class="ui vertical divider">Or</div>
           <div class="middle aligned row">
             <div class="column">

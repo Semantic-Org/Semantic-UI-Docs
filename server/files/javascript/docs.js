@@ -462,25 +462,23 @@ semantic.ready = function() {
         .html($sticky)
         .prependTo($container)
       ;
-      requestAnimationFrame(function() {
-        $sticky.sticky({
-          silent: true,
-          context: $container,
-          container: $('html'),
-          offset: 30
-        });
-        $followMenu
-          .accordion({
-            exclusive: false,
-            animateChildren: false,
-            onChange: function() {
-              $('.ui.sticky').sticky('refresh');
-            }
-          })
-          .find('.menu a[href], .title[href]')
-            .on('click', handler.scrollTo)
-        ;
+      $sticky.sticky({
+        silent: true,
+        context: $container,
+        container: $('html'),
+        offset: 30
       });
+      $followMenu
+        .accordion({
+          exclusive: false,
+          animateChildren: false,
+          onChange: function() {
+            $('.ui.sticky').sticky('refresh');
+          }
+        })
+        .find('.menu a[href], .title[href]')
+          .on('click', handler.scrollTo)
+      ;
     },
 
     scrollTo: function(event) {

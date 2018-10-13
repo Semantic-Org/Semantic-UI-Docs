@@ -7,37 +7,19 @@ title      : 'Test Page'
 type       : 'Library'
 ---
 
-<div class="ui menu">
-  <div class="right menu">
-    <div class="item">
-      <div class="ui floating icon labeled button dropdown">
-        <i class="filter icon"></i>
-        <span class="text">Dropdown</span>
-        <div class="menu">
-          <div class="header">
-            <i class="filter icon"></i> Dropdown
-          </div>
-          <div class="item">
-            Loooooooooooooong item 1
-          </div>
-          <div class="item">
-            Item 2
-          </div>
-          <div class="item">
-            Item 3
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
+<div class="ui container">
+  <div class="ui fluid selection dropdown">
+  <input name="template" type="hidden">
+  <i class="dropdown icon"></i>
+  <div class="default text">Template</div>
+  <div class="menu">
+    <div class="item" >Item1</div>
+    <div class="item" >Item2</div>
+</div>
 </div>
 <script>
   $(document).ready(function() {
-$('.ui.dropdown')
-  .dropdown({
-    allowCategorySelection: true
-  });
+$('.ui.dropdown').dropdown({transition: 'drop', on: 'hover', clearable: true,});
   });
 </script>
 

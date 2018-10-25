@@ -30,3 +30,4 @@ nbproject
 *.sublime-project
 *.sublime-workspace
 .brofile
+.idea

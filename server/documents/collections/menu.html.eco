@@ -135,7 +135,7 @@ themes      : ['Default', 'Chubby', 'GitHub', 'Material']
   <div class="example">
     <h4 class="ui header">Secondary Menu</h4>
     <p>A menu can adjust its appearance to de-emphasize its contents</p>
-    <div class="ui secondary  menu">
+    <div class="ui secondary menu">
       <a class="active item">
         Home
       </a>

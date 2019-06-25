@@ -5,6 +5,7 @@
   <%- @partial('javascript') %>
   <%- @partial('css') %>
   <%- @partial('tracking') %>
+  <%- @partial('site-ads') %>
   <%- @partial('transifex') %>
 </head>
 <body id="example" class="<%= @document.css %>" ontouchstart="">

@@ -21,7 +21,7 @@ Assuming two sibling folders:
 1. UI folder ./ui
 2. Docs folder ./docs
 
-* Clone both repos to respective folders
+* Clone both the Semantic-UI and the Semantic-UI-Docs repos to their respective folders
 * npm install in both directories
 * Go through Semantic UI installer steps (auto)
 * In `./ui` folder `gulp build-docs` (builds files to ./docs)

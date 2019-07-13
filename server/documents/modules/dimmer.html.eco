@@ -573,7 +573,6 @@ themes      : ['Default']
                return $('<div />').attr('class', 'ui dimmer');
               }
             }
-            </div>
           </td>
           <td>Templates used to generate dimmer content</td>
         </tr>

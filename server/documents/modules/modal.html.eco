@@ -886,7 +886,7 @@ themes      : ['Default', 'Material']
           <td>
           true
           </td>
-          <td>Setting to false will not allow you to close the modal by clicking on the dimmer</td>
+          <td>Setting to false will not allow you to close the modal by clicking outside of the dimmer</td>
         </tr>
         <tr>
           <td>dimmerSettings</td>

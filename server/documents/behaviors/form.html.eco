@@ -1874,7 +1874,7 @@ type        : 'UI Behavior'
         <td>Returns object of element values that match array of ids. If no IDS are passed will return all fields</td>
       </tr>
       <tr>
-        <td>set value(id)</td>
+        <td>set value(id, value)</td>
         <td>Sets value of element with id</td>
       </tr>
       <tr>

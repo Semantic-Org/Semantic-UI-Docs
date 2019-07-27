@@ -506,18 +506,18 @@ type        : 'UI Module'
       <table class="ui demo table">
         <tbody>
           <tr>
-            <td>John Lilki</td>
+            <td>Jude Lilki</td>
             <td>jhlilk22@yahoo.com</td>
             <td>No</td>
           </tr>
           <tr>
-            <td>Jamie Harington</td>
-            <td>jamieharingonton@yahoo.com</td>
+            <td>Jill Lewis</td>
+            <td>jilsewris22@yahoo.com</td>
             <td>Yes</td>
           </tr>
           <tr>
-            <td>Jill Lewis</td>
-            <td>jilsewris22@yahoo.com</td>
+            <td>Jamie Harington</td>
+            <td>jamieharingonton@yahoo.com</td>
             <td>Yes</td>
           </tr>
         </tbody>

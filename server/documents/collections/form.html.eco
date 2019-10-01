@@ -359,25 +359,25 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
         <label for="fruit">Select your second favorite fruit:</label>
         <div class="field">
           <div class="ui radio checkbox">
-            <input type="radio" name="fruit" checked />
+            <input type="radio" name="secondary-fruit" checked />
             <label>Apples</label>
           </div>
         </div>
         <div class="field">
           <div class="ui radio checkbox">
-            <input type="radio" name="fruit" />
+            <input type="radio" name="secondary-fruit" />
             <label>Oranges</label>
           </div>
         </div>
         <div class="field">
           <div class="ui radio checkbox">
-            <input type="radio" name="fruit" />
+            <input type="radio" name="secondary-fruit" />
             <label>Pears</label>
           </div>
         </div>
         <div class="field">
           <div class="ui radio checkbox">
-            <input type="radio" name="fruit" />
+            <input type="radio" name="secondary-fruit" />
             <label>Grapefruit</label>
           </div>
         </div>

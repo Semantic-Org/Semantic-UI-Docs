@@ -402,7 +402,7 @@ themes      : ['Default']
             </div>
           </div>
           <div class="right item">
-            <div class="ui input"><input type="text" placeholder="Search..."></div>
+            <div class="ui input"><input type="text" placeholder="Search..." /></div>
           </div>
         </div>
       </div>

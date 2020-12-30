@@ -7,7 +7,7 @@ element     : 'placeholder'
 elementType : 'element'
 
 title       : 'Placeholder'
-description : 'A placeholder is used to reserve splace for content that soon will appear in a layout'
+description : 'A placeholder is used to reserve a place for content that soon will appear in a layout'
 type        : 'UI Element'
 
 themes      : ['Default']

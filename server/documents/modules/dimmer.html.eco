@@ -469,7 +469,7 @@ themes      : ['Default']
         <tr>
           <td>closable</td>
           <td class="six wide">auto</td>
-          <td>Whether clicking on the dimmer should hide the dimmer (Defaults to <code>auto</code>, closable only when <code>settings.on</code> is not <code>hover</code></td>
+          <td>Whether clicking on the dimmer should hide the dimmer. (Defaults to <code>auto</code>, closable only when <code>settings.on</code> is not <code>hover</code>). Can also take values of <code>true</code> or <code>false</code> to allow or prevent click from dismissing the dimmer, respectively.</td>
         </tr>
         <tr>
           <td>on</td>

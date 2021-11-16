@@ -2190,16 +2190,10 @@ code .chunk {
 }
 
 #semantic-sponsor {
-  position: relative;
-  z-index: 3;
-  margin-top: -1px;
   min-height: 40px;
-  border-top: solid 1px #dddddd;
   border-bottom: solid 1px #dddddd;
 }
-#semantic-sponsor:hover {
-  border-color: #87C7D0;
-}
+
 
 .native-link {
   display: block;

@@ -12,6 +12,7 @@ You must install [DocPad](http://github.com/docpad/docpad), the static site gene
 npm install -g docpad
 docpad install eco;
 docpad update; docpad upgrade;
+
 ```
 
 ### Generating Semantic UI for Docs

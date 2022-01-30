@@ -673,7 +673,7 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
 
   <div class="form example" data-tag="select" data-use-content="true">
     <h4 class="ui header">Multiple Select</h4>
-    <p>A <a href="/modules/dropdown.html##multiple-selection">multiple select</a> is used to include several choices with one form field</p>
+    <p>A <a href="/modules/dropdown.html#multiple-selection">multiple select</a> is used to include several choices with one form field</p>
     <div class="ui form">
       <div class="field">
         <label>Country</label>

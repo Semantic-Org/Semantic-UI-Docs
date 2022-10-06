@@ -9,7 +9,7 @@ This repo can be used to create a fork of the UI documents to serve as styleguid
 
 You must install [DocPad](http://github.com/docpad/docpad), the static site generator used to create the HTML for the site, to render the contents of this repository.
 ```
-npm install -g docpad
+npm install -g docpad@6.79.4
 docpad install eco;
 docpad update; docpad upgrade;
 ```

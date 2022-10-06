@@ -150,6 +150,10 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
       <i class="right arrow icon"></i>
       Next
     </button>
+    <button class="ui labeled icon button">
+      <i class="loading spinner icon"></i>
+      Loading
+    </button>
   </div>
 
   <div class="example">

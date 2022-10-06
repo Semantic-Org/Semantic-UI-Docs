@@ -8,10 +8,24 @@ This repo can be used to create a fork of the UI documents to serve as styleguid
 
 
 You must install [DocPad](http://github.com/docpad/docpad), the static site generator used to create the HTML for the site, to render the contents of this repository.
+
+SUI docs use a version of **DocPad compatible with Node 10**. It is recommended you install [NVM](https://github.com/nvm-sh/nvm) and a compatible node version in order to create the documentation.
+
 ```
-npm install -g docpad
-docpad install eco;
-docpad update; docpad upgrade;
+nvm install 8
+nvm use 8
+```
+
+To run docpad after cloning this repo
+
+```
+npm install -g docpad@6.79.4
+docpad install;
+```
+
+Then finally to start the server
+```
+docpad run
 ```
 
 ### Generating Semantic UI for Docs

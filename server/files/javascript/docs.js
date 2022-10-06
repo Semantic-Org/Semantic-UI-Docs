@@ -113,6 +113,30 @@ semantic.ready = function() {
       });
     },
 
+    scrollToHash: function() {
+      if(handler.scrollToSelector) {
+        var
+          location = handler.scrollToSelector,
+          $element = $(location)
+        ;
+        if($element.length) {
+          var
+            position = $element.offset().top + 10
+          ;
+          $element
+            .addClass('active')
+          ;
+          $('html, body')
+            .stop()
+            .animate({
+              scrollTop: position
+            }, 500)
+          ;
+          delete handler.scrollToSelector;
+        }
+      }
+    },
+
     showBeg: function() {
       if(window.localStorage !== undefined) {
         $begSegment
@@ -1284,6 +1308,7 @@ semantic.ready = function() {
           $(window).on('resize.menu', function() {
             handler.tryCreateMenu();
           });
+          handler.scrollToHash();
         },
         onLoad : function() {
           $(this).find('.ui.sticky')
@@ -1450,20 +1475,11 @@ semantic.ready = function() {
     detectAdBlock.onDetected(handler.showBeg);
   }
 
-  if(window.location.hash) {
-    var
-      $element = $(window.location.hash),
-      position = $element.offset().top + 10
-    ;
-    $element
-      .addClass('active')
-    ;
-    $('html, body')
-      .stop()
-      .animate({
-        scrollTop: position
-      }, 500)
-    ;
+  var
+    selector = (window.location.hash || '').replace(/^#\//, '#')
+  ;
+  if(selector) {
+    handler.scrollToSelector = selector;
   }
 
   handler.getMetadata();

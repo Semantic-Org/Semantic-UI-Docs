@@ -20,8 +20,12 @@ To run docpad after cloning this repo
 
 ```
 npm install -g docpad@6.79.4
-docpad install eco;
-docpad update; docpad upgrade;
+docpad install;
+```
+
+Then finally to start the server
+```
+docpad run
 ```
 
 ### Generating Semantic UI for Docs

@@ -12,8 +12,8 @@ You must install [DocPad](http://github.com/docpad/docpad), the static site gene
 SUI docs use a version of **DocPad compatible with Node 10**. It is recommended you install [NVM](https://github.com/nvm-sh/nvm) and a compatible node version in order to create the documentation.
 
 ```
-nvm install 10
-nvm use 10
+nvm install 8
+nvm use 8
 ```
 
 To run docpad after cloning this repo

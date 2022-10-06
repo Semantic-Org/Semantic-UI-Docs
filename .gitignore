@@ -1,5 +1,6 @@
 node_modules
 out/
+package-lock.json
 
 # Numerous always-ignore extensions
 *.diff

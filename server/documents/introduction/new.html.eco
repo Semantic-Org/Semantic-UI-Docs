@@ -1303,19 +1303,19 @@ type        : 'Main'
       </thead>
       <tbody>
         <tr>
-          <td>John</td>
-          <td>Approved</td>
-          <td>Male</td>
-        </tr>
-        <tr>
-          <td>Jamie</td>
+          <td>Jude</td>
           <td>Approved</td>
           <td>Male</td>
         </tr>
         <tr>
           <td>Jill</td>
-          <td>Denied</td>
+          <td>Approved</td>
           <td>Female</td>
+        </tr>
+        <tr>
+          <td>Jamie</td>
+          <td>Denied</td>
+          <td>Male</td>
         </tr>
       </tbody>
     </table>
@@ -1332,17 +1332,17 @@ type        : 'Main'
       </thead>
       <tbody>
         <tr>
-          <td>John</td>
+          <td>Jude</td>
           <td>Approved</td>
           <td title="This is much too long to fit I'm sorry about that">This is much too long to fit I'm sorry about that</td>
         </tr>
         <tr>
-          <td>Jamie</td>
-          <td>Approved</td>
+          <td>Jill</td>
+          <td>Denied</td>
           <td>Shorter description</td>
         </tr>
         <tr>
-          <td>Jill</td>
+          <td>Jamie</td>
           <td>Denied</td>
           <td>Shorter description</td>
         </tr>
@@ -1499,8 +1499,10 @@ type        : 'Main'
           <label>Gender</label>
           <select class="ui dropdown">
             <option value="">Gender</option>
-            <option value="1">Male</option>
-            <option value="0">Female</option>
+            <option value="1">Female</option>
+            <option value="2">Male</option>
+            <option value="3">Non-binary</option>
+            <option value="4">None of the above</option>
           </select>
         </div>
         <div class="field">

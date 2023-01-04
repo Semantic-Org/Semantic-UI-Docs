@@ -83,16 +83,20 @@ themes      : ['Default', 'GitHub', 'Material']
         <i class="dropdown icon"></i>
         <div class="default text">Gender</div>
         <div class="menu">
-          <div class="item" data-value="1">Male</div>
-          <div class="item" data-value="0">Female</div>
+          <div class="item" data-value="1">Female</div>
+          <div class="item" data-value="2">Male</div>
+          <div class="item" data-value="3">Non-binary</div>
+          <div class="item" data-value="4">None of the above</div>
         </div>
       </div>
     </div>
     <div class="another dropdown example">
       <select class="ui dropdown">
         <option value="">Gender</option>
-        <option value="1">Male</option>
-        <option value="0">Female</option>
+        <option value="1">Female</option>
+        <option value="2">Male</option>
+        <option value="3">Non-binary</option>
+        <option value="4">None of the above</option>
       </select>
     </div>
     <div class="another dropdown example">
@@ -1865,8 +1869,10 @@ themes      : ['Default', 'GitHub', 'Material']
             <div class="default text">Select Gender</div>
             <i class="dropdown icon"></i>
             <div class="menu">
-              <div class="item" data-value="male">Male</div>
               <div class="item" data-value="female">Female</div>
+              <div class="item" data-value="male">Male</div>
+              <div class="item" data-value="non-binary">Non-binary</div>
+              <div class="item" data-value="not-listed">None of the above</div>
             </div>
           </div>
         </div>
@@ -1888,8 +1894,10 @@ themes      : ['Default', 'GitHub', 'Material']
           <i class="dropdown icon"></i>
           <div class="default text">Gender</div>
           <div class="menu">
-            <div class="item" data-value="male">Male</div>
             <div class="item" data-value="female">Female</div>
+            <div class="item" data-value="male">Male</div>
+            <div class="item" data-value="non-binary">Non-binary</div>
+            <div class="item" data-value="not-listed">None of the above</div>
           </div>
         </div>
       </div>
@@ -1918,13 +1926,21 @@ themes      : ['Default', 'GitHub', 'Material']
           .dropdown({
             values: [
               {
-                name: 'Male',
-                value: 'male'
+                name     : 'Female',
+                value    : 'female'
               },
               {
-                name     : 'Female',
-                value    : 'female',
+                name     : 'Male',
+                value    : 'male'
+              },
+              {
+                name     : 'Non-binary',
+                value    : 'non-binary',
                 selected : true
+              }, 
+              {
+                name     : 'None of the above',
+                value    : 'not-listed'
               }
             ]
           })
@@ -1942,13 +1958,21 @@ themes      : ['Default', 'GitHub', 'Material']
           <i class="dropdown icon"></i>
           <div class="default text">Gender</div>
           <div class="menu">
+            <div class="item" data-value="female" data-text="Female">
+              <i class="venus icon"></i>
+              Female
+            </div>
             <div class="item" data-value="male" data-text="Male">
-              <i class="male icon"></i>
+              <i class="mars icon"></i>
               Male
             </div>
-            <div class="item" data-value="female" data-text="Female">
-              <i class="female icon"></i>
-              Female
+            <div class="item" data-value="non-binary" data-text="Non-binary">
+              <i class="bolt icon"></i>
+              Non-binary
+            </div>
+            <div class="item" data-value="not-listed" data-text="None of the above">
+              <i class="expand icon"></i>
+              None of the above
             </div>
           </div>
         </div>
@@ -1958,13 +1982,21 @@ themes      : ['Default', 'GitHub', 'Material']
         <i class="dropdown icon"></i>
         <div class="default text">Gender</div>
         <div class="menu">
+          <div class="item" data-value="female" data-text="Female">
+            <i class="venus icon"></i>
+            Female
+          </div>
           <div class="item" data-value="male" data-text="Male">
-            <i class="male icon"></i>
+            <i class="mars icon"></i>
             Male
           </div>
-          <div class="item" data-value="female" data-text="Female">
-            <i class="female icon"></i>
-            Female
+          <div class="item" data-value="non-binary" data-text="Non-binary">
+            <i class="bolt icon"></i>
+            Non-binary
+          </div>
+          <div class="item" data-value="not-listed" data-text="None of the above">
+            <i class="expand icon"></i>
+            None of the above
           </div>
         </div>
       </div>
@@ -1975,8 +2007,10 @@ themes      : ['Default', 'GitHub', 'Material']
       <div class="code" data-label="HTML" data-type="html">
         <select name="gender" class="ui dropdown" id="select">
           <option value="">Gender</option>
-          <option value="male">Male</option>
           <option value="female">Female</option>
+          <option value="male">Male</option>
+          <option value="non-binary">Non-binary</option>
+          <option value="not-listed">None of the above</option>
         </select>
       </div>
       <div class="code" data-type="javascript" data-demo="true">
@@ -1986,8 +2020,10 @@ themes      : ['Default', 'GitHub', 'Material']
       </div>
       <select class="ui dropdown" name="gender" id="select">
         <option value="">Gender</option>
-        <option value="male">Male</option>
         <option value="female">Female</option>
+        <option value="male">Male</option>
+        <option value="non-binary">Non-binary</option>
+        <option value="not-listed">None of the above</option>
       </select>
     </div>
     <div class="no example">

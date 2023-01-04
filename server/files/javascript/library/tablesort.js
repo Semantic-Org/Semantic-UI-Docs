@@ -25,9 +25,9 @@
 			var start = new Date(),
 				self = this,
 				table = this.$table,
-				rowsContainer = table.find('tbody').length > 0 ? table.find('tbody') : table,
-				rows = rowsContainer.find('tr').has('td, th'),
-				cells = rows.find(':nth-child(' + (th.index() + 1) + ')').filter('td, th'),
+				rowsContainer = table.children('tbody').length > 0 ? table.children('tbody') : table,
+				rows = rowsContainer.children('tr').has('td, th'),
+				cells = rows.children(':nth-child(' + (th.index() + 1) + ')').filter('td, th'),
 				sortBy = th.data().sortBy,
 				sortedMap = [];
 

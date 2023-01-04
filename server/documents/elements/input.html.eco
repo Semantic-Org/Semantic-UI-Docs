@@ -27,7 +27,7 @@ themes      : ['Default', 'GitHub']
     </h4>
     <p>A standard input</p>
     <div class="ui input">
-      <input type="text" placeholder="Search...">
+      <input type="text" placeholder="Search..." />
     </div>
   </div>
 
@@ -37,7 +37,7 @@ themes      : ['Default', 'GitHub']
     <h4 class="ui header">Focus</h4>
     <p>An input field can show a user is currently interacting with it</p>
     <div class="ui input focus">
-      <input type="text" placeholder="Search...">
+      <input type="text" placeholder="Search..." />
     </div>
   </div>
 
@@ -46,13 +46,13 @@ themes      : ['Default', 'GitHub']
     <p>An icon input field can show that it is currently loading data</p>
     <div class="ui ignored message">Loading inputs automatically modify the input's icon on loading state to show loading indication</div>
     <div class="ui left icon input loading">
-      <input type="text" placeholder="Search...">
+      <input type="text" placeholder="Search..." />
       <i class="search icon"></i>
     </div>
   </div>
   <div class="another example">
     <div class="ui icon input loading">
-      <input type="text" placeholder="Search...">
+      <input type="text" placeholder="Search..." />
       <i class="search icon"></i>
     </div>
   </div>
@@ -61,18 +61,18 @@ themes      : ['Default', 'GitHub']
     <h4 class="ui header">Disabled</h4>
     <p>An input field can show that it is disabled</p>
     <div class="ui disabled input">
-      <input type="text" placeholder="Search...">
+      <input type="text" placeholder="Search..." />
     </div>
   </div>
   <div class="another example">
     <div class="ui disabled icon input">
       <i class="search icon"></i>
-      <input type="text" placeholder="Search...">
+      <input type="text" placeholder="Search..." />
     </div>
   </div>
   <div class="another example">
     <div class="ui input">
-      <input type="text" placeholder="Search..." disabled>
+      <input type="text" placeholder="Search..." disabled />
     </div>
   </div>
 
@@ -80,7 +80,7 @@ themes      : ['Default', 'GitHub']
     <h4 class="ui header">Error</h4>
     <p>An input field can show the data contains errors</p>
     <div class="ui input error">
-      <input type="text" placeholder="Search...">
+      <input type="text" placeholder="Search..." />
     </div>
   </div>
 
@@ -93,25 +93,25 @@ themes      : ['Default', 'GitHub']
       Input icons do not receive <code>pointer-events</code> unless a <code>link icon</code> is used.
     </div>
     <div class="ui icon input">
-      <input type="text" placeholder="Search...">
+      <input type="text" placeholder="Search..."/>
       <i class="search icon"></i>
     </div>
   </div>
   <div class="another example">
     <div class="ui left icon input">
-      <input type="text" placeholder="Search users...">
+      <input type="text" placeholder="Search users..." />
       <i class="users icon"></i>
     </div>
   </div>
   <div class="another example">
     <div class="ui icon input">
-      <input type="text" placeholder="Search...">
+      <input type="text" placeholder="Search..." />
       <i class="circular search link icon"></i>
     </div>
   </div>
   <div class="another example">
     <div class="ui icon input">
-      <input type="text" placeholder="Search...">
+      <input type="text" placeholder="Search..." />
       <i class="inverted circular search link icon"></i>
     </div>
   </div>
@@ -123,12 +123,12 @@ themes      : ['Default', 'GitHub']
       <div class="ui label">
         http://
       </div>
-      <input type="text" placeholder="mysite.com">
+      <input type="text" placeholder="mysite.com" />
     </div>
   </div>
   <div class="another example">
     <div class="ui right labeled input">
-      <input type="text" placeholder="Find domain">
+      <input type="text" placeholder="Find domain" />
       <div class="ui dropdown label">
         <div class="text">.com</div>
         <i class="dropdown icon"></i>
@@ -142,7 +142,7 @@ themes      : ['Default', 'GitHub']
   </div>
   <div class="another example">
     <div class="ui right labeled input">
-      <input type="text" placeholder="Enter weight..">
+      <input type="text" placeholder="Enter weight.."/>
       <div class="ui basic label">
         kg
       </div>
@@ -151,14 +151,14 @@ themes      : ['Default', 'GitHub']
   <div class="another example">
     <div class="ui right labeled input">
       <label for="amount" class="ui label">$</label>
-      <input type="text" placeholder="Amount" id="amount">
+      <input type="text" placeholder="Amount" id="amount" />
       <div class="ui basic label">.00</div>
     </div>
   </div>
   <div class="another example">
     <div class="ui right labeled left icon input">
       <i class="tags icon"></i>
-      <input type="text" placeholder="Enter tags">
+      <input type="text" placeholder="Enter tags" />
       <a class="ui tag label">
         Add Tag
       </a>
@@ -166,7 +166,7 @@ themes      : ['Default', 'GitHub']
   </div>
   <div class="another example">
     <div class="ui left corner labeled input">
-      <input type="text" placeholder="Search...">
+      <input type="text" placeholder="Search..." />
       <div class="ui left corner label">
         <i class="asterisk icon"></i>
       </div>
@@ -174,7 +174,7 @@ themes      : ['Default', 'GitHub']
   </div>
   <div class="another example">
     <div class="ui corner labeled input">
-      <input type="text" placeholder="Search...">
+      <input type="text" placeholder="Search..."/>
       <div class="ui corner label">
         <i class="asterisk icon"></i>
       </div>
@@ -185,7 +185,7 @@ themes      : ['Default', 'GitHub']
     <h4 class="ui header">Action</h4>
     <p>An input can be formatted to alert the user to an action they may perform</p>
     <div class="ui action input">
-      <input type="text" placeholder="Search...">
+      <input type="text" placeholder="Search..."/>
       <button class="ui button">Search</button>
     </div>
   </div>
@@ -195,13 +195,13 @@ themes      : ['Default', 'GitHub']
         <i class="cart icon"></i>
         Checkout
       </button>
-      <input type="text" value="$52.03">
+      <input type="text" value="$52.03" />
     </div>
   </div>
   <div class="another example">
     <div class="ui right action left icon input">
       <i class="search icon"></i>
-      <input type="text" placeholder="Search">
+      <input type="text" placeholder="Search" />
       <div class="ui basic floating dropdown button">
         <div class="text">This Page</div>
         <i class="dropdown icon"></i>
@@ -214,7 +214,7 @@ themes      : ['Default', 'GitHub']
   </div>
   <div class="another example">
     <div class="ui action input">
-      <input type="text" placeholder="Search...">
+      <input type="text" placeholder="Search..." />
       <select class="ui compact selection dropdown">
         <option value="all">All</option>
         <option selected value="articles">Articles</option>
@@ -225,7 +225,7 @@ themes      : ['Default', 'GitHub']
   </div>
   <div class="another example">
     <div class="ui action input">
-      <input type="text" value="http://ww.short.url/c0opq">
+      <input type="text" value="http://ww.short.url/c0opq" />
       <button class="ui teal right labeled icon button">
         <i class="copy icon"></i>
         Copy
@@ -234,7 +234,7 @@ themes      : ['Default', 'GitHub']
   </div>
   <div class="another example">
     <div class="ui action input">
-      <input type="text" placeholder="Search...">
+      <input type="text" placeholder="Search..."/>
       <button class="ui icon button">
         <i class="search icon"></i>
       </button>
@@ -245,18 +245,18 @@ themes      : ['Default', 'GitHub']
     <h4 class="ui header">Transparent</h4>
     <p>A transparent input has no background</p>
     <div class="ui transparent input">
-      <input type="text" placeholder="Search...">
+      <input type="text" placeholder="Search..." />
     </div>
   </div>
   <div class="another example">
     <div class="ui transparent icon input">
-      <input type="text" placeholder="Search...">
+      <input type="text" placeholder="Search..." />
       <i class="search icon"></i>
     </div>
   </div>
   <div class="another example">
     <div class="ui transparent left icon input">
-      <input type="text" placeholder="Search...">
+      <input type="text" placeholder="Search..." />
       <i class="search icon"></i>
     </div>
   </div>
@@ -266,16 +266,16 @@ themes      : ['Default', 'GitHub']
     <p>An input can be formatted to appear on dark backgrounds</p>
     <div class="ui inverted segment">
       <div class="ui inverted input">
-        <input type="text" placeholder="Search...">
+        <input type="text" placeholder="Search..." />
       </div>
       <div class="ui inverted divider"></div>
       <div class="ui inverted left icon input">
-        <input type="text" placeholder="Search...">
+        <input type="text" placeholder="Search..." />
         <i class="search icon"></i>
       </div>
       <div class="ui inverted divider"></div>
       <div class="ui inverted transparent icon input">
-        <input type="text" placeholder="Search...">
+        <input type="text" placeholder="Search..." />
         <i class="search icon"></i>
       </div>
     </div>
@@ -286,12 +286,12 @@ themes      : ['Default', 'GitHub']
     <h4 class="ui header">Fluid</h4>
     <p>An input can take the size of its container</p>
     <div class="ui fluid icon input">
-      <input type="text" placeholder="Search a very wide input...">
+      <input type="text" placeholder="Search a very wide input..."/>
       <i class="search icon"></i>
     </div>
     <div class="ui ignored divider"></div>
     <div class="ui fluid action input">
-      <input type="text" placeholder="Search...">
+      <input type="text" placeholder="Search..." />
       <div class="ui button">Search</div>
     </div>
   </div>
@@ -301,37 +301,37 @@ themes      : ['Default', 'GitHub']
     <p>An input can vary in size</p>
     <div class="ui ignored info message">Inputs will automatically size themselves unless you manually declare a width</div>
     <div class="ui mini icon input">
-      <input type="text" placeholder="Search mini...">
+      <input type="text" placeholder="Search mini..." />
       <i class="search icon"></i>
     </div>
   </div>
   <div class="another example">
     <div class="ui small icon input">
-      <input type="text" placeholder="Search small...">
+      <input type="text" placeholder="Search small..."/>
       <i class="search icon"></i>
     </div>
   </div>
   <div class="another example">
     <div class="ui large icon input">
-      <input type="text" placeholder="Search large...">
+      <input type="text" placeholder="Search large..."/>
       <i class="search icon"></i>
     </div>
   </div>
   <div class="another example">
     <div class="ui big icon input">
-      <input type="text" placeholder="Search big...">
+      <input type="text" placeholder="Search big..."/>
       <i class="search icon"></i>
     </div>
   </div>
   <div class="another example">
     <div class="ui huge icon input">
-      <input type="text" placeholder="Search huge...">
+      <input type="text" placeholder="Search huge..."/>
       <i class="search icon"></i>
     </div>
   </div>
   <div class="another example">
     <div class="ui massive icon input">
-      <input type="text" placeholder="Search massive...">
+      <input type="text" placeholder="Search massive..." />
       <i class="search icon"></i>
     </div>
   </div>

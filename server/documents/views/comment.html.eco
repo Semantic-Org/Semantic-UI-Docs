@@ -588,7 +588,7 @@ themes      : ['Default', 'Chubby']
     </div>
   </div>
   <div class="another example">
-    <div class="ui small comments">
+    <div class="ui large comments">
       <h3 class="ui dividing header">Comments</h3>
       <div class="comment">
         <a class="avatar">

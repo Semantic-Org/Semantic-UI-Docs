@@ -35,13 +35,13 @@ type        : 'Future Module'
     <h2 class="ui dividing header">Example</h2>
 
     <div class="code" data-type="javascript" data-demo="true">
-    // Wont re-appear unless cleared
+    // Show the nagbar (if the cookie isn't already set)
     $('.cookie.nag')
       .nag('show')
     ;
     </div>
     <div class="code" data-type="javascript" data-demo="true">
-    // Clears cookie so nag shows again
+    // Clear the cookie, meaning .nag('show') will work again.
     $('.cookie.nag')
       .nag('clear')
     ;
@@ -55,7 +55,7 @@ type        : 'Future Module'
       </div>
     </div>
     <div class="evaluated code" data-type="javascript">
-    // Automatically shows on init if cookie isnt set
+    // Sets up the nagbar; it will look at the "accepts-cookies" cookie and set it to true once the nag is shown.
     $('.cookie.nag')
       .nag({
         key      : 'accepts-cookies',

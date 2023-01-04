@@ -342,6 +342,14 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
       <i class="youtube icon"></i>
       YouTube
     </button>
+    <button class="ui whatsapp button">
+      <i class="whatsapp icon"></i>
+      YouTube
+    </button>
+    <button class="ui telegram button">
+      <i class="telegram icon"></i>
+      YouTube
+    </button>
   </div>
 
 
@@ -460,6 +468,12 @@ themes      : ['Default', 'Classic', 'Basic', 'Bootstrap3', 'Twitter', 'Raised',
     </button>
     <button class="ui circular google plus icon button">
       <i class="google plus icon"></i>
+    </button>
+    <button class="ui circular whatsapp icon button">
+      <i class="whatsapp plus icon"></i>
+    </button>
+    <button class="ui circular telegram icon button">
+      <i class="telegram icon"></i>
     </button>
   </div>
 

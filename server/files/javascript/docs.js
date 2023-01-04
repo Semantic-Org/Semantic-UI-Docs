@@ -57,7 +57,6 @@ semantic.ready = function() {
     $pageTabs            = $('.masthead.tab.segment .tabs.menu .item'),
 
     $languageDropdown    = $('.language.dropdown'),
-    $chineseModal        = $('.chinese.modal'),
     $languageModal       = $('.language.modal'),
 
     $downloadPopup       = $('.download.button'),
@@ -321,15 +320,7 @@ semantic.ready = function() {
       ;
       // dont trigger on translate event every page load
       if(languageDropdownUsed) {
-        if(languageCode == 'zh' && window.location.host.replace('www.','') !== 'semantic-ui.cn') {
-          $chineseModal
-            .modal({
-              closable: false
-            })
-            .modal('show')
-          ;
-        }
-        else if(percent < 100) {
+        if(percent < 100) {
           languageDropdownUsed = false;
           $languageModal
             .modal()

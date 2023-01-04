@@ -570,19 +570,19 @@ type        : 'UI Behavior'
               // test whether a JSON response is valid
               return response.success || false;
             },
-            onComplete: function(response) {
+            onComplete: function(response, element, xhr) {
               // always called after XHR complete
             },
-            onSuccess: function(response) {
+            onSuccess: function(response, element, xhr) {
               // valid response and response.success = true
             },
-            onFailure: function(response) {
+            onFailure: function(response, element) {
               // request failed, or valid response but response.success = false
             },
-            onError: function(errorMessage) {
+            onError: function(errorMessage, element, xhr) {
               // invalid response
             },
-            onAbort: function(errorMessage) {
+            onAbort: function(errorMessage, element, xhr) {
               // navigated to a new page, CORS issue, or user canceled request
             }
           })

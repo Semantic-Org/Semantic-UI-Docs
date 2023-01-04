@@ -20,6 +20,12 @@
   <b>New in 2.4</b>
 </a>
 <div class="item">
+  <div class="ui inverted transparent icon input">
+    <i class="search icon"></i>
+    <input type="text" placeholder="Search...">
+  </div>
+</div>
+<div class="item">
   <div class="<%= if @document.elementType is 'introduction' then 'active ' %>header">Introduction</div>
   <div class="menu">
     <% for element in introduction: %>

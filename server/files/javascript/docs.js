@@ -1254,6 +1254,98 @@ semantic.ready = function() {
           ;
         })
       ;
+    },
+
+    setupSidebarSearch: function(inputSelector, sectionsSelector) {
+      var
+        $sidebarInput = $(inputSelector),
+        $sidebarSections = $(sectionsSelector),
+        sidebar = [],
+        ENTER_KEY_CODE = 13,
+        ARROW_UP_KEY_CODE = 38,
+        ARROW_DOWN_KEY_CODE = 40,
+        activeFilteredIndex = 0,
+        $filteredItems = [],
+        pressEnterDOMElement = '<span class="press-enter">Press Enter</span>'
+      ;
+
+      // cache jquery references to nodes
+      $sidebarSections.each(function(idx, sectionDOM) {
+        var elements = {
+          $section: $(sectionDOM),
+          $header: null,
+          $items: []
+        };
+
+        elements.$header = $(elements.$section.children('.header'));
+        elements.$section.find('.item').each(function(itemIDX, itemDOM) {
+          elements.$items.push($(itemDOM));
+        });
+        sidebar.push(elements);
+      });
+
+      $sidebarInput.on('keyup', function(ev) {
+        var
+          searchText = ev.currentTarget.value.toLowerCase(),
+          $pressEnter = $('.press-enter')
+        ;
+
+        if (searchText && $filteredItems.length > 0) {
+          if (ev.keyCode === ENTER_KEY_CODE) {
+            $filteredItems[activeFilteredIndex][0].click();
+            return;
+          } else if ([ARROW_UP_KEY_CODE, ARROW_DOWN_KEY_CODE].includes(ev.keyCode)) {
+            $pressEnter.detach();
+
+            $filteredItems[activeFilteredIndex].removeClass('active');
+
+            if (ev.keyCode === ARROW_UP_KEY_CODE) {
+              activeFilteredIndex = Math.max(activeFilteredIndex - 1, 0);
+            } else {
+              activeFilteredIndex = Math.min(activeFilteredIndex + 1, $filteredItems.length - 1);
+            }
+
+            $filteredItems[activeFilteredIndex].addClass('active');
+            $filteredItems[activeFilteredIndex].append(pressEnterDOMElement);
+            return;
+          }
+        }
+
+        $filteredItems = [];
+        activeFilteredIndex = 0;
+        $pressEnter.detach();
+
+        sidebar.forEach(function(section) {
+          // check if the section contains the text at all
+          if (!section.$section.text().toLowerCase().includes(searchText)) {
+            section.$section.toggleClass('hide', true);
+            return;
+          }
+          section.$section.toggleClass('hide', false);
+
+          // see if the user searched for the header of the section
+          var doesHeaderContainText = section.$header.text().toLowerCase().includes(searchText);
+
+          // check each item to see if it contains the search text
+          section.$items.forEach(function($item) {
+            $item.removeClass('active');
+            var doesItemContainText = $item.text().toLowerCase().includes(searchText);
+
+            // item is hidden unless the header of the section contains the search text
+            var hideItem = !doesItemContainText && !doesHeaderContainText;
+            $item.toggleClass('hide', hideItem);
+
+            if (searchText && !hideItem) {
+              $filteredItems.push($item);
+            }
+          });
+        });
+
+        if ($filteredItems.length > 0) {
+          $filteredItems[activeFilteredIndex].addClass('active');
+          $filteredItems[activeFilteredIndex].append(pressEnterDOMElement);
+        }
+      });
     }
   };
 
@@ -1277,6 +1369,9 @@ semantic.ready = function() {
   // register less files
   window.less.registerStylesheets();
 
+  // there are 2 sidebar sections, set them up individually
+  handler.setupSidebarSearch('#example #toc input', '#toc .item:has(> .header)');
+  handler.setupSidebarSearch('.full.height .toc input', '.toc .item:has(> .header)');
 
   // load page tabs
   if( $pageTabs.length > 0 ) {

@@ -157,4 +157,14 @@ type        : 'Introduction'
     <p>Semantic UI angular bindings are still in development, but are available for some components</p>
     <a href="https://github.com/Semantic-Org/Semantic-UI-Angular" target="_blank" class="ui button"><i class="github icon"></i>Visit Angular Repo</a>
   </div>
+  
+  <h2 class="ui dividing header">
+    Riot
+  </h2>
+
+  <div class="example">
+    <h4>Contribute to Angular Development</h4>
+    <p>Semantic UI Riot integration is still in development, but some components are available.</p>
+    <a href="https://github.com/black-trooper/semantic-ui-riot" target="_blank" class="ui button"><i class="github icon"></i>Visit Riot Repo</a>
+  </div>
 </div>

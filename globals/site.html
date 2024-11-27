@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Standard Meta -->
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+<link rel="image_src" type="image/jpeg" href="/images/logo.png" />
+
+<!-- Site Properities -->
+<meta name="generator" content="DocPad v6.79.4" />
+<title>Site | Semantic UI</title>
+
+<meta name="description" content="A site is a set of global constraints that define the basic parameters of all UI elements" />
+<meta name="keywords" content="html5, ui, library, framework, javascript" />
+  
+  <script src="/javascript/library/detect.min.js"></script>
+  <script src="/javascript/library/jquery.min.js"></script>
+  <script src="/javascript/library/clipboard.min.js"></script>
+  <script src="/javascript/library/cookie.min.js"></script>
+  <script src="/javascript/library/easing.min.js"></script>
+  <script src="/javascript/library/highlight.min.js"></script>
+  <script src="/javascript/library/history.min.js"></script>
+  <script src="/javascript/library/state.js"></script>
+  <script src="/javascript/library/tablesort.min.js"></script>
+  <script src="/javascript/library/underscore.min.js"></script>
+
+
+
+
+
+<script src="/dist/semantic.min.js"></script>
+
+
+
+<script src="/javascript/docs.js"></script>
+
+  
+<link rel="stylesheet" type="text/css" class="ui" href="/dist/semantic.min.css">
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/stylesheets/docs.css">
+<link rel="stylesheet" type="text/css" href="/stylesheets/rtl.css">
+
+
+
+
+
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-44039803-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  
+  <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
+
+
+  
+<script type="text/javascript">
+  window.liveSettings = {
+    api_key    : '9ede3015b9f84c1aabc81ab839c55d74',
+    parse_attr : [
+      'data-title',
+      'data-content'
+    ],
+    detectlang   : false,
+    autocollect  : true,
+    ignore_tags  : ['i', 'code', 'pre'],
+    parse_attr   : ['data-title', 'data-content', 'data-text'],
+    ignore_class : ['code', 'anchor']
+  };
+</script>
+<script type="text/javascript" src="//cdn.transifex.com/live.js"></script>
+
+
+</head>
+<body id="example" class="site" ontouchstart="">
+  
+  <div class="ui vertical inverted sidebar menu" id="toc">
+  
+
+
+
+
+
+
+
+
+<div class="item">
+  <a class="ui logo icon image" href="/">
+    <img src="/images/logo.png">
+  </a>
+  <a href="/"><b>UI Docs</b></a>
+</div>
+<a class="item" href="/introduction/getting-started.html">
+  <b>Getting Started</b>
+</a>
+<a class="item" href="/introduction/new.html">
+  <b>New in 2.4</b>
+</a>
+<div class="item">
+  <div class="header">Introduction</div>
+  <div class="menu">
+    
+      <a class="item" href="/introduction/integrations.html">
+        Integrations
+      </a>
+    
+      <a class="item" href="/introduction/build-tools.html">
+        Build Tools
+      </a>
+    
+      <a class="item" href="/introduction/advanced-usage.html">
+        Recipes
+      </a>
+    
+      <a class="item" href="/introduction/glossary.html">
+        Glossary
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class="header">Usage</div>
+  <div class="menu">
+    
+      <a class="item" href="/usage/theming.html">
+        Theming
+      </a>
+    
+      <a class="item" href="/usage/layout.html">
+        Layouts
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class="active  header">Globals</div>
+  <div class="menu">
+    
+      <a class="item" href="/globals/reset.html">
+        Reset
+        
+      </a>
+    
+      <a class="active item" href="/globals/site.html">
+        Site
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Elements</div>
+  <div class="menu">
+    
+      <a class="item" href="/elements/button.html">
+        Button
+        
+      </a>
+    
+      <a class="item" href="/elements/container.html">
+        Container
+        
+      </a>
+    
+      <a class="item" href="/elements/divider.html">
+        Divider
+        
+      </a>
+    
+      <a class="item" href="/elements/flag.html">
+        Flag
+        
+      </a>
+    
+      <a class="item" href="/elements/header.html">
+        Header
+        
+      </a>
+    
+      <a class="item" href="/elements/icon.html">
+        Icon
+        
+      </a>
+    
+      <a class="item" href="/elements/image.html">
+        Image
+        
+      </a>
+    
+      <a class="item" href="/elements/input.html">
+        Input
+        
+      </a>
+    
+      <a class="item" href="/elements/label.html">
+        Label
+        
+      </a>
+    
+      <a class="item" href="/elements/list.html">
+        List
+        
+      </a>
+    
+      <a class="item" href="/elements/loader.html">
+        Loader
+        
+      </a>
+    
+      <a class="item" href="/elements/placeholder.html">
+        Placeholder
+        
+      </a>
+    
+      <a class="item" href="/elements/rail.html">
+        Rail
+        
+      </a>
+    
+      <a class="item" href="/elements/reveal.html">
+        Reveal
+        
+      </a>
+    
+      <a class="item" href="/elements/segment.html">
+        Segment
+        
+      </a>
+    
+      <a class="item" href="/elements/step.html">
+        Step
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Collections</div>
+  <div class="menu">
+    
+      <a class="item" href="/collections/breadcrumb.html">
+        Breadcrumb
+        
+      </a>
+    
+      <a class="item" href="/collections/form.html">
+        Form
+        
+      </a>
+    
+      <a class="item" href="/collections/grid.html">
+        Grid
+        
+      </a>
+    
+      <a class="item" href="/collections/menu.html">
+        Menu
+        
+      </a>
+    
+      <a class="item" href="/collections/message.html">
+        Message
+        
+      </a>
+    
+      <a class="item" href="/collections/table.html">
+        Table
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Views</div>
+  <div class="menu">
+    
+      <a class="item" href="/views/advertisement.html">
+        Advertisement
+        
+      </a>
+    
+      <a class="item" href="/views/card.html">
+        Card
+        
+      </a>
+    
+      <a class="item" href="/views/comment.html">
+        Comment
+        
+      </a>
+    
+      <a class="item" href="/views/feed.html">
+        Feed
+        
+      </a>
+    
+      <a class="item" href="/views/item.html">
+        Item
+        
+      </a>
+    
+      <a class="item" href="/views/statistic.html">
+        Statistic
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Modules</div>
+  <div class="menu">
+    
+      <a class="item" href="/modules/accordion.html">
+        Accordion
+        
+      </a>
+  
+      <a class="item" href="/modules/checkbox.html">
+        Checkbox
+        
+      </a>
+  
+      <a class="item" href="/modules/dimmer.html">
+        Dimmer
+        
+      </a>
+  
+      <a class="item" href="/modules/dropdown.html">
+        Dropdown
+        
+      </a>
+  
+      <a class="item" href="/modules/embed.html">
+        Embed
+        
+      </a>
+  
+      <a class="item" href="/modules/modal.html">
+        Modal
+        
+      </a>
+  
+      <a class="item" href="/modules/popup.html">
+        Popup
+        
+      </a>
+  
+      <a class="item" href="/modules/progress.html">
+        Progress
+        
+      </a>
+  
+      <a class="item" href="/modules/rating.html">
+        Rating
+        
+      </a>
+  
+      <a class="item" href="/modules/search.html">
+        Search
+        
+      </a>
+  
+      <a class="item" href="/modules/shape.html">
+        Shape
+        
+      </a>
+  
+      <a class="item" href="/modules/sidebar.html">
+        Sidebar
+        
+      </a>
+  
+      <a class="item" href="/modules/sticky.html">
+        Sticky
+        
+      </a>
+  
+      <a class="item" href="/modules/tab.html">
+        Tab
+        
+      </a>
+  
+      <a class="item" href="/modules/transition.html">
+        Transition
+        
+      </a>
+  
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Behaviors</div>
+  <div class="menu">
+    
+      <a class="item" href="/behaviors/api.html">
+        API
+        
+      </a>
+    
+      <a class="item" href="/behaviors/form.html">
+        Form Validation
+        
+      </a>
+    
+      <a class="item" href="/behaviors/visibility.html">
+        Visibility
+        
+      </a>
+    
+  </div>
+</div>
+
+</div>
+
+<div class="ui black big launch right attached fixed button">
+  <i class="content icon"></i>
+  <span class="text">Menu</span>
+</div>
+  
+
+
+
+
+<div class="ui fixed inverted main menu">
+  <div class="ui container">
+    <a class="launch icon item">
+      <i class="content icon"></i>
+    </a>
+    
+      <div class="item">
+        Site
+      </div>
+    
+    <div class="right menu">
+      
+      <div class="vertically fitted borderless item">
+        <iframe class="github" src="//ghbtns.com/github-btn.html?user=semantic-org&amp;repo=semantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
+      </div>
+      
+      <!--
+      <div class="item">
+        <div class="ui hidden right aligned search input" id="search">
+          <div class="ui transparent icon input">
+            <input class="prompt" type="text" placeholder="Search...">
+            <i class="inverted search link icon" data-content="Search UI"></i>
+          </div>
+          <div class="results"></div>
+        </div>
+      </div>
+      -->
+    </div>
+  </div>
+</div>
+
+  <div class="pusher">
+    <div class="full height">
+      <div class="toc">
+        <div class="ui vertical inverted menu">
+          
+
+
+
+
+
+
+
+
+<div class="item">
+  <a class="ui logo icon image" href="/">
+    <img src="/images/logo.png">
+  </a>
+  <a href="/"><b>UI Docs</b></a>
+</div>
+<a class="item" href="/introduction/getting-started.html">
+  <b>Getting Started</b>
+</a>
+<a class="item" href="/introduction/new.html">
+  <b>New in 2.4</b>
+</a>
+<div class="item">
+  <div class="header">Introduction</div>
+  <div class="menu">
+    
+      <a class="item" href="/introduction/integrations.html">
+        Integrations
+      </a>
+    
+      <a class="item" href="/introduction/build-tools.html">
+        Build Tools
+      </a>
+    
+      <a class="item" href="/introduction/advanced-usage.html">
+        Recipes
+      </a>
+    
+      <a class="item" href="/introduction/glossary.html">
+        Glossary
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class="header">Usage</div>
+  <div class="menu">
+    
+      <a class="item" href="/usage/theming.html">
+        Theming
+      </a>
+    
+      <a class="item" href="/usage/layout.html">
+        Layouts
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class="active  header">Globals</div>
+  <div class="menu">
+    
+      <a class="item" href="/globals/reset.html">
+        Reset
+        
+      </a>
+    
+      <a class="active item" href="/globals/site.html">
+        Site
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Elements</div>
+  <div class="menu">
+    
+      <a class="item" href="/elements/button.html">
+        Button
+        
+      </a>
+    
+      <a class="item" href="/elements/container.html">
+        Container
+        
+      </a>
+    
+      <a class="item" href="/elements/divider.html">
+        Divider
+        
+      </a>
+    
+      <a class="item" href="/elements/flag.html">
+        Flag
+        
+      </a>
+    
+      <a class="item" href="/elements/header.html">
+        Header
+        
+      </a>
+    
+      <a class="item" href="/elements/icon.html">
+        Icon
+        
+      </a>
+    
+      <a class="item" href="/elements/image.html">
+        Image
+        
+      </a>
+    
+      <a class="item" href="/elements/input.html">
+        Input
+        
+      </a>
+    
+      <a class="item" href="/elements/label.html">
+        Label
+        
+      </a>
+    
+      <a class="item" href="/elements/list.html">
+        List
+        
+      </a>
+    
+      <a class="item" href="/elements/loader.html">
+        Loader
+        
+      </a>
+    
+      <a class="item" href="/elements/placeholder.html">
+        Placeholder
+        
+      </a>
+    
+      <a class="item" href="/elements/rail.html">
+        Rail
+        
+      </a>
+    
+      <a class="item" href="/elements/reveal.html">
+        Reveal
+        
+      </a>
+    
+      <a class="item" href="/elements/segment.html">
+        Segment
+        
+      </a>
+    
+      <a class="item" href="/elements/step.html">
+        Step
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Collections</div>
+  <div class="menu">
+    
+      <a class="item" href="/collections/breadcrumb.html">
+        Breadcrumb
+        
+      </a>
+    
+      <a class="item" href="/collections/form.html">
+        Form
+        
+      </a>
+    
+      <a class="item" href="/collections/grid.html">
+        Grid
+        
+      </a>
+    
+      <a class="item" href="/collections/menu.html">
+        Menu
+        
+      </a>
+    
+      <a class="item" href="/collections/message.html">
+        Message
+        
+      </a>
+    
+      <a class="item" href="/collections/table.html">
+        Table
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Views</div>
+  <div class="menu">
+    
+      <a class="item" href="/views/advertisement.html">
+        Advertisement
+        
+      </a>
+    
+      <a class="item" href="/views/card.html">
+        Card
+        
+      </a>
+    
+      <a class="item" href="/views/comment.html">
+        Comment
+        
+      </a>
+    
+      <a class="item" href="/views/feed.html">
+        Feed
+        
+      </a>
+    
+      <a class="item" href="/views/item.html">
+        Item
+        
+      </a>
+    
+      <a class="item" href="/views/statistic.html">
+        Statistic
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Modules</div>
+  <div class="menu">
+    
+      <a class="item" href="/modules/accordion.html">
+        Accordion
+        
+      </a>
+  
+      <a class="item" href="/modules/checkbox.html">
+        Checkbox
+        
+      </a>
+  
+      <a class="item" href="/modules/dimmer.html">
+        Dimmer
+        
+      </a>
+  
+      <a class="item" href="/modules/dropdown.html">
+        Dropdown
+        
+      </a>
+  
+      <a class="item" href="/modules/embed.html">
+        Embed
+        
+      </a>
+  
+      <a class="item" href="/modules/modal.html">
+        Modal
+        
+      </a>
+  
+      <a class="item" href="/modules/popup.html">
+        Popup
+        
+      </a>
+  
+      <a class="item" href="/modules/progress.html">
+        Progress
+        
+      </a>
+  
+      <a class="item" href="/modules/rating.html">
+        Rating
+        
+      </a>
+  
+      <a class="item" href="/modules/search.html">
+        Search
+        
+      </a>
+  
+      <a class="item" href="/modules/shape.html">
+        Shape
+        
+      </a>
+  
+      <a class="item" href="/modules/sidebar.html">
+        Sidebar
+        
+      </a>
+  
+      <a class="item" href="/modules/sticky.html">
+        Sticky
+        
+      </a>
+  
+      <a class="item" href="/modules/tab.html">
+        Tab
+        
+      </a>
+  
+      <a class="item" href="/modules/transition.html">
+        Transition
+        
+      </a>
+  
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Behaviors</div>
+  <div class="menu">
+    
+      <a class="item" href="/behaviors/api.html">
+        API
+        
+      </a>
+    
+      <a class="item" href="/behaviors/form.html">
+        Form Validation
+        
+      </a>
+    
+      <a class="item" href="/behaviors/visibility.html">
+        Visibility
+        
+      </a>
+    
+  </div>
+</div>
+
+        </div>
+      </div>
+      <div class="article">
+        <link rel="stylesheet/less" type="text/css" href="/src/definitions/globals/site.less" />
+<link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/button.less" />
+<link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/header.less" />
+<link rel="stylesheet/less" type="text/css" href="/src/definitions/collections/grid.less" />
+<link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/list.less" />
+<link rel="stylesheet/less" type="text/css" href="/src/definitions/modules/sidebar.less" />
+
+
+
+<div class="ui masthead vertical segment">
+  <div class="ui container">
+    <div class="introduction">
+
+      <h1 class="ui header">
+        Site
+        
+        <div class="sub header">
+          
+          <a class="twitter-share-button twitter"
+            href="http://twitter.com/share"
+            data-text="Semantic UI is a next generation UI framework"
+            data-url="http://semantic-ui.com"
+            data-via="semanticui">
+          </a>
+          <script type="text/javascript">
+          window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
+          </script>
+          <iframe class="github" src="//ghbtns.com/github-btn.html?user=semantic-org&amp;repo=semantic-ui&amp;type=star&amp;count=true&amp;" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
+          
+          A site is a set of global constraints that define the basic parameters of all UI elements
+        </div>
+      </h1>
+
+      <div class="ui hidden divider"></div>
+
+      <div class="ui right floated main menu">
+        <a class="bug popup icon item" data-content="Edit This Page" href="https://github.com/Semantic-Org/Semantic-UI-Docs/edit/master/server/documents/globals/site.html.eco">
+          <i class="edit icon"></i>
+        </a>
+        
+        <a class="github popup icon item" data-content="View project on GitHub" href="https://github.com/Semantic-Org/Semantic-UI">
+          <i class="alternate github icon"></i>
+        </a>
+      </div>
+      <div class="ui right floated main menu">
+        <a class="music popup icon item" data-content="Play Music">
+          <i class="music icon"></i>
+        </a>
+        <div class="ui language dropdown right floating icon item" id="languages" data-content="Select Language">
+          <i class="world icon"></i>
+          <div class="menu">
+            <div class="header">Select Language</div>
+            <div class="ui icon search input">
+              <i class="search icon"></i>
+              <input type="text" placeholder="Search languages...">
+            </div>
+            <div class="scrolling menu">
+  <div class="item" data-percent="100" data-value="en" data-english="English">
+    <span class="description">English</span>
+    English
+  </div>
+  <div class="item" data-percent="94" data-value="da" data-english="Danish">
+    <span class="description">dansk</span>
+    Danish
+  </div>
+  <div class="item" data-percent="94" data-value="es" data-english="Spanish">
+    <span class="description">Español</span>
+    Spanish
+  </div>
+  <div class="item" data-percent="34" data-value="zh" data-english="Chinese">
+    <span class="description">简体中文</span>
+    Chinese
+  </div>
+  <div class="item" data-percent="54" data-value="zh_TW" data-english="Chinese (Taiwan)">
+    <span class="description">中文 (臺灣)</span>
+    Chinese (Taiwan)
+  </div>
+  <div class="item" data-percent="79" data-value="fa" data-english="Persian">
+    <span class="description">پارسی</span>
+    Persian
+  </div>
+  <div class="item" data-percent="41" data-value="fr" data-english="French">
+    <span class="description">Français</span>
+    French
+  </div>
+  <div class="item" data-percent="37" data-value="el" data-english="Greek">
+    <span class="description">ελληνικά</span>
+    Greek
+  </div>
+  <div class="item" data-percent="37" data-value="ru" data-english="Russian">
+    <span class="description">Русский</span>
+    Russian
+  </div>
+  <div class="item" data-percent="36" data-value="de" data-english="German">
+    <span class="description">Deutsch</span>
+    German
+  </div>
+  <div class="item" data-percent="23" data-value="it" data-english="Italian">
+    <span class="description">Italiano</span>
+    Italian
+  </div>
+  <div class="item" data-percent="21" data-value="nl" data-english="Dutch">
+    <span class="description">Nederlands</span>
+    Dutch
+  </div>
+  <div class="item" data-percent="19" data-value="pt_BR" data-english="Portuguese">
+    <span class="description">Português(BR)</span>
+    Portuguese
+  </div>
+  <div class="item" data-percent="17" data-value="id" data-english="Indonesian">
+    <span class="description">Indonesian</span>
+    Indonesian
+  </div>
+  <div class="item" data-percent="12" data-value="lt" data-english="Lithuanian">
+    <span class="description">Lietuvių</span>
+    Lithuanian
+  </div>
+  <div class="item" data-percent="11" data-value="tr" data-english="Turkish">
+    <span class="description">Türkçe</span>
+    Turkish
+  </div>
+  <div class="item" data-percent="10" data-value="ko" data-english="Korean">
+    <span class="description">한국어</span>
+    Korean
+  </div>
+  <div class="item" data-percent="7"  data-value="ar" data-english="Arabic">
+    <span class="description">العربية</span>
+    Arabic
+  </div>
+  <div class="item" data-percent="6"  data-value="hu" data-english="Hungarian">
+    <span class="description">Magyar</span>
+    Hungarian
+  </div>
+  <div class="item" data-percent="6"  data-value="vi" data-english="Vietnamese">
+    <span class="description">tiếng Việt</span>
+    Vietnamese
+  </div>
+  <div class="item" data-percent="5"  data-value="sv" data-english="Swedish">
+    <span class="description">svenska</span>
+    Swedish
+  </div>
+  <div class="item" data-precent="4"  data-value="pl" data-english="Polish">
+    <span class="description">polski</span>
+    Polish
+  </div>
+  <div class="item" data-percent="6"  data-value="ja" data-english="Japanese">
+    <span class="description">日本語</span>
+    Japanese
+  </div>
+  <div class="item" data-percent="0"  data-value="ro" data-english="Romanian">
+    <span class="description">românește</span>
+    Romanian
+  </div>
+</div>
+
+          </div>
+        </div>
+      </div>
+
+      
+      
+      <div class="ui floating dropdown theme basic button" data-element="site" data-type="global">
+        <span class="text">3 Themes</span>
+        <div class="menu transition hidden">
+          
+            <div class="item" data-value="Default" data-text="Default Theme">Default</div>
+          
+            <div class="item" data-value="GitHub" data-text="GitHub Theme">GitHub</div>
+          
+            <div class="item" data-value="Material" data-text="Material Theme">Material</div>
+          
+        </div>
+      </div>
+      
+      
+    </div>
+    <div class="advertisement">
+      
+      <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=semanticuicom" id="_carbonads_js"></script>
+      
+    </div>
+    
+  </div>
+</div>
+
+  <div id="semantic-sponsor"></div>
+  <script>
+  _bsa.init('custom', 'CVAIKK7I', 'placement:semanticuicom',
+      {
+        target: '#semantic-sponsor',
+        template: `
+  <div class="native-inline">
+    <a href="##link##" class="native-link">
+      <img src="##image##" style="background-color: ##backgroundColor##" class="native-img">
+      <div class="native-text">##company## — ##description##</div>
+    </a>
+    <a href="##adViaLink##" class="native-ad">AD</a>
+  </div>
+  `
+      }
+    );
+  </script>
+  <div class="ui vertical beg transition hidden segment">
+    <i class="large red delete link icon"></i>
+    <div class="ui red header">
+      <i class="disabled warning sign icon"></i>
+      <div class="content">
+        Want to Support Open Source? Whitelist Your Ad-Blocker.
+        <div class="sub header">
+          We promise to not show more than one small ad per page. Dont worry, hiding this message will make sure you won't get nagged again.
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<div class="main ui container">
+
+  <h2 class="ui dividing header">Introduction</h2>
+
+  <p>Site is a special global definition which includes baseline parameters which all other elements inherit. In addition to providing global variables defaults, site also provides page styling for content that exists outside of interface elements.</p>
+
+  <h3 class="ui header">Theming</h3>
+
+  <p>Customizing site variables is an important part of using Semantic UI, to learn more about global site variables visit our <a href="/usage/theming.html">theming guide</a>.</p>
+
+  <h2 class="ui dividing header">Content</h2>
+
+  <div class="example">
+
+    <h4 class="ui header">Headers</h4>
+    <p>A site can define styles for headers</p>
+
+    <h1>First Header</h1>
+    <h2>Second Header</h2>
+    <h3>Third Header</h3>
+    <h4>Fourth Header</h4>
+    <h5>Fifth Header</h5>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Page Font</h4>
+    <p>A site can specify styles for page content.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel tincidunt eros, nec venenatis ipsum. Nulla hendrerit urna ex, id sagittis mi scelerisque vitae. Vestibulum posuere rutrum interdum. Sed ut ullamcorper odio, non pharetra eros. Aenean sed lacus sed enim ornare vestibulum quis a felis. Sed cursus nunc sit amet mauris sodales tempus. Nullam mattis, dolor non posuere commodo, sapien ligula hendrerit orci, non placerat erat felis vel dui. Cras vulputate ligula ut ex tincidunt tincidunt. Maecenas eget gravida lorem. Nunc nec facilisis risus. Mauris congue elit sit amet elit varius mattis. Praesent convallis placerat magna, a bibendum nibh lacinia non.</p>
+
+    <p>Fusce mollis sagittis elit ut maximus. Nullam blandit lacus sit amet luctus euismod. Duis luctus leo vel consectetur consequat. Phasellus ex ligula, pellentesque et neque vitae, elementum placerat eros. Proin eleifend odio nec velit lacinia suscipit. Morbi mollis ante nec dapibus gravida. In tincidunt augue eu elit porta, vel condimentum purus posuere. Maecenas tincidunt, erat sed elementum sagittis, tortor erat faucibus tellus, nec molestie mi purus sit amet tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris a tincidunt metus. Fusce congue metus aliquam ex auctor eleifend.</p>
+    <p>Ut imperdiet dignissim feugiat. Phasellus tristique odio eu justo dapibus, nec rutrum ipsum luctus. Ut posuere nec tortor eu ullamcorper. Etiam pellentesque tincidunt tortor, non sagittis nibh pretium sit amet. Sed neque dolor, blandit eu ornare vel, lacinia porttitor nisi. Vestibulum sit amet diam rhoncus, consectetur enim sit amet, interdum mauris. Praesent feugiat finibus quam, porttitor varius est egestas id.</p>
+
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Text Selection</h4>
+    <p>A site can specify text selection styles.</p>
+    <div class="ui message ignored">Highlight the text below with your cursor to see a demonstration</div>
+
+    <p>Fusce mollis sagittis elit ut maximus. Nullam blandit lacus sit amet luctus euismod. Duis luctus leo vel consectetur consequat. Phasellus ex ligula, pellentesque et neque vitae, elementum placerat eros. Proin eleifend odio nec velit lacinia suscipit. Morbi mollis ante nec dapibus gravida. In tincidunt augue eu elit porta, vel condimentum purus posuere. Maecenas tincidunt, erat sed elementum sagittis, tortor erat faucibus tellus, nec molestie mi purus sit amet tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris a tincidunt metus. Fusce congue metus aliquam ex auctor eleifend.</p>
+
+  </div>
+  <div class="example">
+    <h4 class="ui header">Spacing</h4>
+    <p>A site can define default spacing for headers and paragraphs</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel tincidunt eros, nec venenatis ipsum. Nulla hendrerit urna ex, id sagittis mi scelerisque vitae. Vestibulum posuere rutrum interdum. Sed ut ullamcorper odio, non pharetra eros. Aenean sed lacus sed enim ornare vestibulum quis a felis. Sed cursus nunc sit amet mauris sodales tempus. Nullam mattis, dolor non posuere commodo, sapien ligula hendrerit orci, non placerat erat felis vel dui. Cras vulputate ligula ut ex tincidunt tincidunt. Maecenas eget gravida lorem. Nunc nec facilisis risus. Mauris congue elit sit amet elit varius mattis. Praesent convallis placerat magna, a bibendum nibh lacinia non.</p>
+
+    <p>Fusce mollis sagittis elit ut maximus. Nullam blandit lacus sit amet luctus euismod. Duis luctus leo vel consectetur consequat. Phasellus ex ligula, pellentesque et neque vitae, elementum placerat eros. Proin eleifend odio nec velit lacinia suscipit. Morbi mollis ante nec dapibus gravida. In tincidunt augue eu elit porta, vel condimentum purus posuere. Maecenas tincidunt, erat sed elementum sagittis, tortor erat faucibus tellus, nec molestie mi purus sit amet tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris a tincidunt metus. Fusce congue metus aliquam ex auctor eleifend.</p>
+
+    <p>Ut imperdiet dignissim feugiat. Phasellus tristique odio eu justo dapibus, nec rutrum ipsum luctus. Ut posuere nec tortor eu ullamcorper. Etiam pellentesque tincidunt tortor, non sagittis nibh pretium sit amet. Sed neque dolor, blandit eu ornare vel, lacinia porttitor nisi. Vestibulum sit amet diam rhoncus, consectetur enim sit amet, interdum mauris. Praesent feugiat finibus quam, porttitor varius est egestas id.</p>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Links</h4>
+    <p>A site can define link font formatting.</p>
+    <p>Ut imperdiet dignissim feugiat. Phasellus tristique odio eu justo dapibus, nec rutrum ipsum luctus. Ut posuere nec tortor eu ullamcorper. <a href="#link">Etiam pellentesque</a> tincidunt tortor, non sagittis nibh pretium sit amet.</p>
+    <div class="ui bulleted list">
+      <a class="item" href="#link">List Link</a>
+      <a class="item" href="#link">List Link</a>
+      <a class="item" href="#link">List Link</a>
+    </div>
+    <div class="ui card">
+      <a class="image" href="#link">
+        <img src="/images/avatar/large/steve.jpg">
+      </a>
+      <div class="content">
+        <a class="header" href="#link">Steve Jobes</a>
+        <div class="meta">
+          <a class="time">Last Seen 2 days ago</a>
+        </div>
+      </div>
+    </div>
+    <div class="ui very relaxed items">
+      <div class="item">
+        <div class="image">
+          <img src="/images/wireframe/image.png">
+        </div>
+        <div class="content">
+          <a class="ui header" href="#link">Link Header</a>
+          <div class="description">
+            <p>Ut imperdiet dignissim feugiat. Phasellus tristique odio eu justo dapibus, nec rutrum ipsum luctus. Ut posuere nec tortor eu ullamcorper. <a href="#link">Etiam pellentesque</a> tincidunt tortor, non sagittis nibh pretium sit amet. Sed neque dolor, blandit eu ornare vel, lacinia porttitor nisi. Vestibulum sit amet diam rhoncus, consectetur enim sit amet, interdum mauris. Praesent feugiat finibus quam, porttitor varius est egestas id.</p>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="image">
+          <img src="/images/wireframe/image.png">
+        </div>
+        <div class="content">
+          <a class="ui header" href="#link">Link Header</a>
+          <div class="description">
+            <p>Ut imperdiet dignissim feugiat. Phasellus tristique odio eu justo dapibus, nec rutrum ipsum luctus. Ut posuere nec tortor eu ullamcorper. <a href="#link">Etiam pellentesque</a> tincidunt tortor, non sagittis nibh pretium sit amet. Sed neque dolor, blandit eu ornare vel, lacinia porttitor nisi. Vestibulum sit amet diam rhoncus, consectetur enim sit amet, interdum mauris. Praesent feugiat finibus quam, porttitor varius est egestas id.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="ui dividing header">Variables</h2>
+
+  <div class="example">
+    <h4 class="ui header">Brand Colors</h4>
+    <p>A site can specify a primary and secondary brand color.</p>
+    <a class="ui primary button">Primary Brand Color</a>
+    <a class="ui secondary button">Secondary Brand Color</a>
+  </div>
+
+  <div class="colors example">
+    <h4 class="ui header">Colors</h4>
+    <p>A site can define a set of hex values for common named colors</p>
+    <div class="ui five column stackable padded grid">
+      <div class="red column">Red</div>
+      <div class="orange column">Orange</div>
+      <div class="yellow column">Yellow</div>
+      <div class="olive column">Olive</div>
+      <div class="green column">Green</div>
+      <div class="teal column">Teal</div>
+      <div class="blue column">Blue</div>
+      <div class="violet column">Violet</div>
+      <div class="purple column">Purple</div>
+      <div class="pink column">Pink</div>
+      <div class="brown column">Brown</div>
+      <div class="grey column">Grey</div>
+      <div class="black column">Black</div>
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Border Styles</h4>
+    <p>A site can specify default border styles and radius.</p>
+
+    <h3 class="ui header">Examples of UI that inherit border styles</h3>
+    <div class="ui segment">Segment</div>
+    <div class="ui button">Button</div>
+    <div class="ui menu">
+      <div class="item">One</div>
+      <div class="item">Two</div>
+    </div>
+    <table class="ui definition table">
+      <thead>
+        <th></th>
+        <th>Header 1</th>
+        <th>Header 2</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Definition</td>
+          <td>1A</td>
+          <td>1B</td>
+        </tr>
+        <tr>
+          <td>Definition</td>
+          <td>2A</td>
+          <td>2B</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Size</h4>
+    <p>A site can define a root em size, used for providing relative sizes for the rest of a site's content</p>
+    <div class="ui ignored info message">
+      <code>em</code> and <code>rem</code> are special units used to provide relative measurements for elements. <code>1em</code> defines what baseline size, <code>medium</code>, is for UI elements. Most elements are sized in <code>rem</code> which are affected by this value, however some UI can also be defined using <code>em</code> which will be based on the surrounding font size of the parent element.</p>
+    </div>
+
+    <h3 class="ui header">Examples of Absolutely Sized UI</h3>
+    <div class="ui button">
+      Button
+    </div>
+    <div class="ui input">
+      <input type="text" placeholder="Input">
+    </div>
+
+    <h3 class="ui header">Examples of Relative Sized UI</h3>
+    <div style="font-size: 18px;">
+      <p>Larger content container</p>
+      <div class="ui bulleted link list">
+        <a class="item">List Item</a>
+        <a class="item">List Item</a>
+        <a class="item">List Item</a>
+        <a class="item">List Item</a>
+        <a class="item">List Item</a>
+      </div>
+      <div class="ui message">
+        <p>Message</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+        <div class="ui  vertical footer segment">
+  <div class="ui center aligned container">
+    <div class="ui stackable grid">
+      <div class="three wide column">
+        <h4 class="ui header">Community</h4>
+        <div class="ui link list">
+          <a class="item" href="https://www.transifex.com/organization/semantic-org/" target="_blank">Help Translate</a>
+          <a class="item" href="https://github.com/Semantic-Org/Semantic-UI/issues" target="_blank">Submit an Issue</a>
+          <a class="item" href="https://gitter.im/Semantic-Org/Semantic-UI" target="_blank">Join our Chat</a>
+          <a class="item" href="/cla.html" target="_blank">CLA</a>
+        </div>
+      </div>
+      <div class="three wide column">
+        <h4 class="ui header">Network</h4>
+        <div class="ui link list">
+          <a class="item" href="https://github.com/Semantic-Org/Semantic-UI" target="_blank">GitHub Repo</a>
+          <a class="item" href="http://forums.semantic-ui.com" target="_blank">User Forums</a>
+          <a class="item" href="http://1.semantic-ui.com">1.x Docs</a>
+          <a class="item" href="http://legacy.semantic-ui.com">0.x Docs</a>
+        </div>
+      </div>
+      <div class="seven wide right floated column">
+        <h4 class="ui header">Help Preserve This Project</h4>
+        <p> Support for the continued development of Semantic UI comes directly from the community.</p>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="7ZAF2Q8DBZAQL">
+          <button type="submit" class="ui large teal button">Donate Today</button>
+        </form>
+      </div>
+    </div>
+    <div class="ui section divider"></div>
+    <img src="/images/logo.png" class="ui centered mini image">
+    <div class="ui horizontal small divided link list">
+      <a class="item" href="http://semantic-ui.mit-license.org/" target="_blank">Free & Open Source (MIT)</a>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+  <div class="ui basic language modal">
+  <i class="close icon"></i>
+  <div class="header">The <span class="name"></span> Translation Needs Your Help</div>
+  <div class="image content">
+    <div class="middle aligned image">
+      <i class="world icon"></i>
+    </div>
+    <div class="description">
+      <p>This translation is only <b><span class="complete"></span>%</b> complete!</p>
+      <div class="ui inverted indicating progress">
+        <div class="bar"></div>
+      </div>
+      <p>We need your help to make Semantic available to  people who speak your language.</p>
+      <p>Our translation tools are easy to use and allow you to translate text without having to leave the site.
+      </p>
+    </div>
+  </div>
+  <div class="actions">
+    <div class="ui inverted cancel button">No Thanks</div>
+    <a href="https://github.com/Semantic-Org/Semantic-UI/wiki/Translating-Semantic-UI-Docs" target="_blank" class="ui inverted approve teal button">
+      <i class="mail icon"></i>
+      Help Translate
+    </a>
+  </div>
+</div>
+
+<div class="ui basic chinese modal">
+  <i class="close icon"></i>
+  <div class="header">Would you like to visit the mirror site?</div>
+  <div class="image content">
+    <div class="middle aligned image">
+      <i class="question icon"></i>
+    </div>
+    <div class="description">
+      <p>Semantic is available at <a href="http://www.semantic-ui.cn">semantic-ui.cn</a> a mirror site hosted inside China. This should make browsing much faster for those visiting from mainland China.
+      </p>
+    </div>
+  </div>
+  <div class="actions">
+    <div class="ui inverted red cancel button">No Thanks</div>
+    <a href="http://www.semantic-ui.cn" class="ui inverted green approve button">
+      <i class="mail icon"></i>
+      Yes, take me to the mirror
+    </a>
+  </div>
+</div>
+  <div class="ui demo page dimmer">
+  <div class="content">
+    <div class="center">
+      <h2 class="ui inverted icon header">
+        <i class="mail icon"></i>
+        Dimmer Message
+        <div class="sub header">Dimmer sub-header</div>
+      </h2>
+    </div>
+  </div>
+</div>
+  <script>
+window.less = {
+  async        : true,
+  environment  : 'production',
+  fileAsync    : false,
+  onReady      : false,
+  useFileCache : true
+};
+</script>
+
+<script src="/javascript/library/less.min.js"></script>
+
+
+</body>
+</html>

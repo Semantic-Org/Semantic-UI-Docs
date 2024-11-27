@@ -1,0 +1,787 @@
+{
+  "API": {
+    "layout": "default",
+    "css": "api",
+    "standalone": true,
+    "element": "API",
+    "elementType": "behavior",
+    "title": "API",
+    "description": "API allows elements to trigger actions on a server",
+    "type": "UI Behavior",
+    "category": "UI Behavior",
+    "filename": "behaviors/api.html",
+    "url": "/behaviors/api.html"
+  },
+  "validation": {
+    "layout": "default",
+    "css": "form",
+    "standalone": true,
+    "element": "validation",
+    "elementType": "behavior",
+    "title": "Form Validation",
+    "description": "A form validation behavior checks data against a set of criteria before passing it along to the server",
+    "type": "UI Behavior",
+    "category": "UI Behavior",
+    "filename": "behaviors/form.html",
+    "url": "/behaviors/form.html"
+  },
+  "visibility": {
+    "layout": "default",
+    "css": "visibility minimal",
+    "element": "visibility",
+    "elementType": "behavior",
+    "standalone": true,
+    "title": "Visibility",
+    "description": "Visibility provides a set of callbacks for when a content appears in the viewport",
+    "type": "UI Behavior",
+    "category": "UI Behavior",
+    "filename": "behaviors/visibility.html",
+    "url": "/behaviors/visibility.html"
+  },
+  "breadcrumb": {
+    "layout": "default",
+    "css": "breadcrumb",
+    "standalone": true,
+    "element": "breadcrumb",
+    "elementType": "collection",
+    "title": "Breadcrumb",
+    "description": "A breadcrumb is used to show hierarchy between content",
+    "type": "UI Collection",
+    "themes": [
+      "Default"
+    ],
+    "category": "UI Collection",
+    "filename": "collections/breadcrumb.html",
+    "url": "/collections/breadcrumb.html"
+  },
+  "form": {
+    "layout": "default",
+    "css": "form",
+    "standalone": true,
+    "element": "form",
+    "elementType": "collection",
+    "title": "Form",
+    "description": "A form displays a set of related user input fields in a structured way",
+    "type": "UI Collection",
+    "themes": [
+      "Default",
+      "Flat",
+      "Chubby",
+      "GitHub"
+    ],
+    "category": "UI Collection",
+    "filename": "collections/form.html",
+    "url": "/collections/form.html"
+  },
+  "grid": {
+    "layout": "default",
+    "css": "Grid",
+    "standalone": true,
+    "element": "grid",
+    "elementType": "collection",
+    "title": "Grid",
+    "description": "A grid is used to harmonize negative space in a layout",
+    "type": "UI Collection",
+    "themes": [
+      "Default"
+    ],
+    "category": "UI Collection",
+    "filename": "collections/grid.html",
+    "url": "/collections/grid.html"
+  },
+  "menu": {
+    "layout": "default",
+    "css": "menu",
+    "standalone": true,
+    "element": "menu",
+    "elementType": "collection",
+    "title": "Menu",
+    "description": "A menu displays grouped navigation actions",
+    "type": "UI Collection",
+    "themes": [
+      "Default",
+      "Chubby",
+      "GitHub",
+      "Material"
+    ],
+    "category": "UI Collection",
+    "filename": "collections/menu.html",
+    "url": "/collections/menu.html"
+  },
+  "message": {
+    "layout": "default",
+    "css": "message",
+    "standalone": true,
+    "element": "message",
+    "elementType": "collection",
+    "title": "Message",
+    "description": "A message displays information that explains nearby content",
+    "type": "UI Collection",
+    "themes": [
+      "Default",
+      "GitHub",
+      "Gmail"
+    ],
+    "category": "UI Collection",
+    "filename": "collections/message.html",
+    "url": "/collections/message.html"
+  },
+  "table": {
+    "layout": "default",
+    "css": "table",
+    "standalone": true,
+    "element": "table",
+    "elementType": "collection",
+    "title": "Table",
+    "description": "A table displays a collections of data grouped into rows",
+    "type": "UI Collection",
+    "themes": [
+      "Default",
+      "Basic",
+      "Classic",
+      "GitHub"
+    ],
+    "category": "UI Collection",
+    "filename": "collections/table.html",
+    "url": "/collections/table.html"
+  },
+  "button": {
+    "layout": "default",
+    "css": "button-page",
+    "element": "button",
+    "elementType": "element",
+    "standalone": true,
+    "title": "Button",
+    "description": "A button indicates a possible user action",
+    "type": "UI Element",
+    "themes": [
+      "Default",
+      "Classic",
+      "Basic",
+      "Bootstrap3",
+      "Twitter",
+      "Raised",
+      "Chubby",
+      "Round",
+      "Amazon",
+      "Material",
+      "GitHub"
+    ],
+    "category": "UI Element",
+    "filename": "elements/button.html",
+    "url": "/elements/button.html"
+  },
+  "container": {
+    "layout": "default",
+    "css": "basic minimal",
+    "element": "container",
+    "elementType": "element",
+    "standalone": true,
+    "title": "Container",
+    "description": "A container limits content to a maximum width",
+    "type": "UI Element",
+    "themes": [
+      "Default"
+    ],
+    "category": "UI Element",
+    "filename": "elements/container.html",
+    "url": "/elements/container.html"
+  },
+  "divider": {
+    "layout": "default",
+    "css": "divider",
+    "standalone": true,
+    "element": "divider",
+    "elementType": "element",
+    "title": "Divider",
+    "description": "A divider visually segments content into groups",
+    "type": "UI Element",
+    "themes": [
+      "default"
+    ],
+    "category": "UI Element",
+    "filename": "elements/divider.html",
+    "url": "/elements/divider.html"
+  },
+  "flag": {
+    "layout": "default",
+    "css": "flag-page",
+    "element": "flag",
+    "elementType": "element",
+    "standalone": true,
+    "title": "Flag",
+    "description": "A flag is used to represent a political state",
+    "type": "UI Element",
+    "category": "UI Element",
+    "filename": "elements/flag.html",
+    "url": "/elements/flag.html"
+  },
+  "header": {
+    "layout": "default",
+    "css": "header",
+    "standalone": true,
+    "element": "header",
+    "elementType": "element",
+    "title": "Header",
+    "description": "A header provides a short summary of content",
+    "type": "UI Element",
+    "themes": [
+      "Default",
+      "Classic",
+      "Bookish",
+      "Chubby",
+      "Material"
+    ],
+    "category": "UI Element",
+    "filename": "elements/header.html",
+    "url": "/elements/header.html"
+  },
+  "icon": {
+    "layout": "default",
+    "css": "icon",
+    "standalone": true,
+    "element": "icon",
+    "elementType": "element",
+    "title": "Icon",
+    "description": "An icon is a glyph used to represent something else",
+    "type": "UI Element",
+    "themes": [
+      "Default"
+    ],
+    "category": "UI Element",
+    "filename": "elements/icon.html",
+    "url": "/elements/icon.html"
+  },
+  "image": {
+    "layout": "default",
+    "css": "image",
+    "standalone": true,
+    "element": "image",
+    "elementType": "element",
+    "title": "Image",
+    "description": "An image is a graphic representation of something",
+    "type": "UI Element",
+    "themes": [
+      "Default"
+    ],
+    "category": "UI Element",
+    "filename": "elements/image.html",
+    "url": "/elements/image.html"
+  },
+  "input": {
+    "layout": "default",
+    "css": "input",
+    "standalone": true,
+    "element": "input",
+    "elementType": "element",
+    "title": "Input",
+    "description": "An input is a field used to elicit a response from a user",
+    "type": "UI Element",
+    "themes": [
+      "Default",
+      "GitHub"
+    ],
+    "category": "UI Element",
+    "filename": "elements/input.html",
+    "url": "/elements/input.html"
+  },
+  "label": {
+    "layout": "default",
+    "css": "label",
+    "standalone": true,
+    "element": "label",
+    "elementType": "element",
+    "title": "Label",
+    "description": "A label displays content classification",
+    "type": "UI Element",
+    "themes": [
+      "Default",
+      "GitHub"
+    ],
+    "category": "UI Element",
+    "filename": "elements/label.html",
+    "url": "/elements/label.html"
+  },
+  "list": {
+    "layout": "default",
+    "css": "list",
+    "standalone": true,
+    "element": "list",
+    "elementType": "element",
+    "title": "List",
+    "description": "A list is used to group related content",
+    "type": "UI Element",
+    "themes": [
+      "Default"
+    ],
+    "category": "UI Element",
+    "filename": "elements/list.html",
+    "url": "/elements/list.html"
+  },
+  "loader": {
+    "layout": "default",
+    "css": "loader",
+    "standalone": true,
+    "element": "loader",
+    "elementType": "element",
+    "title": "Loader",
+    "description": "A loader alerts a user to wait for an activity to complete",
+    "type": "UI Element",
+    "themes": [
+      "Default",
+      "Duo",
+      "Pulsar"
+    ],
+    "category": "UI Element",
+    "filename": "elements/loader.html",
+    "url": "/elements/loader.html"
+  },
+  "placeholder": {
+    "layout": "default",
+    "css": "loader",
+    "standalone": true,
+    "element": "placeholder",
+    "elementType": "element",
+    "title": "Placeholder",
+    "description": "A placeholder is used to reserve splace for content that soon will appear in a layout",
+    "type": "UI Element",
+    "themes": [
+      "Default"
+    ],
+    "category": "UI Element",
+    "filename": "elements/placeholder.html",
+    "url": "/elements/placeholder.html"
+  },
+  "rail": {
+    "layout": "default",
+    "css": "basic minimal",
+    "element": "rail",
+    "elementType": "element",
+    "standalone": true,
+    "title": "Rail",
+    "description": "A rail is used to show accompanying content outside the boundaries of the main view of a site",
+    "type": "UI Element",
+    "category": "UI Element",
+    "filename": "elements/rail.html",
+    "url": "/elements/rail.html"
+  },
+  "reveal": {
+    "layout": "default",
+    "css": "reveal",
+    "standalone": true,
+    "element": "reveal",
+    "elementType": "element",
+    "title": "Reveal",
+    "description": "A reveal displays additional content in place of previous content when activated",
+    "type": "UI Element",
+    "themes": [
+      "Default"
+    ],
+    "category": "UI Element",
+    "filename": "elements/reveal.html",
+    "url": "/elements/reveal.html"
+  },
+  "segment": {
+    "layout": "default",
+    "css": "segment",
+    "standalone": true,
+    "element": "segment",
+    "elementType": "element",
+    "title": "Segment",
+    "description": "A segment is used to create a grouping of related content",
+    "type": "UI Element",
+    "themes": [
+      "default",
+      "GitHub"
+    ],
+    "category": "UI Element",
+    "filename": "elements/segment.html",
+    "url": "/elements/segment.html"
+  },
+  "step": {
+    "layout": "default",
+    "css": "steps",
+    "standalone": true,
+    "element": "step",
+    "elementType": "element",
+    "title": "Step",
+    "description": "A step shows the completion status of an activity in a series of activities",
+    "type": "UI Element",
+    "themes": [
+      "Default",
+      "Basic",
+      "GitHub"
+    ],
+    "category": "UI Element",
+    "filename": "elements/step.html",
+    "url": "/elements/step.html"
+  },
+  "reset": {
+    "layout": "default",
+    "css": "reset-page",
+    "element": "reset",
+    "elementType": "global",
+    "title": "Reset",
+    "description": "A reset is a set of normalized values for CSS properties that correct for abberations in browser defaults",
+    "type": "UI Global",
+    "themes": [
+      "Default",
+      "Basic",
+      "Resetcss"
+    ],
+    "category": "UI Global",
+    "filename": "globals/reset.html",
+    "url": "/globals/reset.html"
+  },
+  "site": {
+    "layout": "default",
+    "css": "site",
+    "element": "site",
+    "elementType": "global",
+    "standalone": true,
+    "title": "Site",
+    "description": "A site is a set of global constraints that define the basic parameters of all UI elements",
+    "type": "UI Global",
+    "themes": [
+      "Default",
+      "GitHub",
+      "Material"
+    ],
+    "category": "UI Global",
+    "filename": "globals/site.html",
+    "url": "/globals/site.html"
+  },
+  "accordion": {
+    "layout": "default",
+    "css": "accordion",
+    "element": "accordion",
+    "elementType": "module",
+    "standalone": true,
+    "title": "Accordion",
+    "description": "An accordion allows users to toggle the display of sections of content",
+    "type": "UI Module",
+    "themes": [
+      "Default",
+      "Chubby"
+    ],
+    "category": "UI Module",
+    "filename": "modules/accordion.html",
+    "url": "/modules/accordion.html"
+  },
+  "checkbox": {
+    "layout": "default",
+    "css": "checkbox",
+    "element": "checkbox",
+    "elementType": "module",
+    "standalone": true,
+    "title": "Checkbox",
+    "description": "A checkbox allows a user to select a value from a small set of options, often binary",
+    "type": "UI Module",
+    "themes": [
+      "Default",
+      "Colored"
+    ],
+    "category": "UI Module",
+    "filename": "modules/checkbox.html",
+    "url": "/modules/checkbox.html"
+  },
+  "dimmer": {
+    "layout": "default",
+    "css": "dim",
+    "standalone": true,
+    "element": "dimmer",
+    "elementType": "module",
+    "title": "Dimmer",
+    "description": "A dimmer hides distractions to focus attention on particular content",
+    "type": "UI Module",
+    "themes": [
+      "Default"
+    ],
+    "category": "UI Module",
+    "filename": "modules/dimmer.html",
+    "url": "/modules/dimmer.html"
+  },
+  "dropdown": {
+    "layout": "default",
+    "css": "dropdown",
+    "standalone": true,
+    "title": "Dropdown",
+    "description": "A dropdown allows a user to select a value from a series of options",
+    "type": "UI Module",
+    "element": "dropdown",
+    "elementType": "module",
+    "themes": [
+      "Default",
+      "GitHub",
+      "Material"
+    ],
+    "category": "UI Module",
+    "filename": "modules/dropdown.html",
+    "url": "/modules/dropdown.html"
+  },
+  "Embed": {
+    "layout": "default",
+    "css": "",
+    "standalone": true,
+    "element": "Embed",
+    "elementType": "module",
+    "title": "Embed",
+    "description": "An embed displays content from other websites like YouTube videos or Google Maps",
+    "type": "UI Module",
+    "category": "UI Module",
+    "filename": "modules/embed.html",
+    "url": "/modules/embed.html"
+  },
+  "modal": {
+    "layout": "default",
+    "css": "modal-page",
+    "standalone": true,
+    "element": "modal",
+    "elementType": "module",
+    "title": "Modal",
+    "description": "A modal displays content that temporarily blocks interactions with the main view of a site",
+    "type": "UI Module",
+    "themes": [
+      "Default",
+      "Material"
+    ],
+    "category": "UI Module",
+    "filename": "modules/modal.html",
+    "url": "/modules/modal.html"
+  },
+  "popup": {
+    "layout": "default",
+    "css": "popup",
+    "standalone": true,
+    "element": "popup",
+    "elementType": "module",
+    "title": "Popup",
+    "description": "A popup displays additional information on top of a page",
+    "type": "UI Module",
+    "themes": [
+      "Default"
+    ],
+    "category": "UI Module",
+    "filename": "modules/popup.html",
+    "url": "/modules/popup.html"
+  },
+  "progress": {
+    "layout": "default",
+    "css": "progress",
+    "standalone": true,
+    "element": "progress",
+    "elementType": "module",
+    "title": "Progress",
+    "description": "A progress bar shows the progression of a task",
+    "type": "UI Module",
+    "themes": [
+      "Default",
+      "Classic",
+      "Basic",
+      "Striped"
+    ],
+    "category": "UI Module",
+    "filename": "modules/progress.html",
+    "url": "/modules/progress.html"
+  },
+  "rating": {
+    "layout": "default",
+    "css": "rating",
+    "standalone": true,
+    "element": "rating",
+    "elementType": "module",
+    "title": "Rating",
+    "description": "A rating indicates user interest in content",
+    "type": "UI Module",
+    "themes": [
+      "Default"
+    ],
+    "category": "UI Module",
+    "filename": "modules/rating.html",
+    "url": "/modules/rating.html"
+  },
+  "search": {
+    "layout": "default",
+    "css": "",
+    "element": "search",
+    "elementType": "module",
+    "standalone": true,
+    "title": "Search",
+    "description": "A search module allows a user to query for results from a selection of data",
+    "type": "UI Module",
+    "category": "UI Module",
+    "filename": "modules/search.html",
+    "url": "/modules/search.html"
+  },
+  "shape": {
+    "layout": "default",
+    "css": "shape",
+    "standalone": true,
+    "element": "shape",
+    "elementType": "module",
+    "title": "Shape",
+    "description": "A shape is a three dimensional object displayed on a two dimensional plane",
+    "type": "UI Module",
+    "themes": [
+      "default"
+    ],
+    "category": "UI Module",
+    "filename": "modules/shape.html",
+    "url": "/modules/shape.html"
+  },
+  "sidebar": {
+    "layout": "default",
+    "css": "minimal",
+    "standalone": true,
+    "element": "sidebar",
+    "elementType": "element",
+    "title": "Sidebar",
+    "description": "A sidebar hides additional content beside a page.",
+    "type": "UI Module",
+    "themes": [
+      "Default"
+    ],
+    "category": "UI Module",
+    "filename": "modules/sidebar.html",
+    "url": "/modules/sidebar.html"
+  },
+  "sticky": {
+    "layout": "default",
+    "css": "basic minimal",
+    "element": "sticky",
+    "elementType": "module",
+    "standalone": true,
+    "title": "Sticky",
+    "description": "Sticky content fixes itself to the browser viewport as content is scrolled",
+    "type": "UI Module",
+    "category": "UI Module",
+    "filename": "modules/sticky.html",
+    "url": "/modules/sticky.html"
+  },
+  "tab": {
+    "layout": "default",
+    "css": "",
+    "element": "tab",
+    "elementType": "module",
+    "standalone": true,
+    "title": "Tab",
+    "description": "A tab is a hidden section of content activated by a menu",
+    "type": "UI Module",
+    "themes": [
+      "Default"
+    ],
+    "category": "UI Module",
+    "filename": "modules/tab.html",
+    "url": "/modules/tab.html"
+  },
+  "transition": {
+    "layout": "default",
+    "css": "transition",
+    "element": "transition",
+    "elementType": "module",
+    "standalone": true,
+    "title": "Transition",
+    "description": "A transition is an animation usually used to move content in or out of view",
+    "type": "UI Module",
+    "category": "UI Module",
+    "filename": "modules/transition.html",
+    "url": "/modules/transition.html"
+  },
+  "advertisement": {
+    "layout": "default",
+    "css": "ad",
+    "element": "advertisement",
+    "elementType": "view",
+    "title": "Advertisement",
+    "description": "An ad displays third-party promotional content",
+    "type": "UI View",
+    "category": "UI View",
+    "filename": "views/advertisement.html",
+    "url": "/views/advertisement.html"
+  },
+  "card": {
+    "layout": "default",
+    "css": "card",
+    "standalone": true,
+    "element": "card",
+    "elementType": "view",
+    "title": "Card",
+    "description": "A card displays site content in a manner similar to a playing card",
+    "type": "UI View",
+    "themes": [
+      "Default",
+      "Basic",
+      "Classic",
+      "Instagram"
+    ],
+    "category": "UI View",
+    "filename": "views/card.html",
+    "url": "/views/card.html"
+  },
+  "comment": {
+    "layout": "default",
+    "css": "comment",
+    "element": "comment",
+    "elementType": "view",
+    "standalone": true,
+    "title": "Comment",
+    "description": "A comment displays user feedback to site content",
+    "type": "UI View",
+    "themes": [
+      "Default",
+      "Chubby"
+    ],
+    "category": "UI View",
+    "filename": "views/comment.html",
+    "url": "/views/comment.html"
+  },
+  "feed": {
+    "layout": "default",
+    "css": "feed",
+    "standalone": true,
+    "title": "Feed",
+    "description": "A feed presents user activity chronologically",
+    "type": "UI View",
+    "element": "feed",
+    "elementType": "view",
+    "themes": [
+      "Default",
+      "Timeline"
+    ],
+    "category": "UI View",
+    "filename": "views/feed.html",
+    "url": "/views/feed.html"
+  },
+  "item": {
+    "layout": "default",
+    "css": "item",
+    "standalone": true,
+    "element": "item",
+    "elementType": "view",
+    "title": "Item",
+    "description": "An item view presents large collections of site content for display",
+    "type": "UI View",
+    "themes": [
+      "Default"
+    ],
+    "category": "UI View",
+    "filename": "views/item.html",
+    "url": "/views/item.html"
+  },
+  "statistic": {
+    "layout": "default",
+    "css": "stat",
+    "standalone": true,
+    "element": "statistic",
+    "elementType": "view",
+    "title": "Statistic",
+    "description": "A statistic emphasizes the current value of an attribute",
+    "type": "UI View",
+    "themes": [
+      "Default"
+    ],
+    "category": "UI View",
+    "filename": "views/statistic.html",
+    "url": "/views/statistic.html"
+  }
+}

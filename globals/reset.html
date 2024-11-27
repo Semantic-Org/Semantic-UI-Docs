@@ -1,0 +1,1655 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Standard Meta -->
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+<link rel="image_src" type="image/jpeg" href="/images/logo.png" />
+
+<!-- Site Properities -->
+<meta name="generator" content="DocPad v6.79.4" />
+<title>Reset | Semantic UI</title>
+
+<meta name="description" content="A reset is a set of normalized values for CSS properties that correct for abberations in browser defaults" />
+<meta name="keywords" content="html5, ui, library, framework, javascript" />
+  
+  <script src="/javascript/library/detect.min.js"></script>
+  <script src="/javascript/library/jquery.min.js"></script>
+  <script src="/javascript/library/clipboard.min.js"></script>
+  <script src="/javascript/library/cookie.min.js"></script>
+  <script src="/javascript/library/easing.min.js"></script>
+  <script src="/javascript/library/highlight.min.js"></script>
+  <script src="/javascript/library/history.min.js"></script>
+  <script src="/javascript/library/state.js"></script>
+  <script src="/javascript/library/tablesort.min.js"></script>
+  <script src="/javascript/library/underscore.min.js"></script>
+
+
+
+
+
+<script src="/dist/semantic.min.js"></script>
+
+
+
+<script src="/javascript/docs.js"></script>
+
+  
+<link rel="stylesheet" type="text/css" class="ui" href="/dist/semantic.min.css">
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/stylesheets/docs.css">
+<link rel="stylesheet" type="text/css" href="/stylesheets/rtl.css">
+
+
+
+
+
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-44039803-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  
+  <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
+
+
+  
+<script type="text/javascript">
+  window.liveSettings = {
+    api_key    : '9ede3015b9f84c1aabc81ab839c55d74',
+    parse_attr : [
+      'data-title',
+      'data-content'
+    ],
+    detectlang   : false,
+    autocollect  : true,
+    ignore_tags  : ['i', 'code', 'pre'],
+    parse_attr   : ['data-title', 'data-content', 'data-text'],
+    ignore_class : ['code', 'anchor']
+  };
+</script>
+<script type="text/javascript" src="//cdn.transifex.com/live.js"></script>
+
+
+</head>
+<body id="example" class="reset-page" ontouchstart="">
+  
+  <div class="ui vertical inverted sidebar menu" id="toc">
+  
+
+
+
+
+
+
+
+
+<div class="item">
+  <a class="ui logo icon image" href="/">
+    <img src="/images/logo.png">
+  </a>
+  <a href="/"><b>UI Docs</b></a>
+</div>
+<a class="item" href="/introduction/getting-started.html">
+  <b>Getting Started</b>
+</a>
+<a class="item" href="/introduction/new.html">
+  <b>New in 2.4</b>
+</a>
+<div class="item">
+  <div class="header">Introduction</div>
+  <div class="menu">
+    
+      <a class="item" href="/introduction/integrations.html">
+        Integrations
+      </a>
+    
+      <a class="item" href="/introduction/build-tools.html">
+        Build Tools
+      </a>
+    
+      <a class="item" href="/introduction/advanced-usage.html">
+        Recipes
+      </a>
+    
+      <a class="item" href="/introduction/glossary.html">
+        Glossary
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class="header">Usage</div>
+  <div class="menu">
+    
+      <a class="item" href="/usage/theming.html">
+        Theming
+      </a>
+    
+      <a class="item" href="/usage/layout.html">
+        Layouts
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class="active  header">Globals</div>
+  <div class="menu">
+    
+      <a class="active item" href="/globals/reset.html">
+        Reset
+        
+      </a>
+    
+      <a class="item" href="/globals/site.html">
+        Site
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Elements</div>
+  <div class="menu">
+    
+      <a class="item" href="/elements/button.html">
+        Button
+        
+      </a>
+    
+      <a class="item" href="/elements/container.html">
+        Container
+        
+      </a>
+    
+      <a class="item" href="/elements/divider.html">
+        Divider
+        
+      </a>
+    
+      <a class="item" href="/elements/flag.html">
+        Flag
+        
+      </a>
+    
+      <a class="item" href="/elements/header.html">
+        Header
+        
+      </a>
+    
+      <a class="item" href="/elements/icon.html">
+        Icon
+        
+      </a>
+    
+      <a class="item" href="/elements/image.html">
+        Image
+        
+      </a>
+    
+      <a class="item" href="/elements/input.html">
+        Input
+        
+      </a>
+    
+      <a class="item" href="/elements/label.html">
+        Label
+        
+      </a>
+    
+      <a class="item" href="/elements/list.html">
+        List
+        
+      </a>
+    
+      <a class="item" href="/elements/loader.html">
+        Loader
+        
+      </a>
+    
+      <a class="item" href="/elements/placeholder.html">
+        Placeholder
+        
+      </a>
+    
+      <a class="item" href="/elements/rail.html">
+        Rail
+        
+      </a>
+    
+      <a class="item" href="/elements/reveal.html">
+        Reveal
+        
+      </a>
+    
+      <a class="item" href="/elements/segment.html">
+        Segment
+        
+      </a>
+    
+      <a class="item" href="/elements/step.html">
+        Step
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Collections</div>
+  <div class="menu">
+    
+      <a class="item" href="/collections/breadcrumb.html">
+        Breadcrumb
+        
+      </a>
+    
+      <a class="item" href="/collections/form.html">
+        Form
+        
+      </a>
+    
+      <a class="item" href="/collections/grid.html">
+        Grid
+        
+      </a>
+    
+      <a class="item" href="/collections/menu.html">
+        Menu
+        
+      </a>
+    
+      <a class="item" href="/collections/message.html">
+        Message
+        
+      </a>
+    
+      <a class="item" href="/collections/table.html">
+        Table
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Views</div>
+  <div class="menu">
+    
+      <a class="item" href="/views/advertisement.html">
+        Advertisement
+        
+      </a>
+    
+      <a class="item" href="/views/card.html">
+        Card
+        
+      </a>
+    
+      <a class="item" href="/views/comment.html">
+        Comment
+        
+      </a>
+    
+      <a class="item" href="/views/feed.html">
+        Feed
+        
+      </a>
+    
+      <a class="item" href="/views/item.html">
+        Item
+        
+      </a>
+    
+      <a class="item" href="/views/statistic.html">
+        Statistic
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Modules</div>
+  <div class="menu">
+    
+      <a class="item" href="/modules/accordion.html">
+        Accordion
+        
+      </a>
+  
+      <a class="item" href="/modules/checkbox.html">
+        Checkbox
+        
+      </a>
+  
+      <a class="item" href="/modules/dimmer.html">
+        Dimmer
+        
+      </a>
+  
+      <a class="item" href="/modules/dropdown.html">
+        Dropdown
+        
+      </a>
+  
+      <a class="item" href="/modules/embed.html">
+        Embed
+        
+      </a>
+  
+      <a class="item" href="/modules/modal.html">
+        Modal
+        
+      </a>
+  
+      <a class="item" href="/modules/popup.html">
+        Popup
+        
+      </a>
+  
+      <a class="item" href="/modules/progress.html">
+        Progress
+        
+      </a>
+  
+      <a class="item" href="/modules/rating.html">
+        Rating
+        
+      </a>
+  
+      <a class="item" href="/modules/search.html">
+        Search
+        
+      </a>
+  
+      <a class="item" href="/modules/shape.html">
+        Shape
+        
+      </a>
+  
+      <a class="item" href="/modules/sidebar.html">
+        Sidebar
+        
+      </a>
+  
+      <a class="item" href="/modules/sticky.html">
+        Sticky
+        
+      </a>
+  
+      <a class="item" href="/modules/tab.html">
+        Tab
+        
+      </a>
+  
+      <a class="item" href="/modules/transition.html">
+        Transition
+        
+      </a>
+  
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Behaviors</div>
+  <div class="menu">
+    
+      <a class="item" href="/behaviors/api.html">
+        API
+        
+      </a>
+    
+      <a class="item" href="/behaviors/form.html">
+        Form Validation
+        
+      </a>
+    
+      <a class="item" href="/behaviors/visibility.html">
+        Visibility
+        
+      </a>
+    
+  </div>
+</div>
+
+</div>
+
+<div class="ui black big launch right attached fixed button">
+  <i class="content icon"></i>
+  <span class="text">Menu</span>
+</div>
+  
+
+
+
+
+<div class="ui fixed inverted main menu">
+  <div class="ui container">
+    <a class="launch icon item">
+      <i class="content icon"></i>
+    </a>
+    
+      <div class="item">
+        Reset
+      </div>
+    
+    <div class="right menu">
+      
+      <div class="vertically fitted borderless item">
+        <iframe class="github" src="//ghbtns.com/github-btn.html?user=semantic-org&amp;repo=semantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
+      </div>
+      
+      <!--
+      <div class="item">
+        <div class="ui hidden right aligned search input" id="search">
+          <div class="ui transparent icon input">
+            <input class="prompt" type="text" placeholder="Search...">
+            <i class="inverted search link icon" data-content="Search UI"></i>
+          </div>
+          <div class="results"></div>
+        </div>
+      </div>
+      -->
+    </div>
+  </div>
+</div>
+
+  <div class="pusher">
+    <div class="full height">
+      <div class="toc">
+        <div class="ui vertical inverted menu">
+          
+
+
+
+
+
+
+
+
+<div class="item">
+  <a class="ui logo icon image" href="/">
+    <img src="/images/logo.png">
+  </a>
+  <a href="/"><b>UI Docs</b></a>
+</div>
+<a class="item" href="/introduction/getting-started.html">
+  <b>Getting Started</b>
+</a>
+<a class="item" href="/introduction/new.html">
+  <b>New in 2.4</b>
+</a>
+<div class="item">
+  <div class="header">Introduction</div>
+  <div class="menu">
+    
+      <a class="item" href="/introduction/integrations.html">
+        Integrations
+      </a>
+    
+      <a class="item" href="/introduction/build-tools.html">
+        Build Tools
+      </a>
+    
+      <a class="item" href="/introduction/advanced-usage.html">
+        Recipes
+      </a>
+    
+      <a class="item" href="/introduction/glossary.html">
+        Glossary
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class="header">Usage</div>
+  <div class="menu">
+    
+      <a class="item" href="/usage/theming.html">
+        Theming
+      </a>
+    
+      <a class="item" href="/usage/layout.html">
+        Layouts
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class="active  header">Globals</div>
+  <div class="menu">
+    
+      <a class="active item" href="/globals/reset.html">
+        Reset
+        
+      </a>
+    
+      <a class="item" href="/globals/site.html">
+        Site
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Elements</div>
+  <div class="menu">
+    
+      <a class="item" href="/elements/button.html">
+        Button
+        
+      </a>
+    
+      <a class="item" href="/elements/container.html">
+        Container
+        
+      </a>
+    
+      <a class="item" href="/elements/divider.html">
+        Divider
+        
+      </a>
+    
+      <a class="item" href="/elements/flag.html">
+        Flag
+        
+      </a>
+    
+      <a class="item" href="/elements/header.html">
+        Header
+        
+      </a>
+    
+      <a class="item" href="/elements/icon.html">
+        Icon
+        
+      </a>
+    
+      <a class="item" href="/elements/image.html">
+        Image
+        
+      </a>
+    
+      <a class="item" href="/elements/input.html">
+        Input
+        
+      </a>
+    
+      <a class="item" href="/elements/label.html">
+        Label
+        
+      </a>
+    
+      <a class="item" href="/elements/list.html">
+        List
+        
+      </a>
+    
+      <a class="item" href="/elements/loader.html">
+        Loader
+        
+      </a>
+    
+      <a class="item" href="/elements/placeholder.html">
+        Placeholder
+        
+      </a>
+    
+      <a class="item" href="/elements/rail.html">
+        Rail
+        
+      </a>
+    
+      <a class="item" href="/elements/reveal.html">
+        Reveal
+        
+      </a>
+    
+      <a class="item" href="/elements/segment.html">
+        Segment
+        
+      </a>
+    
+      <a class="item" href="/elements/step.html">
+        Step
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Collections</div>
+  <div class="menu">
+    
+      <a class="item" href="/collections/breadcrumb.html">
+        Breadcrumb
+        
+      </a>
+    
+      <a class="item" href="/collections/form.html">
+        Form
+        
+      </a>
+    
+      <a class="item" href="/collections/grid.html">
+        Grid
+        
+      </a>
+    
+      <a class="item" href="/collections/menu.html">
+        Menu
+        
+      </a>
+    
+      <a class="item" href="/collections/message.html">
+        Message
+        
+      </a>
+    
+      <a class="item" href="/collections/table.html">
+        Table
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Views</div>
+  <div class="menu">
+    
+      <a class="item" href="/views/advertisement.html">
+        Advertisement
+        
+      </a>
+    
+      <a class="item" href="/views/card.html">
+        Card
+        
+      </a>
+    
+      <a class="item" href="/views/comment.html">
+        Comment
+        
+      </a>
+    
+      <a class="item" href="/views/feed.html">
+        Feed
+        
+      </a>
+    
+      <a class="item" href="/views/item.html">
+        Item
+        
+      </a>
+    
+      <a class="item" href="/views/statistic.html">
+        Statistic
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Modules</div>
+  <div class="menu">
+    
+      <a class="item" href="/modules/accordion.html">
+        Accordion
+        
+      </a>
+  
+      <a class="item" href="/modules/checkbox.html">
+        Checkbox
+        
+      </a>
+  
+      <a class="item" href="/modules/dimmer.html">
+        Dimmer
+        
+      </a>
+  
+      <a class="item" href="/modules/dropdown.html">
+        Dropdown
+        
+      </a>
+  
+      <a class="item" href="/modules/embed.html">
+        Embed
+        
+      </a>
+  
+      <a class="item" href="/modules/modal.html">
+        Modal
+        
+      </a>
+  
+      <a class="item" href="/modules/popup.html">
+        Popup
+        
+      </a>
+  
+      <a class="item" href="/modules/progress.html">
+        Progress
+        
+      </a>
+  
+      <a class="item" href="/modules/rating.html">
+        Rating
+        
+      </a>
+  
+      <a class="item" href="/modules/search.html">
+        Search
+        
+      </a>
+  
+      <a class="item" href="/modules/shape.html">
+        Shape
+        
+      </a>
+  
+      <a class="item" href="/modules/sidebar.html">
+        Sidebar
+        
+      </a>
+  
+      <a class="item" href="/modules/sticky.html">
+        Sticky
+        
+      </a>
+  
+      <a class="item" href="/modules/tab.html">
+        Tab
+        
+      </a>
+  
+      <a class="item" href="/modules/transition.html">
+        Transition
+        
+      </a>
+  
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Behaviors</div>
+  <div class="menu">
+    
+      <a class="item" href="/behaviors/api.html">
+        API
+        
+      </a>
+    
+      <a class="item" href="/behaviors/form.html">
+        Form Validation
+        
+      </a>
+    
+      <a class="item" href="/behaviors/visibility.html">
+        Visibility
+        
+      </a>
+    
+  </div>
+</div>
+
+        </div>
+      </div>
+      <div class="article">
+        <link rel="stylesheet/less" type="text/css" href="/src/definitions/globals/reset.less" />
+
+
+
+<div class="ui masthead vertical tab segment">
+  <div class="ui container">
+    <div class="introduction">
+
+      <h1 class="ui header">
+        Reset
+        
+        <div class="sub header">
+          
+          <a class="twitter-share-button twitter"
+            href="http://twitter.com/share"
+            data-text="Semantic UI is a next generation UI framework"
+            data-url="http://semantic-ui.com"
+            data-via="semanticui">
+          </a>
+          <script type="text/javascript">
+          window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
+          </script>
+          <iframe class="github" src="//ghbtns.com/github-btn.html?user=semantic-org&amp;repo=semantic-ui&amp;type=star&amp;count=true&amp;" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
+          
+          A reset is a set of normalized values for CSS properties that correct for abberations in browser defaults
+        </div>
+      </h1>
+
+      <div class="ui hidden divider"></div>
+
+      <div class="ui right floated main menu">
+        <a class="bug popup icon item" data-content="Edit This Page" href="https://github.com/Semantic-Org/Semantic-UI-Docs/edit/master/server/documents/globals/reset.html.eco">
+          <i class="edit icon"></i>
+        </a>
+        
+        <a class="github popup icon item" data-content="View project on GitHub" href="https://github.com/Semantic-Org/Semantic-UI">
+          <i class="alternate github icon"></i>
+        </a>
+      </div>
+      <div class="ui right floated main menu">
+        <a class="music popup icon item" data-content="Play Music">
+          <i class="music icon"></i>
+        </a>
+        <div class="ui language dropdown right floating icon item" id="languages" data-content="Select Language">
+          <i class="world icon"></i>
+          <div class="menu">
+            <div class="header">Select Language</div>
+            <div class="ui icon search input">
+              <i class="search icon"></i>
+              <input type="text" placeholder="Search languages...">
+            </div>
+            <div class="scrolling menu">
+  <div class="item" data-percent="100" data-value="en" data-english="English">
+    <span class="description">English</span>
+    English
+  </div>
+  <div class="item" data-percent="94" data-value="da" data-english="Danish">
+    <span class="description">dansk</span>
+    Danish
+  </div>
+  <div class="item" data-percent="94" data-value="es" data-english="Spanish">
+    <span class="description">Español</span>
+    Spanish
+  </div>
+  <div class="item" data-percent="34" data-value="zh" data-english="Chinese">
+    <span class="description">简体中文</span>
+    Chinese
+  </div>
+  <div class="item" data-percent="54" data-value="zh_TW" data-english="Chinese (Taiwan)">
+    <span class="description">中文 (臺灣)</span>
+    Chinese (Taiwan)
+  </div>
+  <div class="item" data-percent="79" data-value="fa" data-english="Persian">
+    <span class="description">پارسی</span>
+    Persian
+  </div>
+  <div class="item" data-percent="41" data-value="fr" data-english="French">
+    <span class="description">Français</span>
+    French
+  </div>
+  <div class="item" data-percent="37" data-value="el" data-english="Greek">
+    <span class="description">ελληνικά</span>
+    Greek
+  </div>
+  <div class="item" data-percent="37" data-value="ru" data-english="Russian">
+    <span class="description">Русский</span>
+    Russian
+  </div>
+  <div class="item" data-percent="36" data-value="de" data-english="German">
+    <span class="description">Deutsch</span>
+    German
+  </div>
+  <div class="item" data-percent="23" data-value="it" data-english="Italian">
+    <span class="description">Italiano</span>
+    Italian
+  </div>
+  <div class="item" data-percent="21" data-value="nl" data-english="Dutch">
+    <span class="description">Nederlands</span>
+    Dutch
+  </div>
+  <div class="item" data-percent="19" data-value="pt_BR" data-english="Portuguese">
+    <span class="description">Português(BR)</span>
+    Portuguese
+  </div>
+  <div class="item" data-percent="17" data-value="id" data-english="Indonesian">
+    <span class="description">Indonesian</span>
+    Indonesian
+  </div>
+  <div class="item" data-percent="12" data-value="lt" data-english="Lithuanian">
+    <span class="description">Lietuvių</span>
+    Lithuanian
+  </div>
+  <div class="item" data-percent="11" data-value="tr" data-english="Turkish">
+    <span class="description">Türkçe</span>
+    Turkish
+  </div>
+  <div class="item" data-percent="10" data-value="ko" data-english="Korean">
+    <span class="description">한국어</span>
+    Korean
+  </div>
+  <div class="item" data-percent="7"  data-value="ar" data-english="Arabic">
+    <span class="description">العربية</span>
+    Arabic
+  </div>
+  <div class="item" data-percent="6"  data-value="hu" data-english="Hungarian">
+    <span class="description">Magyar</span>
+    Hungarian
+  </div>
+  <div class="item" data-percent="6"  data-value="vi" data-english="Vietnamese">
+    <span class="description">tiếng Việt</span>
+    Vietnamese
+  </div>
+  <div class="item" data-percent="5"  data-value="sv" data-english="Swedish">
+    <span class="description">svenska</span>
+    Swedish
+  </div>
+  <div class="item" data-precent="4"  data-value="pl" data-english="Polish">
+    <span class="description">polski</span>
+    Polish
+  </div>
+  <div class="item" data-percent="6"  data-value="ja" data-english="Japanese">
+    <span class="description">日本語</span>
+    Japanese
+  </div>
+  <div class="item" data-percent="0"  data-value="ro" data-english="Romanian">
+    <span class="description">românește</span>
+    Romanian
+  </div>
+</div>
+
+          </div>
+        </div>
+      </div>
+
+      
+      
+      <div class="ui floating dropdown theme basic button" data-element="reset" data-type="global">
+        <span class="text">3 Themes</span>
+        <div class="menu transition hidden">
+          
+            <div class="item" data-value="Default" data-text="Default Theme">Default</div>
+          
+            <div class="item" data-value="Basic" data-text="Basic Theme">Basic</div>
+          
+            <div class="item" data-value="Resetcss" data-text="Resetcss Theme">Resetcss</div>
+          
+        </div>
+      </div>
+      
+      
+    </div>
+    <div class="advertisement">
+      
+      <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=semanticuicom" id="_carbonads_js"></script>
+      
+    </div>
+    
+    
+    
+    
+    
+      
+        
+      
+        
+      
+      <div class="ui two item stackable tabs menu">
+        
+          <a class="active item" data-tab="overview">Overview</a>
+          
+        
+          <a class="item" data-tab="test">Test</a>
+          
+        
+      </div>
+    
+  </div>
+</div>
+
+  <div id="semantic-sponsor"></div>
+  <script>
+  _bsa.init('custom', 'CVAIKK7I', 'placement:semanticuicom',
+      {
+        target: '#semantic-sponsor',
+        template: `
+  <div class="native-inline">
+    <a href="##link##" class="native-link">
+      <img src="##image##" style="background-color: ##backgroundColor##" class="native-img">
+      <div class="native-text">##company## — ##description##</div>
+    </a>
+    <a href="##adViaLink##" class="native-ad">AD</a>
+  </div>
+  `
+      }
+    );
+  </script>
+  <div class="ui vertical beg transition hidden segment">
+    <i class="large red delete link icon"></i>
+    <div class="ui red header">
+      <i class="disabled warning sign icon"></i>
+      <div class="content">
+        Want to Support Open Source? Whitelist Your Ad-Blocker.
+        <div class="sub header">
+          We promise to not show more than one small ad per page. Dont worry, hiding this message will make sure you won't get nagged again.
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<div class="main ui container">
+  <div class="ui active tab" data-tab="overview">
+    <h2 class="ui dividing header">What's In Our Reset</h2>
+    <p>Semantic's default theme includes the latest <a href="http://necolas.github.io/normalize.css/">Normalize CSS</a> to provide a base line HTML reset. In addition, Semantic UI requires a <b>Box-sizing</b> reset, to make sure that elements handle width definitions in the same way.</p>
+    <div class="ui text message info ignore">
+      The reset is required for Semantic UI components to function properly, and should also be included when using individual components.
+    </div>
+
+    <h2 class="ui dividing header">Reset Options</h2>
+    <p>
+      The <b>basic</b> themes <b>only</b> includes the required <code>box-sizing</code> reset and nothing else. The <b>resetcss</b> theme provides a version of <a href="http://meyerweb.com/eric/tools/css/reset/">Reset CSS</a>, a less opinionated CSS reset.
+    </p>
+  </div>
+  <div class="ui tab" data-tab="test">
+    <h2 class="ui dividing header">Reset Test</h2>
+      <div class="Test">
+        <h2 class="Test-describe"><code>html</code></h2>
+        <h3 class="Test-it">should have sans-serif font family (opinionated)</h3>
+        <div class="Test-run">
+          abcdefghijklmnopqrstuvwxyz
+        </div>
+
+        <h2 class="Test-describe"><code>body</code></h2>
+        <h3 class="Test-it">should have no margin (opinionated)</h3>
+        <div class="Test-run">
+          (there should be no red background visible on this page)
+        </div>
+
+        <h2 class="Test-describe"><code>article</code>, <code>aside</code>, <code>details</code>, <code>figure</code>, <code>figcaption</code>, <code>footer</code>, <code>header</code>, <code>hgroup</code>, <code>main</code>, <code>nav</code>, <code>section</code>, <code>summary</code></h2>
+        <h3 class="Test-it">should render as block</h3>
+        <div class="Test-run Test-run--highlightEl">
+          <article>article</article>
+          <aside>aside</aside>
+          <details>
+            <summary>summary</summary>
+            details
+          </details>
+          <figure>
+            figure
+            <figcaption>figcaption</figcaption>
+          </figure>
+          <footer>footer</footer>
+          <header>header</header>
+          <hgroup>hgroup</hgroup>
+          <main>main</main>
+          <nav>nav</nav>
+          <section>section</section>
+        </div>
+
+        <h2 class="Test-describe"><code>audio</code>, <code>canvas</code>, <code>progress</code>, <code>video</code></h2>
+        <h3 class="Test-it">should render as inline-block and baseline-aligned</h3>
+        <div class="Test-run Test-run--highlightEl">
+          <audio controls>audio</audio>
+          <canvas>canvas</canvas>
+          <progress>progress</progress>
+          <video controls>video</video>
+        </div>
+
+        <h2 class="Test-describe"><code>audio:not([controls])</code>, <code>template</code>, <code>[hidden]</code></h2>
+        <h3 class="Test-it">should not display</h3>
+        <div class="Test-run Test-run--highlightEl">
+          <audio>audio</audio>
+          <template>
+            <h1>{{title}}</h1>
+            <content></content>
+          </template>
+          <p hidden>This should be hidden</p>
+        </div>
+
+        <h2 class="Test-describe"><code>a</code></h2>
+        <h3 class="Test-it">should have a transparent background when active</h3>
+        <div class="Test-run">
+          <a href="#non">dummy anchor</a>
+        </div>
+        <h3 class="Test-it">should not have a focus outline when both focused and hovered (opinionated)</h3>
+        <div class="Test-run">
+          <a href="#non">dummy anchor</a>
+        </div>
+
+        <h2 class="Test-describe"><code>abbr[title]</code></h2>
+        <h3 class="Test-it">should have a dotted bottom border</h3>
+        <div class="Test-run">
+          <abbr title="abbreviation">abbr</abbr>
+        </div>
+
+        <h2 class="Test-describe"><code>b</code>, <code>strong</code></h2>
+        <h3 class="Test-it">should have bold font-weight</h3>
+        <div class="Test-run">
+          <b>b</b>
+          <strong>strong</strong>
+        </div>
+
+        <h2 class="Test-describe"><code>dfn</code></h2>
+        <h3 class="Test-it">should have italic font-style</h3>
+        <div class="Test-run">
+          <dfn>dfn</dfn>
+        </div>
+
+        <h2 class="Test-describe"><code>h1</code></h2>
+        <h3 class="Test-it">should not change size within an <code>article</code></h3>
+        <div class="Test-run">
+          <h1>Heading (control)</h1>
+          <article>
+            <h1>Heading (in article)</h1>
+          </article>
+        </div>
+        <h3 class="Test-it">should not change size within a <code>section</code></h3>
+        <div class="Test-run">
+          <h1>Heading (control)</h1>
+          <section>
+            <h1>Heading (in section)</h1>
+          </section>
+        </div>
+
+        <h2 class="Test-describe"><code>mark</code></h2>
+        <h3 class="Test-it">should have a yellow background</h3>
+        <div class="Test-run">
+          <mark>mark</mark>
+        </div>
+
+        <h2 class="Test-describe"><code>small</code></h2>
+        <h3 class="Test-it">should render equally small in all browsers</h3>
+        <div class="Test-run">
+          control. <small>small.</small>
+        </div>
+
+        <h2 class="Test-describe"><code>sub</code> and <code>sup</code></h2>
+        <h3 class="Test-it">should not affect a line's visual line-height</h3>
+        <div class="Test-run Test-run--highlightEl">
+          <p>control.</p>
+          <p>control. <sub>sub.</sub></p>
+          <p>control. <sup>sup.</sup></p>
+        </div>
+
+        <h2 class="Test-describe"><code>img</code></h2>
+        <h3 class="Test-it">should not have a border when wrapped in an anchor</h3>
+        <div class="Test-run">
+          <a href="#non">
+            <!-- scaled-up 1px image -->
+            <img style="background-color:#ADD8E6" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="100" height="100">
+          </a>
+        </div>
+
+        <h2 class="Test-describe"><code>svg</code></h2>
+        <h3 class="Test-it">should not overflow</h3>
+        <div class="Test-run Test-run--highlightEl">
+          <svg width="100px" height="100px">
+            <circle cx="100" cy="100" r="100" fill="#ADD8E6" />
+          </svg>
+        </div>
+
+        <h2 class="Test-describe"><code>figure</code></h2>
+        <h3 class="Test-it">should have margins</h3>
+        <div class="Test-run" style="outline:1px solid #ADD8E6; overflow:hidden;">
+          <figure>
+            <img style="background-color:#ADD8E6" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="400" height="200">
+          </figure>
+        </div>
+
+        <h2 class="Test-describe"><code>hr</code></h2>
+        <h3 class="Test-it">should have a <code>content-box</code> box model</h3>
+        <div class="Test-run" style="">
+          <hr style="height:2px; border:solid #ADD8E6; border-width:2px 0;">
+        </div>
+
+        <h2 class="Test-describe"><code>pre</code></h2>
+        <h3 class="Test-it">should trigger a scrollbar when too wide for its container</h3>
+        <div class="Test-run" style="max-width:300px; outline:1px solid #ADD8E6;">
+          <pre>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et me.</pre>
+        </div>
+
+        <h2 class="Test-describe"><code>code</code>, <code>kbd</code>, <code>pre</code>, <code>samp</code></h2>
+        <h3 class="Test-it">should render <code>em</code>-unit preformatted text at the same absolute size as normal text</h3>
+        <div class="Test-run">
+          <span>span: abcdefghijklmnopqrstuvwxyz.</span><br>
+          <code>code: abcdefghijklmnopqrstuvwxyz.</code><br>
+          <kbd>kbd: abcdefghijklmnopqrstuvwxyz.</kbd><br>
+          <samp>samp: abcdefghijklmnopqrstuvwxyz.</samp>
+          <pre>pre: abcdefghijklmnopqrstuvwxyz.</pre>
+        </div>
+
+        <h2 class="Test-describe"><code>button</code>, <code>input</code>, <code>optgroup</code>, <code>select</code>, <code>textarea</code></h2>
+        <h3 class="Test-it">should inherit <code>color</code> from ancestor</h3>
+        <div class="Test-run" style="color:#ADD8E6;">
+          <button>button</button><br>
+          <input value="input"><br>
+          <select style="border:1px solid #999;">
+            <optgroup label="optgroup">
+              <option>option</option>
+            </optgroup>
+            <option>option</option>
+          </select><br>
+          <textarea>textarea</textarea>
+        </div>
+        <h3 class="Test-it">should inherit <code>font</code> from ancestor</h3>
+        <div class="Test-run" style="font:bold italic 20px/1 serif;">
+          <button>button</button><br>
+          <input value="input"><br>
+          <select style="border:1px solid #999;">
+            <optgroup label="optgroup">
+              <option>option</option>
+            </optgroup>
+            <option>option</option>
+          </select><br>
+          <textarea>textarea</textarea>
+        </div>
+        <h3 class="Test-it">should not have margins</h3>
+        <div class="Test-run" id="form-collection-margins">
+          <style>
+            #form-collection-margins {
+              outline: 1px solid #ADD8E6;
+              overflow: hidden;
+            }
+
+            #form-collection-margins button,
+            #form-collection-margins input,
+            #form-collection-margins select,
+            #form-collection-margins textarea {
+              display: block;
+            }
+          </style>
+          <button>button</button>
+          <input value="input">
+          <select style="border:1px solid #999;">
+            <optgroup label="optgroup">
+              <option>option</option>
+            </optgroup>
+            <option>option</option>
+          </select>
+          <textarea>textarea</textarea>
+        </div>
+
+        <h2 class="Test-describe"><code>button</code></h2>
+        <h3 class="Test-it">should have visible overflow</h3>
+        <div class="Test-run" id="button-overflow">
+          <style>
+            #button-overflow button:after {
+              content: "";
+              background: #ADD8E6;
+              display: inline-block;
+              height: 10px;
+              position:relative;
+              right: -20px;
+              width: 10px;
+            }
+          </style>
+          <button>abcdefghijklmnopqrstuvwxyz</button>
+        </div>
+
+        <h2 class="Test-describe"><code>button</code>, <code>select</code></h2>
+        <h3 class="Test-it">should not inherit <code>text-transform</code></h3>
+        <div class="Test-run" style="text-transform:uppercase">
+          <button>button</button>
+          <select><option>option</option></select>
+        </div>
+
+        <h2 class="Test-describe"><code>button</code> and button-style <code>input</code></h2>
+        <h3 class="Test-it">should have <code>pointer</code> cursor style</h3>
+        <div class="Test-run">
+          <p><button>button</button></p>
+          <p><input type="image" src="http://lorempixel.com/90/24" alt="input (image)"></p>
+          <p><input type="button" value="input (button)"></p>
+          <p><input type="reset" value="input (reset)"></p>
+          <p><input type="submit" value="input (submit)"></p>
+        </div>
+        <h3 class="Test-it">should be styleable</h3>
+        <div class="Test-run" id="button-like-style">
+          <style>
+            #button-like-style button,
+            #button-like-style input {
+              background: #ADD8E6;
+              border: 2px solid black;
+              border-radius: 2px;
+              padding: 5px;
+            }
+          </style>
+          <p><button>button</button></p>
+          <p><input type="image" src="http://lorempixel.com/90/24" alt="input (image)"></p>
+          <p><input type="button" value="input (button)"></p>
+          <p><input type="reset" value="input (reset)"></p>
+          <p><input type="submit" value="input (submit)"></p>
+        </div>
+
+        <h2 class="Test-describe">disabled <code>button</code> and <code>input</code></h2>
+        <h3 class="Test-it">should have <code>default</code> cursor style</h3>
+        <div class="Test-run">
+          <p><button disabled>button</button></p>
+          <p><input disabled type="image" src="http://lorempixel.com/90/24" alt="input (image)"></p>
+          <p><input disabled type="button" value="input (button)"></p>
+          <p><input disabled type="reset" value="input (reset)"></p>
+          <p><input disabled type="submit" value="input (submit)"></p>
+        </div>
+
+        <h2 class="Test-describe"><code>button</code>, <code>input</code></h2>
+        <h3 class="Test-it">should not have extra inner padding in Firefox</h3>
+        <div class="Test-run" id="button-input-padding">
+          <style>
+            #button-input-padding button,
+            #button-input-padding input {
+              border: 0;
+              padding: 0;
+              outline: 1px solid #ADD8E6;
+            }
+          </style>
+          <p><button>button</button></p>
+          <p><input value="input (text)"></p>
+          <p><input type="button" value="input (button)"></p>
+          <p><input type="reset" value="input (reset)"></p>
+          <p><input type="submit" value="input (submit)"></p>
+        </div>
+
+        <h2 class="Test-describe"><code>input</code></h2>
+        <h3 class="Test-it">should not inherit <code>line-height</code></h3>
+        <div class="Test-run" style="line-height:50px">
+          <input value="input (text)">
+        </div>
+
+        <h2 class="Test-describe"><code>input[type="checkbox"]</code>, <code>input[type="radio"]</code></h2>
+        <h3 class="Test-it">should have a <code>border-box</code> box model</h3>
+        <div class="Test-run Test-run--highlightEl" id="radio-box-model">
+          <style>
+            #radio-box-model {
+              width: 200px;
+              border: 1px solid red;
+            }
+
+            #radio-box-model input {
+              width: 100%;
+              border: 5px solid #ADD8E6;
+              display: block;
+              position: relative;
+            }
+          </style>
+          <input type="checkbox">
+          <input type="radio" name="rad">
+        </div>
+        <h3 class="Test-it">should not have padding</h3>
+        <div class="Test-run Test-run--highlightEl">
+          <input type="checkbox">
+          <input type="radio" name="rad">
+        </div>
+
+        <h2 class="Test-describe"><code>input[type="number"]</code></h2>
+        <h3 class="Test-it">should display a default cursor for the decrement button's click target in Chrome</h3>
+        <div class="Test-run">
+          <input style="height:50px; font-size:15px;" type="number" id="in" min="0" max="10" value="5">
+        </div>
+
+        <h2 class="Test-describe"><code>input[type="search"]</code></h2>
+        <h3 class="Test-it">should be styleable</h3>
+        <div class="Test-run">
+          <input type="search" style="border:1px solid #ADD8E6; padding:10px; width:200px;">
+        </div>
+        <h3 class="Test-it">should have a <code>content-box</code> box model</h3>
+        <div class="Test-run">
+          <div style="background:red; display:inline-block; height:62px; width:242px;">
+            <input type="search" style="border:1px solid #ADD8E6; height:20px; padding:20px; width:200px;">
+          </div>
+        </div>
+        <h3 class="Test-it">should not have a cancel button in Safari or Chrome</h3>
+        <div class="Test-run">
+          <input type="search" value="search">
+        </div>
+
+        <h2 class="Test-describe"><code>fieldset</code></h2>
+        <h3 class="Test-it">should have consistent border, padding, and margin</h3>
+        <div class="Test-run">
+          <fieldset>
+            <div style="width:100%; height:100px; background:#ADD8E6;"></div>
+          </fieldset>
+        </div>
+
+        <h2 class="Test-describe"><code>legend</code></h2>
+        <h3 class="Test-it">should inherit color</h3>
+        <div class="Test-run" style="color:#ADD8E6;">
+          <fieldset>
+            <legend>legend</legend>
+          </fieldset>
+        </div>
+        <h3 class="Test-it">should not have padding</h3>
+        <div class="Test-run">
+          <fieldset>
+            <legend>legend</legend>
+          </fieldset>
+        </div>
+
+        <h2 class="Test-describe"><code>textarea</code></h2>
+        <h3 class="Test-it">should not have a scrollbar unless overflowing</h3>
+        <div class="Test-run">
+          <textarea>textarea</textarea>
+        </div>
+
+        <h2 class="Test-describe"><code>table</code></h2>
+        <h3 class="Test-it">should not have spaces between cells</h3>
+        <div class="Test-run">
+          <table>
+            <caption>Jimi Hendrix - albums</caption>
+            <thead>
+              <tr>
+                <th>Album</th>
+                <th>Year</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tfoot>
+              <tr>
+                <th>Album</th>
+                <th>Year</th>
+                <th>Price</th>
+              </tr>
+            </tfoot>
+            <tbody>
+              <tr>
+                <td>Are You Experienced</td>
+                <td>1967</td>
+                <td>$10.00</td>
+              </tr>
+              <tr>
+                <td>Axis: Bold as Love</td>
+                <td>1967</td>
+                <td>$12.00</td>
+              </tr>
+              <tr>
+                <td>Electric Ladyland</td>
+                <td>1968</td>
+                <td>$10.00</td>
+              </tr>
+              <tr>
+                <td>Band of Gypsies</td>
+                <td>1970</td>
+                <td>$12.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+  </div>
+</div>
+
+<style>
+/*! suit-test v0.1.0 | MIT License | github.com/suitcss */
+.Test {
+  background: #fff;
+  counter-reset: test-describe;
+}
+.Test-describe:before {
+  content: counter(test-describe);
+  counter-increment: test-describe;
+}
+.Test-describe {
+  counter-reset: test-it;
+}
+.Test-it:before {
+  content: counter(test-describe) "." counter(test-it);
+  counter-increment: test-it;
+}
+.Test-title {
+  font-size: 2em;
+  font-family: sans-serif;
+  padding: 20px;
+  margin: 20px 0;
+  background: #eee;
+  color: #999;
+}
+.Test-describe,
+.Test-it {
+  background: #eee;
+  border-left: 5px solid #666;
+  color: #666;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin: 20px 0;
+  padding: 0.75em 20px;
+}
+.Test-describe {
+  font-size: 1.5em;
+  margin: 60px 0 20px;
+}
+.Test-describe:before,
+.Test-it:before {
+  color: #999;
+  display: inline-block;
+  margin-right: 10px;
+  min-width: 30px;
+  text-transform: uppercase;
+}
+/* Custom helpers */
+
+/**
+ * Test whether the body's margin has been removed
+ */
+
+body {
+  background: red;
+}
+/**
+ * Highlight the bounds of direct children of a test block
+ */
+
+.Test-run--highlightEl > * {
+  outline: 1px solid #ADD8E6;
+}
+</style>
+        <div class="ui  vertical footer segment">
+  <div class="ui center aligned container">
+    <div class="ui stackable grid">
+      <div class="three wide column">
+        <h4 class="ui header">Community</h4>
+        <div class="ui link list">
+          <a class="item" href="https://www.transifex.com/organization/semantic-org/" target="_blank">Help Translate</a>
+          <a class="item" href="https://github.com/Semantic-Org/Semantic-UI/issues" target="_blank">Submit an Issue</a>
+          <a class="item" href="https://gitter.im/Semantic-Org/Semantic-UI" target="_blank">Join our Chat</a>
+          <a class="item" href="/cla.html" target="_blank">CLA</a>
+        </div>
+      </div>
+      <div class="three wide column">
+        <h4 class="ui header">Network</h4>
+        <div class="ui link list">
+          <a class="item" href="https://github.com/Semantic-Org/Semantic-UI" target="_blank">GitHub Repo</a>
+          <a class="item" href="http://forums.semantic-ui.com" target="_blank">User Forums</a>
+          <a class="item" href="http://1.semantic-ui.com">1.x Docs</a>
+          <a class="item" href="http://legacy.semantic-ui.com">0.x Docs</a>
+        </div>
+      </div>
+      <div class="seven wide right floated column">
+        <h4 class="ui header">Help Preserve This Project</h4>
+        <p> Support for the continued development of Semantic UI comes directly from the community.</p>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="7ZAF2Q8DBZAQL">
+          <button type="submit" class="ui large teal button">Donate Today</button>
+        </form>
+      </div>
+    </div>
+    <div class="ui section divider"></div>
+    <img src="/images/logo.png" class="ui centered mini image">
+    <div class="ui horizontal small divided link list">
+      <a class="item" href="http://semantic-ui.mit-license.org/" target="_blank">Free & Open Source (MIT)</a>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+  <div class="ui basic language modal">
+  <i class="close icon"></i>
+  <div class="header">The <span class="name"></span> Translation Needs Your Help</div>
+  <div class="image content">
+    <div class="middle aligned image">
+      <i class="world icon"></i>
+    </div>
+    <div class="description">
+      <p>This translation is only <b><span class="complete"></span>%</b> complete!</p>
+      <div class="ui inverted indicating progress">
+        <div class="bar"></div>
+      </div>
+      <p>We need your help to make Semantic available to  people who speak your language.</p>
+      <p>Our translation tools are easy to use and allow you to translate text without having to leave the site.
+      </p>
+    </div>
+  </div>
+  <div class="actions">
+    <div class="ui inverted cancel button">No Thanks</div>
+    <a href="https://github.com/Semantic-Org/Semantic-UI/wiki/Translating-Semantic-UI-Docs" target="_blank" class="ui inverted approve teal button">
+      <i class="mail icon"></i>
+      Help Translate
+    </a>
+  </div>
+</div>
+
+<div class="ui basic chinese modal">
+  <i class="close icon"></i>
+  <div class="header">Would you like to visit the mirror site?</div>
+  <div class="image content">
+    <div class="middle aligned image">
+      <i class="question icon"></i>
+    </div>
+    <div class="description">
+      <p>Semantic is available at <a href="http://www.semantic-ui.cn">semantic-ui.cn</a> a mirror site hosted inside China. This should make browsing much faster for those visiting from mainland China.
+      </p>
+    </div>
+  </div>
+  <div class="actions">
+    <div class="ui inverted red cancel button">No Thanks</div>
+    <a href="http://www.semantic-ui.cn" class="ui inverted green approve button">
+      <i class="mail icon"></i>
+      Yes, take me to the mirror
+    </a>
+  </div>
+</div>
+  <div class="ui demo page dimmer">
+  <div class="content">
+    <div class="center">
+      <h2 class="ui inverted icon header">
+        <i class="mail icon"></i>
+        Dimmer Message
+        <div class="sub header">Dimmer sub-header</div>
+      </h2>
+    </div>
+  </div>
+</div>
+  <script>
+window.less = {
+  async        : true,
+  environment  : 'production',
+  fileAsync    : false,
+  onReady      : false,
+  useFileCache : true
+};
+</script>
+
+<script src="/javascript/library/less.min.js"></script>
+
+
+</body>
+</html>

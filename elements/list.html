@@ -1,0 +1,2186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Standard Meta -->
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+<link rel="image_src" type="image/jpeg" href="/images/logo.png" />
+
+<!-- Site Properities -->
+<meta name="generator" content="DocPad v6.79.4" />
+<title>List | Semantic UI</title>
+
+<meta name="description" content="A list is used to group related content" />
+<meta name="keywords" content="html5, ui, library, framework, javascript" />
+  
+  <script src="/javascript/library/detect.min.js"></script>
+  <script src="/javascript/library/jquery.min.js"></script>
+  <script src="/javascript/library/clipboard.min.js"></script>
+  <script src="/javascript/library/cookie.min.js"></script>
+  <script src="/javascript/library/easing.min.js"></script>
+  <script src="/javascript/library/highlight.min.js"></script>
+  <script src="/javascript/library/history.min.js"></script>
+  <script src="/javascript/library/state.js"></script>
+  <script src="/javascript/library/tablesort.min.js"></script>
+  <script src="/javascript/library/underscore.min.js"></script>
+
+
+
+
+
+<script src="/dist/semantic.min.js"></script>
+
+
+
+<script src="/javascript/docs.js"></script>
+
+  
+<link rel="stylesheet" type="text/css" class="ui" href="/dist/semantic.min.css">
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/stylesheets/docs.css">
+<link rel="stylesheet" type="text/css" href="/stylesheets/rtl.css">
+
+
+
+
+
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-44039803-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  
+  <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
+
+
+  
+<script type="text/javascript">
+  window.liveSettings = {
+    api_key    : '9ede3015b9f84c1aabc81ab839c55d74',
+    parse_attr : [
+      'data-title',
+      'data-content'
+    ],
+    detectlang   : false,
+    autocollect  : true,
+    ignore_tags  : ['i', 'code', 'pre'],
+    parse_attr   : ['data-title', 'data-content', 'data-text'],
+    ignore_class : ['code', 'anchor']
+  };
+</script>
+<script type="text/javascript" src="//cdn.transifex.com/live.js"></script>
+
+
+</head>
+<body id="example" class="list" ontouchstart="">
+  
+  <div class="ui vertical inverted sidebar menu" id="toc">
+  
+
+
+
+
+
+
+
+
+<div class="item">
+  <a class="ui logo icon image" href="/">
+    <img src="/images/logo.png">
+  </a>
+  <a href="/"><b>UI Docs</b></a>
+</div>
+<a class="item" href="/introduction/getting-started.html">
+  <b>Getting Started</b>
+</a>
+<a class="item" href="/introduction/new.html">
+  <b>New in 2.4</b>
+</a>
+<div class="item">
+  <div class="header">Introduction</div>
+  <div class="menu">
+    
+      <a class="item" href="/introduction/integrations.html">
+        Integrations
+      </a>
+    
+      <a class="item" href="/introduction/build-tools.html">
+        Build Tools
+      </a>
+    
+      <a class="item" href="/introduction/advanced-usage.html">
+        Recipes
+      </a>
+    
+      <a class="item" href="/introduction/glossary.html">
+        Glossary
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class="header">Usage</div>
+  <div class="menu">
+    
+      <a class="item" href="/usage/theming.html">
+        Theming
+      </a>
+    
+      <a class="item" href="/usage/layout.html">
+        Layouts
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Globals</div>
+  <div class="menu">
+    
+      <a class="item" href="/globals/reset.html">
+        Reset
+        
+      </a>
+    
+      <a class="item" href="/globals/site.html">
+        Site
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class="active  header">Elements</div>
+  <div class="menu">
+    
+      <a class="item" href="/elements/button.html">
+        Button
+        
+      </a>
+    
+      <a class="item" href="/elements/container.html">
+        Container
+        
+      </a>
+    
+      <a class="item" href="/elements/divider.html">
+        Divider
+        
+      </a>
+    
+      <a class="item" href="/elements/flag.html">
+        Flag
+        
+      </a>
+    
+      <a class="item" href="/elements/header.html">
+        Header
+        
+      </a>
+    
+      <a class="item" href="/elements/icon.html">
+        Icon
+        
+      </a>
+    
+      <a class="item" href="/elements/image.html">
+        Image
+        
+      </a>
+    
+      <a class="item" href="/elements/input.html">
+        Input
+        
+      </a>
+    
+      <a class="item" href="/elements/label.html">
+        Label
+        
+      </a>
+    
+      <a class="active item" href="/elements/list.html">
+        List
+        
+      </a>
+    
+      <a class="item" href="/elements/loader.html">
+        Loader
+        
+      </a>
+    
+      <a class="item" href="/elements/placeholder.html">
+        Placeholder
+        
+      </a>
+    
+      <a class="item" href="/elements/rail.html">
+        Rail
+        
+      </a>
+    
+      <a class="item" href="/elements/reveal.html">
+        Reveal
+        
+      </a>
+    
+      <a class="item" href="/elements/segment.html">
+        Segment
+        
+      </a>
+    
+      <a class="item" href="/elements/step.html">
+        Step
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Collections</div>
+  <div class="menu">
+    
+      <a class="item" href="/collections/breadcrumb.html">
+        Breadcrumb
+        
+      </a>
+    
+      <a class="item" href="/collections/form.html">
+        Form
+        
+      </a>
+    
+      <a class="item" href="/collections/grid.html">
+        Grid
+        
+      </a>
+    
+      <a class="item" href="/collections/menu.html">
+        Menu
+        
+      </a>
+    
+      <a class="item" href="/collections/message.html">
+        Message
+        
+      </a>
+    
+      <a class="item" href="/collections/table.html">
+        Table
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Views</div>
+  <div class="menu">
+    
+      <a class="item" href="/views/advertisement.html">
+        Advertisement
+        
+      </a>
+    
+      <a class="item" href="/views/card.html">
+        Card
+        
+      </a>
+    
+      <a class="item" href="/views/comment.html">
+        Comment
+        
+      </a>
+    
+      <a class="item" href="/views/feed.html">
+        Feed
+        
+      </a>
+    
+      <a class="item" href="/views/item.html">
+        Item
+        
+      </a>
+    
+      <a class="item" href="/views/statistic.html">
+        Statistic
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Modules</div>
+  <div class="menu">
+    
+      <a class="item" href="/modules/accordion.html">
+        Accordion
+        
+      </a>
+  
+      <a class="item" href="/modules/checkbox.html">
+        Checkbox
+        
+      </a>
+  
+      <a class="item" href="/modules/dimmer.html">
+        Dimmer
+        
+      </a>
+  
+      <a class="item" href="/modules/dropdown.html">
+        Dropdown
+        
+      </a>
+  
+      <a class="item" href="/modules/embed.html">
+        Embed
+        
+      </a>
+  
+      <a class="item" href="/modules/modal.html">
+        Modal
+        
+      </a>
+  
+      <a class="item" href="/modules/popup.html">
+        Popup
+        
+      </a>
+  
+      <a class="item" href="/modules/progress.html">
+        Progress
+        
+      </a>
+  
+      <a class="item" href="/modules/rating.html">
+        Rating
+        
+      </a>
+  
+      <a class="item" href="/modules/search.html">
+        Search
+        
+      </a>
+  
+      <a class="item" href="/modules/shape.html">
+        Shape
+        
+      </a>
+  
+      <a class="item" href="/modules/sidebar.html">
+        Sidebar
+        
+      </a>
+  
+      <a class="item" href="/modules/sticky.html">
+        Sticky
+        
+      </a>
+  
+      <a class="item" href="/modules/tab.html">
+        Tab
+        
+      </a>
+  
+      <a class="item" href="/modules/transition.html">
+        Transition
+        
+      </a>
+  
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Behaviors</div>
+  <div class="menu">
+    
+      <a class="item" href="/behaviors/api.html">
+        API
+        
+      </a>
+    
+      <a class="item" href="/behaviors/form.html">
+        Form Validation
+        
+      </a>
+    
+      <a class="item" href="/behaviors/visibility.html">
+        Visibility
+        
+      </a>
+    
+  </div>
+</div>
+
+</div>
+
+<div class="ui black big launch right attached fixed button">
+  <i class="content icon"></i>
+  <span class="text">Menu</span>
+</div>
+  
+
+
+
+
+<div class="ui fixed inverted main menu">
+  <div class="ui container">
+    <a class="launch icon item">
+      <i class="content icon"></i>
+    </a>
+    
+      <div class="item">
+        List
+      </div>
+    
+    <div class="right menu">
+      
+      <div class="vertically fitted borderless item">
+        <iframe class="github" src="//ghbtns.com/github-btn.html?user=semantic-org&amp;repo=semantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
+      </div>
+      
+      <!--
+      <div class="item">
+        <div class="ui hidden right aligned search input" id="search">
+          <div class="ui transparent icon input">
+            <input class="prompt" type="text" placeholder="Search...">
+            <i class="inverted search link icon" data-content="Search UI"></i>
+          </div>
+          <div class="results"></div>
+        </div>
+      </div>
+      -->
+    </div>
+  </div>
+</div>
+
+  <div class="pusher">
+    <div class="full height">
+      <div class="toc">
+        <div class="ui vertical inverted menu">
+          
+
+
+
+
+
+
+
+
+<div class="item">
+  <a class="ui logo icon image" href="/">
+    <img src="/images/logo.png">
+  </a>
+  <a href="/"><b>UI Docs</b></a>
+</div>
+<a class="item" href="/introduction/getting-started.html">
+  <b>Getting Started</b>
+</a>
+<a class="item" href="/introduction/new.html">
+  <b>New in 2.4</b>
+</a>
+<div class="item">
+  <div class="header">Introduction</div>
+  <div class="menu">
+    
+      <a class="item" href="/introduction/integrations.html">
+        Integrations
+      </a>
+    
+      <a class="item" href="/introduction/build-tools.html">
+        Build Tools
+      </a>
+    
+      <a class="item" href="/introduction/advanced-usage.html">
+        Recipes
+      </a>
+    
+      <a class="item" href="/introduction/glossary.html">
+        Glossary
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class="header">Usage</div>
+  <div class="menu">
+    
+      <a class="item" href="/usage/theming.html">
+        Theming
+      </a>
+    
+      <a class="item" href="/usage/layout.html">
+        Layouts
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Globals</div>
+  <div class="menu">
+    
+      <a class="item" href="/globals/reset.html">
+        Reset
+        
+      </a>
+    
+      <a class="item" href="/globals/site.html">
+        Site
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class="active  header">Elements</div>
+  <div class="menu">
+    
+      <a class="item" href="/elements/button.html">
+        Button
+        
+      </a>
+    
+      <a class="item" href="/elements/container.html">
+        Container
+        
+      </a>
+    
+      <a class="item" href="/elements/divider.html">
+        Divider
+        
+      </a>
+    
+      <a class="item" href="/elements/flag.html">
+        Flag
+        
+      </a>
+    
+      <a class="item" href="/elements/header.html">
+        Header
+        
+      </a>
+    
+      <a class="item" href="/elements/icon.html">
+        Icon
+        
+      </a>
+    
+      <a class="item" href="/elements/image.html">
+        Image
+        
+      </a>
+    
+      <a class="item" href="/elements/input.html">
+        Input
+        
+      </a>
+    
+      <a class="item" href="/elements/label.html">
+        Label
+        
+      </a>
+    
+      <a class="active item" href="/elements/list.html">
+        List
+        
+      </a>
+    
+      <a class="item" href="/elements/loader.html">
+        Loader
+        
+      </a>
+    
+      <a class="item" href="/elements/placeholder.html">
+        Placeholder
+        
+      </a>
+    
+      <a class="item" href="/elements/rail.html">
+        Rail
+        
+      </a>
+    
+      <a class="item" href="/elements/reveal.html">
+        Reveal
+        
+      </a>
+    
+      <a class="item" href="/elements/segment.html">
+        Segment
+        
+      </a>
+    
+      <a class="item" href="/elements/step.html">
+        Step
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Collections</div>
+  <div class="menu">
+    
+      <a class="item" href="/collections/breadcrumb.html">
+        Breadcrumb
+        
+      </a>
+    
+      <a class="item" href="/collections/form.html">
+        Form
+        
+      </a>
+    
+      <a class="item" href="/collections/grid.html">
+        Grid
+        
+      </a>
+    
+      <a class="item" href="/collections/menu.html">
+        Menu
+        
+      </a>
+    
+      <a class="item" href="/collections/message.html">
+        Message
+        
+      </a>
+    
+      <a class="item" href="/collections/table.html">
+        Table
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Views</div>
+  <div class="menu">
+    
+      <a class="item" href="/views/advertisement.html">
+        Advertisement
+        
+      </a>
+    
+      <a class="item" href="/views/card.html">
+        Card
+        
+      </a>
+    
+      <a class="item" href="/views/comment.html">
+        Comment
+        
+      </a>
+    
+      <a class="item" href="/views/feed.html">
+        Feed
+        
+      </a>
+    
+      <a class="item" href="/views/item.html">
+        Item
+        
+      </a>
+    
+      <a class="item" href="/views/statistic.html">
+        Statistic
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Modules</div>
+  <div class="menu">
+    
+      <a class="item" href="/modules/accordion.html">
+        Accordion
+        
+      </a>
+  
+      <a class="item" href="/modules/checkbox.html">
+        Checkbox
+        
+      </a>
+  
+      <a class="item" href="/modules/dimmer.html">
+        Dimmer
+        
+      </a>
+  
+      <a class="item" href="/modules/dropdown.html">
+        Dropdown
+        
+      </a>
+  
+      <a class="item" href="/modules/embed.html">
+        Embed
+        
+      </a>
+  
+      <a class="item" href="/modules/modal.html">
+        Modal
+        
+      </a>
+  
+      <a class="item" href="/modules/popup.html">
+        Popup
+        
+      </a>
+  
+      <a class="item" href="/modules/progress.html">
+        Progress
+        
+      </a>
+  
+      <a class="item" href="/modules/rating.html">
+        Rating
+        
+      </a>
+  
+      <a class="item" href="/modules/search.html">
+        Search
+        
+      </a>
+  
+      <a class="item" href="/modules/shape.html">
+        Shape
+        
+      </a>
+  
+      <a class="item" href="/modules/sidebar.html">
+        Sidebar
+        
+      </a>
+  
+      <a class="item" href="/modules/sticky.html">
+        Sticky
+        
+      </a>
+  
+      <a class="item" href="/modules/tab.html">
+        Tab
+        
+      </a>
+  
+      <a class="item" href="/modules/transition.html">
+        Transition
+        
+      </a>
+  
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Behaviors</div>
+  <div class="menu">
+    
+      <a class="item" href="/behaviors/api.html">
+        API
+        
+      </a>
+    
+      <a class="item" href="/behaviors/form.html">
+        Form Validation
+        
+      </a>
+    
+      <a class="item" href="/behaviors/visibility.html">
+        Visibility
+        
+      </a>
+    
+  </div>
+</div>
+
+        </div>
+      </div>
+      <div class="article">
+        <link rel="stylesheet/less" type="text/css" href="/src/definitions/elements/list.less" />
+
+
+
+<div class="ui masthead vertical segment">
+  <div class="ui container">
+    <div class="introduction">
+
+      <h1 class="ui header">
+        List
+        
+        <div class="sub header">
+          
+          <a class="twitter-share-button twitter"
+            href="http://twitter.com/share"
+            data-text="Semantic UI is a next generation UI framework"
+            data-url="http://semantic-ui.com"
+            data-via="semanticui">
+          </a>
+          <script type="text/javascript">
+          window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
+          </script>
+          <iframe class="github" src="//ghbtns.com/github-btn.html?user=semantic-org&amp;repo=semantic-ui&amp;type=star&amp;count=true&amp;" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
+          
+          A list is used to group related content
+        </div>
+      </h1>
+
+      <div class="ui hidden divider"></div>
+
+      <div class="ui right floated main menu">
+        <a class="bug popup icon item" data-content="Edit This Page" href="https://github.com/Semantic-Org/Semantic-UI-Docs/edit/master/server/documents/elements/list.html.eco">
+          <i class="edit icon"></i>
+        </a>
+        
+        <a class="bug popup icon item" data-content="Submit Bug Report" href="https://github.com/Semantic-Org/Semantic-UI/issues/new?title=[List] - Your Bug Name&body=**Steps to Reproduce**%0A1. Do something%0A2. Do something else.%0A3. Do one last thing.%0A%0A**Expected**%0AThe List should do this%0A%0A**Result**%0AThe List does not do this%0A%0A**Testcase**%0A(fork this to get started)%0Ahttp://jsfiddle.net/rduvhn8u/1/">
+          <i class="bug icon"></i>
+        </a>
+        
+        <a class="github popup icon item" data-content="View project on GitHub" href="https://github.com/Semantic-Org/Semantic-UI">
+          <i class="alternate github icon"></i>
+        </a>
+      </div>
+      <div class="ui right floated main menu">
+        <a class="music popup icon item" data-content="Play Music">
+          <i class="music icon"></i>
+        </a>
+        <div class="ui language dropdown right floating icon item" id="languages" data-content="Select Language">
+          <i class="world icon"></i>
+          <div class="menu">
+            <div class="header">Select Language</div>
+            <div class="ui icon search input">
+              <i class="search icon"></i>
+              <input type="text" placeholder="Search languages...">
+            </div>
+            <div class="scrolling menu">
+  <div class="item" data-percent="100" data-value="en" data-english="English">
+    <span class="description">English</span>
+    English
+  </div>
+  <div class="item" data-percent="94" data-value="da" data-english="Danish">
+    <span class="description">dansk</span>
+    Danish
+  </div>
+  <div class="item" data-percent="94" data-value="es" data-english="Spanish">
+    <span class="description">Español</span>
+    Spanish
+  </div>
+  <div class="item" data-percent="34" data-value="zh" data-english="Chinese">
+    <span class="description">简体中文</span>
+    Chinese
+  </div>
+  <div class="item" data-percent="54" data-value="zh_TW" data-english="Chinese (Taiwan)">
+    <span class="description">中文 (臺灣)</span>
+    Chinese (Taiwan)
+  </div>
+  <div class="item" data-percent="79" data-value="fa" data-english="Persian">
+    <span class="description">پارسی</span>
+    Persian
+  </div>
+  <div class="item" data-percent="41" data-value="fr" data-english="French">
+    <span class="description">Français</span>
+    French
+  </div>
+  <div class="item" data-percent="37" data-value="el" data-english="Greek">
+    <span class="description">ελληνικά</span>
+    Greek
+  </div>
+  <div class="item" data-percent="37" data-value="ru" data-english="Russian">
+    <span class="description">Русский</span>
+    Russian
+  </div>
+  <div class="item" data-percent="36" data-value="de" data-english="German">
+    <span class="description">Deutsch</span>
+    German
+  </div>
+  <div class="item" data-percent="23" data-value="it" data-english="Italian">
+    <span class="description">Italiano</span>
+    Italian
+  </div>
+  <div class="item" data-percent="21" data-value="nl" data-english="Dutch">
+    <span class="description">Nederlands</span>
+    Dutch
+  </div>
+  <div class="item" data-percent="19" data-value="pt_BR" data-english="Portuguese">
+    <span class="description">Português(BR)</span>
+    Portuguese
+  </div>
+  <div class="item" data-percent="17" data-value="id" data-english="Indonesian">
+    <span class="description">Indonesian</span>
+    Indonesian
+  </div>
+  <div class="item" data-percent="12" data-value="lt" data-english="Lithuanian">
+    <span class="description">Lietuvių</span>
+    Lithuanian
+  </div>
+  <div class="item" data-percent="11" data-value="tr" data-english="Turkish">
+    <span class="description">Türkçe</span>
+    Turkish
+  </div>
+  <div class="item" data-percent="10" data-value="ko" data-english="Korean">
+    <span class="description">한국어</span>
+    Korean
+  </div>
+  <div class="item" data-percent="7"  data-value="ar" data-english="Arabic">
+    <span class="description">العربية</span>
+    Arabic
+  </div>
+  <div class="item" data-percent="6"  data-value="hu" data-english="Hungarian">
+    <span class="description">Magyar</span>
+    Hungarian
+  </div>
+  <div class="item" data-percent="6"  data-value="vi" data-english="Vietnamese">
+    <span class="description">tiếng Việt</span>
+    Vietnamese
+  </div>
+  <div class="item" data-percent="5"  data-value="sv" data-english="Swedish">
+    <span class="description">svenska</span>
+    Swedish
+  </div>
+  <div class="item" data-precent="4"  data-value="pl" data-english="Polish">
+    <span class="description">polski</span>
+    Polish
+  </div>
+  <div class="item" data-percent="6"  data-value="ja" data-english="Japanese">
+    <span class="description">日本語</span>
+    Japanese
+  </div>
+  <div class="item" data-percent="0"  data-value="ro" data-english="Romanian">
+    <span class="description">românește</span>
+    Romanian
+  </div>
+</div>
+
+          </div>
+        </div>
+      </div>
+
+      
+      
+      
+      <div class="ui download primary button">
+        Download
+      </div>
+      <div class="ui flowing download basic popup">
+        <div class="ui divided equal width relaxed center aligned choice grid">
+          <div class="framework column">
+            <h4 class="ui center aligned header">UI Framework</h4>
+            <div class="ui list">
+              <div class="item"><i class="green check icon"></i> Themable</div>
+              <div class="item"><i class="green check icon"></i> Build Tools</div>
+            </div>
+            <div class="ui primary fluid button">Choose</div>
+          </div>
+          <div class="standalone column">
+            <h4 class="ui center aligned header">Standalone</h4>
+            <div class="ui list">
+              <div class="item">Default Theme</div>
+              <div class="item">Precompiled</div>
+            </div>
+            <div class="ui fluid button basic">Choose</div>
+          </div>
+        </div>
+        <div class="ui divided equal height relaxed center aligned framework grid">
+          <div class="column">
+            <div class="ui header">Semantic UI</div>
+            <a class="ui primary button" href="https://github.com/Semantic-Org/Semantic-UI/archive/master.zip">
+              Download ZIP
+            </a>
+            <a class="ui button" href="/introduction/getting-started.html">Getting Started</a>
+            <h4 class="ui header">Package Managers</h4>
+            <div class="ui form">
+              <div class="field">
+                <label>NPM</label>
+                <div class="ui fluid input">
+                  <input type="text" readonly="readonly" placeholder="Copy Link" value="npm install semantic-ui">
+                </div>
+              </div>
+              <div class="field">
+                <label>Git</label>
+                <div class="ui fluid input">
+                  <input type="text" readonly="readonly" placeholder="Copy Link" value="https://github.com/Semantic-Org/Semantic-UI.git">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ui divided equal height relaxed center aligned standalone grid">
+          <div class="column">
+            <div class="ui header">Standalone List</div>
+            <a class="ui primary button" href="https://github.com/Semantic-Org/UI-List/archive/master.zip">
+              Download ZIP
+            </a>
+            <a class="ui button" href="https://github.com/Semantic-Org/UI-List/">
+              View GitHub
+            </a>
+            <h4 class="ui header">Package Managers</h4>
+            <div class="ui form">
+              <div class="field">
+                <label>Bower</label>
+                <div class="ui fluid input">
+                  <input type="text" readonly="readonly" placeholder="Copy Link" value="bower install semantic-ui-list">
+                </div>
+              </div>
+              <div class="field">
+                <label>NPM</label>
+                <div class="ui fluid input">
+                  <input type="text" readonly="readonly" placeholder="Copy Link" value="npm install semantic-ui-list">
+                </div>
+              </div>
+              <div class="field">
+                <label>Git</label>
+                <div class="ui fluid input">
+                  <input type="text" readonly="readonly" placeholder="Copy Link" value="https://github.com/Semantic-Org/UI-List.git">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <div class="advertisement">
+      
+      <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=semanticuicom" id="_carbonads_js"></script>
+      
+    </div>
+    
+  </div>
+</div>
+
+  <div id="semantic-sponsor"></div>
+  <script>
+  _bsa.init('custom', 'CVAIKK7I', 'placement:semanticuicom',
+      {
+        target: '#semantic-sponsor',
+        template: `
+  <div class="native-inline">
+    <a href="##link##" class="native-link">
+      <img src="##image##" style="background-color: ##backgroundColor##" class="native-img">
+      <div class="native-text">##company## — ##description##</div>
+    </a>
+    <a href="##adViaLink##" class="native-ad">AD</a>
+  </div>
+  `
+      }
+    );
+  </script>
+  <div class="ui vertical beg transition hidden segment">
+    <i class="large red delete link icon"></i>
+    <div class="ui red header">
+      <i class="disabled warning sign icon"></i>
+      <div class="content">
+        Want to Support Open Source? Whitelist Your Ad-Blocker.
+        <div class="sub header">
+          We promise to not show more than one small ad per page. Dont worry, hiding this message will make sure you won't get nagged again.
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<div class="main ui container">
+
+  <h2 class="ui dividing header">Types</h2>
+  <div class="example">
+    <h4 class="ui header">List</h4>
+    <p>A list groups related content</p>
+    <div class="ui list">
+      <div class="item">Apples</div>
+      <div class="item">Pears</div>
+      <div class="item">Oranges</div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui list">
+      <div class="item">
+        <i class="users icon"></i>
+        <div class="content">
+          Semantic UI
+        </div>
+      </div>
+      <div class="item">
+        <i class="marker icon"></i>
+        <div class="content">
+          New York, NY
+        </div>
+      </div>
+      <div class="item">
+        <i class="mail icon"></i>
+        <div class="content">
+          <a href="mailto:jack@semantic-ui.com">jack@semantic-ui.com</a>
+        </div>
+      </div>
+      <div class="item">
+        <i class="linkify icon"></i>
+        <div class="content">
+          <a href="http://www.semantic-ui.com">semantic-ui.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui relaxed divided list">
+      <div class="item">
+        <i class="large github middle aligned icon"></i>
+        <div class="content">
+          <a class="header">Semantic-Org/Semantic-UI</a>
+          <div class="description">Updated 10 mins ago</div>
+        </div>
+      </div>
+      <div class="item">
+        <i class="large github middle aligned icon"></i>
+        <div class="content">
+          <a class="header">Semantic-Org/Semantic-UI-Docs</a>
+          <div class="description">Updated 22 mins ago</div>
+        </div>
+      </div>
+      <div class="item">
+        <i class="large github middle aligned icon"></i>
+        <div class="content">
+          <a class="header">Semantic-Org/Semantic-UI-Meteor</a>
+          <div class="description">Updated 34 mins ago</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="another example">
+
+    <div class="ui list">
+      <div class="item">
+        <i class="folder icon"></i>
+        <div class="content">
+          <div class="header">src</div>
+          <div class="description">Source files for project</div>
+          <div class="list">
+            <div class="item">
+              <i class="folder icon"></i>
+              <div class="content">
+                <div class="header">site</div>
+                <div class="description">Your site's theme</div>
+              </div>
+            </div>
+            <div class="item">
+              <i class="folder icon"></i>
+              <div class="content">
+                <div class="header">themes</div>
+                <div class="description">Packaged theme files</div>
+                <div class="list">
+                  <div class="item">
+                    <i class="folder icon"></i>
+                    <div class="content">
+                      <div class="header">default</div>
+                      <div class="description">Default packaged theme</div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <i class="folder icon"></i>
+                    <div class="content">
+                      <div class="header">my_theme</div>
+                      <div class="description">Packaged themes are also available in this folder</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <i class="file icon"></i>
+              <div class="content">
+                <div class="header">theme.config</div>
+                <div class="description">Config file for setting packaged themes</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <i class="folder icon"></i>
+        <div class="content">
+          <div class="header">dist</div>
+          <div class="description">Compiled CSS and JS files</div>
+          <div class="list">
+            <div class="item">
+              <i class="folder icon"></i>
+              <div class="content">
+                <div class="header">components</div>
+                <div class="description">Individual component CSS and JS</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <i class="file icon"></i>
+        <div class="content">
+          <div class="header">semantic.json</div>
+          <div class="description">Contains build settings for gulp</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="example" data-tag="ul">
+    <h4 class="ui header">Bulleted</h4>
+    <p>A list can mark items with a bullet</p>
+    <div class="ui bulleted list">
+      <div class="item">Gaining Access</div>
+      <div class="item">Inviting Friends</div>
+      <div class="item">
+        <div>Benefits</div>
+        <div class="list">
+          <a class="item" href="#">Link to somewhere</a>
+          <div class="item">Rebates</div>
+          <div class="item">Discounts</div>
+        </div>
+      </div>
+      <div class="item">Warranty</div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ignored ui info message">For convenience, a simple bulleted list can also use <code>ul</code> tag.</div>
+    <ul class="ui list">
+      <li>Gaining Access</li>
+      <li>Inviting Friends</li>
+      <li>Benefits
+        <ul>
+          <li>Use Anywhere</li>
+          <li>Rebates</li>
+          <li>Discounts</li>
+        </ul>
+      </li>
+      <li>Warranty</li>
+    </ul>
+  </div>
+  <div class="another example">
+    <div class="ui horizontal bulleted list">
+      <a class="item">
+        About Us
+      </a>
+      <a class="item">
+        Sitemap
+      </a>
+      <a class="item">
+        Contact
+      </a>
+    </div>
+  </div>
+
+  <div class="example" data-tag="ol">
+    <h4 class="ui header">Ordered</h4>
+    <p>A list can be ordered numerically</p>
+    <div class="ui ordered list">
+      <a class="item">Getting Started</a>
+      <a class="item">Introduction</a>
+      <div class="item">
+        <a>Languages</a>
+        <div class="list">
+          <a class="item">HTML</a>
+          <a class="item">Javascript</a>
+          <a class="item">CSS</a>
+        </div>
+      </div>
+      <a class="item">Review</a>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ignored ui info message">An ordered list can also use the <code>ol</code> tag</div>
+    <ol class="ui list">
+      <li>Signing Up</li>
+      <li>User Benefits</li>
+      <li>User Types
+        <ol>
+          <li>Admin</li>
+          <li>Power User</li>
+          <li>Regular User</li>
+        </ol>
+      </li>
+      <li>Deleting Your Account</li>
+    </ol>
+  </div>
+
+  <div class="another example">
+    <div class="ui ignored info message">You can also manually specify a value for an ordered list using <code>data-value</code> on a <code>div</code>, or <code>value</code> on an <code>li</code>
+    </div>
+    <ol class="ui list">
+      <li value="*">Signing Up</li>
+      <li value="*">User Benefits</li>
+      <li value="*">User Types
+        <ol>
+          <li value="-">Admin</li>
+          <li value="-">Power User</li>
+          <li value="-">Regular User</li>
+        </ol>
+      </li>
+      <li value="*">Deleting Your Account</li>
+    </ol>
+  </div>
+
+
+  <div class="example" data-tag="a">
+    <h4 class="ui header">Link</h4>
+    <p>A list can be specially formatted for navigation links</p>
+    <div class="ui link list">
+      <div class="active item">Home</div>
+      <a class="item">About</a>
+      <a class="item">Jobs</a>
+      <a class="item">Team</a>
+    </div>
+  </div>
+
+
+  <h2 class="ui dividing header">Content</h2>
+
+  <div class="example" data-use-content="true">
+    <h4 class="ui header">Item</h4>
+    <p>A list item can contain a set of items</p>
+    <div class="ui list">
+      <div class="item">
+        1
+      </div>
+      <div class="item">
+        2
+      </div>
+      <div class="item">
+        3
+      </div>
+    </div>
+  </div>
+
+  <div class="example" data-use-content="true">
+    <h4 class="ui header">Icon</h4>
+    <p>A list item can contain an icon</p>
+    <div class="ui list">
+      <a class="item">
+        <i class="help icon"></i>
+        <div class="content">
+          <div class="header">Floated Icon</div>
+          <div class="description">This text will always have a left margin to make sure it sits alongside your icon</div>
+        </div>
+      </a>
+      <a class="item">
+        <i class="right triangle icon"></i>
+        <div class="content">
+          <div class="header">Icon Alignment</div>
+          <div class="description">Floated icons are by default top aligned. To have an icon top aligned try this example.</div>
+        </div>
+      </a>
+      <div class="item">
+        <i class="help icon"></i>
+        Inline Text
+      </div>
+    </div>
+  </div>
+
+  <div class="example" data-use-content="true" data-class="image">
+    <h4 class="ui header">Image</h4>
+    <p>A list item can contain an image</p>
+<!--     <div class="ui ignored warning message">
+      Due to issues with <a href="https://github.com/philipwalton/flexbugs#5-column-flex-items-dont-always-preserve-intrinsic-aspect-ratios" target="_blank">intrinsic aspect ratio in flexbox</a> <code>img</code> should use a container element.
+    </div> -->
+    <div class="ui list">
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar2/small/rachel.png">
+        <div class="content">
+          <a class="header">Rachel</a>
+          <div class="description">Last seen watching <a><b>Arrested Development</b></a> just now.</div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar2/small/lindsay.png">
+        <div class="content">
+          <a class="header">Lindsay</a>
+          <div class="description">Last seen watching <a><b>Bob's Burgers</b></a> 10 hours ago.</div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar2/small/matthew.png">
+        <div class="content">
+          <a class="header">Matthew</a>
+          <div class="description">Last seen watching <a><b>The Godfather Part 2</b></a> yesterday.</div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/jenny.jpg">
+        <div class="content">
+          <a class="header">Jenny Hess</a>
+          <div class="description">Last seen watching <a><b>Twin Peaks</b></a> 3 days ago.</div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/veronika.jpg">
+        <div class="content">
+          <a class="header">Veronika Ossi</a>
+          <div class="description">Has not watched anything recently</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="example" data-use-content="true" data-tag="a">
+    <h4 class="ui header">Link</h4>
+    <p>A list can contain links</p>
+    <div class="ui list">
+      <a class="item">What is a FAQ?</a>
+      <a class="item">Who is our user?</a>
+      <a class="item">Where is our office located?</a>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui list">
+      <div class="item">
+        <a class="header">Header</a>
+        <div class="description">
+          Click a link in our <a>description</a>.
+        </div>
+      </div>
+      <div class="item">
+        <a class="header">Learn More</a>
+        <div class="description">
+          Learn more about this site on <a>our FAQ page</a>.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="example" data-use-content="true">
+    <h4 class="ui header">Header</h4>
+    <p>A list item can contain a header</p>
+    <div class="ui list">
+      <div class="item">
+        <div class="header">New York City</div>
+        A lovely city
+      </div>
+      <div class="item">
+        <div class="header">Chicago</div>
+        Also quite a lovely city
+      </div>
+      <div class="item">
+        <div class="header">Los Angeles</div>
+        Sometimes can be a lovely city
+      </div>
+      <div class="item">
+        <div class="header">San Francisco</div>
+        What a lovely city
+      </div>
+    </div>
+  </div>
+
+  <div class="example" data-use-content="true">
+    <h4 class="ui header">Description</h4>
+    <p>A list item can contain a description</p>
+    <div class="ui list">
+      <div class="item">
+        <i class="map marker icon"></i>
+        <div class="content">
+          <a class="header">Krolewskie Jadlo</a>
+          <div class="description">An excellent polish restaurant, quick delivery and hearty, filling meals.</div>
+        </div>
+      </div>
+      <div class="item">
+        <i class="map marker icon"></i>
+        <div class="content">
+          <a class="header">Xian Famous Foods</a>
+          <div class="description">A taste of Shaanxi's delicious culinary traditions, with delights like spicy cold noodles and lamb burgers.</div>
+        </div>
+      </div>
+      <div class="item">
+        <i class="map marker icon"></i>
+        <div class="content">
+          <a class="header">Sapporo Haru</a>
+          <div class="description">Greenpoint's best choice for quick and delicious sushi.</div>
+        </div>
+      </div>
+      <div class="item">
+        <i class="map marker icon"></i>
+        <div class="content">
+          <a class="header">Enid's</a>
+          <div class="description">At night a bar, during the day a delicious brunch spot.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="ui dividing header">Variations</h2>
+
+
+  <div class="example">
+    <h4 class="ui header">Horizontal</h4>
+    <p>A list can be formatted to have items appear horizontally</p>
+    <div class="ui horizontal list">
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/tom.jpg">
+        <div class="content">
+          <div class="header">Tom</div>
+          Top Contributor
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/christian.jpg">
+        <div class="content">
+          <div class="header">Christian Rocha</div>
+          Admin
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/matt.jpg">
+        <div class="content">
+          <div class="header">Matt</div>
+          Top Rated User
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="another example">
+    <div class="ui ordered horizontal list">
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/tom.jpg">
+        <div class="content">
+          <div class="header">Steve Jobes</div>
+          50 Points
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/stevie.jpg">
+        <div class="content">
+          <div class="header">Stevie Feliciano</div>
+          44 Points
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/jenny.jpg">
+        <div class="content">
+          <div class="header">Jenny Hess</div>
+          11 Points
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui horizontal bulleted link list">
+      <a class="item">
+        Terms and Conditions
+      </a>
+      <a class="item">
+        Privacy Policy
+      </a>
+      <a class="item">
+        Contact Us
+      </a>
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Inverted</h4>
+    <p>A list can be inverted to appear on a dark background</p>
+    <div class="ui inverted segment">
+      <div class="ui inverted relaxed divided list">
+        <div class="item">
+          <div class="content">
+            <div class="header">Snickerdoodle</div>
+            An excellent companion
+          </div>
+        </div>
+        <div class="item">
+          <div class="content">
+            <div class="header">Poodle</div>
+            A poodle, its pretty basic
+          </div>
+        </div>
+        <div class="item">
+          <div class="content">
+            <div class="header">Paulo</div>
+            He's also a dog
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Selection</h4>
+    <p>A selection list formats list items as possible choices</p>
+    <div class="ui middle aligned selection list">
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/helen.jpg">
+        <div class="content">
+          <div class="header">Helen</div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/christian.jpg">
+        <div class="content">
+          <div class="header">Christian</div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/daniel.jpg">
+        <div class="content">
+          <div class="header">Daniel</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Animated</h4>
+    <p>A list can animate to set the current item apart from the list</p>
+    <div class="ui ignored info message">
+      Be sure content can fit on one line when using the animated variation, otherwise text content will reflow when hovered.
+    </div>
+    <div class="ui middle aligned animated list">
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/helen.jpg">
+        <div class="content">
+          <div class="header">Helen</div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/christian.jpg">
+        <div class="content">
+          <div class="header">Christian</div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/daniel.jpg">
+        <div class="content">
+          <div class="header">Daniel</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Relaxed</h4>
+    <p>A list can relax its padding to provide more negative space</p>
+
+    <div class="ui relaxed list">
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/daniel.jpg">
+        <div class="content">
+          <a class="header">Daniel Louise</a>
+          <div class="description">Last seen watching <a><b>Arrested Development</b></a> just now.</div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/stevie.jpg">
+        <div class="content">
+          <a class="header">Stevie Feliciano</a>
+          <div class="description">Last seen watching <a><b>Bob's Burgers</b></a> 10 hours ago.</div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/elliot.jpg">
+        <div class="content">
+          <a class="header">Elliot Fu</a>
+          <div class="description">Last seen watching <a><b>The Godfather Part 2</b></a> yesterday.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui relaxed horizontal list">
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/daniel.jpg">
+        <div class="content">
+          <a class="header">Daniel Louise</a>
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/stevie.jpg">
+        <div class="content">
+          <a class="header">Stevie Feliciano</a>
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/elliot.jpg">
+        <div class="content">
+          <a class="header">Elliot Fu</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui very relaxed list">
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/daniel.jpg">
+        <div class="content">
+          <a class="header">Daniel Louise</a>
+          <div class="description">Last seen watching <a><b>Arrested Development</b></a> just now.</div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/stevie.jpg">
+        <div class="content">
+          <a class="header">Stevie Feliciano</a>
+          <div class="description">Last seen watching <a><b>Bob's Burgers</b></a> 10 hours ago.</div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/elliot.jpg">
+        <div class="content">
+          <a class="header">Elliot Fu</a>
+          <div class="description">Last seen watching <a><b>The Godfather Part 2</b></a> yesterday.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui very relaxed horizontal list">
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/daniel.jpg">
+        <div class="content">
+          <a class="header">Daniel Louise</a>
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/stevie.jpg">
+        <div class="content">
+          <a class="header">Stevie Feliciano</a>
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/elliot.jpg">
+        <div class="content">
+          <a class="header">Elliot Fu</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Divided</h4>
+    <p>A list can show divisions between content</p>
+    <div class="ui middle aligned divided list">
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/daniel.jpg">
+        <div class="content">
+          <a class="header">Daniel Louise</a>
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/stevie.jpg">
+        <div class="content">
+          <a class="header">Stevie Feliciano</a>
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/elliot.jpg">
+        <div class="content">
+          <a class="header">Elliot Fu</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Celled</h4>
+    <p>A list can divide its items into cells</p>
+    <div class="ui celled list">
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/helen.jpg">
+        <div class="content">
+          <div class="header">Snickerdoodle</div>
+          An excellent companion
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/daniel.jpg">
+        <div class="content">
+          <div class="header">Poodle</div>
+          A poodle, its pretty basic
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/daniel.jpg">
+        <div class="content">
+          <div class="header">Paulo</div>
+          He's also a dog
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui celled ordered list">
+      <div class="item">Cats</div>
+      <div class="item">Horses</div>
+      <div class="item">Dogs
+        <div class="list">
+          <div class="item">Labradoodles</div>
+          <div class="item">Shiba Inu</div>
+          <div class="item">Mastiff</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui celled horizontal list">
+      <div class="item">About Us</div>
+      <div class="item">Contact</div>
+      <div class="item">Support</div>
+    </div>
+  </div>
+
+  <div class="example">
+    <h4 class="ui header">Size</h4>
+    <p>A list can vary in size</p>
+    <div class="ui mini horizontal divided list">
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/helen.jpg">
+        <div class="content">
+          <div class="header">Helen</div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/christian.jpg">
+        <div class="content">
+          <div class="header">Christian</div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/daniel.jpg">
+        <div class="content">
+          <div class="header">Daniel</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui tiny horizontal list">
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/helen.jpg">
+        <div class="content">
+          <div class="header">Helen</div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/christian.jpg">
+        <div class="content">
+          <div class="header">Christian</div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/daniel.jpg">
+        <div class="content">
+          <div class="header">Daniel</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui small horizontal list">
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/helen.jpg">
+        <div class="content">
+          <div class="header">Helen</div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/christian.jpg">
+        <div class="content">
+          <div class="header">Christian</div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/daniel.jpg">
+        <div class="content">
+          <div class="header">Daniel</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui large horizontal divided list">
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/helen.jpg">
+        <div class="content">
+          <div class="header">Helen</div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/christian.jpg">
+        <div class="content">
+          <div class="header">Christian</div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/daniel.jpg">
+        <div class="content">
+          <div class="header">Daniel</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui big horizontal divided list">
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/helen.jpg">
+        <div class="content">
+          <div class="header">Helen</div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/christian.jpg">
+        <div class="content">
+          <div class="header">Christian</div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/daniel.jpg">
+        <div class="content">
+          <div class="header">Daniel</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui huge horizontal divided list">
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/helen.jpg">
+        <div class="content">
+          <div class="header">Helen</div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/christian.jpg">
+        <div class="content">
+          <div class="header">Christian</div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/daniel.jpg">
+        <div class="content">
+          <div class="header">Daniel</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui massive horizontal divided list">
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/helen.jpg">
+        <div class="content">
+          <div class="header">Helen</div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/christian.jpg">
+        <div class="content">
+          <div class="header">Christian</div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="/images/avatar/small/daniel.jpg">
+        <div class="content">
+          <div class="header">Daniel</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="ui dividing header">Content Variations</h2>
+
+
+  <div class="example" data-use-content="true">
+    <h4 class="ui header">Vertically Aligned</h4>
+    <p>An element inside a list can be vertically aligned</p>
+    <div class="ui horizontal list">
+      <div class="item">
+        <img class="ui avatar image" src="/images/wireframe/square-image.png">
+        <div class="top aligned content">
+          Top Aligned
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="/images/wireframe/square-image.png">
+        <div class="middle aligned content">
+          Middle
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="/images/wireframe/square-image.png">
+        <div class="bottom aligned content">
+          Bottom
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="example" data-use-content="true">
+    <h4 class="ui header">Floated</h4>
+    <p>An list, or an element inside a list can be floated left or right</p>
+    <div class="ui middle aligned divided list">
+      <div class="item">
+        <div class="right floated content">
+          <div class="ui button">Add</div>
+        </div>
+        <img class="ui avatar image" src="/images/avatar2/small/lena.png">
+        <div class="content">
+          Lena
+        </div>
+      </div>
+      <div class="item">
+        <div class="right floated content">
+          <div class="ui button">Add</div>
+        </div>
+        <img class="ui avatar image" src="/images/avatar2/small/lindsay.png">
+        <div class="content">
+          Lindsay
+        </div>
+      </div>
+      <div class="item">
+        <div class="right floated content">
+          <div class="ui button">Add</div>
+        </div>
+        <img class="ui avatar image" src="/images/avatar2/small/mark.png">
+        <div class="content">
+          Mark
+        </div>
+      </div>
+      <div class="item">
+        <div class="right floated content">
+          <div class="ui button">Add</div>
+        </div>
+        <img class="ui avatar image" src="/images/avatar2/small/molly.png">
+        <div class="content">
+          Molly
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="another example">
+    <div class="ui right floated horizontal list">
+      <div class="disabled item" href="#">&copy; GitHub, Inc.</div>
+      <a class="item" href="#">Terms</a>
+      <a class="item" href="#">Privacy</a>
+      <a class="item" href="#">Contact</a>
+    </div>
+    <div class="ui horizontal list">
+      <a class="item" href="#">About Us</a>
+      <a class="item" href="#">Jobs</a>
+    </div>
+  </div>
+
+</div>
+        <div class="ui  vertical footer segment">
+  <div class="ui center aligned container">
+    <div class="ui stackable grid">
+      <div class="three wide column">
+        <h4 class="ui header">Community</h4>
+        <div class="ui link list">
+          <a class="item" href="https://www.transifex.com/organization/semantic-org/" target="_blank">Help Translate</a>
+          <a class="item" href="https://github.com/Semantic-Org/Semantic-UI/issues" target="_blank">Submit an Issue</a>
+          <a class="item" href="https://gitter.im/Semantic-Org/Semantic-UI" target="_blank">Join our Chat</a>
+          <a class="item" href="/cla.html" target="_blank">CLA</a>
+        </div>
+      </div>
+      <div class="three wide column">
+        <h4 class="ui header">Network</h4>
+        <div class="ui link list">
+          <a class="item" href="https://github.com/Semantic-Org/Semantic-UI" target="_blank">GitHub Repo</a>
+          <a class="item" href="http://forums.semantic-ui.com" target="_blank">User Forums</a>
+          <a class="item" href="http://1.semantic-ui.com">1.x Docs</a>
+          <a class="item" href="http://legacy.semantic-ui.com">0.x Docs</a>
+        </div>
+      </div>
+      <div class="seven wide right floated column">
+        <h4 class="ui header">Help Preserve This Project</h4>
+        <p> Support for the continued development of Semantic UI comes directly from the community.</p>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="7ZAF2Q8DBZAQL">
+          <button type="submit" class="ui large teal button">Donate Today</button>
+        </form>
+      </div>
+    </div>
+    <div class="ui section divider"></div>
+    <img src="/images/logo.png" class="ui centered mini image">
+    <div class="ui horizontal small divided link list">
+      <a class="item" href="http://semantic-ui.mit-license.org/" target="_blank">Free & Open Source (MIT)</a>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+  <div class="ui basic language modal">
+  <i class="close icon"></i>
+  <div class="header">The <span class="name"></span> Translation Needs Your Help</div>
+  <div class="image content">
+    <div class="middle aligned image">
+      <i class="world icon"></i>
+    </div>
+    <div class="description">
+      <p>This translation is only <b><span class="complete"></span>%</b> complete!</p>
+      <div class="ui inverted indicating progress">
+        <div class="bar"></div>
+      </div>
+      <p>We need your help to make Semantic available to  people who speak your language.</p>
+      <p>Our translation tools are easy to use and allow you to translate text without having to leave the site.
+      </p>
+    </div>
+  </div>
+  <div class="actions">
+    <div class="ui inverted cancel button">No Thanks</div>
+    <a href="https://github.com/Semantic-Org/Semantic-UI/wiki/Translating-Semantic-UI-Docs" target="_blank" class="ui inverted approve teal button">
+      <i class="mail icon"></i>
+      Help Translate
+    </a>
+  </div>
+</div>
+
+<div class="ui basic chinese modal">
+  <i class="close icon"></i>
+  <div class="header">Would you like to visit the mirror site?</div>
+  <div class="image content">
+    <div class="middle aligned image">
+      <i class="question icon"></i>
+    </div>
+    <div class="description">
+      <p>Semantic is available at <a href="http://www.semantic-ui.cn">semantic-ui.cn</a> a mirror site hosted inside China. This should make browsing much faster for those visiting from mainland China.
+      </p>
+    </div>
+  </div>
+  <div class="actions">
+    <div class="ui inverted red cancel button">No Thanks</div>
+    <a href="http://www.semantic-ui.cn" class="ui inverted green approve button">
+      <i class="mail icon"></i>
+      Yes, take me to the mirror
+    </a>
+  </div>
+</div>
+  <div class="ui demo page dimmer">
+  <div class="content">
+    <div class="center">
+      <h2 class="ui inverted icon header">
+        <i class="mail icon"></i>
+        Dimmer Message
+        <div class="sub header">Dimmer sub-header</div>
+      </h2>
+    </div>
+  </div>
+</div>
+  <script>
+window.less = {
+  async        : true,
+  environment  : 'production',
+  fileAsync    : false,
+  onReady      : false,
+  useFileCache : true
+};
+</script>
+
+<script src="/javascript/library/less.min.js"></script>
+
+
+</body>
+</html>

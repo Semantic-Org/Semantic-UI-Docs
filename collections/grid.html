@@ -1,0 +1,2752 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Standard Meta -->
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+<link rel="image_src" type="image/jpeg" href="/images/logo.png" />
+
+<!-- Site Properities -->
+<meta name="generator" content="DocPad v6.79.4" />
+<title>Grid | Semantic UI</title>
+
+<meta name="description" content="A grid is used to harmonize negative space in a layout" />
+<meta name="keywords" content="html5, ui, library, framework, javascript" />
+  
+  <script src="/javascript/library/detect.min.js"></script>
+  <script src="/javascript/library/jquery.min.js"></script>
+  <script src="/javascript/library/clipboard.min.js"></script>
+  <script src="/javascript/library/cookie.min.js"></script>
+  <script src="/javascript/library/easing.min.js"></script>
+  <script src="/javascript/library/highlight.min.js"></script>
+  <script src="/javascript/library/history.min.js"></script>
+  <script src="/javascript/library/state.js"></script>
+  <script src="/javascript/library/tablesort.min.js"></script>
+  <script src="/javascript/library/underscore.min.js"></script>
+
+
+
+
+
+<script src="/dist/semantic.min.js"></script>
+
+
+
+<script src="/javascript/docs.js"></script>
+
+  
+<link rel="stylesheet" type="text/css" class="ui" href="/dist/semantic.min.css">
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/stylesheets/docs.css">
+<link rel="stylesheet" type="text/css" href="/stylesheets/rtl.css">
+
+
+
+
+
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-44039803-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  
+  <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
+
+
+  
+<script type="text/javascript">
+  window.liveSettings = {
+    api_key    : '9ede3015b9f84c1aabc81ab839c55d74',
+    parse_attr : [
+      'data-title',
+      'data-content'
+    ],
+    detectlang   : false,
+    autocollect  : true,
+    ignore_tags  : ['i', 'code', 'pre'],
+    parse_attr   : ['data-title', 'data-content', 'data-text'],
+    ignore_class : ['code', 'anchor']
+  };
+</script>
+<script type="text/javascript" src="//cdn.transifex.com/live.js"></script>
+
+
+</head>
+<body id="example" class="Grid" ontouchstart="">
+  
+  <div class="ui vertical inverted sidebar menu" id="toc">
+  
+
+
+
+
+
+
+
+
+<div class="item">
+  <a class="ui logo icon image" href="/">
+    <img src="/images/logo.png">
+  </a>
+  <a href="/"><b>UI Docs</b></a>
+</div>
+<a class="item" href="/introduction/getting-started.html">
+  <b>Getting Started</b>
+</a>
+<a class="item" href="/introduction/new.html">
+  <b>New in 2.4</b>
+</a>
+<div class="item">
+  <div class="header">Introduction</div>
+  <div class="menu">
+    
+      <a class="item" href="/introduction/integrations.html">
+        Integrations
+      </a>
+    
+      <a class="item" href="/introduction/build-tools.html">
+        Build Tools
+      </a>
+    
+      <a class="item" href="/introduction/advanced-usage.html">
+        Recipes
+      </a>
+    
+      <a class="item" href="/introduction/glossary.html">
+        Glossary
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class="header">Usage</div>
+  <div class="menu">
+    
+      <a class="item" href="/usage/theming.html">
+        Theming
+      </a>
+    
+      <a class="item" href="/usage/layout.html">
+        Layouts
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Globals</div>
+  <div class="menu">
+    
+      <a class="item" href="/globals/reset.html">
+        Reset
+        
+      </a>
+    
+      <a class="item" href="/globals/site.html">
+        Site
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Elements</div>
+  <div class="menu">
+    
+      <a class="item" href="/elements/button.html">
+        Button
+        
+      </a>
+    
+      <a class="item" href="/elements/container.html">
+        Container
+        
+      </a>
+    
+      <a class="item" href="/elements/divider.html">
+        Divider
+        
+      </a>
+    
+      <a class="item" href="/elements/flag.html">
+        Flag
+        
+      </a>
+    
+      <a class="item" href="/elements/header.html">
+        Header
+        
+      </a>
+    
+      <a class="item" href="/elements/icon.html">
+        Icon
+        
+      </a>
+    
+      <a class="item" href="/elements/image.html">
+        Image
+        
+      </a>
+    
+      <a class="item" href="/elements/input.html">
+        Input
+        
+      </a>
+    
+      <a class="item" href="/elements/label.html">
+        Label
+        
+      </a>
+    
+      <a class="item" href="/elements/list.html">
+        List
+        
+      </a>
+    
+      <a class="item" href="/elements/loader.html">
+        Loader
+        
+      </a>
+    
+      <a class="item" href="/elements/placeholder.html">
+        Placeholder
+        
+      </a>
+    
+      <a class="item" href="/elements/rail.html">
+        Rail
+        
+      </a>
+    
+      <a class="item" href="/elements/reveal.html">
+        Reveal
+        
+      </a>
+    
+      <a class="item" href="/elements/segment.html">
+        Segment
+        
+      </a>
+    
+      <a class="item" href="/elements/step.html">
+        Step
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class="active  header">Collections</div>
+  <div class="menu">
+    
+      <a class="item" href="/collections/breadcrumb.html">
+        Breadcrumb
+        
+      </a>
+    
+      <a class="item" href="/collections/form.html">
+        Form
+        
+      </a>
+    
+      <a class="active item" href="/collections/grid.html">
+        Grid
+        
+      </a>
+    
+      <a class="item" href="/collections/menu.html">
+        Menu
+        
+      </a>
+    
+      <a class="item" href="/collections/message.html">
+        Message
+        
+      </a>
+    
+      <a class="item" href="/collections/table.html">
+        Table
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Views</div>
+  <div class="menu">
+    
+      <a class="item" href="/views/advertisement.html">
+        Advertisement
+        
+      </a>
+    
+      <a class="item" href="/views/card.html">
+        Card
+        
+      </a>
+    
+      <a class="item" href="/views/comment.html">
+        Comment
+        
+      </a>
+    
+      <a class="item" href="/views/feed.html">
+        Feed
+        
+      </a>
+    
+      <a class="item" href="/views/item.html">
+        Item
+        
+      </a>
+    
+      <a class="item" href="/views/statistic.html">
+        Statistic
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Modules</div>
+  <div class="menu">
+    
+      <a class="item" href="/modules/accordion.html">
+        Accordion
+        
+      </a>
+  
+      <a class="item" href="/modules/checkbox.html">
+        Checkbox
+        
+      </a>
+  
+      <a class="item" href="/modules/dimmer.html">
+        Dimmer
+        
+      </a>
+  
+      <a class="item" href="/modules/dropdown.html">
+        Dropdown
+        
+      </a>
+  
+      <a class="item" href="/modules/embed.html">
+        Embed
+        
+      </a>
+  
+      <a class="item" href="/modules/modal.html">
+        Modal
+        
+      </a>
+  
+      <a class="item" href="/modules/popup.html">
+        Popup
+        
+      </a>
+  
+      <a class="item" href="/modules/progress.html">
+        Progress
+        
+      </a>
+  
+      <a class="item" href="/modules/rating.html">
+        Rating
+        
+      </a>
+  
+      <a class="item" href="/modules/search.html">
+        Search
+        
+      </a>
+  
+      <a class="item" href="/modules/shape.html">
+        Shape
+        
+      </a>
+  
+      <a class="item" href="/modules/sidebar.html">
+        Sidebar
+        
+      </a>
+  
+      <a class="item" href="/modules/sticky.html">
+        Sticky
+        
+      </a>
+  
+      <a class="item" href="/modules/tab.html">
+        Tab
+        
+      </a>
+  
+      <a class="item" href="/modules/transition.html">
+        Transition
+        
+      </a>
+  
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Behaviors</div>
+  <div class="menu">
+    
+      <a class="item" href="/behaviors/api.html">
+        API
+        
+      </a>
+    
+      <a class="item" href="/behaviors/form.html">
+        Form Validation
+        
+      </a>
+    
+      <a class="item" href="/behaviors/visibility.html">
+        Visibility
+        
+      </a>
+    
+  </div>
+</div>
+
+</div>
+
+<div class="ui black big launch right attached fixed button">
+  <i class="content icon"></i>
+  <span class="text">Menu</span>
+</div>
+  
+
+
+
+
+<div class="ui fixed inverted main menu">
+  <div class="ui container">
+    <a class="launch icon item">
+      <i class="content icon"></i>
+    </a>
+    
+      <div class="item">
+        Grid
+      </div>
+    
+    <div class="right menu">
+      
+      <div class="vertically fitted borderless item">
+        <iframe class="github" src="//ghbtns.com/github-btn.html?user=semantic-org&amp;repo=semantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
+      </div>
+      
+      <!--
+      <div class="item">
+        <div class="ui hidden right aligned search input" id="search">
+          <div class="ui transparent icon input">
+            <input class="prompt" type="text" placeholder="Search...">
+            <i class="inverted search link icon" data-content="Search UI"></i>
+          </div>
+          <div class="results"></div>
+        </div>
+      </div>
+      -->
+    </div>
+  </div>
+</div>
+
+  <div class="pusher">
+    <div class="full height">
+      <div class="toc">
+        <div class="ui vertical inverted menu">
+          
+
+
+
+
+
+
+
+
+<div class="item">
+  <a class="ui logo icon image" href="/">
+    <img src="/images/logo.png">
+  </a>
+  <a href="/"><b>UI Docs</b></a>
+</div>
+<a class="item" href="/introduction/getting-started.html">
+  <b>Getting Started</b>
+</a>
+<a class="item" href="/introduction/new.html">
+  <b>New in 2.4</b>
+</a>
+<div class="item">
+  <div class="header">Introduction</div>
+  <div class="menu">
+    
+      <a class="item" href="/introduction/integrations.html">
+        Integrations
+      </a>
+    
+      <a class="item" href="/introduction/build-tools.html">
+        Build Tools
+      </a>
+    
+      <a class="item" href="/introduction/advanced-usage.html">
+        Recipes
+      </a>
+    
+      <a class="item" href="/introduction/glossary.html">
+        Glossary
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class="header">Usage</div>
+  <div class="menu">
+    
+      <a class="item" href="/usage/theming.html">
+        Theming
+      </a>
+    
+      <a class="item" href="/usage/layout.html">
+        Layouts
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Globals</div>
+  <div class="menu">
+    
+      <a class="item" href="/globals/reset.html">
+        Reset
+        
+      </a>
+    
+      <a class="item" href="/globals/site.html">
+        Site
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Elements</div>
+  <div class="menu">
+    
+      <a class="item" href="/elements/button.html">
+        Button
+        
+      </a>
+    
+      <a class="item" href="/elements/container.html">
+        Container
+        
+      </a>
+    
+      <a class="item" href="/elements/divider.html">
+        Divider
+        
+      </a>
+    
+      <a class="item" href="/elements/flag.html">
+        Flag
+        
+      </a>
+    
+      <a class="item" href="/elements/header.html">
+        Header
+        
+      </a>
+    
+      <a class="item" href="/elements/icon.html">
+        Icon
+        
+      </a>
+    
+      <a class="item" href="/elements/image.html">
+        Image
+        
+      </a>
+    
+      <a class="item" href="/elements/input.html">
+        Input
+        
+      </a>
+    
+      <a class="item" href="/elements/label.html">
+        Label
+        
+      </a>
+    
+      <a class="item" href="/elements/list.html">
+        List
+        
+      </a>
+    
+      <a class="item" href="/elements/loader.html">
+        Loader
+        
+      </a>
+    
+      <a class="item" href="/elements/placeholder.html">
+        Placeholder
+        
+      </a>
+    
+      <a class="item" href="/elements/rail.html">
+        Rail
+        
+      </a>
+    
+      <a class="item" href="/elements/reveal.html">
+        Reveal
+        
+      </a>
+    
+      <a class="item" href="/elements/segment.html">
+        Segment
+        
+      </a>
+    
+      <a class="item" href="/elements/step.html">
+        Step
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class="active  header">Collections</div>
+  <div class="menu">
+    
+      <a class="item" href="/collections/breadcrumb.html">
+        Breadcrumb
+        
+      </a>
+    
+      <a class="item" href="/collections/form.html">
+        Form
+        
+      </a>
+    
+      <a class="active item" href="/collections/grid.html">
+        Grid
+        
+      </a>
+    
+      <a class="item" href="/collections/menu.html">
+        Menu
+        
+      </a>
+    
+      <a class="item" href="/collections/message.html">
+        Message
+        
+      </a>
+    
+      <a class="item" href="/collections/table.html">
+        Table
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Views</div>
+  <div class="menu">
+    
+      <a class="item" href="/views/advertisement.html">
+        Advertisement
+        
+      </a>
+    
+      <a class="item" href="/views/card.html">
+        Card
+        
+      </a>
+    
+      <a class="item" href="/views/comment.html">
+        Comment
+        
+      </a>
+    
+      <a class="item" href="/views/feed.html">
+        Feed
+        
+      </a>
+    
+      <a class="item" href="/views/item.html">
+        Item
+        
+      </a>
+    
+      <a class="item" href="/views/statistic.html">
+        Statistic
+        
+      </a>
+    
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Modules</div>
+  <div class="menu">
+    
+      <a class="item" href="/modules/accordion.html">
+        Accordion
+        
+      </a>
+  
+      <a class="item" href="/modules/checkbox.html">
+        Checkbox
+        
+      </a>
+  
+      <a class="item" href="/modules/dimmer.html">
+        Dimmer
+        
+      </a>
+  
+      <a class="item" href="/modules/dropdown.html">
+        Dropdown
+        
+      </a>
+  
+      <a class="item" href="/modules/embed.html">
+        Embed
+        
+      </a>
+  
+      <a class="item" href="/modules/modal.html">
+        Modal
+        
+      </a>
+  
+      <a class="item" href="/modules/popup.html">
+        Popup
+        
+      </a>
+  
+      <a class="item" href="/modules/progress.html">
+        Progress
+        
+      </a>
+  
+      <a class="item" href="/modules/rating.html">
+        Rating
+        
+      </a>
+  
+      <a class="item" href="/modules/search.html">
+        Search
+        
+      </a>
+  
+      <a class="item" href="/modules/shape.html">
+        Shape
+        
+      </a>
+  
+      <a class="item" href="/modules/sidebar.html">
+        Sidebar
+        
+      </a>
+  
+      <a class="item" href="/modules/sticky.html">
+        Sticky
+        
+      </a>
+  
+      <a class="item" href="/modules/tab.html">
+        Tab
+        
+      </a>
+  
+      <a class="item" href="/modules/transition.html">
+        Transition
+        
+      </a>
+  
+  </div>
+</div>
+<div class="item">
+  <div class=" header">Behaviors</div>
+  <div class="menu">
+    
+      <a class="item" href="/behaviors/api.html">
+        API
+        
+      </a>
+    
+      <a class="item" href="/behaviors/form.html">
+        Form Validation
+        
+      </a>
+    
+      <a class="item" href="/behaviors/visibility.html">
+        Visibility
+        
+      </a>
+    
+  </div>
+</div>
+
+        </div>
+      </div>
+      <div class="article">
+        <link rel="stylesheet/less" type="text/css" href="/src/definitions/collections/grid.less" />
+<script src="/javascript/grid.js"></script>
+
+
+
+<div class="ui masthead vertical tab segment">
+  <div class="ui container">
+    <div class="introduction">
+
+      <h1 class="ui header">
+        Grid
+        
+        <div class="sub header">
+          
+          <a class="twitter-share-button twitter"
+            href="http://twitter.com/share"
+            data-text="Semantic UI is a next generation UI framework"
+            data-url="http://semantic-ui.com"
+            data-via="semanticui">
+          </a>
+          <script type="text/javascript">
+          window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
+          </script>
+          <iframe class="github" src="//ghbtns.com/github-btn.html?user=semantic-org&amp;repo=semantic-ui&amp;type=star&amp;count=true&amp;" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
+          
+          A grid is used to harmonize negative space in a layout
+        </div>
+      </h1>
+
+      <div class="ui hidden divider"></div>
+
+      <div class="ui right floated main menu">
+        <a class="bug popup icon item" data-content="Edit This Page" href="https://github.com/Semantic-Org/Semantic-UI-Docs/edit/master/server/documents/collections/grid.html.eco">
+          <i class="edit icon"></i>
+        </a>
+        
+        <a class="bug popup icon item" data-content="Submit Bug Report" href="https://github.com/Semantic-Org/Semantic-UI/issues/new?title=[Grid] - Your Bug Name&body=**Steps to Reproduce**%0A1. Do something%0A2. Do something else.%0A3. Do one last thing.%0A%0A**Expected**%0AThe Grid should do this%0A%0A**Result**%0AThe Grid does not do this%0A%0A**Testcase**%0A(fork this to get started)%0Ahttp://jsfiddle.net/rduvhn8u/1/">
+          <i class="bug icon"></i>
+        </a>
+        
+        <a class="github popup icon item" data-content="View project on GitHub" href="https://github.com/Semantic-Org/Semantic-UI">
+          <i class="alternate github icon"></i>
+        </a>
+      </div>
+      <div class="ui right floated main menu">
+        <a class="music popup icon item" data-content="Play Music">
+          <i class="music icon"></i>
+        </a>
+        <div class="ui language dropdown right floating icon item" id="languages" data-content="Select Language">
+          <i class="world icon"></i>
+          <div class="menu">
+            <div class="header">Select Language</div>
+            <div class="ui icon search input">
+              <i class="search icon"></i>
+              <input type="text" placeholder="Search languages...">
+            </div>
+            <div class="scrolling menu">
+  <div class="item" data-percent="100" data-value="en" data-english="English">
+    <span class="description">English</span>
+    English
+  </div>
+  <div class="item" data-percent="94" data-value="da" data-english="Danish">
+    <span class="description">dansk</span>
+    Danish
+  </div>
+  <div class="item" data-percent="94" data-value="es" data-english="Spanish">
+    <span class="description">Español</span>
+    Spanish
+  </div>
+  <div class="item" data-percent="34" data-value="zh" data-english="Chinese">
+    <span class="description">简体中文</span>
+    Chinese
+  </div>
+  <div class="item" data-percent="54" data-value="zh_TW" data-english="Chinese (Taiwan)">
+    <span class="description">中文 (臺灣)</span>
+    Chinese (Taiwan)
+  </div>
+  <div class="item" data-percent="79" data-value="fa" data-english="Persian">
+    <span class="description">پارسی</span>
+    Persian
+  </div>
+  <div class="item" data-percent="41" data-value="fr" data-english="French">
+    <span class="description">Français</span>
+    French
+  </div>
+  <div class="item" data-percent="37" data-value="el" data-english="Greek">
+    <span class="description">ελληνικά</span>
+    Greek
+  </div>
+  <div class="item" data-percent="37" data-value="ru" data-english="Russian">
+    <span class="description">Русский</span>
+    Russian
+  </div>
+  <div class="item" data-percent="36" data-value="de" data-english="German">
+    <span class="description">Deutsch</span>
+    German
+  </div>
+  <div class="item" data-percent="23" data-value="it" data-english="Italian">
+    <span class="description">Italiano</span>
+    Italian
+  </div>
+  <div class="item" data-percent="21" data-value="nl" data-english="Dutch">
+    <span class="description">Nederlands</span>
+    Dutch
+  </div>
+  <div class="item" data-percent="19" data-value="pt_BR" data-english="Portuguese">
+    <span class="description">Português(BR)</span>
+    Portuguese
+  </div>
+  <div class="item" data-percent="17" data-value="id" data-english="Indonesian">
+    <span class="description">Indonesian</span>
+    Indonesian
+  </div>
+  <div class="item" data-percent="12" data-value="lt" data-english="Lithuanian">
+    <span class="description">Lietuvių</span>
+    Lithuanian
+  </div>
+  <div class="item" data-percent="11" data-value="tr" data-english="Turkish">
+    <span class="description">Türkçe</span>
+    Turkish
+  </div>
+  <div class="item" data-percent="10" data-value="ko" data-english="Korean">
+    <span class="description">한국어</span>
+    Korean
+  </div>
+  <div class="item" data-percent="7"  data-value="ar" data-english="Arabic">
+    <span class="description">العربية</span>
+    Arabic
+  </div>
+  <div class="item" data-percent="6"  data-value="hu" data-english="Hungarian">
+    <span class="description">Magyar</span>
+    Hungarian
+  </div>
+  <div class="item" data-percent="6"  data-value="vi" data-english="Vietnamese">
+    <span class="description">tiếng Việt</span>
+    Vietnamese
+  </div>
+  <div class="item" data-percent="5"  data-value="sv" data-english="Swedish">
+    <span class="description">svenska</span>
+    Swedish
+  </div>
+  <div class="item" data-precent="4"  data-value="pl" data-english="Polish">
+    <span class="description">polski</span>
+    Polish
+  </div>
+  <div class="item" data-percent="6"  data-value="ja" data-english="Japanese">
+    <span class="description">日本語</span>
+    Japanese
+  </div>
+  <div class="item" data-percent="0"  data-value="ro" data-english="Romanian">
+    <span class="description">românește</span>
+    Romanian
+  </div>
+</div>
+
+          </div>
+        </div>
+      </div>
+
+      
+      
+      
+      <div class="ui download primary button">
+        Download
+      </div>
+      <div class="ui flowing download basic popup">
+        <div class="ui divided equal width relaxed center aligned choice grid">
+          <div class="framework column">
+            <h4 class="ui center aligned header">UI Framework</h4>
+            <div class="ui list">
+              <div class="item"><i class="green check icon"></i> Themable</div>
+              <div class="item"><i class="green check icon"></i> Build Tools</div>
+            </div>
+            <div class="ui primary fluid button">Choose</div>
+          </div>
+          <div class="standalone column">
+            <h4 class="ui center aligned header">Standalone</h4>
+            <div class="ui list">
+              <div class="item">Default Theme</div>
+              <div class="item">Precompiled</div>
+            </div>
+            <div class="ui fluid button basic">Choose</div>
+          </div>
+        </div>
+        <div class="ui divided equal height relaxed center aligned framework grid">
+          <div class="column">
+            <div class="ui header">Semantic UI</div>
+            <a class="ui primary button" href="https://github.com/Semantic-Org/Semantic-UI/archive/master.zip">
+              Download ZIP
+            </a>
+            <a class="ui button" href="/introduction/getting-started.html">Getting Started</a>
+            <h4 class="ui header">Package Managers</h4>
+            <div class="ui form">
+              <div class="field">
+                <label>NPM</label>
+                <div class="ui fluid input">
+                  <input type="text" readonly="readonly" placeholder="Copy Link" value="npm install semantic-ui">
+                </div>
+              </div>
+              <div class="field">
+                <label>Git</label>
+                <div class="ui fluid input">
+                  <input type="text" readonly="readonly" placeholder="Copy Link" value="https://github.com/Semantic-Org/Semantic-UI.git">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ui divided equal height relaxed center aligned standalone grid">
+          <div class="column">
+            <div class="ui header">Standalone Grid</div>
+            <a class="ui primary button" href="https://github.com/Semantic-Org/UI-Grid/archive/master.zip">
+              Download ZIP
+            </a>
+            <a class="ui button" href="https://github.com/Semantic-Org/UI-Grid/">
+              View GitHub
+            </a>
+            <h4 class="ui header">Package Managers</h4>
+            <div class="ui form">
+              <div class="field">
+                <label>Bower</label>
+                <div class="ui fluid input">
+                  <input type="text" readonly="readonly" placeholder="Copy Link" value="bower install semantic-ui-grid">
+                </div>
+              </div>
+              <div class="field">
+                <label>NPM</label>
+                <div class="ui fluid input">
+                  <input type="text" readonly="readonly" placeholder="Copy Link" value="npm install semantic-ui-grid">
+                </div>
+              </div>
+              <div class="field">
+                <label>Git</label>
+                <div class="ui fluid input">
+                  <input type="text" readonly="readonly" placeholder="Copy Link" value="https://github.com/Semantic-Org/UI-Grid.git">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <div class="advertisement">
+      
+      <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=semanticuicom" id="_carbonads_js"></script>
+      
+    </div>
+    
+    
+    
+    
+    
+      
+        
+      
+        
+      
+      <div class="ui two item stackable tabs menu">
+        
+          <a class="active item" data-tab="overview">Overview</a>
+          
+        
+          <a class="item" data-tab="definition">Definition</a>
+          
+        
+      </div>
+    
+  </div>
+</div>
+
+  <div id="semantic-sponsor"></div>
+  <script>
+  _bsa.init('custom', 'CVAIKK7I', 'placement:semanticuicom',
+      {
+        target: '#semantic-sponsor',
+        template: `
+  <div class="native-inline">
+    <a href="##link##" class="native-link">
+      <img src="##image##" style="background-color: ##backgroundColor##" class="native-img">
+      <div class="native-text">##company## — ##description##</div>
+    </a>
+    <a href="##adViaLink##" class="native-ad">AD</a>
+  </div>
+  `
+      }
+    );
+  </script>
+  <div class="ui vertical beg transition hidden segment">
+    <i class="large red delete link icon"></i>
+    <div class="ui red header">
+      <i class="disabled warning sign icon"></i>
+      <div class="content">
+        Want to Support Open Source? Whitelist Your Ad-Blocker.
+        <div class="sub header">
+          We promise to not show more than one small ad per page. Dont worry, hiding this message will make sure you won't get nagged again.
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<div class="main ui container">
+
+  <div class="ui active intro tab" data-tab="overview">
+
+    <h2 class="ui dividing header">Introduction</h2>
+
+    <div class="highlighted example" data-class="grid">
+      <h4 class="ui header">Grids</h4>
+      <p>A grid is a structure with a <a href="http://99designs.com/designer-blog/2013/03/21/history-of-the-grid-part-1/" target="_blank">long history</a> used to align negative space in designs.</p>
+      <p>Using a grid makes content appear to flow more naturally on your page.</p>
+      <div class="ui ignored toggle animation checkbox">
+        <input type="checkbox" name="animation" />
+        <label>Toggle Animation</label>
+      </div>
+      <div class="ui ignored hidden divider"></div>
+      <div class="ui grid">
+        <div class="four wide column"></div>
+        <div class="four wide column"></div>
+        <div class="four wide column"></div>
+        <div class="four wide column"></div>
+      </div>
+    </div>
+
+    <div class="highlighted example" data-use-content="true" data-class="column">
+      <h4 class="ui header">Columns</h4>
+      <p>Grids divide horizontal space into indivisible units called "columns". All columns in a grid must specify their width as proportion of the total available row width.</p>
+      <p>All grid systems choose an arbitrary column count to allow per row. Semantic's default theme uses <b>16 columns</b>.</p>
+
+      <p>The example below shows four <code>four wide</code> columns will fit in the first row, <code>16 / 4 = 4</code>, and three various sized columns in the second row. <code>2 + 8 + 6 = 16</code></p>
+
+      <p>The default column count, and other arbitrary features of grids can be changed by adjusting Semantic UI's underlying <a href="/usage/theming.html">theming variables</a>.</p>
+
+      <div class="ui grid">
+        <div class="four wide column"></div>
+        <div class="four wide column"></div>
+        <div class="four wide column"></div>
+        <div class="four wide column"></div>
+        <div class="two wide column"></div>
+        <div class="eight wide column"></div>
+        <div class="six wide column"></div>
+      </div>
+    </div>
+    <div class="highlighted example" data-use-content="true" data-class="row">
+      <h4 class="ui header">Rows</h4>
+      <p>Rows are groups of columns which are aligned horizontally.</p>
+      <p>Rows can either be <em>explicit</em>, marked with an additional <code>row</code> element, or <em>implicit</em>, automatically occurring when no more space is left in a previous row.
+      </p>
+      <p>After each group of columns vertical spacing is added to separate each group of columns, creating vertical rhythm.
+      <div class="ui four column grid">
+        <div class="row">
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+        </div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+      </div>
+    </div>
+
+    <div class="highlighted negative example" data-use-content="true" data-class="relaxed">
+      <h4 class="ui header">Gutters</h4>
+      <p>Grid columns are separated by areas of white space referred to as "gutters". Gutters improve legibility by providing, <a href="https://en.wikipedia.org/wiki/Negative_space" target="_blank">negative space</a> between page elements.</p>
+      <p>Gutters remain a constant size regardless of the width of the grid, or how many columns are in a row. To increase the size of gutters in a particular grid, you can use a <a href="#relaxed"><code>relaxed grid</code></a> variation.</p>
+      <div class="ui grid">
+        <div class="three column row">
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+        </div>
+        <div class="eight column row">
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+        </div>
+      </div>
+      <div class="ui relaxed grid">
+        <div class="three column row">
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+        </div>
+        <div class="eight column row">
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="highlighted negative example">
+      <h4 class="ui header">Negative Margins</h4>
+      <p>Since all grid columns include gutters, grids use <a href="http://csswizardry.com/2011/08/building-better-grid-systems/">negative margins</a> to make sure that the first and last columns sit flush with content outside the grid.</p>
+      <p>In the following example, you can see even though the top row has padding, the <a href="/elements/button.html#vertically-attached"><code>attached button</code></a> still sits flush with the edge of the grid.<p>
+      <p>In some cases, like when a column or row is <a href="#colored"><code>colored</code></a>, you may want to avoid using negative margins. You can do this by using a <a href="#padded"><code>padded grid</code></a> variation.</p>
+       <div class="ui top attached button">Button before grid</div>
+       <div class="ui grid">
+        <div class="sixteen wide column"></div>
+        <div class="ten wide column"></div>
+        <div class="six wide column"></div>
+      </div>
+      <div class="ui grid">
+        <div class="sixteen wide column"></div>
+      </div>
+      <div class="ui bottom attached button">Button after grid</div>
+    </div>
+
+
+    <div class="no example">
+      <h4 class="ui header">Page Grids</h4>
+      <p>Grids are fluid and will automatically flow in size to take the maximum available width.</p>
+      <p><a href="/elements/container.html">Containers</a> are elements designed to limit page content to a reasonable maximum width for display based on the size of the user's screen.</p>
+      <p>Using a <a href="/elements/container.html#containers-using-grids"><code>ui grid container</code></a> is the best way to include top-level page content inside a grid.</p>
+      <div class="ui warning message">
+        <p>In version <code>1.x</code> of Semantic UI <code>page grid</code> were used to contain the maximum width of grids holding page content. Page grid have been deprecated in favor for the simpler <code>container</code> element.</p>
+      </div>
+    </div>
+
+
+    <h2 class="ui dividing header">Columns</h2>
+
+    <div class="highlighted example">
+      <h4 class="ui header">Automatic Flow</h4>
+      <p>Most grids do not need to specify rows. Content will automatically flow to the next row when all the grid columns are taken in the current row</b>.</p>
+
+      <div class="ui grid">
+        <div class="four wide column"></div>
+        <div class="four wide column"></div>
+        <div class="four wide column"></div>
+        <div class="four wide column"></div>
+        <div class="four wide column"></div>
+        <div class="four wide column"></div>
+        <div class="four wide column"></div>
+        <div class="four wide column"></div>
+      </div>
+    </div>
+    <div class="example">
+      <h4 class="ui header">Column Content</h4>
+      <p>Since columns use padding to create gutters, content stylings should not be applied directly to columns, but to elements inside of columns.</p>
+      <div class="ui three column grid">
+        <div class="column">
+          <div class="ui segment">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+        </div>
+        <div class="column">
+          <div class="ui segment">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+        </div>
+        <div class="column">
+          <div class="ui segment">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="highlighted example" data-use-content="true" data-class="wide">
+      <h4 class="ui header">Column Widths</h4>
+      <p>Column widths can be specified using <a href="#column-width"><code>(x) wide</code></a> class names. If a column cannot fit in a row it will automatically flow to the next row</p>
+      <div class="ui grid">
+        <div class="eight wide column"></div>
+        <div class="eight wide column"></div>
+        <div class="ten wide column"></div>
+        <div class="six wide column"></div>
+        <div class="four wide column"></div>
+        <div class="twelve wide column"></div>
+        <div class="two wide column"></div>
+        <div class="fourteen wide column"></div>
+        <div class="sixteen wide column"></div>
+      </div>
+    </div>
+
+    <h2 class="ui dividing header">Rows</h2>
+
+    <div class="highlighted example">
+      <h4 class="ui header">Grouping</h4>
+      <p>Row wrappers allow you to apply variations to a group of columns.</p>
+      <div class="ui four column grid">
+        <div class="two column row">
+          <div class="column"></div>
+        </div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+      </div>
+    </div>
+    <div class="highlighted example" data-use-content="true" data-class="floated">
+      <h4 class="ui header">Clearing Content</h4>
+      <p>Row wrappers will automatically clear previous columns, making them useful when using <a href="#floated"><code>floated</code></a> variations.</p>
+      <div class="ui grid">
+        <div class="four column row">
+          <div class="left floated column"></div>
+          <div class="right floated column"></div>
+        </div>
+        <div class="row">
+          <div class="three wide column"></div>
+          <div class="eight wide column"></div>
+          <div class="five wide column"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="example" data-class="internally celled">
+      <h4 class="ui header">Special Grids</h4>
+      <p>Additionally, some types of grids, like <a href="#divided"><code>divided</code></a> or <a href="#celled"><code>celled</code></a> require row wrappers to apply formatting correctly.</p>
+
+      <div class="ui internally celled grid">
+        <div class="row">
+          <div class="three wide column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+          <div class="ten wide column">
+            <img class="ui wireframe image" src="/images/wireframe/centered-paragraph.png">
+          </div>
+          <div class="three wide column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+        </div>
+        <div class="row">
+          <div class="three wide column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+          <div class="ten wide column">
+            <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+          </div>
+          <div class="three wide column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="ui dividing header">Varying Grids</h2>
+
+
+    <div class="highlighted special example" data-use-content="true" data-class="grid">
+      <h4 class="ui header">Nesting Grids</h4>
+      <p>Grids can be placed inside of other grids, letting you sub-divide columns.</p>
+
+      <div class="ui two column grid">
+        <div class="column">
+          <div class="ui three column grid">
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column"></div>
+          </div>
+        </div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column">
+          <div class="ui grid">
+            <div class="ten wide column"></div>
+            <div class="six wide column"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="colored example" data-use-content="true" data-class="colored, padded">
+      <h4 class="ui header">Colored</h4>
+      <p>Grids can use named <a href="#colored"><b>colors</b> variations</a> to add background colors, but only with <a href="#padded"><code>padded grid</code></a> that do not include negative margins.</p>
+      <p>To include a color that is not available in the default palette its perfectly fine to use CSS</p>
+      <div class="ui equal width center aligned padded grid">
+        <div class="row">
+          <div class="olive column">
+            Olive
+          </div>
+          <div class="black column">
+            Black
+          </div>
+        </div>
+        <div class="row" style="background-color: #869D05;color: #FFFFFF;">
+          <div class="column">Custom Row</div>
+        </div>
+        <div class="row">
+          <div class="black column">
+            Black
+          </div>
+          <div class="olive column">
+            Olive
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="highlighted example" data-class="equal width">
+      <h4 class="ui header">Automatic Column Count</h4>
+      <p>The <a href="#equal-width"><code>equal width</code></a> variation will automatically divide column width evenly. This is useful with dynamic content where you do not know the column count in advance.</p>
+      <div class="ui equal width grid">
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="equal width row">
+          <div class="column"></div>
+          <div class="column"></div>
+        </div>
+      </div>
+    </div>
+    <div class="highlighted example" data-class="centered">
+      <h4 class="ui header">Centering Content</h4>
+      <p>If a row does not take up all sixteen grid columns, you can use a <a href="#centered"><code>centered</code></a> variation to center the column contents inside the grid.
+      </p>
+      <div class="ui two column centered grid">
+        <div class="column"></div>
+        <div class="four column centered row">
+          <div class="column"></div>
+          <div class="column"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="example" data-use-content="true" data-class="left floated right aligned, right floated left aligned, center aligned, sixteen wide">
+      <h4 class="ui header">Significant Word Order</h4>
+      <p>Grids include many variations for adjusting things like vertical or horizontal alignment, text alignment, or default gutter sizes.</p>
+      <p>Some multi-word variations, like <a href="#floated"><code>left floated</code></a> or <a href="#text-alignment"><code>right aligned</code></a> are word-order dependent and require you to use adjacent class names.</p>
+
+      <div class="ui right aligned grid">
+        <div class="left floated right aligned six wide column">
+          <div class="ui segment">
+            Left floated right aligned column
+          </div>
+        </div>
+        <div class="right floated left aligned six wide column">
+          <div class="ui segment">
+            Right floated left aligned column
+          </div>
+        </div>
+        <div class="center aligned two column row">
+          <div class="column">
+            <div class="ui segment">
+            Center aligned row
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui segment">
+            Center aligned row
+            </div>
+          </div>
+        </div>
+        <div class="sixteen wide column">
+          <div class="ui segment">
+            Right Aligned Grid
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="ui dividing header">Responsive Grids</h2>
+
+    <div class="highlighted example" data-class="container">
+      <h4 class="ui header">Containers</h4>
+      <p>A <a href="/elements/container.html">container</a> can be used alongside a grid to provide a responsive, fixed width container for wrapping the contents of a page.</p>
+      <div class="ui grid container">
+        <div class="four wide column"></div>
+        <div class="four wide column"></div>
+        <div class="four wide column"></div>
+        <div class="four wide column"></div>
+        <div class="four wide column"></div>
+        <div class="four wide column"></div>
+        <div class="four wide column"></div>
+        <div class="four wide column"></div>
+      </div>
+    </div>
+
+    <div class="highlighted example">
+      <h4 class="ui header">Stackable</h4>
+      <p>A <a href="#stackable"><code>stackable grid</code></a> will automatically stack rows to a single columns on mobile devices</p>
+      <div class="ui stackable four column grid">
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+      </div>
+    </div>
+    <div class="example" data-class="mobile reversed">
+      <h4 class="ui header">Reverse Order</h4>
+      <p>Semantic includes special <a href="#reversed"><code>reversed</code></a> variations that allow you to reverse the order of columns or rows by device</p>
+      <div class="ui mobile reversed equal width grid">
+        <div class="column">
+          First
+        </div>
+        <div class="column">
+          Second
+        </div>
+        <div class="column">
+          Third
+        </div>
+      </div>
+    </div>
+
+    <div class="highlighted example">
+      <h4 class="ui header">Doubling</h4>
+      <p>A <a href="#doubling"><code>doubling</code></a> grid will double column widths for each device jump.</p>
+      <div class="ui grid">
+        <div class="doubling eight column row">
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+        </div>
+        <div class="doubling six column row">
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+        </div>
+        <div class="doubling four column row">
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+          <div class="column"></div>
+        </div>
+      </div>
+    </div>
+    <div class="highlighted example" data-class="computer only, six wide tablet eight wide computer" data-use-content="true">
+      <h4 class="ui header">Manual Tweaks</h4>
+      <p>Although design patterns like <a href="#doubling"><code>doubling</code></a> or <a href="#stackable"><code>stackable</code></a> are useful at simplifying responsive styling, you can also manually tweak device presentation by specifying <a href="#device-width"><code>(x) wide device</code></a> or <a href="#device-visibility"><code>device only</code></a> columns or rows.
+      <div class="ui centered grid">
+        <div class="computer only row">
+          <div class="column"></div>
+        </div>
+        <div class="six wide tablet eight wide computer column"></div>
+        <div class="six wide tablet eight wide computer column"></div>
+        <div class="six wide tablet eight wide computer column"></div>
+        <div class="six wide tablet eight wide computer column"></div>
+        <div class="six wide tablet eight wide computer column"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="ui tab" data-tab="definition">
+
+    <h2 class="ui dividing header">Types</h2>
+
+    <div class="highlighted example">
+      <h4 class="ui header">
+        Grid
+        <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes" target="_blank" class="ui teal label">Flexbox</a>
+      </h4>
+      <p>A basic grid</p>
+      <div class="ui grid">
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+      </div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">
+        Divided
+        <span class="ui black label">Requires Rows</span>
+      </h4>
+      <p>A grid can have dividers between its columns</p>
+      <div class="ui three column divided grid">
+        <div class="row">
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/media-paragraph.png">
+          </div>
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/media-paragraph.png">
+          </div>
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/media-paragraph.png">
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/media-paragraph.png">
+          </div>
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/media-paragraph.png">
+          </div>
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/media-paragraph.png">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">
+        Vertically Divided
+        <span class="ui black label">Requires Rows</span>
+      </h4>
+      <p>A grid can have dividers between rows</p>
+      <div class="ui vertically divided grid">
+        <div class="two column row">
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+          </div>
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+          </div>
+        </div>
+        <div class="three column row">
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+          </div>
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+          </div>
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="example">
+      <h4 class="ui header">
+        Celled
+        <span class="ui black label">Requires Rows</span>
+      </h4>
+      <p>A grid can have rows divided into cells</p>
+      <div class="ui celled grid">
+        <div class="row">
+          <div class="three wide column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+          <div class="thirteen wide column">
+            <img class="ui wireframe image" src="/images/wireframe/centered-paragraph.png">
+          </div>
+        </div>
+        <div class="row">
+          <div class="three wide column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+          <div class="ten wide column">
+            <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+          </div>
+          <div class="three wide column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="example">
+      <h4 class="ui header">
+        Internally Celled
+        <span class="ui black label">Requires Rows</span>
+      </h4>
+      <p>A grid can have rows divisions only between internal rows</p>
+      <div class="ui internally celled grid">
+        <div class="row">
+          <div class="three wide column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+          <div class="ten wide column">
+            <img class="ui wireframe image" src="/images/wireframe/centered-paragraph.png">
+          </div>
+          <div class="three wide column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+        </div>
+        <div class="row">
+          <div class="three wide column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+          <div class="ten wide column">
+            <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+          </div>
+          <div class="three wide column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="ui dividing header">Content</h2>
+
+    <div class="example" data-use-content="true" data-class="row">
+      <h4 class="ui header">Rows</h4>
+      <p>A row is a horizontal grouping of columns</p>
+      <div class="ui three column grid">
+        <div class="row">
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+          </div>
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+          </div>
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+          </div>
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="example" data-use-content="true" data-class="column">
+      <h4 class="ui header">Columns</h4>
+      <p>Columns each contain gutters giving them equal spacing from other columns.</p>
+      <div class="ui grid">
+        <div class="eight wide column">
+          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        </div>
+        <div class="eight wide column">
+          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        </div>
+        <div class="eight wide column">
+          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        </div>
+        <div class="eight wide column">
+          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        </div>
+      </div>
+    </div>
+
+    <h2 class="ui dividing header">Variations</h2>
+
+
+    <div class="example" data-use-content="true">
+      <h4 class="ui header">Floated</h4>
+      <p>A column can sit flush against the left or right edge of a row</p>
+      <div class="ui grid">
+        <div class="left floated five wide column">
+          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        </div>
+        <div class="right floated five wide column">
+          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        </div>
+      </div>
+    </div>
+
+    <div class="example" data-use-content="true" data-class="wide">
+      <h4 class="ui header">Column Width</h4>
+      <p>A column can vary in width taking up more than a single grid column.</p>
+      <div class="ui grid">
+        <div class="four wide column">
+          <img class="ui wireframe image" src="/images/wireframe/image.png">
+        </div>
+        <div class="nine wide column">
+          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        </div>
+        <div class="three wide column">
+          <img class="ui wireframe image" src="/images/wireframe/media-paragraph.png">
+        </div>
+      </div>
+    </div>
+
+    <div class="example" data-use-content="true" data-class="column count">
+      <h4 class="ui header">Column Count</h4>
+      <p>A grid can have a different number of columns per row</p>
+      <div class="ui grid">
+        <div class="three column row">
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+        </div>
+        <div class="four column row">
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+        </div>
+        <div class="five column row">
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="example" data-use-content="true">
+      <h4 class="ui header">
+        Equal Width
+      </h4>
+      <p>A grid can automatically resize all elements to split the available width evenly</p>
+      <div class="ui equal width grid">
+        <div class="column">
+          <div class="ui segment">
+            1
+          </div>
+        </div>
+        <div class="eight wide column">
+          <div class="ui segment">
+            2
+          </div>
+        </div>
+        <div class="column">
+          <div class="ui segment">
+            3
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="another example">
+      <div class="ui equal width grid">
+        <div class="row">
+          <div class="column">
+            <div class="ui segment">1</div>
+          </div>
+          <div class="column">
+            <div class="ui segment">2</div>
+          </div>
+          <div class="column">
+            <div class="ui segment">3</div>
+          </div>
+          <div class="column">
+            <div class="ui segment">4</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <div class="ui segment">1</div>
+          </div>
+          <div class="column">
+            <div class="ui segment">2</div>
+          </div>
+          <div class="column">
+            <div class="ui segment">3</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <div class="ui segment">1</div>
+          </div>
+          <div class="column">
+            <div class="ui segment">2</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stretched example" data-use-content="true">
+      <h4 class="ui header">
+        Stretched
+      </h4>
+      <p>A row can stretch its contents to take up the entire column height</p>
+      <div class="ui three column divided grid">
+        <div class="stretched row">
+          <div class="column">
+            <div class="ui segment">
+              1
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui segment">
+              1
+            </div>
+            <div class="ui segment">
+              2
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui segment">
+              1
+            </div>
+            <div class="ui segment">
+              2
+            </div>
+            <div class="ui segment">
+              3
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="another example">
+      <div class="ui equal width grid">
+        <div class="stretched row">
+          <div class="column">
+            <div class="ui segment">
+              1
+            </div>
+            <div class="ui segment">
+              2
+            </div>
+          </div>
+          <div class="six wide column">
+            <div class="ui segment">
+              <img class="ui image" src="/images/wireframe/image.png">
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui segment">
+              1
+            </div>
+            <div class="ui segment">
+              2
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <div class="ui segment">
+              1
+            </div>
+            <div class="ui segment">
+              2
+            </div>
+          </div>
+          <div class="six wide column">
+            <div class="ui segment">
+              <img class="ui image" src="/images/wireframe/image.png">
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui segment">
+              1
+            </div>
+            <div class="ui segment">
+              2
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="example" data-class="vertically padded, horizontally padded, padded">
+      <h4 class="ui header">Padded</h4>
+      <p>A grid can preserve its vertical and horizontal gutters on first and last columns</p>
+
+      <p>The following grid has vertical and horizontal gutters</p>
+      <div class="ui divider"></div>
+      <div class="ui two column padded grid">
+        <div class="column">
+          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        </div>
+        <div class="column">
+          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        </div>
+      </div>
+    </div>
+    <div class="another example">
+      <p>The following grid has vertical gutters.</p>
+      <div class="ui divider"></div>
+      <div class="ui two column vertically padded grid">
+        <div class="column">
+          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        </div>
+        <div class="column">
+          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        </div>
+      </div>
+    </div>
+    <div class="another example">
+      <p>The following grid has horizontal gutters</p>
+      <div class="ui divider"></div>
+      <div class="ui two column horizontally padded grid">
+        <div class="column">
+          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        </div>
+        <div class="column">
+          <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+        </div>
+      </div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Relaxed</h4>
+      <p>A grid can increase its gutters to allow for more negative space</p>
+      <div class="ui four column relaxed grid">
+        <div class="column">
+          <img class="ui wireframe image" src="/images/wireframe/image.png">
+        </div>
+        <div class="column">
+          <img class="ui wireframe image" src="/images/wireframe/image.png">
+        </div>
+        <div class="column">
+          <img class="ui wireframe image" src="/images/wireframe/image.png">
+        </div>
+        <div class="column">
+          <img class="ui wireframe image" src="/images/wireframe/image.png">
+        </div>
+      </div>
+    </div>
+    <div class="another example">
+      <div class="ui four column very relaxed grid">
+        <div class="column">
+          <img class="ui wireframe image" src="/images/wireframe/image.png">
+        </div>
+        <div class="column">
+          <img class="ui wireframe image" src="/images/wireframe/image.png">
+        </div>
+        <div class="column">
+          <img class="ui wireframe image" src="/images/wireframe/image.png">
+        </div>
+        <div class="column">
+          <img class="ui wireframe image" src="/images/wireframe/image.png">
+        </div>
+      </div>
+    </div>
+
+    <div class="example" data-use-content="true">
+      <h4 class="ui header">Colored</h4>
+      <p>A row or column can be colored</p>
+      <div class="ui five column padded grid">
+        <div class="red column">Red</div>
+        <div class="orange column">Orange</div>
+        <div class="yellow column">Yellow</div>
+        <div class="olive column">Olive</div>
+        <div class="green column">Green</div>
+        <div class="teal column">Teal</div>
+        <div class="blue column">Blue</div>
+        <div class="violet column">Violet</div>
+        <div class="purple column">Purple</div>
+        <div class="pink column">Pink</div>
+        <div class="brown column">Brown</div>
+        <div class="grey column">Grey</div>
+        <div class="black column">Black</div>
+      </div>
+    </div>
+    <div class="another example">
+      <div class="ui padded grid">
+        <div class="red row">
+          <div class="column">Red</div>
+        </div>
+        <div class="orange row">
+          <div class="column">Orange</div>
+        </div>
+        <div class="yellow row">
+          <div class="column">Yellow</div>
+        </div>
+        <div class="olive row">
+          <div class="column">Olive</div>
+        </div>
+        <div class="green row">
+          <div class="column">Green</div>
+        </div>
+        <div class="teal row">
+          <div class="column">Teal</div>
+        </div>
+        <div class="blue row">
+          <div class="column">Blue</div>
+        </div>
+        <div class="violet row">
+          <div class="column">Violet</div>
+        </div>
+        <div class="purple row">
+          <div class="column">Purple</div>
+        </div>
+        <div class="pink row">
+          <div class="column">Pink</div>
+        </div>
+        <div class="brown row">
+          <div class="column">Brown</div>
+        </div>
+        <div class="grey row">
+          <div class="column">Grey</div>
+        </div>
+        <div class="black row">
+          <div class="column">Black</div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="example">
+      <h4 class="ui header">Centered</h4>
+      <p>A grid can have its columns centered</p>
+      <div class="ui two column centered grid">
+        <div class="column">
+          <img class="ui wireframe image" src="/images/wireframe/image.png">
+        </div>
+        <div class="four column centered row">
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+        </div>
+        <div class="four column row">
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="example" data-use-content="true">
+      <h4 class="ui header">Text Alignment</h4>
+      <p>A grid, row, or column can specify its text alignment</p>
+      <div class="ui center aligned three column grid">
+        <div class="row">
+          <div class="column">
+            <div class="ui vertical fluid menu">
+              <div class="header item">
+                Cats
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui vertical fluid menu">
+              <div class="header item">
+                Dogs
+              </div>
+              <div class="item">
+                Poodle
+              </div>
+              <div class="item">
+                Cockerspaniel
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui vertical fluid menu">
+              <div class="header item">
+                Monkeys
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="another example">
+      <div class="ui center aligned grid">
+        <div class="three column row">
+          <div class="column">
+            <div class="ui vertical fluid menu">
+              <div class="header item">
+                Cats
+              </div>
+            </div>
+          </div>
+          <div class="left aligned column">
+            <div class="ui vertical fluid menu">
+              <div class="header item">
+                Dogs
+              </div>
+              <div class="item">
+                Poodle
+              </div>
+              <div class="item">
+                Cockerspaniel
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui vertical fluid menu">
+              <div class="header item">
+                Monkeys
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="justified row">
+          <div class="column">
+            <p>Justified content fits exactly inside the grid column, taking up the entire width from one side to the other. Justified content fits exactly inside the grid column, taking up the entire width from one side to the other. Justified content fits exactly inside the grid column, taking up the entire width from one side to the other. Justified content fits exactly inside the grid column, taking up the entire width from one side to the other. Justified content fits exactly inside the grid column, taking up the entire width from one side to the other.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="another example">
+      <div class="ui right aligned three column grid">
+        <div class="row">
+          <div class="column">
+            <div class="ui vertical fluid menu">
+              <div class="header item">
+                Cats
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui vertical fluid menu">
+              <div class="header item">
+                Dogs
+              </div>
+              <div class="item">
+                Poodle
+              </div>
+              <div class="item">
+                Cockerspaniel
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui vertical fluid menu">
+              <div class="header item">
+                Monkeys
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="example" data-use-content="true">
+      <h4 class="ui header">Vertical Alignment</h4>
+      <p>A grid, row, or column can specify its vertical alignment to have all its columns vertically centered.</p>
+      <div class="ui middle aligned four column centered grid">
+        <div class="row">
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="another example">
+      <div class="ui four column centered grid">
+        <div class="top aligned row">
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+        </div>
+        <div class="middle aligned row">
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+        </div>
+        <div class="bottom aligned row">
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+          <div class="column">
+            <img class="ui wireframe image" src="/images/wireframe/image.png">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="ui dividing header">Responsive Variations</h2>
+
+
+    <div class="example">
+      <h4 class="ui header">Doubling</h4>
+      <p>A grid can double its column width on tablet and mobile sizes</p>
+      <div class="ui text message info ignore">
+        A grid will round its columns to the closest reasonable value when doubling, for example a <code>five column grid</code> will use <code>2 mobile, 3 tablet, 5 desktop</code>. To force 1 column on mobile you can add <a href="#stackable"><code>stackable</code></a>
+      </div>
+      <div class="five column doubling ui grid">
+        <div class="column">
+          <img class="ui wireframe image" src="/images/wireframe/image.png">
+        </div>
+        <div class="column">
+          <img class="ui wireframe image" src="/images/wireframe/image.png">
+        </div>
+        <div class="column">
+          <img class="ui wireframe image" src="/images/wireframe/image.png">
+        </div>
+        <div class="column">
+          <img class="ui wireframe image" src="/images/wireframe/image.png">
+        </div>
+        <div class="column">
+          <img class="ui wireframe image" src="/images/wireframe/image.png">
+        </div>
+      </div>
+    </div>
+
+    <div class="example">
+      <h4 class="ui header">Stackable</h4>
+      <p>A grid can have its columns stack on-top of each other after reaching mobile breakpoints</p>
+      <div class="ui text message info ignore">
+        To see a grid stack, try resizing your browser to a small width
+      </div>
+      <div class="two column stackable ui grid">
+        <div class="column">
+          <div class="ui segment">
+            <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+            <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+          </div>
+        </div>
+        <div class="column">
+          <div class="ui segment">
+            <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+            <img class="ui wireframe image" src="/images/wireframe/paragraph.png">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="example" data-use-content="true" data-class="computer reversed, tablet reversed, mobile reversed, computer vertically reversed, mobile vertically reversed, tablet vertically reversed">
+      <h4 class="ui header">Reversed</h4>
+      <p>A grid or row can specify that its columns should reverse order at different device sizes</p>
+      <div class="ui ignored info message message">Reversed grids are compatible with <code>divided</code> grids and other complex grid types.</div>
+      <div class="ui computer reversed equal width grid">
+        <div class="row">
+          <div class="column">
+            Computer A Fourth
+          </div>
+          <div class="column">
+            Computer A Third
+          </div>
+          <div class="column">
+            Computer A Second
+          </div>
+          <div class="column">
+            Computer A First
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            Computer B Fourth
+          </div>
+          <div class="column">
+            Computer B Third
+          </div>
+          <div class="column">
+            Computer B Second
+          </div>
+          <div class="column">
+            Computer B First
+          </div>
+        </div>
+      </div>
+      <div class="ui tablet reversed equal width grid">
+        <div class="column">
+          Tablet Fourth
+        </div>
+        <div class="column">
+          Tablet Third
+        </div>
+        <div class="column">
+          Tablet Second
+        </div>
+        <div class="column">
+          Tablet First
+        </div>
+      </div>
+      <div class="ui mobile reversed equal width grid">
+        <div class="column">
+          Mobile Fourth
+        </div>
+        <div class="column">
+          Mobile Third
+        </div>
+        <div class="column">
+          Mobile Second
+        </div>
+        <div class="column">
+          Mobile First
+        </div>
+      </div>
+    </div>
+    <div class="another example">
+      <div class="ui computer vertically reversed grid">
+        <div class="row">
+          <div class="column">Computer Row 4</div>
+        </div>
+        <div class="row">
+          <div class="column">Computer Row 3</div>
+        </div>
+        <div class="row">
+          <div class="column">Computer Row 2</div>
+        </div>
+        <div class="row">
+          <div class="column">Computer Row 1</div>
+        </div>
+      </div>
+    </div>
+    <div class="another example">
+      <div class="ui tablet vertically reversed grid">
+        <div class="row">
+          <div class="column">Tablet Row 4</div>
+        </div>
+        <div class="row">
+          <div class="column">Tablet Row 3</div>
+        </div>
+        <div class="row">
+          <div class="column">Tablet Row 2</div>
+        </div>
+        <div class="row">
+          <div class="column">Tablet Row 1</div>
+        </div>
+      </div>
+    </div>
+    <div class="another example">
+      <div class="ui mobile vertically reversed grid">
+        <div class="row">
+          <div class="column">Mobile Row 4</div>
+        </div>
+        <div class="row">
+          <div class="column">Mobile Row 3</div>
+        </div>
+        <div class="row">
+          <div class="column">Mobile Row 2</div>
+        </div>
+        <div class="row">
+          <div class="column">Mobile Row 1</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="example" data-use-content="true" data-class="large screen only, computer only, tablet only, mobile only">
+      <h4 class="ui header">Device Visibility</h4>
+      <p>A columns or row can appear only for a specific device, or screen sizes</p>
+      <div class="ui text message info ignore">
+        See <a href="/elements/container.html">container documentation</a> for information on breakpoint calculations
+      </div>
+      <div class="ui grid">
+        <div class="two column large screen only row">
+          <div class="column">
+            <div class="ui segment">
+              Large Screen
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui segment">
+              Large Screen
+            </div>
+          </div>
+        </div>
+        <div class="two column large screen only row">
+          <div class="column">
+            <div class="ui segment">
+              Widescreen
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui segment">
+              Widescreen
+            </div>
+          </div>
+        </div>
+        <div class="two column mobile only row">
+          <div class="column">
+            <div class="ui segment">
+              Mobile
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui segment">
+              Mobile
+            </div>
+          </div>
+        </div>
+        <div class="three column row">
+          <div class="computer only column">
+            <div class="ui segment">
+              Computer
+            </div>
+          </div>
+          <div class="tablet mobile only column">
+            <div class="ui segment">
+              Tablet and Mobile
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui segment">
+              All Sizes
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui segment">
+              All Sizes
+            </div>
+          </div>
+        </div>
+        <div class="four column computer only row">
+          <div class="column">
+            <div class="ui segment">
+              Computer
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui segment">
+              Computer
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui segment">
+              Computer
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui segment">
+              Computer
+            </div>
+          </div>
+        </div>
+        <div class="three column tablet only row">
+          <div class="column">
+            <div class="ui segment">
+              Tablet
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui segment">
+              Tablet
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui segment">
+              Tablet
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="example" data-use-content="true">
+      <h4 class="ui header">Responsive Width</h4>
+      <p>A column can specify a width for a specific device</p>
+      <div class="ui ignored info message">
+        <p>It's recommended to use a responsive pattern like <a href="#doubling"><code>doubling</code></a> or <a href="#stackable"><code>stackable</code></a> to reduce complexity when designing responsively, however in some circumstances specifying exact widths for screen sizes may be necessary.</p>
+      </div>
+      <div class="ui grid">
+        <div class="sixteen wide mobile eight wide tablet four wide computer column">
+          <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+        </div>
+        <div class="sixteen wide mobile eight wide tablet four wide computer column">
+          <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+        </div>
+        <div class="sixteen wide mobile eight wide tablet four wide computer column">
+          <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+        </div>
+        <div class="sixteen wide mobile eight wide tablet four wide computer column">
+          <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+        </div>
+        <div class="sixteen wide mobile eight wide tablet four wide computer column">
+          <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+        </div>
+      </div>
+    </div>
+    <div class="another example">
+      <div class="ui grid">
+        <div class="four wide two wide large screen one wide widescreen column">
+          <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+        </div>
+        <div class="four wide two wide large screen one wide widescreen column">
+          <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+        </div>
+        <div class="four wide two wide large screen one wide widescreen column">
+          <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+        </div>
+        <div class="four wide two wide large screen one wide widescreen column">
+          <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+        <div class="ui  vertical footer segment">
+  <div class="ui center aligned container">
+    <div class="ui stackable grid">
+      <div class="three wide column">
+        <h4 class="ui header">Community</h4>
+        <div class="ui link list">
+          <a class="item" href="https://www.transifex.com/organization/semantic-org/" target="_blank">Help Translate</a>
+          <a class="item" href="https://github.com/Semantic-Org/Semantic-UI/issues" target="_blank">Submit an Issue</a>
+          <a class="item" href="https://gitter.im/Semantic-Org/Semantic-UI" target="_blank">Join our Chat</a>
+          <a class="item" href="/cla.html" target="_blank">CLA</a>
+        </div>
+      </div>
+      <div class="three wide column">
+        <h4 class="ui header">Network</h4>
+        <div class="ui link list">
+          <a class="item" href="https://github.com/Semantic-Org/Semantic-UI" target="_blank">GitHub Repo</a>
+          <a class="item" href="http://forums.semantic-ui.com" target="_blank">User Forums</a>
+          <a class="item" href="http://1.semantic-ui.com">1.x Docs</a>
+          <a class="item" href="http://legacy.semantic-ui.com">0.x Docs</a>
+        </div>
+      </div>
+      <div class="seven wide right floated column">
+        <h4 class="ui header">Help Preserve This Project</h4>
+        <p> Support for the continued development of Semantic UI comes directly from the community.</p>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="7ZAF2Q8DBZAQL">
+          <button type="submit" class="ui large teal button">Donate Today</button>
+        </form>
+      </div>
+    </div>
+    <div class="ui section divider"></div>
+    <img src="/images/logo.png" class="ui centered mini image">
+    <div class="ui horizontal small divided link list">
+      <a class="item" href="http://semantic-ui.mit-license.org/" target="_blank">Free & Open Source (MIT)</a>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+  <div class="ui basic language modal">
+  <i class="close icon"></i>
+  <div class="header">The <span class="name"></span> Translation Needs Your Help</div>
+  <div class="image content">
+    <div class="middle aligned image">
+      <i class="world icon"></i>
+    </div>
+    <div class="description">
+      <p>This translation is only <b><span class="complete"></span>%</b> complete!</p>
+      <div class="ui inverted indicating progress">
+        <div class="bar"></div>
+      </div>
+      <p>We need your help to make Semantic available to  people who speak your language.</p>
+      <p>Our translation tools are easy to use and allow you to translate text without having to leave the site.
+      </p>
+    </div>
+  </div>
+  <div class="actions">
+    <div class="ui inverted cancel button">No Thanks</div>
+    <a href="https://github.com/Semantic-Org/Semantic-UI/wiki/Translating-Semantic-UI-Docs" target="_blank" class="ui inverted approve teal button">
+      <i class="mail icon"></i>
+      Help Translate
+    </a>
+  </div>
+</div>
+
+<div class="ui basic chinese modal">
+  <i class="close icon"></i>
+  <div class="header">Would you like to visit the mirror site?</div>
+  <div class="image content">
+    <div class="middle aligned image">
+      <i class="question icon"></i>
+    </div>
+    <div class="description">
+      <p>Semantic is available at <a href="http://www.semantic-ui.cn">semantic-ui.cn</a> a mirror site hosted inside China. This should make browsing much faster for those visiting from mainland China.
+      </p>
+    </div>
+  </div>
+  <div class="actions">
+    <div class="ui inverted red cancel button">No Thanks</div>
+    <a href="http://www.semantic-ui.cn" class="ui inverted green approve button">
+      <i class="mail icon"></i>
+      Yes, take me to the mirror
+    </a>
+  </div>
+</div>
+  <div class="ui demo page dimmer">
+  <div class="content">
+    <div class="center">
+      <h2 class="ui inverted icon header">
+        <i class="mail icon"></i>
+        Dimmer Message
+        <div class="sub header">Dimmer sub-header</div>
+      </h2>
+    </div>
+  </div>
+</div>
+  <script>
+window.less = {
+  async        : true,
+  environment  : 'production',
+  fileAsync    : false,
+  onReady      : false,
+  useFileCache : true
+};
+</script>
+
+<script src="/javascript/library/less.min.js"></script>
+
+
+</body>
+</html>

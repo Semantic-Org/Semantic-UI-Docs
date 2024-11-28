@@ -122,8 +122,10 @@ type        : 'UI Behavior'
             <label>Gender</label>
             <select class="ui dropdown" name="gender">
               <option value="">Gender</option>
-              <option value="male">Male</option>
               <option value="female">Female</option>
+              <option value="male">Male</option>
+              <option value="non-binary">Non-binary</option>
+              <option value="not-listed">None of the above</option>
             </select>
           </div>
         </div>
@@ -623,8 +625,10 @@ type        : 'UI Behavior'
               <div class="default text">Gender</div>
               <i class="dropdown icon"></i>
               <div class="menu">
-                <div class="item" data-value="male">Male</div>
                 <div class="item" data-value="female">Female</div>
+                <div class="item" data-value="male">Male</div>
+                <div class="item" data-value="non-binary">Non-binary</div>
+                <div class="item" data-value="not-listed">None of the above</div>
               </div>
             </div>
           </div>
@@ -683,8 +687,10 @@ type        : 'UI Behavior'
               <div class="default text">Gender</div>
               <i class="dropdown icon"></i>
               <div class="menu">
-                <div class="item" data-value="male">Male</div>
                 <div class="item" data-value="female">Female</div>
+                <div class="item" data-value="male">Male</div>
+                <div class="item" data-value="non-binary">Non-binary</div>
+                <div class="item" data-value="not-listed">None of the above</div>
               </div>
             </div>
           </div>
@@ -770,8 +776,10 @@ type        : 'UI Behavior'
               <div class="default text">Gender</div>
               <i class="dropdown icon"></i>
               <div class="menu">
-                <div class="item" data-value="male">Male</div>
                 <div class="item" data-value="female">Female</div>
+                <div class="item" data-value="male">Male</div>
+                <div class="item" data-value="non-binary">Non-binary</div>
+                <div class="item" data-value="not-listed">None of the above</div>
               </div>
             </div>
           </div>
@@ -839,8 +847,8 @@ type        : 'UI Behavior'
           <label>Dropdown</label>
           <select class="ui dropdown" name="dropdown">
             <option value="">Select</option>
-            <option value="male">Choice 1</option>
-            <option value="female">Choice 2</option>
+            <option value="1">Choice 1</option>
+            <option value="2">Choice 2</option>
           </select>
         </div>
         <div class="inline field">
@@ -1489,8 +1497,10 @@ type        : 'UI Behavior'
               <div class="default text">Gender</div>
               <i class="dropdown icon"></i>
               <div class="menu">
-                <div class="item" data-value="1">Male</div>
-                <div class="item" data-value="0">Female</div>
+                <div class="item" data-value="1">Female</div>
+                <div class="item" data-value="2">Male</div>
+                <div class="item" data-value="3">Non-binary</div>
+                <div class="item" data-value="4">None of the above</div>
               </div>
             </div>
           </div>
@@ -1530,8 +1540,10 @@ type        : 'UI Behavior'
               <div class="default text">Gender</div>
               <i class="dropdown icon"></i>
               <div class="menu">
-                <div class="item" data-value="1">Male</div>
-                <div class="item" data-value="0">Female</div>
+                <div class="item" data-value="1">Female</div>
+                <div class="item" data-value="2">Male</div>
+                <div class="item" data-value="3">Non-binary</div>
+                <div class="item" data-value="4">None of the above</div>
               </div>
             </div>
           </div>

@@ -28,10 +28,6 @@ type        : 'UI Behavior'
 
       <div class="ui large divided very relaxed list">
         <div class="item">
-          <div class="header">Infinite Scroll</div>
-          <div class="description">You want to start loading more content into a container when a user is partially finished scrolling through the content</div>
-        </div>
-        <div class="item">
           <div class="header">Lazy Loading Images</div>
           <div class="description">You want to start loading an image just before it is visible to a user</div>
         </div>
@@ -46,6 +42,10 @@ type        : 'UI Behavior'
         <div class="item">
           <div class="header">Event Tracking</div>
           <div class="description">You want to attach analytics events that match a users engagement with content, for example, to log to Google Analytics when a blog post is 30% read.</div>
+        </div>
+        <div class="item">
+          <div class="header">Infinite Scroll</div>
+          <div class="description">You want to start loading more content into a container when a user is partially finished scrolling through the content</div>
         </div>
       </div>
 
@@ -542,42 +542,6 @@ type        : 'UI Behavior'
   <div class="ui tab" data-tab="examples">
 
     <h2 class="ui dividing header">Examples</h2>
-
-    <div class="visibility infinite example">
-      <h4 class="ui header">Infinite Scroll</h4>
-      <p>As an alternative to pagination you can use <code>onBottomVisible</code> to load content automatically when the bottom of a container is reached.</p>
-
-      <div class="evaluated code" data-type="javascript">
-        $('.infinite.example .demo.segment')
-          .visibility({
-            once: false,
-            // update size when new content loads
-            observeChanges: true,
-            // load content on bottom edge visible
-            onBottomVisible: function() {
-              // loads a max of 5 times
-              window.loadFakeContent();
-            }
-          })
-        ;
-      </div>
-
-      <div class="ui demo segment">
-        <h3 class="ui dividing center aligned header">Infinite Scroll Example</h3>
-        <img src="/images/wireframe/centered-paragraph.png" class="ui wireframe image">
-        <div class="ui divider"></div>
-        <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-        <div class="ui divider"></div>
-        <img src="/images/wireframe/media-paragraph.png" class="ui wireframe image">
-        <div class="ui divider"></div>
-        <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
-        <div class="ui divider"></div>
-        <div class="ui large centered inline text loader">
-          Adding more content...
-        </div>
-      </div>
-    </div>
-
     <div class="visibility shown example">
       <h4 class="ui header">Lazy Loading Images</h4>
       <p>Visibility includes several shortcuts for setting up common visibility events. Using the setting <code>type: 'image'</code> will automatically attach events to an images <code>topVisible</code> to load the contents of <code>data-src</code> as <code>src</code>.</p>
@@ -790,6 +754,42 @@ type        : 'UI Behavior'
       <div class="ui divider"></div>
       <img src="/images/wireframe/paragraph.png" class="ui wireframe image">
     </div>
+
+    <div class="visibility infinite example">
+      <h4 class="ui header">Infinite Scroll</h4>
+      <p>As an alternative to pagination you can use <code>onBottomVisible</code> to load content automatically when the bottom of a container is reached.</p>
+
+      <div class="evaluated code" data-type="javascript">
+        $('.infinite.example .demo.segment')
+          .visibility({
+            once: false,
+            // update size when new content loads
+            observeChanges: true,
+            // load content on bottom edge visible
+            onBottomVisible: function() {
+              // loads a max of 5 times
+              window.loadFakeContent();
+            }
+          })
+        ;
+      </div>
+
+      <div class="ui demo segment">
+        <h3 class="ui dividing center aligned header">Infinite Scroll Example</h3>
+        <img src="/images/wireframe/centered-paragraph.png" class="ui wireframe image">
+        <div class="ui divider"></div>
+        <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+        <div class="ui divider"></div>
+        <img src="/images/wireframe/media-paragraph.png" class="ui wireframe image">
+        <div class="ui divider"></div>
+        <img src="/images/wireframe/short-paragraph.png" class="ui wireframe image">
+        <div class="ui divider"></div>
+        <div class="ui large centered inline text loader">
+          Adding more content...
+        </div>
+      </div>
+    </div>
+
   </div>
 
 

@@ -22,7 +22,7 @@ type        : 'UI Module'
 
     <div class="no example">
       <h4 class="ui header">Responsive Aspect Ratio</h4>
-      <p>Embeds use an <a href="http://alistapart.com/article/creating-intrinsic-ratios-for-video">instrinsic aspect ratio</a> which allows them to resize responsively based on their expected aspect ratio and not by using a single specified width or height.</p>
+      <p>Embeds use an <a href="http://alistapart.com/article/creating-intrinsic-ratios-for-video">intrinsic aspect ratio</a> which allows them to resize responsively based on their expected aspect ratio and not by using a single specified width or height.</p>
     </div>
     <div class="no example">
       <h4 class="ui header">Only Load After Interaction</h4>

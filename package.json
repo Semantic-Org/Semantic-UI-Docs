@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "docpad": "~6.79.4",
-    "docpad-plugin-babel": "~2.2.1",
+    "docpad-plugin-babel": "~2.5.0",
     "docpad-plugin-copy": "~2.1.3",
     "docpad-plugin-eco": "~2.2.1",
     "docpad-plugin-partials": "~2.12.0"

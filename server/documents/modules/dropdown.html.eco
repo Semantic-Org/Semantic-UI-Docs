@@ -999,6 +999,22 @@ themes      : ['Default', 'GitHub', 'Material']
     <h2 class="ui dividing header">Variations</h2>
 
     <div class="dropdown example">
+      <h4 class="ui header">Inverted</h4>
+      <p>A dropdown can have its colors inverted for contrast</p>
+      <div class="ui inverted segment">
+        <div class="ui inverted selection dropdown">
+          <input type="hidden" name="gender">
+            <i class="dropdown icon"></i>
+            <div class="default text">Gender</div>
+            <div class="menu">
+              <div class="item" data-value="male">Male</div>
+              <div class="item" data-value="female">Female</div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dropdown example">
       <h4 class="ui header">Scrolling</h4>
       <p>A dropdown can have its menu scroll</p>
       <div class="ui ignored warning message">

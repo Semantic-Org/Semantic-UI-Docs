@@ -98,7 +98,7 @@ themes      : ['Default']
   <h2 class="ui dividing header">Content</h2>
   <div class="example">
     <h4 class="ui header">Lines</h4>
-    <p>A placeholder can contain have lines of text</p>
+    <p>A placeholder can contain lines of text</p>
     <div class="ui ignored info message">By default, repeated lines will appear varied in width. However, it may be useful to specify an exact length to make it match up with content more effectively</div>
     <div class="ui placeholder">
       <div class="line"></div>

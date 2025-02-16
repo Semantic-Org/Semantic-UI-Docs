@@ -147,7 +147,7 @@ themes      : ['Default', 'Chubby']
             </div>
           </div>
           <div class="text">
-            Hey guys, I hope this example comment is helping you read this documentation.
+            Hey folks, I hope this example comment is helping you read this documentation.
           </div>
         </div>
       </div>

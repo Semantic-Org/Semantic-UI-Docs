@@ -404,8 +404,10 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
               <i class="dropdown icon"></i>
               <div class="default text">Gender</div>
               <div class="menu">
-                  <div class="item" data-value="1">Male</div>
-                  <div class="item" data-value="0">Female</div>
+                  <div class="item" data-value="1">Female</div>
+                  <div class="item" data-value="2">Male</div>
+                  <div class="item" data-value="3">Non-binary</div>
+                  <div class="item" data-value="4">None of the above</div>
               </div>
           </div>
       </div>
@@ -940,8 +942,10 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
       <div class="field">
         <select>
           <option value="">Gender</option>
-          <option value="1">Male</option>
-          <option value="0">Female</option>
+          <option value="1">Female</option>
+          <option value="2">Male</option>
+          <option value="3">Non-binary</option>
+          <option value="4">None of the above</option>
         </select>
       </div>
     </div>
@@ -1053,8 +1057,10 @@ themes      : ['Default', 'Flat', 'Chubby', 'GitHub']
           <i class="dropdown icon"></i>
           <input type="hidden" name="gender">
           <div class="menu">
-            <div class="item" data-value="male">Male</div>
             <div class="item" data-value="female">Female</div>
+            <div class="item" data-value="male">Male</div>
+            <div class="item" data-value="non-binary">Non-binary</div>
+            <div class="item" data-value="not-listed">None of the above</div>
           </div>
         </div>
       </div>

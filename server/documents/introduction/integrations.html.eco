@@ -73,6 +73,7 @@ type        : 'Introduction'
     <h4 class="ui header">Create a custom.semantic.json file</h4>
     <p>With meteor stopped:</>
     <div class="code" data-type="bash">
+      mkdir client/lib/semantic-ui
       touch client/lib/semantic-ui/custom.semantic.json
     </div>
     <p><code>custom.semantic.json</code> is a special file used to determine which themes and components to include in your project's build.</p>

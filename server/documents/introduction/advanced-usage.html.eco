@@ -144,7 +144,7 @@ type        : 'Introduction'
   <div class="no example">
     <h4>LESS Only Distribution</h4>
     <p>A special distribution <a href="https://github.com/Semantic-Org/Semantic-UI-LESS">Semantic-UI-LESS</a> is available for projects that use custom integrations and do not require our build tools.</p>
-    <div class="ui ignored warning message">LESS source files are not prefixed, and will need to be run through <a href="https://github.com/postcss/autoprefixer">autoprefixer</a> before being used</div>
+    <div class="ui ignored warning message">LESS source files are not prefixed, and will need to be run through <a href="https://github.com/postcss/autoprefixer">autoprefixer</a> before being used, autoprefixer has an <a href="https://goonlinetools.com/autoprefixer/">online version</a> that allows you to enter your non-prefixed CSS and gives you a prefix-added CSS</div>
   </div>
 
   <div class="no example">
